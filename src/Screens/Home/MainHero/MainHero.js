@@ -4,7 +4,7 @@ import DypSystem from "../../../components/DypSystem/DypSystem";
 
 const MainHero = () => {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" style={{overflow: 'hidden'}}>
     <div className="container-fluid main-hero">
       <div className="container-lg">
     <div className="heading row">

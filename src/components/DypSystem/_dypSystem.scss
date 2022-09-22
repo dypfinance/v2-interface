@@ -3,7 +3,8 @@
   width: 18em;
   height: 18em;
   margin: 0 auto;
-  scale: 1.5;
+  scale: 2;
+  transform: translate(200px, 0px);
 }
 
 .system {
@@ -36,7 +37,7 @@
   width: 7em;
   height: 7em;
   margin-top: -4.5em;
-  margin-left: -4.5em;
+  margin-left: -3.5em;
   background-size: cover;
   border-radius: 50%;
   color: white;
@@ -77,9 +78,8 @@
   height: 3em;
   margin-top: -1.5em;
   margin-left: -1.5em;
-
+  cursor: pointer;
   color: black;
-  background-color: #999;
   border-radius: 50%;
   text-align: center;
   line-height: 3em;
@@ -100,9 +100,8 @@
   height: 3em;
   margin-top: -1.5em;
   margin-left: -1.5em;
-
+  cursor: pointer;
   color: black;
-  background-color: yellow;
   border-radius: 50%;
   text-align: center;
   line-height: 3em;
@@ -142,9 +141,8 @@
   height: 3em;
   margin-top: -1.5em;
   margin-left: -1.5em;
-
+  cursor: pointer;
   color: black;
-  background-color: yellow;
   border-radius: 50%;
   text-align: center;
   line-height: 3em;
@@ -204,19 +202,46 @@
   */
 @-webkit-keyframes invert-orbit {
   0% {
+    scale: 1.5;
     transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
+  }
+
+  80% {
+    scale: 0.5;
+    filter: blur(2px);
   }
 
   100% {
     transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
+    scale: 1.5;
   }
 }
 @keyframes invert-orbit {
   0% {
+    scale: 1.5;
     transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
+  }
+
+  80% {
+    scale: 0.5;
+    filter: blur(2px);
   }
 
   100% {
     transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
+    scale: 1.5;
+
   }
 }
+
+.satellite-orbit3:hover, .satellite-orbit2:hover, .satellite-orbit:hover  {
+  animation-play-state:paused;
+
+  .satellite3, .satellite2, .satellite {
+  animation-play-state:paused;
+
+  }
+}
+
+
+
