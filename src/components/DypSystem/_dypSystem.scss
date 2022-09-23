@@ -4,7 +4,7 @@
   height: 18em;
   margin: 0 auto;
   scale: 2;
-  transform: translate(200px, 0px);
+  transform: translate(200px, -50px);
 }
 
 .system {
@@ -59,7 +59,7 @@
   margin-top: -8em;
   margin-left: -8em;
 
-  border: 3px solid white;
+  border: 3px solid rgba(255, 255, 255, 0.6);
   border-radius: 50%;
 
   -webkit-animation-name: orbit;
@@ -122,7 +122,7 @@
   margin-top: -10em;
   margin-left: -13em;
 
-  border: 3px solid white;
+  border: 3px solid rgba(255, 255, 255, 0.6);
   border-radius: 50%;
 
   -webkit-animation-name: orbit;
@@ -163,7 +163,7 @@
   margin-top: -14em;
   margin-left: -19em;
 
-  border: 3px solid white;
+  border: 3px solid rgba(255, 255, 255, 0.6);
   border-radius: 50%;
 
   -webkit-animation-name: orbit;
@@ -218,18 +218,18 @@
 }
 @keyframes invert-orbit {
   0% {
-    scale: 1.5;
+    scale: 2;
     transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
   }
 
-  80% {
+  70% {
     scale: 0.5;
     filter: blur(2px);
   }
 
   100% {
     transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
-    scale: 1.5;
+    scale: 2;
 
   }
 }
