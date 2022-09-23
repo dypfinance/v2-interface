@@ -1,0 +1,51 @@
+.dyp-tools {
+    position: relative;
+    height: 500px;
+    width: 101%;
+  
+    .col-4 {
+      gap: 40px;
+    }
+  
+    .list-card {
+      column-gap: 15px;
+      p {
+        font-size: 15px;
+      }
+    }
+  
+    .iphoneBackground {
+      position: absolute;
+      top: 0;
+      left: 20%;
+      height: 500px;
+    }
+  
+    .iphone {
+      position: absolute;
+      top: 10%;
+      left: 25%;
+      height: 390px;
+    }
+  
+    .dots {
+      position: absolute;
+      top: 90%;
+      right: 5%;
+    }
+  }
+  
+  .dyp-tools::before {
+    content: "";
+    background: #eff0f6;
+    background-image: url("../../../assets/linesBackground.png"),
+      linear-gradient(#caccd9, #fff);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+    border-radius: 56px 0 0 0;
+  }

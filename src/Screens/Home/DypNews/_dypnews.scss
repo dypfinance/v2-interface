@@ -1,0 +1,17 @@
+.dyp-news {
+    min-height: 600px;
+    background: linear-gradient(
+      360deg,
+      #eff0f6 0%,
+      rgba(239, 240, 246, 0) 65.48%
+    );
+    border-radius: 56px 0;
+    margin-top: 10rem;
+  
+    .news-card {
+      box-shadow: 0 32px 64px 0 rgba(17, 17, 17, 0.08);
+      border-radius: 12px 0;
+      width: 400px;
+    }
+  }
+  
