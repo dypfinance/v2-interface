@@ -16,7 +16,7 @@ const DypTools = () => {
             <ListCard />
             <ListCard />
             <button className="btn outline-btn">
-              Go to DYP Tools <img src={filledArrow} alt="" />
+              Go to DYP Tools <img src={filledArrow} alt="" className="ml-2"/>
             </button>
           </div>
           <div className="col-8 d-flex justify-content-center align-items-center position-relative">

@@ -7,7 +7,7 @@ import DypNews from "./DypNews/DypNews";
 
 const Home = () => {
   return (
-    <div className="container-fluid p-0 d-flex flex-column align-items-center" style={{gap: '70px'}}>
+    <div className="container-fluid p-0 d-flex flex-column align-items-center" style={{gap: '70px', marginTop: 90}}>
       <MainHero/>
       <DypMetaverse/>
       <DypTools/>
