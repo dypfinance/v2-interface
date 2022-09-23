@@ -7,8 +7,7 @@ import axios from 'axios'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import Carousel from 'better-react-carousel'
-
+import { RingLoader } from 'react-spinners'
 import './_dypnews.scss'
 
 const DypNews = () => {
@@ -17,11 +16,13 @@ const DypNews = () => {
   const settings = {
     dots: true,
     infinite: true,
+    arrows: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-    // autoplay: true,
-    // autoplaySpeed: 3000
+    dotsClass: 'button__bar',
+    autoplay: true,
+    autoplaySpeed: 3000
   };
 
 const [newsData, setNewsData] = useState([])
@@ -51,7 +52,6 @@ const fetchDescription = async() => {
     )
   }
 
-  // console.log(descriptionsArray);
 
   setDescriptions(descriptionsArray)
 }
@@ -65,7 +65,6 @@ useEffect(() => {
   fetchDescription();
 
 
-// console.log(newsData);
   
 }, [newsData.length])
 
@@ -75,7 +74,6 @@ const sortedDesc = descriptions.map(desc => {
 }).sort((a, b) => b.date - a.date)
 
 
-// console.log(sortedDesc);
 
 
   return (
@@ -93,19 +91,20 @@ const sortedDesc = descriptions.map(desc => {
             </div>
           </div>
           <div className="col-12">
-            {/* <div
-              className="card-wrapper d-flex flex-row justify-content-evenly align-items-center"
-              style={{ gap: "15px", marginBottom: "-6rem" }}
-            > */}
-            {/* <div className="slider-wrapper"> */}
+            {sortedDesc.length > 0 ?
+            <div className="slider-wrapper">
             <Slider {...settings}>
-            {sortedDesc.length > 0 &&
-              newsData.slice(0, 9).map((newsItem, index) => (
-                <NewsCard  key={index} title={newsItem.title} description={sortedDesc[index].content} date={newsItem.date.slice(0, 10)} image={newsItem.image} />
+              {newsData.slice(0, 9).map((newsItem, index) => (
+                <NewsCard  key={index} title={newsItem.title} description={sortedDesc[index]?.content} date={newsItem.date.slice(0, 10)} image={newsItem.image} />
               ))}
             </Slider>
-            {/* </div> */}
-            {/* </div> */}
+            </div>
+            :
+            <div className="d-flex justify-content-center align-items-center">
+            <RingLoader color='#9664FF' size={150} />
+            </div>
+                }
+           
           </div>
         </div>
     </div>
