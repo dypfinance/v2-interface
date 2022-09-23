@@ -95,7 +95,7 @@ const sortedDesc = descriptions.map(desc => {
             <div className="slider-wrapper">
             <Slider {...settings}>
               {newsData.slice(0, 9).map((newsItem, index) => (
-                <NewsCard  key={index} title={newsItem.title} description={sortedDesc[index]?.content} date={newsItem.date.slice(0, 10)} image={newsItem.image} />
+                <NewsCard  key={index} title={newsItem.title} description={sortedDesc[index]?.content} date={newsItem.date.slice(0, 10)} image={newsItem.image} link={newsItem.link} />
               ))}
             </Slider>
             </div>

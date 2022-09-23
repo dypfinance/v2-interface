@@ -4,9 +4,10 @@ import calendar from '../../assets/calendar.svg'
 import filledArrow from '../../assets/filledArrow.svg'
 
 
-const NewsCard = ({title, description, date, image}) => {
+const NewsCard = ({title, description, date, image, link}) => {
   return (
-    <div className="news-card d-flex flex-column justify-content-between p-3 bg-white">
+    <a target='_blank' href={link} className='text-dark text-decoration-none'>
+      <div className="news-card d-flex flex-column justify-content-between p-3 bg-white">
       <div className="d-flex flex-column justify-content-center align-items-center">
         <img
         src={image}
@@ -26,6 +27,7 @@ const NewsCard = ({title, description, date, image}) => {
         <img src={filledArrow} alt="" />
       </div>
     </div>
+    </a>
   );
 };
 

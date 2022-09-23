@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Home from "./Screens/Home/Home";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />}  />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

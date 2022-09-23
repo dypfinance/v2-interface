@@ -5,26 +5,26 @@ import DypPlanet from '../../assets/planetItem.svg'
 const DypSystem = () => {
   return (
     <div id="orbit-system">
-      <div class="system">
-        <div class="satellite-orbit">
-          <div class="satellite">
+      <div className="system">
+        <div className="satellite-orbit">
+          <div className="satellite">
             <img src={DypPlanet} alt='dyp-item' style={{width: 70, height: 70}}/>
           </div>
         </div>
 
-        <div class="satellite-orbit2">
-          <div class="satellite2">
+        <div className="satellite-orbit2">
+          <div className="satellite2">
           <img src={DypPlanet} alt='dyp-item' style={{width: 70, height: 70}}/>
           </div>
         </div>
 
-        <div class="satellite-orbit3">
-          <div class="satellite3">
+        <div className="satellite-orbit3">
+          <div className="satellite3">
           <img src={DypPlanet} alt='dyp-item' style={{width: 70, height: 70}}/>
           </div>
         </div>
 
-        <div class="planet">
+        <div className="planet">
           <img src={DypRect} alt='dypPlanet' />
         </div>
       </div>
