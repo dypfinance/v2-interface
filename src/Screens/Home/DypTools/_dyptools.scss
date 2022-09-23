@@ -1,7 +1,9 @@
 .dyp-tools {
     position: relative;
     height: 500px;
-    width: 101%;
+    width: 100%;
+    justify-content: space-between;
+    overflow: hidden;
   
     .col-4 {
       gap: 40px;
@@ -10,22 +12,18 @@
     .list-card {
       column-gap: 15px;
       p {
-        font-size: 15px;
+        font-size: 14px;
       }
     }
   
     .iphoneBackground {
-      position: absolute;
       top: 0;
-      left: 20%;
       height: 500px;
     }
   
     .iphone {
       position: absolute;
-      top: 10%;
-      left: 25%;
-      height: 390px;
+      height: 300px;
     }
   
     .dots {
@@ -49,3 +47,52 @@
     opacity: 0.2;
     border-radius: 56px 0 0 0;
   }
+
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 1200ms ease-out, transform 600ms ease-out,
+      visibility 1200ms ease-out;
+    will-change: opacity, transform, visibility;
+  }
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+
+  
+
+.rotate-center {
+	-webkit-animation: rotate-center 8s ease-in-out infinite both;
+	        animation: rotate-center 8s ease-in-out infinite both;
+}
+
+ @-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.triangle {
+  position: absolute;
+  top: 30px;
+  right: 70px;
+  width: 120px;
+}

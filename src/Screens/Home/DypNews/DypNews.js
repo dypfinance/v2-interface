@@ -7,6 +7,7 @@ import axios from 'axios'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+
 import Carousel from 'better-react-carousel'
 
 import './_dypnews.scss'
@@ -33,10 +34,6 @@ const fetchNews = async() => {
     setNewsData(response.data)
   }).catch(error => console.error(error))
 
-
-
-
-  
 }
 
 const fetchDescription = async() => {
@@ -85,10 +82,10 @@ const sortedDesc = descriptions.map(desc => {
             <Title top='Announcements' bottom='Lorem Ipsum' />
             <div className="button-group">
               <button className="btn filled-btn mr-3">
-                Latest Announcements <img src={rightArrow} alt="" />
+                Latest Announcements <img src={rightArrow} alt="" className='ml-2'/>
               </button>
               <button className="btn outline-btn">
-                Latest Events <img src={filledArrow} alt="" />
+                Latest Events <img src={filledArrow} alt="" className='ml-2'/>
               </button>
             </div>
           </div>
@@ -99,9 +96,9 @@ const sortedDesc = descriptions.map(desc => {
             > */}
             {/* <div className="slider-wrapper"> */}
             <Slider {...settings}>
-            {sortedDesc.length > 0 &&
+            {sortedDesc.length > 0 && 
               newsData.slice(0, 9).map((newsItem, index) => (
-                <NewsCard  key={index} title={newsItem.title} description={sortedDesc[index].content} date={newsItem.date.slice(0, 10)} image={newsItem.image} />
+                <NewsCard  key={index} title={newsItem.title} description={sortedDesc[index]?.content} date={newsItem.date.slice(0, 10)} image={newsItem.image} />
               ))}
             </Slider>
             {/* </div> */}
