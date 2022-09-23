@@ -25,7 +25,7 @@ const DypNews = () => {
   };
 
 const [newsData, setNewsData] = useState([])
-const [descriptions, setDescriptions] = useState('')
+const [descriptions, setDescriptions] = useState([])
 
 const fetchNews = async() => {
   const url = `https://news-manage.dyp.finance/api/populars`
@@ -44,12 +44,15 @@ const fetchDescription = async() => {
   if(newsData.length > 0){
      newsData.slice(0, 9).map((newsItem) => {
       axios.get(`https://news-manage.dyp.finance/api/populars/${newsItem.id}`).then((response) => {
-        descriptionsArray.push(response.data.content)
+        descriptionsArray.push(response.data)
       }).catch(error => console.error(error))
     
     }
     )
   }
+
+  // console.log(descriptionsArray);
+
   setDescriptions(descriptionsArray)
 }
 
@@ -57,17 +60,22 @@ const fetchDescription = async() => {
 useEffect(() => {
   
   
-  fetchNews()
+  fetchNews();
 
   fetchDescription();
 
 
-
+// console.log(newsData);
   
 }, [newsData.length])
 
-console.log(descriptions);
 
+const sortedDesc = descriptions.map(desc => {
+  return {...desc, date: new Date(desc.date)}
+}).sort((a, b) => b.date - a.date)
+
+
+// console.log(sortedDesc);
 
 
   return (
@@ -91,9 +99,9 @@ console.log(descriptions);
             > */}
             {/* <div className="slider-wrapper"> */}
             <Slider {...settings}>
-            {descriptions &&
+            {sortedDesc.length > 0 &&
               newsData.slice(0, 9).map((newsItem, index) => (
-                <NewsCard  key={index} title={newsItem.title} description={descriptions[index]} date={newsItem.date.slice(0, 10)} image={newsItem.image} />
+                <NewsCard  key={index} title={newsItem.title} description={sortedDesc[index].content} date={newsItem.date.slice(0, 10)} image={newsItem.image} />
               ))}
             </Slider>
             {/* </div> */}
