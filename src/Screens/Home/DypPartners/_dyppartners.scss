@@ -1,0 +1,52 @@
+.dyp-partners{
+    min-height: 200px;
+    width: 101%;
+    background-color: #eff0f6;
+    background-image: url("../../../assets/partnersBackground.svg");
+    border-radius: 56px 0;
+    transform: translate3d(0,0,0);
+    position: relative;
+    overflow: hidden;
+
+
+    .slide{
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate3d(0, 0, 0);
+        -webkit-animation: moveSlideshow 300s linear infinite;
+        animation: moveSlideshow 300s linear infinite;
+        gap: 50px;
+        .partner_wrapper{
+            position: relative;
+            min-width: 135px;
+            height: 100%;
+            p{
+                text-align: center;
+            }
+        }
+    }
+
+
+    .partner_wrapper{
+        img{
+            filter: grayscale(100%);
+            width: 70px;
+            height: 70px;
+        }
+    }
+}
+
+
+@-webkit-keyframes moveSlideshow {
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes moveSlideshow {
+    100% {
+      transform: translateX(-100%);
+    }
+  }

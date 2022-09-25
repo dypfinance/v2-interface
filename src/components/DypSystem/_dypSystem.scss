@@ -74,7 +74,7 @@
 
 .satellite {
   top: 100%;
-  width: 3em;
+  // width: 3em;
   height: 3em;
   margin-top: -1.5em;
   margin-left: -1.5em;
@@ -96,7 +96,7 @@
 
 .satellite2 {
   top: 100%;
-  width: 3em;
+  // width: 3em;
   height: 3em;
   margin-top: -1.5em;
   margin-left: -1.5em;
@@ -137,7 +137,7 @@
 
 .satellite3 {
   top: 100%;
-  width: 3em;
+  // width: 3em;
   height: 3em;
   margin-top: -1.5em;
   margin-left: -1.5em;
@@ -147,8 +147,8 @@
   text-align: center;
   line-height: 3em;
 
-  -webkit-animation-name: invert-orbit;
-  animation-name: invert-orbit;
+  -webkit-animation-name: reverse-orbit;
+  animation-name: reverse-orbit;
   -webkit-animation-duration: 20s;
   animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
@@ -166,8 +166,8 @@
   border: 3px solid rgba(255, 255, 255, 0.6);
   border-radius: 50%;
 
-  -webkit-animation-name: orbit;
-  animation-name: orbit;
+  -webkit-animation-name: orbit-reverse;
+  animation-name: orbit-reverse;
   -webkit-animation-duration: 20s;
   animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
@@ -190,6 +190,15 @@
   }
   100% {
     transform: rotateZ(360deg);
+  }
+}
+
+@keyframes orbit-reverse {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
   }
 }
 
@@ -218,7 +227,7 @@
 }
 @keyframes invert-orbit {
   0% {
-    scale: 2;
+    scale: 1;
     transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
   }
 
@@ -229,10 +238,49 @@
 
   100% {
     transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
-    scale: 2;
+    scale: 1;
 
   }
 }
+
+@keyframes reverse-orbit {
+  0% {
+    scale: 1;
+    transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
+   
+  }
+
+ 70% {
+    scale: 0.5;
+    filter: blur(2px);
+  }
+
+  100% {
+    transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
+    scale: 1;
+  }
+
+}
+
+@-webkit-keyframes reverse-orbit {
+  0% {
+    scale: 1;
+    transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
+   
+  }
+
+ 70% {
+    scale: 0.5;
+    filter: blur(2px);
+  }
+
+  100% {
+    transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
+    scale: 1;
+  }
+
+}
+
 
 .satellite-orbit3:hover, .satellite-orbit2:hover, .satellite-orbit:hover  {
   animation-play-state:paused;
@@ -242,6 +290,3 @@
 
   }
 }
-
-
-
