@@ -7,7 +7,9 @@ import axios from 'axios'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+
 import { RingLoader } from 'react-spinners'
+
 import './_dypnews.scss'
 
 const DypNews = () => {
@@ -34,10 +36,6 @@ const fetchNews = async() => {
     setNewsData(response.data)
   }).catch(error => console.error(error))
 
-
-
-
-  
 }
 
 const fetchDescription = async() => {
@@ -83,10 +81,10 @@ const sortedDesc = descriptions.map(desc => {
             <Title top='Announcements' bottom='Lorem Ipsum' />
             <div className="button-group">
               <button className="btn filled-btn mr-3">
-                Latest Announcements <img src={rightArrow} alt="" />
+                Latest Announcements <img src={rightArrow} alt="" className='ml-2'/>
               </button>
               <button className="btn outline-btn">
-                Latest Events <img src={filledArrow} alt="" />
+                Latest Events <img src={filledArrow} alt="" className='ml-2'/>
               </button>
             </div>
           </div>
@@ -96,6 +94,7 @@ const sortedDesc = descriptions.map(desc => {
             <Slider {...settings}>
               {newsData.slice(0, 9).map((newsItem, index) => (
                 <NewsCard  key={index} title={newsItem.title} description={sortedDesc[index]?.content} date={newsItem.date.slice(0, 10)} image={newsItem.image} link={newsItem.link} />
+
               ))}
             </Slider>
             </div>

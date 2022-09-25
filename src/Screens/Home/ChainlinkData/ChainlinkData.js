@@ -6,6 +6,7 @@ import AvaxLogo from "../../../assets/avax.svg";
 import CountUp from "react-countup";
 import AuditedByItem from "../../../components/AuditedByItem/AuditedByItem";
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
+import Pin from '../../../assets/pin.svg'
 
 const ChainlinkData = () => {
   const [totalpaid, setTotalPaid] = useState();
@@ -36,7 +37,7 @@ const ChainlinkData = () => {
   ];
   return (
     <div className="container-fluid chainlink-wrapper">
-      <div className="container-lg">
+      <div className="container-lg position-relative">
         <div className="row justify-content-between">
           <div className="d-grid">
             <span className="chainlink-data-title">Provided by Chainlink</span>
@@ -118,7 +119,8 @@ const ChainlinkData = () => {
             </div>
           </div>
         </div>
-      </div>
+   <img src={Pin} className='pin'/>     </div>
+    
     </div>
   );
 };
