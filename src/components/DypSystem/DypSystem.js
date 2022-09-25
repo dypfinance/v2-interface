@@ -13,6 +13,7 @@ const DypSystem = ({
       <div className="system">
         <div className="satellite-orbit">
           <div className="satellite">
+
             <img
               src={DypPlanet}
               alt="dyp-item"
@@ -20,11 +21,13 @@ const DypSystem = ({
               onMouseEnter={onShowFirstDesc}
               onMouseLeave={onRemoveDesc}
             />
+
           </div>
         </div>
 
         <div className="satellite-orbit2">
           <div className="satellite2">
+
             <img
               src={DypPlanet}
               alt="dyp-item"
@@ -32,11 +35,13 @@ const DypSystem = ({
               onMouseEnter={onShowSecondDesc}
               onMouseLeave={onRemoveDesc}
             />
+
           </div>
         </div>
 
         <div className="satellite-orbit3">
           <div className="satellite3">
+
             <img
               src={DypPlanet}
               alt="dyp-item"
@@ -44,6 +49,7 @@ const DypSystem = ({
               onMouseEnter={onShowThirdDesc}
               onMouseLeave={onRemoveDesc}
             />
+
           </div>
         </div>
 
