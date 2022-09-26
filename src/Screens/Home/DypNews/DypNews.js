@@ -77,7 +77,8 @@ const sortedDesc = descriptions.map(desc => {
   return (
     <div className='container-lg'>
         <div className="row dyp-news">
-          <div className="col-12 d-flex flex-row justify-content-between align-items-center">   
+          <div className="col-12 d-flex flex-row justify-content-between align-items-center">
+          <img className='sphere' src={require(`../../../assets/newsSphere.png`)} />   
             <Title top='Announcements' bottom='Lorem Ipsum' />
             <div className="button-group">
               <button className="btn filled-btn mr-3">
@@ -89,6 +90,7 @@ const sortedDesc = descriptions.map(desc => {
             </div>
           </div>
           <div className="col-12">
+          <img className='sphere-2' src={require(`../../../assets/newsSphere.png`)} /> 
             {sortedDesc.length > 0 ?
             <div className="slider-wrapper">
             <Slider {...settings}>

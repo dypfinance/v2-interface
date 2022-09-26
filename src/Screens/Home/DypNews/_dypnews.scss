@@ -13,8 +13,23 @@
     width: 400px;
     min-height: 530px;
     margin: auto;
+  }
 
+  .sphere{
+    position: absolute;
+    left: 23%;
+    top: 10%;
+  }
+
+  .sphere-2{
   
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    z-index: 0;
+    right: -6%;
+    bottom: -9%;
+
   }
 }
 

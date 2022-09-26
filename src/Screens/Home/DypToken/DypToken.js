@@ -12,12 +12,14 @@ const DypToken = () => {
     <div className='container-lg'>
          <div className="row dyp-token justify-content-between">
           <div className="col-3 blue-half">
+         <img className='ring' src={require(`../../../assets/tokenCircle.png`)} />
+         <img className='ring' src={require(`../../../assets/tokenCircle.png`)} />
             <img src={coin} className="coin" alt="" />
             <img src={coinBg} className="coin" alt="" />
           </div>
           <div
-            className="col-5 d-flex justify-content-center align-items-end flex-column pr-5"
-          >
+            className="col-5 d-flex justify-content-center align-items-end flex-column pr-5">
+         <img className='ring' src={require(`../../../assets/tokenCircle.png`)} />
             <Title top="DYP Token" bottom="ipsum dolor sit" align='text-end' />
             <p className="text-end">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi

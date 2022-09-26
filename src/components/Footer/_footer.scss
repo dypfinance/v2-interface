@@ -1,10 +1,11 @@
 .footer{
     margin-top: 10rem;
+    overflow: hidden;
 
-    .row{
+    .socials{
         background: rgba(239, 240, 246, 1);
         border-radius: 56px 56px 0 0;
-        padding: 15px 0 50px 0;
+        padding: 20px 0 80px 0;
 
         p{
             font-weight: 300;
@@ -12,4 +13,56 @@
             color: rgba(119, 112, 224, 1);
         }
     }
+
+    .footer-links{
+        min-height: 600px;
+        position: relative;
+        background: #554fd8;
+        border-radius:  60px 60px 0 0;
+        margin-top: -60px;
+        overflow: hidden;
+        
+
+        h5{
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+
+        hr{
+            width: 100%;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 53.13%, rgba(255, 255, 255, 0) 101%);
+            height: 3px;
+            margin: 0;
+        }
+
+        .spiral{
+            position: absolute;
+            top: 15%;
+            right: 7%;
+            filter: blur(1px) drop-shadow(0px 34px 34px #574ED8);
+        }
+
+        .sphere{
+            position: absolute;
+            bottom: -20%;
+            left: 12%;
+        }
+        
+    }
+
+
+    .footer-links::before {
+        content: "";
+        background-image: url('../../assets/footerBackground.svg'), linear-gradient(121.83deg, #554FD8 14.64%, #7770E0 85.55%);
+        background-size: contain;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.1;
+        background-repeat: no-repeat;
+        background-position: bottom;
+      }
+    
 }
