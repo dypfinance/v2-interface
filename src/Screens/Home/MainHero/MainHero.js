@@ -25,7 +25,7 @@ const changeBackground = () => {
   
 
   return (
-    <div className="container-fluid p-0" style={{ overflow: "hidden", marginTop: '92px' }}>
+    <div className="container-fluid p-0" style={{ overflow: "hidden"}}>
       <div className="container-fluid main-hero">
             <div className={`row pt-4 justify-content-between page-navigation ${opacity ? 'opacity' : null}`}>
         <div className="col-2 d-flex justify-content-center">
