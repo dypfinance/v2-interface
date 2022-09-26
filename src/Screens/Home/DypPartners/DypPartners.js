@@ -134,10 +134,10 @@ const DypPartners = () => {
         <div className="d-flex slide">
             {partnersArray.map((partner, index) => (
                 <a key={index} target="_blank" href={partner.href} className='text-decoration-none text-dark'>
-                <div className="partner_wrapper d-flex flex-column align-items-center justify-content-center">
-                 <img src={`/PartnerIcons/${partner.image}`} alt="" />
-                 <p className='mb-0'>{partner.text}</p>
-             </div>
+                    <div className="partner_wrapper d-flex flex-column align-items-center justify-content-center">
+                        <img src={`/PartnerIcons/${partner.image}`} alt="" />
+                        <p className='mb-0'>{partner.text}</p>
+                    </div>
                  </a>
             ))}
         </div>

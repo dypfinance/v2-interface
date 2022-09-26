@@ -9,7 +9,7 @@ import './_dyptoken.scss'
 
 const DypToken = () => {
   return (
-    <div className='container-lg'>
+    <div className='container-lg d-none d-lg-flex'>
          <div className="row dyp-token justify-content-between">
           <div className="col-3 blue-half">
          <img className='ring' src={require(`../../../assets/tokenCircle.png`)} />

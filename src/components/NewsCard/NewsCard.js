@@ -10,9 +10,10 @@ const NewsCard = ({title, description, date, image, link}) => {
       <div className="news-card d-flex flex-column justify-content-between p-3 bg-white">
       <div className="d-flex flex-column justify-content-center align-items-center">
         <img
+        className="news-image"
         src={image}
         alt=""
-        style={{ borderRadius: "12px 0", marginBottom: "10px", maxWidth: '360px', height: '240px',  objectFit: 'fill' }}
+        
       />
       <h3>{title}</h3>
       </div>

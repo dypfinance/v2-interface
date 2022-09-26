@@ -27,7 +27,7 @@ const changeBackground = () => {
   return (
     <div className="container-fluid p-0" style={{ overflow: "hidden"}}>
       <div className="container-fluid main-hero">
-            <div className={`row pt-4 justify-content-between page-navigation ${opacity ? 'opacity' : null}`}>
+            <div className={`row d-none d-lg-flex pt-4 justify-content-between page-navigation ${opacity ? 'opacity' : null}`}>
         <div className="col-2 d-flex justify-content-center">
           <img src={dypiusLogo} />
         </div>
@@ -54,7 +54,7 @@ const changeBackground = () => {
       </div>
         <div className="container-lg">
           <div className="heading row">
-            <div className="col-5 d-flex justify-content-center flex-column text-white ml-4">
+            <div className="col-12 col-lg-5 d-flex justify-content-center flex-column text-white ml-lg-4">
               <div>
                 <div>
                   <h1>DYP Lorem</h1>
@@ -93,7 +93,7 @@ const changeBackground = () => {
                 )}
               </div>
             </div>
-            <div className="col-5 d-flex justify-content-center flex-column text-white ml-4">
+            <div className="col-12 col-lg-5 d-flex justify-content-center flex-column text-white ml-4">
               <DypSystem
                 onShowFirstDesc={() => {
                   setShowDesc("first");
