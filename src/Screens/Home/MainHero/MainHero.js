@@ -1,57 +1,60 @@
 import React, { useState } from "react";
 import ChainlinkData from "../ChainlinkData/ChainlinkData";
 import DypSystem from "../../../components/DypSystem/DypSystem";
-import dypiusLogo from '../../../assets/dypiusLogo.svg';
-import dypiusIcon from '../../../assets/dyptoolsIcon.svg';
+import dypiusLogo from "../../../assets/dypiusLogo.svg";
+import dypiusIcon from "../../../assets/dyptoolsIcon.svg";
+import CometBg from "../../../components/CometBg/CometBg";
 
 const MainHero = () => {
+  const [showDesc, setShowDesc] = useState("");
+  const [opacity, setOpacity] = useState(false);
 
-const [showDesc, setShowDesc] = useState("");
-const [opacity, setOpacity] = useState(false)
-
-
-const changeBackground = () => {
+  const changeBackground = () => {
     if (window.scrollY >= 75) {
-      setOpacity(true)
-
+      setOpacity(true);
     } else {
-      setOpacity(false)
+      setOpacity(false);
     }
+  };
 
-  }
-
-  window.addEventListener('scroll', changeBackground)
-
-  
+  window.addEventListener("scroll", changeBackground);
 
   return (
-    <div className="container-fluid p-0" style={{ overflow: "hidden"}}>
+    <div className="container-fluid p-0" style={{ overflow: "hidden" }}>
       <div className="container-fluid main-hero">
-            <div className={`row d-none d-lg-flex pt-4 justify-content-between page-navigation ${opacity ? 'opacity' : null}`}>
-        <div className="col-2 d-flex justify-content-center">
-          <img src={dypiusLogo} />
+        <CometBg/>
+        <div
+          className={`row d-none d-lg-flex pt-4 justify-content-between page-navigation ${
+            opacity ? "opacity" : null
+          }`}
+        >
+          <div className="col-2 d-flex justify-content-center">
+            <img src={dypiusLogo} />
+          </div>
+          <div className="col-6 bg-white d-flex justify-content-around align-items-center py-3 links">
+            <a className="text-decoration-none" href="#metaverse">
+              DYP
+            </a>
+            <a className="text-decoration-none" href="#metaverse">
+              Metaverse World
+            </a>
+            <a className="text-decoration-none" href="#metaverse">
+              Governance
+            </a>
+            <a className="text-decoration-none" href="#metaverse">
+              Support
+            </a>
+            <a className="text-decoration-none" href="#metaverse">
+              About Us
+            </a>
+          </div>
+          <div className="col-2 d-flex justify-content-center">
+            <button className="btn text-white py-2">
+              <img src={dypiusIcon} className="pe-2" />
+              Dyp Tools
+            </button>
+          </div>
         </div>
-        <div className="col-6 bg-white d-flex justify-content-around align-items-center py-3 links">
-          <a className="text-decoration-none" href="#metaverse">
-            DYP
-          </a>
-          <a className="text-decoration-none" href="#metaverse">
-            Metaverse World
-          </a>
-          <a className="text-decoration-none" href="#metaverse">
-            Governance
-          </a>
-          <a className="text-decoration-none" href="#metaverse">
-            Support
-          </a>
-          <a className="text-decoration-none" href="#metaverse">
-            About Us
-          </a>
-        </div>
-        <div className="col-2 d-flex justify-content-center">
-          <button className="btn text-white py-2"><img src={dypiusIcon} className='pe-2' />Dyp Tools</button>
-        </div>
-      </div>
         <div className="container-lg">
           <div className="heading row">
             <div className="col-12 col-lg-5 d-flex justify-content-center flex-column text-white ml-lg-4">
@@ -69,7 +72,7 @@ const changeBackground = () => {
                   Explore More
                 </button>
               </div>
-              <div className="d-flex flex-column h-25 justify-content-end">
+              <div className="flex-column h-25 justify-content-end d-none">
                 {showDesc === "first" ? (
                   <p className="">
                     1The Defi Yield Protocol Referral Program is our way of

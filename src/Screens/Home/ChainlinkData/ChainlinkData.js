@@ -40,7 +40,7 @@ const ChainlinkData = () => {
       <div className="container-lg position-relative">
         <div className="row justify-content-between">
           <div className="d-grid">
-            <span className="chainlink-data-title">Provided by Chainlink</span>
+            <span className="chainlink-data-title">Powered by Chainlink</span>
             <div className="row chainlink-row m-0">
               <div className="chainlink-cell">
                 <img src={EthereumLogo} alt="eth" />{" "}
@@ -82,7 +82,7 @@ const ChainlinkData = () => {
             </div>
           </div>
           <div className="d-grid" style={{ width: 220 }}>
-            <span className="chainlink-data-title">Paid to Users</span>
+            <span className="chainlink-data-title">Paid to users</span>
             <div className="row chainlink-row m-0">
               <div className="chainlink-cell">
                 <div className="d-flex align-items-baseline gap-2">
