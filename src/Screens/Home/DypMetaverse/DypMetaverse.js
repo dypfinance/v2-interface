@@ -39,7 +39,7 @@ const DypMetaverse = () => {
         <img src={BlueHero} alt="bluehero" className="bluehero" />
         <img src={BlueHero} alt="bluehero2" className="bluehero2" />
         <div className="row dyp-metaverse justify-content-between">
-          <div className={`col-5 fade-in-section ${isVisible ? 'is-visible' : ''}`}  ref={domRef}>
+          <div className={`col-12 col-lg-5 fade-in-section ${isVisible ? 'is-visible' : ''}`}  ref={domRef}>
             <div className="d-flex justify-content-center flex-column">
               <Title top="Metaverse World" bottom="ipsum dolor sit amet" />
               <br />
@@ -56,7 +56,7 @@ const DypMetaverse = () => {
               </div>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-12 col-lg-6">
             <div className="image-grid">
               <div className="image-1">
                 <PulseDiv>

@@ -14,7 +14,30 @@
     min-height: 530px;
     margin: auto;
 
+    .news-image{
+      border-radius: 12px 0; 
+      margin-bottom: 10px;
+      max-width: 360px;
+      height: 240px;
+      object-fit: fill;
+    }
+  }
+
+  .sphere{
+    position: absolute;
+    left: 23%;
+    top: 10%;
+  }
+
+  .sphere-2{
   
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    z-index: 0;
+    right: -6%;
+    bottom: -9%;
+
   }
 }
 
@@ -66,4 +89,16 @@
     opacity: 1;
     background-color: #9664FF;
     box-shadow: 0 4px 4px 0 rgba(150, 100, 255, 0.24);
+  }
+
+
+  @media screen and (max-width: 786px) {
+
+    .news-card{
+      width: 350px !important;
+      .news-image{
+        max-width: 310px !important;
+      }
+    }
+    
   }

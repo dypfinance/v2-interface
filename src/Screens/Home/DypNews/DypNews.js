@@ -24,8 +24,36 @@ const DypNews = () => {
     slidesToScroll: 3,
     dotsClass: 'button__bar',
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   };
+
+  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
 const [newsData, setNewsData] = useState([])
 const [descriptions, setDescriptions] = useState([])
@@ -71,13 +99,20 @@ const sortedDesc = descriptions.map(desc => {
   return {...desc, date: new Date(desc.date)}
 }).sort((a, b) => b.date - a.date)
 
+const sortedNewsItems = newsData.map(item => {
+  return {...item, date: new Date(item.date)}
+
+}) 
+
+
 
 
 
   return (
     <div className='container-lg'>
         <div className="row dyp-news">
-          <div className="col-12 d-flex flex-row justify-content-between align-items-center">   
+          <div className="col-12 d-flex flex-column flex-lg-row justify-content-between align-items-center">
+          <img className='sphere' src={require(`../../../assets/newsSphere.png`)} />   
             <Title top='Announcements' bottom='Lorem Ipsum' />
             <div className="button-group">
               <button className="btn filled-btn mr-3">
@@ -89,11 +124,12 @@ const sortedDesc = descriptions.map(desc => {
             </div>
           </div>
           <div className="col-12">
+          <img className='sphere-2' src={require(`../../../assets/newsSphere.png`)} /> 
             {sortedDesc.length > 0 ?
             <div className="slider-wrapper">
             <Slider {...settings}>
               {newsData.slice(0, 9).map((newsItem, index) => (
-                <NewsCard  key={index} title={newsItem.title} description={sortedDesc[index]?.content} date={newsItem.date.slice(0, 10)} image={newsItem.image} link={newsItem.link} />
+                <NewsCard  key={index} title={newsItem.title} description={sortedDesc[index]?.content} date={newsItem.date.slice(0,10)} image={newsItem.image} link={newsItem.link} />
 
               ))}
             </Slider>

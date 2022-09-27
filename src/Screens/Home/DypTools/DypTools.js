@@ -28,9 +28,9 @@ const DypTools = () => {
 
 
   return (
-    <div className="container-lg overflow-hidden">
+    <div className="container-lg overflow-hidden d-flex justify-content-center">
       <div className="row dyp-tools">
-      <div className={`col-5 fade-in-section ${isVisible ? 'is-visible' : ''}`}  ref={domRef}>
+      <div className={`col-12 col-lg-5 fade-in-section ${isVisible ? 'is-visible' : ''}`}  ref={domRef}>
           <div className="gap-5 d-flex align-items-start justify-content-center flex-column pl-5 pt-4 leftcol">
             <div className='gap-3 d-grid'>
             <Title top="DYP Tools" bottom="& benefits" />
@@ -43,7 +43,7 @@ const DypTools = () => {
             </button>
           </div>
         </div>
-        <div className="col-y d-flex justify-content-center align-items-center position-relative">
+        <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center position-relative">
           <TadaDiv>
           <img className="iphoneBackground" src={iphoneBg} alt="" />
           </TadaDiv>

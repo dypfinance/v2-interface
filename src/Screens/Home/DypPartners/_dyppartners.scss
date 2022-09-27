@@ -15,13 +15,14 @@
         top: 0;
         left: 0;
         transform: translate3d(0, 0, 0);
-        -webkit-animation: moveSlideshow 300s linear infinite;
-        animation: moveSlideshow 300s linear infinite;
+        -webkit-animation: moveSlideshow 50s linear infinite;
+        animation: moveSlideshow 50s linear infinite;
         gap: 50px;
         .partner_wrapper{
             position: relative;
             min-width: 135px;
             height: 100%;
+            gap: 10px;
             p{
                 text-align: center;
             }
