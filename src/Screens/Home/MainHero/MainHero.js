@@ -54,7 +54,7 @@ const changeBackground = () => {
       </div>
         <div className="container-lg">
           <div className="heading row">
-            <div className="col-12 col-lg-5 d-flex justify-content-center flex-column text-white ml-lg-4">
+            <div className="col-12 col-lg-5 d-flex justify-content-center flex-column text-white ml-lg-4 pt-5">
               <div>
                 <div>
                   <h1>DYP Lorem</h1>
