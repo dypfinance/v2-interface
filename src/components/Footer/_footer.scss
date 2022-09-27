@@ -53,7 +53,8 @@
 
     .footer-links::before {
         content: "";
-        background-image: url('../../assets/footerBackground.svg'), linear-gradient(121.83deg, #554FD8 14.64%, #7770E0 85.55%);
+        background-image: url('../../assets/footerBackground.svg'), linear-gradient(121.83deg,  #554FD8  , #7770E0);
+        
         background-size: contain;
         position: absolute;
         top: 0px;
@@ -64,5 +65,47 @@
         background-repeat: no-repeat;
         background-position: bottom;
       }
+
+      .footer-blocks{
+        hr{
+            width: 100%;
+            background: #fff;
+            height: 2px;
+            margin: 0;
+        }
+      }
+    
+}
+
+
+.turn{
+    transform: rotate(180deg);
+}
+
+
+@media screen and (max-width: 786px) {
+
+    .socials{
+        row-gap: 20px;
+    }
+
+    .spiral{
+        top: 6% !important;
+        right: -6% !important;
+    }
+
+    .sphere{
+        left: 77% !important;
+        bottom: -15% !important;
+    }
+    
+    .footer-links::before{
+        background-size: 2000px !important;
+    }
+    .footer-links{
+        h5{
+            font-size: 15px;
+        }
+    }
     
 }

@@ -23,7 +23,7 @@ const NewsCard = ({title, description, date, image, link}) => {
       <div className="d-flex flex-row justify-content-between">
         <div className="d-flex flex-row align-items-center">
           <img src={calendar} alt="" className="pr-2" />
-          <p className="mb-0">{date.slice(0, 10)}</p>
+          <p className="mb-0">{date}</p>
         </div>
         <img src={filledArrow} alt="" />
       </div>

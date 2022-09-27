@@ -98,6 +98,20 @@
 
   @media screen and (max-width: 786px) {
 
+
+
+   .dyp-news{
+    .sphere{
+      left: -30% !important;
+      top: 75% !important;
+    }
+
+    .sphere-2{
+      right: -17% !important;
+      bottom: -17% !important;
+    }
+   }
+
     .news-card{
       width: 350px !important;
       .news-image{
