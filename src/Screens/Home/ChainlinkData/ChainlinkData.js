@@ -38,7 +38,7 @@ const ChainlinkData = () => {
   return (
     <div className="container-fluid chainlink-wrapper">
       <div className="container-lg position-relative">
-        <div className="row justify-content-between">
+        <div className="row justify-content-between mt-5 gap-2">
           <div className="d-grid">
             <span className="chainlink-data-title">Powered by Chainlink</span>
             <div className="row chainlink-row m-0">

@@ -12,9 +12,9 @@ const Home = () => {
       <MainHero/>
       <DypMetaverse/>
       <DypTools/>
-      <DypToken/>
+      {/* <DypToken/>
       <DypPartners />
-      <DypNews/>
+      <DypNews/> */}
     </div>
   );
 };
