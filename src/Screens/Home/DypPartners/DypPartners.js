@@ -129,7 +129,8 @@ const DypPartners = () => {
     ]
 
   return (
-    <div className="container-lg">
+    <>
+    <div className="container-lg d-flex flex-column justify-content-center align-items-center">
         <div className="row dyp-partners">
         <div className="d-flex slide">
             {partnersArray.map((partner, index) => (
@@ -143,6 +144,7 @@ const DypPartners = () => {
         </div>
         </div>
     </div>
+    </>
   )
 }
 

@@ -11,7 +11,7 @@
     background: linear-gradient(121.83deg, #7770E0 14.64%, #554FD8 85.55%);
     border-radius: 56px 0;
 
-    .ring:first-child{
+    .ring-1{
       position: absolute;
       top: 18%;
       right: -43%;
@@ -20,7 +20,7 @@
       filter: blur(2px) drop-shadow(0px 34px 34px rgba(85, 79, 216, 0.24));
     }
 
-    .ring:nth-child(2){
+    .ring-2{
       position: absolute;
       bottom: 3%;
       right: 0%;
@@ -116,4 +116,28 @@
   bottom: 0px;
   left: 0px;
   border-radius: 56px 0 56px 0;
+}
+
+@media screen and (max-width: 786px) {
+
+.dyp-token{
+  min-height: 400px;
+
+  .blue-half{
+    min-height: 400px;
+
+    .ring-1{
+      right: -53%;
+    }
+
+    .coin{
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+.dyp-token::before{
+  background-position: right;
+}
+ 
 }

@@ -23,8 +23,8 @@ const DypNews = () => {
     slidesToShow: 3,
     slidesToScroll: 3,
     dotsClass: 'button__bar',
-    autoplay: true,
-    autoplaySpeed: 3000,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
@@ -53,7 +53,7 @@ const DypNews = () => {
     ]
   };
 
-  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  var options = {  year: 'numeric', month: 'short', day: 'numeric' };
 
 const [newsData, setNewsData] = useState([])
 const [descriptions, setDescriptions] = useState([])
@@ -111,14 +111,16 @@ const sortedNewsItems = newsData.map(item => {
   return (
     <div className='container-lg'>
         <div className="row dyp-news">
-          <div className="col-12 d-flex flex-column flex-lg-row justify-content-between align-items-center gap-2">
+
+          <div className="col-12 d-flex flex-column flex-lg-row justify-content-between align-items-center mb-5 mb-lg-0 gap-4">
+
           <img className='sphere' src={require(`../../../assets/newsSphere.png`)} />   
             <Title top='Announcements' bottom='Lorem Ipsum' />
-            <div className="button-group">
+            <div className="button-group ms-4 ms-lg-0">
               <button className="btn filled-btn mr-3">
                 Latest Announcements <img src={rightArrow} alt="" className='ml-2'/>
               </button>
-              <button className="btn outline-btn">
+              <button className="btn outline-btn mt-4 mt-lg-0">
                 Latest Events <img src={filledArrow} alt="" className='ml-2'/>
               </button>
             </div>
@@ -128,8 +130,8 @@ const sortedNewsItems = newsData.map(item => {
             {sortedDesc.length > 0 ?
             <div className="slider-wrapper">
             <Slider {...settings}>
-              {newsData.slice(0, 9).map((newsItem, index) => (
-                <NewsCard  key={index} title={newsItem.title} description={sortedDesc[index]?.content} date={newsItem.date.slice(0,10)} image={newsItem.image} link={newsItem.link} />
+              {sortedNewsItems.slice(0, 9).map((newsItem, index) => (
+                <NewsCard  key={index} title={newsItem.title} description={sortedDesc[index]?.content} date={newsItem.date.toLocaleDateString("en-US", options)} image={newsItem.image} link={newsItem.link} />
 
               ))}
             </Slider>

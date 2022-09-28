@@ -58,3 +58,12 @@ color: #7770E0;
   position: absolute;
   left: -40px;
 }
+
+
+@media screen and (max-width: 786px) {
+  .chainlink-wrapper{
+    bottom: 20px;
+    padding-top: 30px;
+  }
+  
+}
