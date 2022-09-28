@@ -1,6 +1,7 @@
 .main-hero {
     background: linear-gradient(121.83deg, #554FD8 14.64%, #7770E0 85.55%);
     border-radius: 0 0 30px 30px;
+    overflow: hidden;
 
     .opacity{
       opacity: 0.4;
@@ -39,7 +40,7 @@
     
     
     .heading {
-      background-image: url("../../../assets/fallingStars.svg");
+      // background-image: url("../../../assets/fallingStars.svg");
       background-size: contain;
       background-repeat: no-repeat;
       min-height: 800px;
@@ -116,3 +117,21 @@
     width: 16px;
     opacity: 1;
   }
+
+  @media only screen and (max-width: 500px) {
+    h1 {
+      font-size: 32px !important;
+    }
+
+    .list-card {
+      img {
+        width: 40px;
+      }
+    }
+
+    .leftcol {
+      .outline-btn {
+        width: 100% !important;
+      }
+    }
+   }

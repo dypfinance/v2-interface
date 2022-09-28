@@ -38,25 +38,25 @@ const DypMetaverse = () => {
       <div className="container-lg position-relative metaverse-inner overlow-hidden">
         <img src={BlueHero} alt="bluehero" className="bluehero" />
         <img src={BlueHero} alt="bluehero2" className="bluehero2" />
-        <div className="row dyp-metaverse justify-content-between">
-          <div className={`col-12 col-lg-5 fade-in-section ${isVisible ? 'is-visible' : ''}`}  ref={domRef}>
+        <div className="row dyp-metaverse justify-content-between gap-2 gap-sm-0">
+          <div className={`col-12 col-lg-5 col-md-6 col-sm-6 fade-in-section ${isVisible ? 'is-visible' : ''}`}  ref={domRef}>
             <div className="d-flex justify-content-center flex-column">
-              <Title top="Metaverse World" bottom="ipsum dolor sit amet" />
+              <Title top="Metaverse World" bottom="ipsum dolor sit amet" align='metaverse-title'/>
               <br />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
                 arcu lorem, viverra eu tempor quis, commodo a leo. Sed pretium,
                 orci ac ultrices semper
               </p>
-              <div className="button-group mt-3">
-                <button className="btn filled-btn mr-3">
+              <div className="button-group mt-3 row gap-3">
+                <button className="btn filled-btn ">
                   View now <img src={rightArrow} alt="" className="ml-2"/>
                 </button>
-                <button className="btn outline-btn">Recieve newsletter</button>
+                <button className="btn outline-btn">Receive newsletter</button>
               </div>
             </div>
           </div>
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-lg-6 col-md-5 col-sm-6">
             <div className="image-grid">
               <div className="image-1">
                 <PulseDiv>

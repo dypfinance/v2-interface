@@ -290,3 +290,26 @@
 
   }
 }
+
+
+@media only screen and (max-width: 1200px) {
+  #orbit-system {
+    margin: 0 !important;
+  }
+ }
+
+ @media only screen and (max-width: 991px) {
+  #orbit-system {
+    transform: translate(150px, -50px) !important;
+  }
+ }
+
+ @media only screen and (max-width: 500px) {
+  #orbit-system {
+   scale: 1.3 !important;
+   transform: translate(110px, -50px) !important;
+  }
+  .outline-btn {
+    width: auto !important;
+  }
+ }

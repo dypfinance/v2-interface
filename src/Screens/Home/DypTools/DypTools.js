@@ -32,13 +32,13 @@ const DypTools = () => {
       <div className="row dyp-tools">
       <div className={`col-12 col-lg-5 fade-in-section ${isVisible ? 'is-visible' : ''}`}  ref={domRef}>
           <div className="gap-5 d-flex align-items-start justify-content-center flex-column pl-5 pt-4 leftcol">
-            <div className='gap-3 d-grid'>
+            <div className='gap-3 d-grid m-md-auto m-sm-auto m-lg-0'>
             <Title top="DYP Tools" bottom="& benefits" />
             <ListCard />
             <ListCard />
             <ListCard />
             </div>
-            <button className="btn outline-btn">
+            <button className="btn outline-btn m-md-auto m-sm-auto m-lg-0">
               Go to DYP Tools <img src={filledArrow} alt="" className="ml-2" />
             </button>
           </div>
