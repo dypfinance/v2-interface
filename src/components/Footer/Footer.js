@@ -269,7 +269,7 @@ const Footer = () => {
               height={90}
             />
           </a>
-          <div className="d-flex flex-row gap-5">
+          <div className='marketplaces d-flex justify-content-center gap-5 flex-row'>
             <a
               href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
               className="text-white text-decoration-none"
@@ -309,7 +309,7 @@ const Footer = () => {
                   >
                     <h4 className="fw-bold">About Us</h4>
                     <img
-                      className={indicators.about ? `turn` : ""}
+                      className={indicators.about ? `indicator turn` : "indicator"}
                       src={
                         require(`../../assets/accordionIndicator.svg`).default
                       }
@@ -351,7 +351,7 @@ const Footer = () => {
                   >
                     <h4 className="fw-bold">Products and services</h4>
                     <img
-                      className={indicators.products ? `turn` : ""}
+                      className={indicators.products ? `indicator turn` : "indicator"}
                       src={
                         require(`../../assets/accordionIndicator.svg`).default
                       }
@@ -406,7 +406,7 @@ const Footer = () => {
                   >
                     <h4 className="fw-bold">Anouncements</h4>
                     <img
-                      className={indicators.announcements ? `turn` : ""}
+                      className={indicators.announcements ? `indicator turn` : "indicator "}
                       src={
                         require(`../../assets/accordionIndicator.svg`).default
                       }
@@ -448,7 +448,7 @@ const Footer = () => {
                   >
                     <h4 className="fw-bold">Learn</h4>
                     <img
-                      className={indicators.learn ? `turn` : ""}
+                      className={indicators.learn ? `indicator turn` : "indicator"}
                       src={
                         require(`../../assets/accordionIndicator.svg`).default
                       }

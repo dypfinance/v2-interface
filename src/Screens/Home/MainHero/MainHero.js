@@ -60,36 +60,31 @@ const MainHero = () => {
             <div className="col-12 col-lg-5 d-flex justify-content-center flex-column text-white ml-lg-4 pt-5">
               <div>
                 <div>
-                  <h1>DYP Lorem</h1>
-                  <h1>ipsum dolor sit amet</h1>
+                  <h1>Welcome</h1>
+                  <h1>to the future</h1>
                 </div>
                 <p className="text-white">
-                  The Defi Yield Protocol Referral Program is our way of
-                  thanking and rewarding you for being an active member of the
-                  community and for sharing and promoting our products.
+                DYPIUS is a powerful decentralized ecosystem that faces the future. A new era with special focus on scalability, security, and global adoption. Powered by a next-gen infrastructure through our strong foundation, and much more! 
                 </p>
                 <button type="button" className="btn outline-btn">
-                  Explore More
+                  Explore
                 </button>
               </div>
               <div className="flex-column h-25 justify-content-end d-none">
                 {showDesc === "first" ? (
                   <p className="">
-                    1The Defi Yield Protocol Referral Program is our way of
-                    thanking and rewarding you for being an active member of the
-                    community and for sharing and promoting our products.
+                  Governance
+                  DYP holders can vote on whether to add more pools, burn tokens, allocate DYP toward grants, strategic partnerships, and different initiatives. 
                   </p>
                 ) : showDesc === "sec" ? (
                   <p className="">
-                    2The Defi Yield Protocol Referral Program is our way of
-                    thanking and rewarding you for being an active member of the
-                    community and for sharing and promoting our products.
+                   Governance
+                    DYP holders can vote on whether to add more pools, burn tokens, allocate DYP toward grants, strategic partnerships, and different initiatives. 
                   </p>
                 ) : showDesc === "third" ? (
                   <p className="">
-                    3The Defi Yield Protocol Referral Program is our way of
-                    thanking and rewarding you for being an active member of the
-                    community and for sharing and promoting our products.
+                    Governance
+                    DYP holders can vote on whether to add more pools, burn tokens, allocate DYP toward grants, strategic partnerships, and different initiatives. 
                   </p>
                 ) : (
                   ""
