@@ -111,7 +111,9 @@ const sortedNewsItems = newsData.map(item => {
   return (
     <div className='container-lg'>
         <div className="row dyp-news">
+
           <div className="col-12 d-flex flex-column flex-lg-row justify-content-between align-items-center mb-5 mb-lg-0 gap-4">
+
           <img className='sphere' src={require(`../../../assets/newsSphere.png`)} />   
             <Title top='Announcements' bottom='Lorem Ipsum' />
             <div className="button-group ms-4 ms-lg-0">

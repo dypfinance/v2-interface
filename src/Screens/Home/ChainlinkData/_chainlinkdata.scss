@@ -8,6 +8,10 @@
   z-index: -1;
   position: relative;
   bottom: 75px;
+
+  @media only screen and (max-width: 1399px) {
+    bottom: 25px !important;
+  }
 }
 
 .chainlink-data-title {

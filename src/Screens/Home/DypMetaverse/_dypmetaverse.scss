@@ -1,93 +1,189 @@
 .dyp-metaverse {
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      grid-column-gap: 17px;
-      grid-row-gap: 20px;
-  
-      img {
-        border-radius: 40px 0 40px 0;
-      }
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 17px;
+    grid-row-gap: 20px;
 
-      .image-1 {
-        grid-area: 1 / 1 / 2 / 3;
-        .img1 {
-          position: absolute;
-          left: 78px;
-          width: 315px;
-          top: 50px;
-        }
-      }
-      .image-2 {
-        grid-area: 2 / 1 / 3 / 3;
-
-        .img2 {
-          position: absolute;
-          top: 75px;
-          left: -35px;
-        }
-
-      }
-      .image-3 {
-        grid-area: 1 / 3 / 3 / 4;
-
-        .img3 {
-          height: 335px;
-        }
-
-      }
+    img {
+      border-radius: 40px 0 40px 0;
     }
 
+    .image-1 {
+      grid-area: 1 / 1 / 2 / 3;
+      .img1 {
+        position: absolute;
+        left: 78px;
+        width: 315px;
+        top: 50px;
+      }
+    }
+    .image-2 {
+      grid-area: 2 / 1 / 3 / 3;
+
+      .img2 {
+        position: absolute;
+        top: 75px;
+        left: -35px;
+      }
+    }
+    .image-3 {
+      grid-area: 1 / 3 / 3 / 4;
+
+      .img3 {
+        height: 335px;
+      }
+    }
   }
+}
+
+.bluehero {
+  filter: blur(90px);
+  position: absolute;
+  z-index: -1;
+  left: -118px;
+  top: 45px;
+}
+
+.bluehero2 {
+  filter: blur(40px);
+  position: absolute;
+  z-index: -14;
+  right: -94px;
+  top: 60px;
+  border-radius: 50%;
+}
+
+.bluespiral {
+  position: absolute;
+  z-index: -14;
+  right: -94px;
+  top: 60px;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out,
+    visibility 1200ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.cube {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: -125px;
+  top: 153px;
+}
+
+.metaverse-inner {
+  min-height: 500px;
+}
+
+@media (max-width: 1399px) {
+  .img1 {
+    left: 21px !important;
+  }
+
+  .img2 {
+    left: -85px !important;
+  }
+
+  .cube {
+    left: -167px !important;
+    top: 136px !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .img1 {
+    left: -60px !important;
+  }
+
+  .img2 {
+    width: 344px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .image-grid {
+    margin-top: 20px;
+  }
+
+  .img1 {
+    width: 190px !important;
+    top: 50px !important;
+    left: -50px !important;
+  }
+
+  .img2 {
+    width: 212px !important;
+    left: -70px !important;
+    top: 50px !important;
+  }
+
+  .img3 {
+    height: 285px !important;
+  }
+
+  .cube {
+    height: 106px !important;
+    width: 106px !important;
+    left: -111px !important;
+    top: 75px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .img1,
+  .img2,
+  .img3 {
+    position: inherit !important;
+  }
+  .img3 {
+    height: 220px !important;
+  }
+
+  .cube {
+    left: -47px !important;
+    top: -40px !important;
+  }
+
+  .metaverse-title {
+    h1 {
+      font-size: 32px !important;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .dyp-metaverse {
+    margin-bottom: 30px;
+  }
+
+  .img3 {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
   
-    .bluehero {
-      filter: blur(90px);
-      position: absolute;
-      z-index: -1;
-      left: -118px;
-      top: 45px;
-    }
+  .img2, .img1 {
+    width: 100% !important;
+  }
 
-    .bluehero2 {
-      filter: blur(40px);
-      position: absolute;
-      z-index: -14;
-      right: -94px;
-      top: 60px;
-      border-radius: 50%;
-    }
+  .cube {
+    left: -32px !important;
+    top: -32px !important;
+    width: 80px !important;
+    height: 80px !important;
+}
 
-    .bluespiral {
-      position: absolute;
-      z-index: -14;
-      right: -94px;
-      top: 60px;
-    }
-
-    .fade-in-section {
-      opacity: 0;
-      transform: translateY(20vh);
-      visibility: hidden;
-      transition: opacity 1200ms ease-out, transform 600ms ease-out,
-        visibility 1200ms ease-out;
-      will-change: opacity, transform, visibility;
-    }
-    .fade-in-section.is-visible {
-      opacity: 1;
-      transform: none;
-      visibility: visible;
-    }
-    
-
-    .cube {
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      left: -125px;
-      top: 153px;  
-    }
-
-    .metaverse-inner {
-      min-height: 500px;
-    }
+}
