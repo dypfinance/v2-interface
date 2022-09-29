@@ -8,7 +8,7 @@ import AuditedByItem from "../../../components/AuditedByItem/AuditedByItem";
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
 import Pin from '../../../assets/pin.svg'
 
-const ChainlinkData = () => {
+const   ChainlinkData = () => {
   const [totalpaid, setTotalPaid] = useState();
 
   const getTotalPaidData = async () => {

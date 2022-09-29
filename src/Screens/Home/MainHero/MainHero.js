@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ChainlinkData from "../ChainlinkData/ChainlinkData";
 import DypSystem from "../../../components/DypSystem/DypSystem";
 import dypiusLogo from "../../../assets/dypiusLogo.svg";
+import dypiusLogoPurple from "../../../assets/dypius-purple.svg";
 import dypiusIcon from "../../../assets/dyptoolsIcon.svg";
 import CometBg from "../../../components/CometBg/CometBg";
 
@@ -22,14 +23,13 @@ const MainHero = () => {
   return (
     <div className="container-fluid p-0" style={{ overflow: "hidden" }}>
       <div className="container-fluid main-hero">
-        <CometBg/>
+        <CometBg />
         <div
-          className={`row d-none d-lg-flex pt-4 justify-content-between page-navigation ${
-            opacity ? "opacity" : null
-          }`}
+          className={`row d-none d-lg-flex pt-4 justify-content-between page-navigation ${opacity ? "opacity" : null
+            }`}
         >
           <div className="col-2 d-flex justify-content-center">
-            <img src={dypiusLogo} />
+            <img src={opacity ? dypiusLogoPurple : dypiusLogo} />
           </div>
           <div className="col-6 bg-white d-flex justify-content-around align-items-center py-3 links">
             <a className="text-decoration-none" href="#metaverse">
@@ -60,36 +60,31 @@ const MainHero = () => {
             <div className="col-12 col-lg-5 d-flex justify-content-center flex-column text-white ml-lg-4 pt-5">
               <div>
                 <div>
-                  <h1>DYP Lorem</h1>
-                  <h1>ipsum dolor sit amet</h1>
+                  <h1>Welcome</h1>
+                  <h1>to the future</h1>
                 </div>
                 <p className="text-white">
-                  The Defi Yield Protocol Referral Program is our way of
-                  thanking and rewarding you for being an active member of the
-                  community and for sharing and promoting our products.
+                DYPIUS is a powerful decentralized ecosystem that faces the future. A new era with special focus on scalability, security, and global adoption. Powered by a next-gen infrastructure through our strong foundation, and much more! 
                 </p>
                 <button type="button" className="btn outline-btn">
-                  Explore More
+                  Explore
                 </button>
               </div>
               <div className="flex-column h-25 justify-content-end d-none">
                 {showDesc === "first" ? (
                   <p className="">
-                    1The Defi Yield Protocol Referral Program is our way of
-                    thanking and rewarding you for being an active member of the
-                    community and for sharing and promoting our products.
+                  Governance
+                  DYP holders can vote on whether to add more pools, burn tokens, allocate DYP toward grants, strategic partnerships, and different initiatives. 
                   </p>
                 ) : showDesc === "sec" ? (
                   <p className="">
-                    2The Defi Yield Protocol Referral Program is our way of
-                    thanking and rewarding you for being an active member of the
-                    community and for sharing and promoting our products.
+                   Governance
+                    DYP holders can vote on whether to add more pools, burn tokens, allocate DYP toward grants, strategic partnerships, and different initiatives. 
                   </p>
                 ) : showDesc === "third" ? (
                   <p className="">
-                    3The Defi Yield Protocol Referral Program is our way of
-                    thanking and rewarding you for being an active member of the
-                    community and for sharing and promoting our products.
+                    Governance
+                    DYP holders can vote on whether to add more pools, burn tokens, allocate DYP toward grants, strategic partnerships, and different initiatives. 
                   </p>
                 ) : (
                   ""
@@ -106,6 +101,18 @@ const MainHero = () => {
                 }}
                 onShowThirdDesc={() => {
                   setShowDesc("third");
+                }}
+                onShowFourthDesc={() => {
+                  setShowDesc("four");
+                }}
+                onShowFifthDesc={() => {
+                  setShowDesc("five");
+                }}
+                onShowSixthDesc={() => {
+                  setShowDesc("six");
+                }}
+                onShowSeventhDesc={() => {
+                  setShowDesc("seven");
                 }}
                 onRemoveDesc={() => {
                   setShowDesc("");

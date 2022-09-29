@@ -13,12 +13,11 @@ const NewsCard = ({title, description, date, image, link}) => {
         className="news-image"
         src={image}
         alt=""
-        
       />
       <h3>{title}</h3>
       </div>
       <div className="d-flex flex-column justify-content-between">
-      <div dangerouslySetInnerHTML={{__html: description?.slice(0, 100) + '...'}}></div>
+      <div className="news-description" dangerouslySetInnerHTML={{__html: description?.slice(0, 100) + '...'}}></div>
       </div>
       <div className="d-flex flex-row justify-content-between">
         <div className="d-flex flex-row align-items-center">
