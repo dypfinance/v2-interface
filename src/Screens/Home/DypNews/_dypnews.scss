@@ -31,6 +31,7 @@
     position: absolute;
     left: 23%;
     top: 10%;
+    z-index: -1;
   }
 
   .sphere-2{
@@ -47,6 +48,37 @@
 
   .slider-wrapper{
     margin-bottom: -100px;
+
+    .news-description{
+      h1{
+        font-size: 16px !important;
+        font-weight: 400 !important;
+      }
+      h2{
+        font-size: 16px !important;
+        font-weight: 400 !important;
+      }
+      h3{
+        font-size: 16px !important;
+        font-weight: 400 !important;
+      }
+      h4{
+        font-size: 16px !important;
+        font-weight: 400 !important;
+      }
+      h5{
+        font-size: 16px !important;
+        font-weight: 400 !important;
+      }
+      h6{
+        font-size: 16px !important;
+        font-weight: 400 !important;
+      }
+      p{
+        font-size: 16px !important;
+        font-weight: 400 !important;
+      }
+    }
   }
 
   .slick-list{
@@ -81,7 +113,7 @@
     color: transparent;
     cursor: pointer;
     display: block;
-    height: 10px;
+    height: 12px;
     width: 10px;
     opacity: 0.3;
     border-radius: 7.5px;
