@@ -9,18 +9,20 @@ import metaverse3 from "../../../assets/metaverse-3.png";
 import BlueHero from "../../../assets/metaverse-blueHero.svg";
 import Cube from "../../../assets/cube.png";
 
+const pulsing = keyframes`${pulse}`;
+
+const PulseDiv = styled.div`
+  animation: 3s ${pulsing} infinite;
+`;
+
+const fadeIn = keyframes`${fadeInLeft}`;
+
+const FadeInDiv = styled.span`
+  animation: 1s ${fadeIn};
+`;
+
+
 const DypMetaverse = () => {
-  const pulsing = keyframes`${pulse}`;
-
-  const PulseDiv = styled.div`
-    animation: 3s ${pulsing} infinite;
-  `;
-
-  const fadeIn = keyframes`${fadeInLeft}`;
-
-  const FadeInDiv = styled.span`
-    animation: 1s ${fadeIn};
-  `;
 
 
   const [isVisible, setVisible] = useState(false);

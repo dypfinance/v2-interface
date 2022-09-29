@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import dypiusIcon from "../../assets/dyptoolsIcon.svg";
 import OutsideClickHandler from "react-outside-click-handler";
 
-const HamburderMenu = () => {
+const HamburgerMenu = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ const HamburderMenu = () => {
       </div>
       {openMenu === true && (
        
-        <div className="col-6 bg-white d-flex d-lg-none d-xl-none justify-content-around align-items-center py-3 links menu">
+        <div className="col-8 bg-white d-flex d-lg-none d-xl-none justify-content-around align-items-center py-3 links menu">
           <ul>
             <li>
               <a className="text-decoration-none" href="#dyp">
@@ -63,4 +63,4 @@ const HamburderMenu = () => {
   );
 };
 
-export default HamburderMenu;
+export default HamburgerMenu;

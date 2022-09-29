@@ -3,7 +3,7 @@
   width: 18em;
   height: 18em;
   margin: 0 auto;
-  scale: 2;
+  scale: 1.5;
   transform: translate(200px, -50px);
 }
 
@@ -24,7 +24,10 @@
 .satellite-orbit2,
 .satellite2,
 .satellite-orbit3,
-.satellite3 {
+.satellite3,
+.satellite-orbit4,
+.satellite4,
+.satelite22, .satellite33, .satellite44 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -59,7 +62,7 @@
   margin-top: -8em;
   margin-left: -8em;
 
-  border: 3px solid rgba(255, 255, 255, 0.6);
+  border: 3px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
 
   -webkit-animation-name: orbit;
@@ -116,13 +119,36 @@
   animation-timing-function: linear;
 }
 
+
+.satellite22 {
+  top: 100%;
+  // width: 3em;
+  height: 3em;
+  margin-top: -2em;
+  margin-left: -1em;
+  cursor: pointer;
+  color: black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3em;
+
+  -webkit-animation-name: invert-orbit;
+  animation-name: invert-orbit;
+  -webkit-animation-duration: 15s;
+  animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
 .satellite-orbit2 {
   width: 27em;
   height: 27em;
   margin-top: -10em;
   margin-left: -13em;
 
-  border: 3px solid rgba(255, 255, 255, 0.6);
+  border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
 
   -webkit-animation-name: orbit;
@@ -157,13 +183,34 @@
   animation-timing-function: linear;
 }
 
+.satellite33 {
+  top: 93%;
+  height: 3em;
+  margin-top: -1.5em;
+  margin-left: 8.5em;
+  cursor: pointer;
+  color: black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3em;
+
+  -webkit-animation-name: reverse-orbit;
+  animation-name: reverse-orbit;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
 .satellite-orbit3 {
   width: 40em;
   height: 40em;
   margin-top: -14em;
   margin-left: -19em;
 
-  border: 3px solid rgba(255, 255, 255, 0.6);
+  border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
 
   -webkit-animation-name: orbit-reverse;
@@ -175,6 +222,69 @@
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
+
+.satellite4 {
+  top: 100%;
+  height: 3em;
+  margin-top: -1.5em;
+  margin-left: -1.5em;
+  cursor: pointer;
+  color: black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3em;
+
+  -webkit-animation-name: reverse-orbit;
+  animation-name: reverse-orbit;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.satellite44 {
+  top: 90%;
+  left: 19%;
+  height: 3em;
+  margin-top: -1.5em;
+  margin-left: -1.5em;
+  cursor: pointer;
+  color: black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3em;
+
+  -webkit-animation-name: reverse-orbit;
+  animation-name: reverse-orbit;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.satellite-orbit4 {
+  width: 53em;
+  height: 53em;
+  margin-top: -18em;
+  margin-left: -23em;
+
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+
+  -webkit-animation-name: orbit-reverse;
+  animation-name: orbit-reverse;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
 
 @-webkit-keyframes orbit {
   0% {
@@ -225,13 +335,14 @@
     scale: 1.5;
   }
 }
+
 @keyframes invert-orbit {
   0% {
     scale: 1;
     transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
   }
 
-  70% {
+  90% {
     scale: 0.5;
     filter: blur(2px);
   }
@@ -282,10 +393,10 @@
 }
 
 
-.satellite-orbit3:hover, .satellite-orbit2:hover, .satellite-orbit:hover  {
+.satellite-orbit3:hover, .satellite-orbit2:hover, .satellite-orbit:hover, .satellite-orbit4:hover  {
   animation-play-state:paused;
 
-  .satellite3, .satellite2, .satellite {
+  .satellite3, .satellite2, .satellite, .satellite22, .satellite4, .satellite33, .satellite44 {
   animation-play-state:paused;
 
   }

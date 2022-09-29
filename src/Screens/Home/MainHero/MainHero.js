@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ChainlinkData from "../ChainlinkData/ChainlinkData";
 import DypSystem from "../../../components/DypSystem/DypSystem";
 import dypiusLogo from "../../../assets/dypiusLogo.svg";
+import dypiusLogoPurple from "../../../assets/dypius-purple.svg";
 import dypiusIcon from "../../../assets/dyptoolsIcon.svg";
 import CometBg from "../../../components/CometBg/CometBg";
 
@@ -22,14 +23,13 @@ const MainHero = () => {
   return (
     <div className="container-fluid p-0" style={{ overflow: "hidden" }}>
       <div className="container-fluid main-hero">
-        <CometBg/>
+        <CometBg />
         <div
-          className={`row d-none d-lg-flex pt-4 justify-content-between page-navigation ${
-            opacity ? "opacity" : null
-          }`}
+          className={`row d-none d-lg-flex pt-4 justify-content-between page-navigation ${opacity ? "opacity" : null
+            }`}
         >
           <div className="col-2 d-flex justify-content-center">
-            <img src={dypiusLogo} />
+            <img src={opacity ? dypiusLogoPurple : dypiusLogo} />
           </div>
           <div className="col-6 bg-white d-flex justify-content-around align-items-center py-3 links">
             <a className="text-decoration-none" href="#metaverse">
@@ -101,6 +101,18 @@ const MainHero = () => {
                 }}
                 onShowThirdDesc={() => {
                   setShowDesc("third");
+                }}
+                onShowFourthDesc={() => {
+                  setShowDesc("four");
+                }}
+                onShowFifthDesc={() => {
+                  setShowDesc("five");
+                }}
+                onShowSixthDesc={() => {
+                  setShowDesc("six");
+                }}
+                onShowSeventhDesc={() => {
+                  setShowDesc("seven");
                 }}
                 onRemoveDesc={() => {
                   setShowDesc("");
