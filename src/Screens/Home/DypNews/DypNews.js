@@ -23,8 +23,8 @@ const DypNews = () => {
     slidesToShow: 3,
     slidesToScroll: 3,
     dotsClass: 'button__bar',
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
