@@ -3,39 +3,7 @@
     border-radius: 0 0 30px 30px;
     overflow: hidden;
 
-    .opacity{
-      opacity: 0.4;
-    }
-
-    .page-navigation{
-
-      position: fixed;
-      width: 100%;
-      z-index: 2;
-      transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out;
-      
-  
-      .links{
-        border-radius: 6px;
-      box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.12);
-
-      a{
-        font-weight: 500;
-        color: rgba(85, 79, 216, 1);
-      }
-     
-      }
-
-      .btn{
-        background: linear-gradient(rgba(240, 96, 58, 1), rgba(248, 132, 91, 1)) ;
-      }
-    }
-
-    .page-navigation:hover {
-      opacity: 1;
-    }
+    
   
     
     
