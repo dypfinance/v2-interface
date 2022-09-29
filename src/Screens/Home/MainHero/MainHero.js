@@ -5,6 +5,7 @@ import dypiusLogo from "../../../assets/dypiusLogo.svg";
 import dypiusLogoPurple from "../../../assets/dypius-purple.svg";
 import dypiusIcon from "../../../assets/dyptoolsIcon.svg";
 import CometBg from "../../../components/CometBg/CometBg";
+import { NavLink } from "react-router-dom";
 
 const MainHero = () => {
   const [showDesc, setShowDesc] = useState("");
@@ -32,9 +33,9 @@ const MainHero = () => {
             <img src={opacity ? dypiusLogoPurple : dypiusLogo} />
           </div>
           <div className="col-6 bg-white d-flex justify-content-around align-items-center py-3 links">
-            <a className="text-decoration-none" href="#metaverse">
+              <NavLink className="text-decoration-none" to='/dyp'>
               DYP
-            </a>
+              </NavLink>
             <a className="text-decoration-none" href="#metaverse">
               Metaverse World
             </a>
