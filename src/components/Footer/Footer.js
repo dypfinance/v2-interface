@@ -171,6 +171,8 @@ const Footer = () => {
     },
   ];
 
+  const year = new Date()
+
   const [indicators, setIndicators] = useState({
     about: false,
     products: false,
@@ -269,14 +271,16 @@ const Footer = () => {
               height={90}
             />
           </a>
-          <div className='marketplaces d-flex justify-content-center gap-5 flex-row'>
+          <div className='marketplaces d-flex justify-content-center justify-content-lg-end gap-5 flex-row'>
             <a
+            target='_blank'
               href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
               className="text-white text-decoration-none"
             >
               <h5>CoinMarketCap</h5>
             </a>
             <a
+            target='_blank'
               href="https://www.coingecko.com/en/coins/defi-yield-protocol"
               className="text-white text-decoration-none"
             >
@@ -545,9 +549,9 @@ const Footer = () => {
             </>
           )}
         </div>
-        <div className="row w-100 justify-content-center align-items-center pb-3">
+        <div className="row w-100 justify-content-center align-items-center py-3">
           <p className="mb-0 text-white fw-light" style={{ fontSize: "12px" }}>
-            Copyright © DeFi Yield Protocol 2022. All rights reserved.
+            Copyright © DeFi Yield Protocol {year.getFullYear()}. All rights reserved.
           </p>
         </div>
         <img

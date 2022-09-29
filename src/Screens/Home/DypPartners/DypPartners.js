@@ -131,7 +131,7 @@ const DypPartners = () => {
 
   return (
     <div className='container-fluid'>
-    <div className="container-lg d-flex flex-column justify-content-center align-items-center">
+    <div className="container-lg d-flex flex-column justify-content-center align-items-center p-0 p-lg-2">
         <h3 className='text-end w-100 partners-title'>Our partners</h3>
         <div className="row dyp-partners">
         <div className="d-flex slide">

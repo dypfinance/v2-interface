@@ -3,7 +3,7 @@
     min-height: 500px;
     width: 100%;
     justify-content: space-between;
-    overflow: hidden;
+    // overflow: hidden;
   
     .col-4 {
       gap: 40px;
@@ -18,7 +18,7 @@
   
     .iphoneBackground {
       top: 0;
-      height: 500px;
+      height: 430px;
     }
   
     .iphone {
@@ -111,7 +111,7 @@
     }
 
     .iphoneBackground {
-      height: 415px !important;
+      height: 340px !important;
       margin-top: 20px !important;
     }
    }
