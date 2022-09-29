@@ -10,12 +10,19 @@ import { NavLink } from "react-router-dom";
 const MainHero = () => {
   const [showDesc, setShowDesc] = useState("");
   const [opacity, setOpacity] = useState(false);
+  const [logo, setLogo] = useState(false)
 
   const changeBackground = () => {
     if (window.scrollY >= 75) {
       setOpacity(true);
     } else {
       setOpacity(false);
+    }
+
+    if(window.scrollY >= 800){
+      setLogo(true)
+    }else{
+      setLogo(false)
     }
   };
 
@@ -30,7 +37,7 @@ const MainHero = () => {
             }`}
         >
           <div className="col-2 d-flex justify-content-center">
-            <img src={opacity ? dypiusLogoPurple : dypiusLogo} />
+            <img src={logo ? dypiusLogoPurple : dypiusLogo} />
           </div>
           <div className="col-6 bg-white d-flex justify-content-around align-items-center py-3 links">
               <NavLink className="text-decoration-none" to='/dyp'>

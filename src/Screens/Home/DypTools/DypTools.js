@@ -27,7 +27,7 @@ const DypTools = () => {
   }, []);
 
   return (
-    <div className="container-lg overflow-hidden d-flex justify-content-center">
+    <div className="container-lg d-flex justify-content-center">
       <div className="row dyp-tools">
         <div
           className={`col-12 col-lg-5 fade-in-section ${
