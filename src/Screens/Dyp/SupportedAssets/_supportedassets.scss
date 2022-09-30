@@ -1,0 +1,26 @@
+.supportedAssets-wrapper {
+  background: linear-gradient(180deg, rgba(239, 240, 246, 0) 0%, #eff0f6 100%);
+  border-radius: 56px 0px;
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(30, 32, 41, 0.6);
+  }
+
+  .chain-wrapper {
+    // position: relative;
+    // left: 0;
+    display: grid;
+    // flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    width: fit-content;
+    padding: 0;
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
