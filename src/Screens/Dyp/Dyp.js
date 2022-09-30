@@ -6,19 +6,19 @@ import Vault from "./Vault/Vault";
 import DypMainHero from "./DypMainHero/DypMainHero";
 import Solutions from "./Solutions/Solutions";
 import WhyDypius from "./WhyDypius/WhyDypius";
+import BuyDyp from "./BuyDyp/BuyDyp";
 
 const Dyp = () => {
   return (
-   <div className="main-wrapper container-fluid p-0 d-flex flex-column align-items-center">
-      <div>
+   <div className="dyp-page main-wrapper container-fluid p-0 d-flex flex-column align-items-center" style={{overflowX: 'clip'}}>
       <DypMainHero />
         <WhyDypius />
         <Solutions />
         <OurTokens />
+        <BuyDyp />
         <SupportedAssets />
         <Vault/>
         <EducationalTools />
-      </div>
     </div>
   );
 };

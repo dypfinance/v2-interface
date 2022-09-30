@@ -58,8 +58,14 @@
 
    .card-wrapper{
     height: 900px;
+
+    .title-container{
+        position: absolute;
+        left: 15%;
+    }
+
     .card-container{
-        height: 1000px;
+        height: 900px;
         overflow-y: scroll;
         padding-right: 200px;
         padding-bottom: 20px;
@@ -120,3 +126,42 @@
     }
 }
 
+
+@media screen and (max-width: 786px) {
+
+    .why-dypius{
+        padding-bottom: 20px;
+        .card-wrapper{
+            height: auto;
+            .title-container{
+                position: initial;
+            }
+            .card-container{
+                padding-right: 0;
+                height: auto;
+                overflow-y: visible;
+                margin-top: 75px;
+        
+                .why-card{
+                    width: auto;
+                    height: auto;
+                    border-radius: 81px 0px 18px;
+        
+                    .tag{
+                        top: 2%;
+                        left: 3%;
+                    }
+                    .green-tag{
+                        top: -2%;
+                        left: 12%;
+                    }
+                }
+            }
+            .ring{
+                right: -20%;
+                top: 55%;
+            }
+        }
+    }
+    
+}

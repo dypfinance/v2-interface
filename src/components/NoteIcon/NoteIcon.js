@@ -17,7 +17,7 @@ const NoteIcon = ({ bgFill, svgFill }) => {
         <path
           d="M23 19H22C20.3431 19 19 20.3431 19 22V36C19 37.6569 20.3431 39 22 39H34C35.6569 39 37 37.6569 37 36V22C37 20.3431 35.6569 19 34 19H33"
           stroke={svgFill}
-          stroke-width="2"
+          strokeWwidth="2"
         />
         <rect
           x="23"
@@ -26,7 +26,7 @@ const NoteIcon = ({ bgFill, svgFill }) => {
           height="5"
           rx="2"
           stroke={svgFill}
-          stroke-width="2"
+          strokeWwidth="2"
         />
       </svg>
     </div>

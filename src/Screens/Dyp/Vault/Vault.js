@@ -54,7 +54,7 @@ const Vault = () => {
   ];
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" id="vault">
       <div className="vaultwrapper container-lg">
         <div className="p-4">
           <div className="row gap-5 m-auto">

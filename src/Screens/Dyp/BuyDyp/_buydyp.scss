@@ -1,0 +1,53 @@
+.buy-dyp{
+    min-height: 500px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    .coin{
+        position: absolute;
+        right: -3%;
+    }
+
+    .coinBackground{
+        top: 9%;
+        position: absolute;
+        width: 450px;
+        right: 7%;
+    }
+
+    .ring{
+        position: absolute;
+        right: -8%;
+        top: -15%;
+    }
+
+    .sphere-1{
+        position: absolute;
+        top: -13%;
+        height: 150px;
+        left: 25%;
+        width: 150px;
+    }
+    
+    .sphere-2{
+        position: absolute; 
+        bottom: -30%;
+        left: 45%;
+   }
+}
+
+
+
+.buy-dyp::before{
+    content: "";
+    background-image: url("../assets/buyDypBackground.svg"), linear-gradient(90deg, #EFF0F6 0%, rgba(239, 240, 246, 0) 75%);;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.4;
+    border-radius: 56px 0px;
+}
