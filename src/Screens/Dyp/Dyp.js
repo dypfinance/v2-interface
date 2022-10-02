@@ -14,8 +14,10 @@ const Dyp = () => {
       <DypMainHero />
         <WhyDypius />
         <Solutions />
+        <div className="d-grid m-0" style={{gap:100}}>
         <OurTokens />
         <SupportedAssets />
+        </div>
         <Vault/>
         <EducationalTools />
       </div>

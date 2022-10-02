@@ -7,7 +7,7 @@ import Tokenomics from "../Tokenomics/Tokenomics";
 const OurTokens = () => {
   return (
     <div className="container-fluid">
-      <div className="ourtokens-wrapper container-lg overflow-hidden">
+      <div className="ourtokens-wrapper container-lg">
         <div>
           <div className="row justify-content-between m-0 gap-2 position-relative">
             <img src={TokenGraph} alt=''className="tokengraph"/>

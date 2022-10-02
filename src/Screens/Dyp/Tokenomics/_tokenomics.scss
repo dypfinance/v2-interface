@@ -51,6 +51,8 @@ gap: 10px;
 border: 4px solid rgba(85, 79, 216, 0.1);
 border-radius: 12px 0px;
 padding: 16px;
+margin-top: 20px;
+margin-bottom: 20px;
 
 p {
     font-weight: 400;
@@ -61,4 +63,9 @@ color: #554FD8;
 }
 
 
+  }
+
+  .card-body {
+    top: -14px;
+    border: none;
   }
