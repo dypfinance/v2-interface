@@ -20,7 +20,7 @@ const EducationalTools = () => {
   ];
 
   return (
-    <div className="eduactionalwrapper container-lg">
+    <div className="eduactionalwrapper container-lg" id="learn">
       <div className="row gap-3 justify-content-between align-items-center p-4">
         <div className="col-12 col-lg-5">
           <Title top="Educational" bottom="Tools" />

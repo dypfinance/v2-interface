@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
+import useWindowSize from "../../hooks/useWindowSize";
 import "./_footer.scss";
 
 const Footer = () => {
   
+  const windowSize = useWindowSize();
+
+
     const socials = [
     {
       name: "Twitter",
@@ -215,24 +219,6 @@ const Footer = () => {
     }
   };
 
-  const [windowSize, setWindowSize] = useState(getWindowSize());
-
-  useEffect(() => {
-    function handleWindowResize() {
-      setWindowSize(getWindowSize());
-    }
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
-
-  function getWindowSize() {
-    const { innerWidth, innerHeight } = window;
-    return { innerWidth, innerHeight };
-  }
 
   return (
     <div className="container-fluid p-0 footer">
@@ -298,7 +284,7 @@ const Footer = () => {
         />
         <hr />
         <div className="row mt-0 mt-lg-5 footer-blocks w-100">
-          {windowSize.innerWidth < 786 ? (
+          {windowSize.width < 786 ? (
             <div className="accordion w-100" id="accordionFooter">
               <div className="col-12 col-lg-3 text-white d-flex flex-column gap-3 px-0 py-3">
                 <div

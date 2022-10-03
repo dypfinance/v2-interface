@@ -6,7 +6,8 @@ import Tokenomics from "../Tokenomics/Tokenomics";
 
 const OurTokens = () => {
   return (
-    <div className="container-fluid">
+
+    <div className="container-fluid mt-5" id="ourTokens">
       <div className="ourtokens-wrapper container-lg">
         <div>
           <div className="row justify-content-between m-0 gap-2 position-relative">
@@ -51,6 +52,7 @@ const OurTokens = () => {
           />
         </div>
         <Tokenomics/>
+
       </div>
     </div>
   );
