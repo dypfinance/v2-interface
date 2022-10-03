@@ -2,9 +2,9 @@ import React from "react";
 import EthPool from '../../assets/DypAssets/ethpool.svg'
 import rightArrow from '../../assets/right-arrow.svg'
 
-const VaultCards = ({pool, apr, link}) => {
+const VaultCards = ({pool, apr, link, top_tick}) => {
   return (
-    <div className="vaultWrapper bg-white">
+    <div className={`vaultWrapper bg-white ${top_tick ? "top-tick" : ""}`}>
         <div className="purplediv"></div>
       <div className="d-flex flex-column gap-3">
         <div className="row justify-content-between gap-2 m-0">

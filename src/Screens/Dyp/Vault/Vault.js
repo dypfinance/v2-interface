@@ -55,6 +55,7 @@ const Vault = () => {
 
   return (
     <div className="container-fluid" id="vault">
+       <img className='bluehero-solutions' src={require(`../../../assets/metaverse-blueHero.svg`).default} alt="" style={{bottom: 0}}/>
       <div className="vaultwrapper container-lg">
         <div className="p-4">
           <div className="row gap-5 m-auto">
@@ -70,6 +71,7 @@ const Vault = () => {
                     apr={item.percentage}
                     key={index}
                     link={item.link}
+                    top_tick={item.top_tick}
                   />
                 );
               })}
