@@ -8,6 +8,9 @@ import PurpleArrowUp from "../../../assets/DypAssets/purpleArrow-up.svg";
 import PurpleArrowDown from "../../../assets/DypAssets/purpleArrow-down.svg";
 import WhiteArrowUp from "../../../assets/DypAssets/whiteArrow-up.svg";
 import WhiteArrowDown from "../../../assets/DypAssets/whiteArrow-down.svg";
+import { shortAddress } from "../../../hooks/shortAddress";
+import useWindowSize from "../../../hooks/useWindowSize";
+
 
 const Tokenomics = () => {
   const [tokenomicData, setTokenomicData] = useState("");
@@ -19,6 +22,9 @@ const Tokenomics = () => {
       setTokenomicData('')
     }
   }, [toggleIdyp, toggledyp])
+
+  const windowSize = useWindowSize();
+
 
   return (
     <div className="outer-wrapper">
@@ -73,8 +79,8 @@ const Tokenomics = () => {
         <div className="card card-body pb-4">
           {tokenomicData === "dyp" ? (
             <div className="row m-0 justify-content-between gap-2">
-              <div className="col-7">
-                <div className="circulating-wrapper col-6">
+              <div className="col-xl-7 col-lg-7">
+                <div className="circulating-wrapper col-xl-6 col-lg-6">
                   <div className="d-flex flex-column gap-3">
                     <span className="circulating-title">
                       Circulating supply
@@ -89,7 +95,7 @@ const Tokenomics = () => {
                     DYP Contract Address:
                   </span>
                   <span className="dypcontract-addr">
-                    0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17{" "}
+                    { windowSize.width < 526 ? shortAddress('0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17') : "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"}
                     <img
                       src={Clipboard}
                       alt=""
@@ -144,7 +150,7 @@ const Tokenomics = () => {
                       </defs>
                     </svg>
                     <div className="row gap-3 justify-content-between">
-                      <div className="col-6">
+                      <div className="col-lg-6 col-xl-6 col-md-6">
                         <div className="d-flex flex-column ">
                           <span
                             className="dypcontract-title"
@@ -180,7 +186,7 @@ const Tokenomics = () => {
                           </span>
                         </div>
                       </div>
-                      <div className="col-5">
+                      <div className="col-lg-5 col-xl-5 col-md-5">
                         <div className="d-flex flex-column">
                           <span
                             className="dypcontract-title"
@@ -252,7 +258,7 @@ const Tokenomics = () => {
                       </defs>
                     </svg>
                     <div className="row gap-3 justify-content-between">
-                      <div className="col-6">
+                      <div className="col-lg-6 col-xl-6 col-md-6">
                         <div className="d-flex flex-column ">
                           <span
                             className="dypcontract-title"
@@ -265,7 +271,7 @@ const Tokenomics = () => {
                           </span>
                         </div>
                       </div>
-                      <div className="col-5">
+                      <div className="col-lg-5 col-xl-5 col-md-5">
                         <div className="d-flex flex-column">
                           <span
                             className="dypcontract-title"
@@ -313,7 +319,7 @@ const Tokenomics = () => {
                       </defs>
                     </svg>
                     <div className="row gap-3 justify-content-between">
-                      <div className="col-6">
+                      <div className="col-lg-6 col-xl-6 col-md-6">
                         <div className="d-flex flex-column ">
                           <span
                             className="dypcontract-title"
@@ -326,7 +332,7 @@ const Tokenomics = () => {
                           </span>
                         </div>
                       </div>
-                      <div className="col-5">
+                      <div className="col-lg-5 col-xl-5 col-md-5">
                         <div className="circulating-wrapper">
                           <div className="d-flex flex-column gap-3">
                             <span
@@ -342,7 +348,7 @@ const Tokenomics = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-lg-4 col-xl-4 col-md-4">
                 <div
                   id="crypto-widget-CoinList"
                   data-design="modern"
@@ -353,8 +359,8 @@ const Tokenomics = () => {
             </div>
           ) : (
             <div className="row m-0 justify-content-between gap-2">
-              <div className="col-7">
-                <div className="circulating-wrapper col-6">
+              <div className="col-lg-7 col-xl-7 col-md-7">
+                <div className="circulating-wrapper col-xl-6 col-lg-6">
                   <div className="d-flex flex-column gap-3">
                     <span className="circulating-title">Max Total Supply</span>
                     <span className="circulating-amount">300,000,000 iDYP</span>
@@ -420,7 +426,7 @@ const Tokenomics = () => {
                       </defs>
                     </svg>
                     <div className="row gap-3 justify-content-between">
-                      <div className="col-6">
+                      <div className="col-lg-6 col-xl-6 col-md-6">
                         <div className="d-flex flex-column ">
                           <span
                             className="dypcontract-title"
@@ -444,7 +450,7 @@ const Tokenomics = () => {
                           </span>
                         </div>
                       </div>
-                      <div className="col-5">
+                      <div className="col-lg-5 col-xl-5 col-md-5">
                         <div className="d-flex flex-column">
                           <span
                             className="dypcontract-title"
@@ -503,7 +509,7 @@ const Tokenomics = () => {
                       </defs>
                     </svg>
                     <div className="row gap-3 justify-content-between">
-                      <div className="col-6">
+                      <div className="col-lg-6 col-xl-6 col-md-6">
                         <div className="d-flex flex-column ">
                           <span
                             className="dypcontract-title"
@@ -528,7 +534,7 @@ const Tokenomics = () => {
                           </span>
                         </div>
                       </div>
-                      <div className="col-5">
+                      <div className="col-lg-5 col-xl-5 col-md-5">
                         <div className="d-flex flex-column">
                           <span
                             className="dypcontract-title"
@@ -544,7 +550,7 @@ const Tokenomics = () => {
                     </div>
                   </div>
                   <div className="row justify-content-between">
-                    <div className="col-6">
+                    <div className="col-lg-6 col-xl-6 col-md-6">
                       <span>Team</span>
                       <svg
                         width="353"
@@ -592,7 +598,7 @@ const Tokenomics = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-5">
+                    <div className="col-lg-5 col-xl-5 col-md-5">
                       <span>Burned</span>
                       <svg
                         width="353"
@@ -643,7 +649,7 @@ const Tokenomics = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-4 d-flex flex-column justify-content-between">
+              <div className="col-lg-4 col-xl-4 col-md-4 d-flex flex-column justify-content-between">
                 <div>
                   <div
                     id="crypto-widget-CoinList"

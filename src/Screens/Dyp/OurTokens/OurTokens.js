@@ -15,9 +15,9 @@ const OurTokens = () => {
       <div className="ourtokens-wrapper container-lg position-relative">
          <img className='ourtoken-sphere' src={require(`../../../assets/newsSphere.png`)} />   
         <div>
-          <div className="row justify-content-between m-0 gap-2 position-relative">
+          <div className="row justify-content-between m-0 gap-2 position-relative mb-4">
             <img src={TokenGraph} alt=''className="tokengraph"/>
-            <div className="col-4">
+            <div className="col-lg-4 col-xl-4 p-0">
               <h2 className="ourtoken-title">
                 Our <span className="bottm-text">Tokens</span>
               </h2>
@@ -25,7 +25,7 @@ const OurTokens = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
               </p>
             </div>
-            <div className="col-7 row justify-content-end gap-3 m-0 position-relative">
+            <div className="col-lg-7 col-xl-7 p-0 row justify-content-xl-end justify-content-lg-end justify-content-between gap-3 m-0 position-relative">
               <TokenCards
                 title={"DYP Token"}
                 price={"0,1586"}
@@ -39,7 +39,7 @@ const OurTokens = () => {
             </div>
           </div>
         </div>
-        <div className="row m-0 gap-5 justify-content-between">
+        <div className="row m-0 gap-5 justify-content-between flex-column flex-xl-row flex-lg-row">
           <ProductCard
             classname={"bridge"}
             title={"Bridge"}

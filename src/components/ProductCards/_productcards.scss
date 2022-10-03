@@ -1,7 +1,7 @@
 .bridge {
   background-color: #f16640;
   border-radius: 18px 0px;
-  max-width: 526px;
+  width: 47%;
   padding: 0;
 }
 
@@ -23,7 +23,7 @@
       rgba(87, 182, 171, 0.3) 100%
     );
   border-radius: 18px 0px;
-  max-width: 526px;
+ width: 43%;
   padding: 0;
 
 }
@@ -65,4 +65,15 @@
   line-height: 32px;
   text-decoration-line: underline;
   color: #ffffff;
+}
+
+
+@media only screen and (max-width: 991px) {
+  .earn, .bridge {
+    width: 100% !important;
+  }
+
+  .desc {
+    max-width: 100%;
+  }
 }
