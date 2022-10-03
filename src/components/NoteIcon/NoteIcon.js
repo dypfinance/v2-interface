@@ -9,6 +9,7 @@ const NoteIcon = ({ bgFill, svgFill }) => {
         viewBox="0 0 56 56"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        style={{boxShadow: '0px 8px 12px rgba(0, 0, 0, 0.12)', borderRadius: '0 0 18px'}}
       >
         <path
           d="M0 18C0 8.05888 8.05887 0 18 0H56V38C56 47.9411 47.9411 56 38 56H0V18Z"

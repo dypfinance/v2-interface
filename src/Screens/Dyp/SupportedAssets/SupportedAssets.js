@@ -12,6 +12,8 @@ const SupportedAssets = () => {
   const [ethState, setEthState] = useState(false);
   const [bnbState, setBnbState] = useState(false);
   const [avaxState, setAvaxState] = useState(false);
+  const types = ["Stake", "Yield", "Buyback"];
+  const [activeType, setActiveType] = useState(types[0]);
 
   const handleEthPool = () => {
     setAvaxState(false);
@@ -31,8 +33,6 @@ const SupportedAssets = () => {
     setEthState(false);
   };
 
-  console.log(ethState, bnbState, avaxState)
-
   return (
     <div className="container-lg">
       <div className="supportedAssets-wrapper">
@@ -40,31 +40,72 @@ const SupportedAssets = () => {
         <div className="col-4">
           <p>We support the most popular coins on three different chains</p>
         </div>
-
-        <div className="row gap-4 m-auto p-4 position-relative">
-          <div className="chain-wrapper">
-            <img src={ethState === true ? EthActive : EthPassive} onClick={() => handleEthPool()} />
-            <img src={ bnbState === true ? BnbActive : BnbPassive} onClick={() => handleBnbPool()} />
-            <img src={ avaxState === true ? AvaxActive : AvaxPassive} onClick={() => handleAvaxPool()} />
+        <div>
+          <div className="types-wrapper">
+            <div
+              className={`actiontype ${activeType === "Stake" && "active"}`}
+              onClick={() => {
+                setActiveType(types[0]);
+              }}
+            >
+              <span>Stake</span>
+              {activeType === "Stake" && <div className="activetype-dot"></div>}
+            </div>
+            <div
+              className={`actiontype ${activeType === "Yield" && "active"}`}
+              onClick={() => {
+                setActiveType(types[1]);
+              }}
+            >
+              <span>Yield</span>
+              {activeType === "Yield" && <div className="activetype-dot"></div>}
+            
+            </div>
+            <div
+              className={`actiontype ${activeType === "Buyback" && "active"}`}
+              onClick={() => {
+                setActiveType(types[2]);
+              }}
+            >
+              <span>Buyback</span>
+              {activeType === "Buyback" && <div className="activetype-dot"></div>}
+            </div>
+            
           </div>
-          <SupAssetCard
-            pool={"DYP"}
-            apr={"1.1%"}
-            tvl={"$48,382.30"}
-            lockTime={"No lock"}
-          />
-          <SupAssetCard
-            pool={"DYP"}
-            apr={"1.1%"}
-            tvl={"$48,382.30"}
-            lockTime={"No lock"}
-          />
-          <SupAssetCard
-            pool={"DYP"}
-            apr={"1.1%"}
-            tvl={"$48,382.30"}
-            lockTime={"No lock"}
-          />
+          <div className="row gap-4 m-auto p-4 position-relative">
+            <div className="chain-wrapper">
+              <img
+                src={ethState === true ? EthActive : EthPassive}
+                onClick={() => handleEthPool()}
+              />
+              <img
+                src={bnbState === true ? BnbActive : BnbPassive}
+                onClick={() => handleBnbPool()}
+              />
+              <img
+                src={avaxState === true ? AvaxActive : AvaxPassive}
+                onClick={() => handleAvaxPool()}
+              />
+            </div>
+            <SupAssetCard
+              pool={"DYP"}
+              apr={"1.1%"}
+              tvl={"$48,382.30"}
+              lockTime={"No lock"}
+            />
+            <SupAssetCard
+              pool={"DYP"}
+              apr={"1.1%"}
+              tvl={"$48,382.30"}
+              lockTime={"No lock"}
+            />
+            <SupAssetCard
+              pool={"DYP"}
+              apr={"1.1%"}
+              tvl={"$48,382.30"}
+              lockTime={"No lock"}
+            />
+          </div>
         </div>
       </div>
     </div>
