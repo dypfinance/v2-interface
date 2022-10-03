@@ -28,8 +28,8 @@ const DypToken = () => {
             </p>
             <div className="row">
               <div className="d-flex flex-row">
-                <CoinCard title='Dypius Earn' stake='10% DYP Stake' description='Earn rewards by securely depositing your assets into the staking smart contract'  />
-                <CoinCard title='Dypius Earn' stake='25% DYP Stake' description='Earn rewards by securely depositing your assets into the staking smart contract' />
+                <CoinCard title='Dypius Earn' stakeAmount='30%' description='Earn rewards by securely depositing your assets into the staking smart contract'  />
+                <CoinCard title='Dypius Earn' stakeAmount='75%' description='Earn rewards by securely depositing your assets into the staking smart contract' />
               </div>
             </div>
             <button className="btn filled-btn">

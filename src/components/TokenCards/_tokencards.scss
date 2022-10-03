@@ -3,7 +3,11 @@
   border-radius: 12px;
   padding: 16px;
   max-width: 325px;
-  height: 122px;
+  height: fit-content;
+  @media only screen and (max-width: 991px) {
+    max-width: inherit !important;
+    width: 100%;
+  }
 
   .tokentitle {
     font-weight: 500;
@@ -56,9 +60,17 @@
 .tokenwrapper:nth-child(1) {
   position: relative;
   top: 75px;
+
+  @media only screen and (max-width: 1199px) {
+    top: auto !important;
+  }
 }
 
 .tokenwrapper:nth-child(2) {
     position: relative;
     top: 35px;
+
+    @media only screen and (max-width: 1199px) {
+      top: auto !important;
+    }
   }

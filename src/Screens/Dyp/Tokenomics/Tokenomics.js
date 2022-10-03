@@ -1,15 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NoteIcon from "../../../components/NoteIcon/NoteIcon";
 import Title from "../../../components/Title/Title";
 import Clipboard from "../assets/filledClipboard.svg";
 import Graph from "../../../assets/DypAssets/tokenomics-graph.png";
-import idypGraph from '../../../assets/DypAssets/idypGraph.png'
+import idypGraph from "../../../assets/DypAssets/idypGraph.png";
+import PurpleArrowUp from "../../../assets/DypAssets/purpleArrow-up.svg";
+import PurpleArrowDown from "../../../assets/DypAssets/purpleArrow-down.svg";
+import WhiteArrowUp from "../../../assets/DypAssets/whiteArrow-up.svg";
+import WhiteArrowDown from "../../../assets/DypAssets/whiteArrow-down.svg";
+import { shortAddress } from "../../../hooks/shortAddress";
+import useWindowSize from "../../../hooks/useWindowSize";
+
 
 const Tokenomics = () => {
   const [tokenomicData, setTokenomicData] = useState("");
+  const [toggledyp, setToggleDyp] = useState(false);
+  const [toggleIdyp, setToggleIDyp] = useState(false);
+
+  useEffect(()=>{
+    if(toggleIdyp === false && toggledyp === false) {
+      setTokenomicData('')
+    }
+  }, [toggleIdyp, toggledyp])
+
+  const windowSize = useWindowSize();
+
 
   return (
-    <div className="position-relative" style={{top: 95}}>
+    <div className="outer-wrapper">
       <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
         <div className="row m-0 gap-2">
           <NoteIcon bgFill={"#7770E0"} svgFill={"#fff"} />
@@ -17,30 +35,43 @@ const Tokenomics = () => {
         </div>
         <div className="row m-0 gap-4">
           <button
-            className="btn filled-btn"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseExample"
-            aria-expanded="false"
-            aria-controls="collapseExample"
-            onClick={() => {
-              setTokenomicData("idyp");
-            }}
-          >
-            iDYP Tokenomics
-          </button>
-          <button
             className="btn outline-btn"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#collapseExample"
+            data-bs-target={
+              tokenomicData === "idyp"
+                ? "#collapseExample3"
+                : "#collapseExample"
+            }
             aria-expanded="false"
             aria-controls="collapseExample"
             onClick={() => {
               setTokenomicData("dyp");
+              setToggleDyp(!toggledyp);
+              setToggleIDyp(false);
             }}
           >
             DYP Tokenomics
+            <img src={toggledyp === true ? PurpleArrowUp : PurpleArrowDown}  alt=''/>
+          </button>
+
+          <button
+            className="btn filled-btn"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target={
+              tokenomicData === "dyp" ? "#collapseExample3" : "#collapseExample"
+            }
+            aria-expanded="false"
+            aria-controls="collapseExample"
+            onClick={() => {
+              setTokenomicData("idyp");
+              setToggleIDyp(!toggleIdyp);
+              setToggleDyp(false);
+            }}
+          >
+            iDYP Tokenomics
+            <img src={toggleIdyp === true ? WhiteArrowUp : WhiteArrowDown} alt=''/>
           </button>
         </div>
       </div>
@@ -48,8 +79,8 @@ const Tokenomics = () => {
         <div className="card card-body pb-4">
           {tokenomicData === "dyp" ? (
             <div className="row m-0 justify-content-between gap-2">
-              <div className="col-7">
-                <div className="circulating-wrapper col-6">
+              <div className="col-xl-7 col-lg-7">
+                <div className="circulating-wrapper col-xl-6 col-lg-6">
                   <div className="d-flex flex-column gap-3">
                     <span className="circulating-title">
                       Circulating supply
@@ -64,8 +95,17 @@ const Tokenomics = () => {
                     DYP Contract Address:
                   </span>
                   <span className="dypcontract-addr">
-                    0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17{" "}
-                    <img src={Clipboard} alt="" />
+                    { windowSize.width < 526 ? shortAddress('0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17') : "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"}
+                    <img
+                      src={Clipboard}
+                      alt=""
+                      onClick={() => {
+                        navigator.clipboard.writeText(
+                          "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
+                        );
+                      }}
+                      style={{ cursor: "pointer" }}
+                    />
                   </span>
                 </div>
                 <div className="mininginfo-wrapper ">
@@ -110,7 +150,7 @@ const Tokenomics = () => {
                       </defs>
                     </svg>
                     <div className="row gap-3 justify-content-between">
-                      <div className="col-6">
+                      <div className="col-lg-6 col-xl-6 col-md-6">
                         <div className="d-flex flex-column ">
                           <span
                             className="dypcontract-title"
@@ -146,7 +186,7 @@ const Tokenomics = () => {
                           </span>
                         </div>
                       </div>
-                      <div className="col-5">
+                      <div className="col-lg-5 col-xl-5 col-md-5">
                         <div className="d-flex flex-column">
                           <span
                             className="dypcontract-title"
@@ -218,7 +258,7 @@ const Tokenomics = () => {
                       </defs>
                     </svg>
                     <div className="row gap-3 justify-content-between">
-                      <div className="col-6">
+                      <div className="col-lg-6 col-xl-6 col-md-6">
                         <div className="d-flex flex-column ">
                           <span
                             className="dypcontract-title"
@@ -231,7 +271,7 @@ const Tokenomics = () => {
                           </span>
                         </div>
                       </div>
-                      <div className="col-5">
+                      <div className="col-lg-5 col-xl-5 col-md-5">
                         <div className="d-flex flex-column">
                           <span
                             className="dypcontract-title"
@@ -279,7 +319,7 @@ const Tokenomics = () => {
                       </defs>
                     </svg>
                     <div className="row gap-3 justify-content-between">
-                      <div className="col-6">
+                      <div className="col-lg-6 col-xl-6 col-md-6">
                         <div className="d-flex flex-column ">
                           <span
                             className="dypcontract-title"
@@ -292,7 +332,7 @@ const Tokenomics = () => {
                           </span>
                         </div>
                       </div>
-                      <div className="col-5">
+                      <div className="col-lg-5 col-xl-5 col-md-5">
                         <div className="circulating-wrapper">
                           <div className="d-flex flex-column gap-3">
                             <span
@@ -308,7 +348,7 @@ const Tokenomics = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-lg-4 col-xl-4 col-md-4">
                 <div
                   id="crypto-widget-CoinList"
                   data-design="modern"
@@ -319,8 +359,8 @@ const Tokenomics = () => {
             </div>
           ) : (
             <div className="row m-0 justify-content-between gap-2">
-              <div className="col-7">
-                <div className="circulating-wrapper col-6">
+              <div className="col-lg-7 col-xl-7 col-md-7">
+                <div className="circulating-wrapper col-xl-6 col-lg-6">
                   <div className="d-flex flex-column gap-3">
                     <span className="circulating-title">Max Total Supply</span>
                     <span className="circulating-amount">300,000,000 iDYP</span>
@@ -332,7 +372,16 @@ const Tokenomics = () => {
                   </span>
                   <span className="dypcontract-addr">
                     0xbd100d061e120b2c67a24453cf6368e63f1be056
-                    <img src={Clipboard} alt="" />
+                    <img
+                      src={Clipboard}
+                      alt=""
+                      onClick={() => {
+                        navigator.clipboard.writeText(
+                          "0xbd100d061e120b2c67a24453cf6368e63f1be056"
+                        );
+                      }}
+                      style={{ cursor: "pointer" }}
+                    />
                   </span>
                 </div>
                 <div className="mininginfo-wrapper ">
@@ -377,7 +426,7 @@ const Tokenomics = () => {
                       </defs>
                     </svg>
                     <div className="row gap-3 justify-content-between">
-                      <div className="col-6">
+                      <div className="col-lg-6 col-xl-6 col-md-6">
                         <div className="d-flex flex-column ">
                           <span
                             className="dypcontract-title"
@@ -401,7 +450,7 @@ const Tokenomics = () => {
                           </span>
                         </div>
                       </div>
-                      <div className="col-5">
+                      <div className="col-lg-5 col-xl-5 col-md-5">
                         <div className="d-flex flex-column">
                           <span
                             className="dypcontract-title"
@@ -460,7 +509,7 @@ const Tokenomics = () => {
                       </defs>
                     </svg>
                     <div className="row gap-3 justify-content-between">
-                      <div className="col-6">
+                      <div className="col-lg-6 col-xl-6 col-md-6">
                         <div className="d-flex flex-column ">
                           <span
                             className="dypcontract-title"
@@ -485,7 +534,7 @@ const Tokenomics = () => {
                           </span>
                         </div>
                       </div>
-                      <div className="col-5">
+                      <div className="col-lg-5 col-xl-5 col-md-5">
                         <div className="d-flex flex-column">
                           <span
                             className="dypcontract-title"
@@ -501,112 +550,111 @@ const Tokenomics = () => {
                     </div>
                   </div>
                   <div className="row justify-content-between">
-                     <div className="col-6">
-                    <span>Team</span>
-                    <svg
-                      width="353"
-                      height="1"
-                      viewBox="0 0 653 1"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        width="653"
+                    <div className="col-lg-6 col-xl-6 col-md-6">
+                      <span>Team</span>
+                      <svg
+                        width="353"
                         height="1"
-                        fill="url(#paint0_linear_95_5424)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_95_5424"
-                          x1="0"
-                          y1="0"
-                          x2="653"
-                          y2="1"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="#7770E0" />
-                          <stop
-                            offset="1"
-                            stop-color="#7770E0"
-                            stop-opacity="0"
-                          />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                    <div className="row gap-3 justify-content-between">
-                      <div className="">
-                        <div className="d-flex flex-column ">
-                          <span
-                            className="dypcontract-title"
-                            style={{ fontSize: 12 }}
+                        viewBox="0 0 653 1"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          width="653"
+                          height="1"
+                          fill="url(#paint0_linear_95_5424)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_95_5424"
+                            x1="0"
+                            y1="0"
+                            x2="653"
+                            y2="1"
+                            gradientUnits="userSpaceOnUse"
                           >
-                            Vested for 24 months, released monthly
-                          </span>
-                          <span className="dypcontract-addr">
-                            30,000,000 iDYP
-                          </span>
+                            <stop stop-color="#7770E0" />
+                            <stop
+                              offset="1"
+                              stop-color="#7770E0"
+                              stop-opacity="0"
+                            />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <div className="row gap-3 justify-content-between">
+                        <div className="">
+                          <div className="d-flex flex-column ">
+                            <span
+                              className="dypcontract-title"
+                              style={{ fontSize: 12 }}
+                            >
+                              Vested for 24 months, released monthly
+                            </span>
+                            <span className="dypcontract-addr">
+                              30,000,000 iDYP
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-5 col-xl-5 col-md-5">
+                      <span>Burned</span>
+                      <svg
+                        width="353"
+                        height="1"
+                        viewBox="0 0 653 1"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          width="653"
+                          height="1"
+                          fill="url(#paint0_linear_95_5424)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_95_5424"
+                            x1="0"
+                            y1="0"
+                            x2="653"
+                            y2="1"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#7770E0" />
+                            <stop
+                              offset="1"
+                              stop-color="#7770E0"
+                              stop-opacity="0"
+                            />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <div className="row gap-3 justify-content-between">
+                        <div className="">
+                          <div className="d-flex flex-column ">
+                            <span
+                              className="dypcontract-title"
+                              style={{ fontSize: 12 }}
+                            >
+                              Burned and removed from the total supply
+                            </span>
+                            <span className="dypcontract-addr">
+                              1,325,392 iDYP
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="col-5">
-                    <span>Burned</span>
-                    <svg
-                      width="353"
-                      height="1"
-                      viewBox="0 0 653 1"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        width="653"
-                        height="1"
-                        fill="url(#paint0_linear_95_5424)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_95_5424"
-                          x1="0"
-                          y1="0"
-                          x2="653"
-                          y2="1"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="#7770E0" />
-                          <stop
-                            offset="1"
-                            stop-color="#7770E0"
-                            stop-opacity="0"
-                          />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                    <div className="row gap-3 justify-content-between">
-                      <div className="">
-                        <div className="d-flex flex-column ">
-                          <span
-                            className="dypcontract-title"
-                            style={{ fontSize: 12 }}
-                          >
-                            Burned and removed from the total supply
-                          </span>
-                          <span className="dypcontract-addr">
-                          1,325,392 iDYP
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                 
                 </div>
               </div>
-              <div className="col-4 d-flex flex-column justify-content-between">
+              <div className="col-lg-4 col-xl-4 col-md-4 d-flex flex-column justify-content-between">
                 <div>
                   <div
                     id="crypto-widget-CoinList"
                     data-design="modern"
-                    data-coin-ids="2669"
+                    data-coin-ids="9517"
                   ></div>
                   <img src={idypGraph} alt="" className="w-100" />
                 </div>

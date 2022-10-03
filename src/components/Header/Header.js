@@ -9,7 +9,7 @@ const Header = () => {
         <div className="navbar p-4 header-wrapper">
           <Logo />
           <div className="d-flex gap-3">
-            <NavLink to="/dyp" className="nav-link">
+            <NavLink to="/dyp"  className="nav-link">
               Dyp
             </NavLink>
             <NavLink to="/metaverse" className="nav-link">
