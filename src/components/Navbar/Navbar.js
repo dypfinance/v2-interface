@@ -16,7 +16,7 @@ const Navbar = () => {
       setOpacity(false);
     }
 
-    if (window.location.href.includes("dyp")) {
+    if (window.location.href.includes("dyp") || window.location.href.includes("about") ) {
       if (window.scrollY >= 500) {
         setLogo(true);
       } else {
@@ -54,9 +54,9 @@ const Navbar = () => {
             <a className="text-decoration-none" href="#metaverse">
               Support
             </a>
-            <a className="text-decoration-none" href="#metaverse">
+            <NavLink className={({isActive}) => (isActive ? 'text-decoration-none highlight' : 'text-decoration-none')} to='/about'>
               About Us
-            </a>
+              </NavLink>
           </div>
           <div className="col-2 d-flex justify-content-center">
             <a className='d-flex text-decoration-none' target='_blank' href='https://tools.dyp.finance/news'>

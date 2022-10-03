@@ -13,7 +13,7 @@ const BuyDyp = () => {
 
 
   return (
-    <div className="container-lg buy-dyp d-flex position-relative justify-content-between flex-column flex-lg-row">
+    <div className="container-lg buy-dyp d-flex position-relative justify-content-between flex-column flex-lg-row py-2 py-lg-0">
       <img className='ring' src={ring} alt="" />
       <img className='sphere-1' src={sphere} alt="" />
       <img className='sphere-2' src={sphere} alt="" />

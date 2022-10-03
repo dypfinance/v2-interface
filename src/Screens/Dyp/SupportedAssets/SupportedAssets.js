@@ -49,39 +49,42 @@ const SupportedAssets = () => {
         </div>
        
         <div className="d-flex flex-column gap-4">
-          <div className="types-wrapper">
-            <div
-              className={`actiontype ${activeType === "Stake" && "active"}`}
-              onClick={() => {
-                setActiveType(types[0]);
-              }}
-            >
-              <span>Stake</span>
-              {activeType === "Stake" && <div className="activetype-dot"></div>}
-            </div>
-            <div
-              className={`actiontype ${activeType === "Yield" && "active"}`}
-              onClick={() => {
-                setActiveType(types[1]);
-              }}
-            >
-              <span>Yield</span>
-              {activeType === "Yield" && <div className="activetype-dot"></div>}
-            </div>
-            <div
-              className={`actiontype ${activeType === "Buyback" && "active"}`}
-              onClick={() => {
-                setActiveType(types[2]);
-              }}
-            >
-              <span>Buyback</span>
-              {activeType === "Buyback" && (
-                <div className="activetype-dot"></div>
-              )}
-            </div>
-          </div>
+         {windowSize.width > 786  &&
+         
+         <div className="types-wrapper">
+         <div
+           className={`actiontype ${activeType === "Stake" && "active"}`}
+           onClick={() => {
+             setActiveType(types[0]);
+           }}
+         >
+           <span>Stake</span>
+           {activeType === "Stake" && <div className="activetype-dot"></div>}
+         </div>
+         <div
+           className={`actiontype ${activeType === "Yield" && "active"}`}
+           onClick={() => {
+             setActiveType(types[1]);
+           }}
+         >
+           <span>Yield</span>
+           {activeType === "Yield" && <div className="activetype-dot"></div>}
+         </div>
+         <div
+           className={`actiontype ${activeType === "Buyback" && "active"}`}
+           onClick={() => {
+             setActiveType(types[2]);
+           }}
+         >
+           <span>Buyback</span>
+           {activeType === "Buyback" && (
+             <div className="activetype-dot"></div>
+           )}
+         </div>
+       </div>
+         }
           <div
-            className="row gap-4 m-auto pl-4 pr-4 position-relative"
+            className="row gap-4 m-auto position-relative"
             style={{ paddingBottom: "4rem", zIndex: 1 }}
           >
             <div className="chain-wrapper">
