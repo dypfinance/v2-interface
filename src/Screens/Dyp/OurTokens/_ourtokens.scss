@@ -1,0 +1,32 @@
+.ourtokens-wrapper {
+  background: linear-gradient(360deg, #554fd8 0%, #756edf 98.32%);
+  border: 6px solid #eff0f6;
+  border-radius: 56px 0px;
+  padding: 3rem;
+  min-height: 653px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .ourtoken-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    color: #ffffff;
+    display: grid;
+  }
+
+  .ourtoken-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .tokengraph {
+    position: absolute;
+    right: 60px;
+    top: -50px;
+    transform: rotate(0deg);
+  }
+}

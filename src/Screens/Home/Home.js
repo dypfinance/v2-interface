@@ -8,7 +8,7 @@ import DypPartners from "./DypPartners/DypPartners";
 
 const Home = () => {
   return (
-    <div className="main-wrapper container-fluid p-0 d-flex flex-column align-items-center" style={{gap: '70px'}}>
+    <div className="homepage main-wrapper container-fluid p-0 d-flex flex-column align-items-center" style={{gap: '70px'}}>
       <MainHero/>
       <DypMetaverse/>
       <DypTools/>

@@ -1,12 +1,22 @@
-@import '../components/Header/header';
 @import '../Screens/Home/home';
 @import '../Screens//Home/MainHero/mainhero';
 @import '../Screens/Home/DypMetaverse/dypmetaverse';
 @import '../Screens/Home/DypTools/dyptools';
 @import '../Screens/Home/ChainlinkData/chainlinkdata';
+@import '../Screens/Dyp/EducationalTools/educationaltools';
+@import '../Screens/Dyp/Vault/vault';
+@import '../Screens/Dyp/SupportedAssets/supportedassets' ;
+@import '../Screens/Dyp/OurTokens/ourtokens';
+@import '../Screens/Dyp/Tokenomics/tokenomics';
+
+
+@import '../components/Header/header';
 @import '../components/AuditedByItem/auditedByItem';
 @import '../components/DypSystem/dypSystem';
 @import '../components/CometBg/_cometbg';
+@import '../components/TokenCards/tokencards';
+@import '../components/ProductCards/productcards';
+@import '../components/VaultCard/vaultcard';
 
 
 *{
