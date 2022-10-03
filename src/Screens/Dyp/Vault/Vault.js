@@ -4,7 +4,7 @@ import Title from "../../../components/Title/Title";
 const Vault = () => {
   const vaultArray = [
     {
-      icons: ["eth-icon2.png"],
+      icons: ["eth.svg"],
       title: "ETH",
       percentage: "3% - 13%",
       total_value_locked: ``,
@@ -14,7 +14,7 @@ const Vault = () => {
       link: "https://vault.dyp.finance/vault-weth",
     },
     {
-      icons: ["wbtc-icon.png"],
+      icons: ["bitcoin.svg"],
       title: "WBTC",
       percentage: "3% - 13%",
       total_value_locked: ``,
@@ -22,7 +22,7 @@ const Vault = () => {
       link: "https://vault.dyp.finance/vault-wbtc",
     },
     {
-      icons: ["usdc-icon.png"],
+      icons: ["usdc.svg"],
       title: "USDC",
       percentage: "8% - 22%",
       total_value_locked: ``,
@@ -32,7 +32,7 @@ const Vault = () => {
       link: "https://vault.dyp.finance/vault-usdc",
     },
     {
-      icons: ["usdt-icon.png"],
+      icons: ["usdt.svg"],
       title: "USDT",
       percentage: "9% - 23%",
       total_value_locked: ``,
@@ -42,7 +42,7 @@ const Vault = () => {
       link: "https://vault.dyp.finance/vault-usdt",
     },
     {
-      icons: ["dai-icon.png"],
+      icons: ["dai.svg"],
       title: "DAI",
       percentage: "8% - 21%",
       total_value_locked: ``,
@@ -72,6 +72,7 @@ const Vault = () => {
                     key={index}
                     link={item.link}
                     top_tick={item.top_tick}
+                    icon={item.icons}
                   />
                 );
               })}

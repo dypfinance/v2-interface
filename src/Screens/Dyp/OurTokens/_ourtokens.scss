@@ -8,6 +8,10 @@
   flex-direction: column;
   justify-content: space-around;
 
+  @media only screen and (max-width: 991px) {
+    padding: 1rem;
+  }
+
   .ourtoken-title {
     font-weight: 700;
     font-size: 48px;
@@ -26,8 +30,13 @@
   .tokengraph {
     position: absolute;
     right: 60px;
-    top: -50px;
+    top: -40px;
     transform: rotate(0deg);
+
+    @media only screen and (max-width: 991px) {
+      right: auto;
+    top: auto;
+    }
   }
 }
 

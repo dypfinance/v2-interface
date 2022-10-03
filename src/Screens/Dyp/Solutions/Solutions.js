@@ -47,15 +47,6 @@ const Solutions = () => {
     {
       title: "Lorem Ipsum",
     },
-    {
-      title: "Lorem Ipsum",
-    },
-    {
-      title: "Lorem Ipsum",
-    },
-    {
-      title: "Lorem Ipsum",
-    },
   ];
 
   const loadMore = () => {
@@ -99,7 +90,7 @@ const Solutions = () => {
         src={require(`../../../assets/metaverse-blueHero.svg`).default}
         alt=""
       />
-      <img  src={dots} className="dots" />
+      <img src={dots} className="dots" />
     </div>
   );
 };
