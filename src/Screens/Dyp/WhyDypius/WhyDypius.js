@@ -79,6 +79,7 @@ const windowSize = useWindowSize();
                   <WhyDypCard />
                   <WhyDypCard />
                   <WhyDypCard />
+                  <WhyDypCard />
                   </>
                 }
                 </div>

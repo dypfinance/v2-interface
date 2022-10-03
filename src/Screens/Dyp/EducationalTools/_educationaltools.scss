@@ -35,6 +35,14 @@
 }
 }
 
+
+
+@media screen and (max-width: 786px) {
+  .cardWrapper{
+    width: 100% !important;
+  }
+} 
+
 .edu-sphere {
   position: absolute;
   right: 55%;
@@ -49,4 +57,5 @@
   z-index: 0;
   width: 200px;
   height: 200px;
+
 }

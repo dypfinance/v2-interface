@@ -29,15 +29,20 @@ const EducationalTools = () => {
             how-to videos and learn how to become an expert in no time.
           </p>
         </div>
+
         <a
           className="btn outline-btn d-flex align-items-center"
           href="https://www.youtube.com/c/DeFiYieldProtocol"
           target={"_blank"}
           rel={"noreferrer"}
         >
+
           Go to our Youtube <img src={filledArrow} alt="" className="ml-2" />
         </a>
       </div>
+
+      <div className="row gap-5 gap-lg-3 justify-content-between p-4">
+
       <div className="row gap-3 justify-content-between p-4 position-relative">
       <img className='edu-sphere' src={require(`../../../assets/newsSphere.png`)} />   
       <img className='edu-sphere2' src={require(`../../../assets/newsSphere.png`)} />   
