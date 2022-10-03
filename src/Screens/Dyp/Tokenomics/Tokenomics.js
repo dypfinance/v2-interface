@@ -100,11 +100,11 @@ const Tokenomics = () => {
                           y2="1"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#7770E0" />
+                          <stop stopColor="#7770E0" />
                           <stop
                             offset="1"
-                            stop-color="#7770E0"
-                            stop-opacity="0"
+                            stopColor="#7770E0"
+                            stopOpacity="0"
                           />
                         </linearGradient>
                       </defs>
@@ -208,11 +208,11 @@ const Tokenomics = () => {
                           y2="1"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#7770E0" />
+                          <stop stopColor="#7770E0" />
                           <stop
                             offset="1"
-                            stop-color="#7770E0"
-                            stop-opacity="0"
+                            stopColor="#7770E0"
+                            stopOpacity="0"
                           />
                         </linearGradient>
                       </defs>
@@ -269,11 +269,11 @@ const Tokenomics = () => {
                           y2="1"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#7770E0" />
+                          <stop stopColor="#7770E0" />
                           <stop
                             offset="1"
-                            stop-color="#7770E0"
-                            stop-opacity="0"
+                            stopColor="#7770E0"
+                            stopOpacity="0"
                           />
                         </linearGradient>
                       </defs>
@@ -367,11 +367,11 @@ const Tokenomics = () => {
                           y2="1"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#7770E0" />
+                          <stop stopColor="#7770E0" />
                           <stop
                             offset="1"
-                            stop-color="#7770E0"
-                            stop-opacity="0"
+                            stopColor="#7770E0"
+                            stopOpacity="0"
                           />
                         </linearGradient>
                       </defs>
@@ -450,11 +450,11 @@ const Tokenomics = () => {
                           y2="1"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#7770E0" />
+                          <stop stopColor="#7770E0" />
                           <stop
                             offset="1"
-                            stop-color="#7770E0"
-                            stop-opacity="0"
+                            stopColor="#7770E0"
+                            stopOpacity="0"
                           />
                         </linearGradient>
                       </defs>
@@ -524,11 +524,11 @@ const Tokenomics = () => {
                           y2="1"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#7770E0" />
+                          <stop stopColor="#7770E0" />
                           <stop
                             offset="1"
-                            stop-color="#7770E0"
-                            stop-opacity="0"
+                            stopColor="#7770E0"
+                            stopOpacity="0"
                           />
                         </linearGradient>
                       </defs>
@@ -572,11 +572,11 @@ const Tokenomics = () => {
                           y2="1"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#7770E0" />
+                          <stop stopColor="#7770E0" />
                           <stop
                             offset="1"
-                            stop-color="#7770E0"
-                            stop-opacity="0"
+                            stopColor="#7770E0"
+                            stopOpacity="0"
                           />
                         </linearGradient>
                       </defs>

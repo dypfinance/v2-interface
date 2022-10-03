@@ -29,11 +29,11 @@ const EducationalTools = () => {
             how-to videos and learn how to become an expert in no time.
           </p>
         </div>
-        <button className="btn outline-btn">
+        <button className="btn outline-btn ms-3 ms-lg-0">
           Go to our Youtube <img src={filledArrow} alt="" className="ml-2" />
         </button>
       </div>
-      <div className="row gap-3 justify-content-between p-4">
+      <div className="row gap-5 gap-lg-3 justify-content-between p-4">
         {vidsArray.length > 0 &&
           vidsArray.map((item, index) => {
             return (
