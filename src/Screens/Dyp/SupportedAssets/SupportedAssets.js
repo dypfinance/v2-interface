@@ -7,8 +7,11 @@ import EthActive from "../../../assets/DypAssets/ethchain-active.svg";
 import AvaxPassive from "../../../assets/DypAssets/avaxchain-passive.svg";
 import BnbPassive from "../../../assets/DypAssets/bnbchain-passive.svg";
 import EthPassive from "../../../assets/DypAssets/ethchain-passive.svg";
-import spiral from "../../../assets/footerSpiral.png";
+
 import useWindowSize from "../../../hooks/useWindowSize";
+
+import Spiral from "../../../assets/DypAssets/spiral.svg";
+
 
 const SupportedAssets = () => {
   const [ethState, setEthState] = useState(false);
@@ -44,45 +47,43 @@ const SupportedAssets = () => {
           <Title top="Supported Assets" />
           <p>We support the most popular coins on three different chains</p>
         </div>
-        <div>
-          {windowSize.width > 786 ? (
-            <div className="types-wrapper">
-              <div
-                className={`actiontype ${activeType === "Stake" && "active"}`}
-                onClick={() => {
-                  setActiveType(types[0]);
-                }}
-              >
-                <span>Stake</span>
-                {activeType === "Stake" && (
-                  <div className="activetype-dot"></div>
-                )}
-              </div>
-              <div
-                className={`actiontype ${activeType === "Yield" && "active"}`}
-                onClick={() => {
-                  setActiveType(types[1]);
-                }}
-              >
-                <span>Yield</span>
-                {activeType === "Yield" && (
-                  <div className="activetype-dot"></div>
-                )}
-              </div>
-              <div
-                className={`actiontype ${activeType === "Buyback" && "active"}`}
-                onClick={() => {
-                  setActiveType(types[2]);
-                }}
-              >
-                <span>Buyback</span>
-                {activeType === "Buyback" && (
-                  <div className="activetype-dot"></div>
-                )}
-              </div>
+       
+        <div className="d-flex flex-column gap-4">
+          <div className="types-wrapper">
+            <div
+              className={`actiontype ${activeType === "Stake" && "active"}`}
+              onClick={() => {
+                setActiveType(types[0]);
+              }}
+            >
+              <span>Stake</span>
+              {activeType === "Stake" && <div className="activetype-dot"></div>}
             </div>
-          ) : null}
-          <div className="row gap-4 m-auto p-4 position-relative">
+            <div
+              className={`actiontype ${activeType === "Yield" && "active"}`}
+              onClick={() => {
+                setActiveType(types[1]);
+              }}
+            >
+              <span>Yield</span>
+              {activeType === "Yield" && <div className="activetype-dot"></div>}
+            </div>
+            <div
+              className={`actiontype ${activeType === "Buyback" && "active"}`}
+              onClick={() => {
+                setActiveType(types[2]);
+              }}
+            >
+              <span>Buyback</span>
+              {activeType === "Buyback" && (
+                <div className="activetype-dot"></div>
+              )}
+            </div>
+          </div>
+          <div
+            className="row gap-4 m-auto pl-4 pr-4 position-relative"
+            style={{ paddingBottom: "4rem", zIndex: 1 }}
+          >
             <div className="chain-wrapper">
               <img
                 src={ethState === true ? EthActive : EthPassive}
@@ -162,10 +163,10 @@ const SupportedAssets = () => {
               tvl={"$48,382.30"}
               lockTime={"No lock"}
             />
+            <img className="spiral2" src={Spiral} alt="" />
           </div>
         </div>
       </div>
-      <img src={spiral} className='spiral' /> 
     </div>
   );
 };

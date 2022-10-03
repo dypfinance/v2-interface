@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import dypiusLogo from "../../assets/dypiusLogo.svg";
 import dypiusLogoPurple from "../../assets/dypius-purple.svg";
 import dypiusIcon from "../../assets/dyptoolsIcon.svg";
 import { NavLink } from "react-router-dom";
-import './_navbar.scss'
-
+import "./_navbar.scss";
 
 const Navbar = () => {
-
-    const [opacity, setOpacity] = useState(false);
+  const [opacity, setOpacity] = useState(false);
   const [logo, setLogo] = useState(false);
 
   const changeBackground = () => {
@@ -18,30 +16,22 @@ const Navbar = () => {
       setOpacity(false);
     }
 
-    if(window.location.href.includes('dyp')){
-      if(window.scrollY >= 500){
-        setLogo(true)
-      }else{
-        setLogo(false)
+    if (window.location.href.includes("dyp")) {
+      if (window.scrollY >= 500) {
+        setLogo(true);
+      } else {
+        setLogo(false);
       }
-    }else{
-      if(window.scrollY >= 800){
-        setLogo(true)
-      }else{
-        setLogo(false)
+    } else {
+      if (window.scrollY >= 800) {
+        setLogo(true);
+      } else {
+        setLogo(false);
       }
     }
-
   };
 
-
-
-  
-  
-
   window.addEventListener("scroll", changeBackground);
-
-
 
   return (
     <div
@@ -80,4 +70,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;

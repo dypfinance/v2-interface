@@ -29,16 +29,29 @@ const EducationalTools = () => {
             how-to videos and learn how to become an expert in no time.
           </p>
         </div>
-        <button className="btn outline-btn ms-3 ms-lg-0">
+
+        <a
+          className="btn outline-btn d-flex align-items-center"
+          href="https://www.youtube.com/c/DeFiYieldProtocol"
+          target={"_blank"}
+          rel={"noreferrer"}
+        >
+
           Go to our Youtube <img src={filledArrow} alt="" className="ml-2" />
-        </button>
+        </a>
       </div>
+
       <div className="row gap-5 gap-lg-3 justify-content-between p-4">
+
+      <div className="row gap-3 justify-content-between p-4 position-relative">
+      <img className='edu-sphere' src={require(`../../../assets/newsSphere.png`)} />   
+      <img className='edu-sphere2' src={require(`../../../assets/newsSphere.png`)} />   
+
         {vidsArray.length > 0 &&
           vidsArray.map((item, index) => {
             return (
               <div key={index} className="cardWrapper">
-                <a href={item.link} target='_blank' rel='noreferrer'>
+                <a href={item.link} target="_blank" rel="noreferrer">
                   <div className="p-3 bg-white">
                     <img
                       src={require(`../../../assets/DypAssets/${item.image}`)}

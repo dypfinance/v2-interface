@@ -3,12 +3,17 @@ import ProductCard from "../../../components/ProductCards/ProductCards";
 import TokenCards from "../../../components/TokenCards/TokenCards";
 import TokenGraph from '../../../assets/DypAssets/ourtokens-graph.svg'
 import Tokenomics from "../Tokenomics/Tokenomics";
+import DotFrame from '../../../assets/DypAssets/dotFrame.svg'
 
 const OurTokens = () => {
   return (
 
     <div className="container-fluid mt-5" id="ourTokens">
-      <div className="ourtokens-wrapper container-lg">
+     
+      <img className='dotframe position-absolute' src={DotFrame} />   
+
+      <div className="ourtokens-wrapper container-lg position-relative">
+         <img className='ourtoken-sphere' src={require(`../../../assets/newsSphere.png`)} />   
         <div>
           <div className="row justify-content-between m-0 gap-2 position-relative">
             <img src={TokenGraph} alt=''className="tokengraph"/>
@@ -51,7 +56,7 @@ const OurTokens = () => {
             }
           />
         </div>
-        <Tokenomics/>
+        {/* <Tokenomics/> */}
 
       </div>
     </div>

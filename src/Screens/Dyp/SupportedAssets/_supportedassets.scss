@@ -69,6 +69,7 @@
     }
 }
 
+
 .spiral {
   position: absolute;
   right: -5%;
@@ -100,5 +101,14 @@ hr{
       padding-right: 12px !important;
     }
   }
-  
+}  
+
+.spiral2 {
+  position: absolute;
+    bottom: -40px;
+    height: 156px;
+    width: 156px;
+    right: -5px;
+    z-index: -1;
+
 }

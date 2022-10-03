@@ -54,3 +54,32 @@
     color: #6e7191;
   }
 }
+
+.top-tick {
+  border: 2px solid #F0603A;
+  position: relative;
+  &::after {
+      content: "Top pick";
+      position: absolute;
+      width: 91px;
+      height: 33px;
+      top: -17px;
+      right: -2px;
+      background-color: #F0603A;
+      background-image: url(../../assets/DypAssets/topTick-icon.svg);
+      background-repeat: no-repeat;
+      border-radius: 6px 0px;
+      color: #fff;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 22px;
+      text-align: right;
+     
+      background-position: 9px 3px;
+      padding: 5px 10px 5px 0;
+  }
+
+  .purplediv {
+    background: #F0603A !important;
+  }
+}
