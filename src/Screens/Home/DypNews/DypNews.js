@@ -106,9 +106,6 @@ const sortedNewsItems = newsData.map(item => {
 }) 
 
 
-
-
-
   return (
     <div className='container-lg'>
         <div className="row dyp-news">

@@ -145,7 +145,7 @@ const DypPartners = () => {
   return (
     <div className='container-fluid'>
     <div className="container-lg d-flex flex-column justify-content-center align-items-center p-0 p-lg-2">
-        <h3 className='text-end w-100 partners-title'>Our partners</h3>
+        <h3 className='text-end w-100 partners-title'>Partners</h3>
         <div className="row dyp-partners">
            <Slider {...settings}>
                  {partnersArray.map((partner, index) => (
