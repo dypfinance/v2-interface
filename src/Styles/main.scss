@@ -1,25 +1,61 @@
-@import '../Screens/Home/home';
-@import '../Screens//Home/MainHero/mainhero';
-@import '../Screens/Home/DypMetaverse/dypmetaverse';
-@import '../Screens/Home/DypTools/dyptools';
-@import '../Screens/Home/ChainlinkData/chainlinkdata';
-@import '../Screens/Dyp/EducationalTools/educationaltools';
-@import '../Screens/Dyp/Vault/vault';
-@import '../Screens/Dyp/SupportedAssets/supportedassets' ;
-@import '../Screens/Dyp/OurTokens/ourtokens';
-@import '../Screens/Dyp/Tokenomics/tokenomics';
+@import "../Screens/Home/home";
+@import "../Screens//Home/MainHero/mainhero";
+@import "../Screens/Home/DypMetaverse/dypmetaverse";
+@import "../Screens/Home/DypTools/dyptools";
+@import "../Screens/Home/ChainlinkData/chainlinkdata";
+@import "../Screens/Dyp/EducationalTools/educationaltools";
+@import "../Screens/Dyp/Vault/vault";
+@import "../Screens/Dyp/SupportedAssets/supportedassets";
+@import "../Screens/Dyp/OurTokens/ourtokens";
+@import "../Screens/Dyp/Tokenomics/tokenomics";
+@import "../Screens//About/Brand/brand";
+@import "../Screens/About/Security/security";
 
+@import "../components/Header/header";
+@import "../components/AuditedByItem/auditedByItem";
+@import "../components/DypSystem/dypSystem";
+@import "../components/CometBg/_cometbg";
+@import "../components/TokenCards/tokencards";
+@import "../components/ProductCards/productcards";
+@import "../components/VaultCard/vaultcard";
+@import "../components/ScrollTop/scrollTop";
 
-@import '../components/Header/header';
-@import '../components/AuditedByItem/auditedByItem';
-@import '../components/DypSystem/dypSystem';
-@import '../components/CometBg/_cometbg';
-@import '../components/TokenCards/tokencards';
-@import '../components/ProductCards/productcards';
-@import '../components/VaultCard/vaultcard';
-
-
-*{
-    font-family: 'Poppins', sans-serif ;
+* {
+  font-family: "Poppins", sans-serif;
 }
 
+.filled-btn {
+  color: #fff;
+  background: linear-gradient(96.88deg, #7770e0 3.35%, #554fd8 96.28%);
+  border-radius: 10px;
+  // box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.09);
+  height: 48px;
+}
+
+.filled-btn:hover {
+  color: white !important;
+  background: #3e3aa5 !important;
+}
+
+.filled-btn:focus {
+  background: #7770e0 !important;
+}
+
+.outline-btn {
+  color: #554fd8;
+  height: 48px;
+  background-color: #fff;
+  border-color: #554fd8;
+  backdrop-filter: blur(15px);
+  font-weight: 500;
+  border-radius: 10px !important;
+}
+
+.outline-btn:hover {
+  color: #554fd8 !important;
+  border-color: #3e3aa5 !important;
+}
+
+.outline-btn:focus {
+  border-color: #554fd8 !important;
+}

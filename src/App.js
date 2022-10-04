@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer";
 import HamburgerMenu from "./components/Header/HamburgerMenu";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./Screens/About/About";
+import ScrollTop from "./components/ScrollTop/ScrollTop";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/dyp" element={<Dyp />} />
         <Route exact path="/about" element={<About />} />
       </Routes>
+      <ScrollTop/>
       <Footer />
     </BrowserRouter>
   );

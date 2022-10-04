@@ -16,13 +16,15 @@ const Navbar = () => {
       setOpacity(false);
     }
 
-    if (window.location.href.includes("dyp") || window.location.href.includes("about") ) {
+    if (window.location.href.includes("dyp")  ) {
       if (window.scrollY >= 500) {
         setLogo(true);
       } else {
         setLogo(false);
       }
-    } else {
+    } else if(window.location.href.includes('about')) {
+      setLogo(true)
+    }else {
       if (window.scrollY >= 800) {
         setLogo(true);
       } else {
@@ -34,31 +36,32 @@ const Navbar = () => {
   window.addEventListener("scroll", changeBackground);
 
   return (
-    <div
-          className={`row d-none d-lg-flex pt-4 justify-content-between page-navigation ${opacity ? "opacity" : null}`} id='navbar'>
-            <div className="col-2 d-flex justify-content-center">
+      <div className={`container-fluid  d-none d-lg-flex page-navigation ${opacity ? "opacity" : null}`}>
+           <div
+          className={`container-lg d-flex pt-4 justify-content-between`} id='navbar'>
+            <div className="col-2 d-flex justify-content-start">
             <NavLink className='d-flex' to='/'>
             <img src={logo ? dypiusLogoPurple : dypiusLogo} />
             </NavLink>
           </div>
           <div className="col-6 bg-white d-flex justify-content-around align-items-center py-3 links">
-              <NavLink className={({isActive}) => (isActive ? 'text-decoration-none highlight' : 'text-decoration-none')} to='/dyp'>
+              <NavLink className={({isActive}) => (isActive ? 'text-decoration-none navlink highlight' : 'text-decoration-none navlink')} to='/dyp'>
               DYP
               </NavLink>
-            <a className="text-decoration-none" href="#metaverse">
+            <a className="text-decoration-none navlink" href="#metaverse">
               Metaverse World
             </a>
-            <a className="text-decoration-none" href="#metaverse">
+            <a className="text-decoration-none navlink" href="#metaverse">
               Governance
             </a>
-            <a className="text-decoration-none" href="#metaverse">
+            <a className="text-decoration-none navlink" href="#metaverse">
               Support
             </a>
-            <NavLink className={({isActive}) => (isActive ? 'text-decoration-none highlight' : 'text-decoration-none')} to='/about'>
+            <NavLink className={({isActive}) => (isActive ? 'text-decoration-none navlink highlight' : 'text-decoration-none navlink')} to='/about'>
               About Us
               </NavLink>
           </div>
-          <div className="col-2 d-flex justify-content-center">
+          <div className="col-2 d-flex justify-content-end">
             <a className='d-flex text-decoration-none' target='_blank' href='https://tools.dyp.finance/news'>
             <button className="btn text-white py-2">
               <img src={dypiusIcon} className="pe-2" />
@@ -67,6 +70,7 @@ const Navbar = () => {
             </a>
           </div>
         </div>
+      </div>
   )
 }
 

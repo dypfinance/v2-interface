@@ -12,40 +12,40 @@ const Solutions = () => {
 
   const solutions = [
     {
-      title: "Lorem Ipsum",
+      title: "DYP Tools",
     },
     {
-      title: "Lorem Ipsum",
+      title: "Governance",
     },
     {
-      title: "Lorem Ipsum",
+      title: "Stake",
     },
     {
-      title: "Lorem Ipsum",
+      title: "Farm",
     },
     {
-      title: "Lorem Ipsum",
+      title: "Vault",
     },
     {
-      title: "Lorem Ipsum",
+      title: "Buyback",
     },
     {
-      title: "Lorem Ipsum",
+      title: "Bridge",
     },
     {
-      title: "Lorem Ipsum",
+      title: "CAWS NFT",
     },
     {
-      title: "Lorem Ipsum",
+      title: "Launchpad",
     },
     {
-      title: "Lorem Ipsum",
+      title: "iDYP",
     },
     {
-      title: "Lorem Ipsum",
-    },
+      title: "CAWS Adventure",
+    }, 
     {
-      title: "Lorem Ipsum",
+      title: "Anti Manipulation",
     },
   ];
 
@@ -79,7 +79,7 @@ const Solutions = () => {
         <div className="row justify-content-center my-5">
           <button
             onClick={loadMore}
-            className="btn outline-btn d-flex d-lg-none justify-content-center align-items-center"
+            className={`btn outline-btn ${solutionLength < 12 ? 'd-flex' : 'd-none'} d-lg-none justify-content-center align-items-center`}
           >
             Load More +
           </button>
@@ -90,7 +90,6 @@ const Solutions = () => {
         src={require(`../../../assets/metaverse-blueHero.svg`).default}
         alt=""
       />
-      <img src={dots} className="dots" />
     </div>
   );
 };
