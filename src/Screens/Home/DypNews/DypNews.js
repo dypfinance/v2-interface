@@ -18,13 +18,13 @@ const DypNews = () => {
   const settings = {
     dots: true,
     infinite: true,
-    arrows: false,
+    arrows: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
     dotsClass: 'button__bar',
-    autoplay: true,
-    autoplaySpeed: 3000,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
@@ -48,6 +48,7 @@ const DypNews = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          fade: true
         }
       }
     ]
@@ -127,7 +128,7 @@ const sortedNewsItems = newsData.map(item => {
             <div className="slider-wrapper">
             <Slider {...settings}>
               {sortedNewsItems.slice(0, 9).map((newsItem, index) => (
-                <NewsCard  key={index} title={newsItem.title} description={sortedDesc[index]?.content} date={newsItem.date.toLocaleDateString("en-US", options)} image={newsItem.image} link={newsItem.link} />
+                <NewsCard  key={index} title={newsItem.title} description={sortedDesc[index]?.content} date={newsItem.date.toLocaleDateString("en-US", options)} image={newsItem.image} link={`https://tools.dyp.finance/news/${newsItem.id}`} />
 
               ))}
             </Slider>

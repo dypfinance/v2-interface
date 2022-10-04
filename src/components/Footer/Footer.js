@@ -222,7 +222,8 @@ const Footer = () => {
 
   return (
     <div className="container-fluid p-0 footer">
-      <div className="socials row justify-content-evenly align-items-center pl-4 pl-lg-0">
+      <div className="socials container-fluid ">
+        <div className="container-lg socials-container d-grid align-items-center">
         {socials.map((social, index) => (
           <div key={index} className="col-4 col-lg">
             <a
@@ -243,10 +244,10 @@ const Footer = () => {
             </a>
           </div>
         ))}
+        </div>
       </div>
-      <div className="row px-3 px-lg-5 py-0 footer-links justify-content-center">
-        <div
-          className="row justify-content-between align-items-center py-2 w-100"
+      <div className="container-fluid px-3 px-lg-5 py-0 footer-links justify-content-center">
+        <div className="container-lg d-flex justify-content-between align-items-start align-items-lg-center flex-column flex-lg-row py-2 w-100 position-relative"
           style={{ zIndex: 2 }}
         >
           <a href="#">
@@ -276,14 +277,16 @@ const Footer = () => {
               <h5>Disclaimer</h5>
             </a>
           </div>
-        </div>
-        <img
+
+          <img
           className="spiral"
           src={require(`../../assets/footerSpiral.png`)}
           alt=""
         />
+        </div>
+       
         <hr />
-        <div className="row mt-0 mt-lg-5 footer-blocks w-100">
+        <div className="container-lg d-flex mt-0 mt-lg-5 footer-blocks w-100 position-relative">
           {windowSize.width < 786 ? (
             <div className="accordion w-100" id="accordionFooter">
               <div className="col-12 col-lg-3 text-white d-flex flex-column gap-3 px-0 py-3">
@@ -534,17 +537,18 @@ const Footer = () => {
               </div>
             </>
           )}
-        </div>
-        <div className="row w-100 justify-content-center align-items-center py-3">
-          <p className="mb-0 text-white fw-light" style={{ fontSize: "12px" }}>
-            Copyright © DeFi Yield Protocol {year.getFullYear()}. All rights reserved.
-          </p>
-        </div>
-        <img
+           <img
           className="sphere"
           src={require(`../../assets/footerSphere.png`)}
           alt=""
         />
+        </div>
+        <div className="row w-100 justify-content-end justify-content-lg-center align-items-center py-3">
+          <p className="mb-0 text-white fw-light" style={{ fontSize: "12px" }}>
+            Copyright © DeFi Yield Protocol {year.getFullYear()}. All rights reserved.
+          </p>
+        </div>
+       
       </div>
     </div>
   );

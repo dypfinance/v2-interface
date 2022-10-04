@@ -31,7 +31,7 @@ const EducationalTools = () => {
         </div>
 
         <a
-          className="btn outline-btn d-flex align-items-center"
+          className="btn outline-btn d-flex align-items-center ms-3 ms-lg-0"
           href="https://www.youtube.com/c/DeFiYieldProtocol"
           target={"_blank"}
           rel={"noreferrer"}
@@ -43,7 +43,7 @@ const EducationalTools = () => {
 
       <div className="row gap-5 gap-lg-3 justify-content-between p-4">
 
-      <div className="row gap-3 justify-content-between p-4 position-relative">
+      <div className="row  gap-5 gap-lg-3 justify-content-between p-4 position-relative">
       <img className='edu-sphere' src={require(`../../../assets/newsSphere.png`)} />   
       <img className='edu-sphere2' src={require(`../../../assets/newsSphere.png`)} />   
 

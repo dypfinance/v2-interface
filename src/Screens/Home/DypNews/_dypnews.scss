@@ -88,12 +88,34 @@
       }
      
     }
+
+    .slick-prev{
+      left: -50px !important;
+    }
+    .slick-next{
+      right: -30px !important;
+    }
+
+    
+
+
+    .slick-next::before{
+      color: #9664FF !important;
+      position: absolute !important;
+    }
+    .slick-prev::before{
+      color: #9664FF !important;
+      position: absolute !important;
+    }
+
   }
 
   .slick-list{
     margin: 0 -24px;
     padding-bottom: 30px;
   }
+
+  
 
   .button__bar {
     display: flex !important;
