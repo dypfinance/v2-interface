@@ -35,7 +35,7 @@ const DypTools = () => {
           }`}
           ref={domRef}
         >
-          <div className="gap-5 d-flex align-items-start justify-content-center flex-column pl-5 pt-4 leftcol">
+          <div className="gap-5 d-flex align-items-start justify-content-center flex-column pl-5 pt-5 pb-5 leftcol">
 
             <div className='gap-3 d-grid m-md-auto m-sm-auto m-lg-0'>
             <Title top="DYP Tools" bottom="Powerful dApps" />
@@ -55,7 +55,7 @@ const DypTools = () => {
           </div>
           <img src={Triangle} className="triangle" />
           <img className="iphone" src={Laptop} alt="" />
-          <img className="dots" src={dots} alt="" />
+          <img className="dots2" src={dots} alt="" />
         </div>
       </div>
     </div>

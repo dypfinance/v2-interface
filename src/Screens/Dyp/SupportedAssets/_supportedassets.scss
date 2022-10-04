@@ -37,6 +37,9 @@
   .actiontype {
     cursor: pointer;
     position: relative;
+    padding: 10px;
+    padding-bottom: 15px;
+    min-width: 80px;
     span {
       color: #6e7191;
       font-weight: 600;
