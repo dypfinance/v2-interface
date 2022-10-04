@@ -50,9 +50,9 @@ const DypTools = () => {
           </div>
         </div>
         <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center position-relative">
-          <TadaDiv>
-            <img className="iphoneBackground" src={iphoneBg} alt="" />
-          </TadaDiv>
+          <div className="rotate-scale-up">
+            {/* <img className="iphoneBackground" src={iphoneBg} alt="" /> */}
+          </div>
           <img src={Triangle} className="triangle" />
           <img className="iphone" src={Laptop} alt="" />
           <img className="dots" src={dots} alt="" />

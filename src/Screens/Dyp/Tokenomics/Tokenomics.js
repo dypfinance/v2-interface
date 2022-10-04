@@ -11,23 +11,21 @@ import WhiteArrowDown from "../../../assets/DypAssets/whiteArrow-down.svg";
 import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
 
-
-const Tokenomics = () => {
+const Tokenomics = ({ bottom }) => {
   const [tokenomicData, setTokenomicData] = useState("");
   const [toggledyp, setToggleDyp] = useState(false);
   const [toggleIdyp, setToggleIDyp] = useState(false);
 
-  useEffect(()=>{
-    if(toggleIdyp === false && toggledyp === false) {
-      setTokenomicData('')
+  useEffect(() => {
+    if (toggleIdyp === false && toggledyp === false) {
+      setTokenomicData("");
     }
-  }, [toggleIdyp, toggledyp])
+  }, [toggleIdyp, toggledyp]);
 
   const windowSize = useWindowSize();
 
-
   return (
-    <div className="outer-wrapper">
+    <div className="outer-wrapper" style={{ bottom: bottom }}>
       <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
         <div className="row m-0 gap-2">
           <NoteIcon bgFill={"#7770E0"} svgFill={"#fff"} />
@@ -35,7 +33,9 @@ const Tokenomics = () => {
         </div>
         <div className="row m-0 gap-4">
           <button
-            className="btn outline-btn"
+            className={
+              toggledyp === true ? "btn filled-btn" : "btn outline-btn"
+            }
             type="button"
             data-bs-toggle="collapse"
             data-bs-target={
@@ -52,11 +52,16 @@ const Tokenomics = () => {
             }}
           >
             DYP Tokenomics
-            <img src={toggledyp === true ? PurpleArrowUp : PurpleArrowDown}  alt=''/>
+            <img
+              src={toggledyp === true ? WhiteArrowUp : PurpleArrowDown}
+              alt=""
+            />
           </button>
 
           <button
-            className="btn filled-btn"
+            className={
+              toggleIdyp === true ? "btn filled-btn" : "btn outline-btn"
+            }
             type="button"
             data-bs-toggle="collapse"
             data-bs-target={
@@ -71,7 +76,10 @@ const Tokenomics = () => {
             }}
           >
             iDYP Tokenomics
-            <img src={toggleIdyp === true ? WhiteArrowUp : WhiteArrowDown} alt=''/>
+            <img
+              src={toggleIdyp === true ? WhiteArrowUp : PurpleArrowDown}
+              alt=""
+            />
           </button>
         </div>
       </div>
@@ -80,22 +88,17 @@ const Tokenomics = () => {
           {tokenomicData === "dyp" ? (
             <div className="row m-0 justify-content-between gap-2">
               <div className="col-xl-7 col-lg-7">
-                <div className="circulating-wrapper col-xl-6 col-lg-6">
-                  <div className="d-flex flex-column gap-3">
-                    <span className="circulating-title">
-                      Circulating supply
-                    </span>
-                    <span className="circulating-amount">
-                      23,631,124.00 DYP
-                    </span>
-                  </div>
-                </div>
-                <div className="d-flex flex-column mt-3">
+
+                <div className="d-flex flex-column mt-0">
                   <span className="dypcontract-title">
                     DYP Contract Address:
                   </span>
                   <span className="dypcontract-addr">
-                    { windowSize.width < 526 ? shortAddress('0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17') : "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"}
+                    {windowSize.width < 526
+                      ? shortAddress(
+                          "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
+                        )
+                      : "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"}
                     <img
                       src={Clipboard}
                       alt=""
@@ -227,6 +230,7 @@ const Tokenomics = () => {
                   </div>
                   <div>
                     <span>Users</span>
+                    <br />
                     <svg
                       width="653"
                       height="1"
@@ -288,6 +292,7 @@ const Tokenomics = () => {
                   </div>
                   <div>
                     <span>Team</span>
+                    <br />
                     <svg
                       width="653"
                       height="1"
@@ -349,6 +354,16 @@ const Tokenomics = () => {
                 </div>
               </div>
               <div className="col-lg-4 col-xl-4 col-md-4">
+              <div className="circulating-wrapper col-xl-9 col-lg-9 m-auto">
+                  <div className="d-flex flex-column gap-3">
+                    <span className="circulating-title">
+                      Circulating supply
+                    </span>
+                    <span className="circulating-amount">
+                      23,631,124.00 DYP
+                    </span>
+                  </div>
+                </div>
                 <div
                   id="crypto-widget-CoinList"
                   data-design="modern"
@@ -360,13 +375,8 @@ const Tokenomics = () => {
           ) : (
             <div className="row m-0 justify-content-between gap-2">
               <div className="col-lg-7 col-xl-7 col-md-7">
-                <div className="circulating-wrapper col-xl-6 col-lg-6">
-                  <div className="d-flex flex-column gap-3">
-                    <span className="circulating-title">Max Total Supply</span>
-                    <span className="circulating-amount">300,000,000 iDYP</span>
-                  </div>
-                </div>
-                <div className="d-flex flex-column mt-3">
+
+                <div className="d-flex flex-column mt-0">
                   <span className="dypcontract-title">
                     iDYP Contract Address:
                   </span>
@@ -649,7 +659,13 @@ const Tokenomics = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-xl-4 col-md-4 d-flex flex-column justify-content-between">
+              <div className="col-lg-4 col-xl-4 col-md-4 flex-column justify-content-between">
+              <div className="circulating-wrapper col-xl-8 col-lg-8 m-auto">
+                  <div className="d-flex flex-column gap-3">
+                    <span className="circulating-title">Max Total Supply</span>
+                    <span className="circulating-amount">300,000,000 iDYP</span>
+                  </div>
+                </div>
                 <div>
                   <div
                     id="crypto-widget-CoinList"
