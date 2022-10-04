@@ -1,5 +1,6 @@
 import React from 'react'
 import './_dyppartners.scss'
+import Slider from 'react-slick'
 
 
 const DypPartners = () => {
@@ -129,13 +130,25 @@ const DypPartners = () => {
 
     ]
 
+    const settings = {
+        dots: false,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 4000,
+        autoplaySpeed: 4000,
+        cssEase: "linear"
+    }
+
   return (
     <div className='container-fluid'>
     <div className="container-lg d-flex flex-column justify-content-center align-items-center p-0 p-lg-2">
         <h3 className='text-end w-100 partners-title'>Our partners</h3>
         <div className="row dyp-partners">
-        <div className="d-flex slide">
-            {partnersArray.map((partner, index) => (
+           <Slider {...settings}>
+                 {partnersArray.map((partner, index) => (
                 <a key={index} target="_blank" href={partner.href} className='text-decoration-none text-dark'>
                     <div className="partner_wrapper d-flex flex-column align-items-center justify-content-center">
                         <img src={`/PartnerIcons/${partner.image}`} alt="" />
@@ -143,7 +156,7 @@ const DypPartners = () => {
                     </div>
                  </a>
             ))}
-        </div>
+           </Slider>
         </div>
     </div>
     </div>

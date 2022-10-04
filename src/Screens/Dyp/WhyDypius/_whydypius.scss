@@ -64,14 +64,8 @@
         left: 15%;
     }
 
-    .card-container{
-        height: 900px;
-        overflow-y: scroll;
-        padding-right: 200px;
-        padding-bottom: 20px;
-        margin-top: 200px;
 
-      .why-card{
+    .why-card{
 
         background: #FFFFFF;
         box-shadow: 0px 10px 10px rgba(17, 17, 17, 0.08);
@@ -113,11 +107,23 @@
            
         }
       }
+    .card-container{
+        height: 900px;
+        overflow-y: scroll;
+        padding-right: 200px;
+        padding-bottom: 20px;
+        margin-top: 200px;
+
+     
     }
 
     .ring{
         position: absolute;
         right: 4%;
+    }
+
+    .slick-list{
+        width: 600px !important;
     }
    }
 
@@ -137,25 +143,18 @@
             .title-container{
                 position: initial;
             }
-            .card-container{
-                padding-right: 0;
+            .why-card{
+                width: auto;
                 height: auto;
-                overflow-y: visible;
-                margin-top: 75px;
-        
-                .why-card{
-                    width: auto;
-                    height: auto;
-                    border-radius: 81px 0px 18px;
-        
-                    .tag{
-                        top: 2%;
-                        left: 3%;
-                    }
-                    .green-tag{
-                        top: -2%;
-                        left: 12%;
-                    }
+                border-radius: 81px 0px 18px;
+    
+                .tag{
+                    top: 2%;
+                    left: 3%;
+                }
+                .green-tag{
+                    top: -2%;
+                    left: 12%;
                 }
             }
             .ring{
@@ -166,3 +165,4 @@
     }
     
 }
+

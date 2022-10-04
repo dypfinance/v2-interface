@@ -14,7 +14,7 @@ const NewsCard = ({title, description, date, image, link}) => {
         src={image}
         alt=""
       />
-      <h3>{title}</h3>
+      <h3>{title.slice(0, 70) + '...'}</h3>
       </div>
       <div className="d-flex flex-column justify-content-between">
       <div className="news-description" dangerouslySetInnerHTML={{__html: description?.slice(0, 100) + '...'}}></div>

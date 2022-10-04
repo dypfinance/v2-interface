@@ -8,7 +8,7 @@ const DypMainHero = () => {
       <img className='waves d-none d-lg-block' src={require(`../assets/wavesBottom.svg`).default} alt="bottomWaves" />
       <img className='mobile-waves d-block d-lg-none' src={require(`../assets/mobileWaves.svg`).default} />
       <img className='ring d-none d-lg-block' src={require(`../../../assets/tokenCircle.png`)} />
-      <div className="row justify-content-evenly">
+      <div className="container-lg d-flex justify-content-between">
         <div className="col-12 col-lg-4 text-white d-flex flex-column gap-3 justify-content-end">
           <h1>DYP Token</h1>
           <p>DYPIUS is a powerful decentralized ecosystem that faces the future. A new era with special focus on scalability, security, and global adoption. Powered by a next-gen infrastructure through our strong foundation, and much more! </p>
