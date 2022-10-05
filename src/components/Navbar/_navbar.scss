@@ -1,52 +1,47 @@
-.page-navigation{
+.page-navigation {
+  position: fixed;
+  width: 100%;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  z-index: 999;
 
-    position: fixed;
-    width: 100%;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-    z-index: 999;
-        
-
-    .links{
-      border-radius: 6px;
+  .links {
+    border-radius: 6px;
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.12);
     height: 55px;
 
-
-    a{
+    a {
       font-weight: 500;
       color: rgba(85, 79, 216, 1);
     }
-   
-    }
-
-    .btn{
-      background: linear-gradient(rgba(240, 96, 58, 1), rgba(248, 132, 91, 1)) ;
-    }
-
-    .highlight{
-      color: #F0603A !important;
-      border-bottom: 2px solid #F0603A;
-    }
-
-
-    .navlink{
-      transition: all .5s;
-    }
-
-    .navlink:hover{
-      color: #F0603A !important;
-    }
   }
 
-  .page-navigation:hover {
-    opacity: 1;
+  .btn {
+    background: linear-gradient(rgba(240, 96, 58, 1), rgba(248, 132, 91, 1));
   }
 
-  .opacity{
-    opacity: 0.4;
+  .highlight {
+    color: #fff !important;
+    background: linear-gradient(296.22deg, #57b6ab 0%, #75cac2 100%);
   }
 
-  
+  .navlink {
+    // transition: all 0.5s;
+    border-radius: 6px;
+    padding: 5px 10px;
+  }
 
+  .navlink:hover {
+    color: #fff !important;
+    background: linear-gradient(296.22deg, #57b6ab 0%, #75cac2 100%);
+  }
+}
+
+.page-navigation:hover {
+  opacity: 1;
+}
+
+.opacity {
+  opacity: 0.4;
+}
