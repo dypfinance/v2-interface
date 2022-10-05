@@ -54,46 +54,23 @@ const DypNews = () => {
 
   var options = { year: "numeric", month: "short", day: "numeric" };
 
-  const [newsData, setNewsData] = useState([]);
-  const [descriptions, setDescriptions] = useState([]);
 
-  const fetchNews = async () => {
-    const url = `https://news-manage.dyp.finance/api/populars`;
-    await axios
-      .get(url)
-      .then((response) => {
-        setNewsData(response.data);
-      })
-      .catch((error) => console.error(error));
-  };
+const [newsData, setNewsData] = useState([])
 
-  const fetchDescription = async () => {
-    var descriptionsArray = [];
-    if (newsData.length > 0) {
-      newsData.slice(0, 9).map((newsItem) => {
-        axios
-          .get(`https://news-manage.dyp.finance/api/populars/${newsItem.id}`)
-          .then((response) => {
-            descriptionsArray.push(response.data);
-          })
-          .catch((error) => console.error(error));
-      });
-    }
+const fetchNews = async() => {
+  const url = `https://news-manage.dyp.finance/api/populars/9`
+  await axios.get(url).then((response) => {
+    setNewsData(response.data)
+  }).catch(error => console.error(error))
 
-    setDescriptions(descriptionsArray);
-  };
+}
 
-  useEffect(() => {
-    fetchNews();
+useEffect(() => {
+  
+  fetchNews();
 
-    fetchDescription();
-  }, [newsData.length]);
+}, [newsData.length])
 
-  const sortedDesc = descriptions
-    .map((desc) => {
-      return { ...desc, date: new Date(desc.date) };
-    })
-    .sort((a, b) => b.date - a.date);
 
   const sortedNewsItems = newsData.map((item) => {
     return { ...item, date: new Date(item.date) };
@@ -117,26 +94,17 @@ const DypNews = () => {
               Latest Events <img src={filledArrow} alt="" className="ml-2" />
             </button>
           </div>
-        </div>
-        <div className="col-12">
-          <img
-            className="sphere-2"
-            src={require(`../../../assets/newsSphere.png`)}
-          />
-          {sortedDesc.length > 0 ? (
+
+          <div className="col-12">
+          <img className='sphere-2' src={require(`../../../assets/newsSphere.png`)} /> 
+            {newsData.length > 0 ?
             <div className="slider-wrapper">
-              <Slider {...settings}>
-                {sortedNewsItems.slice(0, 9).map((newsItem, index) => (
-                  <NewsCard
-                    key={index}
-                    title={newsItem.title}
-                    description={sortedDesc[index]?.content}
-                    date={newsItem.date.toLocaleDateString("en-US", options)}
-                    image={newsItem.image}
-                    link={newsItem.link}
-                  />
-                ))}
-              </Slider>
+            <Slider {...settings}>
+              {sortedNewsItems.map((newsItem, index) => (
+                <NewsCard  key={index} title={newsItem.title} description={newsItem.content} date={newsItem.date.toLocaleDateString("en-US", options)} image={newsItem.image}  link={newsItem.link} />
+
+              ))}
+            </Slider>
             </div>
           ) : (
             <div className="d-flex justify-content-center align-items-center">

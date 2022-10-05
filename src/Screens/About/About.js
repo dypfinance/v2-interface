@@ -6,12 +6,14 @@ import Brand from "./Brand/Brand";
 import Security from "./Security/Security";
 import DypPartners from "../Home/DypPartners/DypPartners";
 import Tokenomics from "../Dyp/Tokenomics/Tokenomics";
+import Roadmap from './Roadmap/Roadmap';
 
 const About = () => {
   return (
     <div className="container-fluid px-0">
         <AboutMainHero />
         <OurTeam />
+        <Roadmap />h
       <Brand />
       <Security />
       <DypPartners />

@@ -5,9 +5,9 @@ import DotFrame from "../../../assets/DypAssets/dotFrame.svg";
 
 const Brand = () => {
   return (
+
     <div className="container-fluid mt-5 mb-5 position-relative" id="brand">
        <img className='bluehero-solutions' src={require(`../../../assets/metaverse-blueHero.svg`).default} alt="" style={{bottom: '-150px', right: '18%'}}/>
-
       <div className="container-lg">
         <Title top={"Brand"} align="d-flex flex-row gap-2" />
         <div className="row m-0 justify-content-between gap-3">
