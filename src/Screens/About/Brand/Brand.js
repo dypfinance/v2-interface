@@ -1,15 +1,20 @@
 import React from "react";
 import Title from "../../../components/Title/Title";
 import pasteimg from "../assets/paste-icon.svg";
+import DotFrame from "../../../assets/DypAssets/dotFrame.svg";
 
 const Brand = () => {
   return (
     <div className="container-fluid mt-5 mb-5" id="brand">
+       <img className='bluehero-solutions' src={require(`../../../assets/metaverse-blueHero.svg`).default} alt="" style={{bottom: '-30px'}}/>
+
       <div className="container-lg">
         <Title top={"Our"} bottom={"Brand"} align="d-flex flex-row gap-2" />
         <div className="row m-0 justify-content-between gap-3">
           <div className="col-lg-5 col-xl-5 branditem">
             <div className="row m-0 justify-content-between gap-3 align-items-center">
+      <img className="dotframe position-absolute" src={DotFrame} style={{zIndex: '-1', left: '90%', bottom: '-100px'}}/>
+
               <img src={pasteimg} alt="" className="pl-0 mb-3" style={{width: 80}}/>
               <button className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4">
                 Download
@@ -31,7 +36,7 @@ const Brand = () => {
               <h6>
                 <b>Media Kit</b>
               </h6>
-              <p>
+              <p className="brand-desc ">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
                 volutpat feli, scelerisque pretium velit mollis acbs, phasellus
                 orci diam, mollis nec venenatis non
@@ -61,7 +66,7 @@ const Brand = () => {
               <h6>
                 <b>Pitch Deck</b>
               </h6>
-              <p>
+              <p className="brand-desc ">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
                 volutpat feli, scelerisque pretium velit mollis acbs, phasellus
                 orci diam, mollis nec venenatis non
