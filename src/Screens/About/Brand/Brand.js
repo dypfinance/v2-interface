@@ -13,7 +13,7 @@ const Brand = () => {
         <div className="row m-0 justify-content-between gap-3">
           <div className="col-lg-5 col-xl-5 branditem">
             <div className="row m-0 justify-content-between gap-3 align-items-center">
-      <img className="dotframe position-absolute" src={DotFrame} style={{zIndex: '-1', left: '90%', bottom: '-100px'}}/>
+      <img className="dotframe position-absolute" src={DotFrame} style={{zIndex: '-1', bottom: '-100px'}}/>
 
               <img src={pasteimg} alt="" className="pl-0 mb-3" style={{width: 80}}/>
               <button className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4">
