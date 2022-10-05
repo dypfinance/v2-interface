@@ -19,7 +19,7 @@ const BuyDyp = () => {
       <img className='sphere-2' src={sphere} alt="" />
     <div className="row w-100 px-4">
     <div className="col-12 col-lg-6 d-flex flex-column justify-content-center">
-            <Title top='Buy' bottom='DYP/iDYP' />
+            <Title top='Buy' bottom='DYP' align={'d-flex gap-2 align-items-center'}/>
             <p className="text-secondary">
             Hit the ground running with our quick start guide! Get tips, watch how-to videos and learn how to become an expert in no time.
             </p>

@@ -11,6 +11,7 @@ import HamburgerMenu from "./components/Header/HamburgerMenu";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./Screens/About/About";
 import ScrollTop from "./components/ScrollTop/ScrollTop";
+import Disclaimer from "./Screens/Disclaimer/Disclaimer";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/dyp" element={<Dyp />} />
         <Route exact path="/about" element={<About />} />
+        <Route exact path="/disclaimer" element={<Disclaimer />} />
       </Routes>
       <ScrollTop/>
       <Footer />

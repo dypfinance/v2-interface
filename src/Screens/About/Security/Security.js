@@ -2,8 +2,10 @@ import React from "react";
 import Title from "../../../components/Title/Title";
 import filledArrow from "../../../assets/filledArrow.svg";
 import link from "./link.svg";
+import BlueHero from "../../../assets/metaverse-blueHero.svg";
 
 const Security = () => {
+
   const auditedByArray = [
     {
       img: "peckshield.svg",
@@ -67,12 +69,12 @@ const Security = () => {
   ];
 
   return (
-    <div className="container-fluid mb-5" style={{marginTop: '7rem'}}>
+    <div className="container-fluid mb-5 " style={{marginTop: '7rem'}}>
       <div className="container-lg">
        
         <div className="row m-0 justify-content-between gap-3 align-items-start">
           <div className="col-lg-5 col-xl-5 p-0">
-          <Title top={"Our"} bottom={"Security"} align="d-flex flex-row gap-2" />
+          <Title top={"Security"} align="d-flex flex-row gap-2" />
             <p style={{ textAlign: "justify" }} className="security-desc">
               DeFi Yield Protocol unquestionably values your security. This is
               why we have chosen three reputable security audit companies:
@@ -152,6 +154,8 @@ const Security = () => {
               );
             })}
         </div>
+        <img className='bluehero-solutions' src={require(`../../../assets/metaverse-blueHero.svg`).default} alt="" style={{bottom: '-186px', right: 0}}/>
+
       </div>
     </div>
   );
