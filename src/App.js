@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter,
   Routes, // instead of "Switch"
@@ -13,6 +13,10 @@ import About from "./Screens/About/About";
 import ScrollTop from "./components/ScrollTop/ScrollTop";
 
 function App() {
+
+
+
+
   return (
     <BrowserRouter>
       <HamburgerMenu />

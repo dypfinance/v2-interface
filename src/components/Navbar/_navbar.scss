@@ -33,6 +33,9 @@
     }
 
 
+    
+
+
     .navlink{
       transition: all .5s;
     }
@@ -40,6 +43,13 @@
     .navlink:hover{
       color: #57B6AB !important;
     }
+
+    .highlight:hover{
+      color: #fff !important;
+      
+    }
+
+
   }
 
   .page-navigation:hover {

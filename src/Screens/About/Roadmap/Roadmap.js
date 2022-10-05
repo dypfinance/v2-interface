@@ -3,10 +3,132 @@ import "./_roadmap.scss";
 import filledLeft from "../assets/filledLeft.svg";
 import emptyRight from "../assets/emptyRight.svg";
 import selectedRoadmap from "../assets/selectedRoadmap.svg";
-import completedIcon from '../assets/completedIcon.svg';
-import uncompletedIcon from '../assets/uncompletedIcon.svg';
+import completedIcon from "../assets/completedIcon.svg";
+import uncompletedIcon from "../assets/uncompletedIcon.svg";
+import RoadmapCard from "../../../components/RoadmapCard/RoadmapCard";
+import Slider from "react-slick";
 
 const Roadmap = () => {
+
+
+  const myList = [
+    {
+      date: "2020 Q3",
+      name: ["Creation of DeFi Yield Protocol",
+       "DeFi Yield Protocol Documentation Release",
+       "Building DYP ERC-20 Token Smart Contract",
+       "DeFi Yield Protocol Community Marketing",]
+    },
+    {
+      date: "2020 Q4",
+      name: ["Token Crowdsale",
+       "Uniswap Listing",
+       "Liquidity Lock",
+       "Building Smart Contract for Uniswap LP",
+       "Smart Contract Security Audit",
+       "Launch Yield Farming Pools on Ethereum",
+       "Development of New Smart Contracts",
+       "Launch Governance",
+       "Launch Referral",]
+    },
+    {
+      date: "2021 Q1",
+      name: ["Launch Stake V1 on Ethereum",
+       "Launch Yield Farming on Binance Smart Chain",
+       "Launch DYP Vault V1 on Ethereum",
+       "Building DYP Tools V1",
+       "Building Bridge for Binance Smart Chain",
+       "Partnerships and Integrations",
+       "DeFi Yield Protocol Dapps Development",]
+    },
+    {
+      date: "2021 Q2",
+      name: ["Release New UI Design for Main Website and Dapps",
+         "Launch NFT Dapp V1 on Ethereum",
+         "Launch Yield Farming on Avalanche Chain",
+         "Bridge for Binance Smart Chain and Avalanche",
+         "Launch DYP Tools V1 on Ethereum",
+         "Launch Buyback Pools",
+         "Integrating Chainlink Price Feeds",
+         "Building DYP Launchpad with DYP Tools Safety Features Integrated",]
+    },
+    {
+      date: "2021 Q3",
+      name: ["Launch DYP Tools V1 on Avalanche Chain",
+       "Integration with Pangolin DEX, Coin98 Wallet, and Kyber Network",
+       "Integration for Wallet Connect",
+       "Building New Smart Contract for Farm, Stake, Buyback, and Governance",
+       "Launch New Smart Contract for Farm, Stake, Buyback, and Governance",
+       "Launch iDYP Token as part of the New Smart Contracts",]
+    },
+    {
+      date: "2021 Q4",
+      name: ["Launch DYP Launchpad with DYP Tools Safety Features integrated",
+       "Building New UI Design for Dapps",
+      "Building New UI Design for Main Website",
+       "Building New Smart Contract for DYP Vault",
+     "Integration with Crypto.com RSS News Feed",]
+    },
+    {
+      date: "2022 Q1",
+      name: ["Launch Cats and Watches Society NFT",
+       "Launch New Smart Contract for DYP Vault",
+       "Building CAWS Adventures 2D Game",
+       "Building CAWS Staking Smart Contract",
+       "Building New Smart Contract for DYP Staking",]
+    },
+    {
+      date: "2022 Q2",
+      name: ["Launch New Smart Contract for DYP Staking",
+       "Launch Cats and Watches Society Staking Pool",
+       "Launch New UI Design for Main Website",
+       "Launch New UI Design for Dapps",
+       "Launch CAWS Adventures 2D Game",
+      "Play to Earn NFT Concept becomes active for CAWS Holders",]
+    },
+  ];
+
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    dotsClass: 'button__bar',
+    // autoplay: true,
+    // autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          fade: true
+        }
+      }
+    ]
+  };
+
+
 
   return (
     <div className="container-lg roadmap-wrapper">
@@ -15,134 +137,78 @@ const Roadmap = () => {
         <div className="d-flex flex-row w-100 justify-content-between">
           <p>Our journey to success</p>
           <div className="d-flex flex-row gap-4">
-            <div
-              className="left-button d-flex justify-content-center align-items-center"
-            >
+            <div className="left-button d-flex justify-content-center align-items-center">
               <img src={filledLeft} alt="left arrow" />
             </div>
-            <div
-              className="right-button d-flex justify-content-center align-items-center"
-            >
+            <div className="right-button d-flex justify-content-center align-items-center">
               <img src={emptyRight} alt="rightArrow" />
             </div>
           </div>
         </div>
       </div>
-
-      <div className="row justify-content-evenly">
-        <div
-          className="col-3 date-card d-flex flex-column align-items-center justify-content-end"
-        >
-          <h2 style={{ color: "#EFF0F6" }}>2022 Q1</h2>
-          <div className="outer-circle d-flex justify-content-center align-items-center">
-            <div className="inner-circle"></div>
-          </div>
-        </div>
-        <div
-          className="col-3 date-card d-flex flex-column align-items-center justify-content-end"
-        >
-          <h2 style={{ color: "#EFF0F6" }}>2022 Q2</h2>
-          <div className="outer-circle d-flex justify-content-center align-items-center">
-            <div className="inner-circle"></div>
-          </div>
-        </div>
-        <div
-          className="col-3 selected date-card d-flex flex-column align-items-center justify-content-end"
-        >
-          <img src={selectedRoadmap} alt="" />
-          <h2 className="text-white">2022 Q3/Q4</h2>
-          <div className="outer-circle d-flex justify-content-center align-items-center">
-            <div className="inner-circle"></div>
-          </div>
-        </div>
-      </div>
+      <div className="row justify-content-evenly position-relative">
       <hr />
-        <div className="row justify-content-evenly mt-5">
-          <div className="col-3 roadmap-items d-flex flex-column gap-3 py-4 h-100">
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={completedIcon} alt="" />
-              <p>Launch Cats and Watches Society NFT</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={completedIcon} alt="" />
-              <p>Launch New Smart Contract for DYP Vault</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={completedIcon} alt="" />
-              <p>Building CAWS Adventures 2D Game</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={completedIcon} alt="" />
-              <p>Building CAWS Staking Smart Contract</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={completedIcon} alt="" />
-              <p>Building New Smart Contract for DYP Staking</p>
+      <Slider {...settings}>
+      {myList.map((item) => (
+          <RoadmapCard data={item} />
+        ))}
+        <div className="col-11 d-flex flex-column gap-4" style={{top: '-24px'}}>
+          <div className="date-card selected d-flex flex-column align-items-center">
+          <img src={selectedRoadmap} alt="" />
+            <h2 style={{ color: "#EFF0F6" }}>2022 Q3/Q4</h2>
+            <div className="outer-circle d-flex justify-content-center align-items-center">
+              <div className="inner-circle"></div>
             </div>
           </div>
-          <div className="col-3 roadmap-items d-flex flex-column gap-3 py-4 h-100"> 
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={completedIcon} alt="" />
-              <p>Launch New Smart Contract for DYP Staking</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={completedIcon} alt="" />
-              <p>Launch Cats and Watches Society Staking Pool</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={completedIcon} alt="" />
-              <p>Launch New UI Design for Main Website</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={completedIcon} alt="" />
-              <p>Launch New UI Design for Dapps</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={completedIcon} alt="" />
-              <p>Play to Earn NFT Concept becomes active for CAWS Holders</p>
-            </div>
+          <div className="roadmap-items highlight d-flex flex-column gap-3 p-4">
+          <div className="d-flex flex-row align-items-center gap-2">
+            <img src={uncompletedIcon} alt="" />
+            <p>Metaverse Research and Launch of Different Products</p>
           </div>
-          <div className="col-3 highlight roadmap-items d-flex flex-column gap-3 py-4 h-100">
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={uncompletedIcon} alt="" />
-              <p>Metaverse Research and Launch of Different Products</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={uncompletedIcon} alt="" />
-              <p>Metaverse Begins for the CAWS</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={uncompletedIcon} alt="" />
-              <p>Rebranding Process</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={uncompletedIcon} alt="" />
-              <p>Building Extra Features for DYP Tools</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={uncompletedIcon} alt="" />
-              <p>Incorporation of a Legal Entity for upcoming Regulation For Decentralized Finance</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={uncompletedIcon} alt="" />
-              <p>Expanding our Products to other Chains</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={uncompletedIcon} alt="" />
-              <p>Launch App for iOS and Android</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={uncompletedIcon} alt="" />
-              <p>Launch Multi-Chain DEX</p>
-            </div>
-            <div className="d-flex flex-row align-items-center gap-2">
-              <img src={uncompletedIcon} alt="" />
-              <p>Further Extension and Project Growth in Different Areas</p>
-            </div>
+          <div className="d-flex flex-row align-items-center gap-2">
+            <img src={uncompletedIcon} alt="" />
+            <p>Metaverse Begins for the CAWS</p>
+          </div>
+          <div className="d-flex flex-row align-items-center gap-2">
+            <img src={uncompletedIcon} alt="" />
+            <p>Rebranding Process</p>
+          </div>
+          <div className="d-flex flex-row align-items-center gap-2">
+            <img src={uncompletedIcon} alt="" />
+            <p>Building Extra Features for DYP Tools</p>
+          </div>
+          <div className="d-flex flex-row align-items-center gap-2">
+            <img src={uncompletedIcon} alt="" />
+            <p>
+              Incorporation of a Legal Entity for upcoming Regulation For
+              Decentralized Finance
+            </p>
+          </div>
+          <div className="d-flex flex-row align-items-center gap-2">
+            <img src={uncompletedIcon} alt="" />
+            <p>Expanding our Products to other Chains</p>
+          </div>
+          <div className="d-flex flex-row align-items-center gap-2">
+            <img src={uncompletedIcon} alt="" />
+            <p>Launch App for iOS and Android</p>
+          </div>
+          <div className="d-flex flex-row align-items-center gap-2">
+            <img src={uncompletedIcon} alt="" />
+            <p>Launch Multi-Chain DEX</p>
+          </div>
+          <div className="d-flex flex-row align-items-center gap-2">
+            <img src={uncompletedIcon} alt="" />
+            <p>Further Extension and Project Growth in Different Areas</p>
+          </div>
           </div>
         </div>
+      </Slider>
+      </div>
     </div>
   );
 };
 
 export default Roadmap;
+
+
+
