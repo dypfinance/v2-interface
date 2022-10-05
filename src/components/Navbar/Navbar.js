@@ -22,7 +22,7 @@ const Navbar = () => {
       } else {
         setLogo(false);
       }
-    } else if(window.location.href.includes('about')) {
+    } else if(window.location.href.includes('about') || window.location.href.includes('disclaimer')) {
       setLogo(true)
     }else {
       if (window.scrollY >= 800) {
