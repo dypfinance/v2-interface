@@ -26,8 +26,10 @@
     }
 
     .highlight{
-      color: #F0603A !important;
-      border-bottom: 2px solid #F0603A;
+      padding: 5px 10px;
+      background: linear-gradient(296.22deg, #57B6AB 0%, #75CAC2 100%);
+      border-radius: 6px;
+      color: #fff !important;
     }
 
 
@@ -36,7 +38,7 @@
     }
 
     .navlink:hover{
-      color: #F0603A !important;
+      color: #57B6AB !important;
     }
   }
 

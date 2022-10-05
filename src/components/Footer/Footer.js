@@ -545,7 +545,7 @@ const Footer = () => {
         </div>
         <div className="row w-100 justify-content-end justify-content-lg-center align-items-center py-3">
           <p className="mb-0 text-white fw-light" style={{ fontSize: "12px" }}>
-            Copyright © DeFi Yield Protocol {year.getFullYear()}. All rights reserved.
+            Copyright © Dypius {year.getFullYear()}. All rights reserved.
           </p>
         </div>
        
