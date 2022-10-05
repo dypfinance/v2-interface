@@ -4,10 +4,11 @@ import ListCard from "../../../components/ListCard/ListCard";
 import Title from "../../../components/Title/Title";
 import filledArrow from "../../../assets/filledArrow.svg";
 import Laptop from "../../../assets/laptop.png";
-import iphoneBg from "../../../assets/laptopbg.svg";
 import dots from "../../../assets/dots.png";
 import { tada } from "react-animations";
 import Triangle from "../../../assets/purple-triangle.svg";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const taDa = keyframes`${tada}`;
@@ -16,35 +17,29 @@ const TadaDiv = styled.span`
 `;
 
 const DypTools = () => {
-  const [isVisible, setVisible] = useState(false);
-  const domRef = useRef();
-
+ 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setVisible(entry.isIntersecting));
-    });
-    observer.observe(domRef.current);
-  }, []);
+    AOS.init()
+  }, [])
+  
+
 
   return (
     <div className="container-lg d-flex justify-content-center">
       <div className="row dyp-tools">
         <div
-          className={`col-12 col-lg-5 fade-in-section ${
-            isVisible ? "is-visible" : ""
-          }`}
-          ref={domRef}
+          className={`col-12 col-lg-5 `} 
         >
           <div className="gap-5 d-flex align-items-start justify-content-center flex-column pl-5 pt-5 pb-5 leftcol">
 
             <div className='gap-3 d-grid m-md-auto m-sm-auto m-lg-0'>
-            <Title top="DYP Tools" bottom="Powerful dApps" />
+            <Title top="DYP Tools" bottom="Powerful dApps" animation='fade-up' duration='1000' />
             <ListCard content='A wide range of impressive decentralized applications'  />
             <ListCard content='Interactive platform with real-time data analytics ' />
             <ListCard content='Support promising crypto tokens from various projects ' />
 
             </div>
-            <button className="btn outline-btn m-md-auto m-sm-auto m-lg-0">
+            <button className="btn outline-btn m-md-auto m-sm-auto m-lg-0" data-aos='fade-up' data-aos-delay='500' data-aos-duration='1000'>
               Go to DYP Tools <img src={filledArrow} alt="" className="ml-2" />
             </button>
           </div>
