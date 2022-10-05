@@ -58,7 +58,7 @@ const Tokenomics = ({ bottom }) => {
             />
           </button>
 
-          <button
+          {/* <button
             className={
               toggleIdyp === true ? "btn filled-btn" : "btn outline-btn"
             }
@@ -80,7 +80,7 @@ const Tokenomics = ({ bottom }) => {
               src={toggleIdyp === true ? WhiteArrowUp : PurpleArrowDown}
               alt=""
             />
-          </button>
+          </button> */}
         </div>
       </div>
       <div className="collapse" id="collapseExample">

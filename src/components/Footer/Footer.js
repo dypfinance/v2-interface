@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useWindowSize from "../../hooks/useWindowSize";
 import "./_footer.scss";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   
@@ -273,9 +274,8 @@ const Footer = () => {
             >
               <h5>CoinGecko</h5>
             </a>
-            <a href="#" className="text-white text-decoration-none">
-              <h5>Disclaimer</h5>
-            </a>
+            <NavLink to='/disclaimer' className="text-white text-decoration-none"> <h5>Disclaimer</h5></NavLink>
+           
           </div>
 
           <img
@@ -545,7 +545,7 @@ const Footer = () => {
         </div>
         <div className="row w-100 justify-content-end justify-content-lg-center align-items-center py-3">
           <p className="mb-0 text-white fw-light" style={{ fontSize: "12px" }}>
-            Copyright © DeFi Yield Protocol {year.getFullYear()}. All rights reserved.
+            Copyright © Dypius {year.getFullYear()}. All rights reserved.
           </p>
         </div>
        

@@ -1,59 +1,67 @@
-.security-item {
-    background: linear-gradient(180deg, #EFF0F6 0%, #EFF0F6 100%);
-border-radius: 28px 0px;
-padding: 10px;
-width: 32%;
-min-height: 80px;
-display: grid;
-align-items: center;
-
-span, a {
-    font-style: normal;
-font-weight: 300;
-font-size: 16px;
-line-height: 27px;
-text-decoration: none !important;
-color: #14142B;
+.securitybg {
+  background: url(./securitybg.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
+
+.security-item {
+  background: linear-gradient(180deg, #eff0f6 0%, #eff0f6 100%);
+  border-radius: 28px 0px;
+  padding: 10px;
+  width: 32%;
+  min-height: 80px;
+  display: grid;
+  align-items: center;
+
+  span,
+  a {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 27px;
+    text-decoration: none !important;
+    color: #14142b;
+  }
 }
 
 .security-desc {
-    font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-color: rgba(30, 32, 41, 0.6);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(30, 32, 41, 0.6);
 }
 
 .sup-asset-title {
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 48px;
-    text-align: right;
-    letter-spacing: -0.018em;
-    color: #7670E0;
-    margin: 0;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: right;
+  letter-spacing: -0.018em;
+  color: #7670e0;
+  margin: 0;
 }
 
 .auditedby-text {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;    
-    text-align: right;
-    letter-spacing: 0.05em;
-    color: #6059DA;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+  letter-spacing: 0.05em;
+  color: #6059da;
 }
 
 .audited-item {
-    background: #FFFFFF;
-border: 2px solid #EFF0F6;
-box-shadow: 0px 12px 44px rgba(17, 17, 17, 0.08);
-border-radius: 18px 0px;
-padding: 10px 20px;
+  background: #ffffff;
+  border: 2px solid #eff0f6;
+  box-shadow: 0px 12px 44px rgba(17, 17, 17, 0.08);
+  border-radius: 18px 0px;
+  padding: 10px 20px;
 }
 
 .viewsite {
-    font-weight: 500;
-font-size: 12px;
-line-height: 18px; 
-color: #7670E0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #7670e0;
 }
