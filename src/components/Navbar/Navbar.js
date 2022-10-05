@@ -58,7 +58,7 @@ const Navbar = () => {
               Support
             </a>
             <NavLink className={({isActive}) => (isActive ? 'text-decoration-none navlink highlight' : 'text-decoration-none navlink')} to='/about'>
-              About Us
+              About us
               </NavLink>
           </div>
           <div className="col-2 d-flex justify-content-end">
