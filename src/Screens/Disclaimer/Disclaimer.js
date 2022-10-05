@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 import DisclaimerHero from "./MainHero/DisclaimerHero";
 
 const Disclaimer = () => {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
+
   return (
-    <div>
-      <div>
-        <h1>Disclaimer</h1>
-      </div>
+    <div className="container-fluid px-0 position-relative">
+      <DisclaimerHero/>
     </div>
   );
 };
