@@ -38,7 +38,7 @@ const SupportedAssets = () => {
   return (
     <div className="container-lg">
       <div className="supportedAssets-wrapper">
-        <div className="col-12 col-lg-4 px-lg-4 mb-5 mb-lg-0">
+        <div className="col-12 col-lg-5 mb-5 mb-lg-0" style={{paddingLeft: '4rem'}}>
           <Title top="Supported Assets" />
           <p>We support the most popular coins on three different chains</p>
         </div>

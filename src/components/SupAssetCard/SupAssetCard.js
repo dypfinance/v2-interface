@@ -7,7 +7,7 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime }) => {
     <div className="vaultWrapper bg-white">
       <div className="purplediv"></div>
       <div className="d-flex flex-column gap-3">
-        <div className="row justify-content-between gap-2 m-0">
+        <div className="row justify-content-between gap-2 m-0 align-items-center">
           <div className="row gap-1 align-items-center">
             <img src={DypPool} alt="eth_pool" />
             <span className="poolTitle p-0">{pool}</span>

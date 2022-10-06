@@ -7,6 +7,10 @@
   width: 374px;
   z-index: 2;
 
+  @media only screen and (max-width: 400px) {
+    width: 306px !important;
+  }
+
   .purplediv {
     width: 4px;
     height: 45px;
@@ -32,6 +36,7 @@
     line-height: 48px;
     letter-spacing: -0.018em;
     color: #7770e0;
+    align-items: baseline;
   }
 
   .aprText {

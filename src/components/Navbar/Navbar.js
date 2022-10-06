@@ -34,6 +34,8 @@ const Navbar = () => {
   };
 
   window.addEventListener("scroll", changeBackground);
+  window.addEventListener("click", changeBackground);
+
 
   return (
       <div className={`container-fluid  d-none d-lg-flex page-navigation ${opacity ? "opacity" : null}`}>

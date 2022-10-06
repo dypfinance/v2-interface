@@ -1,5 +1,7 @@
 .ourtokens-wrapper {
-  background: linear-gradient(360deg, #554fd8 0%, #756edf 98.32%);
+  background: url(./tokenbg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
   border: 6px solid #eff0f6;
   border-radius: 56px 0px;
   padding: 3rem;
