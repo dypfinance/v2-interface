@@ -14,6 +14,10 @@
   display: grid;
   align-items: center;
 
+  @media only screen and (max-width: 853px) {
+    width: 100% !important;
+  }
+
   span,
   a {
     font-style: normal;
@@ -49,6 +53,7 @@
   text-align: right;
   letter-spacing: 0.05em;
   color: #6059da;
+  // visibility: hidden;
 }
 
 .audited-item {

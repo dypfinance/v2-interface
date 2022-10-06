@@ -5,17 +5,30 @@ import DotFrame from "../../../assets/DypAssets/dotFrame.svg";
 
 const Brand = () => {
   return (
-
     <div className="container-fluid mt-5 mb-5 position-relative" id="brand">
-       <img className='bluehero-solutions' src={require(`../../../assets/metaverse-blueHero.svg`).default} alt="" style={{bottom: '-150px', right: '18%'}}/>
+      <img
+        className="bluehero-solutions"
+        src={require(`../../../assets/metaverse-blueHero.svg`).default}
+        alt=""
+        style={{ bottom: "-150px", right: "18%" }}
+      />
       <div className="container-lg">
         <Title top={"Brand"} align="d-flex flex-row gap-2" />
         <div className="row m-0 justify-content-between gap-3">
           <div className="col-lg-5 col-xl-5 branditem">
             <div className="row m-0 justify-content-between gap-3 align-items-center">
-      <img className="dotframe position-absolute" src={DotFrame} style={{zIndex: '-1', bottom: '-100px'}}/>
+              <img
+                className="dotframe position-absolute"
+                src={DotFrame}
+                style={{ zIndex: "-1", bottom: "-100px" }}
+              />
 
-              <img src={pasteimg} alt="" className="pl-0 mb-3" style={{width: 80}}/>
+              <img
+                src={pasteimg}
+                alt=""
+                className="pl-0 mb-3"
+                style={{ width: 80 }}
+              />
               <button className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4">
                 Download
                 <svg
@@ -37,15 +50,21 @@ const Brand = () => {
                 <b>Media Kit</b>
               </h6>
               <p className="brand-desc ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                volutpat feli, scelerisque pretium velit mollis acbs, phasellus
-                orci diam, mollis nec venenatis non
+                We believe that powerful marketing will help bring continued
+                success for your operations. Use Dypius badges, Dypius product
+                images, and these identity guidelines to effectively promote
+                Dypius in all marketing communications.
               </p>
             </div>
           </div>
           <div className="col-lg-5 col-xl-5 branditem">
             <div className="row m-0 justify-content-between gap-3 align-items-center">
-              <img src={pasteimg} alt="" className="pl-0 mb-3" style={{width: 80}}/>
+              <img
+                src={pasteimg}
+                alt=""
+                className="pl-0 mb-3"
+                style={{ width: 80 }}
+              />
               <button className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4">
                 Download
                 <svg
@@ -67,9 +86,10 @@ const Brand = () => {
                 <b>Pitch Deck</b>
               </h6>
               <p className="brand-desc ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                volutpat feli, scelerisque pretium velit mollis acbs, phasellus
-                orci diam, mollis nec venenatis non
+                Whether you are a potential user or simply curious about what we
+                do, this deck is a great resource for learning more about us,
+                the way we operate, business model, value propositions and our
+                unique services.
               </p>
             </div>
           </div>
