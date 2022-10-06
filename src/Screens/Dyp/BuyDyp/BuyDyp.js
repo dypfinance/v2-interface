@@ -25,7 +25,7 @@ const BuyDyp = () => {
             </p>
             {windowSize.width > 786 
             ?
-            <div className="btn filled-btn w-50 d-flex justify-content-center align-items-center">Explore<img className='ps-2' src={require(`../../../assets/right-arrow.svg`).default} alt="" /></div>
+            <div className="btn filled-btn d-flex justify-content-center align-items-center " style={{width: '30%'}}>Explore</div>
             :
             null
             }

@@ -7,7 +7,7 @@ const VaultCards = ({ pool, apr, link, top_tick, icon }) => {
     <div className={`vaultWrapper bg-white ${top_tick ? "top-tick" : ""}`}>
       <div className="purplediv"></div>
       <div className="d-flex flex-column gap-3">
-        <div className="row justify-content-between gap-2 m-0">
+        <div className="row justify-content-between gap-2 m-0 align-items-center">
           <div className="row gap-1 align-items-center">
             <img src={require(`./Tokens/${icon}`) } alt="pool" style={{width: 65, height:65}}/>
             <span className="poolTitle p-0">{pool}</span>
@@ -17,7 +17,7 @@ const VaultCards = ({ pool, apr, link, top_tick, icon }) => {
             <span className="aprText ml-2">APR</span>
           </span>
         </div>
-        <div className="row justify-content-between gap-2 m-0">
+        <div className="row justify-content-between gap-2 m-0 align-items-center">
           <div className="d-flex flex-column gap-1">
             <span className="locktime-subtitle">Lock Time</span>
             <span className="lock-title">No Lock</span>

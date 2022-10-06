@@ -62,7 +62,7 @@ const fetchNews = async() => {
   const url = `https://news-manage.dyp.finance/api/populars/9`
   await axios.get(url).then((response) => {
     setNewsData(response.data)
-    console.log(newsData);
+    
   }).catch(error => console.error(error))
 
 }
