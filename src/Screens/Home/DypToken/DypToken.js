@@ -22,17 +22,17 @@ const DypToken = () => {
           <div
             className="token-info col-12 col-lg-5 d-flex justify-content-center align-items-end flex-column pr-3 pr-lg-5 order-1 order-lg-2">
          <img className='ring' src={require(`../../../assets/tokenCircle.png`)} />
-            <Title top="DYP Token" bottom="Empower your future" align='text-end' />
-            <p className="text-end">
+            <Title top="DYP Token" bottom="Empower your future" align='text-end' animation="fade-up"  duration="1000"/>
+            <p className="text-end" data-aos="fade-up" data-aos-duration="1000">
             An immersive ecosystem with a wide range of unique products and solutions.
             </p>
             <div className="row">
-              <div className="d-flex flex-row">
+              <div className="d-flex flex-row" data-aos="fade-up" data-aos-duration="1000">
                 <CoinCard title='Dypius Earn' stakeAmount='30%' description='Earn rewards by securely depositing your assets into the staking smart contract'  />
                 <CoinCard title='Dypius Earn' stakeAmount='75%' description='Earn rewards by securely depositing your assets into the staking smart contract' />
               </div>
             </div>
-            <button className="btn filled-btn">
+            <button className="btn filled-btn" data-aos="fade-up" data-aos-duration="1000">
               Go to DYP Token <img src={rightArrow} alt="" />
             </button>
           </div>         

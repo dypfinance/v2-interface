@@ -2,6 +2,7 @@ import React from 'react'
 import './_dyppartners.scss'
 import Title from '../../../components/Title/Title'
 import Slider from 'react-slick'
+import Title from '../../../components/Title/Title'
 
 
 const DypPartners = () => {
@@ -146,8 +147,14 @@ const DypPartners = () => {
   return (
     <div className='container-fluid'>
     <div className="container-lg d-flex flex-column justify-content-center align-items-center p-0 p-lg-2">
-        <Title top={'Our'} bottom='Partners' align={'d-flex gap-2'}/>
-        <p style={{color: 'rgba(30, 32, 41, 0.6)'}}>We are proud of our growing list of partners.</p>
+
+        <div className="row flex-column justify-content-center align-items-center gap-2">
+            <Title top="Our" bottom="Parnters" align="d-flex flex-row gap-2" />
+            <p className="text-secondary">
+            We are proud of our growing list of partners.
+            </p>
+        </div>
+
         <div className="row dyp-partners">
            <Slider {...settings}>
                  {partnersArray.map((partner, index) => (
