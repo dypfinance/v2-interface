@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import SupAssetCard from "../../../components/SupAssetCard/SupAssetCard";
 import Title from "../../../components/Title/Title";
-import AvaxActive from "../../../assets/DypAssets/avaxchain-active.svg";
-import BnbActive from "../../../assets/DypAssets/bnbchain-active.svg";
-import EthActive from "../../../assets/DypAssets/ethchain-active.svg";
-import AvaxPassive from "../../../assets/DypAssets/avaxchain-passive.svg";
-import BnbPassive from "../../../assets/DypAssets/bnbchain-passive.svg";
-import EthPassive from "../../../assets/DypAssets/ethchain-passive.svg";
 import ethDropdown from "../assets/ethereumDropdown.svg";
 import bnbDropdown from "../assets/bnbDropdown.svg";
 import avaDropdown from "../assets/avaDropdown.svg";
@@ -22,8 +16,6 @@ const SupportedAssets = () => {
   const [avaxState, setAvaxState] = useState(false);
   const types = ["Stake", "Yield", "Buyback"];
   const [activeType, setActiveType] = useState(types[0]);
-
-  const windowSize = useWindowSize();
 
   const handleEthPool = () => {
     setAvaxState(false);
@@ -66,7 +58,7 @@ const SupportedAssets = () => {
                   {ethState === true ? (
                     <div
                       className="d-flex flex-row align-items-center justify-content-start gap-2"
-                      style={{ cursor: "pointer" }}
+                      style={{ cursor: "pointer", color: '#566FCE' }}
                     >
                       <img src={ethDropdown} />
                       Ethereum
@@ -74,7 +66,7 @@ const SupportedAssets = () => {
                   ) : bnbState === true ? (
                     <div
                       className="d-flex flex-row align-items-center justify-content-start gap-2"
-                      style={{ cursor: "pointer" }}
+                      style={{ cursor: "pointer", color: '#D5A404' }}
                     >
                       <img src={bnbDropdown} />
                       BNB Chain
@@ -82,7 +74,7 @@ const SupportedAssets = () => {
                   ) : (
                     <div
                       className="d-flex flex-row align-items-center justify-content-start gap-2"
-                      style={{ cursor: "pointer" }}
+                      style={{ cursor: "pointer", color: '#E84142' }}
                     >
                       <img src={avaDropdown} />
                       Avalanche

@@ -4,16 +4,14 @@ import Title from "../../../components/Title/Title";
 import Clipboard from "../assets/filledClipboard.svg";
 import Graph from "../../../assets/DypAssets/tokenomics-graph.png";
 import idypGraph from "../../../assets/DypAssets/idypGraph.png";
-import PurpleArrowUp from "../../../assets/DypAssets/purpleArrow-up.svg";
 import PurpleArrowDown from "../../../assets/DypAssets/purpleArrow-down.svg";
 import WhiteArrowUp from "../../../assets/DypAssets/whiteArrow-up.svg";
-import WhiteArrowDown from "../../../assets/DypAssets/whiteArrow-down.svg";
 import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
 
-const Tokenomics = ({ bottom }) => {
-  const [tokenomicData, setTokenomicData] = useState("");
-  const [toggledyp, setToggleDyp] = useState(false);
+const Tokenomics = ({ bottom, showBtn }) => {
+  const [tokenomicData, setTokenomicData] = useState("dyp");
+  const [toggledyp, setToggleDyp] = useState(showBtn === false ? true : false);
   const [toggleIdyp, setToggleIDyp] = useState(false);
 
   useEffect(() => {
@@ -23,15 +21,16 @@ const Tokenomics = ({ bottom }) => {
   }, [toggleIdyp, toggledyp]);
 
   const windowSize = useWindowSize();
-
+  
+console.log(windowSize.width)
   return (
     <div className="outer-wrapper" style={{ bottom: bottom }}>
       <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
-        <div className="row m-0 gap-2">
+        <div className="row m-0 gap-2 align-items-center pl-0">
           <NoteIcon bgFill={"#7770E0"} svgFill={"#fff"} />
           <Title top={"Tokenomics"} />
         </div>
-        <div className="row m-0 gap-4">
+        <div className="row m-0 gap-4 col-lg-3 col-xl-3 align-items-center">
           <button
             className={
               toggledyp === true ? "btn filled-btn" : "btn outline-btn"
@@ -43,6 +42,7 @@ const Tokenomics = ({ bottom }) => {
                 ? "#collapseExample3"
                 : "#collapseExample"
             }
+            style={{display: showBtn === true ? 'block' : 'none'}}
             aria-expanded="false"
             aria-controls="collapseExample"
             onClick={() => {
@@ -55,6 +55,7 @@ const Tokenomics = ({ bottom }) => {
             <img
               src={toggledyp === true ? WhiteArrowUp : PurpleArrowDown}
               alt=""
+              className="ml-2"
             />
           </button>
 
@@ -83,7 +84,7 @@ const Tokenomics = ({ bottom }) => {
           </button> */}
         </div>
       </div>
-      <div className="collapse" id="collapseExample">
+      <div className={`collapse ${showBtn === false ? 'show' : ''}`} id="collapseExample">
         <div className="card card-body pb-4">
           {tokenomicData === "dyp" ? (
             <div className="row m-0 justify-content-between gap-2">
@@ -338,7 +339,7 @@ const Tokenomics = ({ bottom }) => {
                         </div>
                       </div>
                       <div className="col-lg-5 col-xl-5 col-md-5">
-                        <div className="circulating-wrapper">
+                        <div className="circulating-wrapper w-100">
                           <div className="d-flex flex-column gap-3">
                             <span
                               className="circulating-title"
@@ -354,7 +355,7 @@ const Tokenomics = ({ bottom }) => {
                 </div>
               </div>
               <div className="col-lg-4 col-xl-4 col-md-4">
-              <div className="circulating-wrapper col-xl-9 col-lg-9 m-auto">
+              <div className="circulating-wrapper col-xl-9 col-lg-9 m-auto w-100">
                   <div className="d-flex flex-column gap-3">
                     <span className="circulating-title">
                       Circulating supply
@@ -364,11 +365,7 @@ const Tokenomics = ({ bottom }) => {
                     </span>
                   </div>
                 </div>
-                <div
-                  id="crypto-widget-CoinList"
-                  data-design="modern"
-                  data-coin-ids="2669"
-                ></div>
+                <div id="crypto-widget-CoinList" data-design="modern" data-coin-ids="2669"></div>
                 <img src={Graph} alt="" className="w-100" />
               </div>
             </div>

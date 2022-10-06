@@ -50,7 +50,7 @@ const DypMetaverse = () => {
                 <button className="btn filled-btn">
                   View now <img src={rightArrow} alt="" className="ml-2"/>
                 </button>
-                <button className="btn outline-btn">Receive newsletter</button>
+               
               </div>
             </div>
           </div>

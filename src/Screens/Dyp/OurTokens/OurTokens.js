@@ -48,7 +48,7 @@ const OurTokens = () => {
   useEffect(() => {
     getTokenData();
     getDypTokenPercentage()
-    getIDypTokenPercentage()
+    // getIDypTokenPercentage()
   }, []);
   
   return (
@@ -62,25 +62,25 @@ const OurTokens = () => {
         <div>
           <div className="row justify-content-between m-0 gap-2 position-relative mb-4">
             <img src={TokenGraph} alt="" className="tokengraph" />
-            <div className="col-lg-4 col-xl-4 p-0">
+            <div className="col-lg-5 col-xl-5 p-0">
               <h2 className="ourtoken-title">
-                Our <span className="bottm-text">Tokens</span>
+                DYP <span className="bottm-text">Token</span>
               </h2>
               <p className="ourtoken-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+              Explore endless possibilities with our powerful token
               </p>
             </div>
-            <div className="col-lg-7 col-xl-7 p-0 row justify-content-xl-end justify-content-lg-end justify-content-between gap-3 m-0 position-relative">
+            <div className="col-lg-6 col-xl-6 p-0 row justify-content-xl-end justify-content-lg-end justify-content-between gap-3 m-0 position-relative">
               <TokenCards
                 title={"DYP Token"}
                 price={getFormattedNumber(dyptokenData,4)}
                 percentage={`${dypPercentage} %`}
               />
-              <TokenCards
+              {/* <TokenCards
                 title={"iDYP Token"}
                 price={getFormattedNumber(idyptokenData,4)}
                 percentage={`${idypPercentage} %`}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -89,7 +89,7 @@ const OurTokens = () => {
             classname={"bridge"}
             title={"Bridge"}
             desc={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi arcu lorem, viverra eu tempor quis, commodo a leo..."
+              "Bridge tokens between Ethereum to Binance, Avalanche and many more to come. Instant and secure transactions."
             }
           />
 
@@ -97,7 +97,7 @@ const OurTokens = () => {
             classname={"earn"}
             title={"Earn"}
             desc={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi arcu lorem, viverra eu tempor quis, commodo a leo..."
+              "Put your assets to work by depositing them on our immersive Dypius products and start earning high value rewards."
             }
           />
         </div>
