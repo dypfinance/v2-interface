@@ -117,10 +117,10 @@ const OurTeam = () => {
   ];
 
   return (
-    <div className="container-fluid our-team px-0">
+    <div className="container-fluid our-team my-5 px-0" id="ourteam">
       <div className="our-team-background"></div>
       <div className="container-lg d-flex flex-column mt-5">
-        <div className="row w-100 justify-content-center align-items-center">
+        <div className="row justify-content-center align-items-center">
           <div className="col-12 col-lg-6">
             <Title
               top="Our"

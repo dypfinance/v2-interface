@@ -18,7 +18,7 @@ const DypNews = () => {
   const settings = {
     dots: true,
     infinite: true,
-    arrows: true,
+    arrows: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
