@@ -2,7 +2,6 @@ import React from 'react'
 import './_dyppartners.scss'
 import Title from '../../../components/Title/Title'
 import Slider from 'react-slick'
-import Title from '../../../components/Title/Title'
 
 
 const DypPartners = () => {
