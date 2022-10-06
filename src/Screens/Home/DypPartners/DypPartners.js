@@ -148,7 +148,7 @@ const DypPartners = () => {
     <div className="container-lg d-flex flex-column justify-content-center align-items-center p-0 p-lg-2">
 
         <div className="row flex-column justify-content-center align-items-center gap-2">
-            <Title top="Our" bottom="Parnters" align="d-flex flex-row gap-2" />
+            <Title top="Our" bottom="Partners" align="d-flex flex-row gap-2" />
             <p className="text-secondary">
             We are proud of our growing list of partners.
             </p>
