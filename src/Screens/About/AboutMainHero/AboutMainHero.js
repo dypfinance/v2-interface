@@ -43,19 +43,23 @@ const AboutMainHero = () => {
         className="row pt-5 p-4 justify-content-center gap-5"
         style={{ zIndex: 1 }}
       >
-        <a href="#solutions" className="text-decoration-none submenu-link">
+        <a href="#ourteam" className="text-decoration-none submenu-link">
           Our team
           <img src={indicator} alt="" />
         </a>
-        <a href="#ourTokens" className="text-decoration-none submenu-link">
+        <a href="#roadmap" className="text-decoration-none submenu-link">
           Roadmap
           <img src={indicator} alt="" />
         </a>
-        <a href="#vault" className="text-decoration-none submenu-link">
+        <a href="#brand" className="text-decoration-none submenu-link">
           Brand
           <img src={indicator} alt="" />
         </a>
-        <a href="#learn" className="text-decoration-none submenu-link">
+        <a href="#security" className="text-decoration-none submenu-link">
+          Security
+          <img src={indicator} alt="" />
+        </a>
+        <a href="#tokenomics" className="text-decoration-none submenu-link">
           Tokenomics
           <img src={indicator} alt="" />
         </a>

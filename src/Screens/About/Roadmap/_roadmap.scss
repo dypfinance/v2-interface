@@ -4,6 +4,7 @@
     background: linear-gradient(180deg, #7770E0 0%, #554FD8 100%);
     border: 6px solid #EFF0F6;
     border-radius: 56px 0px;
+    margin-top: 100px;
 
 
     .roadmap-title{
@@ -110,7 +111,7 @@
         box-shadow: 0px 12px 40px rgba(241, 104, 66, 0.32);
     }
 
-    .slider-wrapper{
+    .carousel-wrapper{
         .slick-list{
             width: 1200px;
             // padding-left: 15px;
@@ -153,8 +154,11 @@
         
     }
 
-    .slick-list{
-        width: 320px !important;
+    .carousel-wrapper{
+
+        .slick-list{
+            width: 320px !important;
+        }
     }
     
 }
