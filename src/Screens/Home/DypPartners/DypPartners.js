@@ -154,7 +154,7 @@ const DypPartners = () => {
             </p>
         </div>
 
-        <div className="row dyp-partners">
+        <div className="row dyp-partners" data-aos="fade-up" data-aos-duration="1000">
            <Slider {...settings}>
                  {partnersArray.map((partner, index) => (
                 <a key={index} target="_blank" href={partner.href} className='text-decoration-none text-dark'>

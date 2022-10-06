@@ -96,6 +96,7 @@ const Roadmap = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    initialSlide: 6,
     responsive: [
       {
         breakpoint: 1024,
@@ -134,7 +135,7 @@ const Roadmap = () => {
   }; 
 
   return (
-    <div className="container-lg roadmap-wrapper">
+    <div className="container-lg roadmap-wrapper" id="roadmap">
       <div className="row flex-column gap-1 p-5 roadmap-title">
         <h1 className="text-white text-center text-lg-start">Dypius roadmap</h1>
         <div className="d-flex flex-column flex-lg-row w-100 justify-content-between align-items-center">
@@ -149,13 +150,13 @@ const Roadmap = () => {
           </div>
         </div>
       </div>
-      <div className="row justify-content-evenly position-relative slider-wrapper">
+      <div className="row justify-content-evenly position-relative carousel-wrapper">
       <hr />
       <Slider ref={(c) => (slider.current = c)} {...settings}>
       {myList.map((item) => (
           <RoadmapCard data={item} />
         ))}
-        <div className="col-11 d-flex flex-column gap-4 selected-roadmap">
+        <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
           <div className="date-card selected d-flex flex-column align-items-center">
           <img src={selectedRoadmap} alt="" />
             <h2 style={{ color: "#EFF0F6" }}>2022 Q3/Q4</h2>

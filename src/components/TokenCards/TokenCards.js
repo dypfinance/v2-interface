@@ -21,7 +21,7 @@ const TokenCards = ({ title, price, percentage }) => {
             <div
               className="tokenpercentage d-flex gap-2 align-items-center"
               style={{
-                background: parseFloat(percentage) > 0 ? "#57B6AB" : "#E07070",
+                background: parseFloat(percentage) > 0 ? "#57B6AB" : "#E07070", padding: '0 5px'
               }}
             >
               {parseFloat(percentage) > 0 ? (
