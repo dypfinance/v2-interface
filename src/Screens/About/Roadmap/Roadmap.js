@@ -3,10 +3,10 @@ import "./_roadmap.scss";
 import filledLeft from "../assets/filledLeft.svg";
 import emptyRight from "../assets/emptyRight.svg";
 import selectedRoadmap from "../assets/selectedRoadmap.svg";
-import completedIcon from "../assets/completedIcon.svg";
 import uncompletedIcon from "../assets/uncompletedIcon.svg";
 import RoadmapCard from "../../../components/RoadmapCard/RoadmapCard";
 import Slider from "react-slick";
+import { useRef } from "react";
 
 const Roadmap = () => {
 
@@ -95,10 +95,7 @@ const Roadmap = () => {
     arrows: false,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
-    dotsClass: 'button__bar',
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
@@ -122,37 +119,43 @@ const Roadmap = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          fade: true
         }
       }
     ]
   };
 
+  const slider = useRef()
 
+  const next = () => {
+    slider.current.slickNext();
+  };
+   const previous = () => {
+    slider.current.slickPrev();
+  }; 
 
   return (
     <div className="container-lg roadmap-wrapper">
       <div className="row flex-column gap-1 p-5 roadmap-title">
-        <h1 className="text-white">Dypius roadmap</h1>
-        <div className="d-flex flex-row w-100 justify-content-between">
+        <h1 className="text-white text-center text-lg-start">Dypius roadmap</h1>
+        <div className="d-flex flex-column flex-lg-row w-100 justify-content-between align-items-center">
           <p>Our journey to success</p>
           <div className="d-flex flex-row gap-4">
-            <div className="left-button d-flex justify-content-center align-items-center">
-              <img src={filledLeft} alt="left arrow" />
+            <div className="left-button d-flex justify-content-center align-items-center" onClick={previous}>
+              <img src={filledLeft} alt="left arrow" className="p-2" />
             </div>
-            <div className="right-button d-flex justify-content-center align-items-center">
-              <img src={emptyRight} alt="rightArrow" />
+            <div className="right-button d-flex justify-content-center align-items-center" onClick={next}>
+              <img src={emptyRight} alt="rightArrow" className="p-2" />
             </div>
           </div>
         </div>
       </div>
-      <div className="row justify-content-evenly position-relative">
+      <div className="row justify-content-evenly position-relative slider-wrapper">
       <hr />
-      <Slider {...settings}>
+      <Slider ref={(c) => (slider.current = c)} {...settings}>
       {myList.map((item) => (
           <RoadmapCard data={item} />
         ))}
-        <div className="col-11 d-flex flex-column gap-4" style={{top: '-24px'}}>
+        <div className="col-11 d-flex flex-column gap-4 selected-roadmap">
           <div className="date-card selected d-flex flex-column align-items-center">
           <img src={selectedRoadmap} alt="" />
             <h2 style={{ color: "#EFF0F6" }}>2022 Q3/Q4</h2>

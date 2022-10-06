@@ -13,7 +13,7 @@ const About = () => {
     <div className="container-fluid px-0">
         <AboutMainHero />
         <OurTeam />
-        <Roadmap />h
+        <Roadmap />
       <Brand />
       <Security />
       <DypPartners />

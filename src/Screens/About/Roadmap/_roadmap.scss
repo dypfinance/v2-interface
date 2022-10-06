@@ -21,6 +21,7 @@
         background: #ffffff;
         border-radius: 8px 0px;
         cursor: pointer;
+        z-index: 5;
     }
 
     .right-button{
@@ -29,6 +30,7 @@
         border-radius: 0px 8px;
         border: 2px solid #FFFFFF;
         cursor: pointer;
+        z-index: 5;
     }
 
     }
@@ -99,13 +101,25 @@
         border-radius: 50px;
         height: 4px;
         position: absolute;
-        top: 60px;
+        top: 85px;
     }
 
 
     .highlight{
         background: linear-gradient(0deg, #F16640 0%, #F67D54 100%);
         box-shadow: 0px 12px 40px rgba(241, 104, 66, 0.32);
+    }
+
+    .slider-wrapper{
+        .slick-list{
+            width: 1200px;
+            // padding-left: 15px;
+            padding-top: 25px;
+        }
+
+        .selected-roadmap{
+            top: -24px !important;
+        }
     }
     
     
@@ -125,4 +139,22 @@
     opacity: 0.5;
   
    
+}
+
+
+@media screen and (max-width: 786px) {
+
+    .roadmap-wrapper{
+        min-height: 900px;
+
+        hr{
+            top: 76px;
+        }
+        
+    }
+
+    .slick-list{
+        width: 320px !important;
+    }
+    
 }
