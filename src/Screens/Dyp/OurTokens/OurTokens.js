@@ -61,10 +61,10 @@ const OurTokens = () => {
         />
         <div>
           <div className="row justify-content-between m-0 gap-2 position-relative mb-4">
-            <img src={TokenGraph} alt="" className="tokengraph" />
+            {/* <img src={TokenGraph} alt="" className="tokengraph" /> */}
             <div className="col-lg-5 col-xl-5 p-0">
               <h2 className="ourtoken-title">
-                DYP <span className="bottm-text">Token</span>
+                DYP Token
               </h2>
               <p className="ourtoken-desc">
               Explore endless possibilities with our powerful token

@@ -28,17 +28,19 @@ const EducationalTools = () => {
             Hit the ground running with our quick start guide! Get tips, watch
             how-to videos and learn how to become an expert in no time.
           </p>
-        </div>
 
         <a
           className="btn outline-btn d-flex align-items-center ms-3 ms-lg-0"
           href="https://www.youtube.com/c/DeFiYieldProtocol"
           target={"_blank"}
           rel={"noreferrer"}
+          style={{width: '30%', justifyContent: 'center'}}
         >
 
-Check us out <img src={filledArrow} alt="" className="ml-2" />
+More <img src={filledArrow} alt="" className="ml-2" />
         </a>
+        </div>
+
       </div>
 
       <div className="row gap-5 gap-lg-3 justify-content-between p-4">

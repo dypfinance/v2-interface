@@ -22,7 +22,7 @@ const Tokenomics = ({ bottom, showBtn }) => {
 
   const windowSize = useWindowSize();
   
-console.log(windowSize.width)
+  
   return (
     <div className="outer-wrapper" id="tokenomics" style={{ bottom: bottom }}>
       <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
@@ -30,7 +30,7 @@ console.log(windowSize.width)
           <NoteIcon bgFill={"#7770E0"} svgFill={"#fff"} />
           <Title top={"Tokenomics"} />
         </div>
-        <div className="row m-0 gap-4 col-lg-3 col-xl-3 align-items-center">
+        <div className="row m-0 gap-4 pl-0 col-lg-3 col-xl-3 align-items-center">
           <button
             className={
               toggledyp === true ? "btn filled-btn" : "btn outline-btn"
@@ -124,14 +124,14 @@ console.log(windowSize.width)
                   <div>
                     <span>Community</span>
                     <svg
-                      width="653"
+                      width="353"
                       height="1"
                       viewBox="0 0 653 1"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <rect
-                        width="653"
+                        width="353"
                         height="1"
                         fill="url(#paint0_linear_95_5424)"
                       />
@@ -233,14 +233,14 @@ console.log(windowSize.width)
                     <span>Users</span>
                     <br />
                     <svg
-                      width="653"
+                      width="353"
                       height="1"
                       viewBox="0 0 653 1"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <rect
-                        width="653"
+                        width="353"
                         height="1"
                         fill="url(#paint0_linear_95_5424)"
                       />
@@ -295,14 +295,14 @@ console.log(windowSize.width)
                     <span>Team</span>
                     <br />
                     <svg
-                      width="653"
+                      width="353"
                       height="1"
                       viewBox="0 0 653 1"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <rect
-                        width="653"
+                        width="353"
                         height="1"
                         fill="url(#paint0_linear_95_5424)"
                       />
@@ -338,18 +338,7 @@ console.log(windowSize.width)
                           </span>
                         </div>
                       </div>
-                      <div className="col-lg-5 col-xl-5 col-md-5">
-                        <div className="circulating-wrapper w-100">
-                          <div className="d-flex flex-column gap-3">
-                            <span
-                              className="circulating-title"
-                              style={{ fontSize: 12 }}
-                            >
-                              No additional tokens can be minted
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -367,6 +356,18 @@ console.log(windowSize.width)
                 </div>
                 <div id="crypto-widget-CoinList" data-design="modern" data-coin-ids="2669"></div>
                 <img src={Graph} alt="" className="w-100" />
+                <div className="col-lg-10 col-xl-10 col-md-10 m-auto">
+                        <div className="circulating-wrapper w-100">
+                          <div className="d-flex flex-column gap-3">
+                            <span
+                              className="circulating-title"
+                              // style={{ fontSize: 12 }}
+                            >
+                              No additional tokens can be minted
+                            </span>
+                          </div>
+                        </div>
+                      </div>
               </div>
             </div>
           ) : (
@@ -403,14 +404,14 @@ console.log(windowSize.width)
                   <div>
                     <span>Community</span>
                     <svg
-                      width="653"
+                      width="353"
                       height="1"
                       viewBox="0 0 653 1"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <rect
-                        width="653"
+                        width="353"
                         height="1"
                         fill="url(#paint0_linear_95_5424)"
                       />
@@ -486,14 +487,14 @@ console.log(windowSize.width)
                   <div>
                     <span>Reserves, Marketing, Ecosystem</span>
                     <svg
-                      width="653"
+                      width="353"
                       height="1"
                       viewBox="0 0 653 1"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <rect
-                        width="653"
+                        width="353"
                         height="1"
                         fill="url(#paint0_linear_95_5424)"
                       />
@@ -567,7 +568,7 @@ console.log(windowSize.width)
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <rect
-                          width="653"
+                          width="353"
                           height="1"
                           fill="url(#paint0_linear_95_5424)"
                         />
@@ -615,7 +616,7 @@ console.log(windowSize.width)
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <rect
-                          width="653"
+                          width="353"
                           height="1"
                           fill="url(#paint0_linear_95_5424)"
                         />

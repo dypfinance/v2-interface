@@ -23,7 +23,7 @@ const Dyp = () => {
       <Solutions />
       <div className="container-fluid" style={{ gap: 100 }}>
         <OurTokens />
-        <div className="container-lg">
+        <div className="container">
         <Tokenomics bottom={55} showBtn={true}/></div>
         <BuyDyp />
         <SupportedAssets />

@@ -22,7 +22,7 @@ const MainHero = () => {
                 <p className="text-white">
                 Dypius is a powerful decentralized ecosystem that faces the future. A new era with special focus on scalability, security, and global adoption. Powered by a next-gen infrastructure through our strong foundation, and much more! 
                 </p>
-                <button type="button" className="btn outline-btn">
+                <button type="button" className="btn filled-orange-btn">
                   Explore
                 </button>
               </div>
