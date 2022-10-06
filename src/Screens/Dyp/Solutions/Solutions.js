@@ -42,10 +42,10 @@ const Solutions = () => {
       title: "iDYP",
     },
     {
-      title: "CAWS Adventure",
+      title: "DYP Locker",
     }, 
     {
-      title: "Anti Manipulation",
+      title: "CAWS Adventure",
     },
   ];
 

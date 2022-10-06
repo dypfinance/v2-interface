@@ -37,7 +37,7 @@ const EducationalTools = () => {
           rel={"noreferrer"}
         >
 
-          Go to our Youtube <img src={filledArrow} alt="" className="ml-2" />
+Check us out <img src={filledArrow} alt="" className="ml-2" />
         </a>
       </div>
 
