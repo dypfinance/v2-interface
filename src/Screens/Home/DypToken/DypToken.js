@@ -33,7 +33,7 @@ const DypToken = () => {
               </div>
             </div>
             <button className="btn filled-btn" data-aos="fade-up" data-aos-duration="1000">
-              Go to DYP Token <img src={rightArrow} alt="" />
+              Learn more 
             </button>
           </div>         
         </div>

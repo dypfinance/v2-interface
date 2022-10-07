@@ -28,14 +28,17 @@
 }
 
 .filled-btn {
-  color: #fff;
-  background: linear-gradient(to left, #7770E0, #3E3AA5,  #554FD8, #7770E0);
+  color: #f7f7fc;
+  background: linear-gradient(to left, #7770E0, #3E3AA5, #554FD8, #7770E0);
   border-radius: 10px;
   background-size: 300%;
   background-position: 0 0;
-  // box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.09);
   height: 40px;
-  transition: all ease .4s;
+  padding: 0 32px;
+  transition: all ease 0.4s;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  font-weight: 500
 }
 
 .filled-btn:hover {
