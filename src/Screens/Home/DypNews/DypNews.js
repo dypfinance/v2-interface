@@ -103,7 +103,6 @@ const sortedNewsItems = newsData.map(item => {
             <Slider {...settings}>
               {sortedNewsItems.map((newsItem, index) => (
                 <NewsCard  key={index} title={newsItem.title} description={newsItem.content} date={newsItem.date.toLocaleDateString("en-US", options)} image={newsItem.image} link={`https://tools.dyp.finance/news/${newsItem.id}`} />
-
               ))}
             </Slider>
             </div>

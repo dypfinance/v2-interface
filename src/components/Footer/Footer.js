@@ -3,6 +3,10 @@ import useWindowSize from "../../hooks/useWindowSize";
 import "./_footer.scss";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/dypiusLogo.svg";
+import coinmarketcap from "../../assets/coinMarketCap.svg";
+import coinGecko from "../../assets/coinGecko.svg";
+import contactUs from "../../assets/contactUs.svg";
+import disclaimer from "../../assets/disclaimer.svg";
 
 const Footer = () => {
   const windowSize = useWindowSize();
@@ -226,38 +230,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="container-fluid px-3 px-lg-5 py-0 footer-links justify-content-center">
-        <div
-          className="container-lg d-flex justify-content-between align-items-start align-items-lg-center flex-column flex-lg-row py-2 w-100 position-relative"
-          style={{ zIndex: 2 }}
-        >
-          {/* <div className='marketplaces d-flex justify-content-center justify-content-lg-end gap-5 flex-row'>
-            <a
-            target='_blank'
-              href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
-              className="text-white text-decoration-none"
-            >
-              <h5>CoinMarketCap</h5>
-            </a>
-            <a
-            target='_blank'
-              href="https://www.coingecko.com/en/coins/defi-yield-protocol"
-              className="text-white text-decoration-none"
-            >
-              <h5>CoinGecko</h5>
-            </a>
-            <NavLink to='/disclaimer' className="text-white text-decoration-none"> <h5>Disclaimer</h5></NavLink>
-           
-          </div> */}
-
-          {/* <img
-            className="spiral"
-            src={require(`../../assets/footerSpiral.png`)}
-            alt=""
-          /> */}
-        </div>
-
-        {/* <hr /> */}
-        <div className="container-lg d-flex mt-0 mt-lg-5 footer-blocks w-100 position-relative align-items-baseline justify-content-between">
+        <div className="container-lg d-flex mt-0 mt-lg-5 footer-blocks w-100 position-relative align-items-baseline justify-content-between py-4">
           {windowSize.width < 786 ? (
             <div className="accordion w-100" id="accordionFooter">
               <div className="col-12 col-lg-3 text-white d-flex flex-column gap-3 px-0 py-3">
@@ -453,9 +426,9 @@ const Footer = () => {
             </div>
           ) : (
             <>
-                <a href="#">
-                  <img src={logo} alt="" width={160} height={90} />
-                </a>
+              <NavLink to="/">
+                <img src={logo} alt="" width={160} height={90} />
+              </NavLink>
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">About Us</h4>
                 {about.map((item, index) => (
@@ -481,7 +454,7 @@ const Footer = () => {
                 ))}
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">
-                <h4 className="fw-bold">Learn</h4>
+                <h4 className="fw-normal">Learn</h4>
                 {learn.map((item, index) => (
                   <a
                     key={index}
@@ -493,7 +466,7 @@ const Footer = () => {
                 ))}
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">
-                <h4 className="fw-bold">Anouncements</h4>
+                <h4 className="fw-normal">Anouncements</h4>
                 {announcements.map((item, index) => (
                   <a
                     key={index}
@@ -503,8 +476,27 @@ const Footer = () => {
                     <h5>{item.title}</h5>
                   </a>
                 ))}
+                <div className="d-flex flex-row gap-3">
+                  <a
+                    target="_blank"
+                    href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
+                  >
+                    <img src={coinmarketcap} alt="" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.coingecko.com/en/coins/defi-yield-protocol"
+                  >
+                    <img src={coinGecko} alt="" />
+                  </a>
+                  <a href="">
+                    <img src={contactUs} alt="" />
+                  </a>
+                  <NavLink to="/disclaimer">
+                    <img src={disclaimer} alt="" />
+                  </NavLink>
+                </div>
               </div>
-            
             </>
           )}
           {/* <img
@@ -513,7 +505,9 @@ const Footer = () => {
             alt=""
           /> */}
         </div>
-        <div className="row w-100 justify-content-end justify-content-lg-center align-items-center py-3">
+        <hr className="d-none d-lg-block" />
+
+        <div className="row w-100 justify-content-center align-items-center py-3 m-0">
           <p className="mb-0 text-white fw-light" style={{ fontSize: "12px" }}>
             Copyright © Dypius {year.getFullYear()}. All rights reserved.
           </p>

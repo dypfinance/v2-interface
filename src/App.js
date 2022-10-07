@@ -12,10 +12,14 @@ import Navbar from "./components/Navbar/Navbar";
 import About from "./Screens/About/About";
 import ScrollTop from "./components/ScrollTop/ScrollTop";
 import Disclaimer from "./Screens/Disclaimer/Disclaimer";
+import AOS from 'aos'
 
 function App() {
 
-
+  useEffect(() => {
+    AOS.init();
+  }, [])
+  
 
 
   return (
