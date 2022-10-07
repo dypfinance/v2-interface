@@ -6,7 +6,16 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: rgba(30, 32, 41, 0.6);
+    color: #554FD8;
+  }
+
+  .select-chain {
+    color: #554FD8;
+    background: white;
+    position: absolute;
+    top: -11px;
+    left: 20px;
+    font-size: 10px;
   }
 
   .chain-wrapper {
@@ -37,7 +46,7 @@
   .type-wrapper{
     background: #EFF0F6;
     border-radius: 8px;
-    padding: 15px 20px;
+    padding: 8px 20px;
 
     p{
       margin-bottom: 0;
