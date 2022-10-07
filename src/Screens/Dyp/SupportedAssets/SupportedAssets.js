@@ -12,6 +12,7 @@ const SupportedAssets = () => {
   const [ethState, setEthState] = useState(true);
   const [bnbState, setBnbState] = useState(false);
   const [avaxState, setAvaxState] = useState(false);
+
   const types = ["Stake", "Yield", "Buyback"];
   const [activeType, setActiveType] = useState(types[0]);
 
@@ -19,6 +20,7 @@ const SupportedAssets = () => {
     setAvaxState(false);
     setBnbState(false);
     setEthState(true);
+    
   };
 
   const handleBnbPool = () => {
@@ -34,14 +36,14 @@ const SupportedAssets = () => {
   };
 
   return (
-    <div className="container-lg">
-      <div className="supportedAssets-wrapper px-4">
+    <div className="container-lg supportedAssets-wrapper ">
+      <div className="px-4">
         <div className="col-12 col-lg-5 mb-5 mb-lg-0">
           <Title top="Supported Assets" />
           <p>We support the most popular coins on three different chains</p>
         </div>
 
-        <div className="d-flex flex-column gap-4">
+        <div className="d-flex flex-column gap-5">
             <div className="types-wrapper px-2">
               <div class="dropdown">
                 <p className="mb-0 select-chain" style={{color: ethState === true ? '#566FCE' : bnbState === true ? '#D5A404' : '#E84142'}}>
@@ -178,18 +180,21 @@ const SupportedAssets = () => {
               apr={"1.1%"}
               tvl={"$48,382.30"}
               lockTime={"No lock"}
+              chain={ethState === true ? 'eth' : bnbState === true ? 'bnb' : 'avax'}
             />
             <SupAssetCard
               pool={"DYP"}
               apr={"1.1%"}
               tvl={"$48,382.30"}
               lockTime={"No lock"}
+              chain={ethState === true ? 'eth' : bnbState === true ? 'bnb' : 'avax'}
             />
             <SupAssetCard
               pool={"DYP"}
               apr={"1.1%"}
               tvl={"$48,382.30"}
               lockTime={"No lock"}
+              chain={ethState === true ? 'eth' : bnbState === true ? 'bnb' : 'avax'}
             />
             <img className="spiral2" src={Spiral} alt="" />
           </div>

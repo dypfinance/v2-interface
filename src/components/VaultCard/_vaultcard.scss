@@ -7,6 +7,10 @@
   width: 374px;
   z-index: 2;
 
+
+
+
+
   @media only screen and (max-width: 891px) {
     width: 100% !important;
   }
@@ -31,17 +35,18 @@
   }
 
   .aprTitle {
-    font-weight: 300;
-    font-size: 32px;
-    line-height: 48px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
     letter-spacing: -0.018em;
     color: #7770e0;
     align-items: baseline;
   }
 
   .aprText {
-    font-size: 24px;
-    line-height: 36px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .locktime-subtitle {
@@ -86,5 +91,50 @@
 
   .purplediv {
     background: #F0603A !important;
+  }
+}
+
+.eth {
+  &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 33px;
+      top: -17px;
+      right: -2px;
+      background-image: url(../SupAssetCard/ethbg.svg);
+      background-repeat: no-repeat;
+      border-radius: 6px 0px;
+      padding: 5px 10px 5px 0;
+  }
+}
+
+.bnb {
+  &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 33px;
+      top: -17px;
+      right: -2px;
+      background-image: url(../SupAssetCard/bscbg.svg);
+      background-repeat: no-repeat;
+      border-radius: 6px 0px;
+      padding: 5px 10px 5px 0;
+  }
+}
+
+.avax {
+  &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 33px;
+      top: -17px;
+      right: -2px;
+      background-image: url(../SupAssetCard/avaxbg.svg);
+      background-repeat: no-repeat;
+      border-radius: 6px 0px;
+      padding: 5px 10px 5px 0;
   }
 }
