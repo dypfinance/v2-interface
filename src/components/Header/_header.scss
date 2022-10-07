@@ -103,7 +103,8 @@
   top: 0;
   z-index: 22;
   border-radius: 8px;
-
+  transform: translateX(300px);
+  transition: all 0.25s ease-in;
   ul li {
     list-style-type: none;
     margin: 8px;
@@ -124,4 +125,8 @@
     background: linear-gradient(rgba(240, 96, 58, 1), rgba(248, 132, 91, 1)) ;
   }
 
+}
+
+.openMenu{
+  transform: translateX(-3px);
 }

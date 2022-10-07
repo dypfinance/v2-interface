@@ -76,7 +76,7 @@ const Footer = () => {
       link: "#",
     },
     {
-      title: "Contact Us",
+      title: "Contact us",
       link: "#",
     },
   ];
@@ -489,9 +489,7 @@ const Footer = () => {
                   >
                     <img src={coinGecko} alt="" />
                   </a>
-                  <a href="">
-                    <img src={contactUs} alt="" />
-                  </a>
+                  
                   <NavLink to="/disclaimer">
                     <img src={disclaimer} alt="" />
                   </NavLink>
