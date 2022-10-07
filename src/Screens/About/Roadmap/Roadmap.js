@@ -108,7 +108,7 @@ const Roadmap = () => {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -135,7 +135,7 @@ const Roadmap = () => {
   }; 
 
   return (
-    <div className="container-lg roadmap-wrapper" id="roadmap">
+    <div className="container-lg roadmap-wrapper overflow-hidden" id="roadmap">
       <div className="row flex-column gap-1 p-5 roadmap-title">
         <h1 className="text-white text-center text-lg-start">Dypius roadmap</h1>
         <div className="d-flex flex-column flex-lg-row w-100 justify-content-between align-items-center">
