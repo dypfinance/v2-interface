@@ -30,7 +30,9 @@
     .solutions-card{
         background: linear-gradient(180deg, rgba(239, 240, 246, 0) 0%, #EFF0F6 100%);
         border-radius: 28px 0px;
+        border: 2px solid white;
         cursor: pointer;
+        transition: all .25s;
     
         .clipboard{
             width: 55px;
@@ -50,6 +52,14 @@
             font-weight: 400;
             margin-bottom: 0;
         }
+    }
+
+    .solutions-card:hover{
+       border: 2px solid rgba(170, 165, 235, 1);
+    color: #5650D8;
+        
+
+
     }
 }
 
