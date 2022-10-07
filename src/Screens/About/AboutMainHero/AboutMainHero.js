@@ -9,9 +9,9 @@ import indicator from "../assets/aboutIndicator.svg";
 
 const AboutMainHero = () => {
   return (
-    <div className="container-fluid about-main-hero d-flex flex-column justify-content-end">
-      <div className="container-lg d-flex flex-column flex-lg-row justify-content-between mt-5 mt-lg-0">
-        <div className="col-12 col-lg-5 mt-5 mt-lg-0">
+    <div className="container-fluid about-main-hero d-flex flex-column justify-content-lg-end justify-content-xl-end justify-content-center">
+      <div className="container-lg d-flex flex-column flex-lg-row flex-md-row justify-content-between justify-content-md-center mt-5 mt-lg-0 align-items-md-baseline align-items-sm-center">
+        <div className="col-12 col-lg-5 col-md-5 mt-5 mt-lg-0">
           <Title top="About" bottom="us" align="d-flex flex-row gap-2" />
           <p>
             Through our strong foundation, we aim to bring you a powerful
@@ -25,7 +25,7 @@ const AboutMainHero = () => {
             beginner and advanced users.
           </p>
         </div>
-        <div className="col-12 col-lg-5 image-container position-relative">
+        <div className="col-12 col-lg-5 col-md-5 image-container position-relative">
           <img src={bull} className="bull" alt="" />
           <img src={flower} className="flower" alt="" />
           <div className="painting-container d-flex justify-content-center align-items-center">

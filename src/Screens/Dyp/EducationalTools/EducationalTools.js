@@ -30,7 +30,7 @@ const EducationalTools = () => {
           </p>
 
         <a
-          className="btn outline-btn d-flex align-items-center ms-3 ms-lg-0"
+          className="btn outline-btn d-flex align-items-center"
           href="https://www.youtube.com/c/DeFiYieldProtocol"
           target={"_blank"}
           rel={"noreferrer"}

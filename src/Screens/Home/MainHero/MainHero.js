@@ -14,7 +14,7 @@ const MainHero = () => {
         <div className="container-lg">
           <div className="heading row">
             <div className="col-12 col-lg-5 d-flex justify-content-center flex-column text-white ml-lg-4 pt-5">
-              <div>
+              <div className="d-flex flex-column gap-4">
                 <div>
                   <h1>Welcome</h1>
                   <h1>to the future</h1>
