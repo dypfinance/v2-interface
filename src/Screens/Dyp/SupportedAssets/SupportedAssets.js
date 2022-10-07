@@ -5,9 +5,6 @@ import ethDropdown from "../assets/ethereumDropdown.svg";
 import bnbDropdown from "../assets/bnbDropdown.svg";
 import avaDropdown from "../assets/avaDropdown.svg";
 import dropdownIndicator from "../assets/dropdownIndicator.svg";
-
-import useWindowSize from "../../../hooks/useWindowSize";
-
 import Spiral from "../../../assets/DypAssets/spiral.svg";
 
 const SupportedAssets = () => {
@@ -42,13 +39,10 @@ const SupportedAssets = () => {
           <Title top="Supported Assets" />
           <p>We support the most popular coins on three different chains</p>
         </div>
-
         <div className="d-flex flex-column gap-4">
             <div className="types-wrapper">
               <div class="dropdown">
-                <p className="mb-0" style={{ color: "#7770E0" }}>
-                  Select Chain
-                </p>
+                
                 <div
                   class="coins d-flex justify-content-around align-items-center"
                   type="button"
@@ -86,18 +80,21 @@ const SupportedAssets = () => {
                   <li
                     className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
                     onClick={() => handleEthPool()}
+                    style={{color: '#566FCE'}}
                   >
                     <img src={ethDropdown} /> Ethereum
                   </li>
                   <li
                     className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
                     onClick={() => handleBnbPool()}
+                    style={{color: '#D5A404'}}
                   >
                     <img src={bnbDropdown} /> BNB Chain
                   </li>
                   <li
                     className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
                     onClick={() => handleAvaxPool()}
+                    style={{color: '#E84142'}}
                   >
                     <img src={avaDropdown} /> Avalanche
                   </li>
@@ -128,52 +125,6 @@ const SupportedAssets = () => {
             className="row gap-4 m-auto position-relative"
             style={{ paddingBottom: "4rem", zIndex: 1 }}
           >
-            {/* {windowSize.width < 786 ? (
-              <>
-                <div className="types-wrapper w-100">
-                  <div
-                    className={`actiontype ${
-                      activeType === "Stake" && "active"
-                    }`}
-                    onClick={() => {
-                      setActiveType(types[0]);
-                    }}
-                  >
-                    <span>Stake</span>
-                    {activeType === "Stake" && (
-                      <div className="activetype-dot"></div>
-                    )}
-                  </div>
-                  <div
-                    className={`actiontype ${
-                      activeType === "Yield" && "active"
-                    }`}
-                    onClick={() => {
-                      setActiveType(types[1]);
-                    }}
-                  >
-                    <span>Yield</span>
-                    {activeType === "Yield" && (
-                      <div className="activetype-dot"></div>
-                    )}
-                  </div>
-                  <div
-                    className={`actiontype ${
-                      activeType === "Buyback" && "active"
-                    }`}
-                    onClick={() => {
-                      setActiveType(types[2]);
-                    }}
-                  >
-                    <span>Buyback</span>
-                    {activeType === "Buyback" && (
-                      <div className="activetype-dot"></div>
-                    )}
-                  </div>
-                </div>
-                <hr />
-              </>
-            ) : null} */}
             <SupAssetCard
               pool={"DYP"}
               apr={"1.1%"}
