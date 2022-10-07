@@ -22,9 +22,6 @@
    
     }
 
-    .btn{
-      background: linear-gradient(rgba(240, 96, 58, 1), rgba(248, 132, 91, 1)) ;
-    }
 
     .highlight{
       padding: 5px 10px;
@@ -33,6 +30,19 @@
       color: #fff !important;
     }
 
+    .tools-btn{
+      background: linear-gradient(280.88deg, #F1643E 9.02%, #F78057 90.66%);
+      box-shadow: 0px 16px 32px rgba(241, 101, 63, 0.6);
+      border-radius: 12px 0px;
+      z-index: 5;
+      width: 150px;
+      height: 50px;
+      transition: all .25s;
+    }
+
+    .tools-btn:hover{
+      transform: translateX(10px) translateY(11px);
+    }
 
     
 

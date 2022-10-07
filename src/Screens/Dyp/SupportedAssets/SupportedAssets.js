@@ -6,6 +6,7 @@ import bnbDropdown from "../assets/bnbDropdown.svg";
 import avaDropdown from "../assets/avaDropdown.svg";
 import dropdownIndicator from "../assets/dropdownIndicator.svg";
 import Spiral from "../../../assets/DypAssets/spiral.svg";
+import rightArrow from '../../../assets/filledArrow.svg';
 
 const SupportedAssets = () => {
   const [ethState, setEthState] = useState(true);
@@ -42,7 +43,7 @@ const SupportedAssets = () => {
           <p>We support the most popular coins on three different chains</p>
         </div>
 
-        <div className="d-flex flex-column gap-5">
+        <div className="d-flex flex-column gap-5 position-relative">
             <div className="types-wrapper px-2">
               <div class="dropdown">
                 <p className="mb-0 select-chain" style={{color: ethState === true ? '#566FCE' : bnbState === true ? '#D5A404' : '#E84142'}}>
@@ -154,7 +155,8 @@ const SupportedAssets = () => {
               chain={ethState === true ? 'eth' : bnbState === true ? 'bnb' : 'avax'}
             />
             <img className="spiral2" src={Spiral} alt="" />
-          </div>
+          <button className="outline-btn position-absolute" style={{bottom: '-19px', right: '44%'}}>View More <img src={rightArrow} alt="" /></button>
+          </div>          
         </div>
       </div>
     </div>

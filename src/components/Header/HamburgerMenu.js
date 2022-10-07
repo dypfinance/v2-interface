@@ -27,8 +27,7 @@ const HamburgerMenu = () => {
           <span></span>
           <span></span>
         </div>
-        {openMenu === true && (
-          <div className="col-8 bg-white d-flex d-lg-none d-xl-none justify-content-around align-items-center py-3 links menu">
+          <div className={`col-8 bg-white d-flex d-lg-none d-xl-none justify-content-around align-items-center py-3 links menu ${openMenu === true && 'openMenu'}`}>
             <ul>
               <li>
                 <NavLink className="text-decoration-none" to="/dyp">
@@ -63,7 +62,6 @@ const HamburgerMenu = () => {
               </li>
             </ul>
           </div>
-        )}
       </>{" "}
     </OutsideClickHandler>
   );

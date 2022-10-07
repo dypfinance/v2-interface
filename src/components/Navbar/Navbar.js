@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import dypiusLogo from "../../assets/dypiusLogo.svg";
 import dypiusLogoPurple from "../../assets/dypius-purple.svg";
 import dypiusIcon from "../../assets/dyptoolsIcon.svg";
+import toolsLogo from "../../assets/dypToolsLogo.svg";
+import toolsBorder from "../../assets/dypToolsBorder.svg";
 import { NavLink } from "react-router-dom";
 import "./_navbar.scss";
 
@@ -63,13 +65,14 @@ const Navbar = () => {
               About us
               </NavLink>
           </div>
-          <div className="col-2 d-flex justify-content-end">
+          <div className="col-2 d-flex justify-content-end position-relative">
             <a className='d-flex text-decoration-none' target='_blank' href='https://tools.dyp.finance/news'>
-            <button className="btn text-white py-2">
-              <img src={dypiusIcon} className="pe-2" />
+            <button className="btn tools-btn text-white">
+              <img src={toolsLogo} className="pe-2" />
               Dyp Tools
             </button>
             </a>
+            <img src={toolsBorder}  className="position-absolute" style={{zIndex: 1,  top: '-15px', right: '-22%'}} />
           </div>
         </div>
       </div>
