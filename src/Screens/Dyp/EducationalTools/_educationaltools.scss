@@ -2,7 +2,7 @@
 
     background: linear-gradient(360deg, #EFF0F6 0%, rgba(239, 240, 246, 0) 65.48%);
     border-radius: 56px 0px;
-    min-height: 570px;
+    min-height: 620px;
 
   p {
     font-family: "Poppins";
@@ -12,10 +12,35 @@
     line-height: 24px;
     color: rgba(30, 32, 41, 0.6);
   }
+
+
+  
+.video-wrapper{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
+  @media screen and (max-width: 786px) {
+    grid-template-columns: auto;
+  }
+  
   .cardWrapper {
     border-radius: 12px 0px;
     position: relative;
-    width: 32%;
+
+
+  }
+
+  .cardWrapper:nth-child(odd){
+  top: 40px !important;
+  
+  @media screen and (max-width: 786px) {
+    top: 0 !important;  
+  }
+
+  }
+
+
+
   .eduImg {
     border-radius: 12px 0px;
     height: 190px;
@@ -30,9 +55,11 @@
   .purpleArrow {
     position: absolute;
     right: 0;
-    bottom: -20px;
+    bottom: -10px;
   }
 }
+
+
 }
 
 
@@ -46,7 +73,7 @@
 .edu-sphere {
   position: absolute;
   right: 55%;
-  top: -59px;
+  top: 0;
   z-index: 0;
 }
 

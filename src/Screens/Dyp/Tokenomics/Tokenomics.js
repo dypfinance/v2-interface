@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import NoteIcon from "../../../components/NoteIcon/NoteIcon";
 import Title from "../../../components/Title/Title";
 import Clipboard from "../assets/filledClipboard.svg";
-import Graph from "../../../assets/DypAssets/tokenomics-graph.png";
-import idypGraph from "../../../assets/DypAssets/idypGraph.png";
+import Graph from "../../../assets/DypAssets/dyp-chart.png";
+import idypGraph from "../../../assets/DypAssets/idyp-chart.png";
 import PurpleArrowDown from "../../../assets/DypAssets/purpleArrow-down.svg";
 import WhiteArrowUp from "../../../assets/DypAssets/whiteArrow-up.svg";
 import { shortAddress } from "../../../hooks/shortAddress";
@@ -30,7 +30,7 @@ const Tokenomics = ({ bottom, showBtn }) => {
           <NoteIcon bgFill={"#7770E0"} svgFill={"#fff"} />
           <Title top={"Tokenomics"} />
         </div>
-        <div className="row m-0 gap-4 pl-0 col-lg-3 col-xl-3 align-items-center">
+        <div className="row m-0 gap-4 pl-0 col-lg-3 col-xl-3 align-items-center justify-content-end">
           <button
             className={
               toggledyp === true ? "btn filled-btn" : "btn outline-btn"
@@ -344,7 +344,7 @@ const Tokenomics = ({ bottom, showBtn }) => {
                 </div>
               </div>
               <div className="col-lg-4 col-xl-4 col-md-4">
-              <div className="circulating-wrapper col-xl-9 col-lg-9 m-auto w-100">
+              <div className="circulating-wrapper w-100 mb-3">
                   <div className="d-flex flex-column gap-3">
                     <span className="circulating-title">
                       Circulating supply
@@ -356,7 +356,7 @@ const Tokenomics = ({ bottom, showBtn }) => {
                 </div>
                 <div id="crypto-widget-CoinList" data-design="modern" data-coin-ids="2669"></div>
                 <img src={Graph} alt="" className="w-100" />
-                <div className="col-lg-10 col-xl-10 col-md-10 m-auto">
+                <div className="">
                         <div className="circulating-wrapper w-100">
                           <div className="d-flex flex-column gap-3">
                             <span

@@ -18,14 +18,16 @@ const BuyDyp = () => {
       <img className='sphere-1' src={sphere} alt="" />
       <img className='sphere-2' src={sphere} alt="" />
     <div className="row  px-4">
-    <div className="col-12 col-lg-6 d-flex flex-column justify-content-center">
-            <Title top='Buy DYP' bottom='in a few steps' align={'d-flex flex-column flex-lg-row gap-2 align-items-start'}/>
-            <p className="text-secondary">
+
+    <div className="col-12 col-lg-5 d-flex flex-column justify-content-center gap-4">
+            <Title top='Buy DYP' bottom='in a few steps' align={'d-flex flex-column flex-lg-row gap-2 align-items-start'} animation="fade-up" duration="1000" />
+            <p className="text-secondary" data-aos="fade-up" data-aos-duration="1000">
+
             At Dypius, we want to make it easy for you to purchase our token. We have a variety of centralized and decentralized exchanges that you can use to do so.
             </p>
             {windowSize.width > 786 
             ?
-            <div className="btn filled-btn d-flex justify-content-center align-items-center " style={{width: '30%'}}>Explore</div>
+            <div className="btn filled-btn d-flex justify-content-center align-items-center "style={{width: '30%'}} data-aos="fade-up" data-aos-duration="1000">Explore</div>
             :
             null
             }
