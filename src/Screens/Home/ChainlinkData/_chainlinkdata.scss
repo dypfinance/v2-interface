@@ -12,6 +12,11 @@
   @media only screen and (max-width: 1399px) {
     bottom: 25px !important;
   }
+
+  .audit{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .chainlink-data-title {

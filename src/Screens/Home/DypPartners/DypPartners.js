@@ -157,12 +157,12 @@ const DypPartners = () => {
         <div className="row dyp-partners" data-aos="fade-up" data-aos-duration="1000">
            <Slider {...settings}>
                  {partnersArray.map((partner, index) => (
-                <a key={index} target="_blank" href={partner.href} className='text-decoration-none text-dark'>
-                    <div className="partner_wrapper d-flex flex-column align-items-center justify-content-center">
+                // <a key={index} target="_blank" href={partner.href} className='text-decoration-none text-dark'>
+                    <div key={index} className="partner_wrapper d-flex flex-column align-items-center justify-content-center">
                         <img src={`/PartnerIcons/${partner.image}`} alt="" />
                         <p className='mb-0'>{partner.text}</p>
                     </div>
-                 </a>
+                //  </a>
             ))}
            </Slider>
         </div>
