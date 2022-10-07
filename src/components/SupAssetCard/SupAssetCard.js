@@ -2,9 +2,9 @@ import React from "react";
 import DypPool from "../../assets/DypAssets/dypPool.svg";
 import rightArrow from "../../assets/right-arrow.svg";
 
-const SupAssetCard = ({ pool, apr, link, tvl, lockTime }) => {
+const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain }) => {
   return (
-    <div className="vaultWrapper bg-white">
+    <div className={`vaultWrapper bg-white ${chain}`}>
       <div className="purplediv"></div>
       <div className="d-flex flex-column gap-3">
         <div className="row justify-content-between gap-2 m-0 align-items-center">

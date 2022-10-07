@@ -37,13 +37,13 @@ const OurTokens = () => {
       });
   };
 
-  const getIDypTokenPercentage = async () => {
-    await axios
-      .get("https://api.lunarcrush.com/v2?data=assets&symbol=iDYP")
-      .then((data) => {
-        setIDypPercentage(data.data.data[0].percent_change_24h)        
-      });
-  };
+  // const getIDypTokenPercentage = async () => {
+  //   await axios
+  //     .get("https://api.lunarcrush.com/v2?data=assets&symbol=iDYP")
+  //     .then((data) => {
+  //       setIDypPercentage(data.data.data[0].percent_change_24h)        
+  //     });
+  // };
 
   useEffect(() => {
     getTokenData();

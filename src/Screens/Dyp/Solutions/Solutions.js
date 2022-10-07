@@ -39,7 +39,7 @@ const Solutions = () => {
       title: "Launchpad",
     },
     {
-      title: "iDYP",
+      title: "Metaverse",
     },
     {
       title: "DYP Locker",
