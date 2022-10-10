@@ -38,9 +38,9 @@ const SupportedAssets = () => {
   return (
     <div className="container-lg supportedAssets-wrapper ">
       <div className="px-4">
-        <div className="col-12 col-lg-5 mb-5 mb-lg-0">
-          <Title top="Supported Assets" />
-          <p>We support the most popular coins on three different chains</p>
+        <div className="col-12 col-lg-5 mb-5 ">
+          <Title top="Supported" bottom={'Assets'} align={'d-flex gap-2'}/>
+          <p style={{color: 'rgba(30, 32, 41, 0.6)'}}>We support the most popular coins on three different chains</p>
         </div>
 
         <div className="d-flex flex-column gap-5 position-relative">
@@ -51,7 +51,7 @@ const SupportedAssets = () => {
                 </p>
 
                 <div
-                  class="coins d-flex justify-content-around align-items-center"
+                  class="coins d-flex justify-content-between align-items-center"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -108,7 +108,7 @@ const SupportedAssets = () => {
                   </li>
                 </ul>
               </div>
-              <div className="type-wrapper d-flex flex-row gap-5 justify-content-center align-items-center">
+              <div className="type-wrapper d-flex flex-row justify-content-center align-items-center" style={{gap: 8}}>
                 <p
                   className={`${activeType === "Stake" && "active"}`}
                   onClick={() => setActiveType(types[0])}
@@ -155,7 +155,7 @@ const SupportedAssets = () => {
               chain={ethState === true ? 'eth' : bnbState === true ? 'bnb' : 'avax'}
             />
             <img className="spiral2" src={Spiral} alt="" />
-          <button className="outline-btn position-absolute" style={{bottom: '-19px', right: '44%'}}>View More <img src={rightArrow} alt="" /></button>
+          <button className="outline-btn position-absolute d-flex align-items-center" style={{bottom: '-19px', right: '44%'}}>View more <img src={rightArrow} alt="" className="ml-3"/></button>
           </div>          
         </div>
       </div>

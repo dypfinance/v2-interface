@@ -6,7 +6,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #554FD8;
+    color: #6E7191;
   }
 
   .select-chain {
@@ -14,8 +14,9 @@
     background: white;
     position: absolute;
     top: -11px;
-    left: 20px;
+    left: 10px;
     font-size: 10px;
+    padding: 0 3px;
   }
 
   .chain-wrapper {
@@ -46,12 +47,12 @@
   .type-wrapper{
     background: #EFF0F6;
     border-radius: 8px;
-    padding: 8px 20px;
+    padding: 8px ;
 
     p{
       margin-bottom: 0;
       font-size: 15px;
-      padding: 5px 10px;
+      padding: 5px 16px;
       cursor: pointer;
     }
 
@@ -106,6 +107,7 @@
       border-radius: 8px;
       width: 200px;
       height: 50px;
+      padding: 0 12px;
     }
 
     .coin-menu{

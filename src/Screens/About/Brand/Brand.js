@@ -10,7 +10,7 @@ const Brand = () => {
         className="bluehero-solutions"
         src={require(`../../../assets/metaverse-blueHero.svg`).default}
         alt=""
-        style={{ bottom: "-150px", right: "18%" }}
+        style={{ bottom: "-50px", right: "18%" }}
       />
       <div className="container-lg">
         <Title top={"Brand"} align="d-flex flex-row gap-2" />

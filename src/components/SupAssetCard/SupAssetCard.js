@@ -9,7 +9,7 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain }) => {
       <div className="d-flex flex-column gap-3">
         <div className="row justify-content-between gap-2 m-0 align-items-center">
           <div className="row gap-1 align-items-center">
-            <img src={DypPool} alt="eth_pool" />
+            <img src={DypPool} alt="eth_pool" className="pl-0"/>
             <span className="poolTitle p-0">{pool}</span>
           </div>
           <span className="aprTitle p-0">
@@ -18,11 +18,11 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain }) => {
           </span>
         </div>
         <div className="row justify-content-between gap-2 m-0">
-          <div className="d-flex flex-column gap-1">
+          <div className="d-flex flex-column gap-1 pl-0">
             <span className="locktime-subtitle">Total Value Locked</span>
             <span className="lock-title" style={{fontWeight: 500}}>{tvl}</span>
           </div>
-          <div className="d-flex flex-column gap-1">
+          <div className="d-flex flex-column gap-1 pr-0">
             <span className="locktime-subtitle">Lock Time</span>
             <span className="lock-title">{lockTime}</span>
           </div>

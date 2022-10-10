@@ -37,7 +37,6 @@
     padding: 20px;
     // mix-blend-mode: luminosity;
     border-radius: 0 0 18px;
-  
 
   }
 
@@ -47,7 +46,7 @@
   font-size: 20px;
   line-height: 18px;
   letter-spacing: -0.018em;
-  color: #ffffff;
+  color: #fff;
 }
 
 .desc {
@@ -63,8 +62,13 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 32px;
-  text-decoration-line: underline;
-  color: #ffffff;
+  color: #fff;
+}
+
+.linkdesc:hover {
+  color: #fff;
+  text-decoration-line: underline !important;
+
 }
 
 

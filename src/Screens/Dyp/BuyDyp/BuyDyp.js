@@ -27,7 +27,7 @@ const BuyDyp = () => {
             </p>
             {windowSize.width > 786 
             ?
-            <div className="btn filled-btn d-flex justify-content-center align-items-center "style={{width: '30%'}} data-aos="fade-up" data-aos-duration="1000">Explore</div>
+            <div className="btn filled-btn d-flex justify-content-center align-items-center "style={{width: '24%'}} data-aos="fade-up" data-aos-duration="1000">Explore</div>
             :
             null
             }
