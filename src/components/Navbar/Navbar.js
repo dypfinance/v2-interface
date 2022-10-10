@@ -23,7 +23,7 @@ const Navbar = () => {
       } else {
         setLogo(false);
       }
-    } else if(window.location.href.includes('about') || window.location.href.includes('disclaimer')) {
+    } else if(window.location.href.includes('about') || window.location.href.includes('disclaimer') || window.location.href.includes('support') ) {
       setLogo(true)
     }else {
       if (window.scrollY >= 800) {
@@ -57,9 +57,9 @@ const Navbar = () => {
             <a className="text-decoration-none navlink" href="#metaverse">
               Governance
             </a>
-            <a className="text-decoration-none navlink" href="#metaverse">
+            <NavLink className={({isActive}) => (isActive ? 'text-decoration-none navlink highlight' : 'text-decoration-none navlink')} to='/support'>
               Support
-            </a>
+            </NavLink>
             <NavLink className={({isActive}) => (isActive ? 'text-decoration-none navlink highlight' : 'text-decoration-none navlink')} to='/about'>
               About us
               </NavLink>
