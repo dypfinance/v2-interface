@@ -57,7 +57,7 @@ const HamburgerMenu = () => {
               <li>
                 <button className="btn text-white py-2">
                   <img src={dypiusIcon} className="pe-2" />
-                  Dyp Tools
+                  DYP Tools
                 </button>
               </li>
             </ul>

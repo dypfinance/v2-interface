@@ -26,7 +26,7 @@ const DypMainHero = () => {
         <div className="col-12 col-lg-4 text-white d-flex flex-column gap-3 justify-content-lg-end justify-content-xl-end">
           <h1>DYP Token</h1>
           <p>
-            DYP token is a governance token that facilitates the transactions
+            DYP is a governance token that facilitates the transactions
             within the Dypius ecosystem. The Dypius ecosystem is based on the
             blockchain technology and focuses on scalability, security, and
             global adoption which makes it one of the most powerful ecosystems

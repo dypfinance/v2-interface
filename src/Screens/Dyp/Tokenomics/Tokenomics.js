@@ -122,7 +122,7 @@ const Tokenomics = ({ bottom, showBtn }) => {
                 </div>
                 <div className="d-flex flex-column gap-3 mt-3">
                   <div>
-                    <span>Community</span>
+                    <span>Community</span><br/>
                     <svg
                       width="353"
                       height="1"
