@@ -1,12 +1,11 @@
 import React from "react";
-import metaverse1 from '../../assets/metaverse-1.png'
 import calendar from '../../assets/calendar.svg'
 import filledArrow from '../../assets/filledArrow.svg'
 
 
 const NewsCard = ({title, description, date, image, link}) => {
   return (
-    <a target='_blank' href={link} className='text-dark text-decoration-none'>
+    <a target='_blank' href={link} className='text-dark text-decoration-none' rel="noreferrer">
       <div className="news-card d-flex flex-column justify-content-between p-3 bg-white">
       <div className="d-flex flex-column justify-content-center align-items-center">
         <img
