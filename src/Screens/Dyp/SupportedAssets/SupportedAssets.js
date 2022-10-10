@@ -45,13 +45,13 @@ const SupportedAssets = () => {
 
         <div className="d-flex flex-column gap-5 position-relative">
             <div className="types-wrapper px-2">
-              <div class="dropdown">
+              <div className="dropdown">
                 <p className="mb-0 select-chain" style={{color: ethState === true ? '#566FCE' : bnbState === true ? '#D5A404' : '#E84142'}}>
                   Select Chain
                 </p>
 
                 <div
-                  class="coins d-flex justify-content-around align-items-center"
+                  className="coins d-flex justify-content-around align-items-center"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -84,7 +84,7 @@ const SupportedAssets = () => {
                   )}
                   <img src={dropdownIndicator}  alt="" />
                 </div>
-                <ul class="dropdown-menu coin-menu p-1">
+                <ul className="dropdown-menu coin-menu p-1">
                   <li
                     className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
                     onClick={() => handleEthPool()}

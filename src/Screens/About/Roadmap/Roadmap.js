@@ -163,18 +163,18 @@ const Roadmap = () => {
           <p>Our journey to success</p>
           <div className="d-flex flex-row gap-4">
             <div className="years-wrapper d-flex flex-row px-2 gap-5 justify-content-center align-items-center">
-              <p className={`${JSON.stringify(roadmap) == JSON.stringify(roadmap2020) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2020)}>2020</p>
-              <p className={`${JSON.stringify(roadmap) == JSON.stringify(roadmap2021) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2021)}>2021</p>
-              <p className={`${JSON.stringify(roadmap) == JSON.stringify(roadmap2022) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2022)}>2022</p>
+              <p className={`${JSON.stringify(roadmap) === JSON.stringify(roadmap2020) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2020)}>2020</p>
+              <p className={`${JSON.stringify(roadmap) === JSON.stringify(roadmap2021) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2021)}>2021</p>
+              <p className={`${JSON.stringify(roadmap) === JSON.stringify(roadmap2022) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2022)}>2022</p>
             </div>
             <div
-              className={`left-button d-flex justify-content-center align-items-center ${JSON.stringify(roadmap) == JSON.stringify(roadmap2021) && 'enabled'}`}
+              className={`left-button d-flex justify-content-center align-items-center ${JSON.stringify(roadmap) === JSON.stringify(roadmap2021) && 'enabled'}`}
               onClick={previous}
             >
               <img src={filledLeft} alt="left arrow" className="p-2" />
             </div>
             <div
-              className={`right-button d-flex justify-content-center align-items-center ${JSON.stringify(roadmap) == JSON.stringify(roadmap2021) && 'enabled'}`}
+              className={`right-button d-flex justify-content-center align-items-center ${JSON.stringify(roadmap) === JSON.stringify(roadmap2021) && 'enabled'}`}
               onClick={next}
             >
               <img src={emptyRight} alt="rightArrow" className="p-2" />
@@ -185,10 +185,10 @@ const Roadmap = () => {
       <div className="row justify-content-evenly position-relative carousel-wrapper">
         <hr />
         <Slider ref={(c) => (slider.current = c)} {...settings}>
-          {roadmap.map((item) => (
-            <RoadmapCard data={item} />
+          {roadmap.map((item, index) => (
+            <RoadmapCard key={index} data={item} />
           ))}
-          {JSON.stringify(roadmap) == JSON.stringify(roadmap2022) && (
+          {JSON.stringify(roadmap) === JSON.stringify(roadmap2022) && (
             <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
               <div className="date-card selected d-flex flex-column align-items-center">
                 <img src={selectedRoadmap} alt="" />

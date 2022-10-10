@@ -1,0 +1,37 @@
+.support-main-wrapper{
+    min-height: 500px;
+    background: linear-gradient(0deg, #EFF0F6 0%, #FFFFFF 73.43%);
+    border-radius: 0px 0px 56px 56px;
+
+    .container-lg{
+        padding-bottom: 100px !important;
+    }
+
+    .image-container{
+        
+        .brain{
+            position: absolute;
+            z-index: 2;
+            top: -290px;
+            right: -50px;
+        }
+        .shape{
+            position: absolute;
+            z-index: 4;
+            top: -80px;
+        }
+        .phone{
+            position: absolute;
+            z-index: 3;
+            top: -250px;
+        }
+
+        .bluehero{
+            position: absolute;
+            filter: blur(20px);
+            z-index: 1;
+            top: -300px;
+            left: 9px;
+        }
+    }
+}
