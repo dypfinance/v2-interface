@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {Suspense, useEffect} from "react";
 import MainHero from './MainHero/MainHero'
 import DypMetaverse from "./DypMetaverse/DypMetaverse";
 import DypTools from './DypTools/DypTools'
@@ -17,7 +17,9 @@ const Home = () => {
       <DypMetaverse/>
       <DypTools/>
       <DypToken/>
+      <Suspense fallback={<div>Loading</div>}>
       <DypPartners />
+      </Suspense>
       <DypNews/>
     </div>
   );
