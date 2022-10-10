@@ -2,7 +2,6 @@ import React from "react";
 import Title from "../../../components/Title/Title";
 import filledArrow from "../../../assets/filledArrow.svg";
 import link from "./link.svg";
-import BlueHero from "../../../assets/metaverse-blueHero.svg";
 
 const Security = () => {
 
@@ -93,11 +92,11 @@ const Security = () => {
               </a>
             </p>
           </div>
-          <div className="col-lg-4 col-xl-4 p-0">
-            <div className="row flex-column m-0 justify-content-center mb-2" style={{height: '48px'}}>
-            <span className="auditedby-text">Audited by</span>
+          <div className="col-lg-3 col-xl-3 p-0 auditedwrapper">
+            <div className="row flex-column m-0 justify-content-center">
+            {/* <span className="auditedby-text">Audited by</span> */}
             </div>
-            <div className="d-flex flex-column gap-3">
+            <div className="d-flex flex-column">
             {auditedByArray.length > 0 &&
               auditedByArray.map((item, index) => {
                 return (

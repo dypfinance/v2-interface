@@ -69,7 +69,7 @@ const Navbar = () => {
             <a className='d-flex text-decoration-none' target='_blank' href='https://tools.dyp.finance/news'>
             <button className="btn tools-btn text-white">
               <img src={toolsLogo} className="pe-2" />
-              Dyp Tools
+              DYP Tools
             </button>
             </a>
             <img src={toolsBorder}  className="position-absolute" style={{zIndex: 1,  top: '-15px', right: '-22%'}} />

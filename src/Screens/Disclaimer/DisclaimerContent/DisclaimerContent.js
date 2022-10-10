@@ -8,7 +8,7 @@ const DisclaimerContent = () => {
       <img className='sphere-2' src={sphere} alt="" style={{position: 'absolute', right: '8%', top: '-9%'}}/>
 
       <div className="container pt-5 pb-5">
-        <Title top={"Dypius"} bottom={"Disclaimer"} />
+        <Title top={"Dypius"} bottom={"Disclaimer"} /> <br/>
         <p>
           Dypius is a decentralized platform that people can use for yield
           farming, staking, and enabling users to leverage the advanced trading
