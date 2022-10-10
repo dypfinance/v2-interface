@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import Title from "../../../components/Title/Title";
 import filledArrow from "../../../assets/filledArrow.svg";
+import playButtonActive from "../assets/playbtn-passive.svg";
 import playButton from "../assets/playButton.svg";
+
 
 const EducationalTools = () => {
   const vidsArray = [
@@ -22,13 +24,14 @@ const EducationalTools = () => {
       image: "bridge.png",
     },
   ];
-
+const [playbtn, setPlaybtn] = useState('passive')
   return (
+    
     <div className="eduactionalwrapper container-lg" id="learn">
       <div className="row justify-content-between align-items-center p-4">
         <div className="col-12 col-lg-4">
           <Title top="Educational" bottom="Tools" />
-          <p>
+          <p style={{marginBottom: 32}}>
             Hit the ground running with our quick start guide! Get tips, watch
             how-to videos and learn how to become an expert in no time.
           </p>
@@ -38,7 +41,7 @@ const EducationalTools = () => {
             href="https://www.youtube.com/c/DeFiYieldProtocol"
             target={"_blank"}
             rel={"noreferrer"}
-            style={{ width: "50%", justifyContent: "center" }}
+            style={{ width: "fit-content", justifyContent: "center" }}
           >
             Check us out
           </a>
@@ -57,7 +60,7 @@ const EducationalTools = () => {
           {vidsArray.length > 0 &&
             vidsArray.map((item, index) => {
               return (
-                <div key={index} className="cardWrapper">
+                <div key={index} className="cardWrapper" onMouseOverCapture={()=>{setPlaybtn('active')}} onMouseLeave={()=>{setPlaybtn('passive')}}>
                   <a href={item.link} target="_blank" rel="noreferrer">
                     <div className="p-3 bg-white">
                       <img
@@ -66,7 +69,7 @@ const EducationalTools = () => {
                         className="eduImg"
                       />
                     </div>
-                    <img src={playButton} alt="" className="ml-2 purpleArrow" />{" "}
+                    <img src={ playButton} alt="" className="ml-2 purpleArrow" />{" "}
                   </a>
                 </div>
               );
