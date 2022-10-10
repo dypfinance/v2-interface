@@ -1,5 +1,4 @@
 import React from "react";
-import EthPool from "../../assets/DypAssets/ethpool.svg";
 import rightArrow from "../../assets/right-arrow.svg";
 
 const VaultCards = ({ pool, apr, link, top_tick, icon }) => {
