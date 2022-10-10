@@ -2,7 +2,7 @@ import React from "react";
 
 const NoteIcon = ({ bgFill, svgFill }) => {
   return (
-    <div>
+    <div className="pl-0">
       <svg
         width="46"
         height="46"

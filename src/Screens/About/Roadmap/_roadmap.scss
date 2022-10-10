@@ -28,18 +28,16 @@
 
   .roadmap-title {
     p {
-      color: #f7f7fc;
+      color: rgba(247, 247, 252, 0.6);
       font-weight: 400;
       font-size: 16px;
-      opacity: 0.6;
     }
 
     .left-button {
       width: 42px;
       height: 42px;
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.5);
       border-radius: 8px 0px;
-        opacity: 0.5;
       z-index: 5;
     }
 
@@ -77,8 +75,7 @@
     }
 
     h2 {
-      color: #f7f7fc;
-      opacity: 0.6;
+      color: rgba(247, 247, 252, 0.6);
     }
   }
 
