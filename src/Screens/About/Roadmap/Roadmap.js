@@ -162,7 +162,7 @@ const Roadmap = () => {
         <div className="d-flex flex-column flex-lg-row w-100 justify-content-between align-items-center">
           <p>Our journey to success</p>
           <div className="d-flex flex-row gap-4">
-            <div className="years-wrapper d-flex flex-row px-2 gap-5 justify-content-center align-items-center">
+            <div className="years-wrapper d-flex flex-row px-2 gap-1 justify-content-center align-items-center">
               <p className={`${JSON.stringify(roadmap) == JSON.stringify(roadmap2020) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2020)}>2020</p>
               <p className={`${JSON.stringify(roadmap) == JSON.stringify(roadmap2021) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2021)}>2021</p>
               <p className={`${JSON.stringify(roadmap) == JSON.stringify(roadmap2022) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2022)}>2022</p>

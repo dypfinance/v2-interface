@@ -20,7 +20,7 @@ const ProductCard = ({ title, desc, link, classname }) => {
             rel={"noreferrer"}
             className="linkdesc"
           >
-            Go to {title} <img src={rightArrow} alt="" className="ml-2" />{" "}
+            Go to {title} <img src={rightArrow} alt="" className="ml-2" />
           </a>
         </div>
       </div>

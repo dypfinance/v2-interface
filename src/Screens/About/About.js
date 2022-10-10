@@ -8,6 +8,7 @@ import DypPartners from "../Home/DypPartners/DypPartners";
 import Tokenomics from "../Dyp/Tokenomics/Tokenomics";
 import Roadmap from './Roadmap/Roadmap';
 import useWindowSize from '../../hooks/useWindowSize';
+import ContactUs from './ContactUs/ContactUs';
 
 const About = () => {
   useEffect(()=>{
@@ -27,6 +28,7 @@ const About = () => {
       <div className="container-lg p-0" style={{ marginTop: "4rem", overflow: windowSize.width < 700 ? 'hidden' : 'inherit' }}>
         <Tokenomics bottom={0} showBtn={false}/>
       </div>
+      <ContactUs />
     </div>
   );
 };

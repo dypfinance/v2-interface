@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SolutionsCard from "../../../components/SolutionsCard/SolutionsCard";
 import Title from "../../../components/Title/Title";
 import useWindowSize from "../../../hooks/useWindowSize";
-import dots from "../../../assets/dots.png";
+import PurpleArrowDown from "../../../assets/DypAssets/purpleArrow-down.svg";
 import "./_solutions.scss";
 
 const Solutions = () => {
@@ -79,9 +79,13 @@ const Solutions = () => {
         <div className="row justify-content-center my-5">
           <button
             onClick={loadMore}
-            className={`btn outline-btn ${solutionLength < 12 ? 'd-flex' : 'd-none'} d-lg-none justify-content-center align-items-center`}
+            className={`btn outline-btn ${solutionLength < 12 ? 'd-flex' : 'd-none'} d-lg-none d-xl-none justify-content-center align-items-center`}
           >
-            Load More +
+            Load More  <img
+              src={PurpleArrowDown}
+              alt=""
+              className="ml-2"
+            />
           </button>
         </div>
       </div>

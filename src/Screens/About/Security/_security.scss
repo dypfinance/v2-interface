@@ -1,5 +1,5 @@
 .securitybg {
-  background: url(./securitybg.svg);
+  background: url(./assets/securitybg.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -22,7 +22,7 @@
   a {
     font-style: normal;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 27px;
     text-decoration: none !important;
     color: #14142b;
@@ -59,7 +59,7 @@
 .audited-item {
   background: #ffffff;
   border: 1px solid #eff0f6;
-  padding:20px;
+  padding: 20px;
 }
 
 .viewsite {
@@ -74,6 +74,7 @@
   box-shadow: 0px 12px 44px rgba(17, 17, 17, 0.08);
   border-radius: 18px 0px;
   position: relative;
+  background: white;
 
   &::after {
     content: "Audited by";
@@ -91,5 +92,65 @@
     text-align: center;
     letter-spacing: 0.05em;
     color: #6059DA;
+  }
+}
+
+.audited-item:nth-child(1) {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.audited-item:nth-child(2) {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.audited-item:nth-child(3) {
+  border: none;
+}
+
+.repowrapper {
+  background: linear-gradient(91.49deg, #AAA5EB 0%, #7770E0 100%);
+  border: 2px solid #EFF0F6;
+  border-radius: 18px 0px;
+  padding: 16px;
+  position: absolute;
+  bottom: -60px;
+
+  p,
+  a {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #F7F7FC;
+    margin: 0;
+  }
+}
+
+.github-logo {
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid #7770E0;
+}
+
+.github-btn {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #7770E0;
+
+  span {
+    color: #554FD8;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
   }
 }

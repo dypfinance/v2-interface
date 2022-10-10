@@ -91,6 +91,7 @@ const OurTokens = () => {
             desc={
               "Bridge tokens between Ethereum to Binance, Avalanche and many more to come. Instant and secure transactions."
             }
+            link={'#'}
           />
 
           <ProductCard
@@ -99,6 +100,7 @@ const OurTokens = () => {
             desc={
               "Put your assets to work by depositing them on our immersive Dypius products and start earning high value rewards."
             }
+            link={'#'}
           />
         </div>
       </div>

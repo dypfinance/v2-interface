@@ -26,7 +26,7 @@ const Tokenomics = ({ bottom, showBtn }) => {
   return (
     <div className="outer-wrapper" id="tokenomics" style={{ bottom: bottom }}>
       <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
-        <div className="row m-0 gap-2 align-items-center pl-0">
+        <div className="row m-0 gap-2 pl-0">
           <NoteIcon bgFill={"#7770E0"} svgFill={"#fff"} />
           <Title top={"Tokenomics"} />
         </div>
