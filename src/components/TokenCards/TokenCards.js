@@ -35,8 +35,8 @@ const TokenCards = ({ title, price, percentage }) => {
                   <path
                     d="M0.999999 8C4.86599 4.13401 11.134 4.13401 15 8L8 1L0.999999 8Z"
                     stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               ) : (
@@ -50,8 +50,8 @@ const TokenCards = ({ title, price, percentage }) => {
                   <path
                     d="M15 1C11.134 4.86599 4.86599 4.86599 1 1L8 8L15 1Z"
                     stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               )}

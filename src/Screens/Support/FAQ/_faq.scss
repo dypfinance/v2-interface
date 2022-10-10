@@ -1,0 +1,25 @@
+.faq-wrapper{
+    min-height: 1000px;
+    position: relative;
+    background-image: url('../assets/faqBackground.svg');
+
+    .faq-container{
+        background: #FFFFFF;
+        border: 6px solid #7670E0;
+        box-shadow: 0px 24px 60px rgba(85, 79, 216, 0.25);
+        border-radius: 56px 0px;
+        height: 600px;
+
+        .form-select{
+            font-size: 14px;
+            border: 1px solid #A0A3BD;
+            border-radius: 8px;
+            color: #A0A3BD;
+            z-index: 3;
+        }
+
+        h2{
+            color: #7670E0;
+        }
+    }
+}

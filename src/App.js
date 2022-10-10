@@ -13,6 +13,7 @@ import About from "./Screens/About/About";
 import ScrollTop from "./components/ScrollTop/ScrollTop";
 import Disclaimer from "./Screens/Disclaimer/Disclaimer";
 import AOS from 'aos'
+import Support from "./Screens/Support/Support";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/dyp" element={<Dyp />} />
         <Route exact path="/about" element={<About />} />
+        <Route exact path="/support" element={<Support />} />
         <Route exact path="/disclaimer" element={<Disclaimer />} />
       </Routes>
       <ScrollTop/>
