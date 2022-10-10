@@ -1,164 +1,176 @@
-.roadmap-wrapper{
-    min-height: 800px;
-    position: relative;
-    background: linear-gradient(180deg, #7770E0 0%, #554FD8 100%);
-    border: 6px solid #EFF0F6;
-    border-radius: 56px 0px;
-    margin-top: 100px;
+.roadmap-wrapper {
+  min-height: 800px;
+  position: relative;
+  background: linear-gradient(180deg, #7770e0 0%, #554fd8 100%);
+  border: 6px solid #eff0f6;
+  border-radius: 56px 0px;
+  margin-top: 100px;
 
-
-    .roadmap-title{
-       p{
-         color: #F7F7FC;
-         font-weight: 400; 
-         font-size: 16px;
-         opacity: 0.6;
-       }
-
-
-       .left-button{
-        width: 42px;
-        height: 42px;
-        background: #ffffff;
-        border-radius: 8px 0px;
-        cursor: pointer;
-        z-index: 5;
-    }
-
-    .right-button{
-        width: 42px;
-        height: 42px; 
-        border-radius: 0px 8px;
-        border: 2px solid #FFFFFF;
-        cursor: pointer;
-        z-index: 5;
-    }
-
-    }
-
-
-    .date-card{
-        .outer-circle{
-            width: 32px;
-            height: 32px;
-            background-color: rgba(255,255,255,0.3);
-            border-radius: 50%;
-            z-index: 1;
-    
-            .inner-circle{
-                width: 16px;
-                height: 16px;
-                background-color: rgba(255,255,255, 1);
-                border-radius: 50%;
-                z-index: 2;
-            }
-        }
-        
-        h2{
-            color: #F7F7FC;
-            opacity: 0.6;
-        }
-      
-    }
-
-
-    .selected{
-      
-        .outer-circle{
-            background-color: rgba($color: #F57C53, $alpha: 0.3);
-            .inner-circle{
-                background-color: rgba($color: #F57C53, $alpha: 1.0);
-            }
-        }
-
-        h2{
-            color: #ffffff !important;
-            opacity: 1;
-        }
-
-    
-    }
-    
-
-    .roadmap-items{
-        border: 2px solid rgba(255,255,255, 0.6);
-        border-radius: 28px 0px;
-        background: #625CD9;
+    .years-wrapper{
+        background: #EFF0F6;
+        border-radius: 8px;
 
         p{
-            color: #F7F7FC;
-            font-weight: 400; 
+            color: #6E7191 !important;
+            margin-bottom: 0;
+            cursor: pointer;
             font-size: 12px;
-            margin-bottom: 0 !important;
-          }
-
-    }
-   
-    
-    hr{
-        width: 100%;
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 53.13%, rgba(255, 255, 255, 0) 101%);
-        opacity: 0.6;
-        border-radius: 50px;
-        height: 4px;
-        position: absolute;
-        top: 85px;
-    }
-
-
-    .highlight{
-        background: linear-gradient(0deg, #F16640 0%, #F67D54 100%);
-        box-shadow: 0px 12px 40px rgba(241, 104, 66, 0.32);
-    }
-
-    .carousel-wrapper{
-        .slick-list{
-            width: 1200px;
-            // padding-left: 15px;
-            padding-top: 25px;
+            padding: 5px 15px;
         }
 
-        .selected-roadmap{
-            top: -24px !important;
+        .selected-year{
+            background: #5953D9;
+            border-radius: 8px;
+            color: white !important;
         }
     }
-    
-    
-}
 
-.roadmap-wrapper::before{
-    content: "";
-    background-image: url("../assets/roadmapBackground.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+
+  .roadmap-title {
+    p {
+      color: #f7f7fc;
+      font-weight: 400;
+      font-size: 16px;
+      opacity: 0.6;
+    }
+
+    .left-button {
+      width: 42px;
+      height: 42px;
+      background: #ffffff;
+      border-radius: 8px 0px;
+        opacity: 0.5;
+      z-index: 5;
+    }
+
+    .right-button {
+      width: 42px;
+      height: 42px;
+      border-radius: 0px 8px;
+      border: 2px solid #ffffff;
+        opacity: 0.5;
+      z-index: 5;
+    }
+
+    .enabled{
+        opacity: 1 !important;
+        cursor: pointer;
+
+    }
+  }
+
+  .date-card {
+    .outer-circle {
+      width: 32px;
+      height: 32px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      z-index: 1;
+
+      .inner-circle {
+        width: 16px;
+        height: 16px;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 50%;
+        z-index: 2;
+      }
+    }
+
+    h2 {
+      color: #f7f7fc;
+      opacity: 0.6;
+    }
+  }
+
+  .selected {
+    .outer-circle {
+      background-color: rgba($color: #f57c53, $alpha: 0.3);
+      .inner-circle {
+        background-color: rgba($color: #f57c53, $alpha: 1);
+      }
+    }
+
+    h2 {
+      color: #ffffff !important;
+      opacity: 1;
+    }
+  }
+
+  .roadmap-items {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 28px 0px;
+    background: #625cd9;
+
+    p {
+      color: #f7f7fc;
+      font-weight: 400;
+      font-size: 12px;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  hr {
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      #ffffff 53.13%,
+      rgba(255, 255, 255, 0) 101%
+    );
+    opacity: 0.6;
+    border-radius: 50px;
+    height: 4px;
     position: absolute;
-    top: 150px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    opacity: 0.5;
-  
-   
+    top: 85px;
+  }
+
+  .highlight {
+    background: #ffffff;
+    box-shadow: 0px 12px 40px rgba(27, 25, 79, 0.24);
+    p {
+      color: #6e7191 !important;
+    }
+  }
+
+  .carousel-wrapper {
+    .slick-list {
+      width: 1200px;
+      // padding-left: 15px;
+      padding-top: 25px;
+    }
+
+    .selected-roadmap {
+      top: -24px !important;
+    }
+  }
 }
 
+.roadmap-wrapper::before {
+  content: "";
+  background-image: url("../assets/roadmapBackground.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 150px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.5;
+}
 
 @media screen and (max-width: 786px) {
+  .roadmap-wrapper {
+    min-height: 900px;
 
-    .roadmap-wrapper{
-        min-height: 900px;
-
-        hr{
-            top: 76px;
-        }
-        
+    hr {
+      top: 76px;
     }
+  }
 
-    .carousel-wrapper{
-
-        .slick-list{
-            width: 320px !important;
-        }
+  .carousel-wrapper {
+    .slick-list {
+      width: 320px !important;
     }
-    
+  }
 }
