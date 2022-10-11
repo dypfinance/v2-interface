@@ -1,0 +1,44 @@
+.video-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  
+    @media screen and (max-width: 786px) {
+      grid-template-columns: auto;
+    }
+    
+    .cardWrapper {
+      border-radius: 12px 0px;
+      position: relative;
+  
+  
+    }
+  
+    .cardWrapper:nth-child(odd){
+    top: 40px !important;
+    
+    @media screen and (max-width: 786px) {
+      top: 0 !important;  
+    }
+  
+    }
+  
+  
+  
+    .eduImg {
+      border-radius: 12px 0px;
+      height: 190px;
+      object-fit: cover;
+      width: 100%;
+  
+      @media only screen and (max-width: 991px) {
+          height: 140px !important; 
+      }
+    }
+  
+    .purpleArrow {
+      position: absolute;
+      right: 0;
+      bottom: -10px;
+    }
+  }
+  

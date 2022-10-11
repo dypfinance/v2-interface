@@ -92,6 +92,7 @@ const ContactUs = () => {
       };
 
       if (
+
         values.first_name !== "" &&
         values.last_name !== "" &&
         values.job !== "" &&
