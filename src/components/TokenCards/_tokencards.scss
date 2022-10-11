@@ -23,6 +23,11 @@
     line-height: 57px;
     letter-spacing: -0.018em;
     color: #7770e0;
+
+    @media only screen and (max-width: 500px) {
+      font-size: 34px;
+
+    }
   }
 
   .token-valuechange {

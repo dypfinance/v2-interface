@@ -102,17 +102,16 @@ const ContactUs = () => {
             Interested in collaborating with us? <br />
             Please complete this short form.
           </p>
-          <div className="outer-form p-4 position-relative">
+          <div className="outer-form p-lg-4 p-xl-4 p-md-4 p-1 position-relative">
             <div
-              className="d-lg-flex d-xl-flex align-items-center mx-2 mt-4"
-              style={{ height: 40 }}
+              className="d-lg-flex d-xl-flex align-items-center mx-2 mt-4 titlewrapper"
             >
               <img
                 src={contactHeader}
                 alt=""
-                className="col-3 pl-0 contactimg"
+                className="col-lg-3 col-xl-3 pl-0 contactimg"
               />
-              <div className="d-flex m-0 justify-content-between gap-2 w-100 align-items-center">
+              <div className="d-flex flex-lg-row flex-xl-row flex-md-row flex-column  m-0 justify-content-between gap-2 w-100 align-items-center">
                 <div>
                   <h2 className="fw-bold">Business</h2>
                   <p className="text-secondary">
@@ -140,7 +139,7 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
-            <div className="row form-container mt-5 mx-2 p-4">
+            <div className="row form-container mt-5 mx-2 p-lg-4 p-xl-4 p-md-4 p-1 pt-3">
               <div className="row justify-content-between pl-4">
                 <h4 className="pl-0">Business form</h4>
               </div>
@@ -155,7 +154,7 @@ const ContactUs = () => {
                 width={"100%"}
               >
                 <div className="d-flex flex-column gap-3 mb-4">
-                  <div className="d-flex m-0 justify-content-between gap-4">
+                  <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                     <StyledTextField
                       error={errors.name ? true : false}
                       required
@@ -177,7 +176,7 @@ const ContactUs = () => {
                       helperText={errors.lastname}
                     />
                   </div>
-                  <div className="d-flex m-0 justify-content-between gap-4">
+                  <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                     <StyledTextField
                       error={errors.organisation ? true : false}
                       required
@@ -199,7 +198,7 @@ const ContactUs = () => {
                       helperText={errors.jobtitle}
                     />
                   </div>
-                  <div className="d-flex m-0 justify-content-between gap-4">
+                  <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                     <StyledTextField
                       error={errors.email ? true : false}
                       required
@@ -244,10 +243,10 @@ const ContactUs = () => {
                   />
                 </div>
               </Box>
-              <div className="row m-0 gap-3 justify-content-between w-100">
+              <div className="row m-0 gap-3 justify-content-between w-100 mb-3">
                 <input type="file" className="custom-file-input outline-btn" />
-                <button className="filled-btn w-50" onClick={handleSubmit}>
-                  Submit{" "}
+                <button className="filled-btn submitbtn" onClick={handleSubmit}>
+                  Submit
                 </button>
               </div>
             </div>

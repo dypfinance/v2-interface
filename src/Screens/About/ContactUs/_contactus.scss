@@ -16,6 +16,14 @@
                 color: #7670E0;
             }
 
+            .titlewrapper {
+                height: 40px;
+
+                @media only screen and (max-width: 991px) {
+                    height: auto
+                }
+            }
+
             .form-container {
                 background: #FFFFFF;
                 border: 2px solid #EFF0F6;
@@ -53,6 +61,10 @@
             .contactimg {
                 position: relative;
                 top: -55px;
+
+                @media only screen and (max-width: 991px) {
+                    top: auto;
+                }
             }
 
             .custom-file-input {
@@ -101,4 +113,26 @@
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.submitbtn {
+    width: 50%;
+
+    @media only screen and (max-width: 970px) {
+        width: 100%;
+
+        .outline-btn 
+        {
+            width: 100% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .outer-form {
+    .outline-btn 
+    {
+        width: 100% !important;
+    }
+}
 }

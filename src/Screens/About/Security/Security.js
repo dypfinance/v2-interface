@@ -85,7 +85,7 @@ const Security = () => {
               <b>24/7</b> through a Security Oracle, powered by CertiK.<br /><br />
             </p>
           </div>
-          <div className="col-lg-3 col-xl-3 p-0 auditedwrapper">
+          <div className="col-lg-4 col-xl-4 p-0 auditedwrapper">
             <div className="row flex-column m-0 justify-content-center">
             </div>
             <div className="d-flex flex-column" style={{ margin: '1rem' }}>
@@ -135,7 +135,7 @@ const Security = () => {
             {auditItems.length > 0 &&
               auditItems.slice(0, 1).map((item, index) => {
                 return (
-                  <div key={index} className="security-item mb-4 mt-5" style={{ width: '66%' }}>
+                  <div key={index} className="security-item mb-lg-4 mb-xl-4 mt-5" style={{ width: '66%' }}>
                     <a href={item.link} target={'_blank'} rel='noreferrer'>
                       <div className="d-flex m-0 justify-content-between gap-2 align-items-center">
                         <span>{item.title}</span>
@@ -152,7 +152,7 @@ const Security = () => {
             {auditItems.length > 0 &&
               auditItems.slice(1, 2).map((item, index) => {
                 return (
-                  <div key={index} className="security-item mb-4 mt-5">
+                  <div key={index} className="security-item mt-lg-5 mt-xl-5 mb-4">
                     <a href={item.link} target={'_blank'} rel='noreferrer'>
                       <div className="d-flex m-0 justify-content-between gap-2 align-items-center">
                         <span
