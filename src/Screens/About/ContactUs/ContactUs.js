@@ -1,5 +1,8 @@
 import React, { useRef, useState } from "react";
+import axios from "axios";
+import ReCaptchaV2 from "react-google-recaptcha";
 import Title from "../../../components/Title/Title";
+import $alert from "../../../hooks/$alert";
 import "./_contactus.scss";
 import contactHeader from "../assets/contactHeader.png";
 import Box from "@mui/material/Box";
@@ -22,20 +25,23 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
 
 const ContactUs = () => {
   const initialState = {
-    name: "",
-    lastname: "",
-    organisation: "",
-    jobtitle: "",
-    email: "",
-    subject: "",
-    phone: "",
-    message: "",
+    email:'',
+    subject:'',
+    first_name:'',
+    last_name:'',
+    organization:'',
+    job:'',
+    message:'',
+    recaptcha:'',
+    phone: ''
   };
 
+  
   const [values, setValues] = useState(initialState);
   const [selectedFile, setSelectedFile] = useState();
 
   const [errors, setErrors] = useState({});
+  const recaptchaRef = useRef(null);
 
   const handleChange = async (e) => {
     const { name, value } = e.target;
@@ -73,44 +79,58 @@ const ContactUs = () => {
     setErrors(validate(values));
 
     if (Object.keys(errors).length === 0) {
+      const captchaToken = await recaptchaRef.current.executeAsync();
       const data = {
-        name: values.name,
-        lastname: values.lastname,
-        phone: values.phone,
-        jobtitle: values.jobtitle,
-        organisation: values.organisation,
         email: values.email,
         subject: values.subject,
+        first_name: values.first_name,
+        last_name: values.last_name,
+        organization: values.organization,
+        job: values.job,
         message: values.message,
+        recaptcha: captchaToken
       };
 
       if (
-        values.name !== "" &&
-        values.lastname !== "" &&
-        values.jobtitle !== "" &&
-        values.organisation !== "" &&
+        values.first_name !== "" &&
+        values.last_name !== "" &&
+        values.job !== "" &&
+        values.organization !== "" &&
         values.message !== "" &&
         values.subject !== "" &&
         values.email !== ""
       ) {
-        const bios = {
-          alert: {
-            title: "Message sent",
-            content: "Your message has been sent successfully.",
-          },
-        };
+        const send = await axios
+          .post("https://api-mail.dyp.finance/api/business", data)
+          .then(function (result) {
+            return result.data;
+          })
+          .catch(function (error) {
+            console.error(error);
+          });
 
-        alert(bios["alert"]);
-      } else {
-        const bios = {
-          alert: {
-            title: "Error",
-            content: "Something went wrong.",
-          },
-        };
+        if (send.status === 1) {
+          const bios = {
+            alert: {
+              title: "Message sent",
+              content: "Your message has been sent successfully.",
+            },
+          };
 
-        alert(bios["alert"].content);
+          $alert(bios["alert"]);
+        } else {
+          const bios = {
+            alert: {
+              title: "Error",
+              content: "Something goes to wrong.",
+            },
+          };
+
+          $alert(bios["alert"]);
+        }
       }
+      recaptchaRef.current.reset();
+
       setValues({ ...initialState });
     }
   };
@@ -183,46 +203,46 @@ const ContactUs = () => {
                 <div className="d-flex flex-column gap-3 mb-4">
                   <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                     <StyledTextField
-                      error={errors.name ? true : false}
+                      error={errors.first_name ? true : false}
                       required
                       label="First name"
-                      name="name"
-                      id="name"
-                      value={values.name}
+                      name="first_name"
+                      id="first_name"
+                      value={values.first_name}
                       onChange={handleChange}
-                      helperText={errors.name}
+                      helperText={errors.first_name}
                     />
                     <StyledTextField
                       required
-                      error={errors.lastname ? true : false}
+                      error={errors.last_name ? true : false}
                       label="Last name"
-                      name="lastname"
-                      id="lastname"
-                      value={values.lastname}
+                      name="last_name"
+                      id="last_name"
+                      value={values.last_name}
                       onChange={handleChange}
-                      helperText={errors.lastname}
+                      helperText={errors.last_name}
                     />
                   </div>
                   <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                     <StyledTextField
-                      error={errors.organisation ? true : false}
+                      error={errors.organization ? true : false}
                       required
                       label="Organization"
-                      name="organisation"
-                      id="organisation"
-                      value={values.organisation}
+                      name="organization"
+                      id="organization"
+                      value={values.organization}
                       onChange={handleChange}
-                      helperText={errors.organisation}
+                      helperText={errors.organization}
                     />
                     <StyledTextField
-                      error={errors.jobtitle ? true : false}
+                      error={errors.job ? true : false}
                       required
                       label="Job title"
-                      name="jobtitle"
-                      id="jobtitle"
-                      value={values.jobtitle}
+                      name="job"
+                      id="job"
+                      value={values.job}
                       onChange={handleChange}
-                      helperText={errors.jobtitle}
+                      helperText={errors.job}
                     />
                   </div>
                   <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
@@ -291,10 +311,18 @@ const ContactUs = () => {
                   />
                   <span className="helpertext">Max file size 5MB</span>
                 </div>
+                <ReCaptchaV2
+                sitekey="6LflZgEgAAAAAO-psvqdoreRgcDdtkQUmYXoHuy2"
+                style={{ display: "inline-block" }}
+                theme="dark"
+                size="invisible"
+                ref={recaptchaRef}
+              />
                 <button className="filled-btn submitbtn" onClick={handleSubmit}>
                   Submit
                 </button>
               </div>
+              
             </div>
           </div>
         </div>

@@ -4,10 +4,10 @@ import {
 
 const useForm = (validate) => {
     const [values, setValues] = useState({
-        name: '',
-        lastname: '',
-        organisation: '',
-        jobtitle: '',
+        first_name: '',
+        last_name: '',
+        organization: '',
+        job: '',
         email: '',
         subject: '',
         phone: '',
