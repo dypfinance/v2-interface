@@ -7,7 +7,8 @@ import TextField from "@mui/material/TextField";
 import envelope from "../assets/envelope.svg";
 import styled from "styled-components";
 import validate from "./validateinfo";
-
+import filebg1 from "../assets/filebg.svg";
+import filebg2 from "../assets/fileuploaded.svg";
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -18,7 +19,6 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
     fontWeight: 400,
   },
 }));
-
 
 const ContactUs = () => {
   const initialState = {
@@ -33,6 +33,8 @@ const ContactUs = () => {
   };
 
   const [values, setValues] = useState(initialState);
+  const [selectedFile, setSelectedFile] = useState();
+
   const [errors, setErrors] = useState({});
 
   const handleChange = async (e) => {
@@ -42,6 +44,27 @@ const ContactUs = () => {
       ...values,
       [name]: value,
     });
+  };
+
+  const onFileChange = (event) => {
+    const fileTypes = [
+      "image/jpg",
+      "image/png",
+      "application/pdf",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.doc",
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    ];
+
+    if (fileTypes.includes(event.target.files[0].type)) {
+      if (event.target.files && event.target.files[0]) {
+        if (event.target.files[0].size < 5000000) {
+          setSelectedFile(event.target.files[0]);
+        } else alert("File size too big");
+      }
+    } else {
+      alert("Image type not supported");
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -65,7 +88,7 @@ const ContactUs = () => {
         values.name !== "" &&
         values.lastname !== "" &&
         values.jobtitle !== "" &&
-        values.organsation !== "" &&
+        values.organisation !== "" &&
         values.message !== "" &&
         values.subject !== "" &&
         values.email !== ""
@@ -92,7 +115,13 @@ const ContactUs = () => {
     }
   };
 
-  // console.log(errors)
+  const handleChangeBg = (event) => {
+    if (selectedFile) {
+      setSelectedFile(null);
+      event.preventDefault();
+    }
+  };
+
   return (
     <div className="container-fluid contact-wrapper">
       <div className="container-lg contact-container pt-5">
@@ -103,9 +132,7 @@ const ContactUs = () => {
             Please complete this short form.
           </p>
           <div className="outer-form p-lg-4 p-xl-4 p-md-4 p-1 position-relative">
-            <div
-              className="d-lg-flex d-xl-flex align-items-center mx-2 mt-4 titlewrapper"
-            >
+            <div className="d-lg-flex d-xl-flex align-items-center mx-2 mt-4 titlewrapper">
               <img
                 src={contactHeader}
                 alt=""
@@ -244,7 +271,26 @@ const ContactUs = () => {
                 </div>
               </Box>
               <div className="row m-0 gap-3 justify-content-between w-100 mb-3">
-                <input type="file" className="custom-file-input outline-btn" />
+                <div className="d-grid gap-1">
+                  <input
+                    type="file"
+                    className="custom-file-input outline-btn"
+                    onChange={(e) => {
+                      onFileChange(e);
+                    }}
+                    onClick={(e) => {
+                      handleChangeBg(e);
+                    }}
+                    style={{
+                      backgroundImage: selectedFile
+                        ? `url(${filebg2})`
+                        : `url(${filebg1})`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                  <span className="helpertext">Max file size 5MB</span>
+                </div>
                 <button className="filled-btn submitbtn" onClick={handleSubmit}>
                   Submit
                 </button>
