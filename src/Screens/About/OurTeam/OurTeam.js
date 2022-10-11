@@ -128,7 +128,7 @@ const OurTeam = () => {
               align="d-flex flex-row gap-2 justify-content-center"
             />
             <p className="text-secondary text-center">
-              DYPIUS is made up of a team of people with decades of experience
+              Dypius is made up of a team of people with decades of experience
               in business, engineering, development, finance and more. We
               believe in our expertise and we know you can trust us to do what's
               best for you.
