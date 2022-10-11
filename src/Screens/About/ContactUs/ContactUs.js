@@ -1,5 +1,8 @@
 import React, { useRef, useState } from "react";
+import axios from "axios";
+import ReCaptchaV2 from "react-google-recaptcha";
 import Title from "../../../components/Title/Title";
+import $alert from "../../../hooks/$alert";
 import "./_contactus.scss";
 import contactHeader from "../assets/contactHeader.png";
 import Box from "@mui/material/Box";
@@ -7,7 +10,8 @@ import TextField from "@mui/material/TextField";
 import envelope from "../assets/envelope.svg";
 import styled from "styled-components";
 import validate from "./validateinfo";
-
+import filebg1 from "../assets/filebg.svg";
+import filebg2 from "../assets/fileuploaded.svg";
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -19,21 +23,25 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
   },
 }));
 
-
 const ContactUs = () => {
   const initialState = {
-    name: "",
-    lastname: "",
-    organisation: "",
-    jobtitle: "",
-    email: "",
-    subject: "",
-    phone: "",
-    message: "",
+    email:'',
+    subject:'',
+    first_name:'',
+    last_name:'',
+    organization:'',
+    job:'',
+    message:'',
+    recaptcha:'',
+    phone: ''
   };
 
+  
   const [values, setValues] = useState(initialState);
+  const [selectedFile, setSelectedFile] = useState();
+
   const [errors, setErrors] = useState({});
+  const recaptchaRef = useRef(null);
 
   const handleChange = async (e) => {
     const { name, value } = e.target;
@@ -44,55 +52,97 @@ const ContactUs = () => {
     });
   };
 
+  const onFileChange = (event) => {
+    const fileTypes = [
+      "image/jpg",
+      "image/png",
+      "application/pdf",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.doc",
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    ];
+
+    if (fileTypes.includes(event.target.files[0].type)) {
+      if (event.target.files && event.target.files[0]) {
+        if (event.target.files[0].size < 5000000) {
+          setSelectedFile(event.target.files[0]);
+        } else alert("File size too big");
+      }
+    } else {
+      alert("Image type not supported");
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     setErrors(validate(values));
 
     if (Object.keys(errors).length === 0) {
+      const captchaToken = await recaptchaRef.current.executeAsync();
       const data = {
-        name: values.name,
-        lastname: values.lastname,
-        phone: values.phone,
-        jobtitle: values.jobtitle,
-        organisation: values.organisation,
         email: values.email,
         subject: values.subject,
+        first_name: values.first_name,
+        last_name: values.last_name,
+        organization: values.organization,
+        job: values.job,
         message: values.message,
+        recaptcha: captchaToken
       };
 
       if (
-        values.name !== "" &&
-        values.lastname !== "" &&
-        values.jobtitle !== "" &&
-        values.organisation !== "" &&
+
+        values.first_name !== "" &&
+        values.last_name !== "" &&
+        values.job !== "" &&
+        values.organization !== "" &&
         values.message !== "" &&
         values.subject !== "" &&
         values.email !== ""
       ) {
-        const bios = {
-          alert: {
-            title: "Message sent",
-            content: "Your message has been sent successfully.",
-          },
-        };
+        const send = await axios
+          .post("https://api-mail.dyp.finance/api/business", data)
+          .then(function (result) {
+            return result.data;
+          })
+          .catch(function (error) {
+            console.error(error);
+          });
 
-        alert(bios["alert"]);
-      } else {
-        const bios = {
-          alert: {
-            title: "Error",
-            content: "Something went wrong.",
-          },
-        };
+        if (send.status === 1) {
+          const bios = {
+            alert: {
+              title: "Message sent",
+              content: "Your message has been sent successfully.",
+            },
+          };
 
-        alert(bios["alert"].content);
+          $alert(bios["alert"]);
+        } else {
+          const bios = {
+            alert: {
+              title: "Error",
+              content: "Something goes to wrong.",
+            },
+          };
+
+          $alert(bios["alert"]);
+        }
       }
+      recaptchaRef.current.reset();
+
       setValues({ ...initialState });
     }
   };
 
-  // console.log(errors)
+  const handleChangeBg = (event) => {
+    if (selectedFile) {
+      setSelectedFile(null);
+      event.preventDefault();
+    }
+  };
+
   return (
     <div className="container-fluid contact-wrapper">
       <div className="container-lg contact-container pt-5">
@@ -102,17 +152,14 @@ const ContactUs = () => {
             Interested in collaborating with us? <br />
             Please complete this short form.
           </p>
-          <div className="outer-form p-4 position-relative">
-            <div
-              className="d-lg-flex d-xl-flex align-items-center mx-2 mt-4"
-              style={{ height: 40 }}
-            >
+          <div className="outer-form p-lg-4 p-xl-4 p-md-4 p-1 position-relative">
+            <div className="d-lg-flex d-xl-flex align-items-center mx-2 mt-4 titlewrapper">
               <img
                 src={contactHeader}
                 alt=""
-                className="col-3 pl-0 contactimg"
+                className="col-lg-3 col-xl-3 pl-0 contactimg"
               />
-              <div className="d-flex m-0 justify-content-between gap-2 w-100 align-items-center">
+              <div className="d-flex flex-lg-row flex-xl-row flex-md-row flex-column  m-0 justify-content-between gap-2 w-100 align-items-center">
                 <div>
                   <h2 className="fw-bold">Business</h2>
                   <p className="text-secondary">
@@ -140,7 +187,7 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
-            <div className="row form-container mt-5 mx-2 p-4">
+            <div className="row form-container mt-5 mx-2 p-lg-4 p-xl-4 p-md-4 p-1 pt-3">
               <div className="row justify-content-between pl-4">
                 <h4 className="pl-0">Business form</h4>
               </div>
@@ -155,51 +202,51 @@ const ContactUs = () => {
                 width={"100%"}
               >
                 <div className="d-flex flex-column gap-3 mb-4">
-                  <div className="d-flex m-0 justify-content-between gap-4">
+                  <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                     <StyledTextField
-                      error={errors.name ? true : false}
+                      error={errors.first_name ? true : false}
                       required
                       label="First name"
-                      name="name"
-                      id="name"
-                      value={values.name}
+                      name="first_name"
+                      id="first_name"
+                      value={values.first_name}
                       onChange={handleChange}
-                      helperText={errors.name}
+                      helperText={errors.first_name}
                     />
                     <StyledTextField
                       required
-                      error={errors.lastname ? true : false}
+                      error={errors.last_name ? true : false}
                       label="Last name"
-                      name="lastname"
-                      id="lastname"
-                      value={values.lastname}
+                      name="last_name"
+                      id="last_name"
+                      value={values.last_name}
                       onChange={handleChange}
-                      helperText={errors.lastname}
+                      helperText={errors.last_name}
                     />
                   </div>
-                  <div className="d-flex m-0 justify-content-between gap-4">
+                  <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                     <StyledTextField
-                      error={errors.organisation ? true : false}
+                      error={errors.organization ? true : false}
                       required
                       label="Organization"
-                      name="organisation"
-                      id="organisation"
-                      value={values.organisation}
+                      name="organization"
+                      id="organization"
+                      value={values.organization}
                       onChange={handleChange}
-                      helperText={errors.organisation}
+                      helperText={errors.organization}
                     />
                     <StyledTextField
-                      error={errors.jobtitle ? true : false}
+                      error={errors.job ? true : false}
                       required
                       label="Job title"
-                      name="jobtitle"
-                      id="jobtitle"
-                      value={values.jobtitle}
+                      name="job"
+                      id="job"
+                      value={values.job}
                       onChange={handleChange}
-                      helperText={errors.jobtitle}
+                      helperText={errors.job}
                     />
                   </div>
-                  <div className="d-flex m-0 justify-content-between gap-4">
+                  <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                     <StyledTextField
                       error={errors.email ? true : false}
                       required
@@ -244,12 +291,39 @@ const ContactUs = () => {
                   />
                 </div>
               </Box>
-              <div className="row m-0 gap-3 justify-content-between w-100">
-                <input type="file" className="custom-file-input outline-btn" />
-                <button className="filled-btn w-50" onClick={handleSubmit}>
-                  Submit{" "}
+              <div className="row m-0 gap-3 justify-content-between w-100 mb-3">
+                <div className="d-grid gap-1">
+                  <input
+                    type="file"
+                    className="custom-file-input outline-btn"
+                    onChange={(e) => {
+                      onFileChange(e);
+                    }}
+                    onClick={(e) => {
+                      handleChangeBg(e);
+                    }}
+                    style={{
+                      backgroundImage: selectedFile
+                        ? `url(${filebg2})`
+                        : `url(${filebg1})`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                  <span className="helpertext">Max file size 5MB</span>
+                </div>
+                <ReCaptchaV2
+                sitekey="6LflZgEgAAAAAO-psvqdoreRgcDdtkQUmYXoHuy2"
+                style={{ display: "inline-block" }}
+                theme="dark"
+                size="invisible"
+                ref={recaptchaRef}
+              />
+                <button className="filled-btn submitbtn" onClick={handleSubmit}>
+                  Submit
                 </button>
               </div>
+              
             </div>
           </div>
         </div>

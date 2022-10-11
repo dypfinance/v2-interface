@@ -150,6 +150,14 @@ hr{
   background: linear-gradient(90deg, rgba(85, 79, 216, 0) 0%, #554FD8 53.13%, rgba(85, 79, 216, 0) 101%);
 }
 
+.viewmorebtn {
+   right: 44%; 
+
+   @media only screen and (max-width: 888px) {
+    right: auto;
+   }
+}
+
 @media screen and (max-width: 786px) {
 
   .supportedAssets-wrapper{
