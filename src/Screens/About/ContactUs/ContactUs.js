@@ -65,7 +65,7 @@ const ContactUs = () => {
         values.name !== "" &&
         values.lastname !== "" &&
         values.jobtitle !== "" &&
-        values.organsation !== "" &&
+        values.organisation !== "" &&
         values.message !== "" &&
         values.subject !== "" &&
         values.email !== ""
