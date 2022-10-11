@@ -41,6 +41,11 @@
     letter-spacing: -0.018em;
     color: #7770e0;
     align-items: baseline;
+
+    @media only screen and (max-width: 500px) {
+      font-size: 20px;
+
+    }
   }
 
   .aprText {

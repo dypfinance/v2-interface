@@ -1,0 +1,72 @@
+.accordion-button:not(.collapsed){
+    color: #7770E0;
+    background-color: #F5F4FF;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+    
+}
+
+.accordion-button:focus{
+    box-shadow: none;
+}
+
+.faq-content{
+        white-space: pre-line;
+}
+
+.pool-container{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.pool-card{
+    background: #EFF0F6;
+    border-radius: 10px;
+    .inner-pool{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        p{
+            position: relative;
+            padding: 5px;
+            font-size: 14px;
+            background:  #C9C7F4;
+            color: #7770E0;
+            width: fit-content;
+            bottom: -5px;
+            z-index: 1;
+            border-radius: 10px 10px 0px 0px;
+        }
+        a{
+            z-index: 2;
+            .pool-btn{
+                z-index: 2;
+                font-size: 10px !important;
+            }
+        }
+    }
+    
+
+    .buyback-pool{
+        grid-template-columns: repeat(6, 1fr);
+        gap: 15px;
+    }
+
+    .links-pool{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .ethereum{
+        color: #566FCE;
+    }
+
+    .bnb{
+        color: #D5A404;
+    }
+
+    .avax{
+        color: #E84142;
+    }
+}
+
+.buydyp-container{
+    grid-template-columns: repeat(2, 1fr) !important;
+}

@@ -13,6 +13,7 @@
 @import '../Screens//Disclaimer/disclaimer';
 @import '../Screens/Disclaimer/MainHero/disclaimerhero';
 @import '../Screens/Disclaimer/DisclaimerContent/disclaimercontent';
+@import '../Screens/Governance/governance';
 
 @import "../components/Header/header";
 @import "../components/AuditedByItem/auditedByItem";
@@ -22,6 +23,7 @@
 @import "../components/ProductCards/productcards";
 @import "../components/VaultCard/vaultcard";
 @import "../components/ScrollTop/scrollTop";
+@import "../components/GovCards/govcards";
 
 * {
   font-family: "Poppins", sans-serif;

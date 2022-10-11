@@ -161,7 +161,7 @@ const Roadmap = () => {
         <h1 className="text-white text-center text-lg-start">Dypius roadmap</h1>
         <div className="d-flex flex-column flex-lg-row w-100 justify-content-between align-items-center">
           <p>Our journey to success</p>
-          <div className="d-flex flex-row gap-4">
+          <div className="d-flex flex-row gap-lg-4 gap-xl-4 gap-md-4 gap-3">
             <div className="years-wrapper d-flex flex-row px-2 gap-1 justify-content-center align-items-center">
               <p className={`${JSON.stringify(roadmap) == JSON.stringify(roadmap2020) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2020)}>2020</p>
               <p className={`${JSON.stringify(roadmap) == JSON.stringify(roadmap2021) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2021)}>2021</p>
