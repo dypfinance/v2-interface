@@ -3,6 +3,35 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 600px;
+    min-height: 80vh;
+
+    @media only screen and (max-width: 991px) {
+        background-size: contain;
+
+     
+       } 
     
 }
+
+.purplelink {
+    position: absolute;
+    top: -137px;
+    z-index: -1;
+    @media only screen and (max-width: 991px) {
+     display: none;
+  
+    } 
+  
+  }
+
+  .purplelinkmd {
+    display: none;
+
+    @media only screen and (max-width: 991px) {
+        display: block;
+        position: absolute;
+        top: -37px;
+        z-index: -1;
+        height: 700px;
+       } 
+  }

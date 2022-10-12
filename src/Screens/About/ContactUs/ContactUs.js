@@ -12,6 +12,8 @@ import styled from "styled-components";
 import validate from "./validateinfo";
 import filebg1 from "../assets/filebg.svg";
 import filebg2 from "../assets/fileuploaded.svg";
+import useWindowSize from "../../../hooks/useWindowSize";
+import Modal from "../../../components/Modal/Modal";
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -25,23 +27,24 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
 
 const ContactUs = () => {
   const initialState = {
-    email:'',
-    subject:'',
-    first_name:'',
-    last_name:'',
-    organization:'',
-    job:'',
-    message:'',
-    recaptcha:'',
-    phone: ''
+    email: "",
+    subject: "",
+    first_name: "",
+    last_name: "",
+    organization: "",
+    job: "",
+    message: "",
+    recaptcha: "",
+    phone: "",
   };
 
-  
   const [values, setValues] = useState(initialState);
   const [selectedFile, setSelectedFile] = useState();
+  const [success, setSuccess] = useState(false);
 
   const [errors, setErrors] = useState({});
   const recaptchaRef = useRef(null);
+  const windowSize = useWindowSize();
 
   const handleChange = async (e) => {
     const { name, value } = e.target;
@@ -88,11 +91,11 @@ const ContactUs = () => {
         organization: values.organization,
         job: values.job,
         message: values.message,
-        recaptcha: captchaToken
+        recaptcha: captchaToken,
+        phone: values.phone.at,
       };
 
       if (
-
         values.first_name !== "" &&
         values.last_name !== "" &&
         values.job !== "" &&
@@ -111,23 +114,26 @@ const ContactUs = () => {
           });
 
         if (send.status === 1) {
-          const bios = {
-            alert: {
-              title: "Message sent",
-              content: "Your message has been sent successfully.",
-            },
-          };
+          // const bios = {
+          //   alert: {
+          //     title: "Message sent",
+          //     content: "Your message has been sent successfully.",
+          //   },
+          // };
 
-          $alert(bios["alert"]);
+          // $alert(bios["alert"]);
+
+          setSuccess(true);
         } else {
-          const bios = {
-            alert: {
-              title: "Error",
-              content: "Something goes to wrong.",
-            },
-          };
+          // const bios = {
+          //   alert: {
+          //     title: "Error",
+          //     content: "Something goes to wrong.",
+          //   },
+          // };
 
-          $alert(bios["alert"]);
+          // $alert(bios["alert"]);
+          setSuccess(false);
         }
       }
       recaptchaRef.current.reset();
@@ -143,6 +149,7 @@ const ContactUs = () => {
     }
   };
 
+  console.log(success);
   return (
     <div className="container-fluid contact-wrapper">
       <div className="container-lg contact-container pt-5">
@@ -292,7 +299,10 @@ const ContactUs = () => {
                 </div>
               </Box>
               <div className="row m-0 gap-3 justify-content-center w-100 mb-3">
-                <div className="d-grid gap-1">
+                <div
+                  className="d-grid gap-1 p-0"
+                  style={{ width: windowSize.width < 999 ? "100%" : "" }}
+                >
                   <input
                     type="file"
                     className="custom-file-input outline-btn"
@@ -308,26 +318,40 @@ const ContactUs = () => {
                         : `url(${filebg1})`,
                       backgroundRepeat: "no-repeat",
                       backgroundPosition: "center",
+                      width:
+                        windowSize.width < 999
+                          ? "100%"
+                          : selectedFile
+                          ? "100%"
+                          : "70%",
                     }}
                   />
                   <span className="helpertext">Max file size 5MB</span>
                 </div>
                 <ReCaptchaV2
-                sitekey="6LflZgEgAAAAAO-psvqdoreRgcDdtkQUmYXoHuy2"
-                style={{ display: "inline-block" }}
-                theme="dark"
-                size="invisible"
-                ref={recaptchaRef}
-              />
-                <button className="filled-btn submitbtn" onClick={handleSubmit}>
+                  sitekey="6LflZgEgAAAAAO-psvqdoreRgcDdtkQUmYXoHuy2"
+                  style={{ display: "inline-block" }}
+                  theme="dark"
+                  size="invisible"
+                  ref={recaptchaRef}
+                />
+                <button
+                  className="filled-btn submitbtn"
+                  data-bs-toggle="modal"
+                  data-bs-target={
+                    success === true ? "#exampleModal" : "#exampleModal1"
+                  }
+                  onClick={handleSubmit}
+                >
                   Submit
                 </button>
               </div>
-              
             </div>
           </div>
         </div>
       </div>
+
+      <Modal visible={success === true ? 'show' : ''}/>
     </div>
   );
 };
