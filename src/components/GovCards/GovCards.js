@@ -1,9 +1,9 @@
 import React from "react";
 
-const GovCards = ({ title, description, number }) => {
+const GovCards = ({ title, description, number, step }) => {
   return (
     <div
-      className="gov-card position-relative py-4 py-lg-auto"
+      className={`gov-card position-relative py-4 py-lg-auto ${step}`}
       data-aos="fade-up"
       data-aos-duration="1000"
     >
@@ -21,7 +21,7 @@ const GovCards = ({ title, description, number }) => {
         <h1 className="m-0 govnr">{number}</h1>
       </div>
       <div className="col-12 ms-auto d-flex align-items-center pl-0">
-        <div className="d-flex flex-column gap-5 gap-lg-2 align-items-center" style={{maxWidth: 275}}>
+        <div className="d-flex flex-column gap-5 gap-lg-2 align-items-center descwrapper">
           <p className="text-secondary" style={{fontSize: 14}}>
             {description}
           </p>
