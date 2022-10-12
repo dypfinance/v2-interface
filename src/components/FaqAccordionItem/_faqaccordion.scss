@@ -70,3 +70,15 @@
 .buydyp-container{
     grid-template-columns: repeat(2, 1fr) !important;
 }
+
+
+@media screen and (max-width: 786px) {
+    .pool-container{
+        grid-template-columns: auto;
+        .pool-card{
+        grid-template-columns: auto;
+
+        }
+    }
+    
+}
