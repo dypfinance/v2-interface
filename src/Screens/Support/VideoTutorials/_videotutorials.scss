@@ -6,6 +6,8 @@ grid-column-gap: 25px;
 grid-row-gap: 25px;
 
 
+
+
 .card-1 {
    grid-area: 3 / 1 / 5 / 3; 
    position: relative;
@@ -83,5 +85,32 @@ grid-row-gap: 25px;
       right: 0;
       bottom: -10px;
     }
+  }
+
+  @media screen and (max-width: 786px) {
+   .video-wrapper{
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    .card-1{
+      grid-area: auto;
+      top: 0;
+    }
+    .card-2{
+      grid-area: auto;
+      top: 0;
+    }
+    .card-3{
+      grid-area: auto;
+      top: 0;
+    }
+    .card-4{
+      grid-area: auto;
+      top: 0;
+    }
+    .card-5{
+      grid-area: auto;
+      top: 0;
+    }
+   }
   }
   

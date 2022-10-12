@@ -14,6 +14,7 @@ import filebg1 from "../assets/filebg.svg";
 import filebg2 from "../assets/fileuploaded.svg";
 import useWindowSize from "../../../hooks/useWindowSize";
 import Modal from "../../../components/Modal/Modal";
+import { useEffect } from "react";
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -55,6 +56,26 @@ const ContactUs = () => {
     });
   };
 
+  const modal = document.querySelector("#tymodal");
+  const body = document.querySelector("body");
+
+  const showModal = function (e) {
+    if (modal.className.includes("show")) {
+      // Disable scroll
+      console.log("a po hin");
+      body.style.overflow = "hidden";
+    } else {
+      // Enable scroll
+      body.style.overflow = "auto";
+    }
+  };
+
+  useEffect(() => {
+    if (success === true) {
+      showModal();
+    }
+  }, [modal, success]);
+
   const onFileChange = (event) => {
     const fileTypes = [
       "image/jpg",
@@ -92,7 +113,7 @@ const ContactUs = () => {
         job: values.job,
         message: values.message,
         recaptcha: captchaToken,
-        phone: values.phone.at,
+        phone: values.phone,
       };
 
       if (
@@ -114,25 +135,8 @@ const ContactUs = () => {
           });
 
         if (send.status === 1) {
-          // const bios = {
-          //   alert: {
-          //     title: "Message sent",
-          //     content: "Your message has been sent successfully.",
-          //   },
-          // };
-
-          // $alert(bios["alert"]);
-
           setSuccess(true);
         } else {
-          // const bios = {
-          //   alert: {
-          //     title: "Error",
-          //     content: "Something goes to wrong.",
-          //   },
-          // };
-
-          // $alert(bios["alert"]);
           setSuccess(false);
         }
       }
@@ -149,7 +153,6 @@ const ContactUs = () => {
     }
   };
 
-  console.log(success);
   return (
     <div className="container-fluid contact-wrapper">
       <div className="container-lg contact-container pt-5">
@@ -338,9 +341,7 @@ const ContactUs = () => {
                 <button
                   className="filled-btn submitbtn"
                   data-bs-toggle="modal"
-                  data-bs-target={
-                    success === true ? "#exampleModal" : "#exampleModal1"
-                  }
+                  data-bs-target={success === true ? "#tymodal" : "#tymodal1"}
                   onClick={handleSubmit}
                 >
                   Submit
@@ -351,7 +352,13 @@ const ContactUs = () => {
         </div>
       </div>
 
-      <Modal visible={success === true ? 'show' : ''}/>
+      <Modal
+        visible={success}
+        modalId="tymodal"
+        setIsVisible={() => {
+          setSuccess(false);
+        }}
+      />
     </div>
   );
 };

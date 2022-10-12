@@ -13,7 +13,7 @@
         }
 
         .phone-image{
-            top: -140px;
+            top: -115px;
             left: -5%;
             height: 270px;
         }
@@ -46,6 +46,7 @@
             display: inline-block;
             outline: none;
             white-space: nowrap;
+            user-select: none;
             -webkit-user-select: none;
             cursor: pointer;
             text-shadow: 1px 1px #fff;
@@ -54,4 +55,20 @@
           }
 
     }
+}
+
+@media screen and (max-width: 786px) {
+    .help-wrapper{
+        .help-card{
+            .phone-image{
+                height: 150px;
+                top: -60px;
+            }
+        }
+
+       .contact-container{
+        gap: 70px;
+       }
+    }
+    
 }
