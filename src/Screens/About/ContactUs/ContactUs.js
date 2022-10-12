@@ -291,7 +291,7 @@ const ContactUs = () => {
                   />
                 </div>
               </Box>
-              <div className="row m-0 gap-3 justify-content-between w-100 mb-3">
+              <div className="row m-0 gap-3 justify-content-center w-100 mb-3">
                 <div className="d-grid gap-1">
                   <input
                     type="file"
