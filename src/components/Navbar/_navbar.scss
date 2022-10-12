@@ -19,6 +19,11 @@
       font-weight: 500;
       color: rgba(85, 79, 216, 1);
       padding: 5px 20px ;
+
+      @media only screen and (max-width: 999px) {
+        padding: 5px;
+    font-size: 14px;
+      } 
     }
    
     }
