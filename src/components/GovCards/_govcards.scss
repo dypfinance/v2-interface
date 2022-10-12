@@ -8,10 +8,7 @@
 
   @media only screen and (max-width: 991px) {
     width: 100%;
-
-  } 
-
-  
+  }
 
   .green-tag {
     height: 20px;
@@ -23,9 +20,8 @@
     left: 16%;
 
     @media only screen and (max-width: 991px) {
-        left: 7%;
-
-      } 
+      left: 7%;
+    }
   }
 
   .tag {
@@ -45,9 +41,8 @@
     font-weight: 600;
 
     @media only screen and (max-width: 991px) {
-        font-size: 69px !important;
-     
-       } 
+      font-size: 69px !important;
+    }
   }
 
   .connectwallet-text {
@@ -63,26 +58,23 @@
   margin-top: 8rem;
   @media only screen and (max-width: 991px) {
     margin-top: auto;
-  } 
+  }
 }
-
 
 .three {
   position: relative;
-    right: 0;
-    top: -167px; 
-    
-    @media only screen and (max-width: 991px) {
-    top: auto
-  } 
+  right: 0;
+  top: -167px;
+
+  @media only screen and (max-width: 991px) {
+    top: auto;
+  }
 }
 
-
-
 .descwrapper {
-    max-width: 275px;
+  max-width: 275px;
 
-    @media only screen and (max-width: 991px) {
-        max-width: fit-content;
-      } 
+  @media only screen and (max-width: 991px) {
+    max-width: fit-content;
+  }
 }
