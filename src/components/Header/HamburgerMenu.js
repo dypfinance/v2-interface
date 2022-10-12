@@ -49,9 +49,15 @@ const HamburgerMenu = () => {
               </a>
             </li>
             <li>
-              <a className="text-decoration-none" href="#gov">
+            <NavLink
+                className="text-decoration-none"
+                to="/governance"
+                onClick={() => {
+                  setOpenMenu(!openMenu);
+                }}
+              >
                 Governance
-              </a>
+              </NavLink>
             </li>
             <li>
               <NavLink

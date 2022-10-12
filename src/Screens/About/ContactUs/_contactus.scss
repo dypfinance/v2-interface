@@ -67,6 +67,8 @@
 
       .custom-file-input {
         color: transparent;
+  // width: 70%;
+
       }
 
       .custom-file-input::-webkit-file-upload-button {
@@ -110,12 +112,12 @@
 }
 
 .submitbtn {
-  width: 30%;
+  width: 23%;
 
   @media only screen and (max-width: 970px) {
     width: 100%;
 
-    .outline-btn {
+    .outline-btn, .custom-file-input {
       width: 100% !important;
     }
   }

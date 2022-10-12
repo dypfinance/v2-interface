@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Title from "../../components/Title/Title";
 import rightArrow from "../../assets/right-arrow.svg";
 import GovCards from "../../components/GovCards/GovCards";
+import purplelink from './assets/purplelink.svg'
 
 const Governance = () => {
   useEffect(() => {
@@ -12,7 +13,7 @@ const Governance = () => {
     <div className="container-fluid px-0">
       <div className="container-fluid d-flex justify-content-center align-items-center gov-main-wrapper flex-column">
         <div className="container-lg">
-          <div className="col-lg-8 col-xl-8 ml-auto mr-auto" style={{marginTop: '10rem'}}>
+          <div className="col-lg-8 col-xl-8 ml-5 mr-auto" style={{marginTop: '10rem'}}>
             <Title top={"Dypius"} bottom={"Governance"} />
             <p>
               DYP tokens represent voting shares in Dypius Governance. The
@@ -29,7 +30,10 @@ const Governance = () => {
               View more <img src={rightArrow} alt="" className="ml-2" />
             </button>
           </div>
-          <div className="row m-0 justify-content-between gap-3 mt-4">
+          <div className="row m-0 justify-content-between gap-3 mt-4 position-relative">
+          <img src={purplelink} className='purplelink' alt='' data-aos="fade-up"
+      data-aos-duration="1000"/>
+
             <GovCards
               title={"Connect wallet"}
               description={
