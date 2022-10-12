@@ -35,7 +35,7 @@ const VideoTutorials = () => {
     <div className="container-fluid mt-5">
         <div className="container-lg">
             <div className="row">
-                <div className="col-3 d-flex flex-column gap-3">
+                <div className="col-12 col-lg-3 d-flex flex-column gap-3">
                     <Title top="Featured" bottom="Tutorials" />
                     <p className="text-secondary">
                     Watch our latest tutorials on Dypius solutions and learn how to become an expert in no time.
@@ -44,10 +44,10 @@ const VideoTutorials = () => {
                         View More <img src={rightArrow} alt="" />
                     </button>
                 </div>
-                <div className="col-9 d-grid video-wrapper justify-content-between p-4 position-relative">
-                  <img src={sphere} className='sphere position-absolute' alt="" />
-                  <img src={sphere} className='sphere position-absolute' alt="" />
-                  <img src={sphere} className='sphere position-absolute' alt="" />
+                <div className="col-12 col-lg-9 d-grid video-wrapper justify-content-center p-4 position-relative">
+                  <img src={sphere} className='sphere position-absolute d-none d-lg-block' alt="" />
+                  <img src={sphere} className='sphere position-absolute d-none d-lg-block' alt="" />
+                  <img src={sphere} className='sphere position-absolute d-none d-lg-block' alt="" />
                 {vidsArray.length > 0 &&
             vidsArray.map((item, index) => {
               return (

@@ -1584,11 +1584,17 @@ const FAQ = () => {
   
 
   const [faqItems, setFaqItems] = useState(categories[0].content);
+  const [faqTitle, setFaqTitle] = useState(categories[0].title)
+
+  const setCategory = (category, title) => {
+    setFaqItems(category)
+    setFaqTitle(title)
+  } 
 
   return (
     <div className="container-fluid faq-wrapper">
       <div className="container-lg d-flex justify-content-center align-items-center flex-column py-5">
-        <div className="col-6">
+        <div className="col-12 col-lg-6">
           <Title
             top="Got"
             bottom="a question?"
@@ -1612,7 +1618,7 @@ const FAQ = () => {
           </div>
           <div className="row categories-grid mt-5 gap-4">
            {categories.map((category, index) => (
-             <div onClick={() => setFaqItems(category.content)} key={index} className={`category-card d-flex justify-content-center ${JSON.stringify(faqItems) === JSON.stringify(category.content) ? 'active-category' : null } align-items-center flex-column gap-2 mx-auto`}>
+             <div onClick={() => setCategory(category.content, category.title)} key={index} className={`category-card d-flex justify-content-center ${JSON.stringify(faqItems) === JSON.stringify(category.content) ? 'active-category' : null } align-items-center flex-column gap-2 mx-auto`}>
              <img src={JSON.stringify(faqItems) === JSON.stringify(category.content) ? activeBook : book} alt="" />
              <p className="mb-0">{category.title}</p>
            </div>
@@ -1623,12 +1629,11 @@ const FAQ = () => {
 
       <div className="faq-container container-lg w-100 mt-4 p-5">
         <div className="row justify-content-between align-items-center">
-          <h2 className="fw-bold mb-0">
-            Tell us about your issue so we can help you more quickly.
+          <h2 className="fw-bold mb-5">
+            {`${faqTitle} FAQs`}
           </h2>
         </div>
         <div className="row flex-column">
-          <h5 className="mb-3">Browse help topics</h5>
           <div className="accordion" id="faqAccordion">
             {faqItems.map((faq, index) => (
               <FAQAccordion

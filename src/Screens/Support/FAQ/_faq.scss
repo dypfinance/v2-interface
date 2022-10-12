@@ -37,6 +37,10 @@
         .categories-grid{
             display: grid;
             grid-template-columns: repeat(6, 1fr);
+
+            @media screen and (max-width: 786px) {
+                grid-template-columns: auto;
+            }
             .category-card{
                 background: #FFFFFF;
                 border: 2px solid #E9EAF0;
@@ -63,4 +67,9 @@
 
       
     }
+}
+
+@media screen and (max-width: 786px) {
+    
+    
 }
