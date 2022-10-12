@@ -205,25 +205,25 @@ const FAQ = () => {
       <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>DYP > DYP</p>
        <a  target="_blank" href="https://app.dyp.finance/constant-staking-1">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>DYP > ETH</p>
        <a  target="_blank" href=" https://app.dyp.finance/constant-staking-2">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>DYP > DYP</p>
        <a  target="_blank" href=" https://app.dyp.finance/constant-staking-3">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>DYP > ETH</p>
        <a  target="_blank" href="https://youtu.be/D5g19SuQlcI">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">Tutorial <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
       </div>
@@ -237,25 +237,25 @@ const FAQ = () => {
       <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>DYP > DYP</p>
        <a  target="_blank" href="https://app-bsc.dyp.finance/constant-staking-1">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>DYP > BNB</p>
        <a  target="_blank" href="https://app-bsc.dyp.finance/constant-staking-2">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>DYP > DYP</p>
        <a  target="_blank" href="https://app-bsc.dyp.finance/constant-staking-3">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>DYP > BNB</p>
        <a  target="_blank" href="https://youtu.be/sYkoxGbpBi4">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">Tutorial <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
       </div>
@@ -269,25 +269,25 @@ const FAQ = () => {
       <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>DYP > DYP</p>
        <a  target="_blank" href="https://app-avax.dyp.finance/constant-staking-1">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>DYP > AVAX</p>
        <a  target="_blank" href="https://app-avax.dyp.finance/constant-staking-2">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>DYP > DYP</p>
        <a  target="_blank" href="https://app-avax.dyp.finance/constant-staking-3">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>DYP > AVAX</p>
        <a  target="_blank" href="https://youtu.be/s9gwo3J119U">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">Tutorial <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
       </div>
@@ -437,7 +437,7 @@ const FAQ = () => {
       Yield farming does have Impermanent loss. You can read about how impermanent loss works below. There are also multiple videos on YouTube explaining the concept.
       </p>
       <a target="_blank" href="https://academy.binance.com/en/articles/impermanent-loss-explained">
-      <button class="btn filled-btn pool-btn w-100">View More <img src='${rightArrow}' /></button>
+      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">View More <img src='${rightArrow}' /></button>
       </a>
       `,
       id: 'collapseTwelve',
@@ -486,32 +486,32 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
                     <div class="d-grid inner-pool">
                     <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app.dyp.finance/farming-new-1">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app.dyp.finance/farming-new-2">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">3 Days<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">3 Days<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app.dyp.finance/farming-new-3">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">30 Days<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">30 Days<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app.dyp.finance/farming-new-4">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">60 Days<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">60 Days<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app.dyp.finance/farming-new-5">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://youtu.be/xc2S9Jei7DA">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                     </div>
@@ -524,32 +524,32 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
                       <div class="d-grid inner-pool">
                     <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app-bsc.dyp.finance/farming-new-1">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app-bsc.dyp.finance/farming-new-2">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">3 Days<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">3 Days<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app-bsc.dyp.finance/farming-new-3">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">30 Days<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">30 Days<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app-bsc.dyp.finance/farming-new-4">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">60 Days<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">60 Days<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app-bsc.dyp.finance/farming-new-5">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://youtu.be/2pOUmRTMN1o">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                     </div>
@@ -562,32 +562,32 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
                     <div class="d-grid inner-pool">
                     <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app-avax.dyp.finance/farming-new-1">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app-avax.dyp.finance/farming-new-2">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">3 Days<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">3 Days<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app-avax.dyp.finance/farming-new-3">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">30 Days<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">30 Days<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app-avax.dyp.finance/farming-new-4">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">60 Days<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">60 Days<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://app-avax.dyp.finance/farming-new-5">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                      <div class='d-flex justify-content-center flex-column'>
                       <a target="_blank" href="https://youtu.be/b-WHRSgFn-k">
-                      <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
+                      <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
                       </a>
                      </div>
                     </div>
@@ -631,17 +631,17 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
       <div class="d-grid inner-pool">
       <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://app.dyp.finance/staking-buyback-1">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">No Lock<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://app.dyp.finance/staking-buyback-2">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://youtu.be/7CZ_ianX2bk">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
       </div>
@@ -654,17 +654,17 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
         <div class="d-grid inner-pool">
       <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://app-bsc.dyp.finance/staking-buyback-1">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://app-bsc.dyp.finance/staking-buyback-2">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://youtu.be/l3Jka88T308">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
       </div>
@@ -677,17 +677,17 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
       <div class="d-grid inner-pool">
       <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://app-avax.dyp.finance/staking-buyback-1">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://app-avax.dyp.finance/staking-buyback-2">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://youtu.be/_WuIQUwwpGM">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
       </div>
@@ -722,32 +722,32 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
       <div class="d-grid buyback-pool">
       <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://vault.dyp.finance/vault-weth">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Supply ETH<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply ETH<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://vault.dyp.finance/vault-wbtc">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Supply WBTC<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply WBTC<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://vault.dyp.finance/vault-usdc">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Supply USDC<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply USDC<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://vault.dyp.finance/vault-usdt">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Supply USDT<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply USDT<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://vault.dyp.finance/vault-dai">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Supply DAI<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply DAI<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://youtu.be/t8Yr3ZIxHJA?list=PL8K0d30DJYVMLMbhYcOmzQHmPGDRrDpnl">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
       </div>
@@ -855,17 +855,17 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
       <div class="d-grid links-pool">
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://dyp.finance/">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Official website<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Official website<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://discord.gg/dypcaws">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Official Discord<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Official Discord<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://linktr.ee/dyp.finance">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Linktree<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Linktree<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
       </div>
@@ -930,17 +930,17 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
       <div class="d-grid links-pool">
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://gov.dyp.finance/">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">ETH Governance<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">ETH Governance<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://gov-bsc.dyp.finance/">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">BNB Governance<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">BNB Governance<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://gov-avax.dyp.finance/">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">AVAX Governance<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">AVAX Governance<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
       </div>
@@ -957,7 +957,7 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
       Video tutorial can be found here: 
       </p>
       <a target="_blank" href="https://youtu.be/0WSYN2qHTNQ">
-      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">View<img src='${rightArrow}' /></button>
+      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2 d-flex align-items-center gap-2">View<img src='${rightArrow}' /></button>
       </a>
       `,
       id: 'collapseThree',
@@ -1004,17 +1004,17 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
       <div class="d-grid links-pool">
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://app.uniswap.org/#/swap?use=V2&inputCurrency=0xbd100d061e120b2c67a24453cf6368e63f1be056">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Uniswap in ETH chain<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Uniswap in ETH chain<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://pancakeswap.finance/swap?inputCurrencty=BNB&outputCurrency=0xbd100d061e120b2c67a24453cf6368e63f1be056">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Pancakeswap in BNB chain<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Pancakeswap in BNB chain<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
         <a target="_blank" href="https://app.pangolin.exchange/#/swap?&outputCurrency=0xbd100d061e120b2c67a24453cf6368e63f1be056">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center w-100">Pangolin in AVAX chain<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Pangolin in AVAX chain<img src='${rightArrow}' alt="" /></button>
         </a>
        </div>
       </div>
@@ -1037,13 +1037,13 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
       <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>iDYP > iDYP</p>
        <a  target="_blank" href="https://app.dyp.finance/staking-idyp-1">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>iDYP > iDYP</p>
        <a  target="_blank" href="https://app.dyp.finance/staking-idyp-2">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
       </div>
@@ -1057,13 +1057,13 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
       <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>iDYP > iDYP</p>
        <a  target="_blank" href="https://app-bsc.dyp.finance/staking-idyp-1">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>iDYP > iDYP</p>
        <a  target="_blank" href="https://app-bsc.dyp.finance/staking-idyp-2">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        
@@ -1078,13 +1078,13 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
       <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>iDYP > iDYP</p>
        <a  target="_blank" href="https://app-avax.dyp.finance/staking-idyp-1">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <p class='mb-0'>iDYP > iDYP</p>
        <a  target="_blank" href="https://app-avax.dyp.finance/staking-idyp-2">
-        <button class="btn filled-btn pool-btn d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
       </div>
@@ -1147,96 +1147,96 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
       </p>
       <div class='row d-grid pool-container buydyp-container p-4'>
       <div class="pool-card p-3">
-        <h5 class='ethereum mb-0'>CEX</h5>
+        <h5 class='ethereum'>CEX</h5>
       <div class="d-grid inner-pool">
       <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://pro.coinbase.com/trade/DYP-USD">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Coinbase<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Coinbase<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://youtu.be/mjUUqNy-zW8">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://trade.kucoin.com/DYP-USDT">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Kucoin<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Kucoin<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://youtu.be/BIuy1A-_-dU">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://www.gate.io/trade/DYP_USDT">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Gate<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Gate<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://youtu.be/arVFXf5hESE">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://poloniex.com/exchange/USDT_DYP">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Poloniex<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Poloniex<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
       </div>
       </div>
       <div class="pool-card p-3">
-        <h5 class='bnb mb-0'>DEX</h5>
+        <h5 class='bnb'>DEX</h5>
       <div class="d-grid inner-pool">
       <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://app.uniswap.org/#/swap?use=V2&inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Uniswap<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Uniswap<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://youtu.be/XsmZ9xW_nps">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://pancakeswap.finance/swap?inputCurrencty=BNB&outputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Pancakeswap<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Pancakeswap<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://youtu.be/sLHWYgNEbq8">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://app.pangolin.exchange/#/swap?&outputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17 ">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Pangolin<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Pangolin<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://youtu.be/T6qYvErqD-M">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://app.1inch.io/#/1/swap/DYP/ETH">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">1inch<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">1inch<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://youtu.be/IE5danKYD-c">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://dmm.exchange/#/swap?outputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17&networkId=43114">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">KyberDMM<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">KyberDMM<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://youtu.be/olhIziGMs0Y">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
       </div>
@@ -1259,12 +1259,12 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
       <div class="d-grid inner-pool">
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://bridge.dyp.finance/">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">ETH < - > BNB Bridge<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">ETH < - > BNB Bridge<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://www.youtube.com/watch?v=SK-9PqZJM-I">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
       </div>
@@ -1277,12 +1277,12 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
       <div class="d-grid inner-pool">
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://avax-bridge.dyp.finance/">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">ETH < - > AVAX Bridge<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">ETH < - > AVAX Bridge<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
        <div class='d-flex justify-content-center flex-column'>
        <a  target="_blank" href="https://www.youtube.com/watch?v=k--YXSSYUMY">
-        <button class="btn filled-btn w-100 pool-btn d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+        <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
        </a>
        </div>
       </div>
@@ -1338,7 +1338,7 @@ If the DYP price is affected by more than -2.5%, then the maximum DYP amount tha
 More information about each of these features can be found on our medium article here
       </p>
       <a target="_blank" href="https://dypfinance.medium.com/defi-yield-protocol-dyp-tools-v1-launch-376fdf97d4f7">
-      <button class="btn filled-btn pool-btn">View More<img src='${rightArrow}' /></button>
+      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">View More<img src='${rightArrow}' /></button>
       </a>
       `,
       id: 'collapseTwo',
@@ -1346,8 +1346,8 @@ More information about each of these features can be found on our medium article
     },
     {
       title: 'Where can I access DYP Tools?',
-      content: `<<a target="_blank" href="https://tools.dyp.finance/">
-      <button class="btn filled-btn pool-btn">Access Here<img src='${rightArrow}' /></button>
+      content: `<a target="_blank" href="https://tools.dyp.finance/">
+      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Access Here<img src='${rightArrow}' /></button>
       </a>`,
       id: 'collapseThree',
       heading: 'headingThree'
@@ -1369,9 +1369,216 @@ More information about each of these features can be found on our medium article
       heading: 'headingFive'
     },
   ]
+  
+  const launchpad = [
+    {
+      title: 'What is Launchpad?',
+      content: `<p class="faq-content">
+      A crypto launchpad is a platform that helps startups and enterprises launch their own cryptocurrency or blockchain projects. The launchpad provides the necessary tools, resources, and support to help these organizations succeed.
+      </p>`,
+      id: 'collapseOne',
+      heading: 'headingOne'
+    },
+    {
+      title: 'What is DYP Launchpad?',
+      content: `<p class="faq-content">
+      DYP Launchpad is an Ecosystem designed for DeFi users to earn a yield on their assets, supplying advanced features to track tokens, NFTs, and more. The Launchpad enables projects to raise capital in a decentralized environment utilizing DYP Tools to deliver the highest security for users.
+Learn more about DYP Launchpad and how it works from this medium article: 
+      </p>
+      <a target="_blank" href="https://dypfinance.medium.com/learn-about-defi-yield-protocol-launchpad-547c387409c2">
+      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">View More<img src='${rightArrow}' /></button>
+      </a>
+      `,
+      id: 'collapseTwo',
+      heading: 'headingTwo'
+    },
+    {
+      title: 'What are the key features of DYP Launchpad?',
+      content: `<p class="faq-content">
+      - Mandatory smart contract audits by a top-tier auditor
+      - Know Your Customer (“KYC”) of the project team
+      - Liquidity locked utilizing DYP Locker
+      - Team tokens locked in vesting contracts      
+      </p>`,
+      id: 'collapseThree',
+      heading: 'headingThree'
+    },
+    {
+      title: 'What are the key features of DYP Launchpad for users?',
+      content: `<p class="faq-content">
+      - Project outline
+      - Due diligence reports
+      - Audit reports for contracts
+      - How much tokens will the project offer?
+      - How much the project raised in capital? 
+      - Multiple tiers depending on the amount of locked DYP
+      - Varied max token buy available at different tiers
+      </p>`,
+      id: 'collapseFour',
+      heading: 'headingFour'
+    },
+    {
+      title: 'What are the key features of DYP Launchpad for teams?',
+      content: `<p class="faq-content">
+      - Tier smart contract to allow users to lockup DYP for relevant tiers
+- Integrated standard presale smart contracts accept USDC, USDT, DAI, WBTC, WBNB, WAVAX and WETH at predefined rates
+- Users get tokens instantly, and collected funds are in the DYP team’s custody to be delivered to the fundraising team by DYP
+- Integrated Token Locker smart contract with presale contract to automatically lock tokens for a predefined time after the purchase 
+      </p>`,
+      id: 'collapseFive',
+      heading: 'headingFive'
+    },
+  ]
+
+  const general = [
+    {
+      title: 'Where can I find DYP Tokenomics?',
+      content: `
+      <a target="_blank" href="https://dyp.finance/tokenomics">
+      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Tokenomics<img src='${rightArrow}' /></button>
+      </a>
+      `,
+      id: 'collapseOne',
+      heading: 'headingOne'
+    },
+    {
+      title: 'What are contract addresses of DYP and iDYP?',
+      content: `<p class="faq-content">
+      DYP: 0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17
+      iDYP: 0xBD100d061E120b2c67A24453CF6368E63f1Be056
+
+      The contract addresses are same across 3 chains ETH, BNB and AVAX
+      </p>`,
+      id: 'collapseTwo',
+      heading: 'headingTwo'
+    },
+    {
+      title: 'Where can I find the DYP Team?',
+      content: `<p class="faq-content">
+      DYP team is located around the world working remotely in different locations. We also have physical offices located in Romania and Albania. You can find the doxed DYP team and their backgrounds on the website here: 
+
+      </p>
+      <a target="_blank" href="https://dyp.finance/about">
+      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Team<img src='${rightArrow}' /></button>
+      </a>
+      `,
+      id: 'collapseThree',
+      heading: 'headingThree'
+    },
+    {
+      title: 'Which wallets support DYP products?',
+      content: `<p class="faq-content">
+      DYP products are supported by almost every widely used wallet. See list below for more details:
+
+        <b>Metamask</b>
+        <b>Coinbase Wallet</b>
+        <b>Trustwallet</b>
+        <b>Walletconnect</b>
+        <b>Safepal</b>
+        <b>Coin98</b>
+
+      </p>`,
+      id: 'collapseFour',
+      heading: 'headingFour'
+    },
+    {
+      title: 'How are rewards paid? How does DYP generates revenue to pay rewards?',
+      content: `<p class="faq-content">
+      The rewards are shown on dApp in real time, and they need to be claimed to be sent to a user’s wallet. Rewards are generated based on Proof of Stake (PoS) concept. Proof of Stake (PoS) is a consensus mechanism where block validators are selected based on the number of coins they are staking. For more information about PoS check the link down below:
+      </p>
+      <a target="_blank" href="https://academy.binance.com/en/glossary/proof-of-stake">
+      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Proof of stake<img src='${rightArrow}' /></button>
+      </a>
+      `,
+      id: 'collapseFive',
+      heading: 'headingFive'
+    },
+    {
+      title: 'Does DYP have any VC’s invested into it?',
+      content: `<p class="faq-content">
+      No, DYP does not have VC’s invested into DYP, instead DYP utilizes their own ETH mining farm. The revenue generated from the farm helps support the development of the DYP ecosystem. 
+      </p>`,
+      id: 'collapseSix',
+      heading: 'headingSix'
+    },
+    {
+      title: 'Does DYP have any partners?',
+      content: `<p class="faq-content">
+      Yes, DYP is partnered with many companies like:
+      <b>Coinbase</b>
+      <b>Avalanche</b>
+      <b>Chainlink</b>
+      <b>Pangolin</b>
+      <b>Huobi</b>
+      <b>Coin98</b>
+      <b>Gate.io</b>
+      <b>KuCoin</b>
+      <b>Crypto.com</b>
+      </p>
+      <a target="_blank" href="https://dyp.finance/#our-partners">
+      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Full List<img src='${rightArrow}' /></button>
+      </a>
+      `,
+      id: 'collapseSeven',
+      heading: 'headingSeven'
+    },
+    {
+      title: 'Where can I find DYP Roadmap?',
+      content: `<p class="faq-content">
+      <a target="_blank" href="https://dyp.finance/roadmap">
+      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Roadmap<img src='${rightArrow}' /></button>
+      </a>
+      </p>`,
+      id: 'collapseEight',
+      heading: 'headingEight'
+    },
+    {
+      title: 'Is DYP secure (audited)?',
+      content: `<p class="faq-content">
+      Yes, DYP only releases a product after thorough audits and safety measures and will never compromise on security.
+      You can find all of the audit reports here:       
+      </p>
+      <a target="_blank" href="https://dyp.finance/audit">
+      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Audit<img src='${rightArrow}' /></button>
+      </a>
+      <p class="faq-content">
+      DYP is audited by 3 reputed companies Certik, Packshield and Blockchain Consilium.
+
+Also there is a 24/7 security oracle from Certik that is always monitoring our contracts 
+       
+      </p>
+      <a target="_blank" href="https://www.certik.com/projects/dypfinance">
+      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Certik<img src='${rightArrow}' /></button>
+      </a>
+
+      `,
+      id: 'collapseNine',
+      heading: 'headingNine'
+    },
+    {
+      title: 'Where can I find all the links related to DYP?',
+      content: ` <a target="_blank" href="https://linktr.ee/dyp.finance">
+      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Linktree<img src='${rightArrow}' /></button>
+      </a>`,
+      id: 'collapseTen',
+      heading: 'headingTen'
+    },
+    {
+      title: 'What is the total amount of DYP coins that are circulating in the market? ',
+      content: `<p class="faq-content">
+      The total amount is <b>23,115,714</b> DYP. For more information about DYP please refer to the URL down below: 
+      </p>
+      <a target="_blank" href="https://coinmarketcap.com/currencies/defi-yield-protocol/">
+      <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">CoinMarketCap<img src='${rightArrow}' /></button>
+      </a>
+      `,
+      id: 'collapseEleven',
+      heading: 'headingEleven'
+    },
+  ]
 
 
-  const [faqItems, setFaqItems] = useState(dypTools)
+  const [faqItems, setFaqItems] = useState(general)
 
 
 
