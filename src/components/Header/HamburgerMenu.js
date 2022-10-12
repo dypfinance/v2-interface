@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import dypiusIcon from "../../assets/dyptoolsIcon.svg";
 import OutsideClickHandler from "react-outside-click-handler";
+import toolsLogo from "../../assets/dypToolsLogo.svg";
 import { NavLink } from "react-router-dom";
 
 const HamburgerMenu = () => {
@@ -83,7 +84,7 @@ const HamburgerMenu = () => {
             </li>
             <li>
               <button className="btn text-white py-2">
-                <img src={dypiusIcon} className="pe-2" />
+                <img src={toolsLogo} className="pe-2" />
                 DYP Tools
               </button>
             </li>

@@ -3,6 +3,7 @@ import Title from '../../../components/Title/Title'
 import './_videotutorials.scss'
 import rightArrow from '../../../assets/right-arrow.svg'
 import playButton from '../../Dyp/assets/playButton.svg'
+import sphere from '../../../assets/newsSphere.png'
 
 const VideoTutorials = () => {
 
@@ -31,7 +32,7 @@ const VideoTutorials = () => {
 
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid mt-5">
         <div className="container-lg">
             <div className="row">
                 <div className="col-3 d-flex flex-column gap-3">
@@ -43,11 +44,14 @@ const VideoTutorials = () => {
                         View More <img src={rightArrow} alt="" />
                     </button>
                 </div>
-                <div className="col-9 d-grid video-wrapper gap-5 justify-content-between p-4 position-relative">
+                <div className="col-9 d-grid video-wrapper justify-content-between p-4 position-relative">
+                  <img src={sphere} className='sphere position-absolute' alt="" />
+                  <img src={sphere} className='sphere position-absolute' alt="" />
+                  <img src={sphere} className='sphere position-absolute' alt="" />
                 {vidsArray.length > 0 &&
             vidsArray.map((item, index) => {
               return (
-                <div key={index} className="cardWrapper card">
+                <div key={index} className={`cardWrapper card-${index + 1}`}>
                   <a href={item.link} target="_blank" rel="noreferrer">
                     <div className="p-3 bg-white">
                       <img

@@ -8,10 +8,10 @@ import rightArrow from '../../assets/right-arrow.svg'
 
 const FAQAccordion = ({id, heading, title, content }) => {
   return (
-     <div class="accordion-item">
-                <h2 class="accordion-header" id={heading}>
+     <div className="accordion-item">
+                <h2 className="accordion-header" id={heading}>
                   <button
-                    class="accordion-button"
+                    className="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target={`#${id}`}
@@ -24,11 +24,11 @@ const FAQAccordion = ({id, heading, title, content }) => {
                 </h2>
                 <div
                   id={id}
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby={heading}
                   data-bs-parent="#faqAccordion"
                 >
-                  <div class="accordion-body" dangerouslySetInnerHTML={{__html: content}}>
+                  <div className="accordion-body" dangerouslySetInnerHTML={{__html: content}}>
          
                   </div>
                 </div>
