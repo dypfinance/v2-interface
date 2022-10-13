@@ -1,0 +1,35 @@
+.uni-card {
+width: 316px;
+position: absolute;
+left: 0;
+top: 30px;
+
+}
+
+.pancake-card {
+    width: 316px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+
+}
+
+.pangolin-card {
+    width: 316px;
+    position: absolute;
+    left: 32px;
+    top: 170px;
+
+}
+
+
+
+@media only screen and (max-width: 991px) {
+
+    .uni-card, .pancake-card, .pangolin-card {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+    }
+}

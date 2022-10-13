@@ -105,7 +105,7 @@ const Footer = () => {
     },
     {
       title: "iDYP Token",
-      link: "#",
+      link: "/idyp",
     },
     {
       title: "Metaverse",
