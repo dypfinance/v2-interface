@@ -15,6 +15,7 @@ import Disclaimer from "./Screens/Disclaimer/Disclaimer";
 import AOS from 'aos'
 import Support from "./Screens/Support/Support";
 import Governance from "./Screens/Governance/Governance";
+import BuyDyp from "./Screens/BuyDyp/BuyDyp";
 
 function App() {
 
@@ -35,6 +36,8 @@ function App() {
         <Route exact path="/support" element={<Support />} />
         <Route exact path="/disclaimer" element={<Disclaimer />} />
         <Route exact path="/governance" element={<Governance />} />
+        <Route exact path="/buydyp" element={<BuyDyp />} />
+
 
       </Routes>
       <ScrollTop/>
