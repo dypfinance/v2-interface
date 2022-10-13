@@ -7,12 +7,11 @@ import axios from 'axios'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-
 import { RingLoader } from 'react-spinners'
 
 import './_dypnews.scss'
 
-const DypNews = () => {
+const DypNews = ({topTitle, bottomTitle, titleAlign}) => {
 
 
   const settings = {
@@ -83,12 +82,12 @@ const sortedNewsItems = newsData.map(item => {
 
 
   return (
-    <div className='container-lg'>
+    <div className='container-lg' id='dypNews'>
         <div className="row dyp-news">
 
           <div className="col-12 d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center ps-4 ps-lg-2 mb-5 mb-lg-0 gap-4">
           <img className='sphere' src={require(`../../../assets/newsSphere.png`)} />   
-            <Title top='Announcements' bottom='Stay tuned' />
+            <Title top={topTitle} bottom={bottomTitle} align={titleAlign} />
             <div className="button-group">
               <button className="btn filled-btn mr-3">
                 Read more 

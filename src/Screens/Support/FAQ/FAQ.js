@@ -40,11 +40,11 @@ const FAQ = () => {
           title: "Where can I find DYP Tokenomics?",
           content: `
        <a target="_blank" href="https://dyp.finance/tokenomics">
-       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Tokenomics<img src='${rightArrow}' /></button>
+       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Tokenomics<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
        </a>
        `,
-          collapse: "collapseOne",
-          heading: "headingOne",
+          collapse: "collapseGeneralOne",
+          heading: "headingGeneralOne",
         },
         {
           id: 80,
@@ -55,8 +55,8 @@ const FAQ = () => {
  
        The contract addresses are same across 3 chains ETH, BNB and AVAX
        </p>`,
-          collapse: "collapseTwo",
-          heading: "headingTwo",
+          collapse: "collapseGeneralTwo",
+          heading: "headingGeneralTwo",
         },
         {
           id: 81,
@@ -66,11 +66,11 @@ const FAQ = () => {
  
        </p>
        <a target="_blank" href="https://dyp.finance/about">
-       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Team<img src='${rightArrow}' /></button>
+       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Team<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
        </a>
        `,
-          collapse: "collapseThree",
-          heading: "headingThree",
+          collapse: "collapseGeneralThree",
+          heading: "headingGeneralThree",
         },
         {
           id: 82,
@@ -86,8 +86,8 @@ const FAQ = () => {
          <b>Coin98</b>
  
        </p>`,
-          collapse: "collapseFour",
-          heading: "headingFour",
+          collapse: "collapseGeneralFour",
+          heading: "headingGeneralFour",
         },
         {
           id: 83,
@@ -97,11 +97,11 @@ const FAQ = () => {
        The rewards are shown on dApp in real time, and they need to be claimed to be sent to a user’s wallet. Rewards are generated based on Proof of Stake (PoS) concept. Proof of Stake (PoS) is a consensus mechanism where block validators are selected based on the number of coins they are staking. For more information about PoS check the link down below:
        </p>
        <a target="_blank" href="https://academy.binance.com/en/glossary/proof-of-stake">
-       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Proof of stake<img src='${rightArrow}' /></button>
+       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Proof of stake<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
        </a>
        `,
-          collapse: "collapseFive",
-          heading: "headingFive",
+          collapse: "collapseGeneralFive",
+          heading: "headingGeneralFive",
         },
         {
           id: 84,
@@ -109,8 +109,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
        No, DYP does not have VC’s invested into DYP, instead DYP utilizes their own ETH mining farm. The revenue generated from the farm helps support the development of the DYP ecosystem. 
        </p>`,
-          collapse: "collapseSix",
-          heading: "headingSix",
+          collapse: "collapseGeneralSix",
+          heading: "headingGeneralSix",
         },
         {
           id: 85,
@@ -128,22 +128,22 @@ const FAQ = () => {
        <b>Crypto.com</b>
        </p>
        <a target="_blank" href="https://dyp.finance/#our-partners">
-       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Full List<img src='${rightArrow}' /></button>
+       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Full List<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
        </a>
        `,
-          collapse: "collapseSeven",
-          heading: "headingSeven",
+          collapse: "collapseGeneralSeven",
+          heading: "headingGeneralSeven",
         },
         {
           id: 86,
           title: "Where can I find DYP Roadmap?",
           content: `<p class="faq-content">
        <a target="_blank" href="https://dyp.finance/roadmap">
-       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Roadmap<img src='${rightArrow}' /></button>
+       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Roadmap<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
        </a>
        </p>`,
-          collapse: "collapseEight",
-          heading: "headingEight",
+          collapse: "collapseGeneralEight",
+          heading: "headingGeneralEight",
         },
         {
           id: 87,
@@ -153,7 +153,7 @@ const FAQ = () => {
        You can find all of the audit reports here:       
        </p>
        <a target="_blank" href="https://dyp.finance/audit">
-       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Audit<img src='${rightArrow}' /></button>
+       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Audit<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
        </a>
        <p class="faq-content">
        DYP is audited by 3 reputed companies Certik, Packshield and Blockchain Consilium.
@@ -162,21 +162,21 @@ const FAQ = () => {
         
        </p>
        <a target="_blank" href="https://www.certik.com/projects/dypfinance">
-       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Certik<img src='${rightArrow}' /></button>
+       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Certik<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
        </a>
  
        `,
-          collapse: "collapseNine",
-          heading: "headingNine",
+          collapse: "collapseGeneralNine",
+          heading: "headingGeneralNine",
         },
         {
           id: 88,
           title: "Where can I find all the links related to DYP?",
           content: ` <a target="_blank" href="https://linktr.ee/dyp.finance">
-       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Linktree<img src='${rightArrow}' /></button>
+       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Linktree<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
        </a>`,
-          collapse: "collapseTen",
-          heading: "headingTen",
+          collapse: "collapseGeneralTen",
+          heading: "headingGeneralTen",
         },
         {
           id: 89,
@@ -186,11 +186,11 @@ const FAQ = () => {
        The total amount is <b>23,115,714</b> DYP. For more information about DYP please refer to the URL down below: 
        </p>
        <a target="_blank" href="https://coinmarketcap.com/currencies/defi-yield-protocol/">
-       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">CoinMarketCap<img src='${rightArrow}' /></button>
+       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">CoinMarketCap<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
        </a>
        `,
-          collapse: "collapseEleven",
-          heading: "headingEleven",
+          collapse: "collapseGeneralEleven",
+          heading: "headingGeneralEleven",
         },
       ],
     },
@@ -203,16 +203,16 @@ const FAQ = () => {
           title: "What is Staking?",
           content:
             '<p class="mb-0 faq-content">An innovative metaverse platform that redefines the gaming industry and digital currency services. Platform utilizes cutting-edge blockchain technology, giving an unique experience.</p>',
-          collapse: "collapseOne",
-          heading: "headingOne",
+          collapse: "collapseStakeOne",
+          heading: "headingStakeOne",
         },
         {
           id: 2,
           title: "What is DYP Staking?",
           content:
             '<p class="mb-0 faq-content">DYP Staking is a product that allows users to deposit DYP tokens into an audited staking contract to earn rewards. The staking pools integrate the REINVEST function allowing users to automatically add their daily rewards back into the staking pool.</p>',
-          collapse: "collapseTwo",
-          heading: "headingTwo",
+          collapse: "collapseStakeTwo",
+          heading: "headingStakeTwo",
         },
         {
           id: 3,
@@ -223,32 +223,32 @@ const FAQ = () => {
           2. Users can stake $DYP tokens and earn ETH, BNB, or AVAX rewards with a fixed 25% APR.
           *Neither of these staking pools contain impermanent loss (IL). </p>
           `,
-          collapse: "collapseThree",
-          heading: "headingThree",
+          collapse: "collapseStakeThree",
+          heading: "headingStakeThree",
         },
         {
           id: 4,
           title: "What chains are available for DYP staking?",
           content:
             '<p class="mb-0 faq-content">Currently, DYP offers staking on ETH, BNB and AVAX.</p>',
-          collapse: "collapseFour",
-          heading: "headingFour",
+          collapse: "collapseStakeFour",
+          heading: "headingStakeFour",
         },
         {
           id: 5,
           title: "What Lock Times are available for DYP staking?",
           content:
             '<p class="mb-0 faq-content">Currently, DYP offers staking with no lock period, 90 days, and 180 days.</p>',
-          collapse: "collapseFive",
-          heading: "headingFive",
+          collapse: "collapseStakeFive",
+          heading: "headingStakeFive",
         },
         {
           id: 6,
           title: "How are rewards distributed from staking?",
           content:
             '<p class="mb-0 faq-content">The rewards are shown in real time on the DYP dApp and will need to be claimed in order to transfer the rewards to the user’s wallet.</p>',
-          collapse: "collapseSix",
-          heading: "headingSix",
+          collapse: "collapseStakeSix",
+          heading: "headingStakeSix",
         },
         {
           id: 7,
@@ -257,8 +257,8 @@ const FAQ = () => {
             '<p class="mb-0 faq-content">The rewards are generated based on Proof of Stake concept. Proof of Stake (PoS) is a consensus mechanism where block validators are selected based on the number of coins they are staking. For more information about PoS you can head to the link down below: </p>',
           links: "https://academy.binance.com/en/glossary/proof-of-stake",
           linkLabels: "View Link",
-          collapse: "collapseSeven",
-          heading: "headingSeven",
+          collapse: "collapseStakeSeven",
+          heading: "headingStakeSeven",
         },
         {
           id: 8,
@@ -270,16 +270,16 @@ const FAQ = () => {
           - Click Withdraw.
           - Complete the transaction.</p>
           `,
-          collapse: "collapseEight",
-          heading: "headingEight",
+          collapse: "collapseStakeEight",
+          heading: "headingStakeEight",
         },
         {
           id: 9,
-          title: "hat if I am not able to withdraw my assets?",
+          title: "What if I am not able to withdraw my assets?",
           content:
             '<p class="mb-0 faq-content">First, check to see if the assets are locked in a pool and if the pool lock has ended. Users can withdraw their asset after the completion of the lock period. i.e., if you joined a 90-day pool you can only withdraw after the 90-day lock period is over.</p>',
-          collapse: "collapseNine",
-          heading: "headingNine",
+          collapse: "collapseStakeNine",
+          heading: "headingStakeNine",
         },
         {
           id: 10,
@@ -287,16 +287,16 @@ const FAQ = () => {
           "Will I be getting the same amount of DYP I deposited when I withdraw?",
           content:
             '<p class="mb-0 faq-content">Yes, you users will withdraw the same amount of DYP as deposited.</p>',
-          collapse: "collapseTen",
-          heading: "headingTen",
+          collapse: "collapseStakeTen",
+          heading: "headingStakeTen",
         },
         {
           id: 11,
           title: "Will my lock period reset if I deposit additional assets?",
           content:
             '<p class="mb-0 faq-content">Yes, if users add new deposits in between lock periods, the lock period resets back to 0 days. Users will need to wait for the new lock period to expire before withdrawal of assets would be possible.</p>',
-          collapse: "collapseEleven",
-          heading: "headingEleven",
+          collapse: "collapseStakeEleven",
+          heading: "headingStakeEleven",
         },
         {
           id: 12,
@@ -304,16 +304,16 @@ const FAQ = () => {
           "Can I still earn rewards even after my lock period ends if I do not withdraw my assets?",
           content:
             '<p class="mb-0 faq-content">Yes, users will continue to earn rewards even after the initial lock period ends and can earn these rewards until the contract expiry.</p>',
-          collapse: "collapseTwelve",
-          heading: "headingTwelve",
+          collapse: "collapseStakeTwelve",
+          heading: "headingStakeTwelve",
         },
         {
           id: 13,
           title: "What is APY?",
           content:
             '<p class="mb-0 faq-content">Annual percentage yield (APY) is a percentage that reflects the amount of money, or interest, you earn on an account over the course of one entire year.</p>',
-          collapse: "collapseThirteen",
-          heading: "headingThirteen",
+          collapse: "collapseStakeThirteen",
+          heading: "headingStakeThirteen",
         },
         {
           id: 14,
@@ -329,8 +329,8 @@ const FAQ = () => {
           title: "What is the Reinvest function?",
           content:
             '<p class="mb-0 faq-content">The Reinvest function allows users to reinvest their earned rewards back into the original deposited value so that they can earn more rewards with the new increase in deposited token balance. In addition, the reinvest function does NOT reset user’s lock period.</p>',
-          collapse: "collapseFifteen",
-          heading: "headingFifteen",
+          collapse: "collapseStakeFifteen",
+          heading: "headingStakeFifteen",
         },
         {
           id: 16,
@@ -342,103 +342,103 @@ const FAQ = () => {
           <div class='row d-grid pool-container p-4'>
           <div class="pool-card p-3">
             <div class="d-flex flex-row gap-2 mb-2">
-            <img src='${ethIcon}' alt="" />
+            <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/ethereumDropdown.svg' alt="" />
             <h5 class='ethereum mb-0'>ETH Pools</h5>
             </div>
           <div class="d-grid inner-pool">
           <div class='d-flex justify-content-center flex-column'>
            <p class='mb-0'>DYP > DYP</p>
            <a  target="_blank" href="https://app.dyp.finance/constant-staking-1">
-            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
+            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
            </a>
            </div>
            <div class='d-flex justify-content-center flex-column'>
            <p class='mb-0'>DYP > ETH</p>
            <a  target="_blank" href=" https://app.dyp.finance/constant-staking-2">
-            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
            </a>
            </div>
            <div class='d-flex justify-content-center flex-column'>
            <p class='mb-0'>DYP > DYP</p>
            <a  target="_blank" href=" https://app.dyp.finance/constant-staking-3">
-            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
            </a>
            </div>
            <div class='d-flex justify-content-center flex-column'>
            <p class='mb-0'>DYP > ETH</p>
            <a  target="_blank" href="https://youtu.be/D5g19SuQlcI">
-            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial <img src='${rightArrow}' alt="" /></button>
+            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
            </a>
            </div>
           </div>
           </div>
           <div class="pool-card p-3">
           <div class="d-flex flex-row gap-2 mb-2">
-            <img src='${bnbIcon}' alt="" />
+            <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/bnbDropdown.svg' alt="" />
             <h5 class='bnb mb-0'>BNB Pools</h5>
             </div>
           <div class="d-grid inner-pool">
           <div class='d-flex justify-content-center flex-column'>
            <p class='mb-0'>DYP > DYP</p>
            <a  target="_blank" href="https://app-bsc.dyp.finance/constant-staking-1">
-            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
+            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
            </a>
            </div>
            <div class='d-flex justify-content-center flex-column'>
            <p class='mb-0'>DYP > BNB</p>
            <a  target="_blank" href="https://app-bsc.dyp.finance/constant-staking-2">
-            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
            </a>
            </div>
            <div class='d-flex justify-content-center flex-column'>
            <p class='mb-0'>DYP > DYP</p>
            <a  target="_blank" href="https://app-bsc.dyp.finance/constant-staking-3">
-            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
            </a>
            </div>
            <div class='d-flex justify-content-center flex-column'>
            <p class='mb-0'>DYP > BNB</p>
            <a  target="_blank" href="https://youtu.be/sYkoxGbpBi4">
-            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial <img src='${rightArrow}' alt="" /></button>
+            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
            </a>
            </div>
           </div>
           </div>
           <div class="pool-card p-3">
           <div class="d-flex flex-row gap-2 mb-2">
-            <img src='${avaxIcon}' alt="" />
+            <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/avaDropdown.svg' alt="" />
             <h5 class='avax mb-0'>AVAX Pools</h5>
             </div>
           <div class="d-grid inner-pool">
           <div class='d-flex justify-content-center flex-column'>
            <p class='mb-0'>DYP > DYP</p>
            <a  target="_blank" href="https://app-avax.dyp.finance/constant-staking-1">
-            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
+            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
            </a>
            </div>
            <div class='d-flex justify-content-center flex-column'>
            <p class='mb-0'>DYP > AVAX</p>
            <a  target="_blank" href="https://app-avax.dyp.finance/constant-staking-2">
-            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
            </a>
            </div>
            <div class='d-flex justify-content-center flex-column'>
            <p class='mb-0'>DYP > DYP</p>
            <a  target="_blank" href="https://app-avax.dyp.finance/constant-staking-3">
-            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
            </a>
            </div>
            <div class='d-flex justify-content-center flex-column'>
            <p class='mb-0'>DYP > AVAX</p>
            <a  target="_blank" href="https://youtu.be/s9gwo3J119U">
-            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial <img src='${rightArrow}' alt="" /></button>
+            <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
            </a>
            </div>
           </div>
           </div>
         </div>`,
-          collapse: "collapseSixteen",
-          heading: "headingSixteen",
+          collapse: "collapseStakeSixteen",
+          heading: "headingStakeSixteen",
         },
       ],
     },
@@ -465,8 +465,8 @@ const FAQ = () => {
          
          Expected yield returns are usually annualized. The prospective returns are calculated over the course of a year.</p>
          `,
-          collapse: "collapseOne",
-          heading: "headingOne",
+          collapse: "collapseFarmOne",
+          heading: "headingFarmOne",
         },
         {
           id: 18,
@@ -501,8 +501,8 @@ const FAQ = () => {
               </tr>
             </tbody>
           </table>`,
-          collapse: "collapseTwo",
-          heading: "headingTwo",
+          collapse: "collapseFarmTwo",
+          heading: "headingFarmTwo",
         },
         {
           id: 21,
@@ -516,15 +516,15 @@ const FAQ = () => {
          
          <b>Note</b>: In farming, users will need to do the Withdraw transaction twice because the first transaction is to withdraw the $DYP, and the second transaction is to withdraw the chosen reward. When users click withdraw, their LP is then converted to the selected assets and is sent to their wallet
          </p>`,
-          collapse: "collapseThree",
-          heading: "headingThree",
+          collapse: "collapseFarmThree",
+          heading: "headingFarmThree",
         },
         {
           id: 22,
           title: "What if I am not able to withdraw my assets?",
           content: `<p class="faq-content">First, check to see if the assets are locked in a pool and if the pool lock has ended. Users can withdraw their asset after the completion of the lock period. i.e., if you joined a 90-day pool you can only withdraw after the 90-day lock period is over</p>`,
-          collapse: "collapseFour",
-          heading: "headingFour",
+          collapse: "collapseFarmFour",
+          heading: "headingFarmFour",
         },
         {
           id: 23,
@@ -532,8 +532,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
          Yes, if users add new deposits in between lock periods, the lock period resets back to 0 days. Users will need to wait for the new lock period to expire before withdrawal of assets would be possible.
          </p>`,
-          collapse: "collapseFive",
-          heading: "headingFive",
+          collapse: "collapseFarmFive",
+          heading: "headingFarmFive",
         },
         {
           id: 24,
@@ -542,8 +542,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
          Yes, users will continue to earn rewards even after the initial lock period ends and can earn these rewards until the contract expiry.
          </p>`,
-          collapse: "collapseSix",
-          heading: "headingSix",
+          collapse: "collapseFarmSix",
+          heading: "headingFarmSix",
         },
         {
           id: 25,
@@ -551,8 +551,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
          Annual percentage yield (APY) is a percentage that reflects the amount of money, or interest, you earn on an account over the course of one entire year.
          </p>`,
-          collapse: "collapseSeven",
-          heading: "headingSeven",
+          collapse: "collapseFarmSeven",
+          heading: "headingFarmSeven",
         },
         {
           id: 26,
@@ -561,8 +561,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
          No, users will continue to receive their rewards based on the current APY.
          </p>`,
-          collapse: "collapseEight",
-          heading: "headingEight",
+          collapse: "collapseFarmEight",
+          heading: "headingFarmEight",
         },
         {
           id: 27,
@@ -571,8 +571,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
          Why don’t my actual rewards match with the rewards shown on the calculator?
          </p>`,
-          collapse: "collapseNine",
-          heading: "headingNine",
+          collapse: "collapseFarmNine",
+          heading: "headingFarmNine",
         },
         {
           id: 28,
@@ -580,8 +580,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
          The APY is calculated based on multiple factors which include the token prices of involved tokens, (ETH / BNB / AVAX / iDYP / DYP) and number of people participating in the pools. The rewards users earn depends on their percentage of the pool share.
          </p>`,
-          collapse: "collapseTen",
-          heading: "headingTen",
+          collapse: "collapseFarmTen",
+          heading: "headingFarmTen",
         },
         {
           id: 29,
@@ -589,8 +589,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
          A claim needs to be triggered by you or someone from pool. A user simply needs to click CLAIM and complete the transaction. Even if a user choose not to click claim, their rewards are accumulated so they can just come back later and click claim to get all the day's rewards.
          </p>`,
-          collapse: "collapseEleven",
-          heading: "headingEleven",
+          collapse: "collapseFarmEleven",
+          heading: "headingFarmEleven",
         },
         {
           id: 30,
@@ -599,11 +599,11 @@ const FAQ = () => {
          Yield farming does have Impermanent loss. You can read about how impermanent loss works below. There are also multiple videos on YouTube explaining the concept.
          </p>
          <a target="_blank" href="https://academy.binance.com/en/articles/impermanent-loss-explained">
-         <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">View More <img src='${rightArrow}' /></button>
+         <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">View More <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
          </a>
          `,
-          collapse: "collapseTwelve",
-          heading: "headingTwelve",
+          collapse: "collapseFarmTwelve",
+          heading: "headingFarmTwelve",
         },
         {
           id: 31,
@@ -612,8 +612,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
          The rewards are generated in Wrapped form, WETH, WBNB, WAVAX for example, so users may need to add these as custom tokens.
          </p>`,
-          collapse: "collapseThirteen",
-          heading: "headingThirteen",
+          collapse: "collapseFarmThirteen",
+          heading: "headingFarmThirteen",
         },
         {
           id: 32,
@@ -623,8 +623,8 @@ const FAQ = () => {
    Users can also Swap these token to other tokens WETH->USDT for example.
    
          </p>`,
-          collapse: "collapseFourteen",
-          heading: "headingFourteen",
+          collapse: "collapseFarmFourteen",
+          heading: "headingFarmFourteen",
         },
         {
           id: 33,
@@ -635,8 +635,8 @@ const FAQ = () => {
    If the DYP price is affected by more than -2.5%, then the maximum DYP amount that does not affect the price will be swapped, with the remaining amount distributed in the next day’s rewards. After seven days, if we still have undistributed DYP rewards, the Dypius governance will vote on whether the remaining DYP will be distributed to the token holders or burned (all burned tokens are removed from circulation).
    
          </p>`,
-          collapse: "collapseFifteen",
-          heading: "headingFifteen",
+          collapse: "collapseFarmFifteen",
+          heading: "headingFarmFifteen",
         },
         {
           id: 34,
@@ -648,121 +648,121 @@ const FAQ = () => {
                      <div class='row d-grid pool-container p-4'>
                        <div class="pool-card p-3">
                          <div class="d-flex flex-row gap-2 mb-3">
-                         <img src='${ethIcon}' alt="" />
+                         <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/ethereumDropdown.svg' alt="" />
                          <h5 class='ethereum mb-0'>ETH Pools</h5>
                          </div>
                        <div class="d-grid inner-pool">
                        <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app.dyp.finance/farming-new-1">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app.dyp.finance/farming-new-2">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">3 Days<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">3 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app.dyp.finance/farming-new-3">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">30 Days<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">30 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app.dyp.finance/farming-new-4">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">60 Days<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">60 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app.dyp.finance/farming-new-5">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://youtu.be/xc2S9Jei7DA">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                        </div>
                        </div>
                        <div class="pool-card p-3">
                        <div class="d-flex flex-row gap-2 mb-3">
-                         <img src='${bnbIcon}' alt="" />
+                         <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/bnbDropdown.svg' alt="" />
                          <h5 class='bnb mb-0'>BNB Pools</h5>
                          </div>
                          <div class="d-grid inner-pool">
                        <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app-bsc.dyp.finance/farming-new-1">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app-bsc.dyp.finance/farming-new-2">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">3 Days<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">3 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app-bsc.dyp.finance/farming-new-3">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">30 Days<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">30 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app-bsc.dyp.finance/farming-new-4">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">60 Days<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">60 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app-bsc.dyp.finance/farming-new-5">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://youtu.be/2pOUmRTMN1o">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                        </div>
                        </div>
                        <div class="pool-card p-3">
                        <div class="d-flex flex-row gap-2 mb-3">
-                         <img src='${avaxIcon}' alt="" />
+                         <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/avaDropdown.svg' alt="" />
                          <h5 class='avax mb-0'>AVAX Pools</h5>
                          </div>
                        <div class="d-grid inner-pool">
                        <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app-avax.dyp.finance/farming-new-1">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app-avax.dyp.finance/farming-new-2">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">3 Days<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">3 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app-avax.dyp.finance/farming-new-3">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">30 Days<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">30 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app-avax.dyp.finance/farming-new-4">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">60 Days<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">60 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://app-avax.dyp.finance/farming-new-5">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                         <div class='d-flex justify-content-center flex-column'>
                          <a target="_blank" href="https://youtu.be/b-WHRSgFn-k">
-                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
+                         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
                          </a>
                         </div>
                        </div>
                        </div>
                      </div>`,
-          collapse: "collapseSixteen",
-          heading: "headingSixteen",
+          collapse: "collapseFarmSixteen",
+          heading: "headingFarmSixteen",
         },
       ],
     },
@@ -777,8 +777,8 @@ const FAQ = () => {
  
        To start earning, simply deposit one of the supported assets into the Buyback contract. Then all deposited assets will automatically be converted into DYP + iDYP and deposited into a staking contract and earn 75% APR in DYP. The rewards are distributed automatically and can be claimed every day. When you unstake you will receive all the deposited amounts in DYP.
        </p>`,
-          collapse: "collapseOne",
-          heading: "headingOne",
+          collapse: "collapseBuybackOne",
+          heading: "headingBuybackOne",
         },
         {
           id: 36,
@@ -789,8 +789,8 @@ const FAQ = () => {
        - You can choose to withdraw part of your assets, or you can click Max to withdraw 100% of your assets.
        - Click Withdraw and complete the 2 transactions.
        </p>`,
-          collapse: "collapseTwo",
-          heading: "headingTwo",
+          collapse: "collapseBuybackTwo",
+          heading: "headingBuybackTwo",
         },
         {
           id: 37,
@@ -800,77 +800,77 @@ const FAQ = () => {
        <div class='row d-grid pool-container p-4'>
        <div class="pool-card p-3">
          <div class="d-flex flex-row gap-2 mb-3">
-         <img src='${ethIcon}' alt="" />
+         <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/ethereumDropdown.svg' alt="" />
          <h5 class='ethereum mb-0'>ETH Pools</h5>
          </div>
        <div class="d-grid inner-pool">
        <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://app.dyp.finance/staking-buyback-1">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://app.dyp.finance/staking-buyback-2">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://youtu.be/7CZ_ianX2bk">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
        </div>
        </div>
        <div class="pool-card p-3">
        <div class="d-flex flex-row gap-2 mb-3">
-         <img src='${bnbIcon}' alt="" />
+         <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/bnbDropdown.svg' alt="" />
          <h5 class='bnb mb-0'>BNB Pools</h5>
          </div>
          <div class="d-grid inner-pool">
        <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://app-bsc.dyp.finance/staking-buyback-1">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://app-bsc.dyp.finance/staking-buyback-2">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://youtu.be/l3Jka88T308">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
        </div>
        </div>
        <div class="pool-card p-3">
        <div class="d-flex flex-row gap-2 mb-3">
-         <img src='${avaxIcon}' alt="" />
+         <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/avaDropdown.svg' alt="" />
          <h5 class='avax mb-0'>AVAX Pools</h5>
          </div>
        <div class="d-grid inner-pool">
        <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://app-avax.dyp.finance/staking-buyback-1">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">No Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://app-avax.dyp.finance/staking-buyback-2">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">90 Days<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://youtu.be/_WuIQUwwpGM">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
        </div>
        </div>
      </div>
        `,
-          collapse: "collapseThree",
-          heading: "headingThree",
+          collapse: "collapseBuybackThree",
+          heading: "headingBuybackThree",
         },
       ],
     },
@@ -883,8 +883,8 @@ const FAQ = () => {
           title: "What is DYP Vault?",
           content: `<p class="faq-content">The DYP Vault is an automated smart contract with Compound Protocol integration and support for ETH, WBTC, USDC, USDT, and DAI markets. The rewards from Compound Protocol are distributed completely to the users. Users have the possibility to withdraw their tokens back to their deposit after the lockin period together with interest from compound interest.
        </p>`,
-          collapse: "collapseOne",
-          heading: "headingOne",
+          collapse: "collapseVaultOne",
+          heading: "headingVaultOne",
         },
         {
           id: 39,
@@ -892,8 +892,8 @@ const FAQ = () => {
           "Will I be getting the same amount of tokens I deposited when I withdraw?",
           content: `<p class="faq-content">Yes, users will withdraw the same amount of tokens as deposited.
        </p>`,
-          collapse: "collapseTwo",
-          heading: "headingTwo",
+          collapse: "collapseVaultTwo",
+          heading: "headingVaultTwo",
         },
         {
           id: 40,
@@ -905,39 +905,39 @@ const FAQ = () => {
        <div class="d-grid buyback-pool">
        <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://vault.dyp.finance/vault-weth">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply ETH<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply ETH<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://vault.dyp.finance/vault-wbtc">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply WBTC<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply WBTC<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://vault.dyp.finance/vault-usdc">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply USDC<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply USDC<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://vault.dyp.finance/vault-usdt">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply USDT<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply USDT<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://vault.dyp.finance/vault-dai">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply DAI<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Supply DAI<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://youtu.be/t8Yr3ZIxHJA?list=PL8K0d30DJYVMLMbhYcOmzQHmPGDRrDpnl">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
        </div>
        </div>
        `,
-          collapse: "collapseThree",
-          heading: "headingThree",
+          collapse: "collapseVaultThree",
+          heading: "headingVaultThree",
         },
       ],
     },
@@ -951,56 +951,56 @@ const FAQ = () => {
           content: `<p class="faq-content">
        Non-fungible tokens (NFT) are best understood as unique digital assets. They exist in a variety of industries from digital art and virtual real estate to collectibles, gaming and more. Basically, any type of media can be minted or tokenized and turned into an NFT: art, trading cards, memes, gifs, video clips, audio clips, tweets, this article—anything. Once tokenized, these assets can be bought, sold, and traded using cryptocurrency.
        </p>`,
-          collapse: "collapseOne",
-          heading: "headingOne",
+          collapse: "collapseCawsOne",
+          heading: "headingCawsOne",
         },
         {
           id: 42,
           title: "What is the Cats and Watches Society NFT?",
           content: `<p class="faq-content">The Cats and Watches Society (CAWS) NFT is a unique collection of 10,000 randomly generated, hand-drawn utility NFTs developed by Dypius. These unique NFTs are stored on IPFS utilizing the Ethereum blockchain and consist of over 235 different traits, each outfitted with its own luxury watch of various rarities. 
        </p>`,
-          collapse: "collapseTwo",
-          heading: "headingTwo",
+          collapse: "collapseCawsTwo",
+          heading: "headingCawsTwo",
         },
         {
           id: 43,
           title: "Who is the creator of Cats and Watches Society NFT?",
           content: `<p class="faq-content">CAWS was developed by Dypius and released in April 2022. The team is fully doxxed and can be found in the about section of the official website or Dypius LinkedIn profile.
        </p>`,
-          collapse: "collapseThree",
-          heading: "headingThree",
+          collapse: "collapseCawsThree",
+          heading: "headingCawsThree",
         },
         {
           id: 44,
           title: "What’s the minting process like?",
           content: `<p class="faq-content">The minting process has ended. The collection of 10,000 CAWS NFTs are sold out.
        </p>`,
-          collapse: "collapseFour",
-          heading: "headingFour",
+          collapse: "collapseCawsFour",
+          heading: "headingCawsFour",
         },
         {
           id: 45,
           title: "How can I get a Cats and Watches NFT?",
           content: `<p class="faq-content">Users may purchase a CAWS on the secondary market like the verified collection on OpenSea, Looks Rare or the upcoming metaverse open market.
        </p>`,
-          collapse: "collapseFive",
-          heading: "headingFive",
+          collapse: "collapseCawsFive",
+          heading: "headingCawsFive",
         },
         {
           id: 46,
           title: "Where are the NFTs stored?",
           content: `<p class="faq-content">CAWS NFTs will go right into your wallet after you purchase. You will be able to check them out on websites like OpenSea.
        </p>`,
-          collapse: "collapseSix",
-          heading: "headingSix",
+          collapse: "collapseCawsSix",
+          heading: "headingCawsSix",
         },
         {
           id: 47,
           title: "Can I sell or trade my NFT?",
           content: `<p class="faq-content">Absolutely. There are several websites that allow you to sell your NFT like OpenSea, Looksrare, Coinbase NFT, and Gem.xyz
        </p>`,
-          collapse: "collapseSeven",
-          heading: "headingSeven",
+          collapse: "collapseCawsSeven",
+          heading: "headingCawsSeven",
         },
         {
           id: 48,
@@ -1019,32 +1019,32 @@ const FAQ = () => {
        - Play to earn NFT concept becomes active for CAWS holders
        
        </p>`,
-          collapse: "collapseEight",
-          heading: "headingEight",
+          collapse: "collapseCawsEight",
+          heading: "headingCawsEight",
         },
         {
           id: 49,
           title: "When will the Play2Earn game be released?",
           content: `<p class="faq-content">The virtual reality P2E game is scheduled for release Q4 2022.
        </p>`,
-          collapse: "collapseNine",
-          heading: "headingNine",
+          collapse: "collapseCawsNine",
+          heading: "headingCawsNine",
         },
         {
           id: 50,
           title: "How can I check the rarity of my NFT?",
           content: `<p class="faq-content">DYP has multiple rarity partners including rarity.tools, raritysniper.com, traitsniper.com and the rarity bot found in the Discord server
        </p>`,
-          collapse: "collapseTen",
-          heading: "headingTen",
+          collapse: "collapseTCawsen",
+          heading: "headingCawsTen",
         },
         {
           id: 51,
           title: "How can I contact the team?",
           content: `<p class="faq-content">The easiest way is to contact us directly through the website, twitter, discord or telegram. The links can be found below in the linktree
        </p>`,
-          collapse: "collapseEleven",
-          heading: "headingEleven",
+          collapse: "collapseCawsEleven",
+          heading: "headingCawsEleven",
         },
         {
           id: 52,
@@ -1053,23 +1053,23 @@ const FAQ = () => {
        <div class="d-grid links-pool">
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://dyp.finance/">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Official website<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Official website<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://discord.gg/dypcaws">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Official Discord<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Official Discord<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://linktr.ee/dyp.finance">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Linktree<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Linktree<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
        </div>
        </div>`,
-          collapse: "collapseTwelve",
-          heading: "headingTwelve",
+          collapse: "collapseCawsTwelve",
+          heading: "headingCawsTwelve",
         },
         {
           id: 53,
@@ -1082,8 +1082,8 @@ const FAQ = () => {
        - Over $6,500 in prizes have been given away for CAWS Adventures players
        - Monthly Discord poker tournaments with exciting prizes      
        </p>`,
-          collapse: "collapseThirteen",
-          heading: "headingThirteen",
+          collapse: "collapseCawsThirteen",
+          heading: "headingCawsThirteen",
         },
         {
           id: 54,
@@ -1094,8 +1094,8 @@ const FAQ = () => {
        - Utilize your NFT to earn Passive Income
        
        </p>`,
-          collapse: "collapseFourteen",
-          heading: "headingFourteen",
+          collapse: "collapseCawsFourteen",
+          heading: "headingCawsFourteen",
         },
         {
           id: 55,
@@ -1108,8 +1108,8 @@ const FAQ = () => {
        - Participants in the Global DeFi Investment Summit
        
        </p>`,
-          collapse: "collapseFifteen",
-          heading: "headingFifteen",
+          collapse: "collapseCawsFifteen",
+          heading: "headingCawsFifteen",
         },
       ],
     },
@@ -1123,8 +1123,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
        DYP tokens represent voting shares in the Dypius governance. The introduction of DYP tokens enables shared community ownership of a vibrant, diverse, and dedicated governance system which will actively guide the protocol toward the future. Through governance, DYP holders can vote to add more pools, burn tokens, allocate DYP toward grants, strategic partnerships, governance initiatives, and other programs.
        </p>`,
-          collapse: "collapseOne",
-          heading: "headingOne",
+          collapse: "collapseGovernanceOne",
+          heading: "headingGovernanceOne",
         },
         {
           id: 57,
@@ -1136,24 +1136,24 @@ const FAQ = () => {
        <div class="d-grid links-pool">
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://gov.dyp.finance/">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">ETH Governance<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">ETH Governance<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://gov-bsc.dyp.finance/">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">BNB Governance<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">BNB Governance<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://gov-avax.dyp.finance/">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">AVAX Governance<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">AVAX Governance<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
        </div>
        </div>
        `,
-          collapse: "collapseTwo",
-          heading: "headingTwo",
+          collapse: "collapseGovernanceTwo",
+          heading: "headingGovernanceTwo",
         },
         {
           id: 58,
@@ -1164,11 +1164,11 @@ const FAQ = () => {
        Video tutorial can be found here: 
        </p>
        <a target="_blank" href="https://youtu.be/0WSYN2qHTNQ">
-       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2 d-flex align-items-center gap-2">View<img src='${rightArrow}' /></button>
+       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2 d-flex align-items-center gap-2">View<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
        </a>
        `,
-          collapse: "collapseThree",
-          heading: "headingThree",
+          collapse: "collapseGovernanceThree",
+          heading: "headingGovernanceThree",
         },
         {
           id: 59,
@@ -1177,8 +1177,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
        Yes! There are many Burn and Disburse proposals that have been executed and there were other proposals which lead to the creation of the Buyback pools. The governance is open and available now to holders. The team values and prioritizes new proposals.
        </p>`,
-          collapse: "collapseFour",
-          heading: "headingFour",
+          collapse: "collapseGovernanceFour",
+          heading: "headingGovernanceFour",
         },
         {
           id: 60,
@@ -1187,8 +1187,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
        No, users will simply need to withdraw their DYP back at the conclusion of the Governance voting period.
        </p>`,
-          collapse: "collapseFive",
-          heading: "headingFive",
+          collapse: "collapseGovernanceFive",
+          heading: "headingGovernanceFive",
         },
         {
           id: 61,
@@ -1197,8 +1197,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
        Yes, users can withdraw their DYP during a governance proposal, but the casted Vote will become null and void, and could possibly lead to a change in the end results of the vote.
        </p>`,
-          collapse: "collapseSix",
-          heading: "headingSix",
+          collapse: "collapseGovernanceSix",
+          heading: "headingGovernanceSix",
         },
       ],
     },
@@ -1212,8 +1212,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
        iDYP is an ERC-20 token used in the Dypius ecosystem as a component of smart contract strategies. It is accessible on three majour networks like Ethereum, BNB chain, and Avalanche. The ecosystem it is designed to facilitate reward distribution to users from earn products using iDYP tokens. Dypius metaverse platform will use iDYP as a key token by being a crucial component of a fascinating play-to-earn game. Dypius has a multi-token economy and uses another ERC-20 token called Dypius (DYP) as a governance token for its ecosystem.
        </p>`,
-          collapse: "collapseOne",
-          heading: "headingOne",
+          collapse: "collapseIDypOne",
+          heading: "headingIDypOne",
         },
         {
           id: 62,
@@ -1222,23 +1222,23 @@ const FAQ = () => {
        <div class="d-grid links-pool">
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://app.uniswap.org/#/swap?use=V2&inputCurrency=0xbd100d061e120b2c67a24453cf6368e63f1be056">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Uniswap in ETH chain<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Uniswap in ETH chain<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://pancakeswap.finance/swap?inputCurrencty=BNB&outputCurrency=0xbd100d061e120b2c67a24453cf6368e63f1be056">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Pancakeswap in BNB chain<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Pancakeswap in BNB chain<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
          <a target="_blank" href="https://app.pangolin.exchange/#/swap?&outputCurrency=0xbd100d061e120b2c67a24453cf6368e63f1be056">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Pangolin in AVAX chain<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center w-100">Pangolin in AVAX chain<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
          </a>
         </div>
        </div>
        </div>`,
-          collapse: "collapseTwo",
-          heading: "headingTwo",
+          collapse: "collapseIDypTwo",
+          heading: "headingIDypTwo",
         },
         {
           id: 63,
@@ -1249,40 +1249,40 @@ const FAQ = () => {
        <div class='row d-grid pool-container p-4'>
        <div class="pool-card p-3">
          <div class="d-flex flex-row gap-2 mb-2">
-         <img src='${ethIcon}' alt="" />
+         <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/ethereumDropdown.svg' alt="" />
          <h5 class='ethereum mb-0'>ETH Pools</h5>
          </div>
        <div class="d-grid inner-pool">
        <div class='d-flex justify-content-center flex-column'>
         <p class='mb-0'>iDYP > iDYP</p>
         <a  target="_blank" href="https://app.dyp.finance/staking-idyp-1">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <p class='mb-0'>iDYP > iDYP</p>
         <a  target="_blank" href="https://app.dyp.finance/staking-idyp-2">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
        </div>
        </div>
        <div class="pool-card p-3">
        <div class="d-flex flex-row gap-2 mb-2">
-         <img src='${bnbIcon}' alt="" />
+         <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/bnbDropdown.svg' alt="" />
          <h5 class='bnb mb-0'>BNB Pools</h5>
          </div>
        <div class="d-grid inner-pool">
        <div class='d-flex justify-content-center flex-column'>
         <p class='mb-0'>iDYP > iDYP</p>
         <a  target="_blank" href="https://app-bsc.dyp.finance/staking-idyp-1">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <p class='mb-0'>iDYP > iDYP</p>
         <a  target="_blank" href="https://app-bsc.dyp.finance/staking-idyp-2">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         
@@ -1290,20 +1290,20 @@ const FAQ = () => {
        </div>
        <div class="pool-card p-3">
        <div class="d-flex flex-row gap-2 mb-2">
-         <img src='${avaxIcon}' alt="" />
+         <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/avaDropdown.svg' alt="" />
          <h5 class='avax mb-0'>AVAX Pools</h5>
          </div>
        <div class="d-grid inner-pool">
        <div class='d-flex justify-content-center flex-column'>
         <p class='mb-0'>iDYP > iDYP</p>
         <a  target="_blank" href="https://app-avax.dyp.finance/staking-idyp-1">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">No Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <p class='mb-0'>iDYP > iDYP</p>
         <a  target="_blank" href="https://app-avax.dyp.finance/staking-idyp-2">
-         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">90 Days Lock <img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
        </div>
@@ -1311,8 +1311,8 @@ const FAQ = () => {
      </div>
  
        `,
-          collapse: "collapseThree",
-          heading: "headingThree",
+          collapse: "collapseIDypThree",
+          heading: "headingIDypThree",
         },
       ],
     },
@@ -1360,8 +1360,8 @@ const FAQ = () => {
           </tbody>
         </table>
        `,
-          collapse: "collapseOne",
-          heading: "headingOne",
+          collapse: "collapseBuyDypOne",
+          heading: "headingBuyDypOne",
         },
         {
           id: 65,
@@ -1375,37 +1375,37 @@ const FAQ = () => {
        <div class="d-grid inner-pool">
        <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://pro.coinbase.com/trade/DYP-USD">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Coinbase<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Coinbase<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://youtu.be/mjUUqNy-zW8">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://trade.kucoin.com/DYP-USDT">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Kucoin<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Kucoin<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://youtu.be/BIuy1A-_-dU">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://www.gate.io/trade/DYP_USDT">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Gate<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Gate<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://youtu.be/arVFXf5hESE">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://poloniex.com/exchange/USDT_DYP">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Poloniex<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Poloniex<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
        </div>
@@ -1415,60 +1415,60 @@ const FAQ = () => {
        <div class="d-grid inner-pool">
        <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://app.uniswap.org/#/swap?use=V2&inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Uniswap<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Uniswap<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://youtu.be/XsmZ9xW_nps">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://pancakeswap.finance/swap?inputCurrencty=BNB&outputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Pancakeswap<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Pancakeswap<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://youtu.be/sLHWYgNEbq8">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://app.pangolin.exchange/#/swap?&outputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17 ">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Pangolin<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Pangolin<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://youtu.be/T6qYvErqD-M">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://app.1inch.io/#/1/swap/DYP/ETH">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">1inch<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">1inch<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://youtu.be/IE5danKYD-c">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://dmm.exchange/#/swap?outputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17&networkId=43114">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">KyberDMM<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">KyberDMM<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://youtu.be/olhIziGMs0Y">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
        </div>
        </div>
      </div>
        `,
-          collapse: "collapseTwo",
-          heading: "headingTwo",
+          collapse: "collapseBuyDypTwo",
+          heading: "headingBuyDypTwo",
         },
       ],
     },
@@ -1487,12 +1487,12 @@ const FAQ = () => {
        <div class="d-grid inner-pool">
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://bridge.dyp.finance/">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">ETH < - > BNB Bridge<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">ETH < - > BNB Bridge<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://www.youtube.com/watch?v=SK-9PqZJM-I">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
        </div>
@@ -1505,19 +1505,19 @@ const FAQ = () => {
        <div class="d-grid inner-pool">
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://avax-bridge.dyp.finance/">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">ETH < - > AVAX Bridge<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">ETH < - > AVAX Bridge<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
         <div class='d-flex justify-content-center flex-column'>
         <a  target="_blank" href="https://www.youtube.com/watch?v=k--YXSSYUMY">
-         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='${rightArrow}' alt="" /></button>
+         <button class="btn filled-btn w-100 pool-btn w-100 gap-2 d-flex justify-content-between align-items-center">Tutorial<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' alt="" /></button>
         </a>
         </div>
        </div>
        </div>
        `,
-          collapse: "collapseOne",
-          heading: "headingOne",
+          collapse: "collapseBridgeOne",
+          heading: "headingBridgeOne",
         },
         {
           id: 67,
@@ -1526,8 +1526,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
        This might be because the bridge needs a refill, please report this issue to our community moderators and they will keep you posted.
        </p>`,
-          collapse: "collapseTwo",
-          heading: "headingTwo",
+          collapse: "collapseBridgeTwo",
+          heading: "headingBridgeTwo",
         },
         {
           id: 68,
@@ -1535,8 +1535,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
        For security reasons we have not implemented this bridge. If you want to bridge from AVAX<->BNB chain, you need to follow this path: AVAX -> ETH and ETH-> BNB chain.
        </p>`,
-          collapse: "collapseThree",
-          heading: "headingThree",
+          collapse: "collapseBridgeThree",
+          heading: "headingBridgeThree",
         },
       ],
     },
@@ -1550,8 +1550,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
        A main feature of Dypius is going to be the decentralized tools dashboard (DYP Tools). These tools will increase the use case for DYP Token, provide a liquidity locker for DeFi projects, and at the same time protect the DeFi community by providing a decentralized trust score for DeFi projects.
        </p>`,
-          collapse: "collapseOne",
-          heading: "headingOne",
+          collapse: "collapseDypToolsOne",
+          heading: "headingDypToolsOne",
         },
         {
           id: 70,
@@ -1574,20 +1574,20 @@ const FAQ = () => {
  More information about each of these features can be found on our medium article here
        </p>
        <a target="_blank" href="https://dypfinance.medium.com/defi-yield-protocol-dyp-tools-v1-launch-376fdf97d4f7">
-       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">View More<img src='${rightArrow}' /></button>
+       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">View More<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
        </a>
        `,
-          collapse: "collapseTwo",
-          heading: "headingTwo",
+          collapse: "collapseDypToolsTwo",
+          heading: "headingDypToolsTwo",
         },
         {
           id: 71,
           title: "Where can I access DYP Tools?",
           content: `<a target="_blank" href="https://tools.dyp.finance/">
-       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Access Here<img src='${rightArrow}' /></button>
+       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Access Here<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
        </a>`,
-          collapse: "collapseThree",
-          heading: "headingThree",
+          collapse: "collapseDypToolsThree",
+          heading: "headingDypToolsThree",
         },
         {
           id: 72,
@@ -1596,8 +1596,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
        Yes! In order to access the Premium Subscription, users must hold DYP tokens to benefit from the advanced features such as Decentralized Score, Unique Community Trust Vote System, DYP Locker, Yield Farm Data, and Launchpad.
        </p>`,
-          collapse: "collapseFour",
-          heading: "headingFour",
+          collapse: "collapseDypToolsFour",
+          heading: "headingDypToolsFour",
         },
         {
           id: 73,
@@ -1605,8 +1605,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
        Yes! DYP Tools comes with a Unique Community Trust Vote System. Most of the current cryptocurrency data aggregators use a voting system that can be easily manipulated. DYP’s Unique Community Trust Vote System ensures project voting can be trusted and relied upon.
        </p>`,
-          collapse: "collapseFive",
-          heading: "headingFive",
+          collapse: "collapseDypToolsFive",
+          heading: "headingDypToolsFive",
         },
       ],
     },
@@ -1620,8 +1620,8 @@ const FAQ = () => {
           content: `<p class="faq-content">
        A crypto launchpad is a platform that helps startups and enterprises launch their own cryptocurrency or blockchain projects. The launchpad provides the necessary tools, resources, and support to help these organizations succeed.
        </p>`,
-          collapse: "collapseOne",
-          heading: "headingOne",
+          collapse: "collapseLaunchpadOne",
+          heading: "headingLaunchpadOne",
         },
         {
           id: 75,
@@ -1631,11 +1631,11 @@ const FAQ = () => {
  Learn more about DYP Launchpad and how it works from this medium article: 
        </p>
        <a target="_blank" href="https://dypfinance.medium.com/learn-about-defi-yield-protocol-launchpad-547c387409c2">
-       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">View More<img src='${rightArrow}' /></button>
+       <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">View More<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
        </a>
        `,
-          collapse: "collapseTwo",
-          heading: "headingTwo",
+          collapse: "collapseLaunchpadTwo",
+          heading: "headingLaunchpadTwo",
         },
         {
           id: 76,
@@ -1646,8 +1646,8 @@ const FAQ = () => {
        - Liquidity locked utilizing DYP Locker
        - Team tokens locked in vesting contracts      
        </p>`,
-          collapse: "collapseThree",
-          heading: "headingThree",
+          collapse: "collapseLaunchpadThree",
+          heading: "headingLaunchpadThree",
         },
         {
           id: 77,
@@ -1661,8 +1661,8 @@ const FAQ = () => {
        - Multiple tiers depending on the amount of locked DYP
        - Varied max token buy available at different tiers
        </p>`,
-          collapse: "collapseFour",
-          heading: "headingFour",
+          collapse: "collapseLaunchpadFour",
+          heading: "headingLaunchpadFour",
         },
         {
           id: 78,
@@ -1673,8 +1673,8 @@ const FAQ = () => {
  - Users get tokens instantly, and collected funds are in the DYP team’s custody to be delivered to the fundraising team by DYP
  - Integrated Token Locker smart contract with presale contract to automatically lock tokens for a predefined time after the purchase 
        </p>`,
-          collapse: "collapseFive",
-          heading: "headingFive",
+          collapse: "collapseLaunchpadFive",
+          heading: "headingLaunchpadFive",
         },
       ],
     },
