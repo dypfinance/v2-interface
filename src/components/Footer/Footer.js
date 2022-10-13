@@ -101,7 +101,7 @@ const Footer = () => {
     },
     {
       title: "Buy DYP",
-      link: "#",
+      link: "/buydyp",
     },
     {
       title: "iDYP Token",
@@ -447,13 +447,13 @@ const Footer = () => {
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">Solutions</h4>
                 {products.map((item, index) => (
-                  <a
-                    key={index}
-                    href={item.link}
-                    className="text-white text-decoration-none"
-                  >
-                    <h5>{item.title}</h5>
-                  </a>
+                   <Link
+                   key={index}
+                   to={item.link}
+                   className="text-white text-decoration-none"
+                 >
+                   <h5>{item.title}</h5>
+                 </Link>
                 ))}
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">

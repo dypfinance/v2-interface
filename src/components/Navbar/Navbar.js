@@ -17,7 +17,7 @@ const Navbar = () => {
       setOpacity(false);
     }
 
-    if (window.location.href.includes("dyp")) {
+    if (window.location.href.includes("dyp") && !window.location.href.includes("dyp")) {
       if (window.scrollY >= 500) {
         setLogo(true);
       } else {
@@ -40,9 +40,10 @@ const Navbar = () => {
       }
     }
   };
-
+  
   window.addEventListener("scroll", changeBackground);
   window.addEventListener("click", changeBackground);
+
 
   return (
     <div

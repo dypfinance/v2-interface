@@ -12,22 +12,18 @@ import Navbar from "./components/Navbar/Navbar";
 import About from "./Screens/About/About";
 import ScrollTop from "./components/ScrollTop/ScrollTop";
 import Disclaimer from "./Screens/Disclaimer/Disclaimer";
-import AOS from 'aos'
+import AOS from "aos";
 import Support from "./Screens/Support/Support";
 import Governance from "./Screens/Governance/Governance";
 
 import NewsPage from "./Screens/NewsPage/NewsPage";
 
-import BuyDyp from "./Screens/BuyDyp/BuyDypScreen";
-
+import BuyDypScreen from "./Screens/BuyDyp/BuyDypScreen";
 
 function App() {
-
   useEffect(() => {
     AOS.init();
-  }, [])
-  
-
+  }, []);
 
   return (
     <BrowserRouter>
@@ -40,10 +36,10 @@ function App() {
         <Route exact path="/support" element={<Support />} />
         <Route exact path="/disclaimer" element={<Disclaimer />} />
         <Route exact path="/governance" element={<Governance />} />
-        <Route exact path="/buydyp" element={<BuyDyp />} />
+        <Route exact path="/buydyp" element={<BuyDypScreen />} />
         <Route exact path="/news" element={<NewsPage />} />
       </Routes>
-      <ScrollTop/>
+      <ScrollTop />
       <Footer />
     </BrowserRouter>
   );
