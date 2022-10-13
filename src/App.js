@@ -15,7 +15,7 @@ import Disclaimer from "./Screens/Disclaimer/Disclaimer";
 import AOS from "aos";
 import Support from "./Screens/Support/Support";
 import Governance from "./Screens/Governance/Governance";
-
+import IDyp from "./Screens/IDyp/IDyp";
 import NewsPage from "./Screens/NewsPage/NewsPage";
 
 import BuyDypScreen from "./Screens/BuyDyp/BuyDypScreen";
@@ -38,6 +38,7 @@ function App() {
         <Route exact path="/governance" element={<Governance />} />
         <Route exact path="/buydyp" element={<BuyDypScreen />} />
         <Route exact path="/news" element={<NewsPage />} />
+        <Route exact path="/idyp" element={<IDyp />} />
       </Routes>
       <ScrollTop />
       <Footer />

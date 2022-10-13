@@ -9,7 +9,7 @@ import WhiteArrowUp from "../../../assets/DypAssets/whiteArrow-up.svg";
 import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
 
-const Tokenomics = ({ bottom, showBtn }) => {
+const Tokenomics = ({ bottom, showBtn, isDyp }) => {
   const [tokenomicData, setTokenomicData] = useState("dyp");
   const [toggledyp, setToggleDyp] = useState(showBtn === false ? true : false);
   const [toggleIdyp, setToggleIDyp] = useState(false);
@@ -19,6 +19,16 @@ const Tokenomics = ({ bottom, showBtn }) => {
       setTokenomicData("");
     }
   }, [toggleIdyp, toggledyp]);
+
+  useEffect(() => {
+    if (isDyp === true) {
+      setTokenomicData("dyp");
+    }
+
+    if (isDyp === false) {
+      setTokenomicData("idyp");
+    }
+  }, [isDyp]);
 
   const windowSize = useWindowSize();
   
@@ -402,7 +412,7 @@ const Tokenomics = ({ bottom, showBtn }) => {
                 </div>
                 <div className="d-flex flex-column gap-3 mt-3">
                   <div>
-                    <span>Community</span>
+                    <span>Community</span><br/>
                     <svg
                       width="353"
                       height="1"
@@ -485,7 +495,7 @@ const Tokenomics = ({ bottom, showBtn }) => {
                     </div>
                   </div>
                   <div>
-                    <span>Reserves, Marketing, Ecosystem</span>
+                    <span>Reserves, Marketing, Ecosystem</span><br/>
                     <svg
                       width="353"
                       height="1"
@@ -559,7 +569,7 @@ const Tokenomics = ({ bottom, showBtn }) => {
                   </div>
                   <div className="row justify-content-between">
                     <div className="col-lg-6 col-xl-6 col-md-6">
-                      <span>Team</span>
+                      <span>Team</span><br/>
                       <svg
                         width="353"
                         height="1"
@@ -607,7 +617,7 @@ const Tokenomics = ({ bottom, showBtn }) => {
                       </div>
                     </div>
                     <div className="col-lg-5 col-xl-5 col-md-5">
-                      <span>Burned</span>
+                      <span>Burned</span><br/>
                       <svg
                         width="353"
                         height="1"
@@ -658,7 +668,7 @@ const Tokenomics = ({ bottom, showBtn }) => {
                 </div>
               </div>
               <div className="col-lg-4 col-xl-4 col-md-4 flex-column justify-content-between">
-              <div className="circulating-wrapper col-xl-8 col-lg-8 m-auto">
+              <div className="circulating-wrapper w-100 mb-3">
                   <div className="d-flex flex-column gap-3">
                     <span className="circulating-title">Max Total Supply</span>
                     <span className="circulating-amount">300,000,000 iDYP</span>
@@ -673,7 +683,7 @@ const Tokenomics = ({ bottom, showBtn }) => {
                   <img src={idypGraph} alt="" className="w-100" />
                 </div>
                 <div className="">
-                  <div className="circulating-wrapper m-auto">
+                  <div className="circulating-wrapper w-100 mb-3">
                     <div className="d-flex flex-column gap-3">
                       <span
                         className="circulating-title"

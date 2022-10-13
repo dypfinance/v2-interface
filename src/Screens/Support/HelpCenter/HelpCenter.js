@@ -223,7 +223,7 @@ const HelpCenter = () => {
                 <StyledTextField
                    error={errors.last_name ? true : false}
                    size="small"
-                   label="Last name"
+                   label="Social account"
                    id="last_name"
                    name="last_name"
                    value={values.last_name}
