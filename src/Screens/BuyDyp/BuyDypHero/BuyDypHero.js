@@ -264,8 +264,8 @@ const BuyDypHero = () => {
   return (
     <div className="container-fluid buydyp-main-hero d-flex flex-column justify-content-lg-end justify-content-xl-end justify-content-center">
       <div className="container-lg d-flex justify-content-between align-items-center flex-column">
-        <div className="container-lg d-flex justify-content-between align-items-center mb-5">
-          <div className="col-12 col-lg-4 text-white d-flex flex-column gap-3 justify-content-lg-center justify-content-xl-center">
+        <div className="container d-flex justify-content-between align-items-center mb-5">
+          <div className="col-12 col-lg-6 text-white d-flex flex-column gap-3 justify-content-lg-center justify-content-xl-center">
             <Title top={"Buy"} bottom={"DYP"} align={"d-flex gap-1"} />
             <p className="text-secondary">
               At Dypius, we want to make it easy for you to purchase our token.
@@ -273,19 +273,18 @@ const BuyDypHero = () => {
               you can use to do so.
             </p>
           </div>
-          <div className="col-9 col-lg-3 position-relative">
+          <div className="col-9 col-lg-3 position-relative d-xl-block d-lg-block d-none">
             <img
               className="buydypcoin"
               src={require(`../../../assets/coin.png`)}
               alt=""
             />
-            {/* <div className="rotate-scale-up"> */}
+            
             <img
               className="backgroundbuydyp"
-              src={require(`../assets/purplebg.svg`).default}
+              src={require(`../assets/purplebg.png`)}
               alt=""
             />
-            {/* </div> */}
           </div>
         </div>
         <div className="row gap-4 justify-content-center pb-5">

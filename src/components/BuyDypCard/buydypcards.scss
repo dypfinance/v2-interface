@@ -10,7 +10,7 @@
   background: #ffffff;
   box-shadow: 0px 32px 64px rgba(17, 17, 17, 0.08);
   border-radius: 12px 0px;
-  max-width: 345px;
+  max-width: 313px;
   width: 100%;
   padding: 16px;
   height: fit-content;
@@ -65,7 +65,7 @@
 
   .vidthumbnail {
     border-radius: 6px;
-    width: 125px;
+    width: 110px;
   }
 
   .videotitle {
@@ -74,7 +74,7 @@
     line-height: 15px;
     letter-spacing: -0.018em;
     color: #14142b;
-    width: 137px;
+    width: 124px;
   }
 
   .buyitemcard {
@@ -82,5 +82,7 @@
     border-radius: 6px;
     padding: 5px;
     margin-top: 10px;
+    margin-bottom: 10px;
+
   }
 }
