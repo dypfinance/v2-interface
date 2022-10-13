@@ -1,4 +1,5 @@
 import React from "react";
+import './_dypmainhero.scss'
 
 const DypMainHero = () => {
   return (

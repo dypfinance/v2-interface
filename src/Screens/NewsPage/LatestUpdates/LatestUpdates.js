@@ -7,12 +7,14 @@ import eventsActive from '../assets/eventsActive.svg'
 import eventsInactive from '../assets/eventsInactive.svg'
 import UpdateCard from '../../../components/UpdateCard/UpdateCard'
 import { RingLoader } from 'react-spinners'
+import dropdownIndicator from '../../Dyp/assets/dropdownIndicator.svg'
 import axios from 'axios'
 
 const LatestUpdates = ({type}) => {
 
     const [newsType, setNewsType] = useState(type)
     const [news, setNews] = useState([])
+    const [year, setYear] = useState('2022')
     var options = {  year: 'numeric', month: 'short', day: '2-digit' };
 
     const url = `https://news-manage.dyp.finance/api/${newsType}`
@@ -41,11 +43,46 @@ const LatestUpdates = ({type}) => {
         <div className="container-lg updates-container p-5">
             <div className="row justify-content-between">
                 <Title top='Latest' bottom='updates' align='d-flex flex-row gap-2' />
-                <div className="years-wrapper d-flex flex-row px-2 gap-1 justify-content-center align-items-center">
-              <p className='selected-year'>2020</p>
-              <p className=''>2021</p>
-              <p className=''>2022</p>
-            </div>
+                <div
+                class="coins d-flex justify-content-between align-items-center"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+               
+              >
+                <div
+                    className="d-flex flex-row align-items-center justify-content-start gap-2"
+                    style={{
+                      cursor: "pointer",
+                      color: "#566FCE",
+                      fontSize: 12,
+                    }}
+                  >
+                    {year}
+                  </div>
+              
+                <img src={dropdownIndicator} alt="" />
+              </div>
+              <ul className="dropdown-menu coin-menu p-1">
+                <li
+                  className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
+                  style={{ color: "#566FCE" }}
+                >
+                   2020
+                </li>
+                <li
+                  className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
+                  style={{ color: "#D5A404" }}
+                >
+                   2021
+                </li>
+                <li
+                  className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
+                  style={{ color: "#E84142" }}
+                >
+                   2022
+                </li>
+              </ul>
                 <div className="years-wrapper d-flex flex-row px-2 gap-1 justify-content-center align-items-center">
               <p className={`${newsType === 'announcements' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={() => setNewsType('announcements')}><img src={newsType === 'announcements' ? announcementsActive : announcementsInactive} alt="" />Announcements</p>
               <p className={` ${newsType === 'events' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={() => setNewsType('events')}><img src={newsType === 'events' ? eventsActive : eventsInactive} alt="" />Events</p>
