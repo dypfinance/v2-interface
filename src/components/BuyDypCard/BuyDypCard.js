@@ -45,14 +45,14 @@ const BuyDypCard = ({ title, logo, link, totalvids, videos, id }) => {
         </h2>
         <div
           id={id}
-          className="accordion-collapse collapse buyitemcard"
+          className="accordion-collapse collapse"
           aria-labelledby={title}
           data-bs-parent="#buydypcards"
         >
           {videos.length > 0 &&
             videos.map((item, index) => {
               return (
-                <div className="row m-0 gap-2 justify-content-between align-items-center" key={index}>
+                <div className="row ml-0 mr-0 gap-2 justify-content-between align-items-center buyitemcard" key={index}>
                     
                   <img src={vidthumbnail} alt="" className="vidthumbnail p-0" />
                   <div className="d-flex gap-0 flex-column p-0">
