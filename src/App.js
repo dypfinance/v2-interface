@@ -15,7 +15,7 @@ import Disclaimer from "./Screens/Disclaimer/Disclaimer";
 import AOS from 'aos'
 import Support from "./Screens/Support/Support";
 import Governance from "./Screens/Governance/Governance";
-import BuyDyp from "./Screens/BuyDyp/BuyDyp";
+import BuyDyp from "./Screens/BuyDyp/BuyDypScreen";
 
 function App() {
 

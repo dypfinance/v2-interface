@@ -60,6 +60,10 @@ const Footer = () => {
       link: "#",
     },
     {
+      title: "Brand",
+      link: "#",
+    },
+    {
       title: "Roadmap",
       link: "#",
     },
@@ -71,10 +75,7 @@ const Footer = () => {
       title: "Tokenomics",
       link: "#",
     },
-    {
-      title: "Brand",
-      link: "#",
-    },
+    
     {
       title: "Contact us",
       link: "#",

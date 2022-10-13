@@ -27,7 +27,8 @@ const Navbar = () => {
       window.location.href.includes("about") ||
       window.location.href.includes("disclaimer") ||
       window.location.href.includes("governance") ||
-      window.location.href.includes("support")
+      window.location.href.includes("support") ||
+      window.location.href.includes("buydyp")
     ) {
       setLogo(true);
     } else {
