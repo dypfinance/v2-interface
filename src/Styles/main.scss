@@ -8,7 +8,6 @@
 @import "../Screens/Dyp/SupportedAssets/supportedassets";
 @import "../Screens/Dyp/OurTokens/ourtokens";
 @import "../Screens/Dyp/Tokenomics/tokenomics";
-@import "../Screens/Dyp/DypMainHero/dypmainhero";
 @import "../Screens//About/Brand/brand";
 @import "../Screens/About/Security/security";
 @import '../Screens//Disclaimer/disclaimer';
@@ -16,6 +15,7 @@
 @import '../Screens/Disclaimer/DisclaimerContent/disclaimercontent';
 @import '../Screens/Governance/governance';
 @import '../Screens/BuyDyp/BuyDypHero/buydyphero';
+@import '../Screens/BuyDyp/buydypscreen';
 
 @import "../components/Header/header";
 @import "../components/AuditedByItem/auditedByItem";
@@ -26,6 +26,7 @@
 @import "../components/VaultCard/vaultcard";
 @import "../components/ScrollTop/scrollTop";
 @import "../components/GovCards/govcards";
+@import '../components/BuyDypCard/buydypcards.scss';
 
 * {
   font-family: "Poppins", sans-serif;

@@ -1,9 +1,5 @@
 import React from 'react'
 import './_faqaccordion.scss'
-import ethIcon from '../../Screens/Dyp/assets/ethereumDropdown.svg'
-import bnbIcon from '../../Screens/Dyp/assets/bnbDropdown.svg'
-import avaxIcon from '../../Screens/Dyp/assets/avaDropdown.svg'
-import rightArrow from '../../assets/right-arrow.svg'
 
 
 const FAQAccordion = ({id, heading, title, content }) => {
