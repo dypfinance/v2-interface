@@ -1,11 +1,13 @@
 import React from "react";
 import dropdownIcon from "../../Screens/About/assets/profileDropdown.svg";
 
-const TeamCard = ({ name, position, id, content, photo }) => {
+const TeamCard = ({ name, position, id, content, photo, link }) => {
   return (
     <div className="accordion" id="accordionExample">
       <div className="team-card d-flex flex-column justify-content-around align-items-center">
-        <img src={photo} alt="profile" className="profile-pic" />
+        <a href={link} target="_blank" rel="noreferrer">
+          <img src={photo} alt="profile" className="profile-pic" />
+        </a>
         <div className="d-flex w-100 justify-content-around">
           <div className={`d-flex flex-column ${id === "daniel" && "ps-4"}`}>
             <h4 className={`text-white ${id === "daniel" && "mb-0"}`}>
