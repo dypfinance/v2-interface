@@ -25,6 +25,10 @@ const LatestUpdates = ({type}) => {
         }).catch((err) => { console.error(err) })
       }
 
+
+
+      
+
     useEffect(() => {
 
 
@@ -41,10 +45,10 @@ const LatestUpdates = ({type}) => {
   return (
     <div className="container-fluid updates-wrapper">
         <div className="container-lg updates-container p-5">
-            <div className="row justify-content-between">
+            <div className="row justify-content-center justify-content-lg-between gap-5">
                 <Title top='Latest' bottom='updates' align='d-flex flex-row gap-2' />
                 <div
-                class="coins d-flex justify-content-between align-items-center"
+                className="years d-flex justify-content-between align-items-center"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -55,7 +59,6 @@ const LatestUpdates = ({type}) => {
                     style={{
                       cursor: "pointer",
                       color: "#566FCE",
-                      fontSize: 12,
                     }}
                   >
                     {year}
@@ -63,22 +66,25 @@ const LatestUpdates = ({type}) => {
               
                 <img src={dropdownIndicator} alt="" />
               </div>
-              <ul className="dropdown-menu coin-menu p-1">
+              <ul className="dropdown-menu coin-menu p-1" style={{width: '200px'}}>
                 <li
                   className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
-                  style={{ color: "#566FCE" }}
+                  style={{ cursor: 'pointer', color: "#566FCE" }}
+                  onClick={() => setYear('2020')}
                 >
                    2020
                 </li>
                 <li
                   className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
-                  style={{ color: "#D5A404" }}
+                  style={{ cursor: 'pointer', color: "#566FCE"}}
+                  onClick={() => setYear('2021')}
                 >
                    2021
                 </li>
                 <li
                   className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
-                  style={{ color: "#E84142" }}
+                  style={{ cursor: 'pointer', color: "#566FCE"}}
+                  onClick={() => setYear('2022')}
                 >
                    2022
                 </li>
@@ -88,16 +94,18 @@ const LatestUpdates = ({type}) => {
               <p className={` ${newsType === 'events' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={() => setNewsType('events')}><img src={newsType === 'events' ? eventsActive : eventsInactive} alt="" />Events</p>
             </div>
             </div>
-            <div className="row update-card-container justify-content-center mt-5">
-                {news.length !== 0 ? sortedUpdates.map((newsItem, index) => (
+                {news.length !== 0 ? 
+                <div className="row update-card-container justify-content-center mt-5">
+                  {sortedUpdates.filter(item => item.date.toLocaleDateString("en-US", options).includes(year)).map((newsItem, index) => (
                     <UpdateCard key={index} title={newsItem.title} image={newsItem.image && newsItem.image} link={newsItem.link} month={newsItem.date.toLocaleDateString("en-US", options).slice(0, 3)} date={newsItem.date.toLocaleDateString("en-US", options).slice(4, 6)} />
-                )) :
-                <div className="d-flex justify-content-center align-items-center">
+                ))}
+                </div>
+                :
+            <div className="d-flex justify-content-center align-items-center mt-5">
             <RingLoader color='#9664FF' size={150} />
             </div>
                 }
                
-            </div>
         </div>
     </div>
   )

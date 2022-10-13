@@ -43,8 +43,8 @@ const FAQ = () => {
        <button class="btn filled-btn pool-btn d-flex align-items-center gap-2">Tokenomics<img src='https://newsbucketgino.s3.eu-central-1.amazonaws.com/right-arrow.svg' /></button>
        </a>
        `,
-          collapse: "collapseGeneralOne",
-          heading: "headingGeneralOne",
+          collapse: "collapseOne",
+          heading: "collapseOne",
         },
         {
           id: 80,
