@@ -275,7 +275,7 @@ const BuyDypHero = () => {
           </div>
           <div className="col-9 col-lg-3 position-relative">
             <img
-              className="buydyp-coin"
+              className="buydypcoin"
               src={require(`../../../assets/coin.png`)}
               alt=""
             />
