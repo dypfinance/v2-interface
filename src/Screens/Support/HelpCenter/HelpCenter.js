@@ -19,6 +19,7 @@ import axios from "axios";
 import useWindowSize from "../../../hooks/useWindowSize";
 import ReCaptchaV2 from "react-google-recaptcha";
 import { useRef } from "react";
+import useFileChange from "../../../hooks/useFileChange";
 
 
 
@@ -132,6 +133,7 @@ const HelpCenter = () => {
         email: values.email,
         topic: values.topic,
         message: values.message,
+        recaptcha: captchaToken
       };
 
       if (
