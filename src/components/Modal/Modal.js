@@ -40,9 +40,7 @@ const Modal = ({ visible, modalId, setIsVisible }) => {
               <img src={envelope} alt="" style={{ width: 200 }} />
               <Title top={"Thank"} bottom={"you"} align="d-flex gap-1" />
               <p className="text-secondary">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                ut elit tellus. Curabitur in molestie nulla. Quisque sodales
-                auctor hendrerit.
+              The form was submitted successfully.
               </p>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "../../../components/Title/Title";
 import BuyDypCard from "../../../components/BuyDypCard/BuyDypCard";
-import vidthumbnail from '../assets/vidthumbnail.png'
+
 
 const BuyDypHero = () => {
   const buyDypItems = [
@@ -10,11 +10,11 @@ const BuyDypHero = () => {
       logo: "coinbase.png",
       link: "https://pro.coinbase.com/trade/DYP-USD",
       totalvids: "1 video",
-      videos: {
+      videos: [{
         link: "https://youtu.be/mjUUqNy-zW8",
         image: "",
         title: "How to buy DeFi Yield Protocol (DYP) on Coinbase",
-      },
+      }],
       id: "collapseone",
     },
     {
@@ -30,11 +30,11 @@ const BuyDypHero = () => {
       logo: "kucoin.png",
       link: "https://www.kucoin.com/trade/DYP-USDT",
       totalvids: "1 video",
-      videos: {
+      videos: [{
         link: "https://www.youtube.com/watch?v=BIuy1A-_-dU",
         image: "",
         title: "How to buy DeFi Yield Protocol (DYP) on KuCoin",
-      },
+      }],
       id: "collapsethree",
     },
     {
@@ -42,11 +42,11 @@ const BuyDypHero = () => {
       logo: "Gate.png",
       link: "https://www.gate.io/zh/trade/DYP_USDT",
       totalvids: "1 video",
-      videos: {
+      videos: [{
         link: "https://www.youtube.com/watch?v=arVFXf5hESE",
         image: "",
         title: "How to buy DeFi Yield Protocol (DYP) on Gate.io",
-      },
+      }],
       id: "collapsefour",
     },
     {
@@ -288,7 +288,7 @@ const BuyDypHero = () => {
             {/* </div> */}
           </div>
         </div>
-        <div className="row gap-4 justify-content-center">
+        <div className="row gap-4 justify-content-center pb-5">
           {buyDypItems.length > 0 &&
             buyDypItems.map((item, index) => {
               return (
@@ -299,7 +299,7 @@ const BuyDypHero = () => {
                   logo={require(`../../../assets/coins/${item.logo}`)}
                   link={item.link}
                   totalvids={item.totalvids}
-                  videos={item.videos.videos}
+                  videos={item.videos}
                 />
               );
             })}
