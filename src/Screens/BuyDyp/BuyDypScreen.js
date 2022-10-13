@@ -3,7 +3,7 @@ import BuyDypHero from "./BuyDypHero/BuyDypHero";
 import useWindowSize from "../../hooks/useWindowSize";
 
 
-const BuyDyp = () => {
+const BuyDypScreen = () => {
     useEffect(()=>{
         window.scrollTo(0,0)
     },[])
@@ -18,4 +18,4 @@ const BuyDyp = () => {
   );
 };
 
-export default BuyDyp;
+export default BuyDypScreen;
