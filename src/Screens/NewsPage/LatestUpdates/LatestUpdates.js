@@ -1,16 +1,13 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Title from '../../../components/Title/Title'
 import './_latestupdates.scss'
 import announcementsActive from '../assets/announcementsActive.svg'
 import announcementsInactive from '../assets/announcementsInactive.svg'
 import eventsActive from '../assets/eventsActive.svg'
 import eventsInactive from '../assets/eventsInactive.svg'
-import sampleImage from '../assets/sampleImage.png'
-import filledArrow from '../../../assets/filledArrow.svg'
 import UpdateCard from '../../../components/UpdateCard/UpdateCard'
-import { useEffect } from 'react'
+import { RingLoader } from 'react-spinners'
 import axios from 'axios'
-import { useState } from 'react'
 
 const LatestUpdates = ({type}) => {
 
@@ -20,7 +17,6 @@ const LatestUpdates = ({type}) => {
 
     const url = `https://news-manage.dyp.finance/api/${newsType}`
     const fetchNews =  async(newsType) => {
-        setNewsType(type)
         console.log(url);
         await axios.get(url).then((response) => {
             setNews(response.data)
@@ -28,7 +24,8 @@ const LatestUpdates = ({type}) => {
       }
 
     useEffect(() => {
-      setNewsType(type)
+
+
       fetchNews();
     }, [type, newsType])
     
@@ -50,14 +47,18 @@ const LatestUpdates = ({type}) => {
               <p className=''>2022</p>
             </div>
                 <div className="years-wrapper d-flex flex-row px-2 gap-1 justify-content-center align-items-center">
-              <p className={`${type === 'announcements' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={() => setNewsType('announcements')}><img src={type === 'announcements' ? announcementsActive : announcementsInactive} alt="" />Announcements</p>
-              <p className={` ${type === 'events' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={() => setNewsType('events')}><img src={type === 'events' ? eventsActive : eventsInactive} alt="" />Events</p>
+              <p className={`${newsType === 'announcements' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={() => setNewsType('announcements')}><img src={newsType === 'announcements' ? announcementsActive : announcementsInactive} alt="" />Announcements</p>
+              <p className={` ${newsType === 'events' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={() => setNewsType('events')}><img src={newsType === 'events' ? eventsActive : eventsInactive} alt="" />Events</p>
             </div>
             </div>
-            <div className="row update-card-container mt-5">
-                {news.length !== 0 && sortedUpdates.map((newsItem, index) => (
+            <div className="row update-card-container justify-content-center mt-5">
+                {news.length !== 0 ? sortedUpdates.map((newsItem, index) => (
                     <UpdateCard key={index} title={newsItem.title} image={newsItem.image && newsItem.image} link={newsItem.link} month={newsItem.date.toLocaleDateString("en-US", options).slice(0, 3)} date={newsItem.date.toLocaleDateString("en-US", options).slice(4, 6)} />
-                ))}
+                )) :
+                <div className="d-flex justify-content-center align-items-center">
+            <RingLoader color='#9664FF' size={150} />
+            </div>
+                }
                
             </div>
         </div>
