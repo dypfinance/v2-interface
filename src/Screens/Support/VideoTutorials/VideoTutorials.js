@@ -17,6 +17,11 @@ const VideoTutorials = () => {
       image: "governance.png",
     },
     {
+      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVMLMbhYcOmzQHmPGDRrDpnl",
+      image: "vault.png",
+    },
+   
+    {
       link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPKtu_gWiu7vm73k_TnZOs4",
       image: "farm.png",
     },
@@ -24,16 +29,13 @@ const VideoTutorials = () => {
       link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPmVy8aBOZratFGWKIBbthl",
       image: "bridge.png",
     },
-    {
-      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPmVy8aBOZratFGWKIBbthl",
-      image: "bridge.png",
-    },
+    
   ];
 
 
   return (
     <div className="container-fluid mt-5">
-        <div className="container-lg">
+        <div className="container-lg p-5">
             <div className="row">
                 <div className="col-12 col-lg-3 d-flex flex-column gap-3">
                     <Title top="Featured" bottom="Tutorials" />

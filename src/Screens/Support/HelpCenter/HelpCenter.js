@@ -21,8 +21,6 @@ import ReCaptchaV2 from "react-google-recaptcha";
 import { useRef } from "react";
 import useFileChange from "../../../hooks/useFileChange";
 
-
-
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
     borderRadius: "8px",
@@ -44,28 +42,82 @@ const StyledSelect = styled(Select)(({ theme }) => ({
   },
 }));
 
-
 const HelpCenter = () => {
-
-
-
-
   const selectoptions = [
     {
-      title: "Support",
-      value: "support",
+      title: "Stake",
+      value: "stake",
     },
     {
-      title: "Media Inquiry",
-      value: "mediaInquiry",
+      title: "Farm",
+      value: "farm",
     },
     {
-      title: "Feedback",
-      value: "feedback",
+      title: "Vault",
+      value: "vault",
+    },
+    {
+      title: "Buyback",
+      value: "buyback",
+    },
+    {
+      title: "CAWS NFT",
+      value: "CAWS NFT",
+    },
+    {
+      title: "Bridge",
+      value: "bridge",
+    },
+    {
+      title: "DYP Tools",
+      value: "DYP Tools",
+    },
+    {
+      title: "Governance",
+      value: "governance ",
     },
     {
       title: "Other",
       value: "other",
+    },
+  ];
+
+  const jobTitles = [
+    {
+      title: "Business Developer",
+      value: "Business Developer",
+    },
+    {
+      title: "Blockchain Developer",
+      value: "Blockchain Developer",
+    },
+    {
+      title: "Co-Founder/CEO",
+      value: "Co-Founder/CEO",
+    },
+    {
+      title: "Co-Founder/CTO",
+      value: "Co-Founder/CTO",
+    },
+    {
+      title: "Project Manager",
+      value: "Project Manager",
+    },
+    {
+      title: "Sales Representative",
+      value: "Sales Representative",
+    },
+    {
+      title: "Marketing Manager",
+      value: "Marketing Manager",
+    },
+    {
+      title: "Engineer",
+      value: "Engineer",
+    },
+    {
+      title: "Other",
+      value: "Other",
     },
   ];
 
@@ -77,7 +129,7 @@ const HelpCenter = () => {
     message: "",
   };
 
-  const businessState ={
+  const businessState = {
     email: "",
     subject: "",
     first_name: "",
@@ -87,12 +139,9 @@ const HelpCenter = () => {
     message: "",
     recaptcha: "",
     phone: "",
-  }
+  };
 
   const [values, setValues] = useState(helpState);
-  const [businessValues, setBusinessValues] = useState(businessState);
-  const [businessErrors, setBusinessErrors] = useState({})
-  const [businessFile, setBusinessFile] = useState()
   const [errors, setErrors] = useState({});
   const [selectedFile, setSelectedFile] = useState();
   const [help, setHelp] = useState(false);
@@ -100,26 +149,16 @@ const HelpCenter = () => {
   const [success, setSuccess] = useState(false);
   const recaptchaRef = useRef(null);
 
-  
-  
-  const handleChange = async (e, type) => {
+  const handleChange = async (e) => {
     const { name, value } = e.target;
 
-    if(type === 'help'){
-      setValues({
-        ...values,
-        [name]: value,
-      });
-    }else{
-      setBusinessValues({
-        ...businessValues,
-        [name]: value
-      })
-    }
+    setValues({
+      ...values,
+      [name]: value,
+    });
   };
 
-
-  const onFileChange = (event, type) => {
+  const onFileChange = (event) => {
     const fileTypes = [
       "image/jpg",
       "image/png",
@@ -132,20 +171,13 @@ const HelpCenter = () => {
     if (fileTypes.includes(event.target.files[0].type)) {
       if (event.target.files && event.target.files[0]) {
         if (event.target.files[0].size < 5000000) {
-          if(type === 'help'){
-            setSelectedFile(event.target.files[0]);
-          }else{
-            setBusinessFile(event.target.files[0])
-          }
+          setSelectedFile(event.target.files[0]);
         } else alert("File size too big");
       }
     } else {
       alert("Image type not supported");
     }
   };
-
- 
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -160,7 +192,7 @@ const HelpCenter = () => {
         email: values.email,
         topic: values.topic,
         message: values.message,
-        recaptcha: captchaToken
+        recaptcha: captchaToken,
       };
 
       if (
@@ -168,14 +200,13 @@ const HelpCenter = () => {
         values.last_name !== "" &&
         values.email !== "" &&
         values.topic !== "" &&
-        values.message !== "" 
+        values.message !== ""
       ) {
         const send = await axios
           .post("https://api-mail.dyp.finance/api/help", data)
           .then(function (result) {
             console.log(result.data);
             return result.data;
-            
           })
           .catch(function (error) {
             console.error(error);
@@ -188,18 +219,17 @@ const HelpCenter = () => {
         }
       }
       recaptchaRef.current.reset();
-      
+
       setValues({ ...helpState });
     }
   };
 
-
   const handleChangeBg = (event) => {
-    if(selectedFile) {
-      setSelectedFile(null)
+    if (selectedFile) {
+      setSelectedFile(null);
       event.preventDefault();
     }
-  }
+  };
 
   const openHelp = () => {
     setHelp(!help);
@@ -220,81 +250,101 @@ const HelpCenter = () => {
       </div>
       <div className="row contact-container" style={{ marginTop: "7rem" }}>
         <FormContainer
-          title="Help Center"
+          title="General Inquiry"
           desc="Get immediate help and support for Dypius products and solutions. "
           onClick={openHelp}
           accordionState={help}
-          collapse="collapseOne"
+          collapse="collapseHelp"
         >
           <div
-            id="collapseOne"
+            id="collapseHelp"
             className="accordion-collapse collapse"
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <h4>Send feedback</h4>
             <div className="help-form p-4">
+              <h5 className="text-secondary">Fill out form</h5>
               <div className="row gap-4 justify-content-center">
                 <StyledTextField
-                  error={errors.first_name ? true : false}
+                  error={errors.name ? true : false}
                   size="small"
-                  label="First name"
-                  id="first_name"
-                  name="first_name"
-                  value={values.first_name}
-                  helperText={errors.first_name}
+                  label="Name"
+                  id="name"
+                  name="name"
+                  value={values.name}
+                  helperText={errors.name}
                   required
                   onChange={handleChange}
                   sx={{ width: "250px" }}
                 />
                 <StyledTextField
-                   error={errors.last_name ? true : false}
-                   size="small"
-                   label="Social account"
-                   id="last_name"
-                   name="last_name"
-                   value={values.last_name}
-                   helperText={errors.last_name}
-                   required
-                   onChange={handleChange}
-                   sx={{ width: "250px" }}
+                  error={errors.email ? true : false}
+                  size="small"
+                  label="Email address"
+                  id="email"
+                  name="email"
+                  value={values.email}
+                  helperText={errors.email}
+                  required
+                  onChange={handleChange}
+                  sx={{ width: "250px" }}
                 />
               </div>
-              <StyledTextField
-                error={errors.email ? true : false}
-                size="small"
-                label="Email"
-                id="email"
-                name="email"
-                value={values.email}
-                helperText={errors.email}
-                required
-                onChange={handleChange}
-                className="w-100 mt-3"
-              />
-              <FormControl fullWidth className="mt-3" size="small">
-                <InputLabel id="demo-simple-select-error-label">
-                  Please select topic 
-                </InputLabel>
-                <StyledSelect
-                  sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
-                  labelId="demo-simple-select-error-label"
-                  id="topic"
-                  name="topic"
-                  value={values.topic}
-                  error={errors.topic ? true : false}
-                  onChange={handleChange}
-                  renderValue={(value) => value}
-                  label="Please select topic"
+              <div className="row gap-4 justify-content-center">
+                <FormControl
+                  fullWidth
+                  className="mt-3"
+                  size="small"
+                  sx={{ width: "250px" }}
                 >
-                  {selectoptions.map((selectItem, index) => (
-                    <MenuItem key={index} value={selectItem.title}>
-                      {selectItem.title}
-                    </MenuItem>
-                  ))}
-                </StyledSelect>
-                <FormHelperText>{errors.topic}</FormHelperText>
-              </FormControl>
+                  <InputLabel id="demo-simple-select-error-label">
+                    Select topic
+                  </InputLabel>
+                  <StyledSelect
+                    sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
+                    labelId="demo-simple-select-error-label"
+                    id="topic"
+                    name="topic"
+                    value={values.topic}
+                    error={errors.topic ? true : false}
+                    onChange={handleChange}
+                    renderValue={(value) => value}
+                    label="Select Topic"
+                  >
+                    {selectoptions.map((selectItem, index) => (
+                      <MenuItem key={index} value={selectItem.title}>
+                        {selectItem.title}
+                      </MenuItem>
+                    ))}
+                  </StyledSelect>
+                  <FormHelperText>{errors.topic}</FormHelperText>
+                </FormControl>
+                <FormControl
+                  fullWidth
+                  className="mt-3"
+                  size="small"
+                  sx={{ width: "250px" }}
+                >
+                  <InputLabel id="demo-simple-select-error-label">
+                    Social account
+                  </InputLabel>
+                  <StyledSelect
+                    sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
+                    labelId="demo-simple-select-error-label"
+                    id="topic"
+                    name="topic"
+                    value={values.topic}
+                    error={errors.topic ? true : false}
+                    onChange={handleChange}
+                    renderValue={(value) => value}
+                    label="Select Topic"
+                  >
+                    <MenuItem value="telegram">Telegram</MenuItem>
+                    <MenuItem value="discord">Discord</MenuItem>
+                  </StyledSelect>
+                  <FormHelperText>{errors.topic}</FormHelperText>
+                </FormControl>
+              </div>
               <StyledTextField
                 error={errors.message ? true : false}
                 size="small"
@@ -310,96 +360,131 @@ const HelpCenter = () => {
                 minRows={3}
                 maxRows={5}
               />
-              <div className="row p-4 flex-column gap-2">
-                <input
-                  type="file"
-                  onChange={(e) => {
-                    onFileChange(e)
-                  }}
-                  onClick={(e) => {
-                    handleChangeBg(e);
-                  }}
-                  className="custom-file-input outline-btn"
-                  style={{
-                    backgroundImage: selectedFile
-                      ? `url(${filebg2})`
-                      : `url(${filebg1})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                  }}
-                />
-                <span className="helpertext">Max file size 5MB</span>
-                <ReCaptchaV2
-                  sitekey="6LflZgEgAAAAAO-psvqdoreRgcDdtkQUmYXoHuy2"
-                  style={{ display: "inline-block" }}
-                  theme="dark"
-                  size="invisible"
-                  ref={recaptchaRef}
-                />
-              </div>
-              <div className="row px-4">
-                <button className="btn filled-btn w-100" onClick={handleSubmit}>Submit</button>
+
+              <div className="row px-0 flex-row mt-4">
+                <div className="d-flex col-6 flex-column gap-2">
+                  <input
+                    type="file"
+                    onChange={(e) => {
+                      onFileChange(e, "help");
+                    }}
+                    onClick={(e) => {
+                      handleChangeBg(e);
+                    }}
+                    className="custom-file-input outline-btn"
+                    style={{
+                      backgroundImage: selectedFile
+                        ? `url(${filebg2})`
+                        : `url(${filebg1})`,
+                      backgroundSize: selectedFile ? "200px" : "auto",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                      width: "100%",
+                    }}
+                  />
+                  <span className="helpertext">Max file size 5MB</span>
+                  <ReCaptchaV2
+                    sitekey="6LflZgEgAAAAAO-psvqdoreRgcDdtkQUmYXoHuy2"
+                    style={{ display: "inline-block" }}
+                    theme="dark"
+                    size="invisible"
+                    ref={recaptchaRef}
+                  />
+                </div>
+                <div className="col-6">
+                  <button
+                    className="btn filled-btn w-100"
+                    onClick={handleSubmit}
+                  >
+                    Submit
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </FormContainer>
         <FormContainer
           title="Business"
-          desc="We appreciate your interest in Dypius "
+          desc="Interested in collaborating with us? 
+                Please complete this short form."
           onClick={openBusiness}
           accordionState={business}
-          collapse="collapseTwo"
+          collapse="collapseBusiness"
         >
           <div
-            id="collapseTwo"
+            id="collapseBusiness"
             className="accordion-collapse collapse"
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
             <div className="help-form p-4">
-              <h4>Business Form</h4>
+              <h5 className="text-secondary">Fill out form</h5>
 
               <div className="row gap-4 justify-content-center">
                 <StyledTextField
                   size="small"
-                  label="First name*"
+                  label="Name"
                   sx={{ width: "250px" }}
                 />
-                <StyledTextField
-                  size="small"
-                  label="Last Name*"
-                  sx={{ width: "250px" }}
-                />
+                <FormControl fullWidth size="small" sx={{ width: "250px" }}>
+                  <InputLabel id="demo-simple-select-error-label">
+                    Job title
+                  </InputLabel>
+                  <StyledSelect
+                    sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
+                    labelId="demo-simple-select-error-label"
+                    id="topic"
+                    name="topic"
+                    value={values.topic}
+                    error={errors.topic ? true : false}
+                    onChange={handleChange}
+                    renderValue={(value) => value}
+                    label="Select Topic"
+                  >
+                    {jobTitles.map((selectItem, index) => (
+                      <MenuItem key={index} value={selectItem.title}>
+                        {selectItem.title}
+                      </MenuItem>
+                    ))}
+                  </StyledSelect>
+                  <FormHelperText>{errors.topic}</FormHelperText>
+                </FormControl>
               </div>
+
               <div className="row gap-4 justify-content-center mt-3">
                 <StyledTextField
                   size="small"
-                  label="organisation*"
+                  label="Organisation"
                   sx={{ width: "250px" }}
                 />
                 <StyledTextField
                   size="small"
-                  label="Job Title*"
+                  label="Work email address "
                   sx={{ width: "250px" }}
                 />
               </div>
-              <div className="row gap-4 justify-content-center mt-3">
-                <StyledTextField
-                  size="small"
-                  label="work email address*"
-                  sx={{ width: "250px" }}
-                />
-                <StyledTextField
-                  size="small"
-                  label="Phone number*"
-                  sx={{ width: "250px" }}
-                />
-              </div>
-              <StyledTextField
-                size="small"
-                label="Subject*"
-                className="w-100 mt-3"
-              />
+              <FormControl fullWidth className="mt-4" size="small">
+                <InputLabel id="demo-simple-select-error-label">
+                  Subject
+                </InputLabel>
+                <StyledSelect
+                  sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
+                  labelId="demo-simple-select-error-label"
+                  id="topic"
+                  name="topic"
+                  value={values.topic}
+                  error={errors.topic ? true : false}
+                  onChange={handleChange}
+                  renderValue={(value) => value}
+                  label="Select Topic"
+                >
+                  <MenuItem value="Partnership">Partnership</MenuItem>
+                  <MenuItem value="Media inquiry">Media inquiry</MenuItem>
+                  <MenuItem value="Launchpad">Launchpad</MenuItem>
+                  <MenuItem value="Other">Other</MenuItem>
+                </StyledSelect>
+                <FormHelperText>{errors.topic}</FormHelperText>
+              </FormControl>
               <StyledTextField
                 size="small"
                 label="Describe your inquiry*"
@@ -408,22 +493,44 @@ const HelpCenter = () => {
                 minRows={3}
                 maxRows={5}
               />
-              <div className="row p-4 flex-column gap-2">
-                <input
-                  type="file"
-                  className="custom-file-input outline-btn"
-                  style={{
-                    backgroundImage: selectedFile
-                      ? `url(${filebg2})`
-                      : `url(${filebg1})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                  }}
-                />
-                <span className="helpertext">Max file size 5MB</span>
-              </div>
-              <div className="row px-4">
-                <button className="btn filled-btn w-100">Submit</button>
+              <div className="row px-0 flex-row mt-4">
+                <div className="d-flex col-6 flex-column gap-2">
+                  <input
+                    type="file"
+                    onChange={(e) => {
+                      onFileChange(e);
+                    }}
+                    onClick={(e) => {
+                      handleChangeBg(e);
+                    }}
+                    className="custom-file-input outline-btn"
+                    style={{
+                      backgroundImage: selectedFile
+                        ? `url(${filebg2})`
+                        : `url(${filebg1})`,
+                      backgroundSize: selectedFile ? "200px" : "auto",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                      width: "100%",
+                    }}
+                  />
+                  <span className="helpertext">Max file size 5MB</span>
+                  <ReCaptchaV2
+                    sitekey="6LflZgEgAAAAAO-psvqdoreRgcDdtkQUmYXoHuy2"
+                    style={{ display: "inline-block" }}
+                    theme="dark"
+                    size="invisible"
+                    ref={recaptchaRef}
+                  />
+                </div>
+                <div className="col-6">
+                  <button
+                    className="btn filled-btn w-100"
+                    onClick={handleSubmit}
+                  >
+                    Submit
+                  </button>
+                </div>
               </div>
             </div>
           </div>
