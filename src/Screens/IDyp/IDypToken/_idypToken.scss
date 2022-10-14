@@ -1,0 +1,67 @@
+.ourtokens-wrapper {
+  background: url(./tokenbg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 56px 0px;
+  padding: 3rem;
+  min-height: 653px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  @media only screen and (max-width: 991px) {
+    padding: 1rem;
+  }
+
+  .ourtoken-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    color: #ffffff;
+    display: grid;
+
+    @media only screen and (max-width: 500px) {
+      font-size: 40px;
+      text-align: center;
+    }
+  }
+
+  .ourtoken-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.8);
+
+    @media only screen and (max-width: 500px) {
+      text-align: center;
+    }
+  }
+
+  .tokengraph {
+    position: absolute;
+    right: 0;
+    padding: 0;
+    top: -50px;
+    transform: rotate(0deg);
+
+    @media only screen and (max-width: 991px) {
+      right: auto;
+    top: auto;
+    }
+  }
+}
+
+.ourtoken-sphere {
+  position: absolute;
+  bottom: 0;
+  left: -13%;
+  z-index: -1;
+}
+
+.blueheroidyp {
+  filter: blur(40px);
+  position: absolute;
+  z-index: -1;
+  left: -250px;
+  top: 465px;
+}

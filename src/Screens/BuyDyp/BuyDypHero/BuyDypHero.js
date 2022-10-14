@@ -248,7 +248,14 @@ const BuyDypHero = () => {
       logo: "kyber-dmm.png",
       link: "https://app.1inch.io/#/1/swap/DYP/ETH",
       totalvids: "1 video",
-      videos: "",
+      videos: [
+        {
+          link: "https://www.youtube.com/watch?v=olhIziGMs0Y",
+          image: "",
+          title: "How to buy DeFi Yield Protocol (DYP) on KyberDMM using MetaMask",
+        }
+        
+      ],
       id: "collapseeleven",
     },
     {

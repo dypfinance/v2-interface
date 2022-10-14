@@ -3,7 +3,8 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 80vh;
+    padding-bottom: 10rem;
+    
 
     @media only screen and (max-width: 991px) {
         background-size: contain;
