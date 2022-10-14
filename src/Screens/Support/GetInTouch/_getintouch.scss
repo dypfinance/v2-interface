@@ -1,0 +1,84 @@
+.touch-wrapper {
+  min-height: 500px;
+  background: linear-gradient(0deg, #eff0f6 0%, #ffffff 73.43%);
+  border-radius: 0px 0px 56px 56px;
+
+  .general-container {
+    background: #ffffff;
+    border: 2px solid #75cac2;
+    border-radius: 12px 0px;
+
+    .touch-title {
+      background: linear-gradient(138.68deg, #a6e1dc 7.17%, #75cac2 67.7%);
+      border-radius: 12px 0px;
+      width: fit-content;
+      padding: 7px;
+      position: absolute;
+      top: -15px;
+      left: -3px;
+    }
+
+    .telegram {
+      position: absolute;
+      bottom: -40px;
+      left: -15px;
+      transition: all .5s;
+    }
+    .discord {
+      position: absolute;
+      right: -25px;
+      transition: all .5s;
+    }
+
+    .telegram:hover,
+    .discord:hover{
+      transform: translateX(5px) translateY(-5px);
+    }
+
+  }
+  .touch-socials {
+    grid-template-columns: repeat(4, 1fr);
+    background: #ffffff;
+    border: 2px solid #f59979;
+    border-radius: 12px 0px;
+    justify-content: center;
+    align-items: end;
+
+    .socials-title {
+        background: linear-gradient(106.2deg, #F59979 12.72%, #F8845B 50.47%);
+        border-radius: 12px 0px;
+        width: fit-content;
+        padding: 7px;
+        position: absolute;
+        top: -15px;
+        left: -3px;
+      }
+
+    .social-title{
+        text-align: center;
+    font-size: 14px;
+    color: #F8845B;
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+
+    .touch-socials{
+        grid-template-columns: repeat(2,1fr) !important;
+    }
+
+    .telegram{
+        top: 10px;
+        left: -5px !important;
+        width: 300px;
+    }
+
+    .discord{
+        bottom: -30px;
+        width: 300px;
+        right: auto !important;
+        left: -5px;
+    }
+    
+}

@@ -1,23 +1,35 @@
 import React from "react";
+import sphere from "../../../assets/newsSphere.png";
 
 const IDypHero = () => {
   return (
-    <div className="container-fluid dyp-main-hero d-flex flex-column justify-content-end position-relative overflow-hidden">
-      <div className="container-lg d-flex justify-content-between">
+    <div className="container-fluid idypmainhero d-flex flex-column justify-content-center position-relative overflow-hidden">
+      <img
+        className="idypring d-none d-lg-block"
+        src={require(`../../../assets/tokenCircle.png`)}
+      />
+            <img
+        className="idypheroimg"
+        src={require('../assets/idypmainhero.png')}
+        alt=""
+      />
+      <img
+        className="sphere-2"
+        src={sphere}
+        alt=""
+        style={{ position: "absolute", left: "2%", top: "70%" }}
+      />
+
+      <div className="container d-flex justify-content-between">
         <div className="col-12 col-lg-6 text-white d-flex flex-column gap-3 justify-content-lg-end justify-content-xl-end">
-          <h1>iDYP</h1>
+          <h1>iDYP Token</h1>
           <p>
             iDYP is an ERC-20 token used in the Dypius ecosystem as a component
             of smart contract strategies. It is accessible on three majour
-            networks like Ethereum, BNB chain, and Avalanche. The ecosystem it
-            is designed in a way that makes it easier for users to receive
-            rewards from the farm, buyback, vaults, and staking pools using iDYP
-            tokens. Dypius has a multi-token economy, and uses another ERC-20
-            token called DYP as a governance token for its ecosystem. <br />
-            The Dypius metaverse platform will use iDYP as a key token by being
-            a crucial component of a fascinating play-to-earn (P2E) game. iDYP
-            will bring extraordinary interactions from metaverse to crypto space
-            by being the center of Dypius ecosystem.
+            networks like Ethereum, BNB chain, and Avalanche. The Dypius
+            ecosystem is based on the blockchain technology and focuses on
+            scalability, security, and global adoption which makes it one of the
+            most powerful ecosystems in the world.
           </p>
         </div>
         <div className="col-9 col-lg-3 position-relative d-lg-block d-xl-block d-none">

@@ -1,7 +1,9 @@
 .faq-wrapper{
-    min-height: 1000px;
+    min-height: 700px;
     position: relative;
     background-image: url('../assets/faqBackground.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .faq-container{
         background: #FFFFFF;
@@ -32,6 +34,11 @@
         box-shadow: 0px 24px 60px rgba(85, 79, 216, 0.25);
         border-radius: 28px 0px;
         height: 100px;
+
+        @media screen and (max-width: 786px) {
+            width: 100% !important;
+            
+        }
         }
 
         .categories-grid{
@@ -39,7 +46,7 @@
             grid-template-columns: repeat(6, 1fr);
 
             @media screen and (max-width: 786px) {
-                grid-template-columns: auto;
+                grid-template-columns: repeat(2,1fr);
             }
             .category-card{
                 background: #FFFFFF;
@@ -49,10 +56,15 @@
                 width: 120px;
                 height: 120px;
                 cursor: pointer;
+                transition: all .5s;
     
                 p{
                     color: #7670E0;
                 }
+            }
+            
+            .category-card:hover{
+                border: 2px solid #554FD8;
             }
 
             .active-category{
@@ -69,7 +81,3 @@
     }
 }
 
-@media screen and (max-width: 786px) {
-    
-    
-}
