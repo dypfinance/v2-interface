@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import FAQ from './FAQ/FAQ'
 import GetInTouch from './GetInTouch/GetInTouch'
 import HelpCenter from './HelpCenter/HelpCenter'
