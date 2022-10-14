@@ -1,35 +1,54 @@
 .uni-card {
-width: 316px;
-position: absolute;
-left: 0;
-top: 30px;
-
+  width: 290px;
+  position: absolute;
+  left: 0;
+  top: 30px;
 }
 
 .pancake-card {
-    width: 316px;
-    position: absolute;
-    right: 0;
-    top: 60px;
-
+  width: 290px;
+  position: absolute;
+  right: 0;
+  top: 60px;
 }
 
 .pangolin-card {
-    width: 316px;
-    position: absolute;
-    left: 32px;
-    top: 170px;
-
+  width: 290px;
+  position: absolute;
+  left: 32px;
+  top: 170px;
 }
 
+.buyidypsection {
+  position: relative;
+  min-height: 430px;
+  width: 100%;
+  justify-content: space-between;
+  // overflow: hidden;
+}
 
+.buyidypsection::before {
+  content: "";
+  background-image: url("../assets/buyidypbg.png"),
+  linear-gradient(0deg, #EFF0F6 0%, #FFFFFF 73.43%);
+  background-size: cover;
+  background-position: bottom;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  // opacity: 0.2;
+  border-radius: 0px 0px 56px 56px;
+}
 
 @media only screen and (max-width: 991px) {
-
-    .uni-card, .pancake-card, .pangolin-card {
-        position: relative;
-        left: auto;
-        right: auto;
-        top: auto;
-    }
+  .uni-card,
+  .pancake-card,
+  .pangolin-card {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+  }
 }

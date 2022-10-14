@@ -11,7 +11,7 @@ const BuyDypCard = ({ title, logo, link, totalvids, videos, id }) => {
         <div className="d-flex gap-2 p-0 align-items-center">
           <img src={logo} alt="" className="buydypcard-logo" />
           <div className="d-flex flex-column gap-1">
-            <span className="buydypcard-title">{title} {videos.length}</span>
+            <span className="buydypcard-title">{title}</span>
             <div className="videodesc-wrapper">
               <span className="videodesc">{totalvids}</span>
             </div>

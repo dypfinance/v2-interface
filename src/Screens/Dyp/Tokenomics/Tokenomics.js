@@ -31,14 +31,13 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
   }, [isDyp]);
 
   const windowSize = useWindowSize();
-  
-  
+
   return (
     <div className="outer-wrapper" id="tokenomics" style={{ bottom: bottom }}>
       <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
         <div className="row m-0 gap-2 pl-0">
           <NoteIcon bgFill={"#7770E0"} svgFill={"#fff"} />
-          <Title top={"Tokenomics"} />
+          <Title top={ isDyp === true ? "Tokenomics" : 'iDYP Tokenomics'} />
         </div>
         <div className="row m-0 gap-4 pl-0 col-lg-3 col-xl-3 align-items-center justify-content-end">
           <button
@@ -52,7 +51,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                 ? "#collapseExample3"
                 : "#collapseExample"
             }
-            style={{display: showBtn === true ? 'block' : 'none'}}
+            style={{ display: showBtn === true ? "block" : "none" }}
             aria-expanded="false"
             aria-controls="collapseExample"
             onClick={() => {
@@ -94,12 +93,14 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
           </button> */}
         </div>
       </div>
-      <div className={`collapse ${showBtn === false ? 'show' : ''}`} id="collapseExample">
+      <div
+        className={`collapse ${showBtn === false ? "show" : ""}`}
+        id="collapseExample"
+      >
         <div className="card card-body pb-4">
           {tokenomicData === "dyp" ? (
             <div className="row m-0 justify-content-between gap-2">
               <div className="col-xl-7 col-lg-7">
-
                 <div className="d-flex flex-column mt-0">
                   <span className="dypcontract-title">
                     DYP Contract Address:
@@ -132,7 +133,8 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                 </div>
                 <div className="d-flex flex-column gap-3 mt-3">
                   <div>
-                    <span>Community</span><br/>
+                    <span>Community</span>
+                    <br />
                     <svg
                       width="353"
                       height="1"
@@ -348,13 +350,12 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                           </span>
                         </div>
                       </div>
-                      
                     </div>
                   </div>
                 </div>
               </div>
               <div className="col-lg-4 col-xl-4 col-md-4">
-              <div className="circulating-wrapper w-100 mb-3">
+                <div className="circulating-wrapper w-100 mb-3">
                   <div className="d-flex flex-column gap-3">
                     <span className="circulating-title">
                       Circulating supply
@@ -364,26 +365,29 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                     </span>
                   </div>
                 </div>
-                <div id="crypto-widget-CoinList" data-design="modern" data-coin-ids="2669"></div>
+                <div
+                  id="crypto-widget-CoinList"
+                  data-design="modern"
+                  data-coin-ids="2669"
+                ></div>
                 <img src={Graph} alt="" className="w-100" />
                 <div className="">
-                        <div className="circulating-wrapper w-100">
-                          <div className="d-flex flex-column gap-3">
-                            <span
-                              className="circulating-title"
-                              // style={{ fontSize: 12 }}
-                            >
-                              No additional tokens can be minted
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                  <div className="circulating-wrapper w-100">
+                    <div className="d-flex flex-column gap-3">
+                      <span
+                        className="circulating-title"
+                        // style={{ fontSize: 12 }}
+                      >
+                        No additional tokens can be minted
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           ) : (
             <div className="row m-0 justify-content-between gap-2">
               <div className="col-lg-7 col-xl-7 col-md-7">
-
                 <div className="d-flex flex-column mt-0">
                   <span className="dypcontract-title">
                     iDYP Contract Address:
@@ -412,7 +416,8 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                 </div>
                 <div className="d-flex flex-column gap-3 mt-3">
                   <div>
-                    <span>Community</span><br/>
+                    <span>Community</span>
+                    <br />
                     <svg
                       width="353"
                       height="1"
@@ -495,7 +500,8 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                     </div>
                   </div>
                   <div>
-                    <span>Reserves, Marketing, Ecosystem</span><br/>
+                    <span>Reserves, Marketing, Ecosystem</span>
+                    <br />
                     <svg
                       width="353"
                       height="1"
@@ -569,7 +575,8 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                   </div>
                   <div className="row justify-content-between">
                     <div className="col-lg-6 col-xl-6 col-md-6">
-                      <span>Team</span><br/>
+                      <span>Team</span>
+                      <br />
                       <svg
                         width="353"
                         height="1"
@@ -617,7 +624,8 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                       </div>
                     </div>
                     <div className="col-lg-5 col-xl-5 col-md-5">
-                      <span>Burned</span><br/>
+                      <span>Burned</span>
+                      <br />
                       <svg
                         width="353"
                         height="1"
@@ -668,7 +676,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                 </div>
               </div>
               <div className="col-lg-4 col-xl-4 col-md-4 flex-column justify-content-between">
-              <div className="circulating-wrapper w-100 mb-3">
+                <div className="circulating-wrapper w-100 mb-3">
                   <div className="d-flex flex-column gap-3">
                     <span className="circulating-title">Max Total Supply</span>
                     <span className="circulating-amount">300,000,000 iDYP</span>

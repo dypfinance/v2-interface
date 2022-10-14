@@ -45,7 +45,7 @@ const Governance = () => {
       <div className="container-fluid d-flex justify-content-center align-items-center gov-main-wrapper flex-column">
         <div className="container-lg">
           <div
-            className="col-lg-7 col-xl-7 ml-lg-5 ml-xl-5 mr-auto"
+            className="col-lg-7 col-xl-7 mr-auto"
             style={{ marginTop: windowSize.width < 786 ? "6rem" : "10rem" }}
           >
             <Title top={"Dypius"} bottom={"Governance"} />

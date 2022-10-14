@@ -5,8 +5,9 @@ import pangolin from "../assets/pangolin.png";
 
 const BuyIDyp = () => {
   return (
-    <div className="container-lg d-flex justify-content-center">
-      <div className="row dyp-tools">
+    <div className="container-lg buyidypsection d-flex justify-content-center">
+
+      <div className="container row m-0 justify-content-between">
         <div className={`col-12 col-lg-5 `}>
           <div className="gap-5 d-flex align-items-start justify-content-center flex-column pl-2 pt-5 pb-5 leftcol">
             <div className="gap-3 d-grid m-md-auto m-sm-auto m-lg-0">
