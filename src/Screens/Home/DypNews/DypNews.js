@@ -7,12 +7,14 @@ import axios from 'axios'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-
 import { RingLoader } from 'react-spinners'
+import prevArrow from '../../../assets/prevArrow.svg'
+import nextArrow from '../../../assets/nextArrow.svg'
 
 import './_dypnews.scss'
+import { useRef } from 'react'
 
-const DypNews = () => {
+const DypNews = ({topTitle, bottomTitle, titleAlign, page}) => {
 
 
   const settings = {
@@ -73,7 +75,14 @@ useEffect(() => {
 
 }, [newsData.length])
 
+const slider = useRef();
 
+const next = () => {
+  slider.current.slickNext();
+};
+const previous = () => {
+  slider.current.slickPrev();
+};
 
 
 const sortedNewsItems = newsData.map(item => {
@@ -83,16 +92,27 @@ const sortedNewsItems = newsData.map(item => {
 
 
   return (
-    <div className='container-lg'>
+    <div className='container-lg' id='dypNews'>
         <div className="row dyp-news">
 
           <div className="col-12 d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center ps-4 ps-lg-2 mb-5 mb-lg-0 gap-4">
           <img className='sphere' src={require(`../../../assets/newsSphere.png`)} />   
-            <Title top='Announcements' bottom='Stay tuned' />
+            <Title top={topTitle} bottom={bottomTitle} align={titleAlign} />
             <div className="button-group">
-              <button className="btn filled-btn mr-3">
-                Read more 
-              </button>
+           {page === 'news' ? 
+          <div className="slider-buttons d-flex flex-row gap-4">
+            <div className="prev-button d-flex justify-content-center align-items-center" onClick={previous}>
+              <img src={prevArrow} alt="" />
+            </div>
+            <div className="next-button d-flex justify-content-center align-items-center" onClick={next}>
+              <img src={nextArrow} alt="" />
+            </div>
+          </div>
+          : 
+          <button className="btn filled-btn mr-3">
+          Read more 
+        </button> 
+          }
               
             </div>
           </div>
@@ -100,7 +120,7 @@ const sortedNewsItems = newsData.map(item => {
           <img className='sphere-2' src={require(`../../../assets/newsSphere.png`)} /> 
             {newsData.length > 0 ?
             <div className="slider-wrapper">
-            <Slider {...settings}>
+            <Slider ref={(c) => (slider.current = c)} {...settings}>
               {sortedNewsItems.map((newsItem, index) => (
                 <NewsCard  key={index} title={newsItem.title} description={newsItem.content} date={newsItem.date.toLocaleDateString("en-US", options)} image={newsItem.image} link={`https://tools.dyp.finance/news/${newsItem.id}`} />
               ))}

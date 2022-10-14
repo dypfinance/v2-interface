@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useWindowSize from "../../hooks/useWindowSize";
 import "./_footer.scss";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/dypiusLogo.svg";
 import coinmarketcap from "../../assets/coinMarketCap.svg";
 import coinGecko from "../../assets/coinGecko.svg";
@@ -60,6 +60,10 @@ const Footer = () => {
       link: "#",
     },
     {
+      title: "Brand",
+      link: "#",
+    },
+    {
       title: "Roadmap",
       link: "#",
     },
@@ -71,10 +75,7 @@ const Footer = () => {
       title: "Tokenomics",
       link: "#",
     },
-    {
-      title: "Brand",
-      link: "#",
-    },
+    
     {
       title: "Contact us",
       link: "#",
@@ -100,11 +101,11 @@ const Footer = () => {
     },
     {
       title: "Buy DYP",
-      link: "#",
+      link: "/buydyp",
     },
     {
       title: "iDYP Token",
-      link: "#",
+      link: "/idyp",
     },
     {
       title: "Metaverse",
@@ -115,12 +116,14 @@ const Footer = () => {
   const announcements = [
     {
       title: "Latest anouncements",
-      link: "#",
+      link: "/news",
+      props: 'announcements',
     },
 
     {
       title: "Latest events",
-      link: "#",
+      link: "/news",
+      props: 'events',
     },
     {
       title: "Press",
@@ -444,13 +447,13 @@ const Footer = () => {
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">Solutions</h4>
                 {products.map((item, index) => (
-                  <a
-                    key={index}
-                    href={item.link}
-                    className="text-white text-decoration-none"
-                  >
-                    <h5>{item.title}</h5>
-                  </a>
+                   <Link
+                   key={index}
+                   to={item.link}
+                   className="text-white text-decoration-none"
+                 >
+                   <h5>{item.title}</h5>
+                 </Link>
                 ))}
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">
@@ -468,13 +471,14 @@ const Footer = () => {
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">Anouncements</h4>
                 {announcements.map((item, index) => (
-                  <a
+                  <Link
                     key={index}
-                    href={item.link}
+                    to={item.link}
                     className="text-white text-decoration-none"
+                    state={{newsType: item.props}}
                   >
                     <h5>{item.title}</h5>
-                  </a>
+                  </Link>
                 ))}
                 <div className="d-flex flex-row gap-3">
                   <a

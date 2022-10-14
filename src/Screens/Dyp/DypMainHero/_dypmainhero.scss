@@ -19,6 +19,15 @@
         z-index: 1;
     }
 
+    .coin{
+        position: absolute;
+    height: 300px;
+    width: 300px;
+    bottom: -5%;
+    right: 5%;
+
+    }
+
     .waves{
         width: 300px;
         height: 300px;
@@ -54,6 +63,8 @@
         left: 22%;
         filter: blur(2px) drop-shadow(0px 34px 34px rgba(31, 27, 103, 0.34));
     }
+    
+  
 
     .submenu-link{
         display: flex;
@@ -74,9 +85,4 @@
         
     }
     
-}
-
-.coin{
-    width: 300px;
-    height: 300px;
 }

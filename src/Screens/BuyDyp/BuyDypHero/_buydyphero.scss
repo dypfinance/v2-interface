@@ -1,6 +1,23 @@
 .backgroundbuydyp {
     position: absolute;
-    top: -4%;
-    left: -12%;
+    top: 0%;
+    left: -8%;
     z-index: 1;
+    width: 100%;
+}
+
+.buydyp-main-hero {
+    min-height: 500px;
+    background: linear-gradient(0deg, #EFF0F6 0%, rgba(239, 240, 246, 0) 73.43%);
+    border-radius: 0px 0px 56px 56px;
+    overflow: hidden;
+
+    h1 {
+        color: black;
+    }
+}
+
+.buydypcoin{
+    width: 250px;
+    height: 250px;
 }
