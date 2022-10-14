@@ -77,7 +77,22 @@ const HelpCenter = () => {
     message: "",
   };
 
+  const businessState ={
+    email: "",
+    subject: "",
+    first_name: "",
+    last_name: "",
+    organization: "",
+    job: "",
+    message: "",
+    recaptcha: "",
+    phone: "",
+  }
+
   const [values, setValues] = useState(helpState);
+  const [businessValues, setBusinessValues] = useState(businessState);
+  const [businessErrors, setBusinessErrors] = useState({})
+  const [businessFile, setBusinessFile] = useState()
   const [errors, setErrors] = useState({});
   const [selectedFile, setSelectedFile] = useState();
   const [help, setHelp] = useState(false);
@@ -87,16 +102,24 @@ const HelpCenter = () => {
 
   
   
-  const handleChange = async (e) => {
+  const handleChange = async (e, type) => {
     const { name, value } = e.target;
 
-    setValues({
-      ...values,
-      [name]: value,
-    });
-    console.log(values);
+    if(type === 'help'){
+      setValues({
+        ...values,
+        [name]: value,
+      });
+    }else{
+      setBusinessValues({
+        ...businessValues,
+        [name]: value
+      })
+    }
   };
-  const onFileChange = (event) => {
+
+
+  const onFileChange = (event, type) => {
     const fileTypes = [
       "image/jpg",
       "image/png",
@@ -109,7 +132,11 @@ const HelpCenter = () => {
     if (fileTypes.includes(event.target.files[0].type)) {
       if (event.target.files && event.target.files[0]) {
         if (event.target.files[0].size < 5000000) {
-          setSelectedFile(event.target.files[0]);
+          if(type === 'help'){
+            setSelectedFile(event.target.files[0]);
+          }else{
+            setBusinessFile(event.target.files[0])
+          }
         } else alert("File size too big");
       }
     } else {
