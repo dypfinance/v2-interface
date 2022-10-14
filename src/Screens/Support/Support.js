@@ -1,5 +1,6 @@
 import React from 'react'
 import FAQ from './FAQ/FAQ'
+import GetInTouch from './GetInTouch/GetInTouch'
 import HelpCenter from './HelpCenter/HelpCenter'
 import SupportMainHero from './SupportMainHero/SupportMainHero'
 import VideoTutorials from './VideoTutorials/VideoTutorials'
@@ -11,6 +12,7 @@ const Support = () => {
       <SupportMainHero />
       <FAQ />
       <VideoTutorials />
+      <GetInTouch />
       <HelpCenter />
     </div>
   )

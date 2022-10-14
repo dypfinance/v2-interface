@@ -4,7 +4,7 @@ import filledArrow from '../../assets/filledArrow.svg'
 
 const UpdateCard = ({title, image, link, date, month}) => {
   return (
-    <div className="update-card d-flex flex-column flex-lg-row gap-3 p-3">
+    <a  href={link} className="update-card d-flex flex-column flex-lg-row gap-3 p-3">
         <div className='d-flex flex-row gap-2'>
         <div className="date d-flex flex-column justify-content-center align-items-center">
         <p className="month">
@@ -18,13 +18,13 @@ const UpdateCard = ({title, image, link, date, month}) => {
         </div>
             <div className='d-flex'>
         <div className="update-title d-flex flex-column justify-content-between">
-            <p className=''>{title.slice(0, 25) + '...'}</p>
+            <p style={{color: 'black'}}>{title.slice(0, 25) + '...'}</p>
             <a target="_blank" href={link}>
             <p className='d-flex flex-row mb-0 gap-2 align-items-center' style={{color: '#6962DC', fontSize: '10px'}}>View Article <img src={filledArrow} alt="" /></p>
             </a>
             </div>
         </div>
-</div>
+</a>
   )
 }
 

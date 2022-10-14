@@ -133,25 +133,27 @@ const FAQ = () => {
         </div>
       </div>
 
+      {faqItems.length !== 0 &&
       <div className="faq-container container-lg w-100 mt-4 p-5">
-        <div className="row justify-content-between align-items-center">
-          <h2 className="fw-bold mb-5">{`${faqTitle} FAQs`}</h2>
-        </div>
-        <div className="row flex-column">
-          <div className="accordion" id="faqAccordion">
-            {faqItems.length != 0 &&
-              faqItems.map((faq, index) => (
-                <FAQAccordion
-                  key={index}
-                  title={faq.title}
-                  content={faq.content}
-                  id={faq.collapse}
-                  heading={faq.heading}
-                />
-              ))}
-          </div>
+      <div className="row justify-content-between align-items-center">
+        <h2 className="fw-bold mb-5">{`${faqTitle} FAQs`}</h2>
+      </div>
+      <div className="row flex-column">
+        <div className="accordion" id="faqAccordion">
+          {faqItems.length !== 0 &&
+            faqItems.map((faq, index) => (
+              <FAQAccordion
+                key={index}
+                title={faq.title}
+                content={faq.content}
+                id={faq.collapse}
+                heading={faq.heading}
+              />
+            ))}
         </div>
       </div>
+    </div>
+      }
     </div>
   );
 };
