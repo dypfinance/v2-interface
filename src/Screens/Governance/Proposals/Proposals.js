@@ -16,7 +16,7 @@ const Proposals = () => {
       icon: "https://newsbucketgino.s3.eu-central-1.amazonaws.com/bnbDropdown.svg",
     },
     {
-      chain: "Ethereum",
+      chain: "Avalanche",
       total: "38",
       icon: "https://newsbucketgino.s3.eu-central-1.amazonaws.com/avaDropdown.svg",
     },
