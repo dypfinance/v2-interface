@@ -52,15 +52,21 @@ const BuyDypCard = ({ title, logo, link, totalvids, videos, id }) => {
           {videos.length > 0 &&
             videos.map((item, index) => {
               return (
-                <div className="row ml-0 mr-0 gap-2 justify-content-between align-items-center buyitemcard" key={index}>
-                    
+                <div
+                  className="row ml-0 mr-0 gap-2 justify-content-between align-items-center buyitemcard"
+                  key={index}
+                >
                   <img src={vidthumbnail} alt="" className="vidthumbnail p-0" />
                   <div className="d-flex gap-0 flex-column p-0">
-                    <img src={trustwallet} alt="" className="walletimg" />
-                    <a href={item.link} target={'_blank'} rel='noreferrer'>
-                    <p className="videotitle">
-                      {item.title} 
-                    </p>
+                    <span>
+                    <img
+                      src={require(`../../Screens/BuyDyp/assets/buydypItems/${item.image}`)}
+                      alt=""
+                      className="walletimg"
+                    />
+                    <span className="walletname">{item.walletName}</span></span>
+                    <a href={item.link} target={"_blank"} rel="noreferrer">
+                      <p className="videotitle">{item.title.slice(0, 60) + '...'}</p>
                     </a>
                   </div>
                   <img src={filledArrow} alt="" className="p-0" />
