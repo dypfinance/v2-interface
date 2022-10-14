@@ -122,26 +122,24 @@ const HelpCenter = () => {
   ];
 
   const helpState = {
-    first_name: "",
-    last_name: "",
+    name: "",
+    social: "",
     email: "",
     topic: "",
     message: "",
   };
 
   const businessState = {
+    name: "",
+    job_title: "",
+    organisation: "",
     email: "",
     subject: "",
-    first_name: "",
-    last_name: "",
-    organization: "",
-    job: "",
     message: "",
-    recaptcha: "",
-    phone: "",
   };
 
   const [values, setValues] = useState(helpState);
+  const [businessValues, setBusinessValues] = useState(businessState)
   const [errors, setErrors] = useState({});
   const [selectedFile, setSelectedFile] = useState();
   const [help, setHelp] = useState(false);
@@ -153,6 +151,15 @@ const HelpCenter = () => {
     const { name, value } = e.target;
 
     setValues({
+      ...values,
+      [name]: value,
+    });
+  };
+
+  const handleBusinessChange = async (e) => {
+    const { name, value } = e.target;
+
+    setBusinessValues({
       ...values,
       [name]: value,
     });
@@ -242,7 +249,7 @@ const HelpCenter = () => {
   return (
     <div className="container-lg help-wrapper">
       <div className="row flex-column align-items-center">
-        <Title top="Stay" bottom="connected" align="d-flex flex-row gap-2" />
+        <Title top="Contact" bottom="us" align="d-flex flex-row gap-2" />
         <p className="text-secondary">
           Reach out to us anytime and we will happily answer all of your
           inquiries.
@@ -331,18 +338,18 @@ const HelpCenter = () => {
                   <StyledSelect
                     sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
                     labelId="demo-simple-select-error-label"
-                    id="topic"
-                    name="topic"
-                    value={values.topic}
-                    error={errors.topic ? true : false}
+                    id="social"
+                    name="social"
+                    value={values.social}
+                    error={errors.social ? true : false}
                     onChange={handleChange}
                     renderValue={(value) => value}
-                    label="Select Topic"
+                    label="Social accound"
                   >
-                    <MenuItem value="telegram">Telegram</MenuItem>
-                    <MenuItem value="discord">Discord</MenuItem>
+                    <MenuItem value="Telegram">Telegram</MenuItem>
+                    <MenuItem value="Discord">Discord</MenuItem>
                   </StyledSelect>
-                  <FormHelperText>{errors.topic}</FormHelperText>
+                  <FormHelperText>{errors.social}</FormHelperText>
                 </FormControl>
               </div>
               <StyledTextField
@@ -433,13 +440,13 @@ const HelpCenter = () => {
                   <StyledSelect
                     sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
                     labelId="demo-simple-select-error-label"
-                    id="topic"
-                    name="topic"
-                    value={values.topic}
-                    error={errors.topic ? true : false}
-                    onChange={handleChange}
+                    id="job_title"
+                    name="job_title"
+                    value={businessState.job_title}
+                    error={errors.job_title ? true : false}
+                    onChange={handleBusinessChange}
                     renderValue={(value) => value}
-                    label="Select Topic"
+                    label="Select Job title"
                   >
                     {jobTitles.map((selectItem, index) => (
                       <MenuItem key={index} value={selectItem.title}>
@@ -447,7 +454,7 @@ const HelpCenter = () => {
                       </MenuItem>
                     ))}
                   </StyledSelect>
-                  <FormHelperText>{errors.topic}</FormHelperText>
+                  <FormHelperText>{errors.job_title}</FormHelperText>
                 </FormControl>
               </div>
 

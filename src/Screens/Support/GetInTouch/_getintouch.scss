@@ -22,11 +22,19 @@
       position: absolute;
       bottom: -40px;
       left: -15px;
+      transition: all .5s;
     }
     .discord {
       position: absolute;
       right: -25px;
+      transition: all .5s;
     }
+
+    .telegram:hover,
+    .discord:hover{
+      transform: translateX(5px) translateY(-5px);
+    }
+
   }
   .touch-socials {
     grid-template-columns: repeat(4, 1fr);

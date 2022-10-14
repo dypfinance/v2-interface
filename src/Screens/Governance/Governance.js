@@ -6,6 +6,7 @@ import purplelink from "./assets/purplelink.svg";
 import purplelinkmd from "./assets/purplelink-md.svg";
 
 import useWindowSize from "../../hooks/useWindowSize";
+import Proposals from "./Proposals/Proposals";
 
 const Governance = () => {
   useEffect(() => {
@@ -95,6 +96,7 @@ const Governance = () => {
           </div>
         </div>
       </div>
+      <Proposals />
     </div>
   );
 };

@@ -11,11 +11,11 @@ const SupportMainHero = () => {
   return (
     <div className="container-fluid d-flex justify-content-end support-main-wrapper">
         <div className="container-lg d-flex justify-content-center align-items-end p-5">
-        <div className="row justify-content-between">
+        <div className="row justify-content-between w-100">
         <div className="col-12 col-lg-5 col-md-5 mt-5 mt-lg-0">
           <Title top="Dypius" bottom="Support" align="d-flex flex-row gap-2" />
           <p className='text-secondary'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet nibh magna. Curabitur fringilla feugiat dui, eu facilisis nibh scelerisque in
+          Get up to date information about Dypius products and solutions in one place. 
           </p>
         </div>
         <div className="col-12 col-lg-5 col-md-5 image-container position-relative">

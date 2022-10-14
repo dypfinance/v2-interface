@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import NewsCard from '../../../components/NewsCard/NewsCard'
 import Title from '../../../components/Title/Title'
-import rightArrow from '../../../assets/right-arrow.svg'
-import filledArrow from '../../../assets/filledArrow.svg'
 import axios from 'axios'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"; 
@@ -92,7 +90,7 @@ const sortedNewsItems = newsData.map(item => {
 
 
   return (
-    <div className='container-lg' id='dypNews'>
+    <div className='container-lg mb-5' id='dypNews'>
         <div className="row dyp-news">
 
           <div className="col-12 d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center ps-4 ps-lg-2 mb-5 mb-lg-0 gap-4">
