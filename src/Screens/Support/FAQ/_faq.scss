@@ -1,7 +1,9 @@
 .faq-wrapper{
-    min-height: 900px;
+    min-height: 700px;
     position: relative;
     background-image: url('../assets/faqBackground.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .faq-container{
         background: #FFFFFF;
@@ -54,10 +56,15 @@
                 width: 120px;
                 height: 120px;
                 cursor: pointer;
+                transition: all .5s;
     
                 p{
                     color: #7670E0;
                 }
+            }
+            
+            .category-card:hover{
+                border: 2px solid #554FD8;
             }
 
             .active-category{

@@ -12,7 +12,7 @@ const Home = () => {
 },[])
 
   return (
-    <div className="homepage main-wrapper container-fluid pl-0 pr-0 d-flex flex-column align-items-center" style={{gap: '70px', paddingBottom: '10rem'}}>
+    <div className="homepage main-wrapper container-fluid pl-0 pr-0 d-flex flex-column align-items-center" style={{gap: '70px', paddingBottom: '5rem'}}>
       <MainHero/>
       <DypMetaverse/>
       <DypTools/>

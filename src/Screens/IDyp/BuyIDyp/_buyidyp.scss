@@ -3,6 +3,7 @@
   position: absolute;
   left: 0;
   top: 30px;
+  transition: all .5s;
 }
 
 .pancake-card {
@@ -10,6 +11,7 @@
   position: absolute;
   right: 0;
   top: 60px;
+  transition: all .5s;
 }
 
 .pangolin-card {
@@ -17,7 +19,16 @@
   position: absolute;
   left: 32px;
   top: 170px;
+  transition: all .5s;
 }
+
+.uni-card:hover,
+.pancake-card:hover,
+.pangolin-card:hover{
+  transform: translateX(5px) translateY(5px);
+}
+
+
 
 .buyidypsection {
   position: relative;

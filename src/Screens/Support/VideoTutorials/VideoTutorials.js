@@ -38,7 +38,7 @@ const VideoTutorials = () => {
         <div className="container-lg p-5">
             <div className="row">
                 <div className="col-12 col-lg-3 d-flex flex-column gap-3">
-                    <Title top="Featured" bottom="Tutorials" />
+                    <Title top="Popular" bottom="Tutorials" />
                     <p className="text-secondary">
                     Watch our latest tutorials on Dypius solutions and learn how to become an expert in no time.
                     </p>

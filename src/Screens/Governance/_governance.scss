@@ -1,9 +1,10 @@
 .gov-main-wrapper {
-    background: url(./assets/mainhero.png);
+    background: url(./assets/mainhero.png), linear-gradient(0deg, #EFF0F6 0%, rgba(239, 240, 246, 0) 73.43%);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: 10rem;
+    padding-bottom: 15rem;
+    border-radius: 0px 0px 56px 56px;
     
 
     @media only screen and (max-width: 991px) {
