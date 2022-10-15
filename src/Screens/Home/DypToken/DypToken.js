@@ -5,6 +5,7 @@ import coin from '../../../assets/coin.png'
 import coinBg from '../../../assets/coinBackground.svg'
 import rightArrow from '../../../assets/right-arrow.svg'
 import './_dyptoken.scss'
+import { NavLink } from 'react-router-dom'
 
 
 const DypToken = () => {
@@ -32,9 +33,9 @@ const DypToken = () => {
                 <CoinCard title='Dypius Earn' stakeAmount='75%' description='Earn rewards by securely depositing your assets into the staking smart contract' />
               </div>
             </div>
-            <button className="btn filled-btn" data-aos="fade-up" data-aos-duration="1000">
+            <NavLink to='/dyp' className="btn filled-btn d-flex align-items-center" data-aos="fade-up" data-aos-duration="1000" style={{zIndex: 5}}>
               Learn more 
-            </button>
+            </NavLink >
           </div>         
         </div>
     </div>

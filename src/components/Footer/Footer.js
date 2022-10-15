@@ -417,6 +417,8 @@ const Footer = () => {
                       <a
                         key={index}
                         href={item.link}
+                        rel='noreferrer'
+                        target={'_blank'}
                         className="text-white text-decoration-none"
                       >
                         <h5>{item.title}</h5>
