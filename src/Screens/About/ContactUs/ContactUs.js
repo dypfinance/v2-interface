@@ -15,6 +15,7 @@ import filebg2 from "../assets/fileuploaded.svg";
 import useWindowSize from "../../../hooks/useWindowSize";
 import Modal from "../../../components/Modal/Modal";
 import { useEffect } from "react";
+import removebtn from '../assets/remove-btn.svg'
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -306,29 +307,28 @@ const ContactUs = () => {
                   className="d-grid gap-1 p-0"
                   style={{ width: windowSize.width < 999 ? "100%" : "" }}
                 >
+                  <span className="d-flex gap-2">
                   <input
                     type="file"
                     className="custom-file-input outline-btn"
                     onChange={(e) => {
                       onFileChange(e);
                     }}
-                    onClick={(e) => {
-                      handleChangeBg(e);
-                    }}
+                   
                     style={{
                       backgroundImage: selectedFile
                         ? `url(${filebg2})`
                         : `url(${filebg1})`,
                       backgroundRepeat: "no-repeat",
                       backgroundPosition: "center",
-                      width:
-                        windowSize.width < 999
-                          ? "100%"
-                          : selectedFile
-                          ? "100%"
-                          : "70%",
+                      border: '2px solid #D6D8E7',
+                      width:  "40%",
                     }}
                   />
+                  <img src={removebtn} alt='' style={{display: selectedFile ? 'block' : 'none', cursor: 'pointer'}} onClick={(e) => {
+                      handleChangeBg(e);
+                    }}/>
+                  </span>
                   <span className="helpertext">Max file size 5MB</span>
                 </div>
                 <ReCaptchaV2
