@@ -431,8 +431,8 @@ const HelpCenter = () => {
                 onChange={handleChange}
                 className="w-100 mt-3"
                 multiline
-                minRows={3}
-                maxRows={5}
+                minRows={6}
+                maxRows={6}
               />
 
               <div className="row px-0 flex-row mt-4">
