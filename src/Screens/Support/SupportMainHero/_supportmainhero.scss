@@ -1,11 +1,9 @@
 .support-main-wrapper {
-  min-height: 500px;
+  min-height: 600px;
   background: linear-gradient(0deg, #eff0f6 0%, #ffffff 73.43%);
   border-radius: 0px 0px 56px 56px;
 
-  .container-lg {
-    padding-bottom: 100px !important;
-  }
+  
 
   .image-container {
     .brain {
@@ -33,6 +31,17 @@
       left: 9px;
     }
   }
+}
+
+.submenu-link{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+
+
+      color: rgba(85, 79, 216, 1);
+  
 }
 
 @media screen and (max-width: 786px) {

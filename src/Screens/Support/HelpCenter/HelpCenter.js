@@ -15,6 +15,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import FormContainer from "../../../components/FormContainer/FormContainer";
 import validate from "./validateHelpInfo";
+import validateBusiness from "../../About/ContactUs/validateinfo";
 import axios from "axios";
 import useWindowSize from "../../../hooks/useWindowSize";
 import ReCaptchaV2 from "react-google-recaptcha";
@@ -142,7 +143,9 @@ const HelpCenter = () => {
   const [values, setValues] = useState(helpState);
   const [businessValues, setBusinessValues] = useState(businessState);
   const [errors, setErrors] = useState({});
+  const [businessErrors, setBusinessErrors] = useState({});
   const [selectedFile, setSelectedFile] = useState();
+  const [businessFile, setBusinessFile] = useState()
   const [help, setHelp] = useState(false);
   const [business, setBusiness] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -161,31 +164,13 @@ const HelpCenter = () => {
     const { name, value } = e.target;
 
     setBusinessValues({
-      ...values,
+      ...businessValues,
       [name]: value,
     });
+    console.log(businessValues);
   };
 
-  const onFileChange = (event) => {
-    const fileTypes = [
-      "image/jpg",
-      "image/png",
-      "application/pdf",
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.doc",
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-    ];
-
-    if (fileTypes.includes(event.target.files[0].type)) {
-      if (event.target.files && event.target.files[0]) {
-        if (event.target.files[0].size < 5000000) {
-          setSelectedFile(event.target.files[0]);
-        } else alert("File size too big");
-      }
-    } else {
-      alert("Image type not supported");
-    }
-  };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -232,9 +217,90 @@ const HelpCenter = () => {
     }
   };
 
+  const handleBusinessSubmit = async (e) => {
+    e.preventDefault();
+
+    setErrors(validateBusiness(businessValues));
+
+    if (Object.keys(businessErrors).length === 0) {
+      const captchaToken = await recaptchaRef.current.executeAsync();
+      const data = {
+        name: businessValues.name,
+        job_title: businessValues.job_title,
+        organisation: businessValues.organisation,
+        email: businessValues.email,
+        subject: businessValues.subject,
+        message: businessValues.message,
+        recaptcha: captchaToken,
+      };
+
+      if (
+        businessValues.name !== "" &&
+        businessValues.job_title !== "" &&
+        businessValues.organisation !== "" &&
+        businessValues.email !== "" &&
+        businessValues.subject !== "" &&
+        businessValues.message !== ""
+      ) {
+        const send = await axios
+          .post("https://api-mail.dyp.finance/api/business", data)
+          .then(function (result) {
+            console.log(result.data);
+            return result.data;
+          })
+          .catch(function (error) {
+            console.error(error);
+          });
+
+        if (send.status === 1) {
+          setSuccess(true);
+        } else {
+          setSuccess(false);
+        }
+      }
+      recaptchaRef.current.reset();
+
+      setBusinessValues({ ...businessState });
+    }
+  }
+
+  const onFileChange = (event, type) => {
+    
+    console.log(type);
+    const fileTypes = [
+      "image/jpg",
+      "image/png",
+      "application/pdf",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.doc",
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    ];
+
+    if (fileTypes.includes(event.target.files[0].type)) {
+      if (event.target.files && event.target.files[0]) {
+        if (event.target.files[0].size < 5000000) {
+          if(type === 'help'){
+            setSelectedFile(event.target.files[0]);
+          }else{
+            setBusinessFile(event.target.files[0])
+          }
+        } else alert("File size too big");
+      }
+    } else {
+      alert("Image type not supported");
+    }
+
+    console.log(event.target.files);
+  };
+
   const handleChangeBg = (event) => {
     if (selectedFile) {
       setSelectedFile(null);
+      event.preventDefault();
+    }
+
+    if (businessFile) {
+      setBusinessFile(null);
       event.preventDefault();
     }
   };
@@ -248,7 +314,7 @@ const HelpCenter = () => {
   };
 
   return (
-    <div className="container-lg help-wrapper">
+    <div className="container-lg help-wrapper" id="helpcenter">
       <div className="row flex-column align-items-center">
         <Title top="Contact" bottom="us" align="d-flex flex-row gap-2" />
         <p className="text-secondary">
@@ -372,26 +438,25 @@ const HelpCenter = () => {
               <div className="row px-0 flex-row mt-4">
                 <div className="d-flex col-6 flex-column gap-2">
                   <span className="d-flex gap-2">
-                  <input
-                    type="file"
-                    onChange={(e) => {
-                      onFileChange(e, "help");
-                    }}
-                    onClick={(e) => {
-                      handleChangeBg(e);
-                    }}
-                    className="custom-file-input outline-btn"
-                    style={{
-                      backgroundImage: selectedFile
-                        ? `url(${filebg2})`
-                        : `url(${filebg1})`,
-                      // backgroundSize: selectedFile ? "200px" : "auto",
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "center",
-                      width: "55%",
-                      border: "2px solid #D6D8E7",
-                    }}
-                  />
+                    <input
+                      type="file"
+                      onChange={(e) => {
+                        onFileChange(e, "help");
+                      }}
+                      onClick={(e) => {
+                        handleChangeBg(e);
+                      }}
+                      className="custom-file-input outline-btn"
+                      style={{
+                        backgroundImage: selectedFile
+                          ? `url(${filebg2})`
+                          : `url(${filebg1})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        width: "55%",
+                        border: "2px solid #D6D8E7",
+                      }}
+                    />
                     <img
                       src={removebtn}
                       alt=""
@@ -400,10 +465,10 @@ const HelpCenter = () => {
                         cursor: "pointer",
                       }}
                       onClick={(e) => {
-                        handleChangeBg(e);
+                        handleChangeBg(e, 'help');
                       }}
                     />
-                    </span>
+                  </span>
                   <span className="helpertext">Max file size 5MB</span>
                   <ReCaptchaV2
                     sitekey="6LflZgEgAAAAAO-psvqdoreRgcDdtkQUmYXoHuy2"
@@ -448,31 +513,28 @@ const HelpCenter = () => {
                   label="Name"
                   sx={{ width: "250px" }}
                 />
-                <FormControl fullWidth size="small" sx={{ width: "250px" }}>
-                  <InputLabel id="demo-simple-select-error-label">
-                    Job title
-                  </InputLabel>
-                  <StyledSelect
-                    sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
-                    labelId="demo-simple-select-error-label"
-                    id="job_title"
-                    name="job_title"
-                    value={businessState.job_title}
-                    error={errors.job_title ? true : false}
-                    onChange={handleBusinessChange}
-                    renderValue={(value) => value}
-                    label="Select Job title"
-                  >
-                    {jobTitles.map((selectItem, index) => (
-                      <MenuItem key={index} value={selectItem.title}>
-                        {selectItem.title}
-                      </MenuItem>
-                    ))}
-                  </StyledSelect>
-                  <FormHelperText>{errors.job_title}</FormHelperText>
-                </FormControl>
+                 <FormControl fullWidth sx={{width: '250px'}} size="small">
+                <InputLabel id="demo-simple-select-error-label">
+                  Job Title
+                </InputLabel>
+                <StyledSelect
+                  sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
+                  labelId="demo-simple-select-error-label"
+                  id="job_title"
+                  name="job_title"
+                  value={businessValues.job_title}
+                  error={businessErrors.job_title ? true : false}
+                  onChange={handleBusinessChange}
+                  renderValue={(value) => value}
+                  label="Select job title"
+                >
+                 {jobTitles.map((job, index) => (
+                  <MenuItem key={index} value={job.value}>{job.title}</MenuItem>
+                 ))}
+                </StyledSelect>
+                <FormHelperText>{businessErrors.job_title}</FormHelperText>
+              </FormControl>
               </div>
-
               <div className="row gap-4 justify-content-center mt-3">
                 <StyledTextField
                   size="small"
@@ -492,21 +554,22 @@ const HelpCenter = () => {
                 <StyledSelect
                   sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
                   labelId="demo-simple-select-error-label"
-                  id="topic"
-                  name="topic"
-                  value={values.topic}
-                  error={errors.topic ? true : false}
-                  onChange={handleChange}
+                  id="subject"
+                  name="subject"
+                  value={businessValues.subject}
+                  error={businessErrors.subject ? true : false}
+                  onChange={handleBusinessChange}
                   renderValue={(value) => value}
-                  label="Select Topic"
+                  label="Select subject"
                 >
                   <MenuItem value="Partnership">Partnership</MenuItem>
                   <MenuItem value="Media inquiry">Media inquiry</MenuItem>
                   <MenuItem value="Launchpad">Launchpad</MenuItem>
                   <MenuItem value="Other">Other</MenuItem>
                 </StyledSelect>
-                <FormHelperText>{errors.topic}</FormHelperText>
+                <FormHelperText>{businessErrors.subject}</FormHelperText>
               </FormControl>
+
               <StyledTextField
                 size="small"
                 label="Describe your inquiry*"
@@ -521,14 +584,13 @@ const HelpCenter = () => {
                     <input
                       type="file"
                       onChange={(e) => {
-                        onFileChange(e);
+                        onFileChange(e, 'business');
                       }}
                       className="custom-file-input outline-btn"
                       style={{
-                        backgroundImage: selectedFile
+                        backgroundImage: businessFile
                           ? `url(${filebg2})`
                           : `url(${filebg1})`,
-                        // backgroundSize: selectedFile ? "200px" : "auto",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
                         width: "55%",
@@ -539,7 +601,7 @@ const HelpCenter = () => {
                       src={removebtn}
                       alt=""
                       style={{
-                        display: selectedFile ? "block" : "none",
+                        display: businessFile ? "block" : "none",
                         cursor: "pointer",
                       }}
                       onClick={(e) => {
@@ -560,7 +622,7 @@ const HelpCenter = () => {
                 <div className="col-6">
                   <button
                     className="btn filled-btn w-100"
-                    onClick={handleSubmit}
+                    onClick={handleBusinessSubmit}
                   >
                     Submit
                   </button>
