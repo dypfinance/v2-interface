@@ -41,7 +41,7 @@ const AboutMainHero = () => {
       </div>
       <div
         className="row pt-5 p-4 justify-content-center gap-5"
-        style={{ zIndex: 1 }}
+        style={{ zIndex: 5 }}
       >
         <a href="#ourteam" className="text-decoration-none submenu-link">
           Our team

@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import DypNews from "../Home/DypNews/DypNews";
 import LatestUpdates from "./LatestUpdates/LatestUpdates";
 
+
 const NewsPage = () => {
   const data = useLocation();
   useEffect(() => {

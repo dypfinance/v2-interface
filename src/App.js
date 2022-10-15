@@ -17,7 +17,6 @@ import Support from "./Screens/Support/Support";
 import Governance from "./Screens/Governance/Governance";
 import IDyp from "./Screens/IDyp/IDyp";
 import NewsPage from "./Screens/NewsPage/NewsPage";
-
 import BuyDypScreen from "./Screens/BuyDyp/BuyDypScreen";
 
 function App() {

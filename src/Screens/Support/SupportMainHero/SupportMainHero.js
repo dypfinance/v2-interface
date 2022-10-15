@@ -5,11 +5,12 @@ import supportBrain from '../assets/supportBrain.png'
 import supportPhone from '../assets/supportPhone.png'
 import supportShape from '../assets/supportShape.png'
 import bluehero from '../../../assets/metaverse-blueHero.svg'
+import indicator from '../../About/assets/aboutIndicator.svg'
 
 
 const SupportMainHero = () => {
   return (
-    <div className="container-fluid d-flex justify-content-end support-main-wrapper">
+    <div className="container-fluid d-flex flex-column justify-content-end support-main-wrapper">
         <div className="container-lg d-flex justify-content-center align-items-end p-5">
         <div className="row justify-content-between w-100">
         <div className="col-12 col-lg-5 col-md-5 mt-5 mt-lg-0">
@@ -26,6 +27,23 @@ const SupportMainHero = () => {
         </div>
         </div>
         </div>
+        <div
+        className="row pt-5 p-4 justify-content-center gap-5"
+        style={{ zIndex: 5 }}
+      >
+        <a href="#faq" className="text-decoration-none submenu-link">
+          FAQ
+          <img src={indicator} alt="" />
+        </a>
+        <a href="#tutorials" className="text-decoration-none submenu-link">
+          Tutorials
+          <img src={indicator} alt="" />
+        </a>
+        <a href="#helpcenter" className="text-decoration-none submenu-link">
+          Contact Us
+          <img src={indicator} alt="" />
+        </a>
+      </div>
     </div>
   )
 }
