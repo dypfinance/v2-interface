@@ -119,7 +119,7 @@ const settings = {
                     {recentProposalGroups.map((proposal) => (
                         <div>
                             {proposal.content.map((item) => (
-                                <ProposalCard />
+                                <ProposalCard title={item.title} icon={item.icon} />
                             ))}
                         </div>
                     ))}

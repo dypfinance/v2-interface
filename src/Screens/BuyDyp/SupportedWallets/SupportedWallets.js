@@ -1,4 +1,6 @@
 import React from "react";
+import {shortAddress } from '../../../hooks/shortAddress'
+import useWindowSize from "../../../hooks/useWindowSize";
 
 const SupportedWallets = () => {
   const wallets = [
@@ -24,6 +26,10 @@ const SupportedWallets = () => {
     },
   ];
 
+
+  const windowSize = useWindowSize();
+
+
   return (
     <div className="supportedwallet-wrapper container-lg mt-5 mb-5">
       <div>
@@ -36,7 +42,11 @@ const SupportedWallets = () => {
                   DYP Contract Address (ETH, BNB Chain, Avalanche):
                 </span>
                 <span className="contractaddr">
-                  0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17
+                  {windowSize.width < 526
+                      ? shortAddress(
+                          "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
+                        )
+                      : "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"}
                   <img
                     src={require("../assets/copy.svg").default}
                     alt=""

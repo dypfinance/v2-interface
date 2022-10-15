@@ -34,7 +34,7 @@ const VideoTutorials = () => {
 
 
   return (
-    <div className="container-fluid mt-5">
+    <div className="container-fluid mt-5" id='tutorials'>
         <div className="container-lg p-5">
             <div className="row">
                 <div className="col-12 col-lg-3 d-flex flex-column gap-3">

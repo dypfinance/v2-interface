@@ -29,7 +29,7 @@ const Brand = () => {
                 className="pl-0 mb-3"
                 style={{ width: 80 }}
               />
-              <button className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4">
+              <a  href="https://drive.google.com/drive/folders/1Sh77agasJV4iYn3xU25JS3phIIVBGeZg" target={'_blank'} rel='noreferrer' className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4">
                 Download
                 <svg
                   width="24"
@@ -43,7 +43,7 @@ const Brand = () => {
                     fill="white"
                   />
                 </svg>
-              </button>
+              </a>
             </div>
             <div>
               <h6>
@@ -65,7 +65,7 @@ const Brand = () => {
                 className="pl-0 mb-3"
                 style={{ width: 80 }}
               />
-              <button className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4">
+              <a href="https://drive.google.com/drive/folders/1PprliiDlNB6Cx-35eaEun-gmjk0-a1O4" target={'_blank'} rel='noreferrer' className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4">
                 Download
                 <svg
                   width="24"
@@ -79,7 +79,7 @@ const Brand = () => {
                     fill="white"
                   />
                 </svg>
-              </button>
+              </a>
             </div>
             <div>
               <h6>

@@ -4,7 +4,7 @@ import filledArrow from '../../assets/filledArrow.svg'
 
 const UpdateCard = ({title, image, link, date, month}) => {
   return (
-    <a  href={link} className="update-card d-flex flex-column flex-lg-row gap-3 p-3">
+    <a target="_blank" href={link} className="update-card d-flex flex-column flex-lg-row gap-3 p-3">
         <div className='d-flex flex-row gap-2'>
         <div className="date d-flex flex-column justify-content-center align-items-center">
         <p className="month">

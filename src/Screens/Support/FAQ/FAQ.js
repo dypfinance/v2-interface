@@ -89,7 +89,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="container-fluid faq-wrapper">
+    <div className="container-fluid faq-wrapper" id="faq">
       <div className="container-lg d-flex justify-content-center align-items-center flex-column py-5">
         <div className="col-12 col-lg-6">
           <Title
