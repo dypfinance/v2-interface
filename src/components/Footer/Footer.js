@@ -93,7 +93,7 @@ const Footer = () => {
     },
     {
       title: "Governance",
-      link: "#",
+      link: "/governance",
     },
     {
       title: "Bridge",
@@ -134,31 +134,31 @@ const Footer = () => {
   const learn = [
     {
       title: "How to buy DYP",
-      link: "#",
+      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPmcjxnKg6SgP2B1rCtBMld",
     },
     {
       title: "How to Stake",
-      link: "#",
+      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPAbzuedp9ii6OszPT1STy8",
     },
     {
       title: "How to Farm",
-      link: "#",
+      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPKtu_gWiu7vm73k_TnZOs4",
     },
     {
       title: "How to use Buyback",
-      link: "#",
+      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPJ7CX0lKPaXS_ELKCk7FnW",
     },
     {
       title: "How to use the Vault",
-      link: "#",
+      link: "https://www.youtube.com/watch?v=t8Yr3ZIxHJA",
     },
     {
       title: "How to use DYP Tools",
-      link: "#",
+      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVNMvlnKe8ouT9Ma_UE_WBx2",
     },
     {
       title: "How to Bridge",
-      link: "#",
+      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPmVy8aBOZratFGWKIBbthl",
     },
   ];
 
