@@ -20,6 +20,7 @@ import useWindowSize from "../../../hooks/useWindowSize";
 import ReCaptchaV2 from "react-google-recaptcha";
 import { useRef } from "react";
 import useFileChange from "../../../hooks/useFileChange";
+import removebtn from "../../About/assets/remove-btn.svg";
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -139,7 +140,7 @@ const HelpCenter = () => {
   };
 
   const [values, setValues] = useState(helpState);
-  const [businessValues, setBusinessValues] = useState(businessState)
+  const [businessValues, setBusinessValues] = useState(businessState);
   const [errors, setErrors] = useState({});
   const [selectedFile, setSelectedFile] = useState();
   const [help, setHelp] = useState(false);
@@ -370,6 +371,7 @@ const HelpCenter = () => {
 
               <div className="row px-0 flex-row mt-4">
                 <div className="d-flex col-6 flex-column gap-2">
+                  <span className="d-flex gap-2">
                   <input
                     type="file"
                     onChange={(e) => {
@@ -383,12 +385,25 @@ const HelpCenter = () => {
                       backgroundImage: selectedFile
                         ? `url(${filebg2})`
                         : `url(${filebg1})`,
-                      backgroundSize: selectedFile ? "200px" : "auto",
+                      // backgroundSize: selectedFile ? "200px" : "auto",
                       backgroundRepeat: "no-repeat",
                       backgroundPosition: "center",
-                      width: "100%",
+                      width: "55%",
+                      border: "2px solid #D6D8E7",
                     }}
                   />
+                    <img
+                      src={removebtn}
+                      alt=""
+                      style={{
+                        display: selectedFile ? "block" : "none",
+                        cursor: "pointer",
+                      }}
+                      onClick={(e) => {
+                        handleChangeBg(e);
+                      }}
+                    />
+                    </span>
                   <span className="helpertext">Max file size 5MB</span>
                   <ReCaptchaV2
                     sitekey="6LflZgEgAAAAAO-psvqdoreRgcDdtkQUmYXoHuy2"
@@ -502,25 +517,37 @@ const HelpCenter = () => {
               />
               <div className="row px-0 flex-row mt-4">
                 <div className="d-flex col-6 flex-column gap-2">
-                  <input
-                    type="file"
-                    onChange={(e) => {
-                      onFileChange(e);
-                    }}
-                    onClick={(e) => {
-                      handleChangeBg(e);
-                    }}
-                    className="custom-file-input outline-btn"
-                    style={{
-                      backgroundImage: selectedFile
-                        ? `url(${filebg2})`
-                        : `url(${filebg1})`,
-                      backgroundSize: selectedFile ? "200px" : "auto",
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "center",
-                      width: "100%",
-                    }}
-                  />
+                  <span className="d-flex gap-2">
+                    <input
+                      type="file"
+                      onChange={(e) => {
+                        onFileChange(e);
+                      }}
+                      className="custom-file-input outline-btn"
+                      style={{
+                        backgroundImage: selectedFile
+                          ? `url(${filebg2})`
+                          : `url(${filebg1})`,
+                        // backgroundSize: selectedFile ? "200px" : "auto",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        width: "55%",
+                        border: "2px solid #D6D8E7",
+                      }}
+                    />
+                    <img
+                      src={removebtn}
+                      alt=""
+                      style={{
+                        display: selectedFile ? "block" : "none",
+                        cursor: "pointer",
+                      }}
+                      onClick={(e) => {
+                        handleChangeBg(e);
+                      }}
+                    />
+                  </span>
+
                   <span className="helpertext">Max file size 5MB</span>
                   <ReCaptchaV2
                     sitekey="6LflZgEgAAAAAO-psvqdoreRgcDdtkQUmYXoHuy2"
