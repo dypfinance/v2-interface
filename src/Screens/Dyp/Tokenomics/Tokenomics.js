@@ -393,7 +393,12 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                     iDYP Contract Address:
                   </span>
                   <span className="dypcontract-addr">
-                    0xbd100d061e120b2c67a24453cf6368e63f1be056
+                  {windowSize.width < 526
+                      ? shortAddress(
+                          "0xbd100d061e120b2c67a24453cf6368e63f1be056"
+                        )
+                      : "0xbd100d061e120b2c67a24453cf6368e63f1be056"}
+                   
                     <img
                       src={Clipboard}
                       alt=""

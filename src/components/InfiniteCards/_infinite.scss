@@ -1,0 +1,29 @@
+.infinite-cards {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    place-items: center center;
+    box-shadow: 0 32px 64px 0 rgba(17, 17, 17, 0.08);
+
+    .card {
+      position: absolute;
+      border-radius: 15px;
+      
+      background-color: transparent;
+      border: none;
+      display: grid;
+      place-items: center center;
+      padding: 10px;
+      p {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+      }
+    }
+
+    .card:nth-child(even) {
+        margin-right: 4rem;
+        
+      }
+  }
