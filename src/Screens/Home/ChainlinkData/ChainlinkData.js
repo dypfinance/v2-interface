@@ -102,8 +102,8 @@ const   ChainlinkData = () => {
             </div>
           </div>
 
-          <div className="d-grid">
-            <span className="chainlink-data-title" style={{ paddingLeft: 19 }}>
+          <div className="d-grid" style={{gap: 2}}>
+            <span className="chainlink-data-title">
               Audited by
             </span>
             <div className="row audit">

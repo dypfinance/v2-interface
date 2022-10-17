@@ -4,10 +4,10 @@
   background-repeat: no-repeat;
   border-radius: 56px 0px;
   padding: 3rem;
-  min-height: 653px;
+  min-height: 590px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   @media only screen and (max-width: 991px) {
     padding: 1rem;

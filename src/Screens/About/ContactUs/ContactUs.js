@@ -63,7 +63,6 @@ const ContactUs = () => {
   const showModal = function (e) {
     if (modal.className.includes("show")) {
       // Disable scroll
-      console.log("a po hin");
       body.style.overflow = "hidden";
     } else {
       // Enable scroll

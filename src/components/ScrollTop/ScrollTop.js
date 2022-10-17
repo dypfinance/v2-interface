@@ -24,6 +24,7 @@ const ScrollTop = () => {
   };
 
   return (
+    <div className="container-lg">
     <FaArrowCircleUp
       className="scrollTop"
       onClick={scrollTop}
@@ -31,7 +32,7 @@ const ScrollTop = () => {
         height: 40,
         display: showScroll ? "flex" : "none",
       }}
-    />
+    /></div>
   );
 };
 
