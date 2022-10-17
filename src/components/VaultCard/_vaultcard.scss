@@ -114,21 +114,6 @@
   }
 }
 
-.bnb {
-  &::after {
-      content: "";
-      position: absolute;
-      width: 30px;
-      height: 33px;
-      top: -17px;
-      right: -2px;
-      background-image: url(../SupAssetCard/bscbg.svg);
-      background-repeat: no-repeat;
-      border-radius: 6px 0px;
-      padding: 5px 10px 5px 0;
-  }
-}
-
 .avax {
   &::after {
       content: "";
@@ -138,6 +123,22 @@
       top: -17px;
       right: -2px;
       background-image: url(../SupAssetCard/avaxbg.svg);
+      background-repeat: no-repeat;
+      border-radius: 6px 0px;
+      padding: 5px 10px 5px 0;
+  }
+}
+
+
+.bnb {
+  &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 33px;
+      top: -17px;
+      right: -2px;
+      background-image: url(../SupAssetCard/bscbg.svg);
       background-repeat: no-repeat;
       border-radius: 6px 0px;
       padding: 5px 10px 5px 0;

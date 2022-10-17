@@ -25,18 +25,18 @@ const Security = () => {
   ];
 
   const auditItems = [
+
+
+    {
+      subtitle: "Security",
+      title: "New Contracts for Farm, Stake, Buyback and Governance",
+      link: "https://github.com/dypfinance/Buyback-Farm-Stake-Governance-V2/tree/main/Audit",
+    },
     {
       subtitle: "Security",
       title: "Token Smart Contract",
       link: "https://github.com/dypfinance/contract-security-audit",
     },
-
-    {
-      subtitle: "Security",
-      title: "New Contracts for Farm,<br/> Stake, Buyback and Governance",
-      link: "https://github.com/dypfinance/Buyback-Farm-Stake-Governance-V2/tree/main/Audit",
-    },
-
     {
       subtitle: "Security",
       title: "Farming, Staking and <br/> Governance on Ethereum Network",

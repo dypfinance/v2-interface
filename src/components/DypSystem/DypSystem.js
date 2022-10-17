@@ -15,7 +15,7 @@ const DypSystem = ({
   return (
     <div id="orbit-system">
       <div className="system">
-        <div className="satellite-orbit">
+        {/* <div className="satellite-orbit">
           <div className="satellite">
             <img
               src={DypPlanet}
@@ -25,28 +25,28 @@ const DypSystem = ({
               onMouseLeave={onRemoveDesc}
             />
           </div>
-        </div>
+        </div> */}
 
         <div className="satellite-orbit2">
           <div className="satellite2">
-            <img
+            {/* <img
               src={DypPlanet}
               alt="dyp-item"
               style={{ width: 70, height: 70 }}
               onMouseEnter={onShowSecondDesc}
               onMouseLeave={onRemoveDesc}
-            />
+            /> */}
           </div>
 
-          <div className="satellite22">
-            <img
+          {/*  <div className="satellite22">
+           <img
               src={DypPlanet}
               alt="dyp-item"
               style={{ width: 70, height: 70 }}
               onMouseEnter={onShowThirdDesc}
               onMouseLeave={onRemoveDesc}
-            />
-          </div>
+            /> 
+          </div>*/}
         </div>
 
         <div className="satellite-orbit3">

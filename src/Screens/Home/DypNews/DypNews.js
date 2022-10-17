@@ -129,7 +129,7 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
                     description={newsItem.content}
                     date={newsItem.date.toLocaleDateString("en-US", options)}
                     image={newsItem.image}
-                    link={`https://tools.dyp.finance/news/${newsItem.id}`}
+                    link={newsItem.link}
                   />
                 ))}
               </Slider>

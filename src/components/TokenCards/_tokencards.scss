@@ -62,10 +62,11 @@
 
 .tokenwrapper:nth-child(1) {
   position: relative;
-  top: 75px;
+  top: 20px;
 
   @media only screen and (max-width: 1199px) {
     top: auto !important;
+    margin-bottom: 2rem;
   }
 }
 
