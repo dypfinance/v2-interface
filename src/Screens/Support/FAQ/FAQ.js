@@ -20,10 +20,7 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
 
 const FAQ = () => {
   const categories = [
-    {
-      id: "63481581d7e11d6f1849f72f",
-      title: "General",
-    },
+    
     {
       id: "63481594d7e11d6f1849f730",
       title: "Stake",
@@ -67,6 +64,10 @@ const FAQ = () => {
     {
       id: "63488a9c062d4b709c4a2546",
       title: "Launchpad",
+    },
+    {
+      id: "63481581d7e11d6f1849f72f",
+      title: "General",
     },
   ];
 

@@ -57,7 +57,7 @@ const WhyDypius = () => {
     <div className="container-fluid d-flex flex-column justify-content-center why-dypius mt-n5">
       <div className="container-lg mt-5">
         <div className="row">
-          <div className="col-12 col-lg-3 d-flex justify-content-center align-items-center">
+          <div className="col-12 col-lg-4 d-flex justify-content-center align-items-center">
             <div className="d-flex flex-column gap-5 title-container mt-5 mt-lg-0">
               <Title top="Why" bottom="Dypius?" />
               <div className="position-relative">
@@ -92,7 +92,7 @@ const WhyDypius = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-lg-9 card-wrapper d-grid ">
+          <div className="col-12 col-lg-8 card-wrapper d-grid ">
             <img
               className="ring"
               src={require(`../../../assets/tokenCircle.png`)}

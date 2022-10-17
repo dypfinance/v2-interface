@@ -76,3 +76,11 @@
     }
   }
 }
+
+@media screen and (max-width: 786px) {
+  .proposals-wrapper{
+    .proposal-container{
+      grid-template-columns: auto;
+    }
+  }
+}

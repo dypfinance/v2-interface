@@ -33,15 +33,15 @@ const SupportMainHero = () => {
       >
         <a href="#faq" className="text-decoration-none submenu-link">
           FAQ
-          <img src={indicator} alt="" />
+          <img src={indicator} className="submenu-indicator" alt="" />
         </a>
         <a href="#tutorials" className="text-decoration-none submenu-link">
           Tutorials
-          <img src={indicator} alt="" />
+          <img src={indicator} className="submenu-indicator" alt="" />
         </a>
         <a href="#helpcenter" className="text-decoration-none submenu-link">
           Contact Us
-          <img src={indicator} alt="" />
+          <img src={indicator} className="submenu-indicator" alt="" />
         </a>
       </div>
     </div>

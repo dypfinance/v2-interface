@@ -45,23 +45,23 @@ const AboutMainHero = () => {
       >
         <a href="#ourteam" className="text-decoration-none submenu-link">
           Our team
-          <img src={indicator} alt="" />
+          <img src={indicator} className='submenu-indicator'  alt="" />
         </a>
         <a href="#roadmap" className="text-decoration-none submenu-link">
           Roadmap
-          <img src={indicator} alt="" />
+          <img src={indicator} className='submenu-indicator'  alt="" />
         </a>
         <a href="#brand" className="text-decoration-none submenu-link">
           Brand
-          <img src={indicator} alt="" />
+          <img src={indicator} className='submenu-indicator'  alt="" />
         </a>
         <a href="#security" className="text-decoration-none submenu-link">
           Security
-          <img src={indicator} alt="" />
+          <img src={indicator}  className='submenu-indicator' alt="" />
         </a>
         <a href="#tokenomics" className="text-decoration-none submenu-link">
           Tokenomics
-          <img src={indicator} alt="" />
+          <img src={indicator} className='submenu-indicator'  alt="" />
         </a>
       </div>
     </div>
