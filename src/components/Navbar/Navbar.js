@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import dypiusLogo from "../../assets/dypiusLogo.svg";
 import dypiusLogoPurple from "../../assets/dypius-purple.svg";
 import toolsLogo from "../../assets/dypToolsLogo.svg";
-import toolsBorder from "../../assets/dypToolsBorder.svg";
+import toolsBorder from "../../assets/toolsBorder.svg";
 import { NavLink } from "react-router-dom";
 import "./_navbar.scss";
 

@@ -17,11 +17,11 @@ import FormContainer from "../../../components/FormContainer/FormContainer";
 import validate from "./validateHelpInfo";
 import validateBusiness from "../../About/ContactUs/validateinfo";
 import axios from "axios";
-import useWindowSize from "../../../hooks/useWindowSize";
 import ReCaptchaV2 from "react-google-recaptcha";
 import { useRef } from "react";
-import useFileChange from "../../../hooks/useFileChange";
 import removebtn from "../../About/assets/remove-btn.svg";
+import selectBtn from "../assets/selectBtn.svg";
+import Modal from "../../../components/Modal/Modal";
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -78,10 +78,10 @@ const HelpCenter = () => {
       title: "Governance",
       value: "governance ",
     },
-    {
-      title: "Other",
-      value: "other",
-    },
+    // {
+    //   title: "Other",
+    //   value: "other",
+    // },
   ];
 
   const jobTitles = [
@@ -117,15 +117,12 @@ const HelpCenter = () => {
       title: "Engineer",
       value: "Engineer",
     },
-    {
-      title: "Other",
-      value: "Other",
-    },
   ];
 
   const helpState = {
     name: "",
-    social: "",
+    social_account: "",
+    username: "",
     email: "",
     topic: "",
     message: "",
@@ -133,8 +130,8 @@ const HelpCenter = () => {
 
   const businessState = {
     name: "",
-    job_title: "",
-    organisation: "",
+    job: "",
+    organization: "",
     email: "",
     subject: "",
     message: "",
@@ -145,10 +142,15 @@ const HelpCenter = () => {
   const [errors, setErrors] = useState({});
   const [businessErrors, setBusinessErrors] = useState({});
   const [selectedFile, setSelectedFile] = useState();
-  const [businessFile, setBusinessFile] = useState()
+  const [businessFile, setBusinessFile] = useState();
   const [help, setHelp] = useState(false);
   const [business, setBusiness] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [formState, setFormState] = useState({
+    topic: false,
+    job_title: false,
+    subject: false,
+  });
   const recaptchaRef = useRef(null);
 
   const handleChange = async (e) => {
@@ -170,8 +172,6 @@ const HelpCenter = () => {
     console.log(businessValues);
   };
 
-  
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -180,23 +180,25 @@ const HelpCenter = () => {
     if (Object.keys(errors).length === 0) {
       const captchaToken = await recaptchaRef.current.executeAsync();
       const data = {
-        first_name: values.first_name,
-        last_name: values.last_name,
+        name: values.name,
         email: values.email,
+        social_account: values.social_account,
+        username: values.username,
         topic: values.topic,
         message: values.message,
         recaptcha: captchaToken,
       };
 
       if (
-        values.first_name !== "" &&
-        values.last_name !== "" &&
+        values.name !== "" &&
         values.email !== "" &&
+        values.social_account !== "" &&
+        values.username !== "" &&
         values.topic !== "" &&
         values.message !== ""
       ) {
         const send = await axios
-          .post("https://api-mail.dyp.finance/api/help", data)
+          .post("https://api-mail.dyp.finance/api/help_form", data)
           .then(function (result) {
             console.log(result.data);
             return result.data;
@@ -219,15 +221,14 @@ const HelpCenter = () => {
 
   const handleBusinessSubmit = async (e) => {
     e.preventDefault();
-
-    setErrors(validateBusiness(businessValues));
+    setBusinessErrors(validateBusiness(businessValues));
 
     if (Object.keys(businessErrors).length === 0) {
       const captchaToken = await recaptchaRef.current.executeAsync();
       const data = {
         name: businessValues.name,
-        job_title: businessValues.job_title,
-        organisation: businessValues.organisation,
+        job: businessValues.job,
+        organization: businessValues.organization,
         email: businessValues.email,
         subject: businessValues.subject,
         message: businessValues.message,
@@ -236,14 +237,14 @@ const HelpCenter = () => {
 
       if (
         businessValues.name !== "" &&
-        businessValues.job_title !== "" &&
-        businessValues.organisation !== "" &&
+        businessValues.job !== "" &&
+        businessValues.organization !== "" &&
         businessValues.email !== "" &&
         businessValues.subject !== "" &&
         businessValues.message !== ""
       ) {
         const send = await axios
-          .post("https://api-mail.dyp.finance/api/business", data)
+          .post("https://api-mail.dyp.finance/api/business_form", data)
           .then(function (result) {
             console.log(result.data);
             return result.data;
@@ -262,10 +263,9 @@ const HelpCenter = () => {
 
       setBusinessValues({ ...businessState });
     }
-  }
+  };
 
   const onFileChange = (event, type) => {
-    
     console.log(type);
     const fileTypes = [
       "image/jpg",
@@ -279,10 +279,10 @@ const HelpCenter = () => {
     if (fileTypes.includes(event.target.files[0].type)) {
       if (event.target.files && event.target.files[0]) {
         if (event.target.files[0].size < 5000000) {
-          if(type === 'help'){
+          if (type === "help") {
             setSelectedFile(event.target.files[0]);
-          }else{
-            setBusinessFile(event.target.files[0])
+          } else {
+            setBusinessFile(event.target.files[0]);
           }
         } else alert("File size too big");
       }
@@ -325,10 +325,12 @@ const HelpCenter = () => {
       <div className="row contact-container" style={{ marginTop: "7rem" }}>
         <FormContainer
           title="General Inquiry"
-          desc="Get immediate help and support for Dypius products and solutions. "
+          desc="Get immediate help and support for Dypius products and solutions."
           onClick={openHelp}
           accordionState={help}
           collapse="collapseHelp"
+          emailLink="mailto:helpcenter@dypius.com"
+          email="helpcenter@dypius.com"
         >
           <div
             id="collapseHelp"
@@ -365,59 +367,126 @@ const HelpCenter = () => {
                 />
               </div>
               <div className="row gap-4 justify-content-center">
-                <FormControl
-                  fullWidth
-                  className="mt-3"
-                  size="small"
-                  sx={{ width: "250px" }}
-                >
-                  <InputLabel id="demo-simple-select-error-label">
-                    Select topic
-                  </InputLabel>
-                  <StyledSelect
-                    sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
-                    labelId="demo-simple-select-error-label"
-                    id="topic"
-                    name="topic"
-                    value={values.topic}
-                    error={errors.topic ? true : false}
-                    onChange={handleChange}
-                    renderValue={(value) => value}
-                    label="Select Topic"
+                {formState.topic === true ? (
+                  <div className="selected-field d-flex gap-2 mt-lg-3 px-0">
+                    <StyledTextField
+                      error={errors.topic ? true : false}
+                      size="small"
+                      label="Topic"
+                      id="topic"
+                      name="topic"
+                      value={values.topic}
+                      helperText={errors.topic}
+                      required
+                      onChange={handleChange}
+                      sx={{ width: "200px" }}
+                    />
+                    <img
+                      src={selectBtn}
+                      alt=""
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        cursor: "pointer",
+                      }}
+                      onClick={() =>
+                        setFormState({ ...formState, topic: false })
+                      }
+                    />
+                  </div>
+                ) : (
+                  <FormControl
+                    fullWidth
+                    className="mt-3"
+                    size="small"
+                    sx={{ width: "250px" }}
                   >
-                    {selectoptions.map((selectItem, index) => (
-                      <MenuItem key={index} value={selectItem.title}>
-                        {selectItem.title}
+                    <InputLabel id="demo-simple-select-error-label">
+                      Select topic
+                    </InputLabel>
+                    <StyledSelect
+                      sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
+                      labelId="demo-simple-select-error-label"
+                      id="topic"
+                      name="topic"
+                      value={values.topic}
+                      error={errors.topic ? true : false}
+                      onChange={handleChange}
+                      renderValue={(value) => value}
+                      label="Select Topic"
+                    >
+                      {selectoptions.map((selectItem, index) => (
+                        <MenuItem key={index} value={selectItem.title}>
+                          {selectItem.title}
+                        </MenuItem>
+                      ))}
+                      <MenuItem
+                        onClick={() =>
+                          setFormState({ ...formState, topic: true })
+                        }
+                        value=""
+                      >
+                        Other
                       </MenuItem>
-                    ))}
-                  </StyledSelect>
-                  <FormHelperText>{errors.topic}</FormHelperText>
-                </FormControl>
-                <FormControl
-                  fullWidth
-                  className="mt-3"
-                  size="small"
-                  sx={{ width: "250px" }}
-                >
-                  <InputLabel id="demo-simple-select-error-label">
-                    Social account
-                  </InputLabel>
-                  <StyledSelect
-                    sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
-                    labelId="demo-simple-select-error-label"
-                    id="social"
-                    name="social"
-                    value={values.social}
-                    error={errors.social ? true : false}
-                    onChange={handleChange}
-                    renderValue={(value) => value}
-                    label="Social accound"
+                    </StyledSelect>
+                    <FormHelperText>{errors.topic}</FormHelperText>
+                  </FormControl>
+                )}
+                {values.social_account === "" ? (
+                  <FormControl
+                    fullWidth
+                    className="mt-0 mt-lg-3"
+                    size="small"
+                    sx={{ width: "250px" }}
                   >
-                    <MenuItem value="Telegram">Telegram</MenuItem>
-                    <MenuItem value="Discord">Discord</MenuItem>
-                  </StyledSelect>
-                  <FormHelperText>{errors.social}</FormHelperText>
-                </FormControl>
+                    <InputLabel id="demo-simple-select-error-label">
+                      Social account
+                    </InputLabel>
+                    <StyledSelect
+                      sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
+                      labelId="demo-simple-select-error-label"
+                      id="social_account"
+                      name="social_account"
+                      value={values.social_account}
+                      error={errors.social_account ? true : false}
+                      onChange={handleChange}
+                      renderValue={(value) => value}
+                      label="Social account"
+                    >
+                      <MenuItem value="Telegram">Telegram</MenuItem>
+                      <MenuItem value="Discord">Discord</MenuItem>
+                      <MenuItem value="Twitter">Twitter</MenuItem>
+                    </StyledSelect>
+                    <FormHelperText>{errors.social_account}</FormHelperText>
+                  </FormControl>
+                ) : (
+                  <div className="selected-field d-flex gap-2 mt-lg-3 px-0">
+                    <StyledTextField
+                      error={errors.username ? true : false}
+                      size="small"
+                      label={values.social_account}
+                      id="username"
+                      name="username"
+                      value={values.username}
+                      helperText={errors.username}
+                      required
+                      onChange={handleChange}
+                      sx={{ width: "200px" }}
+                    />
+                    <img
+                      src={selectBtn}
+                      alt=""
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        cursor: "pointer",
+                      }}
+                      onClick={() =>
+                        setValues({ ...values, social_account: "" })
+                      }
+                    />
+                  </div>
+                )}
               </div>
               <StyledTextField
                 error={errors.message ? true : false}
@@ -431,8 +500,8 @@ const HelpCenter = () => {
                 onChange={handleChange}
                 className="w-100 mt-3"
                 multiline
-                minRows={3}
-                maxRows={5}
+                minRows={6}
+                maxRows={6}
               />
 
               <div className="row px-0 flex-row mt-4">
@@ -465,7 +534,7 @@ const HelpCenter = () => {
                         cursor: "pointer",
                       }}
                       onClick={(e) => {
-                        handleChangeBg(e, 'help');
+                        handleChangeBg(e, "help");
                       }}
                     />
                   </span>
@@ -497,6 +566,8 @@ const HelpCenter = () => {
           onClick={openBusiness}
           accordionState={business}
           collapse="collapseBusiness"
+          emailLink="mailto:business@dypius.com"
+          email="business@dypius.com"
         >
           <div
             id="collapseBusiness"
@@ -509,70 +580,169 @@ const HelpCenter = () => {
 
               <div className="row gap-4 justify-content-center">
                 <StyledTextField
+                  error={businessErrors.name ? true : false}
                   size="small"
                   label="Name"
+                  id="name"
+                  name="name"
+                  value={businessValues.name}
+                  helperText={businessErrors.name}
+                  onChange={handleBusinessChange}
+                  required
                   sx={{ width: "250px" }}
                 />
-                 <FormControl fullWidth sx={{width: '250px'}} size="small">
-                <InputLabel id="demo-simple-select-error-label">
-                  Job Title
-                </InputLabel>
-                <StyledSelect
-                  sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
-                  labelId="demo-simple-select-error-label"
-                  id="job_title"
-                  name="job_title"
-                  value={businessValues.job_title}
-                  error={businessErrors.job_title ? true : false}
-                  onChange={handleBusinessChange}
-                  renderValue={(value) => value}
-                  label="Select job title"
-                >
-                 {jobTitles.map((job, index) => (
-                  <MenuItem key={index} value={job.value}>{job.title}</MenuItem>
-                 ))}
-                </StyledSelect>
-                <FormHelperText>{businessErrors.job_title}</FormHelperText>
-              </FormControl>
+                {formState.job_title === false ? (
+                  <FormControl fullWidth sx={{ width: "250px" }} size="small">
+                    <InputLabel id="demo-simple-select-error-label">
+                      Job Title
+                    </InputLabel>
+                    <StyledSelect
+                      sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
+                      labelId="demo-simple-select-error-label"
+                      id="job"
+                      name="job"
+                      value={businessValues.job}
+                      error={businessErrors.job ? true : false}
+                      onChange={handleBusinessChange}
+                      renderValue={(value) => value}
+                      label="Select job title"
+                    >
+                      {jobTitles.map((job, index) => (
+                        <MenuItem key={index} value={job.value}>
+                          {job.title}
+                        </MenuItem>
+                      ))}
+                      <MenuItem
+                        onClick={() =>
+                          setFormState({ ...formState, job_title: true })
+                        }
+                        value=""
+                      >
+                        Other
+                      </MenuItem>
+                    </StyledSelect>
+                    <FormHelperText>{businessErrors.job}</FormHelperText>
+                  </FormControl>
+                ) : (
+                  <div className="selected-field d-flex gap-2 px-0">
+                    <StyledTextField
+                      error={businessErrors.job ? true : false}
+                      size="small"
+                      label="Job title"
+                      id="job"
+                      name="job"
+                      value={businessValues.job}
+                      helperText={businessErrors.job}
+                      required
+                      onChange={handleBusinessChange}
+                      sx={{ width: "200px" }}
+                    />
+                    <img
+                      src={selectBtn}
+                      alt=""
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        cursor: "pointer",
+                      }}
+                      onClick={() =>
+                        setFormState({ ...formState, job_title: false })
+                      }
+                    />
+                  </div>
+                )}
               </div>
               <div className="row gap-4 justify-content-center mt-3">
                 <StyledTextField
+                  error={businessErrors.organization ? true : false}
                   size="small"
                   label="Organisation"
+                  id="organization"
+                  name="organization"
+                  value={businessValues.organization}
+                  helperText={businessErrors.organization}
+                  onChange={handleBusinessChange}
+                  required
                   sx={{ width: "250px" }}
                 />
                 <StyledTextField
+                  error={businessErrors.email ? true : false}
                   size="small"
-                  label="Work email address "
+                  label="Work Email address"
+                  id="email"
+                  name="email"
+                  value={businessValues.email}
+                  helperText={businessErrors.email}
+                  onChange={handleBusinessChange}
+                  required
                   sx={{ width: "250px" }}
                 />
               </div>
-              <FormControl fullWidth className="mt-4" size="small">
-                <InputLabel id="demo-simple-select-error-label">
-                  Subject
-                </InputLabel>
-                <StyledSelect
-                  sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
-                  labelId="demo-simple-select-error-label"
-                  id="subject"
-                  name="subject"
-                  value={businessValues.subject}
-                  error={businessErrors.subject ? true : false}
-                  onChange={handleBusinessChange}
-                  renderValue={(value) => value}
-                  label="Select subject"
-                >
-                  <MenuItem value="Partnership">Partnership</MenuItem>
-                  <MenuItem value="Media inquiry">Media inquiry</MenuItem>
-                  <MenuItem value="Launchpad">Launchpad</MenuItem>
-                  <MenuItem value="Other">Other</MenuItem>
-                </StyledSelect>
-                <FormHelperText>{businessErrors.subject}</FormHelperText>
-              </FormControl>
+              {formState.subject === false ? (
+                <FormControl fullWidth className="mt-4" size="small">
+                  <InputLabel id="demo-simple-select-error-label">
+                    Subject
+                  </InputLabel>
+                  <StyledSelect
+                    sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
+                    labelId="demo-simple-select-error-label"
+                    id="subject"
+                    name="subject"
+                    value={businessValues.subject}
+                    error={businessErrors.subject ? true : false}
+                    onChange={handleBusinessChange}
+                    renderValue={(value) => value}
+                    label="Select subject"
+                  >
+                    <MenuItem value="Partnership">Partnership</MenuItem>
+                    <MenuItem value="Media inquiry">Media inquiry</MenuItem>
+                    <MenuItem value="Launchpad">Launchpad</MenuItem>
+                    <MenuItem
+                      onClick={() =>
+                        setFormState({ ...formState, subject: true })
+                      }
+                      value=""
+                    >
+                      Other
+                    </MenuItem>
+                  </StyledSelect>
+                  <FormHelperText>{businessErrors.subject}</FormHelperText>
+                </FormControl>
+              ) : (
+                <div className="selected-field d-flex gap-2 mt-lg-3 px-0">
+                  <StyledTextField
+                    error={businessErrors.subject ? true : false}
+                    size="small"
+                    label="Subject"
+                    id="subject"
+                    name="subject"
+                    value={businessValues.subject}
+                    helperText={businessErrors.subject}
+                    required
+                    onChange={handleBusinessChange}
+                    sx={{ width: "500px" }}
+                  />
+                  <img
+                    src={selectBtn}
+                    alt=""
+                    style={{ width: "40px", height: "40px", cursor: "pointer" }}
+                    onClick={() =>
+                      setFormState({ ...formState, subject: false })
+                    }
+                  />
+                </div>
+              )}
 
               <StyledTextField
+                error={businessErrors.message ? true : false}
                 size="small"
-                label="Describe your inquiry*"
+                label="Describe your inquiry"
+                id="message"
+                name="message"
+                value={businessValues.message}
+                helperText={businessErrors.message}
+                onChange={handleBusinessChange}
+                required
                 className="w-100 mt-3"
                 multiline
                 minRows={3}
@@ -584,7 +754,7 @@ const HelpCenter = () => {
                     <input
                       type="file"
                       onChange={(e) => {
-                        onFileChange(e, 'business');
+                        onFileChange(e, "business");
                       }}
                       className="custom-file-input outline-btn"
                       style={{
@@ -632,6 +802,13 @@ const HelpCenter = () => {
           </div>
         </FormContainer>
       </div>
+      <Modal
+        visible={success}
+        modalId="tymodal"
+        setIsVisible={() => {
+          setSuccess(false);
+        }}
+      />
     </div>
   );
 };

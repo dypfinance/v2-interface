@@ -3,13 +3,23 @@
     width: 101%;
     background-color: #eff0f6;
     background-image: url("../../../assets/partnersBackground.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
     border-radius: 56px 0;
     transform: translate3d(0,0,0);
     position: relative;
-    overflow: hidden;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(6, 1fr);
 
 
-   
+    .load-more{
+      bottom: -15px;
+      left: 46%;
+    }
+
+
         .partner_wrapper{
             position: relative;
             min-width: 135px;
@@ -56,6 +66,19 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+
+@media screen and (max-width: 786px) {
+  .dyp-partners{
+    grid-template-columns: auto auto;
+
+    .load-more{
+      bottom: -20px;
+      left: 33%;
+    }
+  }
+  
 }
 
 // @-webkit-keyframes moveSlideshow {

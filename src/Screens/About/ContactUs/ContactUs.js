@@ -6,7 +6,14 @@ import $alert from "../../../hooks/$alert";
 import "./_contactus.scss";
 import contactHeader from "../assets/contactHeader.png";
 import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+import {
+  TextField,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  FormHelperText,
+} from "@mui/material";
 import envelope from "../assets/envelope.svg";
 import styled from "styled-components";
 import validate from "./validateinfo";
@@ -16,6 +23,7 @@ import useWindowSize from "../../../hooks/useWindowSize";
 import Modal from "../../../components/Modal/Modal";
 import { useEffect } from "react";
 import removebtn from '../assets/remove-btn.svg'
+import selectBtn from '../../Support/assets/selectBtn.svg'
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -27,23 +35,70 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
   },
 }));
 
+const StyledSelect = styled(Select)(({ theme }) => ({
+  "& .MuiOutlinedInput-root": {
+    borderRadius: "8px",
+  },
+  "& .MuiInputLabel-root": {
+    color: "#A0A3BD",
+    fontFamily: "'Poppins', sans-serif",
+    fontWeight: 400,
+  },
+}));
+
 const ContactUs = () => {
   const initialState = {
     email: "",
-    subject: "",
-    first_name: "",
-    last_name: "",
+    name: "",
     organization: "",
     job: "",
+    subject: "",
     message: "",
-    recaptcha: "",
-    phone: "",
   };
+
+  const jobTitles = [
+    {
+      title: "Business Developer",
+      value: "Business Developer",
+    },
+    {
+      title: "Blockchain Developer",
+      value: "Blockchain Developer",
+    },
+    {
+      title: "Co-Founder/CEO",
+      value: "Co-Founder/CEO",
+    },
+    {
+      title: "Co-Founder/CTO",
+      value: "Co-Founder/CTO",
+    },
+    {
+      title: "Project Manager",
+      value: "Project Manager",
+    },
+    {
+      title: "Sales Representative",
+      value: "Sales Representative",
+    },
+    {
+      title: "Marketing Manager",
+      value: "Marketing Manager",
+    },
+    {
+      title: "Engineer",
+      value: "Engineer",
+    },
+  ];
+
 
   const [values, setValues] = useState(initialState);
   const [selectedFile, setSelectedFile] = useState();
   const [success, setSuccess] = useState(false);
-
+  const [formState, setFormState] = useState({
+    job: false,
+    subject: false
+  })
   const [errors, setErrors] = useState({});
   const recaptchaRef = useRef(null);
   const windowSize = useWindowSize();
@@ -63,7 +118,6 @@ const ContactUs = () => {
   const showModal = function (e) {
     if (modal.className.includes("show")) {
       // Disable scroll
-      console.log("a po hin");
       body.style.overflow = "hidden";
     } else {
       // Enable scroll
@@ -108,18 +162,15 @@ const ContactUs = () => {
       const data = {
         email: values.email,
         subject: values.subject,
-        first_name: values.first_name,
-        last_name: values.last_name,
+        name: values.first_name,
         organization: values.organization,
         job: values.job,
         message: values.message,
         recaptcha: captchaToken,
-        phone: values.phone,
       };
 
       if (
-        values.first_name !== "" &&
-        values.last_name !== "" &&
+        values.name !== "" &&
         values.job !== "" &&
         values.organization !== "" &&
         values.message !== "" &&
@@ -129,6 +180,7 @@ const ContactUs = () => {
         const send = await axios
           .post("https://api-mail.dyp.finance/api/business", data)
           .then(function (result) {
+            console.log(result.data);
             return result.data;
           })
           .catch(function (error) {
@@ -215,25 +267,72 @@ const ContactUs = () => {
                 <div className="d-flex flex-column gap-3 mb-4">
                   <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                     <StyledTextField
-                      error={errors.first_name ? true : false}
+                      error={errors.name ? true : false}
                       required
-                      label="First name"
-                      name="first_name"
-                      id="first_name"
-                      value={values.first_name}
+                      label="Name"
+                      name="name"
+                      id="name"
+                      value={values.name}
                       onChange={handleChange}
-                      helperText={errors.first_name}
+                      helperText={errors.name}
                     />
+                     {formState.job === false ? 
+                        <FormControl fullWidth className="mt-2">
+                        <InputLabel id="demo-simple-select-error-label">
+                          Job Title
+                        </InputLabel>
+                        <StyledSelect
+                          sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
+                          labelId="demo-simple-select-error-label"
+                          id="job"
+                          name="job"
+                          value={values.job}
+                          error={errors.job ? true : false}
+                          onChange={handleChange}
+                          renderValue={(value) => value}
+                          label="Job title"
+                        >
+                          {jobTitles.map((job, index) => (
+                            <MenuItem key={index} value={job.value}>{job.title}</MenuItem> 
+                          ))}
+                          <MenuItem
+                            onClick={() =>
+                              setFormState({ ...formState, job: true })
+                            }
+                            value=""
+                          >
+                            Other
+                          </MenuItem>
+                        </StyledSelect>
+                        <FormHelperText>{errors.job}</FormHelperText>
+                      </FormControl>
+                      :
+                      <div className="selected-field d-flex justify-content-center align-items-center gap-2 px-0 w-100">
                     <StyledTextField
+                      error={errors.job ? true : false}
+                      label="Job title"
+                      fullWidth
+                      id="job"
+                      name="job"
+                      value={values.job}
+                      helperText={errors.job}
                       required
-                      error={errors.last_name ? true : false}
-                      label="Last name"
-                      name="last_name"
-                      id="last_name"
-                      value={values.last_name}
                       onChange={handleChange}
-                      helperText={errors.last_name}
                     />
+                    <img
+                      src={selectBtn}
+                      alt=""
+                      style={{
+                        width: '58px',
+                        height: '58px',
+                        cursor: "pointer",
+                      }}
+                      onClick={() =>
+                        setFormState({ ...formState, job: false })
+                      }
+                    />
+                  </div> 
+                    }
                   </div>
                   <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                     <StyledTextField
@@ -246,19 +345,7 @@ const ContactUs = () => {
                       onChange={handleChange}
                       helperText={errors.organization}
                     />
-                    <StyledTextField
-                      error={errors.job ? true : false}
-                      required
-                      label="Job title"
-                      name="job"
-                      id="job"
-                      value={values.job}
-                      onChange={handleChange}
-                      helperText={errors.job}
-                    />
-                  </div>
-                  <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
-                    <StyledTextField
+                     <StyledTextField
                       error={errors.email ? true : false}
                       required
                       label="Work email address"
@@ -269,25 +356,66 @@ const ContactUs = () => {
                       onChange={handleChange}
                       helperText={errors.email}
                     />
-                    <StyledTextField
-                      error={errors.subject ? true : false}
-                      required
-                      label="Subject"
-                      name="subject"
-                      id="subject"
-                      value={values.subject}
-                      onChange={handleChange}
-                      helperText={errors.subject}
-                    />
+                   
                   </div>
-                  <StyledTextField
-                    label="Phone number"
-                    name="phone"
-                    id="phone"
-                    value={values.phone}
-                    type={"tel"}
-                    onChange={handleChange}
-                  />
+                  <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
+                   {formState.subject === false ? 
+                    <FormControl fullWidth className="mt-2">
+                    <InputLabel id="demo-simple-select-error-label">
+                      Subject
+                    </InputLabel>
+                    <StyledSelect
+                      sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
+                      labelId="demo-simple-select-error-label"
+                      id="subject"
+                      name="subject"
+                      value={values.subject}
+                      error={errors.subject ? true : false}
+                      onChange={handleChange}
+                      renderValue={(value) => value}
+                      label="Subject"
+                    >
+                      <MenuItem value="Partnership">Partnership</MenuItem>
+                      <MenuItem value="Media Inquiry">Media Inquiry</MenuItem>
+                      <MenuItem value="Launchpad">Launchpad</MenuItem>
+                      <MenuItem
+                        onClick={() =>
+                          setFormState({ ...formState, subject: true })
+                        }
+                        value=""
+                      >
+                        Other
+                      </MenuItem>
+                    </StyledSelect>
+                    <FormHelperText>{errors.subject}</FormHelperText>
+                  </FormControl>
+                   :
+                   <div className="selected-field d-flex justify-content-center align-items-center gap-2 px-0 w-100">
+                   <StyledTextField
+                     error={errors.subject ? true : false}
+                     required
+                     label="Subject"
+                     name="subject"
+                     id="subject"
+                     value={values.subject}
+                     onChange={handleChange}
+                     helperText={errors.subject}
+                   />
+                   <img
+                     src={selectBtn}
+                     alt=""
+                     style={{
+                       width: '58px',
+                       height: '58px',
+                       cursor: "pointer",
+                     }}
+                     onClick={() =>
+                       setFormState({ ...formState, subject: false })
+                     }
+                   />
+                 </div> 
+                  }
+                  </div>
                   <StyledTextField
                     error={errors.message ? true : false}
                     required
@@ -351,7 +479,6 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-
       <Modal
         visible={success}
         modalId="tymodal"
@@ -359,6 +486,7 @@ const ContactUs = () => {
           setSuccess(false);
         }}
       />
+     
     </div>
   );
 };

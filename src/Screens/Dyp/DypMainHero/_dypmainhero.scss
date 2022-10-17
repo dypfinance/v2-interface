@@ -70,9 +70,28 @@
         display: flex;
         justify-content: space-between;
         width: 135px;
+
+        .submenu-indicator{
+            animation: pulse 1.5s linear infinite;
+        }
     }
 
 }
+
+@keyframes pulse{
+    0%{
+      transform: scale(1);
+    }
+  
+    50%{
+      transform: scale(1.4);
+    }
+  
+    100%{
+      transform: scale(1);
+    }
+  }
+  
 
 @media screen and (max-width: 786px) {
     .dyp-main-hero{
