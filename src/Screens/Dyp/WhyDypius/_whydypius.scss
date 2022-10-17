@@ -13,9 +13,9 @@
     
     .orange-border{
         position: absolute;
-        width: 403px;
+        width: 470px;
         height: 403px;
-        left: -45%;
+        left: -35%;
 
     }
 
@@ -28,7 +28,7 @@
         background: linear-gradient(280.88deg, #F1643E 9.02%, #F78057 90.66%);
         box-shadow: 0px 32px 64px rgba(17, 17, 17, 0.08);
         border-radius: 28px 0px;
-        width: 250px;
+        width: 320px;
         height: 250px;
 
 
@@ -60,7 +60,7 @@
     height: 900px;
     grid-template-columns: repeat(2, 1fr);
     gap: 35px;
-    margin-top: 100px;
+    top: 150px;
 
     .title-container{
         position: absolute;
@@ -176,6 +176,11 @@
                 top: 55%;
             }
         }
+    }
+
+    .orange-border{
+        left: -30% !important;
+        top: -13px !important;
     }
     
 }

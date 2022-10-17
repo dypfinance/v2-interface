@@ -92,7 +92,7 @@ const settings = {
     <div className="container-lg proposals-wrapper">
       
       <div className="row align-items-end">
-        <div className="col-7 pb-2">
+        <div className="col-12 col-lg-7 pb-2">
         <h4 className="mb-5" style={{ color: "#554FD8" }}>
         Lifetime proposals
       </h4>
@@ -107,7 +107,7 @@ const settings = {
           ))}
           </div>
         </div>
-        <div className="col-5">
+        <div className="col-12 col-lg-5">
           <div className="recent-proposals p-4 position-relative">
                 <span className="proposal-span" />
             <div className="row justify-content-between mb-4">

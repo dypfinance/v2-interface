@@ -1,4 +1,5 @@
 export default function validateInfo(values) {
+    console.log(values);
     let errors = {}
 
     if (!values.email) {
@@ -6,13 +7,11 @@ export default function validateInfo(values) {
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
         errors.email = "Email Address is Invalid"
     }
-    if (!values.first_name.trim()) {
-        errors.first_name = "Name is Required"
+    if (!values.name.trim()) {
+        errors.name = "Name is Required"
     }
 
-    if (!values.last_name.trim()) {
-        errors.last_name = "Last name is Required"
-    }
+  
 
     if (!values.job.trim()) {
         errors.job = "Job title is Required"

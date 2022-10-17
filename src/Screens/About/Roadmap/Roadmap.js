@@ -117,7 +117,7 @@ const Roadmap = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    initialSlide: roadmap.length - 1,
+    initialSlide: roadmap.length,
     responsive: [
       {
         breakpoint: 1024,

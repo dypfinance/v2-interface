@@ -85,7 +85,12 @@
 
         .team-container{
             grid-template-columns: auto;
+        
+            .team-info{
+                width: 290px;
+            }
         }
+        
     }
     
 }
@@ -133,4 +138,5 @@
     .team-card{ 
         width: 290px !important
     }
+
 }
