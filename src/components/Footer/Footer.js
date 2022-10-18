@@ -53,32 +53,32 @@ const Footer = () => {
   const about = [
     {
       title: "Our team",
-      link: "#",
+      link: "/about#ourteam",
     },
     {
       title: "Our partners",
-      link: "#",
+      link: "/about#our-partners",
     },
     {
       title: "Brand",
-      link: "#",
+      link: "/about#brand",
     },
     {
       title: "Roadmap",
-      link: "#",
+      link: "/about#roadmap",
     },
     {
       title: "Security",
-      link: "#",
+      link: "/about#security",
     },
     {
       title: "Tokenomics",
-      link: "#",
+      link: "/about#tokenomics",
     },
     
     {
       title: "Contact us",
-      link: "#",
+      link: "/about#contactus",
     },
   ];
 
