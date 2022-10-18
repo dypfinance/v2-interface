@@ -134,7 +134,7 @@ const [partnersLength, setPartnersLength] = useState(12)
   };
 
   const loadMore = () => {
-    setPartnersLength(partnersLength + 6)
+    setPartnersLength(partnersLength + 12)
   }
 
   return (

@@ -102,6 +102,16 @@
             right: -100px;
         }
         
+        .dyp-coin-wrapper{
+            min-height: 300px;
+            .coin{
+                right: 10%;
+                bottom: 0%;
+            }
+            .background{
+                left: 18%;
+            }
+        }
     }
     
 }

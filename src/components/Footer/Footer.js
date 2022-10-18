@@ -291,7 +291,7 @@ const Footer = () => {
                     className="d-flex align-items-center justify-content-between"
                     onClick={() => openAccordion(2)}
                   >
-                    <h4 className="fw-normal">Products and services</h4>
+                    <h4 className="fw-normal">Solutions</h4>
                     <img
                       className={
                         indicators.products ? `indicator turn` : "indicator"
@@ -337,51 +337,7 @@ const Footer = () => {
               </div>
               <hr />
 
-              <div className="col-12 col-lg-3 text-white d-flex flex-column gap-3 px-0 py-3">
-                <div
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree"
-                  aria-expanded="true"
-                  aria-controls="collapseThree"
-                >
-                  <div
-                    className="d-flex align-items-center justify-content-between"
-                    onClick={() => openAccordion(3)}
-                  >
-                    <h4 className="fw-normal">Anouncements</h4>
-                    <img
-                      className={
-                        indicators.announcements
-                          ? `indicator turn`
-                          : "indicator "
-                      }
-                      src={
-                        require(`../../assets/accordionIndicator.svg`).default
-                      }
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div
-                  id="collapseThree"
-                  className="collapse"
-                  aria-labelledby="headingThree"
-                  data-bs-parent="#accordionFooter"
-                >
-                  <div className="d-flex flex-column gap-3">
-                    {announcements.map((item, index) => (
-                      <a
-                        key={index}
-                        href={item.link}
-                        className="text-white text-decoration-none"
-                      >
-                        <h5>{item.title}</h5>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <hr />
+              
 
               <div className="col-12 col-lg-3 text-white d-flex flex-column gap-3 px-0 py-3">
                 <div
@@ -424,6 +380,69 @@ const Footer = () => {
                         <h5>{item.title}</h5>
                       </a>
                     ))}
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div className="col-12 col-lg-3 text-white d-flex flex-column gap-3 px-0 py-3">
+                <div
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="true"
+                  aria-controls="collapseThree"
+                >
+                  <div
+                    className="d-flex align-items-center justify-content-between"
+                    onClick={() => openAccordion(3)}
+                  >
+                    <h4 className="fw-normal">Anouncements</h4>
+                    <img
+                      className={
+                        indicators.announcements
+                          ? `indicator turn`
+                          : "indicator "
+                      }
+                      src={
+                        require(`../../assets/accordionIndicator.svg`).default
+                      }
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div
+                  id="collapseThree"
+                  className="collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionFooter"
+                >
+                  <div className="d-flex flex-column gap-3">
+                    {announcements.map((item, index) => (
+                      <a
+                        key={index}
+                        href={item.link}
+                        className="text-white text-decoration-none"
+                      >
+                        <h5>{item.title}</h5>
+                      </a>
+                    ))}
+                    <div className="d-flex flex-row gap-3">
+                  <a
+                    target="_blank"
+                    href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
+                  >
+                    <img src={coinmarketcap} alt="" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.coingecko.com/en/coins/defi-yield-protocol"
+                  >
+                    <img src={coinGecko} alt="" />
+                  </a>
+                  
+                  <NavLink to="/disclaimer">
+                    <img src={disclaimer} alt="" />
+                  </NavLink>
+                </div>
                   </div>
                 </div>
               </div>
