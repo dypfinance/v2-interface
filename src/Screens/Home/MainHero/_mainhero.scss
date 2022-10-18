@@ -23,7 +23,21 @@
 
 
 .sliderwrapper {
-  height: 9%;
+  height: 161px;
+  background: url('../../../assets/carouselbg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+
+  .slick-list {
+  margin: 0;
+  }
+
+  .rowwrapper {
+    padding: 20px 16px;
+  }
 }
 
 h1 {

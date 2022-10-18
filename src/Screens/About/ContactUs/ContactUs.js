@@ -429,7 +429,7 @@ const ContactUs = () => {
                   />
                 </div>
               </Box>
-              <div className="row m-0 gap-3 justify-content-center w-100 mb-3">
+              <div className="row m-0 gap-3 justify-content-between w-100 mb-3">
                 <div
                   className="d-grid gap-1 p-0"
                   style={{ width: windowSize.width < 999 ? "100%" : "" }}
@@ -466,7 +466,7 @@ const ContactUs = () => {
                   ref={recaptchaRef}
                 />
                 <button
-                  className="filled-btn submitbtn"
+                  className="filled-btn submitbtn border-0"
                   data-bs-toggle="modal"
                   data-bs-target={success === true ? "#tymodal" : "#tymodal1"}
                   onClick={handleSubmit}
