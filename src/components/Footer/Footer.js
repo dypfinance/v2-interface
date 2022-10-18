@@ -75,7 +75,7 @@ const Footer = () => {
       title: "Tokenomics",
       link: "/about#tokenomics",
     },
-    
+
     {
       title: "Contact us",
       link: "/about#contactus",
@@ -117,13 +117,13 @@ const Footer = () => {
     {
       title: "Latest anouncements",
       link: "/news",
-      props: 'announcements',
+      props: "announcements",
     },
 
     {
       title: "Latest events",
       link: "/news",
-      props: 'events',
+      props: "events",
     },
     {
       title: "Press",
@@ -337,8 +337,6 @@ const Footer = () => {
               </div>
               <hr />
 
-              
-
               <div className="col-12 col-lg-3 text-white d-flex flex-column gap-3 px-0 py-3">
                 <div
                   data-bs-toggle="collapse"
@@ -373,8 +371,8 @@ const Footer = () => {
                       <a
                         key={index}
                         href={item.link}
-                        rel='noreferrer'
-                        target={'_blank'}
+                        rel="noreferrer"
+                        target={"_blank"}
                         className="text-white text-decoration-none"
                       >
                         <h5>{item.title}</h5>
@@ -425,24 +423,24 @@ const Footer = () => {
                         <h5>{item.title}</h5>
                       </a>
                     ))}
-                    <div className="d-flex flex-row gap-3">
-                  <a
-                    target="_blank"
-                    href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
-                  >
-                    <img src={coinmarketcap} alt="" />
-                  </a>
-                  <a
-                    target="_blank"
-                    href="https://www.coingecko.com/en/coins/defi-yield-protocol"
-                  >
-                    <img src={coinGecko} alt="" />
-                  </a>
-                  
-                  <NavLink to="/disclaimer">
-                    <img src={disclaimer} alt="" />
-                  </NavLink>
-                </div>
+                    <div className="d-flex flex-row gap-3 position-relative" >
+                      <a
+                        target="_blank"
+                        href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
+                      >
+                        <img src={coinmarketcap} alt="" />
+                      </a>
+                      <a
+                        target="_blank"
+                        href="https://www.coingecko.com/en/coins/defi-yield-protocol"
+                      >
+                        <img src={coinGecko} alt="" />
+                      </a>
+
+                      <NavLink to="/disclaimer">
+                        <img src={disclaimer} alt="" />
+                      </NavLink>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -468,13 +466,13 @@ const Footer = () => {
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">Solutions</h4>
                 {products.map((item, index) => (
-                   <Link
-                   key={index}
-                   to={item.link}
-                   className="text-white text-decoration-none"
-                 >
-                   <h5>{item.title}</h5>
-                 </Link>
+                  <Link
+                    key={index}
+                    to={item.link}
+                    className="text-white text-decoration-none"
+                  >
+                    <h5>{item.title}</h5>
+                  </Link>
                 ))}
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">
@@ -491,17 +489,19 @@ const Footer = () => {
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">Anouncements</h4>
-                {announcements.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.link}
-                    className="text-white text-decoration-none"
-                    state={{newsType: item.props}}
-                  >
-                    <h5>{item.title}</h5>
-                  </Link>
-                ))}
-                <div className="d-flex flex-row gap-3">
+                <div className="d-flex flex-column gap-3">
+                  {announcements.map((item, index) => (
+                    <Link
+                      key={index}
+                      to={item.link}
+                      className="text-white text-decoration-none"
+                      state={{ newsType: item.props }}
+                    >
+                      <h5>{item.title}</h5>
+                    </Link>
+                  ))}
+                </div>
+                <div className="d-flex flex-row gap-3 position-relative" style={{bottom: '-90px'}}>
                   <a
                     target="_blank"
                     href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
@@ -514,7 +514,7 @@ const Footer = () => {
                   >
                     <img src={coinGecko} alt="" />
                   </a>
-                  
+
                   <NavLink to="/disclaimer">
                     <img src={disclaimer} alt="" />
                   </NavLink>
