@@ -110,6 +110,8 @@ const Roadmap = () => {
 
   const [roadmap, setRoadmap] = useState(roadmap2022);
 
+  const [counter, setCounter] = useState(0)
+
   const settings = {
     dots: false,
     infinite: false,
@@ -117,7 +119,7 @@ const Roadmap = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    initialSlide: roadmap.length,
+    initialSlide: roadmap.length - 1,
     responsive: [
       {
         breakpoint: 1024,
@@ -134,6 +136,8 @@ const Roadmap = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          initialSlide: roadmap.length,
+
         },
       },
       {
@@ -141,6 +145,8 @@ const Roadmap = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          initialSlide: roadmap.length,
+
         },
       },
     ],
@@ -150,9 +156,16 @@ const Roadmap = () => {
 
   const next = () => {
     slider.current.slickNext();
+    if(JSON.stringify(roadmap) === JSON.stringify(roadmap2020)){
+      setRoadmap(roadmap2021)
+    }
   };
   const previous = () => {
     slider.current.slickPrev();
+    if(JSON.stringify(roadmap) === JSON.stringify(roadmap2022)){
+      setRoadmap(roadmap2021)
+    }
+
   };
 
   return (
@@ -168,13 +181,13 @@ const Roadmap = () => {
               <p className={`${JSON.stringify(roadmap) == JSON.stringify(roadmap2022) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2022)}>2022</p>
             </div>
             <div
-              className={`left-button d-flex justify-content-center align-items-center ${JSON.stringify(roadmap) === JSON.stringify(roadmap2021) && 'enabled'}`}
+              className={`left-button d-flex justify-content-center align-items-center ${JSON.stringify(roadmap) === JSON.stringify(roadmap2021) || JSON.stringify(roadmap) === JSON.stringify(roadmap2022)  ? 'enabled' : ''}`}
               onClick={previous}
             >
               <img src={filledLeft} alt="left arrow" className="p-2" />
             </div>
             <div
-              className={`right-button d-flex justify-content-center align-items-center ${JSON.stringify(roadmap) === JSON.stringify(roadmap2021) && 'enabled'}`}
+              className={`right-button d-flex justify-content-center align-items-center ${JSON.stringify(roadmap) === JSON.stringify(roadmap2021) || JSON.stringify(roadmap) === JSON.stringify(roadmap2020)  ? 'enabled' : ''}`}
               onClick={next}
             >
               <img src={emptyRight} alt="rightArrow" className="p-2" />

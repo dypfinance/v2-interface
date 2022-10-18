@@ -70,7 +70,7 @@ const GetInTouch = () => {
                     {socials.map((social, index) => (
                         <a target="_blank" key={index} href={social.link} className="d-flex flex-column justify-content-center align-items-center gap-2">
                             <img src={require(`../assets/${social.icon}.svg`)} alt="" />
-                            <p className="social-title">{social.title}</p>
+                            <p className="social-title mb-0">{social.title}</p>
                         </a>
                     ))}
                 </div>
