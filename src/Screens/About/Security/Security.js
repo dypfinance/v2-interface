@@ -34,8 +34,24 @@ const Security = () => {
     },
     {
       subtitle: "Security",
+      title: "Token Lock Vesting",
+      link: "https://github.com/dypfinance/token-lock-vesting-contracts/",
+    },
+    {
+      subtitle: "Security",
+      title: "Dypius Earn Vault",
+      link: "https://github.com/dypfinance/dyp-earn-vault",
+    },
+
+    {
+      subtitle: "Security",
       title: "Token Smart Contract",
       link: "https://github.com/dypfinance/contract-security-audit",
+    },
+    {
+      subtitle: "Security",
+      title: "Certik Security Oracle",
+      link: "https://www.certik.com/projects/dypfinance",
     },
     {
       subtitle: "Security",
@@ -45,27 +61,12 @@ const Security = () => {
 
     {
       subtitle: "Security",
-      title: "Farming, Bridge and Governance <br/> on Binance Smart Chain",
+      title: "Farming, Bridge and Governance <br/> on BNB Smart Chain",
       link: "https://github.com/dypfinance/DYP-Bridge-and-Staking-on-Binance-Smart-Chain",
     },
 
-    {
-      subtitle: "Security",
-      title: "Defi Yield Protocol Earn Vault",
-      link: "https://github.com/dypfinance/dyp-earn-vault",
-    },
 
-    {
-      subtitle: "Security",
-      title: "Token Lock Vesting",
-      link: "https://github.com/dypfinance/token-lock-vesting-contracts/",
-    },
 
-    {
-      subtitle: "Security",
-      title: "Certik Security Oracle",
-      link: "https://www.certik.com/projects/dypfinance",
-    },
   ];
 
   return (

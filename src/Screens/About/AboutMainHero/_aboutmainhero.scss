@@ -5,6 +5,7 @@
   overflow: hidden;
   .painting-container {
     position: absolute;
+    top: 75%;
     left: 20%;
     width: 290px;
     height: 204px;
@@ -17,21 +18,21 @@
   .bull {
     position: absolute;
     z-index: 4;
-    top: -35%;
+    top: 35%;
     left: 28%;
   }
 
   .flower {
     position: absolute;
     z-index: 3;
-    top: -35%;
+    top: 35%;
     left: 25%;
   }
 
   .bluehero {
     position: absolute;
     left: 33%;
-    top: -25%;
+    top: 25%;
     opacity: 0.7;
     filter: blur(40px);
     z-index: 1;
@@ -40,12 +41,17 @@
   .submenu-link {
     display: flex;
     justify-content: space-between;
-    width: 135px;
+    width: 140px;
     color: rgba(85, 79, 216, 1);
 
     .submenu-indicator{
         animation: pulse 1.5s linear infinite
     }
+  }
+  
+  .image-container{
+    min-height: 200px;
+    min-width: 200px;
   }
 }
 
@@ -78,6 +84,7 @@
       height: 123px;
       bottom: 0%;
       left: 15%;
+      top: 45%;
 
       .painting {
         height: 110px !important;
@@ -85,13 +92,13 @@
     }
     .flower {
       height: 130px;
-      top: 30%;
+      top: 25%;
     }
 
     .bluehero {
       height: 250px;
-      top: 0%;
-      left: 20%;
+      top: 15% !important;
+      left: 40% !important;
       filter: blur(25px);
     }
   }

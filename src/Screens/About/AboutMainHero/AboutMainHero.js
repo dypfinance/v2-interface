@@ -14,15 +14,7 @@ const AboutMainHero = () => {
         <div className="col-12 col-lg-5 col-md-5 mt-5 mt-lg-0">
           <Title top="About" bottom="us" align="d-flex flex-row gap-2" />
           <p>
-            Through our strong foundation, we aim to bring you a powerful
-            decentralized ecosystem that faces the future.
-            <br />
-            <br />
-            In addition to a variety of products and services currently offered
-            like yield farming and staking, we are constantly building and
-            expanding our scope to include more advanced DeFi and educational
-            tools, NFTs and even Metaverse gaming, making us accessible for both
-            beginner and advanced users.
+          Dypius was created with the goal of bringing a powerful decentralized ecosystem that faces the future. We offer a variety of products and services that cater to both beginners and advanced users in the digital space, including yield farming, staking, DeFi tools, NFTs, and Metaverse gaming.
           </p>
         </div>
         <div className="col-12 col-lg-5 col-md-5 image-container position-relative">
@@ -61,6 +53,10 @@ const AboutMainHero = () => {
         </a>
         <a href="#tokenomics" className="text-decoration-none submenu-link">
           Tokenomics
+          <img src={indicator} className='submenu-indicator'  alt="" />
+        </a>
+        <a href="#contactus" className="text-decoration-none submenu-link">
+          Contact Us
           <img src={indicator} className='submenu-indicator'  alt="" />
         </a>
       </div>

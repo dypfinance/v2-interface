@@ -207,7 +207,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="container-fluid contact-wrapper">
+    <div className="container-fluid contact-wrapper" id="contactus">
       <div className="container-lg contact-container pt-5">
         <div className="row flex-column">
           <Title top="Contact us" />
@@ -231,7 +231,6 @@ const ContactUs = () => {
                 </div>
                 <div
                   className="circulating-wrapper"
-                  style={{ height: "fit-content" }}
                 >
                   <a
                     href="mailto:business@dypius.com"
@@ -240,10 +239,10 @@ const ContactUs = () => {
                   >
                     <div className="d-flex flex-column gap-3">
                       <span
-                        className="circulating-title d-flex gap-1 align-items-center"
+                        className="circulating-title d-flex align-items-center gap-1 align-items-center"
                         style={{ fontWeight: 500, color: "#7670E0" }}
                       >
-                        <img src={envelope} alt="" /> business@dypius.com
+                        <img src={envelope} alt="" /> <p className="mb-0 email">business@dypius.com</p>
                       </span>
                     </div>
                   </a>
@@ -430,7 +429,7 @@ const ContactUs = () => {
                   />
                 </div>
               </Box>
-              <div className="row m-0 gap-3 justify-content-center w-100 mb-3">
+              <div className="row m-0 gap-3 justify-content-between w-100 mb-3">
                 <div
                   className="d-grid gap-1 p-0"
                   style={{ width: windowSize.width < 999 ? "100%" : "" }}
@@ -467,7 +466,7 @@ const ContactUs = () => {
                   ref={recaptchaRef}
                 />
                 <button
-                  className="filled-btn submitbtn"
+                  className="filled-btn submitbtn border-0"
                   data-bs-toggle="modal"
                   data-bs-target={success === true ? "#tymodal" : "#tymodal1"}
                   onClick={handleSubmit}

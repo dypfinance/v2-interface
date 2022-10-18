@@ -134,11 +134,11 @@ const [partnersLength, setPartnersLength] = useState(12)
   };
 
   const loadMore = () => {
-    setPartnersLength(partnersLength + 6)
+    setPartnersLength(partnersLength + 12)
   }
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" id="our-partners">
       <div className="container-lg d-flex flex-column justify-content-center align-items-center p-0 p-lg-2">
         <div className="row flex-column justify-content-center align-items-center gap-2">
           <Title top="Our" bottom="Partners" align="d-flex flex-row gap-2" />
@@ -153,7 +153,7 @@ const [partnersLength, setPartnersLength] = useState(12)
           data-aos-duration="1000"
         >
           {partnersArray.slice(0, partnersLength).map((partner, index) => (
-            <a href={partner.href}>
+            <a href={partner.href} target="_blank">
               <div
                 key={index}
                 className="partner_wrapper d-flex flex-column align-items-center justify-content-center"
