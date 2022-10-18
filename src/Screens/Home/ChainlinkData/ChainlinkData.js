@@ -102,7 +102,7 @@ const   ChainlinkData = () => {
             </div>
           </div>
 
-          <div className="d-grid" style={{gap: 2}}>
+          <div className="d-grid" style={{gap: 15}}>
             <span className="chainlink-data-title">
               Audited by
             </span>

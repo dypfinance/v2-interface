@@ -22,6 +22,7 @@ import { useRef } from "react";
 import removebtn from "../../About/assets/remove-btn.svg";
 import selectBtn from "../assets/selectBtn.svg";
 import Modal from "../../../components/Modal/Modal";
+import ring from '../../../assets/tokenCircle.png'
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -322,7 +323,8 @@ const HelpCenter = () => {
           inquiries.
         </p>
       </div>
-      <div className="row contact-container" style={{ marginTop: "7rem" }}>
+      <div className="row contact-container position-relative" style={{ marginTop: "7rem" }}>
+        <img src={ring} alt="" className="help-ring d-none d-lg-block" />
         <FormContainer
           title="General Inquiry"
           desc="Get immediate help and support for Dypius products and solutions."

@@ -7,6 +7,7 @@ import FAQAccordion from "../../../components/FaqAccordionItem/FAQAccordion";
 import book from "../assets/book.svg";
 import activeBook from "../assets/activeBook.svg";
 import axios from "axios";
+import sphere from '../../../assets/newsSphere.png'
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -102,7 +103,8 @@ const FAQ = () => {
             We’re here to help and answer any question you might have.
           </p>
         </div>
-        <div className="categories-container px-0 p-5 w-100">
+        <div className="categories-container px-0 p-5 w-100 position-relative">
+          <img src={sphere} alt="" className="faq-sphere d-none d-lg-flex" />
           <div className="row align-items-center justify-content-center ">
             <div className=" search-container d-flex justify-content-center align-items-center w-50">
               <StyledTextField

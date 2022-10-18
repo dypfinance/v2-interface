@@ -63,6 +63,19 @@ cursor: pointer;
     bottom: -9%;
 
   }
+
+  .rainbow-hero{
+    position: absolute;
+    top: -54%;
+    left: 15%;
+  }
+
+  .rainbow-hero-2{
+    position: absolute;
+    rotate: 240deg;
+    top: -54%;
+    left: 54%;
+  }
 }
 
   .slider-wrapper{
@@ -159,7 +172,7 @@ cursor: pointer;
   
   .button__bar li button {
     border: none;
-    background: #9664FF;
+    background: rgb(119, 112, 224);
     color: transparent;
     cursor: pointer;
     display: block;
@@ -173,7 +186,7 @@ cursor: pointer;
     width: 16px;
     height: 16px;
     opacity: 1;
-    background-color: #9664FF;
+    background-color:  #7770E0;
     box-shadow: 0 4px 4px 0 rgba(150, 100, 255, 0.24);
   }
 
