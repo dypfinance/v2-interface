@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import WhyDypCard from "../../../components/DypPage/WhyDypCard";
 import Title from "../../../components/Title/Title";
 import useWindowSize from "../../../hooks/useWindowSize";
+import purpleBg from '../assets/purpleBackground.svg'
 import Slider from "react-slick";
 import "./_whydypius.scss";
 
@@ -89,7 +90,25 @@ const WhyDypius = () => {
                     <p className="fw-lighter">DYP Burned</p>
                   </div>
                 </div>
+                
               </div>
+             <div className="position-relative">
+             <img src={purpleBg} alt="" className="purple-background" />
+             <div className="purple-card position text-white position-relative p-3">
+                <div className="d-flex flex-column justify-content-start justify-content-center mx-auto ">
+                    <h1 className="fw-light">$42B+</h1>
+                    <p className="fw-lighter">All time volume</p>
+                  </div>
+                <div className="d-flex flex-column justify-content-start justify-content-center mx-auto ">
+                    <h1 className="fw-light">$43M+</h1>
+                    <p className="fw-lighter">All time paid</p>
+                  </div>
+                <div className="d-flex flex-column justify-content-start justify-content-center mx-auto ">
+                    <h1 className="fw-light">2.5K+</h1>
+                    <p className="fw-lighter">Liquidity Providers</p>
+                  </div>
+                </div>
+             </div>
             </div>
           </div>
           <div className="col-12 col-lg-8 card-wrapper d-grid ">
@@ -127,30 +146,3 @@ const WhyDypius = () => {
 
 export default WhyDypius;
 
-{
-  /* <div className="d-flex flex-column gap-5 title-container mt-5 mt-lg-0">
-               <Title top="Why" bottom="Dypius?" />
-              <div className="position-relative">
-              <img className='orange-border' src={require(`../assets/orangeBorder.svg`).default} alt="" />
-                <div className="orange-card text-white p-3 position-relative">
-                    <img className='divider' src={require(`../assets/orangeDivider.svg`).default} alt="" />
-                    <div className="child-1 d-flex flex-column justify-content-start justify-content-center mx-auto ">
-                        <h1 className="fw-light">42</h1>
-                        <p className='fw-lighter'>Active pools</p>
-                    </div>
-                    <div className="child-2 d-flex flex-column justify-content-start justify-content-center mx-auto ">
-                    <h1 className="fw-light">12</h1>
-                        <p className='fw-lighter'>DYP Products</p>
-                    </div>
-                    <div className="child-3 d-flex flex-column justify-content-start justify-content-center mx-auto ">
-                    <h1 className="fw-light">70%</h1>
-                        <p className='fw-lighter'>DYP Locked</p>
-                    </div>
-                    <div className="child-4 d-flex flex-column justify-content-start justify-content-center mx-auto">
-                    <h1 className="fw-light">5M+</h1>
-                        <p className='fw-lighter'>DYP Burned</p>
-                    </div>
-                </div>
-              </div>
-               </div> */
-}

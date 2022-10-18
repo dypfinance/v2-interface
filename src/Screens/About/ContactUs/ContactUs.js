@@ -207,7 +207,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="container-fluid contact-wrapper">
+    <div className="container-fluid contact-wrapper" id="contactus">
       <div className="container-lg contact-container pt-5">
         <div className="row flex-column">
           <Title top="Contact us" />
@@ -231,7 +231,6 @@ const ContactUs = () => {
                 </div>
                 <div
                   className="circulating-wrapper"
-                  style={{ height: "fit-content" }}
                 >
                   <a
                     href="mailto:business@dypius.com"
@@ -240,10 +239,10 @@ const ContactUs = () => {
                   >
                     <div className="d-flex flex-column gap-3">
                       <span
-                        className="circulating-title d-flex gap-1 align-items-center"
+                        className="circulating-title d-flex align-items-center gap-1 align-items-center"
                         style={{ fontWeight: 500, color: "#7670E0" }}
                       >
-                        <img src={envelope} alt="" /> business@dypius.com
+                        <img src={envelope} alt="" /> <p className="mb-0 email">business@dypius.com</p>
                       </span>
                     </div>
                   </a>

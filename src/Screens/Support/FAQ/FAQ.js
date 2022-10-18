@@ -27,7 +27,7 @@ const FAQ = () => {
     },
     {
       id: "6348811e062d4b709c4a24f9",
-      title: "Farming",
+      title: "Farm",
     },
     {
       id: "63488547062d4b709c4a250b",

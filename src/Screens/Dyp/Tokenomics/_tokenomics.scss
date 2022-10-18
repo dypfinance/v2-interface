@@ -26,8 +26,22 @@
 
   }
 
-  
+  .email{
+    display: none;
+  }
+
+
+
+
 }
+
+.circulating-wrapper:hover{
+  .email{
+    display: block;
+  }
+}
+
+
 .dypcontract-title {
     font-weight: 400;
     font-size: 14px;
