@@ -33,11 +33,11 @@ const SupportedWallets = () => {
   return (
     <div className="supportedwallet-wrapper container-lg mt-5 mb-5">
       <div>
-        <div className="row m-0 gap-3 justify-content-between align-items-center">
+        <div className="row ml-0 mr-0 gap-lg-3 gap-xl-3 gap-md-3 gap-0  justify-content-lg-between justify-content-xl-between justify-content-md-between justify-content-end mb-xl-0 mb-lg-0 mb-2  align-items-center">
           <h1>Supported wallets</h1>
           <div>
-            <div className="row m-0 gap-2 justify-content-between align-items-center">
-              <div className="d-flex flex-column">
+            <div className="row ml-0 mr-0 gap-2 align-items-center">
+              <div className="d-flex flex-column dypaddr-wrapper ">
                 <span className="dypcontractaddr">
                   DYP Contract Address (ETH, BNB Chain, Avalanche):
                 </span>

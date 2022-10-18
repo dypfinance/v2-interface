@@ -86,7 +86,6 @@
     .coin-card {
       width: 270px;
       border-radius: 12px;
-      box-shadow: 0 32px 64px 0 rgba(17, 17, 17, 0.08);
 
       .card-line {
         background: #9664ff;
@@ -97,10 +96,7 @@
         border-radius: 0 5px 5px 0;
       }
     }
-    .coin-card:first-child {
-      margin-right: -14rem;
-      opacity: 0.6;
-    }
+
   }
 }
 
