@@ -6,7 +6,7 @@ import coinBg from '../../../assets/coinBackground.svg'
 import rightArrow from '../../../assets/right-arrow.svg'
 import './_dyptoken.scss'
 import { NavLink } from 'react-router-dom'
-
+import InfiniteCards from '../../../components/InfiniteCards/InfiniteCards'
 
 const DypToken = () => {
 
@@ -27,11 +27,16 @@ const DypToken = () => {
             <p className="text-end" data-aos="fade-up" data-aos-duration="1000">
             An immersive ecosystem with a wide range of unique products and solutions.
             </p>
+           
             <div className="row">
               <div className="d-flex flex-row" data-aos="fade-up" data-aos-duration="1000">
-                <CoinCard title='Dypius Earn' stakeAmount='30%' description='Earn rewards by securely depositing your assets into the staking smart contract'  />
+                {/* <CoinCard title='Dypius Earn' stakeAmount='30%' description='Earn rewards by securely depositing your assets into the staking smart contract'  />
                 <CoinCard title='Dypius Earn' stakeAmount='75%' description='Earn rewards by securely depositing your assets into the staking smart contract' />
-              </div>
+            */} 
+            
+             <InfiniteCards/>
+            
+             </div> 
             </div>
             <NavLink to='/dyp' className="btn filled-btn d-flex align-items-center" data-aos="fade-up" data-aos-duration="1000" style={{zIndex: 5}}>
               Learn more 

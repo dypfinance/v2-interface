@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ChainlinkData from "../ChainlinkData/ChainlinkData";
 import DypSystem from "../../../components/DypSystem/DypSystem";
 import CometBg from "../../../components/CometBg/CometBg";
@@ -17,6 +17,8 @@ const MainHero = () => {
     dotsClass: "button__bar",
     arrows: false,
   };
+
+  const slickref = useRef()
 
   return (
     <div className="container-fluid p-0" style={{ overflow: "hidden" }}>
@@ -41,7 +43,7 @@ const MainHero = () => {
                 </button>
               </div>
               <div className="sliderwrapper  d-flex flex-column mt-3 ml-lg-4 pl-0">
-                <Slider {...settings}>
+                <Slider {...settings} ref={slickref}>
                   <div className="d-flex flex-column gap-0">
                     <p>
                       <b>Earn</b>
@@ -130,28 +132,35 @@ const MainHero = () => {
             <div className="col-12 col-lg-5 d-flex justify-content-center flex-column text-white ml-4">
               <DypSystem
                 onShowFirstDesc={() => {
-                  setShowDesc("first");
+                  slickref.current.innerSlider.slickGoTo(1)
+
                 }}
                 onShowSecondDesc={() => {
-                  setShowDesc("sec");
+                  slickref.current.innerSlider.slickGoTo(2)
+
                 }}
                 onShowThirdDesc={() => {
-                  setShowDesc("third");
+                  slickref.current.innerSlider.slickGoTo(3)
                 }}
                 onShowFourthDesc={() => {
-                  setShowDesc("four");
+                  slickref.current.innerSlider.slickGoTo(4)
+
                 }}
                 onShowFifthDesc={() => {
-                  setShowDesc("five");
+                  slickref.current.innerSlider.slickGoTo(5)
+
                 }}
                 onShowSixthDesc={() => {
-                  setShowDesc("six");
+                  slickref.current.innerSlider.slickGoTo(6)
+
                 }}
                 onShowSeventhDesc={() => {
-                  setShowDesc("seven");
+                  slickref.current.innerSlider.slickGoTo(1)
+
                 }}
                 onRemoveDesc={() => {
-                  setShowDesc("");
+                  slickref.current.innerSlider.slickNext()
+
                 }}
               />
             </div>
