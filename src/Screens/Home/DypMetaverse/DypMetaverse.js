@@ -8,6 +8,7 @@ import metaverse2 from "../../../assets/metaverse-2.png";
 import metaverse3 from "../../../assets/metaverse-3.png";
 import BlueHero from "../../../assets/metaverse-blueHero.svg";
 import Cube from "../../../assets/cube.png";
+import metaverseWaves from '../../../assets/metaverseWaves.svg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -54,7 +55,8 @@ const DypMetaverse = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-lg-6 col-md-5 col-sm-6">
+          <div className="col-12 col-lg-6 col-md-5 col-sm-6 position-relative">
+            <img src={metaverseWaves} alt="" className="metaverse-waves position-absolute" />
             <div className="image-grid">
               <div className="image-1">
                 <PulseDiv>

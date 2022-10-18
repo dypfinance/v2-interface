@@ -14,22 +14,20 @@
       cursor: pointer;
       transition: all 1s;
 
-      .form-email{
+      .form-email {
         font-size: 14px;
         font-weight: 500;
-        color: #7670E0;
+        color: #7670e0;
         display: none;
         transition: all 1s;
       }
     }
 
-    .email-container:hover{
-        .form-email{
-            display: block;
-        }
+    .email-container:hover {
+      .form-email {
+        display: block;
+      }
     }
-   
-
 
     h3 {
       color: #7670e0;
@@ -77,6 +75,11 @@
   }
 }
 
+.help-ring {
+  position: absolute;
+  right: -10%;
+  bottom: 0px;
+}
 
 @media screen and (max-width: 786px) {
   .help-wrapper {
@@ -89,6 +92,8 @@
 
     .contact-container {
       gap: 70px;
+
+    
     }
   }
 }

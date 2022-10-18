@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { RingLoader } from "react-spinners";
 import prevArrow from "../../../assets/prevArrow.svg";
 import nextArrow from "../../../assets/nextArrow.svg";
-
+import rainbowHero from "../../../assets/rainbowHero.png";
 import "./_dypnews.scss";
 import { useRef } from "react";
 import { NavLink } from "react-router-dom";
@@ -88,10 +88,17 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
     <div className="container-lg mb-5" id="dypNews">
       <div className="row dyp-news">
         <div className="col-12 d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center ps-4 ps-lg-2 mb-5 mb-lg-0 gap-4">
-          <img
-            className="sphere"
-            src={require(`../../../assets/newsSphere.png`)}
-          />
+          {page === "news" ? (
+            <>
+              <img src={rainbowHero} alt="" className="rainbow-hero" />
+              <img src={rainbowHero} alt="" className="rainbow-hero-2" />
+            </>
+          ) : (
+            <img
+              className="sphere"
+              src={require(`../../../assets/newsSphere.png`)}
+            />
+          )}
           <Title top={topTitle} bottom={bottomTitle} align={titleAlign} />
           <div className="button-group">
             {page === "news" ? (
@@ -110,7 +117,12 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
                 </div>
               </div>
             ) : (
-              <NavLink className="btn d-flex align-items-center filled-btn mr-3" to='/news'>Read more</NavLink>
+              <NavLink
+                className="btn d-flex align-items-center filled-btn mr-3"
+                to="/news"
+              >
+                Read more
+              </NavLink>
             )}
           </div>
         </div>

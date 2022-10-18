@@ -74,20 +74,20 @@ const WhyDypius = () => {
                     alt=""
                   />
                   <div className="child-1 d-flex flex-column justify-content-start justify-content-center mx-auto ">
-                    <h1 className="fw-light">42</h1>
-                    <p className="fw-lighter">Active pools</p>
+                    <h5 style={{fontSize: '32px', fontWeight: '275'}}>42</h5>
+                    <p style={{fontSize: '12px', fontWeight: '400'}}>Active pools</p>
                   </div>
                   <div className="child-2 d-flex flex-column justify-content-start justify-content-center mx-auto ">
-                    <h1 className="fw-light">12</h1>
-                    <p className="fw-lighter">DYP Products</p>
+                    <h5 style={{fontSize: '32px', fontWeight: '275'}}>12</h5>
+                    <p style={{fontSize: '12px', fontWeight: '400'}}>DYP Products</p>
                   </div>
                   <div className="child-3 d-flex flex-column justify-content-start justify-content-center mx-auto ">
-                    <h1 className="fw-light">70%</h1>
-                    <p className="fw-lighter">DYP Locked</p>
+                    <h5 style={{fontSize: '32px', fontWeight: '275'}}>70%</h5>
+                    <p style={{fontSize: '12px', fontWeight: '400'}}>DYP Locked</p>
                   </div>
                   <div className="child-4 d-flex flex-column justify-content-start justify-content-center mx-auto">
-                    <h1 className="fw-light">5M+</h1>
-                    <p className="fw-lighter">DYP Burned</p>
+                    <h5 style={{fontSize: '32px', fontWeight: '275'}}>5M+</h5>
+                    <p style={{fontSize: '12px', fontWeight: '400'}}>DYP Burned</p>
                   </div>
                 </div>
                 
@@ -96,16 +96,16 @@ const WhyDypius = () => {
              <img src={purpleBg} alt="" className="purple-background" />
              <div className="purple-card position text-white position-relative p-3">
                 <div className="d-flex flex-column justify-content-start justify-content-center mx-auto ">
-                    <h1 className="fw-light">$42B+</h1>
-                    <p className="fw-lighter">All time volume</p>
+                    <h5 style={{fontWeight: '275', fontSize: '32px'}}>$42B+</h5>
+                    <p className="mb-0" style={{fontSize: '12px', fontWeight: '400'}}>All time volume</p>
                   </div>
                 <div className="d-flex flex-column justify-content-start justify-content-center mx-auto ">
-                    <h1 className="fw-light">$43M+</h1>
-                    <p className="fw-lighter">All time paid</p>
+                    <h5 style={{fontWeight: '275', fontSize: '32px'}}>$43M+</h5>
+                    <p className="mb-0" style={{fontSize: '12px', fontWeight: '400'}}>All time paid</p>
                   </div>
                 <div className="d-flex flex-column justify-content-start justify-content-center mx-auto ">
-                    <h1 className="fw-light">2.5K+</h1>
-                    <p className="fw-lighter">Liquidity Providers</p>
+                    <h5 style={{fontWeight: '275', fontSize: '32px'}}>2.5K+</h5>
+                    <p className="mb-0" style={{fontSize: '12px', fontWeight: '400'}}>Liquidity Providers</p>
                   </div>
                 </div>
              </div>

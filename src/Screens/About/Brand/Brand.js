@@ -2,6 +2,7 @@ import React from "react";
 import Title from "../../../components/Title/Title";
 import pasteimg from "../assets/paste-icon.svg";
 import DotFrame from "../../../assets/DypAssets/dotFrame.svg";
+import ring from '../../../assets/tokenCircle.png'
 
 const Brand = () => {
   return (
@@ -12,7 +13,9 @@ const Brand = () => {
         alt=""
         style={{ bottom: "-50px", right: "18%" }}
       />
-      <div className="container-lg">
+      <div className="container-lg position-relative">
+      <img src={ring} alt="" className="brand-ring" />
+
         <Title top={"Brand"} align="d-flex flex-row gap-2" />
         <div className="row m-0 justify-content-between gap-3">
           <div className="col-lg-5 col-xl-5 branditem">
