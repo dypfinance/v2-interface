@@ -59,10 +59,18 @@
 
   .purple-background{
     position: absolute;
-    height: 600px;
-    width: 500px;
-    left: -36%;
-    top: -46%;
+    height: 550px;
+    width: 450px;
+    left: -32%;
+    top: -65%;
+    }
+
+    .why-sphere{
+      position: absolute;
+    z-index: 6;
+    width: 150px;
+    right: 0;
+    bottom: -35%;
     }
 
   .purple-card {
@@ -71,7 +79,7 @@
     border-radius: 28px 0px;
     display: grid;
     grid-template-columns: auto auto;
-    column-gap: 20px;
+    gap: 15px;
     z-index: 5;
 
     

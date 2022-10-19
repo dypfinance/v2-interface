@@ -71,10 +71,35 @@
             }
         }
     }
+
+    .updates-bluehero{
+        filter: blur(60px);
+        position: absolute;
+        right: -10%;
+        z-index: -1;
+    }
+    .updates-rainbowHero{
+
+        position: absolute;
+        left: -25%;
+        z-index: -1;
+        bottom: -15%;
+    
+    }
+
+    .updates-ring{
+        position: absolute;
+        right: -5%;
+        bottom: -12%;
+    }
 }
 
 @media screen and (max-width: 786px) {
     .update-card-container{
         grid-template-columns: auto !important;
+    }
+
+    .updates-ring{
+        bottom: -23% !important;
     }
 }

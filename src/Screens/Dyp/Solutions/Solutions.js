@@ -13,39 +13,62 @@ const Solutions = () => {
   const solutions = [
     {
       title: "DYP Tools",
+      image: 'dyptools.png'
     },
     {
       title: "Governance",
+      image: 'governance.png'
+
     },
     {
       title: "Stake",
+      image: 'stake.png'
+
     },
     {
       title: "Farm",
+      image: 'farm.png'
+
     },
     {
       title: "Vault",
+      image: 'vault.png'
+
     },
     {
       title: "Buyback",
+      image: 'buyback.png'
+
     },
     {
       title: "Bridge",
+      image: 'bridge.png'
+
     },
     {
       title: "CAWS NFT",
+      image: 'caws.png'
+
     },
     {
       title: "Launchpad",
+      image: 'launchpad.png'
+
     },
     {
       title: "Metaverse",
+      image: 'metaverse.png'
+
     },
     {
       title: "DYP Locker",
+      image: 'locker.png'
+
     }, 
     {
       title: "CAWS Adventure",
+      image: 'adventure.png'
+
     },
   ];
 
@@ -70,10 +93,10 @@ const Solutions = () => {
             ? solutions
                 .slice(0, solutionLength)
                 .map((solution, index) => (
-                  <SolutionsCard key={index} title={solution.title} />
+                  <SolutionsCard key={index} title={solution.title} image={solution.image}/>
                 ))
             : solutions.map((solution, index) => (
-                <SolutionsCard key={index} title={solution.title} />
+                <SolutionsCard key={index} title={solution.title}  image={solution.image}/>
               ))}
         </div>
         <div className="row justify-content-center my-5">

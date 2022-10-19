@@ -36,6 +36,11 @@
       }
     }
   }
+
+  .metaverse-waves{
+    right: 10%;
+    bottom: -30%;
+  }
 }
 
 .bluehero {
@@ -85,7 +90,7 @@
 }
 
 .metaverse-inner {
-  min-height: 500px;
+  min-height: 520px;
 }
 
 @media (max-width: 1399px) {
@@ -161,6 +166,9 @@
     h1 {
       font-size: 32px !important;
     }
+  }
+  .metaverse-waves{
+    right: -1% !important;
   }
 }
 

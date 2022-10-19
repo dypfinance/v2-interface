@@ -100,16 +100,6 @@ const MainHero = () => {
                     <p style={{fontSize: 13}}>
                       A limited Cat and Watches Society NFT collection of 10,000
                       randomly generated, hand-drawn utility NFTs developed by
-                      Dypius.
-                    </p>
-                  </div>
-                  <div className="d-flex flex-column gap-0 rowwrapper">
-                    <p>
-                      <b>CAWS NFT</b>
-                    </p>
-                    <p style={{fontSize: 13}}>
-                      A limited Cat and Watches Society NFT collection of 10,000
-                      randomly generated, hand-drawn utility NFTs developed by
                       Dypius. These unique NFTs consist of over 235 different
                       traits, each outfitted with its own luxury watch of
                       various rarities.
@@ -132,28 +122,28 @@ const MainHero = () => {
             <div className="col-12 col-lg-5 d-flex justify-content-center flex-column text-white ml-4">
               <DypSystem
                 onShowFirstDesc={() => {
-                  slickref.current.innerSlider.slickGoTo(1);
+                  slickref.current.innerSlider.slickGoTo(0);
                 }}
                 onShowSecondDesc={() => {
-                  slickref.current.innerSlider.slickGoTo(2);
-                }}
-                onShowThirdDesc={() => {
-                  slickref.current.innerSlider.slickGoTo(3);
-                }}
-                onShowFourthDesc={() => {
-                  slickref.current.innerSlider.slickGoTo(4);
-                }}
-                onShowFifthDesc={() => {
-                  slickref.current.innerSlider.slickGoTo(5);
-                }}
-                onShowSixthDesc={() => {
-                  slickref.current.innerSlider.slickGoTo(6);
-                }}
-                onShowSeventhDesc={() => {
                   slickref.current.innerSlider.slickGoTo(1);
                 }}
+                onShowThirdDesc={() => {
+                  slickref.current.innerSlider.slickGoTo(2);
+                }}
+                onShowFourthDesc={() => {
+                  slickref.current.innerSlider.slickGoTo(3);
+                }}
+                onShowFifthDesc={() => {
+                  slickref.current.innerSlider.slickGoTo(4);
+                }}
+                onShowSixthDesc={() => {
+                  slickref.current.innerSlider.slickGoTo(5);
+                }}
+                onShowSeventhDesc={() => {
+                  slickref.current.innerSlider.slickGoTo(6);
+                }}
                 onRemoveDesc={() => {
-                  slickref.current.innerSlider.slickNext();
+                  slickref.current.innerSlider.slickPlay();
                 }}
               />
             </div>

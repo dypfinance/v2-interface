@@ -77,7 +77,7 @@ const Security = () => {
           <div className="col-lg-5 col-xl-5 p-0">
             <Title top={"Security"} align="d-flex flex-row gap-2" />
             <p className="security-desc">
-              DeFi Yield Protocol unquestionably values your security. This is
+              Dypius unquestionably values your security. This is
               why we have chosen three reputable security audit companies:
               <b> Blockchain Consilium, CertiK, and PeckShield,</b> to provide
               their services in an effort to avoid any vulnerabilities in the

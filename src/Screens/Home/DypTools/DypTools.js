@@ -39,7 +39,7 @@ const DypTools = () => {
             <ListCard content='Support promising crypto tokens from various projects ' />
 
             </div>
-            <a href={'https://tools.dyp.finance'} target={'_blank'} rel='noreferrer' className="btn d-flex align-items-center outline-btn m-md-auto m-sm-auto m-lg-0" data-aos='fade-up' data-aos-delay='500' data-aos-duration='1000'>
+            <a href={'https://tools.dyp.finance'} target={'_blank'} rel='noreferrer' className="btn d-flex align-items-center justify-content-center outline-btn m-md-auto m-sm-auto m-lg-0" data-aos='fade-up' data-aos-delay='500' data-aos-duration='1000'>
               Go to DYP Tools <img src={filledArrow} alt="" className="ml-2" />
             </a>
           </div>

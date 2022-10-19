@@ -52,7 +52,7 @@ const BuyDyp = () => {
         </div>
       </div>
       {windowSize.width < 786 ? (
-        <div className="row ps-5">
+        <div className="row ps-5" style={{zIndex: 5}}>
           <NavLink to='/buydyp' className="btn filled-btn w-75 d-flex justify-content-center align-items-center">
             Explore
             <img

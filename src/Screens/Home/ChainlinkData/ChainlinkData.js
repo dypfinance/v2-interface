@@ -40,7 +40,7 @@ const   ChainlinkData = () => {
       <div className="container-lg position-relative">
         <div className="row justify-content-between mt-5 gap-4">
           <div className="d-grid">
-            <span className="chainlink-data-title">Powered by Chainlink</span>
+            <span className="chainlink-data-title">Provided by Chainlink</span>
             <div className="row chainlink-row m-0">
               <div className="chainlink-cell">
                 <img src={EthereumLogo} alt="eth" />{" "}
@@ -102,7 +102,7 @@ const   ChainlinkData = () => {
             </div>
           </div>
 
-          <div className="d-grid" style={{gap: 2}}>
+          <div className="d-grid" style={{gap: 15}}>
             <span className="chainlink-data-title">
               Audited by
             </span>

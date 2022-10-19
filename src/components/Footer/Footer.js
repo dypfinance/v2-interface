@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import useWindowSize from "../../hooks/useWindowSize";
 import "./_footer.scss";
-import { Link, NavLink } from "react-router-dom";
+import {NavLink } from "react-router-dom";
 import logo from "../../assets/dypiusLogo.svg";
 import coinmarketcap from "../../assets/coinMarketCap.svg";
 import coinGecko from "../../assets/coinGecko.svg";
 import contactUs from "../../assets/contactUs.svg";
 import disclaimer from "../../assets/disclaimer.svg";
-
+import { HashLink as Link } from 'react-router-hash-link';
 const Footer = () => {
   const windowSize = useWindowSize();
 
@@ -75,7 +75,7 @@ const Footer = () => {
       title: "Tokenomics",
       link: "/about#tokenomics",
     },
-    
+
     {
       title: "Contact us",
       link: "/about#contactus",
@@ -117,13 +117,13 @@ const Footer = () => {
     {
       title: "Latest anouncements",
       link: "/news",
-      props: 'announcements',
+      props: "announcements",
     },
 
     {
       title: "Latest events",
       link: "/news",
-      props: 'events',
+      props: "events",
     },
     {
       title: "Press",
@@ -267,13 +267,13 @@ const Footer = () => {
                 >
                   <div className="d-flex flex-column gap-3">
                     {about.map((item, index) => (
-                      <a
+                      <NavLink
                         key={index}
-                        href={item.link}
+                        to={item.link}
                         className="text-white text-decoration-none"
                       >
                         <h5>{item.title}</h5>
-                      </a>
+                      </NavLink>
                     ))}
                   </div>
                 </div>
@@ -312,13 +312,13 @@ const Footer = () => {
                   <div className="row">
                     <div className="col-6 d-flex flex-column gap-3">
                       {products.slice(0, 6).map((item, index) => (
-                        <a
+                        <NavLink
                           key={index}
-                          href={item.link}
+                          to={item.link}
                           className="text-white text-decoration-none"
                         >
                           <h5>{item.title}</h5>
-                        </a>
+                        </NavLink>
                       ))}
                     </div>
                     <div className="col-6 d-flex flex-column gap-3">
@@ -336,9 +336,6 @@ const Footer = () => {
                 </div>
               </div>
               <hr />
-
-              
-
               <div className="col-12 col-lg-3 text-white d-flex flex-column gap-3 px-0 py-3">
                 <div
                   data-bs-toggle="collapse"
@@ -371,10 +368,11 @@ const Footer = () => {
                   <div className="d-flex flex-column gap-3">
                     {learn.map((item, index) => (
                       <a
+                      
                         key={index}
                         href={item.link}
                         rel='noreferrer'
-                        target={'_blank'}
+                        target="_blank"
                         className="text-white text-decoration-none"
                       >
                         <h5>{item.title}</h5>
@@ -417,32 +415,34 @@ const Footer = () => {
                 >
                   <div className="d-flex flex-column gap-3">
                     {announcements.map((item, index) => (
-                      <a
+                      <NavLink
                         key={index}
-                        href={item.link}
+                        to={item.link}
                         className="text-white text-decoration-none"
+                    state={{newsType: item.props}}
+
                       >
                         <h5>{item.title}</h5>
-                      </a>
+                      </NavLink>
                     ))}
-                    <div className="d-flex flex-row gap-3">
-                  <a
-                    target="_blank"
-                    href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
-                  >
-                    <img src={coinmarketcap} alt="" />
-                  </a>
-                  <a
-                    target="_blank"
-                    href="https://www.coingecko.com/en/coins/defi-yield-protocol"
-                  >
-                    <img src={coinGecko} alt="" />
-                  </a>
-                  
-                  <NavLink to="/disclaimer">
-                    <img src={disclaimer} alt="" />
-                  </NavLink>
-                </div>
+                    <div className="d-flex flex-row gap-3 position-relative" >
+                      <a
+                        target="_blank"
+                        href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
+                      >
+                        <img src={coinmarketcap} alt="" />
+                      </a>
+                      <a
+                        target="_blank"
+                        href="https://www.coingecko.com/en/coins/defi-yield-protocol"
+                      >
+                        <img src={coinGecko} alt="" />
+                      </a>
+
+                      <NavLink to="/disclaimer">
+                        <img src={disclaimer} alt="" />
+                      </NavLink>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -456,25 +456,25 @@ const Footer = () => {
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">About Us</h4>
                 {about.map((item, index) => (
-                  <a
+                  <NavLink
                     key={index}
-                    href={item.link}
+                    to={item.link}
                     className="text-white text-decoration-none"
                   >
                     <h5>{item.title}</h5>
-                  </a>
+                  </NavLink>
                 ))}
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">Solutions</h4>
                 {products.map((item, index) => (
-                   <Link
+                   <NavLink
                    key={index}
                    to={item.link}
                    className="text-white text-decoration-none"
                  >
                    <h5>{item.title}</h5>
-                 </Link>
+                 </NavLink>
                 ))}
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">
@@ -483,6 +483,7 @@ const Footer = () => {
                   <a
                     key={index}
                     href={item.link}
+                    target="_blank"
                     className="text-white text-decoration-none"
                   >
                     <h5>{item.title}</h5>
@@ -491,17 +492,19 @@ const Footer = () => {
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">Anouncements</h4>
-                {announcements.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.link}
-                    className="text-white text-decoration-none"
-                    state={{newsType: item.props}}
-                  >
-                    <h5>{item.title}</h5>
-                  </Link>
-                ))}
-                <div className="d-flex flex-row gap-3">
+                <div className="d-flex flex-column gap-3">
+                  {announcements.map((item, index) => (
+                    <NavLink
+                      key={index}
+                      to={item.link}
+                      className="text-white text-decoration-none"
+                      state={{ newsType: item.props }}
+                    >
+                      <h5>{item.title}</h5>
+                    </NavLink>
+                  ))}
+                </div>
+                <div className="d-flex flex-row gap-3 position-relative" style={{bottom: '-90px'}}>
                   <a
                     target="_blank"
                     href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
@@ -514,7 +517,7 @@ const Footer = () => {
                   >
                     <img src={coinGecko} alt="" />
                   </a>
-                  
+
                   <NavLink to="/disclaimer">
                     <img src={disclaimer} alt="" />
                   </NavLink>

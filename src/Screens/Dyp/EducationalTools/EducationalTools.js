@@ -12,7 +12,7 @@ const EducationalTools = () => {
       image: "stake.png",
     },
     {
-      link: "https://www.youtube.com/watch?v=0WSYN2qHTNQ",
+      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVM7gOLm3R2kXI3IldBqxfCA",
       image: "governance.png",
     },
     {
@@ -30,7 +30,7 @@ const [playbtn, setPlaybtn] = useState('passive')
     <div className="eduactionalwrapper container-lg" id="learn">
       <div className="row justify-content-between align-items-center p-4">
         <div className="col-12 col-lg-4">
-          <Title top="Educational" bottom="Tools" />
+          <Title top="Educational" bottom="Videos" />
           <p style={{marginBottom: 32}}>
             Hit the ground running with our quick start guide! Get tips, watch
             how-to videos and learn how to become an expert in no time.

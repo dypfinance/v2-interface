@@ -22,14 +22,18 @@ import { useRef } from "react";
 import removebtn from "../../About/assets/remove-btn.svg";
 import selectBtn from "../assets/selectBtn.svg";
 import Modal from "../../../components/Modal/Modal";
+import ring from '../../../assets/tokenCircle.png'
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
     borderRadius: "8px",
+    
   },
   "& .MuiInputLabel-root": {
     color: "#A0A3BD",
     fontWeight: 400,
+    fontFamily: 'Poppins',
+
   },
 }));
 
@@ -39,7 +43,7 @@ const StyledSelect = styled(Select)(({ theme }) => ({
   },
   "& .MuiInputLabel-root": {
     color: "#A0A3BD",
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: 'Poppins',
     fontWeight: 400,
   },
 }));
@@ -216,6 +220,8 @@ const HelpCenter = () => {
       recaptchaRef.current.reset();
 
       setValues({ ...helpState });
+      setSelectedFile(null);
+
     }
   };
 
@@ -262,11 +268,12 @@ const HelpCenter = () => {
       recaptchaRef.current.reset();
 
       setBusinessValues({ ...businessState });
+      setSelectedFile(null);
+
     }
   };
 
-  const onFileChange = (event, type) => {
-    console.log(type);
+  const onFileChange = (event, type) => { 
     const fileTypes = [
       "image/jpg",
       "image/png",
@@ -322,7 +329,8 @@ const HelpCenter = () => {
           inquiries.
         </p>
       </div>
-      <div className="row contact-container" style={{ marginTop: "7rem" }}>
+      <div className="row contact-container position-relative" style={{ marginTop: "7rem" }}>
+        <img src={ring} alt="" className="help-ring d-none d-lg-block" />
         <FormContainer
           title="General Inquiry"
           desc="Get immediate help and support for Dypius products and solutions."
@@ -339,7 +347,7 @@ const HelpCenter = () => {
             data-bs-parent="#accordionExample"
           >
             <div className="help-form p-4">
-              <h5 className="text-secondary">Fill out form</h5>
+              <h5 className="text-secondary mb-3">Fill out form</h5>
               <div className="row gap-4 justify-content-center">
                 <StyledTextField
                   error={errors.name ? true : false}
@@ -576,7 +584,7 @@ const HelpCenter = () => {
             data-bs-parent="#accordionExample"
           >
             <div className="help-form p-4">
-              <h5 className="text-secondary">Fill out form</h5>
+              <h5 className="text-secondary mb-3">Fill out form</h5>
 
               <div className="row gap-4 justify-content-center">
                 <StyledTextField

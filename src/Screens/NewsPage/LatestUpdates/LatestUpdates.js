@@ -8,6 +8,9 @@ import eventsInactive from '../assets/eventsInactive.svg'
 import UpdateCard from '../../../components/UpdateCard/UpdateCard'
 import { RingLoader } from 'react-spinners'
 import dropdownIndicator from '../../Dyp/assets/dropdownIndicator.svg'
+import rainbowHero from '../../../assets/rainbowHero.png'
+import blueHero from '../../../assets/metaverse-blueHero.svg'
+import ring from '../../../assets/tokenCircle.png'
 import axios from 'axios'
 
 const LatestUpdates = ({type}) => {
@@ -54,7 +57,10 @@ const LatestUpdates = ({type}) => {
 
   return (
     <div className="container-fluid updates-wrapper">
-        <div className="container-lg updates-container p-5">
+        <div className="container-lg updates-container p-5 position-relative">
+          <img src={blueHero} alt="" className="updates-bluehero" />
+          <img src={rainbowHero} alt="" className="updates-rainbowHero" />
+          <img src={ring} alt="" className="updates-ring" />
             <div className="row justify-content-center justify-content-lg-between gap-5">
                 <Title top='Latest' bottom='updates' align='d-flex flex-row gap-2' />
                 <div
