@@ -4,6 +4,19 @@
     left: -8%;
     z-index: 1;
     width: 100%;
+    animation: scale 3s ease-in-out infinite;
+}
+
+@keyframes scale {
+   0%{
+    transform: scale(1);
+   }
+   50%{
+    transform: scale(1.1);
+   }
+   100%{
+    transform: scale(1);
+   }
 }
 
 .buydyp-main-hero {

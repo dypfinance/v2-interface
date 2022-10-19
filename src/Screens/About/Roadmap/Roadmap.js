@@ -4,6 +4,7 @@ import filledLeft from "../assets/filledLeft.svg";
 import emptyRight from "../assets/emptyRight.svg";
 import selectedRoadmap from "../assets/selectedRoadmap.svg";
 import uncompletedIcon from "../assets/uncompletedIcon.svg";
+import completedIcon from '../assets/completedOrangeIcon.svg';
 import RoadmapCard from "../../../components/RoadmapCard/RoadmapCard";
 import Slider from "react-slick";
 import { useRef } from "react";
@@ -212,11 +213,11 @@ const Roadmap = () => {
               </div>
               <div className="roadmap-items highlight d-flex flex-column gap-3 p-4">
                 <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={uncompletedIcon} alt="" />
+                  <img src={completedIcon} alt="" />
                   <p>Metaverse Research and Launch of Different Products</p>
                 </div>
                 <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={uncompletedIcon} alt="" />
+                  <img src={completedIcon} alt="" />
                   <p>Metaverse Begins for the CAWS</p>
                 </div>
                 <div className="d-flex flex-row align-items-center gap-2">

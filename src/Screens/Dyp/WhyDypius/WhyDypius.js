@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import WhyDypCard from "../../../components/DypPage/WhyDypCard";
 import Title from "../../../components/Title/Title";
 import useWindowSize from "../../../hooks/useWindowSize";
 import purpleBg from '../assets/purpleBackground.svg'
-import Slider from "react-slick";
 import "./_whydypius.scss";
+import sphere from '../../../assets/newsSphere.png'
 
 const WhyDypius = () => {
   const windowSize = useWindowSize();
@@ -30,17 +30,17 @@ const WhyDypius = () => {
     {
       title: "Adaptability",
       description:
-        "Dypius prides itself in its ability to quickly adapt to the new and emerging market trends. Dypius flexibility and expertise allow for pioneering in the DeFi space in a quick and unparalleled innovative way.",
+        "Dypius prides itself in its ability to quickly adapt to the new and emerging market trends. Dypius flexibility and expertise allows for pioneering in the market space in a quick and unparalleled innovative way.",
     },
     {
       title: "Extended product catalogue",
       description:
-        "Dypius offers a large diversity of products on the platform that generates value to users like Farming, Staking, Vault, Buyback, CAWS NFT, DYP Governance and much more. ",
+        "Dypius offers a large diversity of products on the platform that generates value to users like Staking, Farming, Vault, Buyback, CAWS NFT, DYP Governance and much more.",
     },
     {
       title: "Market consistency",
       description:
-        "Dypius has a very well-known, trusted, and stable history in the DeFi market which is reflected on its outstanding statistics and users feedback.",
+        "Dypius has a very well-known, trusted, and stable history in the market which is reflected on its outstanding statistics and users feedback.",
     },
     {
       title: "Trusted partner",
@@ -50,7 +50,7 @@ const WhyDypius = () => {
     {
       title: "Education and protection",
       description:
-        "Dypius help, educate, and protect every user by giving them the right information, data analytics, and new trends through our unique solutions safety measures.",
+        "Dypius helps, educate, and protect every user by giving them the right information, data analytics, and new trends through our unique solutions safety measures.",
     },
   ];
 
@@ -60,7 +60,7 @@ const WhyDypius = () => {
         <div className="row">
           <div className="col-12 col-lg-4 d-flex justify-content-center align-items-center">
             <div className="d-flex flex-column gap-5 title-container mt-5 mt-lg-0">
-              <Title top="Why" bottom="Dypius?" />
+              <Title top="Why" bottom="Dypius?" /> 
               <div className="position-relative">
                 <img
                   className="orange-border"
@@ -93,6 +93,7 @@ const WhyDypius = () => {
                 
               </div>
              <div className="position-relative">
+              <img src={sphere} alt="" className="why-sphere" />
              <img src={purpleBg} alt="" className="purple-background" />
              <div className="purple-card position text-white position-relative p-3">
                 <div className="d-flex flex-column justify-content-start justify-content-center mx-auto ">
