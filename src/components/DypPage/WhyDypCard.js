@@ -1,6 +1,6 @@
 import React from "react";
 
-const WhyDypCard = ({ title, description }) => {
+const WhyDypCard = ({ title, description, icon }) => {
   return (
     <div
       className="why-card position-relative py-4 py-lg-auto"
@@ -10,7 +10,7 @@ const WhyDypCard = ({ title, description }) => {
       <div className="green-tag"></div>
       <div className="tag d-flex justify-content-center align-items-center">
         <img
-          src={require(`../../Screens/Dyp/assets/clipboard.svg`).default}
+          src={require(`../../Screens/Dyp/assets/${icon}.svg`)}
           alt=""
         />
       </div>

@@ -93,7 +93,7 @@ const settings = {
       
       <div className="row align-items-end">
         <div className="col-12 col-lg-7 pb-2">
-        <h4 className="mb-5" style={{ color: "#554FD8" }}>
+        <h4 className="mb-5" style={{ color: "#554FD8", fontSize: '20px' }}>
         Lifetime proposals
       </h4>
           <div className="proposal-container gap-5">
@@ -110,8 +110,8 @@ const settings = {
         <div className="col-12 col-lg-5">
           <div className="recent-proposals p-4 position-relative">
                 <span className="proposal-span" />
-            <div className="row justify-content-between mb-4">
-              <h4 className="mb-0" style={{ color: "#554FD8" }}>Recent proposals</h4>
+            <div className="row justify-content-between align-items-center mb-4">
+              <h4 className="mb-0" style={{ color: "#554FD8", fontSize: '20px' }}>Recent proposals</h4>
               <p className="active-pools mb-0">Active</p>
             </div>
             <div className="row recents-container">

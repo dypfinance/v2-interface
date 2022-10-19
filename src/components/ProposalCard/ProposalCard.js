@@ -2,7 +2,8 @@ import React from 'react'
 
 const ProposalCard = ({title, icon}) => {
   return (
-    <div className="d-flex align-items-center justify-content-between w-100 pb-2 px-4" style={{borderBottom: '1px solid #EFF0F6'}}>
+    <>
+    <div className="d-flex align-items-center justify-content-between w-100 px-4">
                     <div className="d-flex flex-row align-items-center gap-2">
                         <img src={icon} alt="" />
                         <p className="fw-bold mb-0">{title}</p>
@@ -15,6 +16,9 @@ const ProposalCard = ({title, icon}) => {
                         </div>
                     </div>
                 </div>
+                <hr style={{margin: '12px 0'}} />
+                </>
+
   )
 }
 

@@ -58,11 +58,12 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
   const [newsData, setNewsData] = useState([]);
 
   const fetchNews = async () => {
-    const url = `https://news-manage.dyp.finance/api/populars/9`;
+    const url =  page === "news" ? `https://news-manage.dyp.finance/api/organics/all` : `https://news-manage.dyp.finance/api/announcements`;
     await axios
       .get(url)
       .then((response) => {
         setNewsData(response.data);
+        console.log(url);
       })
       .catch((error) => console.error(error));
   };
@@ -134,7 +135,7 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
           {newsData.length > 0 ? (
             <div className="slider-wrapper">
               <Slider ref={(c) => (slider.current = c)} {...settings}>
-                {sortedNewsItems.map((newsItem, index) => (
+                {sortedNewsItems.slice(0, 9).map((newsItem, index) => (
                   <NewsCard
                     key={index}
                     title={newsItem.title}

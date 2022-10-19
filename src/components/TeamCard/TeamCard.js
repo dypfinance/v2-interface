@@ -9,11 +9,11 @@ const TeamCard = ({ name, position, id, content, photo, link }) => {
           <img src={photo} alt="profile" className="profile-pic" />
         </a>
         <div className="d-flex w-100 justify-content-around">
-          <div className={`d-flex flex-column ${id === "daniel" && "ps-4"}`}>
+          <div className={`d-flex flex-column ${id === "daniel" || id === "toni" ? "ps-4" : ''}`}>
             <h4 className={`text-white ${id === "daniel" && "mb-0"}`}>
               {name}
             </h4>
-            <p className={`text-white fw-light ${id === "daniel" && "mb-0"}`}>
+            <p className={`text-white fw-light ${id === "daniel" || id ==="toni" ? "mb-0" : ''}`}>
               {position}
             </p>
           </div>
@@ -21,7 +21,7 @@ const TeamCard = ({ name, position, id, content, photo, link }) => {
             src={dropdownIcon}
             style={{
               cursor: "pointer",
-              marginRight: id === "daniel" && "25px",
+              marginRight: id === "daniel" || id === "toni" ? "25px" : null,
             }}
             data-bs-toggle="collapse"
             data-bs-target={`#${id}`}
