@@ -1,6 +1,6 @@
 import React from "react";
 
-const GovCards = ({ title, description, number, step }) => {
+const GovCards = ({ title, description, number, step, icon }) => {
   return (
     <div
       className={`gov-card position-relative py-4 py-lg-auto ${step}`}
@@ -12,7 +12,7 @@ const GovCards = ({ title, description, number, step }) => {
           <div className="green-tag"></div>
           <div className="tag d-flex justify-content-center align-items-center">
             <img
-              src={require(`../../Screens/Dyp/assets/clipboard.svg`).default}
+              src={require(`../../Screens/Governance/assets/${icon}.svg`)}
               alt=""
             />
           </div>

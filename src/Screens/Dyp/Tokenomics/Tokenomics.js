@@ -8,6 +8,7 @@ import PurpleArrowDown from "../../../assets/DypAssets/purpleArrow-down.svg";
 import WhiteArrowUp from "../../../assets/DypAssets/whiteArrow-up.svg";
 import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
+import tokenomicsIcon from '../../../assets/tokenomicsIcon.svg'
 
 const Tokenomics = ({ bottom, showBtn, isDyp }) => {
   const [tokenomicData, setTokenomicData] = useState("dyp");
@@ -36,8 +37,10 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
   return (
     <div className="outer-wrapper" id="tokenomics" style={{ bottom: bottom }}>
       <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
-        <div className="row m-0 gap-2 pl-0">
-          <NoteIcon bgFill={"#7770E0"} svgFill={"#fff"} />
+        <div className="row m-0 align-items-center justify-content-center gap-2 pl-0">
+          <div className="tokenomics-icon d-flex justify-content-center align-items-center">
+          <img src={tokenomicsIcon} alt="" />
+          </div>
           <Title top={ isDyp === true ? "Tokenomics" : 'iDYP Tokenomics'} />
         </div>
         <div className="row m-0 gap-4 pl-0 col-lg-3 col-xl-3 align-items-center justify-content-end">
