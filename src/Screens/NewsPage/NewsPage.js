@@ -17,8 +17,8 @@ const NewsPage = () => {
       style={{ paddingTop: "150px", gap: "150px" }}
     >
       <DypNews
-        topTitle="Main"
-        bottomTitle="news"
+        topTitle="Dypius"
+        bottomTitle="in the media"
         titleAlign="d-flex flex-row gap-2"
         page="news"
       />

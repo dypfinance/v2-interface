@@ -8,6 +8,7 @@ import Earn from "../../assets/satellites/earn.png";
 import Governance from "../../assets/satellites/governance.png";
 import Caw from "../../assets/satellites/caws.png";
 import Metaverse from "../../assets/satellites/metaverse.png";
+import { NavLink } from "react-router-dom";
 
 const DypSystem = ({
   onShowFirstDesc,
@@ -34,15 +35,22 @@ const DypSystem = ({
               onMouseLeave={onRemoveDesc}
             />
           </div>
-          <div className="satellite3">
-            <img
-              src={Dyptools}
-              alt="dyp-item"
-              style={{ width: 50, height: 50 }}
-              onMouseEnter={onShowThirdDesc}
-              onMouseLeave={onRemoveDesc}
-            />
-          </div>
+
+            <div className="satellite3">
+                        <a
+            href="https://tools.dyp.finance/"
+            target={"_blank"}
+            rel="noreferrer"
+          >
+              <img
+                src={Dyptools}
+                alt="dyp-item"
+                style={{ width: 50, height: 50 }}
+                onMouseEnter={onShowThirdDesc}
+                onMouseLeave={onRemoveDesc}
+              /></a>
+            </div>
+          
           <div className="satellite33">
             <img
               src={Bridge}
@@ -64,6 +72,7 @@ const DypSystem = ({
             />
           </div>
           <div className="satellite44">
+            <NavLink to='/governance'>
             <img
               src={Governance}
               alt="dyp-item"
@@ -71,6 +80,7 @@ const DypSystem = ({
               onMouseEnter={onShowSecondDesc}
               onMouseLeave={onRemoveDesc}
             />
+            </NavLink>
           </div>
           <div className="satellite22">
             <img

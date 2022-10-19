@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {shortAddress } from '../../../hooks/shortAddress'
 import useWindowSize from "../../../hooks/useWindowSize";
 
@@ -28,7 +28,7 @@ const SupportedWallets = () => {
 
 
   const windowSize = useWindowSize();
-
+  const [copied, setCopied] = useState(false)
 
   return (
     <div className="supportedwallet-wrapper container-lg mt-5 mb-5">
@@ -39,7 +39,7 @@ const SupportedWallets = () => {
             <div className="row ml-0 mr-0 gap-2 align-items-center">
               <div className="d-flex flex-column dypaddr-wrapper ">
                 <span className="dypcontractaddr">
-                  DYP Contract Address (ETH, BNB Chain, Avalanche):
+                  DYP Contract Address (Ethereum, BNB Chain, Avalanche):
                 </span>
                 <span className="contractaddr">
                   {windowSize.width < 526
@@ -51,13 +51,15 @@ const SupportedWallets = () => {
                     src={require("../assets/copy.svg").default}
                     alt=""
                     className="ml-2"
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: "pointer", display: copied === true ? 'none' : '' }}
                     onClick={() => {
                       navigator.clipboard.writeText(
                         "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
                       );
+                      setCopied(true)
                     }}
                   />
+                  {copied === true && <span className="copiedtxt" style={{color: '#fff'}}>Copied!</span>}
                 </span>
               </div>
             </div>

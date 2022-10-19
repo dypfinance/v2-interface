@@ -6,13 +6,13 @@
 }
 
 .bgbridge {
-    background: url("./bridgebg.svg");
+    background: url("./assets/bridgebg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
     padding: 20px;
-    mix-blend-mode: luminosity;
+    mix-blend-mode: initial;
     border-radius: 18px 0px;
   }
 
@@ -29,7 +29,7 @@
 }
 
 .bgearn {
-    background: url("./earnbg.svg");
+    background: url("./assets/earnbg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
