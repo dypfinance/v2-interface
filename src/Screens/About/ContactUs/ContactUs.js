@@ -32,16 +32,19 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiInputLabel-root": {
     color: "#A0A3BD",
     fontWeight: 400,
+    fontFamily: 'Poppins',
+
   },
 }));
 
 const StyledSelect = styled(Select)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
     borderRadius: "8px",
+    fontFamily: 'Poppins',
   },
   "& .MuiInputLabel-root": {
     color: "#A0A3BD",
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: 'Poppins',
     fontWeight: 400,
   },
 }));
@@ -196,6 +199,8 @@ const ContactUs = () => {
       recaptchaRef.current.reset();
 
       setValues({ ...initialState });
+      setSelectedFile(null);
+
     }
   };
 
