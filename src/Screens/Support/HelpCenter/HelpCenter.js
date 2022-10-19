@@ -410,7 +410,7 @@ const HelpCenter = () => {
                     sx={{ width: "250px" }}
                   >
                     <InputLabel id="demo-simple-select-error-label">
-                      Select topic
+                      Select topic*
                     </InputLabel>
                     <StyledSelect
                       sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
@@ -602,7 +602,7 @@ const HelpCenter = () => {
                 {formState.job_title === false ? (
                   <FormControl fullWidth sx={{ width: "250px" }} size="small">
                     <InputLabel id="demo-simple-select-error-label">
-                      Job Title
+                      Job Title*
                     </InputLabel>
                     <StyledSelect
                       sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
@@ -689,7 +689,7 @@ const HelpCenter = () => {
               {formState.subject === false ? (
                 <FormControl fullWidth className="mt-4" size="small">
                   <InputLabel id="demo-simple-select-error-label">
-                    Subject
+                    Subject*
                   </InputLabel>
                   <StyledSelect
                     sx={{ borderRadius: "8px", fontFamily: "Poppins" }}

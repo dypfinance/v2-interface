@@ -4,7 +4,7 @@ import filledLeft from "../assets/filledLeft.svg";
 import emptyRight from "../assets/emptyRight.svg";
 import selectedRoadmap from "../assets/selectedRoadmap.svg";
 import uncompletedIcon from "../assets/uncompletedIcon.svg";
-import completedIcon from '../assets/completedOrangeIcon.svg';
+import completedIcon from "../assets/completedOrangeIcon.svg";
 import RoadmapCard from "../../../components/RoadmapCard/RoadmapCard";
 import Slider from "react-slick";
 import { useRef } from "react";
@@ -111,7 +111,7 @@ const Roadmap = () => {
 
   const [roadmap, setRoadmap] = useState(roadmap2022);
 
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(0);
 
   const settings = {
     dots: false,
@@ -138,7 +138,6 @@ const Roadmap = () => {
           slidesToScroll: 2,
           initialSlide: 2,
           initialSlide: roadmap.length,
-
         },
       },
       {
@@ -147,7 +146,6 @@ const Roadmap = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: roadmap.length,
-
         },
       },
     ],
@@ -157,16 +155,15 @@ const Roadmap = () => {
 
   const next = () => {
     slider.current.slickNext();
-    if(JSON.stringify(roadmap) === JSON.stringify(roadmap2020)){
-      setRoadmap(roadmap2021)
+    if (JSON.stringify(roadmap) === JSON.stringify(roadmap2020)) {
+      setRoadmap(roadmap2021);
     }
   };
   const previous = () => {
     slider.current.slickPrev();
-    if(JSON.stringify(roadmap) === JSON.stringify(roadmap2022)){
-      setRoadmap(roadmap2021)
+    if (JSON.stringify(roadmap) === JSON.stringify(roadmap2022)) {
+      setRoadmap(roadmap2021);
     }
-
   };
 
   return (
@@ -177,18 +174,52 @@ const Roadmap = () => {
           <p>Our journey to success</p>
           <div className="d-flex flex-row gap-lg-4 gap-xl-4 gap-md-4 gap-3">
             <div className="years-wrapper d-flex flex-row px-2 gap-1 justify-content-center align-items-center">
-              <p className={`${JSON.stringify(roadmap) == JSON.stringify(roadmap2020) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2020)}>2020</p>
-              <p className={`${JSON.stringify(roadmap) == JSON.stringify(roadmap2021) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2021)}>2021</p>
-              <p className={`${JSON.stringify(roadmap) == JSON.stringify(roadmap2022) && 'selected-year'}`} onClick={() => setRoadmap(roadmap2022)}>2022</p>
+              <p
+                className={`${
+                  JSON.stringify(roadmap) == JSON.stringify(roadmap2020) &&
+                  "selected-year"
+                }`}
+                onClick={() => setRoadmap(roadmap2020)}
+              >
+                2020
+              </p>
+              <p
+                className={`${
+                  JSON.stringify(roadmap) == JSON.stringify(roadmap2021) &&
+                  "selected-year"
+                }`}
+                onClick={() => setRoadmap(roadmap2021)}
+              >
+                2021
+              </p>
+              <p
+                className={`${
+                  JSON.stringify(roadmap) == JSON.stringify(roadmap2022) &&
+                  "selected-year"
+                }`}
+                onClick={() => setRoadmap(roadmap2022)}
+              >
+                2022
+              </p>
             </div>
             <div
-              className={`left-button d-flex justify-content-center align-items-center ${JSON.stringify(roadmap) === JSON.stringify(roadmap2021) || JSON.stringify(roadmap) === JSON.stringify(roadmap2022)  ? 'enabled' : ''}`}
+              className={`left-button d-flex justify-content-center align-items-center ${
+                JSON.stringify(roadmap) === JSON.stringify(roadmap2021) ||
+                JSON.stringify(roadmap) === JSON.stringify(roadmap2022)
+                  ? "enabled"
+                  : ""
+              }`}
               onClick={previous}
             >
               <img src={filledLeft} alt="left arrow" className="p-2" />
             </div>
             <div
-              className={`right-button d-flex justify-content-center align-items-center ${JSON.stringify(roadmap) === JSON.stringify(roadmap2021) || JSON.stringify(roadmap) === JSON.stringify(roadmap2020)  ? 'enabled' : ''}`}
+              className={`right-button d-flex justify-content-center align-items-center ${
+                JSON.stringify(roadmap) === JSON.stringify(roadmap2021) ||
+                JSON.stringify(roadmap) === JSON.stringify(roadmap2020)
+                  ? "enabled"
+                  : ""
+              }`}
               onClick={next}
             >
               <img src={emptyRight} alt="rightArrow" className="p-2" />
@@ -218,15 +249,19 @@ const Roadmap = () => {
                 </div>
                 <div className="d-flex flex-row align-items-center gap-2">
                   <img src={completedIcon} alt="" />
-                  <p>Metaverse Begins for the CAWS</p>
+                  <p>Building Extra Features for DYP Tools</p>
                 </div>
                 <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={uncompletedIcon} alt="" />
+                  <img src={completedIcon} alt="" />
                   <p>Rebranding Process</p>
                 </div>
                 <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={uncompletedIcon} alt="" />
-                  <p>Building Extra Features for DYP Tools</p>
+                  <img src={completedIcon} alt="" />
+                  <p>Metaverse Begins for the CAWS</p>
+                </div>
+                <div className="d-flex flex-row align-items-center gap-2">
+                  <img src={completedIcon} alt="" />
+                  <p>Further Extension and Project Growth in Different Areas</p>
                 </div>
                 <div className="d-flex flex-row align-items-center gap-2">
                   <img src={uncompletedIcon} alt="" />
@@ -246,10 +281,6 @@ const Roadmap = () => {
                 <div className="d-flex flex-row align-items-center gap-2">
                   <img src={uncompletedIcon} alt="" />
                   <p>Launch Multi-Chain DEX</p>
-                </div>
-                <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={uncompletedIcon} alt="" />
-                  <p>Further Extension and Project Growth in Different Areas</p>
                 </div>
               </div>
             </div>

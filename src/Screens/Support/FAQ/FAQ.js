@@ -25,50 +25,63 @@ const FAQ = () => {
     {
       id: "63481594d7e11d6f1849f730",
       title: "Stake",
+      icon: "stake"
+      
     },
     {
       id: "6348811e062d4b709c4a24f9",
       title: "Farm",
+      icon: "farm"
     },
     {
       id: "63488547062d4b709c4a250b",
       title: "Buyback",
+      icon: "buyback"
     },
     {
       id: "634885c5062d4b709c4a250f",
       title: "Vault",
+      icon: "vault"
     },
     {
       id: "63488646062d4b709c4a2513",
       title: "CAWS NFT",
+      icon: "caws"
     },
     {
       id: "6348881e062d4b709c4a2523",
       title: "Governance",
+      icon: "governance"
     },
     {
       id: "634888e0062d4b709c4a252a",
       title: "iDYP",
+      icon: "idyp"
     },
     {
       id: "63488953062d4b709c4a252e",
       title: "Buy DYP",
+      icon: "buydyp"
     },
     {
       id: "63488995062d4b709c4a2535",
       title: "Bridge",
+      icon: "bridge"
     },
     {
       id: "634889f4062d4b709c4a2540",
       title: "DYP Tools",
+      icon: "dyptools"
     },
     {
       id: "63488a9c062d4b709c4a2546",
       title: "Launchpad",
+      icon: "launchpad"
     },
     {
       id: "63481581d7e11d6f1849f72f",
       title: "General",
+      icon: "general"
     },
   ];
 
@@ -126,7 +139,7 @@ const FAQ = () => {
                 } align-items-center flex-column gap-2 mx-auto`}
               >
                 <img
-                  src={faqTitle === category.title ? activeBook : book}
+                  src={faqTitle === category.title ? require(`../assets/${category.icon}IconSelected.png`) : require(`../assets/${category.icon}Icon.png`)}
                   alt=""
                 />
                 <p className="mb-0">{category.title}</p>

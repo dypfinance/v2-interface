@@ -11,9 +11,9 @@ import useWindowSize from '../../hooks/useWindowSize';
 import ContactUs from './ContactUs/ContactUs';
 
 const About = () => {
-  useEffect(()=>{
-    window.scrollTo(0,0)
-  },[])
+  // useEffect(()=>{
+  //   window.scrollTo(0,0)
+  // },[])
 
   const windowSize = useWindowSize();
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useWindowSize from "../../hooks/useWindowSize";
 import "./_footer.scss";
-import {NavLink } from "react-router-dom";
 import logo from "../../assets/dypiusLogo.svg";
 import coinmarketcap from "../../assets/coinMarketCap.svg";
 import coinGecko from "../../assets/coinGecko.svg";
@@ -267,13 +266,13 @@ const Footer = () => {
                 >
                   <div className="d-flex flex-column gap-3">
                     {about.map((item, index) => (
-                      <NavLink
+                      <Link
                         key={index}
                         to={item.link}
                         className="text-white text-decoration-none"
                       >
                         <h5>{item.title}</h5>
-                      </NavLink>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -312,13 +311,13 @@ const Footer = () => {
                   <div className="row">
                     <div className="col-6 d-flex flex-column gap-3">
                       {products.slice(0, 6).map((item, index) => (
-                        <NavLink
+                        <Link
                           key={index}
                           to={item.link}
                           className="text-white text-decoration-none"
                         >
                           <h5>{item.title}</h5>
-                        </NavLink>
+                        </Link>
                       ))}
                     </div>
                     <div className="col-6 d-flex flex-column gap-3">
@@ -415,7 +414,7 @@ const Footer = () => {
                 >
                   <div className="d-flex flex-column gap-3">
                     {announcements.map((item, index) => (
-                      <NavLink
+                      <Link
                         key={index}
                         to={item.link}
                         className="text-white text-decoration-none"
@@ -423,7 +422,7 @@ const Footer = () => {
 
                       >
                         <h5>{item.title}</h5>
-                      </NavLink>
+                      </Link>
                     ))}
                     <div className="d-flex flex-row gap-3 position-relative" >
                       <a
@@ -439,9 +438,9 @@ const Footer = () => {
                         <img src={coinGecko} alt="" />
                       </a>
 
-                      <NavLink to="/disclaimer">
+                      <Link to="/disclaimer">
                         <img src={disclaimer} alt="" />
-                      </NavLink>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -450,31 +449,31 @@ const Footer = () => {
             </div>
           ) : (
             <>
-              <NavLink to="/">
+              <Link to="/">
                 <img src={logo} alt="" width={160} height={90} />
-              </NavLink>
+              </Link>
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">About Us</h4>
                 {about.map((item, index) => (
-                  <NavLink
+                  <Link
                     key={index}
                     to={item.link}
                     className="text-white text-decoration-none"
                   >
                     <h5>{item.title}</h5>
-                  </NavLink>
+                  </Link>
                 ))}
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">Solutions</h4>
                 {products.map((item, index) => (
-                   <NavLink
+                   <Link
                    key={index}
                    to={item.link}
                    className="text-white text-decoration-none"
                  >
                    <h5>{item.title}</h5>
-                 </NavLink>
+                 </Link>
                 ))}
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">
@@ -494,14 +493,14 @@ const Footer = () => {
                 <h4 className="fw-normal">Anouncements</h4>
                 <div className="d-flex flex-column gap-3">
                   {announcements.map((item, index) => (
-                    <NavLink
+                    <Link
                       key={index}
                       to={item.link}
                       className="text-white text-decoration-none"
                       state={{ newsType: item.props }}
                     >
                       <h5>{item.title}</h5>
-                    </NavLink>
+                    </Link>
                   ))}
                 </div>
                 <div className="d-flex flex-row gap-3 position-relative" style={{bottom: '-90px'}}>
@@ -518,9 +517,9 @@ const Footer = () => {
                     <img src={coinGecko} alt="" />
                   </a>
 
-                  <NavLink to="/disclaimer">
+                  <Link to="/disclaimer">
                     <img src={disclaimer} alt="" />
-                  </NavLink>
+                  </Link>
                 </div>
               </div>
             </>
