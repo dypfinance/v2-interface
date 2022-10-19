@@ -13,61 +13,61 @@ const Solutions = () => {
   const solutions = [
     {
       title: "DYP Tools",
-      image: 'dyptools.png'
+      image: 'dyptools',
     },
     {
       title: "Governance",
-      image: 'governance.png'
+      image: 'governance'
 
     },
     {
       title: "Stake",
-      image: 'stake.png'
+      image: 'stake'
 
     },
     {
       title: "Farm",
-      image: 'farm.png'
+      image: 'farm'
 
     },
     {
       title: "Vault",
-      image: 'vault.png'
+      image: 'vault'
 
     },
     {
       title: "Buyback",
-      image: 'buyback.png'
+      image: 'buyback'
 
     },
     {
       title: "Bridge",
-      image: 'bridge.png'
+      image: 'bridge'
 
     },
     {
       title: "CAWS NFT",
-      image: 'caws.png'
+      image: 'caws'
 
     },
     {
       title: "Launchpad",
-      image: 'launchpad.png'
+      image: 'launchpad'
 
     },
     {
       title: "Metaverse",
-      image: 'metaverse.png'
+      image: 'metaverse'
 
     },
     {
       title: "DYP Locker",
-      image: 'locker.png'
+      image: 'dyplocker'
 
     }, 
     {
       title: "CAWS Adventure",
-      image: 'adventure.png'
+      image: 'cawsadventure'
 
     },
   ];

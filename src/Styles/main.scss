@@ -32,7 +32,7 @@
 @import '../components/BuyDypCard/buydypcards.scss';
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .filled-btn {

@@ -96,18 +96,18 @@ const Security = () => {
                     <div key={index} className="audited-item">
                       <a href={item.link} target={'_blank'} rel="noreferrer">
                         <div className="row m-0 gap-3 justify-content-between align-items-center">
-                          <div className="d-flex m-0 p-0 align-items-center">
+                          <div className="d-flex m-0 p-0 align-items-center gap-3">
                             <img
                               src={require(`../../../assets/AuditedBy/${item.img}`)}
                               alt=""
-                              style={{ width: 60, height: 25 }}
+                              style={{ width: 40, height: 40 }}
                             />
-                            <p className="audited-by-section-item-text p-0" dangerouslySetInnerHTML={{ __html: item.name }} style={{ textAlign: 'left', fontSize: 11 }}>
+                            <p className="audited-by-section-item-text p-0" dangerouslySetInnerHTML={{ __html: item.name }} style={{ textAlign: 'left', fontSize: 12 }}>
 
                             </p>
                           </div>
                           <span className="viewsite">
-                            View site <img src={filledArrow} alt="" />
+                            View site <img src={filledArrow} className="ms-1" alt="" />
                           </span>
                         </div></a>
                     </div>
