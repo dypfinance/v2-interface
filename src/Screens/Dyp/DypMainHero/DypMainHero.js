@@ -23,7 +23,7 @@ const DypMainHero = () => {
         src={require(`../../../assets/tokenCircle.png`)}
       />
       <div className="container-lg d-flex justify-content-between">
-      <div className="row justify-content-between">
+      <div className="row justify-content-between px-3">
       <div className="col-12 col-lg-7 text-white d-flex flex-column gap-3 justify-content-lg-end justify-content-xl-end">
           <h1>DYP Token</h1>
           <p>

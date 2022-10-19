@@ -65,6 +65,14 @@
     top: -65%;
     }
 
+    .why-sphere{
+      position: absolute;
+    z-index: 6;
+    width: 150px;
+    right: 0;
+    bottom: -35%;
+    }
+
   .purple-card {
     background: linear-gradient(280.88deg, #554fd8 9.02%, #7770e0 90.66%);
     box-shadow: 0px 32px 64px rgba(17, 17, 17, 0.08);

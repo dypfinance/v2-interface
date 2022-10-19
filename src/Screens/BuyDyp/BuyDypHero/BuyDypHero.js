@@ -362,7 +362,7 @@ const BuyDypHero = () => {
 
   return (
     <div className="container-fluid buydyp-main-hero d-flex flex-column justify-content-lg-end justify-content-xl-end justify-content-center">
-      <div className="container-lg d-flex justify-content-between align-items-center flex-column">
+      <div className="container-lg d-flex justify-content-between align-items-center flex-column pt-5">
         <div className="container d-flex justify-content-between align-items-center mb-5">
           <div className="col-12 col-lg-6 text-white d-flex flex-column gap-3 justify-content-lg-center justify-content-xl-center">
             <Title top={"Buy"} bottom={"DYP"} align={"d-flex gap-1"} />
