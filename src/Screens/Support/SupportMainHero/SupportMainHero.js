@@ -12,7 +12,7 @@ import  sphere from '../../../assets/newsSphere.png'
 const SupportMainHero = () => {
   return (
     <div className="container-fluid d-flex flex-column justify-content-end support-main-wrapper">
-        <div className="container-lg d-flex justify-content-center align-items-end p-5">
+        <div className="container-lg d-flex justify-content-center align-items-end py-5">
         <div className="row justify-content-between w-100 align-items-center" style={{minHeight: 200}}>
         <div className="col-12 col-lg-5 col-md-5 mt-5 mt-lg-0 position-relative">
           <img src={sphere} alt="" className="support-sphere d-none d-lg-block" />
@@ -34,7 +34,7 @@ const SupportMainHero = () => {
         style={{ zIndex: 5 }}
       >
         <a href="#faq" className="text-decoration-none submenu-link">
-          FAQ
+          FAQs
           <img src={indicator} className="submenu-indicator" alt="" />
         </a>
         <a href="#tutorials" className="text-decoration-none submenu-link">
@@ -42,7 +42,7 @@ const SupportMainHero = () => {
           <img src={indicator} className="submenu-indicator" alt="" />
         </a>
         <a href="#helpcenter" className="text-decoration-none submenu-link">
-          Contact Us
+          Contact us
           <img src={indicator} className="submenu-indicator" alt="" />
         </a>
       </div>

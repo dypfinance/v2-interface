@@ -29,6 +29,9 @@
   line-height: 21px;
   letter-spacing: -0.018em;
   color: #f7f7fc;
+  display: flex;
+    gap: 5px;
+    align-items: center;
 }
 
 .walletitem {
@@ -42,6 +45,9 @@
     gap: 10px;
 }
 
+.copiedtxt {
+  font-size: 8px;
+}
 
 
 .wallettitle {
