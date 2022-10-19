@@ -37,13 +37,13 @@ const Card = ({
 const InfiniteCards = () => {
   const [cards, setCards] = useState([
     {
-      title: "Dypius Earn",
+      title: "Dypius Stake",
       stake: "30%",
       description:
         "Earn rewards by securely depositing your assets into the staking smart contract",
     },
     {
-      title: "Dypius Earn",
+      title: "Dypius Stake",
       stake: "75%",
       description:
         "Earn rewards by securely depositing your assets into the staking smart contract",
@@ -72,13 +72,13 @@ const InfiniteCards = () => {
       x.set(0);
       y.set(0);
       setCards([{
-        title: "Dypius Earn",
+        title: "Dypius Stake",
         stake: "30%",
         description:
           "Earn rewards by securely depositing your assets into the staking smart contract",
       },
       {
-        title: "Dypius Earn",
+        title: "Dypius Stake",
         stake: "75%",
         description:
           "Earn rewards by securely depositing your assets into the staking smart contract",
