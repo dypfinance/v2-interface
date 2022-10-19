@@ -6,7 +6,6 @@ import pangolin from "../assets/pangolin.png";
 const BuyIDyp = () => {
   return (
     <div className="container-lg buyidypsection d-flex justify-content-center">
-
       <div className="container row m-0 justify-content-between">
         <div className={`col-12 col-lg-5 `}>
           <div className="gap-5 d-flex align-items-start justify-content-center flex-column pl-2 pt-5 pb-5 leftcol">
@@ -15,11 +14,10 @@ const BuyIDyp = () => {
                 How can I get <br />
                 iDYP tokens?
               </h1>
-              <p className="text-secondary">
-                The external market for iDYP emerged when a liquidity pool for
-                iDYP was created on the decentralized exchanges (DEX) Uniswap,
-                Pangolin, and PancakeSwap bringing iDYP out of the Dypius
-                ecosystem and into the crypto market.
+              <p className="text-secondary" style={{fontSize: 14}}>
+                At Dypius, we want to make it easy for you to purchase our
+                token. We have a variety of centralized and decentralized
+                exchanges that you can use to do so.
               </p>
             </div>
           </div>
