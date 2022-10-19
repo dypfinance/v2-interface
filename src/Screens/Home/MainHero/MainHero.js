@@ -3,6 +3,7 @@ import ChainlinkData from "../ChainlinkData/ChainlinkData";
 import DypSystem from "../../../components/DypSystem/DypSystem";
 import CometBg from "../../../components/CometBg/CometBg";
 import Slider from "react-slick";
+import { NavLink } from "react-router-dom";
 
 const MainHero = () => {
   
@@ -38,9 +39,9 @@ const MainHero = () => {
                   and global adoption. Powered by a next-gen infrastructure
                   through our strong foundation, and much more!
                 </p>
-                <button type="button" className="btn filled-orange-btn">
+                <NavLink type="button" className="btn filled-orange-btn d-flex align-items-center justify-content-center" to='/dyp'>
                   Explore
-                </button>
+                </NavLink>
               </div>
               <div className="sliderwrapper  d-flex flex-column mt-3 pl-0">
                 <Slider {...settings} ref={slickref}>

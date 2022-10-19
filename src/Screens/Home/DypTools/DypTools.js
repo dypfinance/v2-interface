@@ -34,9 +34,9 @@ const DypTools = () => {
 
             <div className='gap-3 d-grid m-md-auto m-sm-auto m-lg-0'>
             <Title top="DYP Tools" bottom="Powerful dApps" animation='fade-up' duration='1000' />
-            <ListCard content='A wide range of impressive decentralized applications'  />
-            <ListCard content='Interactive platform with real-time data analytics ' />
-            <ListCard content='Support promising crypto tokens from various projects ' />
+            <ListCard content='A wide range of impressive decentralized applications'  image={'layers.svg'}/>
+            <ListCard content='Interactive platform with real-time data analytics ' image={'graph.svg'}/>
+            <ListCard content='Support promising crypto tokens from various projects ' image={'token.svg'}/>
 
             </div>
             <a href={'https://tools.dyp.finance'} target={'_blank'} rel='noreferrer' className="btn d-flex align-items-center justify-content-center outline-btn m-md-auto m-sm-auto m-lg-0" data-aos='fade-up' data-aos-delay='500' data-aos-duration='1000'>

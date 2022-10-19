@@ -37,14 +37,20 @@ const Card = ({
 const InfiniteCards = () => {
   const [cards, setCards] = useState([
     {
-      title: "Dypius Stake",
-      stake: "30%",
+      title: "Dypius Vault",
+      stake: "20%",
       description:
         "Earn rewards by securely depositing your assets into the staking smart contract",
     },
     {
       title: "Dypius Stake",
-      stake: "75%",
+      stake: "45%",
+      description:
+        "Earn rewards by securely depositing your assets into the staking smart contract",
+    },
+    {
+      title: "Dypius Farm",
+      stake: "80%",
       description:
         "Earn rewards by securely depositing your assets into the staking smart contract",
     },
@@ -61,8 +67,6 @@ const InfiniteCards = () => {
     [1, 0.5, 1]
   );
 
-  
-  
   const onDirectionLock = (axis) => setDragStart({ ...dragStart, axis: axis });
   const animateCardSwipe = (animation) => {
     setDragStart({ ...dragStart, animation });
@@ -71,19 +75,27 @@ const InfiniteCards = () => {
       setDragStart({ axis: null, animation: { x: 0, y: 0 } });
       x.set(0);
       y.set(0);
-      setCards([{
-        title: "Dypius Stake",
-        stake: "30%",
-        description:
-          "Earn rewards by securely depositing your assets into the staking smart contract",
-      },
-      {
-        title: "Dypius Stake",
-        stake: "75%",
-        description:
-          "Earn rewards by securely depositing your assets into the staking smart contract",
-      }, ...cards.slice(0, cards.length - 1)]);
-
+      setCards([
+        {
+          title: "Dypius Vault",
+          stake: "20%",
+          description:
+            "Earn rewards by securely depositing your assets into the staking smart contract",
+        },
+        {
+          title: "Dypius Stake",
+          stake: "45%",
+          description:
+            "Earn rewards by securely depositing your assets into the staking smart contract",
+        },
+        {
+          title: "Dypius Farm",
+          stake: "80%",
+          description:
+            "Earn rewards by securely depositing your assets into the staking smart contract",
+        },
+        ...cards.slice(0, cards.length - 1),
+      ]);
     }, 200);
   };
   const onDragEnd = (info) => {
@@ -97,7 +109,7 @@ const InfiniteCards = () => {
   };
   const renderCards = () => {
     return cards.map((card, index) => {
-      if (index === cards.length -1) {
+      if (index === cards.length - 1) {
         return (
           <Card
             card={card}

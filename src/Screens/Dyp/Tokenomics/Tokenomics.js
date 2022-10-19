@@ -31,6 +31,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
   }, [isDyp]);
 
   const windowSize = useWindowSize();
+  const [copied, setCopied] = useState(false)
 
   return (
     <div className="outer-wrapper" id="tokenomics" style={{ bottom: bottom }}>
@@ -118,9 +119,12 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                         navigator.clipboard.writeText(
                           "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
                         );
+                        setCopied(true)
                       }}
-                      style={{ cursor: "pointer" }}
+                      style={{ cursor: "pointer", display: copied === true ? 'none' : '' }}
                     />
+                  {copied === true && <span className="copiedtxt">Copied!</span>}
+
                   </span>
                 </div>
                 <div className="mininginfo-wrapper ">
@@ -406,9 +410,12 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                         navigator.clipboard.writeText(
                           "0xbd100d061e120b2c67a24453cf6368e63f1be056"
                         );
+                      setCopied(true)
+
                       }}
-                      style={{ cursor: "pointer" }}
+                      style={{ cursor: "pointer", display: copied === true ? 'none' : '' }}
                     />
+                     {copied === true && <span className="copiedtxt" >Copied!</span>}
                   </span>
                 </div>
                 <div className="mininginfo-wrapper ">
