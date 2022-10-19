@@ -4,6 +4,7 @@ import dypiusLogoPurple from "../../assets/dypius-purple.svg";
 import toolsLogo from "../../assets/dypToolsLogo.svg";
 import toolsBorder from "../../assets/toolsBorder.svg";
 import { NavLink } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import "./_navbar.scss";
 
 const Navbar = () => {
@@ -94,16 +95,16 @@ const Navbar = () => {
           >
             Support
           </NavLink>
-          <NavLink
+          <Link
             className={({ isActive }) =>
               isActive
                 ? "text-decoration-none navlink highlight"
                 : "text-decoration-none navlink"
             }
-            to="/about"
+            to="/about#aboutmain"
           >
             About us
-          </NavLink>
+          </Link>
         </div>
         <div className="col-2 d-flex justify-content-end position-relative">
           <a

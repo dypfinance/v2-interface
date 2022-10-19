@@ -20,7 +20,7 @@ const IDypHero = () => {
         style={{ position: "absolute", left: "2%", top: "70%" }}
       />
 
-      <div className="container d-flex justify-content-between">
+      <div className="container-lg d-flex justify-content-between">
         <div className="col-12 col-lg-6 text-white d-flex flex-column gap-3 justify-content-lg-end justify-content-xl-end">
           <h1>iDYP Token</h1>
           <p>
@@ -32,7 +32,7 @@ const IDypHero = () => {
             most powerful ecosystems in the world.
           </p>
         </div>
-        <div className="col-9 col-lg-3 position-relative d-lg-block d-xl-block d-none">
+        <div className="col-9 col-lg-3 position-relative d-lg-block d-xl-block d-none idyp-hero-images">
           <img
             className="idypcoin"
             src={require(`../../../assets/coin.png`)}
