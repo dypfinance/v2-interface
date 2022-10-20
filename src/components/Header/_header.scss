@@ -71,8 +71,8 @@
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: 12px;
-  left: 14px;
+  top: 13px;
+  left: 13px;
 }
 
 #hamburgermenu.open span:nth-child(2) {
@@ -95,7 +95,7 @@
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
   top: 30px;
-  left:14px;
+  left:13px;
 }
 
 .menu {
@@ -104,9 +104,10 @@
   right: 0;
   top: 0;
   z-index: 22;
-  border-radius: 8px;
-  transform: translateX(700px);
-  transition: all 0.25s ease-in;
+  width: 100%;
+  border-radius: 0px 0px 20px 20px;
+  transform: translateY(-700px);
+  transition: all 0.5s ease-in;
   ul li {
     list-style-type: none;
     margin: 8px;
@@ -129,8 +130,11 @@
 
 }
 
+
+
 .openMenu{
-  transform: translateX(-3px);
+  transform: translateY(70px);
+  box-shadow:0 0 0 10000px rgba(0,0,0,.50);
 }
 
 
@@ -139,5 +143,5 @@
 box-shadow: 0px 4px 12px rgba(82, 77, 209, 0.32);
 border-radius: 0px 0px 14px 0px;
 position: fixed;
-z-index: 5;
+z-index: 30;
 }

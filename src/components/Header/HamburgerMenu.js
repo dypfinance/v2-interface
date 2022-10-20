@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import dypiusIcon from "../../assets/dyptoolsIcon.svg";
 import OutsideClickHandler from "react-outside-click-handler";
 import toolsLogo from "../../assets/dypToolsLogo.svg";
@@ -8,6 +8,20 @@ import dypiusLogoPurple from "../../assets/dypius-purple.svg";
 
 const HamburgerMenu = () => {
   const [openMenu, setOpenMenu] = useState(false);
+
+
+  useEffect(() => {
+    if(openMenu === true){
+      document.body.classList.add('hidescroll')
+    } else{
+      document.body.classList.remove('hidescroll')
+
+    }
+
+  }, [openMenu])
+  
+
+
 
   return (
     <OutsideClickHandler
@@ -32,21 +46,8 @@ const HamburgerMenu = () => {
           <span></span>
         </div>
         </div>
-        {/* <div
-          id="hamburgermenu"
-          className={`d-block d-lg-none d-xl-none ${
-            openMenu && "hamburgermenu open"
-          }`}
-          onClick={() => {
-            setOpenMenu(!openMenu);
-          }}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div> */}
-        {/* <div
-          className={`col-8 bg-white d-flex d-lg-none d-xl-none justify-content-around align-items-center py-3 links menu ${
+        <div
+          className={`bg-white d-flex d-lg-none d-xl-none justify-content-around align-items-center py-3 links menu ${
             openMenu === true && "openMenu"
           }`}
         >
@@ -107,7 +108,7 @@ const HamburgerMenu = () => {
               </button>
             </li>
           </ul>
-        </div> */}
+        </div>
       </>{" "}
     </OutsideClickHandler>
   );
