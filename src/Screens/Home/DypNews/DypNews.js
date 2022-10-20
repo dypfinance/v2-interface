@@ -58,11 +58,12 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
   const [newsData, setNewsData] = useState([]);
 
   const fetchNews = async () => {
-    const url =  page === "news" ? `https://news-manage.dyp.finance/api/organics/all` : `https://news-manage.dyp.finance/api/announcements`;
+    const url =  page === "news" ? `https://news-manage.dyp.finance/api/organics/all` : `https://news-manage.dyp.finance/api/announcements/9`;
     await axios
       .get(url)
       .then((response) => {
         setNewsData(response.data);
+        console.log(response.data);
         console.log(url);
       })
       .catch((error) => console.error(error));
