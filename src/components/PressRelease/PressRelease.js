@@ -141,52 +141,51 @@ const PressRelease = () => {
             <tr>
               <td className="radius10 presscell"></td>
               <td className="presscell radius5">
-              <a
-                href="https://finance.yahoo.com/news/investors-defi-yield-protocol-earned-151500497.html"
-                target="_blank"
-                rel="noreferrer nofollow" 
-              >
-                <img src={require("./news/yahoo.png")} alt="" />
+                <a
+                  href="https://finance.yahoo.com/news/investors-defi-yield-protocol-earned-151500497.html"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/yahoo.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius10"></td>
               <td className="presscell radius2">
-              <a
-                href="https://www.marketwatch.com/press-release/dyp-protocol-launches-on-avalanche-and-introduces-new-nft-competition-2021-07-19?tesla=y"
-                target="_blank"
-                rel="noreferrer nofollow"
-                
-              >
-                <img src={require("./news/marketwatch.png")} alt="" />
+                <a
+                  href="https://www.marketwatch.com/press-release/dyp-protocol-launches-on-avalanche-and-introduces-new-nft-competition-2021-07-19?tesla=y"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/marketwatch.png")} alt="" />
                 </a>
               </td>
               <td className="radius4 presscell"></td>
               <td className="presscell radius10">
-              <a
-                href="https://apnews.com/press-release/accesswire/business-prices-deflation-economy-54076ee83d21025c63d8347c8accc1e2"
-                target="_blank"
-                rel="noreferrer nofollow" 
-              >
-                <img src={require("./news/apnews.png")} alt="" />
+                <a
+                  href="https://apnews.com/press-release/accesswire/business-prices-deflation-economy-54076ee83d21025c63d8347c8accc1e2"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/apnews.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
               <td className="presscell radius7">
-              <a
-                href="https://www.cryptofolds.com/defi-yield-protocol-dyp-staking-and-governance-is-now-live"
-                target="_blank"
-                rel="noreferrer nofollow" 
-              >
-                <img src={require("./news/cryptofold.png")} alt="" />
+                <a
+                  href="https://www.cryptofolds.com/defi-yield-protocol-dyp-staking-and-governance-is-now-live"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cryptofold.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius10">
-              <a
-                href="https://www.newsbtc.com/news/company/defi-yield-protocol-launches-staking-and-governance-dapp-dyp-holders-earn-ethereum/"
-                target="_blank"
-                rel="noreferrer nofollow" 
-              >
-                <img src={require("./news/newsbtc.png")} alt="" />
+                <a
+                  href="https://www.newsbtc.com/news/company/defi-yield-protocol-launches-staking-and-governance-dapp-dyp-holders-earn-ethereum/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/newsbtc.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -194,63 +193,62 @@ const PressRelease = () => {
               <td className="presscell radius1"></td>
 
               <td className="presscell radius7">
-              <a
-                href="https://hackernoon.com/5-defi-projects-you-should-know-about-in-2021-irq347a"
-                target="_blank"
-                rel="noreferrer nofollow" 
-              >
-                <img src={require("./news/hackernoon.png")} alt="" />
+                <a
+                  href="https://hackernoon.com/5-defi-projects-you-should-know-about-in-2021-irq347a"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/hackernoon.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
               <td className="radius10 presscell"></td>
               <td className="presscell radius5">
-              <a
-                href="https://finance.yahoo.com/news/investors-defi-yield-protocol-earned-151500497.html"
-                target="_blank"
-                rel="noreferrer nofollow" 
-              >
-                <img src={require("./news/yahoo.png")} alt="" />
+                <a
+                  href="https://finance.yahoo.com/news/investors-defi-yield-protocol-earned-151500497.html"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/yahoo.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius10"></td>
               <td className="presscell radius2">
-              <a
-                href="https://www.marketwatch.com/press-release/dyp-protocol-launches-on-avalanche-and-introduces-new-nft-competition-2021-07-19?tesla=y"
-                target="_blank"
-                rel="noreferrer nofollow"
-                
-              >
-                <img src={require("./news/marketwatch.png")} alt="" />
+                <a
+                  href="https://www.marketwatch.com/press-release/dyp-protocol-launches-on-avalanche-and-introduces-new-nft-competition-2021-07-19?tesla=y"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/marketwatch.png")} alt="" />
                 </a>
               </td>
               <td className="radius4 presscell"></td>
               <td className="presscell radius10">
-              <a
-                href="https://apnews.com/press-release/accesswire/business-prices-deflation-economy-54076ee83d21025c63d8347c8accc1e2"
-                target="_blank"
-                rel="noreferrer nofollow" 
-              >
-                <img src={require("./news/apnews.png")} alt="" />
+                <a
+                  href="https://apnews.com/press-release/accesswire/business-prices-deflation-economy-54076ee83d21025c63d8347c8accc1e2"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/apnews.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
               <td className="presscell radius7">
-              <a
-                href="https://www.cryptofolds.com/defi-yield-protocol-dyp-staking-and-governance-is-now-live"
-                target="_blank"
-                rel="noreferrer nofollow" 
-              >
-                <img src={require("./news/cryptofold.png")} alt="" />
+                <a
+                  href="https://www.cryptofolds.com/defi-yield-protocol-dyp-staking-and-governance-is-now-live"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cryptofold.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius10">
-              <a
-                href="https://www.newsbtc.com/news/company/defi-yield-protocol-launches-staking-and-governance-dapp-dyp-holders-earn-ethereum/"
-                target="_blank"
-                rel="noreferrer nofollow" 
-              >
-                <img src={require("./news/newsbtc.png")} alt="" />
+                <a
+                  href="https://www.newsbtc.com/news/company/defi-yield-protocol-launches-staking-and-governance-dapp-dyp-holders-earn-ethereum/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/newsbtc.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -258,35 +256,59 @@ const PressRelease = () => {
               <td className="presscell radius1"></td>
 
               <td className="presscell radius7">
-              <a
-                href="https://hackernoon.com/5-defi-projects-you-should-know-about-in-2021-irq347a"
-                target="_blank"
-                rel="noreferrer nofollow" 
-              >
-                <img src={require("./news/hackernoon.png")} alt="" />
+                <a
+                  href="https://hackernoon.com/5-defi-projects-you-should-know-about-in-2021-irq347a"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/hackernoon.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
             </tr>
             <tr>
               <td className="presscell radius1">
-                <img src={require("./news/blokonomi.png")} alt="" />
+                <a
+                  href="https://blockonomi.com/dyp-staking-app-binance-smart-chain/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/blokonomi.png")} alt="" />
+                </a>
               </td>
               <td className="radius10 presscell"></td>
               <td className="presscell radius1">
-                <img src={require("./news/techbullion.png")} alt="" />
+                <a
+                  href="https://techbullion.com/dyp-launches-staking-dapp-on-binance-smart-chain-bsc/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/techbullion.png")} alt="" />
+                </a>
               </td>
 
               <td className="presscell radius6"></td>
               <td className="radius1 presscell"></td>
               <td className="presscell radius4">
-                <img src={require("./news/utoday.png")} alt="" />
+                <a
+                  href="https://u.today/defi-yield-protocol-launches-staking-and-governance-dapp"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/utoday.png")} alt="" />
+                </a>
               </td>
 
               <td className="presscell radius7"></td>
 
               <td className="presscell radius1">
-                <img src={require("./news/cryptopress.png")} alt="" />
+                <a
+                  href="https://cryptopress.news/defi-yield-protocol-dyp-staking-and-governance-is-now-live/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cryptopress.png")} alt="" />
+                </a>
               </td>
               <td className="radius7 presscell"></td>
 
@@ -294,10 +316,22 @@ const PressRelease = () => {
                 <img src={require("./news/coinspeaker.png")} alt="" />
               </td>
               <td className="presscell radius1">
-                <img src={require("./news/cryptocompare.png")} alt="" />
+                <a
+                  href="https://www.cryptocompare.com/coins/guides/dypfinance-a-unique-yield-farming-platform/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cryptocompare.png")} alt="" />
+                </a>
               </td>
               <td className="presscell radius7">
-                <img src={require("./news/cointelegraph.png")} alt="" />
+                <a
+                  href="https://cointelegraph.com/news/yield-farming-platform-announces-it-s-expanding-to-avalanche"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cointelegraph.png")} alt="" />
+                </a>
               </td>
               <td className="radius1 presscell"></td>
 
@@ -306,23 +340,47 @@ const PressRelease = () => {
               </td>
 
               <td className="presscell radius1">
-                <img src={require("./news/blokonomi.png")} alt="" />
+                <a
+                  href="https://blockonomi.com/dyp-staking-app-binance-smart-chain/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/blokonomi.png")} alt="" />
+                </a>
               </td>
               <td className="radius10 presscell"></td>
               <td className="presscell radius1">
-                <img src={require("./news/techbullion.png")} alt="" />
+                <a
+                  href="https://techbullion.com/dyp-launches-staking-dapp-on-binance-smart-chain-bsc/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/techbullion.png")} alt="" />
+                </a>
               </td>
 
               <td className="presscell radius6"></td>
               <td className="radius1 presscell"></td>
               <td className="presscell radius4">
-                <img src={require("./news/utoday.png")} alt="" />
+                <a
+                  href="https://u.today/defi-yield-protocol-launches-staking-and-governance-dapp"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/utoday.png")} alt="" />
+                </a>
               </td>
 
               <td className="presscell radius7"></td>
 
               <td className="presscell radius1">
-                <img src={require("./news/cryptopress.png")} alt="" />
+                <a
+                  href="https://cryptopress.news/defi-yield-protocol-dyp-staking-and-governance-is-now-live/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cryptopress.png")} alt="" />
+                </a>
               </td>
               <td className="radius7 presscell"></td>
 
@@ -330,10 +388,22 @@ const PressRelease = () => {
                 <img src={require("./news/coinspeaker.png")} alt="" />
               </td>
               <td className="presscell radius1">
-                <img src={require("./news/cryptocompare.png")} alt="" />
+                <a
+                  href="https://www.cryptocompare.com/coins/guides/dypfinance-a-unique-yield-farming-platform/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cryptocompare.png")} alt="" />
+                </a>
               </td>
               <td className="presscell radius7">
-                <img src={require("./news/cointelegraph.png")} alt="" />
+                <a
+                  href="https://cointelegraph.com/news/yield-farming-platform-announces-it-s-expanding-to-avalanche"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cointelegraph.png")} alt="" />
+                </a>
               </td>
               <td className="radius1 presscell"></td>
 
@@ -348,17 +418,35 @@ const PressRelease = () => {
               <td className="radius1 presscell"></td>
 
               <td className="presscell radius6">
-                <img src={require("./news/coindex.png")} alt="" />
+                <a
+                  href="https://coincodex.com/article/11092/earn-compound-yields-on-binance-smart-chain-using-defi-yield-protocol-dyp/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/coindex.png")} alt="" />
+                </a>
               </td>
 
               <td className="presscell radius1"></td>
               <td className="presscell radius9">
-                <img src={require("./news/coindoo.png")} alt="" />
+                <a
+                  href="https://coindoo.com/dyp-maximizing-the-benefits-of-yield-farming-protocols/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/coindoo.png")} alt="" />
+                </a>
               </td>
 
               <td className="radius1 presscell"></td>
               <td className="presscell radius8">
-                <img src={require("./news/coinmanager.png")} alt="" />
+                <a
+                  href="https://btcmanager.com/defi-yield-protocol-dyp/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/coinmanager.png")} alt="" />
+                </a>
               </td>
               <td className="presscell radius1"></td>
 
@@ -366,7 +454,13 @@ const PressRelease = () => {
                 <img src={require("./news/bithumb.png")} alt="" />
               </td>
               <td className="presscell radius1">
-                <img src={require("./news/cryptopotato.png")} alt="" />
+                <a
+                  href="https://cryptopotato.com/tackling-volatility-issues-for-liquidity-providers-with-defi-yield-protocol-dyp/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cryptopotato.png")} alt="" />
+                </a>
               </td>
               <td className="presscell radius5"></td>
               <td className="presscell radius8"></td>
@@ -381,17 +475,35 @@ const PressRelease = () => {
               <td className="radius1 presscell"></td>
 
               <td className="presscell radius6">
-                <img src={require("./news/coindex.png")} alt="" />
+                <a
+                  href="https://coincodex.com/article/11092/earn-compound-yields-on-binance-smart-chain-using-defi-yield-protocol-dyp/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/coindex.png")} alt="" />
+                </a>
               </td>
 
               <td className="presscell radius1"></td>
               <td className="presscell radius9">
-                <img src={require("./news/coindoo.png")} alt="" />
+                <a
+                  href="https://coindoo.com/dyp-maximizing-the-benefits-of-yield-farming-protocols/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/coindoo.png")} alt="" />
+                </a>
               </td>
 
               <td className="radius1 presscell"></td>
               <td className="presscell radius8">
-                <img src={require("./news/coinmanager.png")} alt="" />
+                <a
+                  href="https://btcmanager.com/defi-yield-protocol-dyp/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/coinmanager.png")} alt="" />
+                </a>
               </td>
               <td className="presscell radius1"></td>
 
@@ -399,12 +511,24 @@ const PressRelease = () => {
                 <img src={require("./news/bithumb.png")} alt="" />
               </td>
               <td className="presscell radius1">
-                <img src={require("./news/cryptopotato.png")} alt="" />
+              <a
+                  href="https://cryptopotato.com/tackling-volatility-issues-for-liquidity-providers-with-defi-yield-protocol-dyp/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cryptopotato.png")} alt="" />
+                </a>
               </td>
               <td className="presscell radius5"></td>
               <td className="presscell radius8"></td>
               <td className="presscell radius1">
+              <a
+                href="https://coingape.com/how-to-use-dyp-to-earn-big-defi-rois/"
+                target="_blank"
+                rel="noreferrer nofollow"
+              >
                 <img src={require("./news/coingape.png")} alt="" />
+                </a>
               </td>
 
               <td className="presscell radius2"></td>
