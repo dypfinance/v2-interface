@@ -35,7 +35,7 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
