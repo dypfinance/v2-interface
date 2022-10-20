@@ -183,7 +183,7 @@ const ContactUs = () => {
         const send = await axios
           .post("https://api-mail.dyp.finance/api/business", data)
           .then(function (result) {
-            console.log(result.data);
+            
             return result.data;
           })
           .catch(function (error) {

@@ -107,12 +107,12 @@ const FAQ = () => {
 
 
   const searchFaq = async() => { 
-    console.log(searchString);
+    
     if(searchString.length >= 4){
       await axios.get(`https://news-manage.dyp.finance/api/faqs/search/${searchString}`).then((res) => {
         setFaqItems(res.data)
         setFaqTitle('')
-        console.log(res.data);
+        
       }).catch((err) => console.error(err))
     } else{
       setFaqItems([])
