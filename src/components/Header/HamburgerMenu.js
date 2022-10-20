@@ -8,6 +8,23 @@ import dypiusLogoPurple from "../../assets/dypius-purple.svg";
 
 const HamburgerMenu = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0)
+  const [show, setShow] = useState(false)
+  
+
+  const showNavbar = () => {
+
+    if(typeof window !== 'undefined'){
+      if(window.scrollY > lastScrollY){
+        setShow(true)
+      }else{
+        setShow(false)
+      }
+    }
+
+    setLastScrollY(window.scrollY)
+
+  }
 
 
   useEffect(() => {
@@ -20,7 +37,15 @@ const HamburgerMenu = () => {
 
   }, [openMenu])
   
-
+  useEffect(() => {
+    if(typeof window !== 'undefined'){
+     window.addEventListener('scroll', showNavbar)
+    }
+ 
+    return () => {
+     window.removeEventListener('scroll', showNavbar)
+    }
+   }, [lastScrollY])
 
 
   return (
@@ -30,8 +55,12 @@ const HamburgerMenu = () => {
       }}
     >
       <>
-      <div className="container-fluid mobile-navbar py-3 d-flex justify-content-between align-items-center d-lg-none">
+      <div className={`container-fluid mobile-navbar py-3 d-flex justify-content-between align-items-center d-lg-none ${show ? 'hide-nav' : ''}`}>
+          <NavLink
+          to='/'
+          >
           <img src={dypiusLogo} alt="" />
+          </NavLink>
           <div
           id="hamburgermenu"
           className={`d-block d-lg-none d-xl-none ${
