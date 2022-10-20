@@ -87,6 +87,7 @@ const FAQ = () => {
 
   const [faqItems, setFaqItems] = useState([]);
   const [faqTitle, setFaqTitle] = useState("");
+  const [searchString, setSearchString] = useState("")
 
   const fetchFaq = async (categoryId, categoryTitle) => {
     if (faqTitle === categoryTitle) {
@@ -102,6 +103,24 @@ const FAQ = () => {
         .catch((err) => console.error(err));
     }
   };
+
+  const handleChange = (e) => {
+    setSearchString(e.target.value)
+    console.log(searchString);
+    searchFaq()
+  }
+
+  const searchFaq = async() => { 
+    if(searchString.length >= 4){
+      await axios.get(`https://news-manage.dyp.finance/api/faqs/search/${searchString}`).then((res) => {
+        setFaqItems(res.data)
+        setFaqTitle('')
+        console.log(res.data);
+      }).catch((err) => console.error(err))
+    } 
+  }
+
+
 
   return (
     <div className="container-fluid faq-wrapper" id="faq">
@@ -124,6 +143,8 @@ const FAQ = () => {
                 id="outlined-search"
                 type="search"
                 label="Search"
+                value={searchString}
+                onChange={(e) => handleChange(e)}
                 size="small"
                 sx={{ width: "100%" }}
               />

@@ -121,7 +121,8 @@ const Navbar = () => {
           >
             Support
           </NavLink>
-          <Link
+          <NavLink
+          state={{link: 'navlink'}}
             className={({ isActive }) =>
               isActive
                 ? "text-decoration-none navlink highlight"
@@ -130,7 +131,7 @@ const Navbar = () => {
             to="/about#aboutmain"
           >
             About us
-          </Link>
+          </NavLink>
         </div>
         <div className="col-2 d-flex justify-content-end position-relative">
           <a

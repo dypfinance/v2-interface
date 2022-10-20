@@ -26,8 +26,7 @@ const OurTeam = () => {
 
   const windowSize = useWindowSize()
 
-  const [slice, setSlice] = useState(windowSize.width < 786 ? 3 : 4)
-
+  
   const bios = [
     {
       id: "mihai",
@@ -182,9 +181,12 @@ const OurTeam = () => {
    
   ];
 
+  const [slice, setSlice] = useState(3)
+
+
 
   const loadMore = () => {
-    windowSize.width < 786 ? setSlice(slice + 3) : setSlice(slice + 4)
+     setSlice(slice + 3)
   }
 
   return (
@@ -208,7 +210,8 @@ const OurTeam = () => {
         </div>
         <div className="row justify-content-center">
           <div className="team-container d-grid">
-            {bios.slice(0, slice).map((person, index) => (
+            {windowSize.width < 786 ?
+            bios.slice(0, slice).map((person, index) => (
               <TeamCard
                 key={index}
                 id={person.id}
@@ -218,11 +221,26 @@ const OurTeam = () => {
                 photo={person.photo}
                 link={person.link}
               />
-            ))}
+            ))
+            
+            :
+
+            bios.map((person, index) => (
+              <TeamCard
+                key={index}
+                id={person.id}
+                name={person.name}
+                position={person.position}
+                content={person.content}
+                photo={person.photo}
+                link={person.link}
+              />
+            ))
+          }
           </div>
         </div>
         <div className="row mt-4 w-100 justify-content-center">
-      <button className={`btn outline-btn ${slice >= bios.length ? 'd-none' : ''}`} onClick={loadMore} style={{zIndex: 5}}>Load More</button>
+      <button className={`btn outline-btn ${windowSize.width > 786 || slice >= bios.length ? 'd-none' : ''}`} onClick={loadMore} style={{zIndex: 5}}>Load More</button>
         </div>
       </div>
     </div>
