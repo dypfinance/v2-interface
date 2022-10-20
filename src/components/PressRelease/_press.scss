@@ -1,0 +1,97 @@
+.presstable {
+  padding: 20px;
+  width: fit-content;
+  margin: auto;
+  background: linear-gradient(
+    93.49deg,
+    #aaa5eb 0%,
+    #7770e0 22.98%,
+    #645edc 39.94%,
+    #7770e0 58.54%,
+    #554fd8 83.7%,
+    #aaa5eb 105.04%
+  );
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .pressbody {
+    border: 1px solid #aaa5eb;
+  }
+
+  .presscell {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f1ff;
+  }
+
+  tr {
+    display: flex;
+    justify-content: space-between;
+    gap: 1px;
+  }
+}
+
+.radius1 {
+  border-radius: 32px 0px;
+}
+
+.radius2 {
+  border-radius: 0px;
+}
+
+.radius3 {
+  border-radius: 0px 0px 32px 0px;
+}
+
+.radius4 {
+  border-radius: 32px 0px 0px 0px;
+}
+
+.radius5 {
+  border-radius: 32px 0px 32px 32px;
+}
+
+.radius6 {
+  border-radius: 0px 32px 32px 0px;
+}
+.radius7 {
+  border-radius: 32px 32px 0px 0px;
+}
+
+.radius8 {
+  border-radius: 32px 0px 0px 32px;
+}
+
+.radius9 {
+  border-radius: 0px 0px 32px 32px;
+}
+
+.radius10 {
+  border-radius: 32px 32px 32px 0px;
+}
+
+.leftbg {
+  background: #ffffff;
+  filter: blur(14px);
+  position: absolute;
+  left: 0;
+  width: 95px;
+  left: -45px;
+  height: 100%;
+}
+
+.rightbg {
+  width: 95px;
+  height: 100%;
+  background: #ffffff;
+  filter: blur(14px);
+  position: absolute;
+  right: -45px;
+  top: 0px;
+}

@@ -10,14 +10,11 @@
 }
 
 #hamburgermenu {
-  width: 50px;
-  height: 50px;
-  position: fixed;
+  width: 45px;
+  height: 45px;
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
   cursor: pointer;
-  border: 1px solid;
-  padding: 27px;
   border-radius: 8px;
   right: 12px;
     top: 12px;
@@ -31,10 +28,10 @@
   position: absolute;
   height: 2px;
   width: 55%;
-  background: #000000;
+  background: #534DD2;
   border-radius: 20px;
   opacity: 1;
-  left: 12px;
+  left: 10px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -46,7 +43,7 @@
 }
 
 #hamburgermenu span:nth-child(1) {
-  top: 19px;
+  top: 13px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -54,7 +51,7 @@
 }
 
 #hamburgermenu span:nth-child(2) {
-  top: 27px;
+  top: 21px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -62,7 +59,7 @@
 }
 
 #hamburgermenu span:nth-child(3) {
-  top: 35px;
+  top: 29px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -74,8 +71,8 @@
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: 14px;
-  left: 16px;
+  top: 13px;
+  left: 13px;
 }
 
 #hamburgermenu.open span:nth-child(2) {
@@ -84,7 +81,12 @@
 }
 
 #hamburgermenu.open {
- border: none;
+  border: 1px solid #F7F7FC;
+  background: inherit;
+
+  span{
+    background: #F7F7FC;
+  }
 }
 
 #hamburgermenu.open span:nth-child(3) {
@@ -92,8 +94,8 @@
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 35px;
-  left: 16px;
+  top: 30px;
+  left:13px;
 }
 
 .menu {
@@ -102,9 +104,10 @@
   right: 0;
   top: 0;
   z-index: 22;
-  border-radius: 8px;
-  transform: translateX(700px);
-  transition: all 0.25s ease-in;
+  width: 100%;
+  border-radius: 0px 0px 20px 20px;
+  transform: translateY(-700px);
+  transition: all 0.5s ease-in;
   ul li {
     list-style-type: none;
     margin: 8px;
@@ -127,6 +130,18 @@
 
 }
 
+
+
 .openMenu{
-  transform: translateX(-3px);
+  transform: translateY(70px);
+  box-shadow:0 0 0 10000px rgba(0,0,0,.50);
+}
+
+
+.mobile-navbar{
+  background: linear-gradient(304.92deg, #554FD8 24.56%, #7770E0 79.94%);
+box-shadow: 0px 4px 12px rgba(82, 77, 209, 0.32);
+border-radius: 0px 0px 14px 0px;
+position: fixed;
+z-index: 30;
 }

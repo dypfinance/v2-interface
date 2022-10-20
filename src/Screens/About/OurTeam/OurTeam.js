@@ -15,8 +15,19 @@ import bogdan from "../../../assets/team/const.png";
 import daniel from "../../../assets/team/daniel.jpg";
 import dinakar from "../../../assets/team/dinakar.jpg";
 import sheyn from "../../../assets/team/jubi.jpg";
+import gjata from '../../../assets/team/jgjata.jpg'
+import toni from '../../../assets/team/toni.jpg'
+import vlad from '../../../assets/team/vlad.jpg'
+import useWindowSize from "../../../hooks/useWindowSize";
+import { useState } from "react";
 
 const OurTeam = () => {
+
+
+  const windowSize = useWindowSize()
+
+  const [slice, setSlice] = useState(windowSize.width < 786 ? 3 : 4)
+
   const bios = [
     {
       id: "mihai",
@@ -73,17 +84,6 @@ const OurTeam = () => {
         "I'm a Software Developer driven to explore different solutions in order to deliver the best in a software product. After graduating in Software Enginnering I had the luck to discover DeFi and since then my life turned to a different new direction. I enjoy exploring different technologies in my free time, like React Native or Blender3D, as well as new music genres.",
     },
     {
-      id: "aldi",
-      name: "Aldi Alinj",
-      position: "React Developer",
-      photo: aldi,
-      content: `I am a passionate Software Developer mostly interested in Front End development. I consistently try to challenge 
-      myself with complex problems so I can grow professionally. During my free 
-      time I like going to the gym, watch a documentary or two about history or 
-      politics and generally enjoy going outdoors.`,
-      link: 'https://www.linkedin.com/in/aldi-alinj-97166b1ba/',
-    },
-    {
       id: "alexandra",
       name: "Chifor Alexandra",
       position: "Head of Marketing",
@@ -103,15 +103,6 @@ const OurTeam = () => {
                 “When the wind blows, some people build walls, others build windmills” - Gazmend`,
     },
     {
-      id: "bogdan",
-      name: "Constantin Bogdan",
-      position: "Marketing Manager",
-      photo: bogdan,
-      link: 'https://www.linkedin.com/in/bogdan-constantin-1105b7201/',
-      content:
-        "Constantin Bogdan graduated from the University of Bucharest in 2007 and he holds a Master in Human Resource Psychology. Bogdan has ten years of experience in enterprise in a variety of roles at startups, private companies, and ANOFM Bucharest including product management, product marketing, and sales management, and is the Marketing Manager for DeFi Yield Protocol.,",
-    },
-    {
       id: "daniel",
       name: "Daniel Garret",
       position: "Marketing &          Communications Manager",
@@ -120,6 +111,55 @@ const OurTeam = () => {
       content:
         "With 20 years of experience in Finance and Business Development, I have found my true passion in the Cryptocurrency and NFT marketplace. I've been involved in Cryptocurrency since 2015 and have been collecting and selling NFT's for the last year. I love art, technology, finance and entrepreneurship so when I was introduced to the DYP team it felt like a dream come true. In my spare time I enjoy nature and spending time with my wife and my dog.  I am excited about the opportunities that DYP offers and I truly believe in our Cats and Watches Society NFT. I look forward to help grow the discord community into something uniquely special where our members can feel welcome, safe and rewarded for being part in this new, exciting, and growing space. With rapid change comes great opportunity - Daniel,",
     },
+    {
+      id: "toni",
+      name: "Renato Toni",
+      position: "Technical Lead |                      Unity Game Developer",
+      photo: toni,
+      link: "https://www.linkedin.com/in/renato-toni-92417193/",
+      content:
+        "I'm a game developer who has a strong interest in the Metaverse. I became interested in video games and computer programming since high school. I have a strong interest in the metaverse and work hard to give users engaging and participatory experiences. I put a lot of effort into my work and continuously try to push the limits of what is feasible. I work hard to keep on top of industry advancements while continuously picking up new skills. I also strongly believe in working together with others to produce the finest possible product, and I always try to do that.",
+    },
+    {
+      id: "aldi",
+      name: "Aldi Alinj",
+      position: "React Developer",
+      photo: aldi,
+      content: `I am a passionate Software Developer mostly interested in Front End development. I consistently try to challenge 
+      myself with complex problems so I can grow professionally. During my free 
+      time I like going to the gym, watch a documentary or two about history or 
+      politics and generally enjoy going outdoors.`,
+      link: 'https://www.linkedin.com/in/aldi-alinj-97166b1ba/',
+    },
+    {
+      id: "gjata",
+      name: "Fatjon Gjata",
+      position: "Metaverse Expert",
+      photo: gjata,
+      link: "https://www.linkedin.com/in/fatjon-gjata/",
+      content:
+        "I have several years of experience in the game business and am a Metaverse Expert. I acquired a great affinity for Unity, a game engine that enables you to make 3D games, as a result of my keen interest in the metaverse and how it can be utilized to provide immersive experiences for gamers. I work diligently and make it a point to develop my abilities. My ability to work well in a team and like collaborating with others to produce the finest possible results is one of my stronger traits. I'm excited to continue working in the video game business and putting my talents to use in making incredible experiences for players.",
+    },
+    {
+      id: "vlad",
+      name: "Vlad Stefan",
+      position: "Content Manager",
+      photo: vlad,
+      link: "https://www.linkedin.com/in/vlad-stefan-874124164/",
+      content:
+        "A crypto enthusiast and a passionate content creator, responsible for developing, planning and implementing DYP's content strategy. Managing the creation and production of marketing materials online but also offline.",
+    },
+   
+    {
+      id: "bogdan",
+      name: "Constantin Bogdan",
+      position: "Marketing Manager",
+      photo: bogdan,
+      link: 'https://www.linkedin.com/in/bogdan-constantin-1105b7201/',
+      content:
+        "Constantin Bogdan graduated from the University of Bucharest in 2007 and he holds a Master in Human Resource Psychology. Bogdan has ten years of experience in enterprise in a variety of roles at startups, private companies, and ANOFM Bucharest including product management, product marketing, and sales management, and is the Marketing Manager for DeFi Yield Protocol.,",
+    },
+    
     {
       id: "dinakar",
       name: "Dinakar Kodati",
@@ -138,12 +178,19 @@ const OurTeam = () => {
       content:
         "I discovered Cryptocurrency back in 2017 when bounty campaign from Bitcointalk.org is the crypto marketing trend. I saw that there is a future on digital assets and I believe that it is the future so I decided to learn more and did some trading. I started to work as bounty campaign manager and community manager for several projects since 2019. I offered a bounty campaign to Sir Mihai for DeFi Yield Protocol during the ICO and managed it then He assigned me as a telegram and discord moderator after the campaign ended. My aim as a moderator is to assist the community with every query they bring and ensure to convey the right answer. I believe that a better communication is crucial for building a solid community. I am grateful to be a part and looking forward for DeFi Yield Protocol to achieve a successfully complete DeFi ecosystem.",
     },
+   
+   
   ];
+
+
+  const loadMore = () => {
+    windowSize.width < 786 ? setSlice(slice + 3) : setSlice(slice + 4)
+  }
 
   return (
     <div className="container-fluid our-team my-5 px-0" id="ourteam">
       <div className="our-team-background"></div>
-      <div className="container-lg d-flex flex-column mt-5">
+      <div className="container-lg d-flex flex-column align-items-center mt-5">
         <div className="row justify-content-center align-items-center">
           <div className="col-12 col-lg-6">
             <Title
@@ -161,7 +208,7 @@ const OurTeam = () => {
         </div>
         <div className="row justify-content-center">
           <div className="team-container d-grid">
-            {bios.map((person, index) => (
+            {bios.slice(0, slice).map((person, index) => (
               <TeamCard
                 key={index}
                 id={person.id}
@@ -173,6 +220,9 @@ const OurTeam = () => {
               />
             ))}
           </div>
+        </div>
+        <div className="row mt-4 w-100 justify-content-center">
+      <button className={`btn outline-btn ${slice >= bios.length ? 'd-none' : ''}`} onClick={loadMore} style={{zIndex: 5}}>Load More</button>
         </div>
       </div>
     </div>

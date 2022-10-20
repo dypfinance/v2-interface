@@ -35,6 +35,10 @@
   font-family: "Poppins", sans-serif !important;
 }
 
+.MuiFormHelperText-root{
+  color: #d32f2f !important;
+}
+
 .filled-btn {
   color: #f7f7fc;
   background: linear-gradient(to left, #7770E0, #3E3AA5, #554FD8, #7770E0);
@@ -114,3 +118,7 @@ border-radius: 56px 0px;
   border-bottom: none !important;
 }
 
+
+.hidescroll{
+  overflow: hidden;
+}

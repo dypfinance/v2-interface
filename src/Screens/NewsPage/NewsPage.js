@@ -3,6 +3,7 @@ import "./_newspage.scss";
 import { useLocation } from "react-router-dom";
 import DypNews from "../Home/DypNews/DypNews";
 import LatestUpdates from "./LatestUpdates/LatestUpdates";
+import PressRelease from "../../components/PressRelease/PressRelease";
 
 
 const NewsPage = () => {
@@ -25,6 +26,7 @@ const NewsPage = () => {
       <LatestUpdates
         type={data.state?.newsType ? data.state.newsType : "announcements"}
       />
+      <PressRelease/>
     </div>
   );
 };

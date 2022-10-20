@@ -4,18 +4,33 @@ import dypiusLogoPurple from "../../assets/dypius-purple.svg";
 import toolsLogo from "../../assets/dypToolsLogo.svg";
 import toolsBorder from "../../assets/toolsBorder.svg";
 import { NavLink } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import "./_navbar.scss";
+import { useEffect } from "react";
 
 const Navbar = () => {
-  const [opacity, setOpacity] = useState(false);
+
+
+  const [lastScrollY, setLastScrollY] = useState(0)
+  const [show, setShow] = useState(false);
   const [logo, setLogo] = useState(false);
 
   const changeBackground = () => {
     if (window.scrollY >= 75) {
-      setOpacity(true);
+      setShow(true);
     } else {
-      setOpacity(false);
+      setShow(false);
     }
+
+    if(typeof window !== 'undefined'){
+      if(window.scrollY > lastScrollY){
+        setShow(true)
+      }else{
+        setShow(false)
+      }
+    }
+
+    setLastScrollY(window.scrollY)
 
     if (window.location.href.includes("dyp") && !window.location.href.includes("dyp")) {
       if (window.scrollY >= 500) {
@@ -40,15 +55,27 @@ const Navbar = () => {
       }
     }
   };
+
+
+  useEffect(() => {
+   if(typeof window !== 'undefined'){
+    window.addEventListener('scroll', changeBackground)
+   }
+
+   return () => {
+    window.removeEventListener('scroll', changeBackground)
+   }
+  }, [lastScrollY])
   
-  window.addEventListener("scroll", changeBackground);
-  window.addEventListener("click", changeBackground);
+  
+  // window.addEventListener("scroll", changeBackground);
+  // window.addEventListener("click", changeBackground);
 
 
   return (
     <div
       className={`container-fluid  d-none d-lg-flex page-navigation ${
-        opacity ? "opacity" : null
+        show ? "opacity" : null
       }`}
     >
       <div
@@ -94,16 +121,16 @@ const Navbar = () => {
           >
             Support
           </NavLink>
-          <NavLink
+          <Link
             className={({ isActive }) =>
               isActive
                 ? "text-decoration-none navlink highlight"
                 : "text-decoration-none navlink"
             }
-            to="/about"
+            to="/about#aboutmain"
           >
             About us
-          </NavLink>
+          </Link>
         </div>
         <div className="col-2 d-flex justify-content-end position-relative">
           <a

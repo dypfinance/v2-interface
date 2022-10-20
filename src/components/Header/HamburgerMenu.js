@@ -1,11 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import dypiusIcon from "../../assets/dyptoolsIcon.svg";
 import OutsideClickHandler from "react-outside-click-handler";
 import toolsLogo from "../../assets/dypToolsLogo.svg";
 import { NavLink } from "react-router-dom";
+import dypiusLogo from "../../assets/dypiusLogo.svg";
+import dypiusLogoPurple from "../../assets/dypius-purple.svg";
 
 const HamburgerMenu = () => {
   const [openMenu, setOpenMenu] = useState(false);
+
+
+  useEffect(() => {
+    if(openMenu === true){
+      document.body.classList.add('hidescroll')
+    } else{
+      document.body.classList.remove('hidescroll')
+
+    }
+
+  }, [openMenu])
+  
+
+
 
   return (
     <OutsideClickHandler
@@ -14,7 +30,9 @@ const HamburgerMenu = () => {
       }}
     >
       <>
-        <div
+      <div className="container-fluid mobile-navbar py-3 d-flex justify-content-between align-items-center d-lg-none">
+          <img src={dypiusLogo} alt="" />
+          <div
           id="hamburgermenu"
           className={`d-block d-lg-none d-xl-none ${
             openMenu && "hamburgermenu open"
@@ -27,8 +45,9 @@ const HamburgerMenu = () => {
           <span></span>
           <span></span>
         </div>
+        </div>
         <div
-          className={`col-8 bg-white d-flex d-lg-none d-xl-none justify-content-around align-items-center py-3 links menu ${
+          className={`bg-white d-flex d-lg-none d-xl-none justify-content-around align-items-center py-3 links menu ${
             openMenu === true && "openMenu"
           }`}
         >

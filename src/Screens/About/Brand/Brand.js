@@ -2,7 +2,10 @@ import React from "react";
 import Title from "../../../components/Title/Title";
 import pasteimg from "../assets/paste-icon.svg";
 import DotFrame from "../../../assets/DypAssets/dotFrame.svg";
-import ring from '../../../assets/tokenCircle.png'
+import ring from '../../../assets/tokenCircle.png';
+import mediaKit from '../assets/mediaKit.svg'
+import pitchDeck from '../assets/pitchDeck.svg'
+
 
 const Brand = () => {
   return (
@@ -26,12 +29,9 @@ const Brand = () => {
                 style={{ zIndex: "-1", bottom: "-100px" }}
               />
 
-              <img
-                src={pasteimg}
-                alt=""
-                className="pl-0 mb-3"
-                style={{ width: 80 }}
-              />
+              <div className="brand-icon mb-3">
+                <img src={mediaKit} alt="" />
+              </div>
               <a  href="https://drive.google.com/drive/folders/1Sh77agasJV4iYn3xU25JS3phIIVBGeZg" target={'_blank'} rel='noreferrer' className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4">
                 Download
                 <svg
@@ -62,12 +62,9 @@ const Brand = () => {
           </div>
           <div className="col-lg-5 col-xl-5 branditem">
             <div className="row m-0 justify-content-between gap-3 align-items-center">
-              <img
-                src={pasteimg}
-                alt=""
-                className="pl-0 mb-3"
-                style={{ width: 80 }}
-              />
+            <div className="brand-icon mb-3">
+                <img src={pitchDeck} alt="" />
+              </div>
               <a href="https://drive.google.com/drive/folders/1PprliiDlNB6Cx-35eaEun-gmjk0-a1O4" target={'_blank'} rel='noreferrer' className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4">
                 Download
                 <svg
