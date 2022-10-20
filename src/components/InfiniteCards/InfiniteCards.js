@@ -30,7 +30,7 @@ const Card = ({
     <CoinCard
       title={card.title}
       stakeAmount={card.stake}
-      description="Earn rewards by securely depositing your assets into the staking smart contract"
+      description={card.description}
     />
   </motion.div>
 );
@@ -40,7 +40,7 @@ const InfiniteCards = () => {
       title: "Dypius Vault",
       stake: "20%",
       description:
-        "Earn rewards by securely depositing your assets into the staking smart contract",
+        "Earn rewards by securely depositing your assets into the vault smart contract",
     },
     {
       title: "Dypius Stake",
@@ -52,7 +52,7 @@ const InfiniteCards = () => {
       title: "Dypius Farm",
       stake: "80%",
       description:
-        "Earn rewards by securely depositing your assets into the staking smart contract",
+        "Earn rewards by securely depositing your assets into the farming smart contract",
     },
   ]);
   const [dragStart, setDragStart] = useState({

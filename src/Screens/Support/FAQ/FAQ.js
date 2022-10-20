@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Title from "../../../components/Title/Title";
 import { TextField } from "@mui/material";
@@ -88,6 +88,7 @@ const FAQ = () => {
   const [faqItems, setFaqItems] = useState([]);
   const [faqTitle, setFaqTitle] = useState("");
   const [searchString, setSearchString] = useState("")
+  const search = useRef()
 
   const fetchFaq = async (categoryId, categoryTitle) => {
     if (faqTitle === categoryTitle) {
@@ -104,21 +105,28 @@ const FAQ = () => {
     }
   };
 
-  const handleChange = (e) => {
-    setSearchString(e.target.value)
-    console.log(searchString);
-    searchFaq()
-  }
 
   const searchFaq = async() => { 
+    console.log(searchString);
     if(searchString.length >= 4){
       await axios.get(`https://news-manage.dyp.finance/api/faqs/search/${searchString}`).then((res) => {
         setFaqItems(res.data)
         setFaqTitle('')
         console.log(res.data);
       }).catch((err) => console.error(err))
-    } 
+    } else{
+      setFaqItems([])
+    }
   }
+
+  useEffect(() => {
+   
+    searchFaq()
+
+  }, [searchString])
+  
+
+
 
 
 
@@ -138,13 +146,14 @@ const FAQ = () => {
         <div className="categories-container px-0 p-5 w-100 position-relative">
           <img src={sphere} alt="" className="faq-sphere d-none d-lg-flex" />
           <div className="row align-items-center justify-content-center ">
-            <div className=" search-container d-flex justify-content-center align-items-center w-50">
+            <div className=" search-container d-flex justify-content-center align-items-center px-4 w-50">
               <StyledTextField
                 id="outlined-search"
                 type="search"
                 label="Search"
                 value={searchString}
-                onChange={(e) => handleChange(e)}
+                ref={search}
+                onChange={(e) => setSearchString(e.target.value)}
                 size="small"
                 sx={{ width: "100%" }}
               />

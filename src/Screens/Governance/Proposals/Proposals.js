@@ -112,7 +112,7 @@ const settings = {
                 <span className="proposal-span" />
             <div className="row justify-content-between align-items-center mb-4">
               <h4 className="mb-0" style={{ color: "#554FD8", fontSize: '20px' }}>Recent proposals</h4>
-              <p className="active-pools mb-0">Active</p>
+              <p className="active-pools mb-0">9 Active</p>
             </div>
             <div className="row recents-container">
                 <Slider {...settings}>
