@@ -80,10 +80,10 @@
   background: #ffffff;
   filter: blur(14px);
   position: absolute;
-  left: 0;
   width: 95px;
   left: -45px;
   height: 100%;
+  z-index: 3;
 }
 
 .rightbg {
@@ -92,6 +92,30 @@
   background: #ffffff;
   filter: blur(14px);
   position: absolute;
-  right: -45px;
+  right: -55px;
   top: 0px;
+  z-index: 4;
+}
+
+@-webkit-keyframes moveSlideshow {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes moveSlideshow {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.pressbody  {
+  height: 100%;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  transform: translate3d(0, 0, 0);
+  -webkit-animation: moveSlideshow 300s linear infinite;
+  animation: moveSlideshow 300s linear infinite;
 }
