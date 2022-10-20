@@ -1,6 +1,7 @@
 .presstable {
   padding: 20px;
-  width: 100%;
+  width: fit-content;
+  margin: auto;
   background: linear-gradient(
     93.49deg,
     #aaa5eb 0%,
@@ -12,58 +13,85 @@
   );
 
   img {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .pressbody {
+    border: 1px solid #aaa5eb;
   }
 
   .presscell {
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F2F1FF;
+    background-color: #f2f1ff;
   }
 
   tr {
     display: flex;
     justify-content: space-between;
+    gap: 1px;
   }
+}
 
-  tr:first-child {
-    td:nth-child(odd) {
-        border-radius: 32px 0px;
-    }
-    td:nth-child(even) {
-        border-radius: 0px 32px 0px 32px;
-    }
-  }
+.radius1 {
+  border-radius: 32px 0px;
+}
 
-  tr:nth-child(2) {
-    td:nth-child(even) {
-        border-radius: 32px 32px 0px 32px;
-    }
-    td:nth-child(odd) {
-        border-radius: 32px 0px 32px 32px;
-    }
-  }
+.radius2 {
+  border-radius: 0px;
+}
 
-  tr:nth-child(3) {
-    td:nth-child(odd) {
-        border-radius: 32px 32px 32px 0px;
-    }
-    td:nth-child(even) {
-        border-radius: 32px 32px 0px 32px;
-    }
-  }
+.radius3 {
+  border-radius: 0px 0px 32px 0px;
+}
 
-  tr:nth-child(4) {
-    td:nth-child(even) {
-        border-radius:  32px 32px 32px 0px;
-    }
-    td:nth-child(odd) {
-        border-radius: 0px 32px 32px 32px;
-    }
-  }
+.radius4 {
+  border-radius: 32px 0px 0px 0px;
+}
 
+.radius5 {
+  border-radius: 32px 0px 32px 32px;
+}
+
+.radius6 {
+  border-radius: 0px 32px 32px 0px;
+}
+.radius7 {
+  border-radius: 32px 32px 0px 0px;
+}
+
+.radius8 {
+  border-radius: 32px 0px 0px 32px;
+}
+
+.radius9 {
+  border-radius: 0px 0px 32px 32px;
+}
+
+.radius10 {
+  border-radius: 32px 32px 32px 0px;
+}
+
+.leftbg {
+  background: #ffffff;
+  filter: blur(14px);
+  position: absolute;
+  left: 0;
+  width: 95px;
+  left: -45px;
+  height: 100%;
+}
+
+.rightbg {
+  width: 95px;
+  height: 100%;
+  background: #ffffff;
+  filter: blur(14px);
+  position: absolute;
+  right: -45px;
+  top: 0px;
 }
