@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
 import Success from "../../../components/Success/Success";
-import { Tooltip } from 'bootstrap'
-import { useEffect } from "react";
+
+
 
 const SupportedWallets = () => {
   const wallets = [
@@ -44,12 +44,7 @@ const SupportedWallets = () => {
     }, 2000);
   };
 
-useEffect(()=>{
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new Tooltip(tooltipTriggerEl)
-    })
-}, [])
+  
 
 
   return (
