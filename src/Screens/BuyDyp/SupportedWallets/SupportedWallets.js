@@ -1,6 +1,9 @@
-import React, {useState} from "react";
-import {shortAddress } from '../../../hooks/shortAddress'
+import React, { useState } from "react";
+import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
+import Success from "../../../components/Success/Success";
+import { Tooltip } from 'bootstrap'
+import { useEffect } from "react";
 
 const SupportedWallets = () => {
   const wallets = [
@@ -26,40 +29,74 @@ const SupportedWallets = () => {
     },
   ];
 
-
   const windowSize = useWindowSize();
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  const handleCopy = (address) => {
+    navigator.clipboard.writeText(address);
+    setCopied(true);
+    setVisible(true);
+
+    setTimeout(() => {
+      setVisible(false);
+      setCopied(false);
+    }, 2000);
+  };
+
+useEffect(()=>{
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new Tooltip(tooltipTriggerEl)
+    })
+}, [])
+
 
   return (
     <div className="supportedwallet-wrapper container-lg mt-5 mb-5">
       <div>
         <div className="row ml-0 mr-0 gap-lg-3 gap-xl-3 gap-md-3 gap-0  justify-content-lg-between justify-content-xl-between justify-content-md-between justify-content-end mb-xl-0 mb-lg-0 mb-2  align-items-center">
-          <h1>Supported wallets</h1>
+          <h1>Supported wallets</h1> 
           <div>
             <div className="row ml-0 mr-0 gap-2 align-items-center">
               <div className="d-flex flex-column dypaddr-wrapper ">
                 <span className="dypcontractaddr">
                   DYP Contract Address (Ethereum, BNB Chain, Avalanche):
+                  <span
+                    data-toggle="tooltip"
+                    data-placement="right"
+                    title="Hooray!"
+                  >
+                    Right
+                  </span>
                 </span>
                 <span className="contractaddr">
                   {windowSize.width < 526
-                      ? shortAddress(
-                          "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
-                        )
-                      : "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"}
+                    ? shortAddress("0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17")
+                    : "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"}
                   <img
                     src={require("../assets/copy.svg").default}
                     alt=""
                     className="ml-2"
-                    style={{ cursor: "pointer", display: copied === true ? 'none' : '' }}
+                    style={{
+                      cursor: "pointer",
+                      display: copied === true ? "none" : "",
+                    }}
                     onClick={() => {
-                      navigator.clipboard.writeText(
-                        "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
-                      );
-                      setCopied(true)
+                      handleCopy("0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17");
                     }}
                   />
-                  {copied === true && <span className="copiedtxt" style={{color: '#fff'}}>Copied!</span>}
+                  {copied === true && (
+                    <span
+                      class="d-inline-block"
+                      tabindex="0"
+                      data-toggle="tooltip"
+                      title="Copied"
+                      data-placement="top"
+                    >
+                      <Success svgColor={"#544ED5"} bgColor={"#FFF"} />
+                    </span>
+                  )}
                 </span>
               </div>
             </div>

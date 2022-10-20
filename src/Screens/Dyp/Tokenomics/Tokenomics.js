@@ -8,7 +8,8 @@ import PurpleArrowDown from "../../../assets/DypAssets/purpleArrow-down.svg";
 import WhiteArrowUp from "../../../assets/DypAssets/whiteArrow-up.svg";
 import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
-import tokenomicsIcon from '../../../assets/tokenomicsIcon.svg'
+import tokenomicsIcon from "../../../assets/tokenomicsIcon.svg";
+import Success from "../../../components/Success/Success";
 
 const Tokenomics = ({ bottom, showBtn, isDyp }) => {
   const [tokenomicData, setTokenomicData] = useState("dyp");
@@ -32,16 +33,28 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
   }, [isDyp]);
 
   const windowSize = useWindowSize();
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  const handleCopy = (address) => {
+    navigator.clipboard.writeText(address);
+    setCopied(true);
+    setVisible(true);
+
+    setTimeout(() => {
+      setVisible(false);
+      setCopied(false);
+    }, 2000);
+  };
 
   return (
     <div className="outer-wrapper" id="tokenomics" style={{ bottom: bottom }}>
       <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
         <div className="row m-0 align-items-center justify-content-center gap-2 pl-0">
           <div className="tokenomics-icon d-flex justify-content-center align-items-center">
-          <img src={tokenomicsIcon} alt="" />
+            <img src={tokenomicsIcon} alt="" />
           </div>
-          <Title top={ isDyp === true ? "Tokenomics" : 'iDYP Tokenomics'} />
+          <Title top={isDyp === true ? "Tokenomics" : "iDYP Tokenomics"} />
         </div>
         <div className="row m-0 gap-4 pl-0 col-lg-3 col-xl-3 align-items-center justify-content-end">
           <button
@@ -119,15 +132,26 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                       src={Clipboard}
                       alt=""
                       onClick={() => {
-                        navigator.clipboard.writeText(
+                        handleCopy(
                           "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
                         );
-                        setCopied(true)
                       }}
-                      style={{ cursor: "pointer", display: copied === true ? 'none' : '' }}
+                      style={{
+                        cursor: "pointer",
+                        display: copied === true ? "none" : "",
+                      }}
                     />
-                  {copied === true && <span className="copiedtxt">Copied!</span>}
-
+                    {copied === true && (
+                      <span
+                        class="d-inline-block"
+                        tabindex="0"
+                        data-toggle="tooltip"
+                        title="Copied"
+                        data-placement="top" 
+                      >
+                        <Success bgColor={'#544ED5'} svgColor={'#FFF'}/>
+                      </span>
+                    )}
                   </span>
                 </div>
                 <div className="mininginfo-wrapper ">
@@ -400,25 +424,36 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                     iDYP Contract Address:
                   </span>
                   <span className="dypcontract-addr">
-                  {windowSize.width < 526
+                    {windowSize.width < 526
                       ? shortAddress(
                           "0xbd100d061e120b2c67a24453cf6368e63f1be056"
                         )
                       : "0xbd100d061e120b2c67a24453cf6368e63f1be056"}
-                   
+
                     <img
                       src={Clipboard}
                       alt=""
                       onClick={() => {
-                        navigator.clipboard.writeText(
+                        handleCopy(
                           "0xbd100d061e120b2c67a24453cf6368e63f1be056"
                         );
-                      setCopied(true)
-
                       }}
-                      style={{ cursor: "pointer", display: copied === true ? 'none' : '' }}
+                      style={{
+                        cursor: "pointer",
+                        display: copied === true ? "none" : "",
+                      }}
                     />
-                     {copied === true && <span className="copiedtxt" >Copied!</span>}
+                     {copied === true && (
+                      <span
+                        class="d-inline-block"
+                        tabindex="0"
+                        data-toggle="tooltip"
+                        title="Copied"
+                        data-placement="top"
+                      >
+                        <Success bgColor={'#544ED5'} svgColor={'#FFF'}/>
+                      </span>
+                    )}
                   </span>
                 </div>
                 <div className="mininginfo-wrapper ">

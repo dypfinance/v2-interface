@@ -5,7 +5,6 @@ import DypNews from "../Home/DypNews/DypNews";
 import LatestUpdates from "./LatestUpdates/LatestUpdates";
 import PressRelease from "../../components/PressRelease/PressRelease";
 
-
 const NewsPage = () => {
   const data = useLocation();
   useEffect(() => {
@@ -26,7 +25,7 @@ const NewsPage = () => {
       <LatestUpdates
         type={data.state?.newsType ? data.state.newsType : "announcements"}
       />
-      <PressRelease/>
+      <PressRelease />
     </div>
   );
 };
