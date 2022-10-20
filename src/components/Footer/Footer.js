@@ -126,7 +126,7 @@ const Footer = () => {
     },
     {
       title: "Press",
-      link: "#",
+      link: "/news#press",
     },
   ];
 
