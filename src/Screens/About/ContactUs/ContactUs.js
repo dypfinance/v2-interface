@@ -137,6 +137,7 @@ const ContactUs = () => {
   const onFileChange = (event) => {
     const fileTypes = [
       "image/jpg",
+      "image/jpeg",
       "image/png",
       "application/pdf",
       "application/vnd.openxmlformats-officedocument.wordprocessingml.doc",

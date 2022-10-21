@@ -94,7 +94,10 @@
       display: grid;
       grid-template-columns: auto;
       position: absolute;
-      top: 50px;  
+      top: 50px; 
+      @media screen and (max-width: 786px) {
+        width: 100% !important;
+      } 
 
       .search-item{
         cursor: pointer;

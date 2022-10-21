@@ -13,10 +13,10 @@ const FormContainer = ({onClick, accordionState, children, title, desc, collapse
               alt=""
               className="position-absolute phone-image"
             />
-            <div className="row w-100 justify-content-end" style={{height: '110px'}}>
+            <div className="row justify-content-end" style={{height: '110px'}}>
               <button
                 onClick={onClick}
-                className={`btn ${accordionState ? 'outline-btn' : 'filled-btn'} d-flex align-items-center gap-2`}
+                className={`btn ${accordionState ? 'outline-btn' : 'filled-btn'} d-flex align-items-center gap-2 form-button`}
                 data-bs-toggle="collapse"
                 data-bs-target={`#${collapse}`}
                 aria-expanded="true"

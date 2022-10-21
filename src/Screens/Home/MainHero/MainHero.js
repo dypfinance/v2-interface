@@ -11,7 +11,7 @@ const MainHero = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 2000,
     autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,

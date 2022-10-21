@@ -35,6 +35,16 @@
                 object-fit: cover;
             }
 
+           .title-container{
+
+            .accordion-toggler{
+                transition: all .25s;
+            }
+
+            .rotate{
+                transform: rotate(180deg);
+            }
+           }
            
         }
         

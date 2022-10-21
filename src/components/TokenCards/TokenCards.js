@@ -16,7 +16,7 @@ const TokenCards = ({ title, price, percentage }) => {
                 color: parseFloat(percentage) > 0 ? "#75cac2" : "#E07070",
               }}
             >
-              Value change
+              Value change (24h)
             </span>
             <div
               className="tokenpercentage d-flex gap-2 align-items-center"
