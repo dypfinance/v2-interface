@@ -153,9 +153,9 @@ const [partnersLength, setPartnersLength] = useState(12)
           data-aos-duration="1000"
         >
           {partnersArray.slice(0, partnersLength).map((partner, index) => (
-            <a href={partner.href} target="_blank">
+            <a href={partner.href} target="_blank"  key={index}>
               <div
-                key={index}
+              
                 className="partner_wrapper d-flex flex-column align-items-center justify-content-center"
               >
                 <img src={`/PartnerIcons/${partner.image}`} alt="" />

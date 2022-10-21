@@ -62,7 +62,7 @@ const SupportedAssets = () => {
               </p>
 
               <div
-                class="coins d-flex justify-content-between align-items-center"
+                className="coins d-flex justify-content-between align-items-center"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
