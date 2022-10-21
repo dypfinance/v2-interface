@@ -32,7 +32,7 @@ const useForm = (validate) => {
         e.preventDefault();
 
 
-        console.log(e);
+        
         setErrors(validate(values));
         setIsSubmitting(true);
     };

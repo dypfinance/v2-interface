@@ -8,20 +8,44 @@ import dypiusLogoPurple from "../../assets/dypius-purple.svg";
 
 const HamburgerMenu = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [show, setShow] = useState(false);
 
-
-  useEffect(() => {
-    if(openMenu === true){
-      document.body.classList.add('hidescroll')
-    } else{
-      document.body.classList.remove('hidescroll')
-
+  const showNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
     }
 
-  }, [openMenu])
-  
+    setLastScrollY(window.scrollY);
+  };
 
+  const bgmenu = document.querySelector("#bgmenu");
+  const body = document.querySelector("body");
 
+  useEffect(() => {
+    if (openMenu === true) {
+      body.style.pointerEvents = "none";
+      bgmenu.style.pointerEvents = "auto";
+    } else {
+      // Enable scroll
+      body.style.overflow = "auto";
+      body.style.pointerEvents = "auto";
+    }
+  }, [openMenu]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", showNavbar);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", showNavbar);
+    };
+  }, [lastScrollY]);
 
   return (
     <OutsideClickHandler
@@ -30,23 +54,30 @@ const HamburgerMenu = () => {
       }}
     >
       <>
-      <div className="container-fluid mobile-navbar py-3 d-flex justify-content-between align-items-center d-lg-none">
-          <img src={dypiusLogo} alt="" />
-          <div
-          id="hamburgermenu"
-          className={`d-block d-lg-none d-xl-none ${
-            openMenu && "hamburgermenu open"
+        <div
+          className={`container-fluid mobile-navbar py-3 d-flex justify-content-between align-items-center d-lg-none ${
+            show ? "hide-nav" : ""
           }`}
-          onClick={() => {
-            setOpenMenu(!openMenu);
-          }}
         >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+          <NavLink to="/">
+            <img src={dypiusLogo} alt="" />
+          </NavLink>
+          <div
+            id="hamburgermenu"
+            className={`d-block d-lg-none d-xl-none ${
+              openMenu && "hamburgermenu open"
+            }`}
+            onClick={() => {
+              setOpenMenu(!openMenu);
+            }}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
         <div
+          id="bgmenu"
           className={`bg-white d-flex d-lg-none d-xl-none justify-content-around align-items-center py-3 links menu ${
             openMenu === true && "openMenu"
           }`}
@@ -69,7 +100,7 @@ const HamburgerMenu = () => {
               </a>
             </li>
             <li>
-            <NavLink
+              <NavLink
                 className="text-decoration-none"
                 to="/governance"
                 onClick={() => {
@@ -109,7 +140,7 @@ const HamburgerMenu = () => {
             </li>
           </ul>
         </div>
-      </>{" "}
+      </>
     </OutsideClickHandler>
   );
 };

@@ -9,11 +9,21 @@ import Tokenomics from "../Dyp/Tokenomics/Tokenomics";
 import Roadmap from './Roadmap/Roadmap';
 import useWindowSize from '../../hooks/useWindowSize';
 import ContactUs from './ContactUs/ContactUs';
+import { useLocation } from 'react-router-dom';
 
 const About = () => {
-  // useEffect(()=>{
-  //   window.scrollTo(0,0)
-  // },[])
+
+  const link = useLocation();
+
+
+
+
+  useEffect(()=>{
+
+    if(link.state?.link === 'navlink'){
+      window.scrollTo(0,0)
+    }
+  },[])
 
   const windowSize = useWindowSize();
 

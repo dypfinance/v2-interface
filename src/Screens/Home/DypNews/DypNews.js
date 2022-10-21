@@ -35,7 +35,7 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -56,6 +56,7 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
   var options = { year: "numeric", month: "short", day: "numeric" };
 
   const [newsData, setNewsData] = useState([]);
+  const [testnews, setTestnews] = useState([])
 
   const fetchNews = async () => {
     const url =  page === "news" ? `https://news-manage.dyp.finance/api/organics/all` : `https://news-manage.dyp.finance/api/announcements/9`;
@@ -63,16 +64,34 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
       .get(url)
       .then((response) => {
         setNewsData(response.data);
-        console.log(response.data);
-        console.log(url);
       })
       .catch((error) => console.error(error));
   };
 
+
+  const fetchTest = async() => {
+    const urls = [`https://news-manage.dyp.finance/api/announcements/9`, `https://news-manage.dyp.finance/api/events/9`]
+    var tempNews = []
+    await Promise.all(
+      urls.map((url) => {
+        axios.get(url).then((response) => {
+          response.data.map((item) => {
+            tempNews.push(item)
+          })
+        }).catch((err) => console.error(err))
+      })
+    )
+    setTestnews(tempNews)
+
+  }
+
   useEffect(() => {
     fetchNews();
-  }, [newsData.length]);
+    fetchTest()
+  }, []);
 
+
+  
   const slider = useRef();
 
   const next = () => {
@@ -82,9 +101,11 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
     slider.current.slickPrev();
   };
 
+
   const sortedNewsItems = newsData.map((item) => {
     return { ...item, date: new Date(item.date) };
   });
+
 
   return (
     <div className="container-lg mb-5" id="dypNews">

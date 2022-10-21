@@ -55,13 +55,13 @@ const Security = () => {
     },
     {
       subtitle: "Security",
-      title: "Farming, Staking and <br/> Governance on Ethereum Network",
+      title: "Farming, Staking and  Governance on Ethereum Network",
       link: "https://github.com/dypfinance/staking-governance-security-audits",
     },
 
     {
       subtitle: "Security",
-      title: "Farming, Bridge and Governance <br/> on BNB Smart Chain",
+      title: "Farming, Bridge and Governance  on BNB Chain",
       link: "https://github.com/dypfinance/DYP-Bridge-and-Staking-on-Binance-Smart-Chain",
     },
 

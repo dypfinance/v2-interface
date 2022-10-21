@@ -20,7 +20,8 @@ const Governance = () => {
         "Dypius Governance runs on Ethereum, BNB Chain, and Avalanche. Connect your wallet to get started.",
       number: "1",
       step: 'one',
-      icon: 'connectWallet'
+      icon: 'connectWallet',
+      delay: 250
     },
     {
       title: "Create proposal",
@@ -28,7 +29,8 @@ const Governance = () => {
         "The proposal can be related to disbursing/burning tokens, or other suggestions.",
       number: "2",
       step: 'two',
-      icon: 'createProposal'
+      icon: 'createProposal',
+      delay: 500
 
     },
     {
@@ -37,7 +39,8 @@ const Governance = () => {
         "Submitting a proposal requires a minimum of 5000 DYP Governance token balance.",
       number: "3",
       step: 'three',
-      icon: 'submitProposal'
+      icon: 'submitProposal',
+      delay: 750
 
     },
   ];
@@ -94,6 +97,7 @@ const Governance = () => {
                     number={item.number}
                     step={item.step}
                     icon={item.icon}
+                    delay={item.delay}
                   />
                 );
               })}
