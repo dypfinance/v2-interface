@@ -83,7 +83,7 @@ const SupportedWallets = () => {
                   />
                   {copied === true && (
                     <span
-                      class="d-inline-block"
+                      className="d-inline-block"
                       tabindex="0"
                       data-toggle="tooltip"
                       title="Copied"

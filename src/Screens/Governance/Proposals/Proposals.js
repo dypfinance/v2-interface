@@ -97,8 +97,8 @@ const settings = {
         Lifetime proposals
       </h4>
           <div className="proposal-container gap-5">
-          {totalProposals.map((proposal) => (
-            <div className="proposal-card d-flex flex-column justify-content-between align-items-center py-5 position-relative">
+          {totalProposals.map((proposal, index) => (
+            <div className="proposal-card d-flex flex-column justify-content-between align-items-center py-5 position-relative" key={index}>
               <img className="chain-icon" src={proposal.icon} alt="" />
               <h5 className="chain mb-0">{proposal.chain}</h5>
               <p className="proposals mb-0">{proposal.total}</p>
@@ -116,10 +116,10 @@ const settings = {
             </div>
             <div className="row recents-container">
                 <Slider {...settings}>
-                    {recentProposalGroups.map((proposal) => (
-                        <div>
-                            {proposal.content.map((item) => (
-                                <ProposalCard title={item.title} icon={item.icon} />
+                    {recentProposalGroups.map((proposal, index) => (
+                        <div key={index}>
+                            {proposal.content.map((item, index) => (
+                                <ProposalCard title={item.title} icon={item.icon} key={index}/>
                             ))}
                         </div>
                     ))}
