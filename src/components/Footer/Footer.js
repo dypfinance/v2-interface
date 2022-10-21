@@ -321,7 +321,7 @@ const Footer = () => {
                       ))}
                     </div>
                     <div className="col-6 d-flex flex-column gap-3">
-                      {products.slice(7, products.length).map((item, index) => (
+                      {products.slice(products.length-1, products.length).map((item, index) => (
                         <a
                           key={index}
                           href={item.link}
