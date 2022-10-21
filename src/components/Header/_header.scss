@@ -150,6 +150,17 @@ transform: translateY(0px);
 transition: all .25s ease-in;
 }
 
+.white-navbar{
+  background: linear-gradient(304.92deg, #EFF0F6 24.56%, #FFFFFF 79.94%) !important;
+}
+
+.white-burger{
+  background: #554FD8 !important;
+  span{
+     background: #FFFFFF !important;
+  }
+}
+
 .hide-nav{
   transform: translateY(-100px);
 }

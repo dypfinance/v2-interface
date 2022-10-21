@@ -62,7 +62,7 @@ const OurTokens = () => {
         <div>
           <div className="row justify-content-between m-0 gap-2 position-relative mb-4">
             {/* <img src={TokenGraph} alt="" className="tokengraph" /> */}
-            <div className="col-lg-5 col-xl-5 p-xl-0 p-lg-0 p-md-0 pt-4">
+            <div className="col-lg-5 col-xl-5 pt-4">
               <h2 className="ourtoken-title">
                 DYP Token
               </h2>

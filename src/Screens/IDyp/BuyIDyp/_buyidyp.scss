@@ -71,6 +71,12 @@
     left: auto;
     right: auto;
     top: auto;
+    width: 100%;
+  }
+
+  #ourTokens{
+    top: 40px !important;
+    margin-bottom: 130px;
   }
 }
 
@@ -85,10 +91,7 @@
     top: auto;
   }
 
-  #ourTokens{
-    top: 40px !important;
-    margin-bottom: 130px;
-  }
+ 
 
 }
 

@@ -90,6 +90,12 @@ label{
   bottom: 0px;
 }
 
+@media screen and (max-width: 820px) {
+  .contact-container{
+    gap: 100px;
+  }
+}
+
 @media screen and (max-width: 786px) {
   .help-wrapper {
     .help-card {
