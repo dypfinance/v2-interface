@@ -91,7 +91,7 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
   }, []);
 
 
-  console.log(testnews);
+  
   const slider = useRef();
 
   const next = () => {

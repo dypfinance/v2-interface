@@ -173,7 +173,7 @@ const HelpCenter = () => {
       ...businessValues,
       [name]: value,
     });
-    console.log(businessValues);
+    
   };
 
   const handleSubmit = async (e) => {
@@ -204,7 +204,7 @@ const HelpCenter = () => {
         const send = await axios
           .post("https://api-mail.dyp.finance/api/help_form", data)
           .then(function (result) {
-            console.log(result.data);
+            
             return result.data;
           })
           .catch(function (error) {
@@ -252,7 +252,7 @@ const HelpCenter = () => {
         const send = await axios
           .post("https://api-mail.dyp.finance/api/business_form", data)
           .then(function (result) {
-            console.log(result.data);
+            
             return result.data;
           })
           .catch(function (error) {
@@ -296,8 +296,7 @@ const HelpCenter = () => {
     } else {
       alert("Image type not supported");
     }
-
-    console.log(event.target.files);
+    
   };
 
   const handleChangeBg = (event) => {
