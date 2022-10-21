@@ -161,7 +161,7 @@ const FAQ = () => {
             We’re here to help and answer any question you might have.
           </p>
         </div>
-        <div className="categories-container px-0 p-5 w-100 position-relative">
+        <div className="categories-container  p-4 w-100 position-relative">
           <img src={sphere} alt="" className="faq-sphere d-none d-lg-flex" loading="lazy" />
           <div className="row align-items-center justify-content-center flex-column position-relative">
 

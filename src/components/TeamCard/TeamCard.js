@@ -2,6 +2,18 @@ import React from "react";
 import dropdownIcon from "../../Screens/About/assets/profileDropdown.svg";
 
 const TeamCard = ({ name, position, id, content, photo, link }) => {
+
+
+  const rotate = (memberId) => {
+    const teamAccordion = document.querySelector(`.${memberId}`)
+    if(teamAccordion.classList.contains('rotate')){
+      teamAccordion.classList.remove('rotate')
+    }else{
+      teamAccordion.classList.add('rotate')
+    }
+  }
+
+
   return (
     <div className="accordion" id="accordionExample">
       <div className="team-card d-flex flex-column justify-content-center gap-3 align-items-center">
@@ -18,6 +30,8 @@ const TeamCard = ({ name, position, id, content, photo, link }) => {
             </p>
           </div>
           <img
+            onClick={() => rotate(`accordion-${id}`)}
+            className={`accordion-${id} accordion-toggler`}
             src={dropdownIcon}
             style={{
               cursor: "pointer",

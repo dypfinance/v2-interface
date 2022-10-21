@@ -83,3 +83,21 @@
     }
     
 }
+@media screen and (max-width: 360px) {
+
+  
+
+    .telegram{
+        top: 10px;
+        left: -19px !important;
+        width: 300px;
+    }
+
+    .discord{
+        bottom: -30px;
+        width: 300px;
+        right: auto !important;
+        left: -19px;
+    }
+    
+}
