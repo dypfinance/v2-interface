@@ -52,7 +52,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
       <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
         <div className="row m-0 align-items-center justify-content-center gap-2 pl-0">
           <div className="tokenomics-icon d-flex justify-content-center align-items-center">
-            <img src={tokenomicsIcon} alt="" />
+            <img src={tokenomicsIcon} alt="" loading="lazy"/>
           </div>
           <Title top={isDyp === true ? "Tokenomics" : "iDYP Tokenomics"} />
         </div>
@@ -82,6 +82,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
               src={toggledyp === true ? WhiteArrowUp : PurpleArrowDown}
               alt=""
               className="ml-2"
+              loading="lazy"
             />
           </button>
 
@@ -131,6 +132,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                     <img
                       src={Clipboard}
                       alt=""
+                      loading="lazy"
                       onClick={() => {
                         handleCopy(
                           "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
@@ -401,7 +403,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                   data-design="modern"
                   data-coin-ids="2669"
                 ></div>
-                <img src={Graph} alt="" className="w-100" />
+                <img src={Graph} alt="" className="w-100" loading="lazy"/>
                 <div className="">
                   <div className="circulating-wrapper w-100">
                     <div className="d-flex flex-column gap-3">
@@ -433,6 +435,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                     <img
                       src={Clipboard}
                       alt=""
+                      loading="lazy"
                       onClick={() => {
                         handleCopy(
                           "0xbd100d061e120b2c67a24453cf6368e63f1be056"
@@ -738,7 +741,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                     data-design="modern"
                     data-coin-ids="9517"
                   ></div>
-                  <img src={idypGraph} alt="" className="w-100" />
+                  <img src={idypGraph} alt="" className="w-100" loading="lazy"/>
                 </div>
                 <div className="">
                   <div className="circulating-wrapper w-100 mb-3">

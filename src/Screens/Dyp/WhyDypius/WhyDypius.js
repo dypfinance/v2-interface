@@ -72,12 +72,14 @@ const WhyDypius = () => {
                   className="orange-border"
                   src={require(`../assets/orangeBorder.svg`).default}
                   alt=""
+                  loading="lazy"
                 />
                 <div className="orange-card text-white p-3 position-relative">
                   <img
                     className="divider"
                     src={require(`../assets/orangeDivider.svg`).default}
                     alt=""
+                    loading="lazy"
                   />
                   <div className="child-1 d-flex flex-column justify-content-start justify-content-center mx-auto ">
                     <h5 style={{fontSize: '32px', fontWeight: '275'}}>42</h5>
@@ -99,8 +101,8 @@ const WhyDypius = () => {
                 
               </div>
              <div className="position-relative">
-              <img src={sphere} alt="" className="why-sphere" />
-             <img src={purpleBg} alt="" className="purple-background" />
+              <img src={sphere} alt="" className="why-sphere" loading="lazy"/>
+             <img src={purpleBg} alt="" className="purple-background" loading="lazy"/>
              <div className="purple-card position text-white position-relative p-3">
                 <div className="d-flex flex-column justify-content-start justify-content-center mx-auto ">
                     <h5 style={{fontWeight: '275', fontSize: '32px'}}>$42B+</h5>
@@ -121,6 +123,7 @@ const WhyDypius = () => {
           <div className="col-12 col-lg-8 card-wrapper d-grid ">
             <img
               className="ring"
+              loading="lazy"
               src={require(`../../../assets/tokenCircle.png`)}
             />
             {windowSize.width <= 786 ? (

@@ -20,7 +20,7 @@ const UpdateCard = ({title, image, link, date, month}) => {
         <div className="update-title d-flex flex-column justify-content-between">
             <p style={{color: 'black'}}>{title.slice(0, 25) + '...'}</p>
             <a target="_blank" href={link}>
-            <p className='d-flex flex-row mb-0 gap-2 align-items-center' style={{color: '#6962DC', fontSize: '10px'}}>View Article <img src={filledArrow} alt="" /></p>
+            <p className='d-flex flex-row mb-0 gap-2 align-items-center' style={{color: '#6962DC', fontSize: '10px'}}>View Article <img src={filledArrow} alt="" loading="lazy"/></p>
             </a>
             </div>
         </div>

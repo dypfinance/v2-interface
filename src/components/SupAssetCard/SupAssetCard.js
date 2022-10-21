@@ -9,7 +9,7 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain }) => {
       <div className="d-flex flex-column gap-3">
         <div className="row justify-content-between gap-2 m-0 align-items-center">
           <div className="row gap-1 align-items-center">
-            <img src={DypPool} alt="eth_pool" className="pl-0"/>
+            <img src={DypPool} alt="eth_pool" className="pl-0" loading="lazy"/>
             <span className="poolTitle p-0">{pool}</span>
           </div>
           <span className="aprTitle p-0">
@@ -33,7 +33,7 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain }) => {
           target="_blank"
           rel="noreferrer"
         >
-          Deposit now <img src={rightArrow} alt="" className="ml-3" />
+          Deposit now <img src={rightArrow} alt="" className="ml-3" loading="lazy"/>
         </a>
       </div>
     </div>

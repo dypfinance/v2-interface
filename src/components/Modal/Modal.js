@@ -3,7 +3,7 @@ import envelope from "../../assets/envelope.svg";
 import Title from "../Title/Title";
 
 const Modal = ({ visible, modalId, setIsVisible }) => {
-  
+
   let className = "modal fade ";
   let style = {};
   if (visible === true) {
@@ -36,7 +36,7 @@ const Modal = ({ visible, modalId, setIsVisible }) => {
           </div>
           <div className="modal-body">
             <div className="d-flex flex-column gap-2 justify-content-center align-items-center text-center">
-              <img src={envelope} alt="" style={{ width: 200 }} />
+              <img src={envelope} alt="" style={{ width: 200 }} loading="lazy" />
               <Title top={"Thank"} bottom={"you"} align="d-flex gap-1" />
               <p className="text-secondary">
                 The form was submitted successfully.

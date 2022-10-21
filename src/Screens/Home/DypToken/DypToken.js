@@ -15,8 +15,8 @@ const DypToken = () => {
     <div className='container-lg d-flex justify-content-center'>
          <div className="row dyp-token justify-content-between">
              <div className="col-6 col-lg-3 blue-half order-2 order-lg-1">
-            <img src={coin} className="coin" alt="" />
-            <img src={coinBg} className="coin" alt="" />
+            <img src={coin} className="coin" alt="" loading="lazy"/>
+            <img src={coinBg} className="coin" alt="" loading="lazy"/>
          <img className='ring-1' src={require(`../../../assets/tokenCircle.png`)} />
          <img className='ring-2' src={require(`../../../assets/tokenCircle.png`)} />
           </div>

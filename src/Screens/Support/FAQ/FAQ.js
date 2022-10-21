@@ -144,7 +144,7 @@ const FAQ = () => {
           </p>
         </div>
         <div className="categories-container px-0 p-5 w-100 position-relative">
-          <img src={sphere} alt="" className="faq-sphere d-none d-lg-flex" />
+          <img src={sphere} alt="" className="faq-sphere d-none d-lg-flex" loading="lazy" />
           <div className="row align-items-center justify-content-center ">
             <div className=" search-container d-flex justify-content-center align-items-center px-4 w-50">
               <StyledTextField

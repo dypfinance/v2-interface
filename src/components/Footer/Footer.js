@@ -429,17 +429,17 @@ const Footer = () => {
                         target="_blank"
                         href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
                       >
-                        <img src={coinmarketcap} alt="" />
+                        <img src={coinmarketcap} alt="" loading="lazy"/>
                       </a>
                       <a
                         target="_blank"
                         href="https://www.coingecko.com/en/coins/defi-yield-protocol"
                       >
-                        <img src={coinGecko} alt="" />
+                        <img src={coinGecko} alt="" loading="lazy"/>
                       </a>
 
                       <Link to="/disclaimer">
-                        <img src={disclaimer} alt="" />
+                        <img src={disclaimer} alt="" loading="lazy"/>
                       </Link>
                     </div>
                   </div>
@@ -450,7 +450,7 @@ const Footer = () => {
           ) : (
             <>
               <Link to="/">
-                <img src={logo} alt="" width={160} height={90} />
+                <img src={logo} alt="" width={160} height={90} loading="lazy"/>
               </Link>
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">About Us</h4>
@@ -508,17 +508,17 @@ const Footer = () => {
                     target="_blank"
                     href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
                   >
-                    <img src={coinmarketcap} alt="" />
+                    <img src={coinmarketcap} alt="" loading="lazy"/>
                   </a>
                   <a
                     target="_blank"
                     href="https://www.coingecko.com/en/coins/defi-yield-protocol"
                   >
-                    <img src={coinGecko} alt="" />
+                    <img src={coinGecko} alt="" loading="lazy" />
                   </a>
 
                   <Link to="/disclaimer">
-                    <img src={disclaimer} alt="" />
+                    <img src={disclaimer} alt="" loading="lazy" />
                   </Link>
                 </div>
               </div>
