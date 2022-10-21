@@ -27,7 +27,7 @@ const VaultCards = ({ pool, apr, link, top_tick, icon }) => {
             target="_blank"
             rel="noreferrer"
           >
-            Supply <img src={rightArrow} alt="" className="ml-3" />
+            Supply <img src={rightArrow} alt="" className="ml-3" loading="lazy"/>
           </a>
         </div>
       </div>

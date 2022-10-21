@@ -69,7 +69,7 @@ const [playbtn, setPlaybtn] = useState('passive')
                         className="eduImg"
                       />
                     </div>
-                    <img src={ playButton} alt="" className="ml-2 purpleArrow" />{" "}
+                    <img src={ playButton} alt="" className="ml-2 purpleArrow" loading="lazy"/>{" "}
                   </a>
                 </div>
               );

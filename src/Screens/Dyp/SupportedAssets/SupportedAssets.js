@@ -84,7 +84,7 @@ const SupportedAssets = () => {
                       fontSize: 12,
                     }}
                   >
-                    <img src={ethDropdown} alt="" />
+                    <img src={ethDropdown} alt="" loading="lazy"/>
                     Ethereum
                   </div>
                 ) : bnbState === true ? (
@@ -96,7 +96,7 @@ const SupportedAssets = () => {
                       fontSize: 12,
                     }}
                   >
-                    <img src={bnbDropdown} alt="" />
+                    <img src={bnbDropdown} alt="" loading="lazy"/>
                     BNB Chain
                   </div>
                 ) : (
@@ -108,11 +108,11 @@ const SupportedAssets = () => {
                       fontSize: 12,
                     }}
                   >
-                    <img src={avaDropdown} alt="" />
+                    <img src={avaDropdown} alt="" loading="lazy"/>
                     Avalanche
                   </div>
                 )}
-                <img src={dropdownIndicator} alt="" />
+                <img src={dropdownIndicator} alt="" loading="lazy"/>
               </div>
               <ul className="dropdown-menu coin-menu p-1">
                 <li
@@ -120,21 +120,21 @@ const SupportedAssets = () => {
                   onClick={() => handleEthPool()}
                   style={{ color: "#566FCE" }}
                 >
-                  <img src={ethDropdown} alt="" /> Ethereum
+                  <img src={ethDropdown} alt="" loading="lazy"/> Ethereum
                 </li>
                 <li
                   className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
                   onClick={() => handleBnbPool()}
                   style={{ color: "#D5A404" }}
                 >
-                  <img src={bnbDropdown} alt="" /> BNB Chain
+                  <img src={bnbDropdown} alt="" loading="lazy"/> BNB Chain
                 </li>
                 <li
                   className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
                   onClick={() => handleAvaxPool()}
                   style={{ color: "#E84142" }}
                 >
-                  <img src={avaDropdown} alt="" /> Avalanche
+                  <img src={avaDropdown} alt="" loading="lazy"/> Avalanche
                 </li>
               </ul>
             </div>
@@ -198,7 +198,7 @@ const SupportedAssets = () => {
               className="outline-btn position-absolute d-flex align-items-center viewmorebtn"
               style={{ bottom: "-19px"}}
             >
-              View more <img src={rightArrow} alt="" className="ml-3" />
+              View more <img src={rightArrow} alt="" className="ml-3" loading="lazy"/>
             </button>
           </div>
         </div>

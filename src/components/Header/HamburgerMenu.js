@@ -60,7 +60,7 @@ const HamburgerMenu = () => {
           }`}
         >
           <NavLink to="/">
-            <img src={dypiusLogo} alt="" />
+            <img src={dypiusLogo} alt="" loading="lazy"/>
           </NavLink>
           <div
             id="hamburgermenu"
@@ -134,7 +134,7 @@ const HamburgerMenu = () => {
             </li>
             <li>
               <button className="btn text-white py-2">
-                <img src={toolsLogo} className="pe-2" />
+                <img src={toolsLogo} className="pe-2" loading="lazy"/>
                 DYP Tools
               </button>
             </li>

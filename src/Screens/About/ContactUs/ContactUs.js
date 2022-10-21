@@ -225,6 +225,7 @@ const ContactUs = () => {
               <img
                 src={contactHeader}
                 alt=""
+                loading="lazy"
                 className="col-lg-3 col-xl-3 pl-0 contactimg"
               />
               <div className="d-flex flex-lg-row flex-xl-row flex-md-row flex-column  m-0 justify-content-between gap-2 w-100 align-items-center">
@@ -247,7 +248,7 @@ const ContactUs = () => {
                         className="circulating-title d-flex align-items-center gap-1 align-items-center"
                         style={{ fontWeight: 500, color: "#7670E0" }}
                       >
-                        <img src={envelope} alt="" /> <p className="mb-0 email">business@dypius.com</p>
+                        <img src={envelope} alt="" loading="lazy"/> <p className="mb-0 email">business@dypius.com</p>
                       </span>
                     </div>
                   </a>
@@ -326,6 +327,7 @@ const ContactUs = () => {
                     <img
                       src={selectBtn}
                       alt=""
+                      loading="lazy"
                       style={{
                         width: '58px',
                         height: '58px',
@@ -408,6 +410,7 @@ const ContactUs = () => {
                    <img
                      src={selectBtn}
                      alt=""
+                     loading="lazy"
                      style={{
                        width: '58px',
                        height: '58px',
@@ -457,7 +460,7 @@ const ContactUs = () => {
                       width:  "40%",
                     }}
                   />
-                  <img src={removebtn} alt='' style={{display: selectedFile ? 'block' : 'none', cursor: 'pointer'}} onClick={(e) => {
+                  <img src={removebtn} alt='' loading="lazy"  style={{display: selectedFile ? 'block' : 'none', cursor: 'pointer'}} onClick={(e) => {
                       handleChangeBg(e);
                     }}/>
                   </span>
@@ -483,13 +486,15 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <Modal
-        visible={success}
-        modalId="tymodal"
-        setIsVisible={() => {
-          setSuccess(false);
-        }}
-      />
+      {success === true && (
+        <Modal
+          visible={success}
+          modalId="tymodal"
+          setIsVisible={() => {
+            setSuccess(false);
+          }}
+        />
+      )}
      
     </div>
   );

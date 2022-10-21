@@ -22,7 +22,7 @@ const FormContainer = ({onClick, accordionState, children, title, desc, collapse
                 aria-expanded="true"
                 aria-controls={collapse}
               >
-                Fill out form <img src={accordionState ? minus : plus} alt="" />
+                Fill out form <img src={accordionState ? minus : plus} alt="" loading="lazy"/>
               </button>
             </div>
             <div className="row w-100 position-relative justify-content-between align-items-center">
