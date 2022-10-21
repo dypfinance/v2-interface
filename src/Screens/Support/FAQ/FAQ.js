@@ -87,7 +87,9 @@ const FAQ = () => {
 
   const [faqItems, setFaqItems] = useState([]);
   const [faqTitle, setFaqTitle] = useState("");
+  const [searchItems, setSearchItems] = useState([])
   const [searchString, setSearchString] = useState("")
+  const [searchBox, setSearchBox] = useState(false)
   const search = useRef()
 
   const fetchFaq = async (categoryId, categoryTitle) => {
@@ -107,16 +109,33 @@ const FAQ = () => {
 
 
   const searchFaq = async() => { 
-    
+
+    console.log(searchString);
     if(searchString.length >= 4){
       await axios.get(`https://news-manage.dyp.finance/api/faqs/search/${searchString}`).then((res) => {
-        setFaqItems(res.data)
+        setSearchItems(res.data)
         setFaqTitle('')
+        setSearchBox(true)
         
       }).catch((err) => console.error(err))
     } else{
-      setFaqItems([])
+      setSearchItems([])
+      setSearchBox(false)
     }
+  }
+
+  const selectSearchFaq = async(id, collapse) => {
+    const faqContainer = document.getElementById('faq-container')
+    await axios.get(`https://news-manage.dyp.finance/api/faqs/${id}`).then((res) => {
+      setFaqItems(res.data)
+      categories.map((category) => {
+        if(id === category.id){
+          setFaqTitle(category.title)
+        }
+      })
+    }).catch((err) => console.error(err))
+    setSearchBox(false)
+    faqContainer.scrollIntoView();
   }
 
   useEffect(() => {
@@ -126,6 +145,7 @@ const FAQ = () => {
   }, [searchString])
   
 
+  console.log(searchItems);
 
 
 
@@ -145,7 +165,7 @@ const FAQ = () => {
         </div>
         <div className="categories-container px-0 p-5 w-100 position-relative">
           <img src={sphere} alt="" className="faq-sphere d-none d-lg-flex" />
-          <div className="row align-items-center justify-content-center ">
+          <div className="row align-items-center justify-content-center flex-column position-relative">
             <div className=" search-container d-flex justify-content-center align-items-center px-4 w-50">
               <StyledTextField
                 id="outlined-search"
@@ -158,6 +178,20 @@ const FAQ = () => {
                 sx={{ width: "100%" }}
               />
             </div>
+            {searchBox &&
+            <div className="search-items p-4 mt-4 w-50">
+            {searchItems.length > 0 ?
+              searchItems.slice(0, 3).map((searchItem) => (
+                <div className="search-item p-3" onClick={() => selectSearchFaq(searchItem.category, searchItem.collapse)}>
+                  <p className="mb-0">{searchItem.title.slice(0, 50) + '...'}</p>
+                </div>
+              ))
+
+              : 
+              <p className="mb-0 p-4">No results from your search</p>
+            }
+          </div>
+            }
           </div>
           <div className="row categories-grid mt-5 gap-4">
             {categories.map((category, index) => (
@@ -180,7 +214,7 @@ const FAQ = () => {
       </div>
 
       {faqItems.length !== 0 &&
-      <div className="faq-container container-lg w-100 mt-4 p-5">
+      <div className="faq-container container-lg w-100 mt-4 p-5" id="faq-container">
       <div className="row justify-content-between align-items-center">
         <h2 className="fw-bold mb-5">{`${faqTitle} FAQs`}</h2>
       </div>
