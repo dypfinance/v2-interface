@@ -233,7 +233,7 @@ const Footer = () => {
       </div>
       <div className="container-fluid px-3 px-lg-5 py-0 footer-links justify-content-center">
         <div className="container-lg d-flex mt-0 mt-lg-5 footer-blocks w-100 position-relative align-items-baseline justify-content-between py-4">
-          {windowSize.width < 786 ? (
+          {windowSize.width < 821 ? (
             <div className="accordion w-100" id="accordionFooter">
               <div className="col-12 col-lg-3 text-white d-flex flex-column gap-3 px-0 py-3">
                 <div

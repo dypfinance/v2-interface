@@ -8,6 +8,11 @@
     border-radius: 28px 0px;
     min-height: 250px;
 
+
+    .form-button{
+      margin-right: 15px;
+    }
+
     .email-container {
       background: #eeeefc;
       border-radius: 12px 0px;
@@ -96,6 +101,16 @@ label{
 
     .contact-container {
       gap: 70px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px){
+  .help-wrapper{
+    .help-card{
+      .form-button{
+        margin-right: 0px;
+      }
     }
   }
 }

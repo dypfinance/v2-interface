@@ -69,6 +69,12 @@
 }
 
 
+@media screen and (max-width: 820px) {
+  .dyp-partners{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+}
 @media screen and (max-width: 786px) {
   .dyp-partners{
     grid-template-columns: auto auto;
@@ -81,14 +87,8 @@
   
 }
 
-// @-webkit-keyframes moveSlideshow {
-//     100% {
-//       transform: translateX(-100%);
-//     }
-//   }
-  
-//   @keyframes moveSlideshow {
-//     100% {
-//       transform: translateX(-100%);
-//     }
-//   }
+@media screen and (max-width: 360px) {
+  .dyp-partners{
+    gap: 20px;
+  }
+}

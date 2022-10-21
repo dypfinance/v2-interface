@@ -139,3 +139,24 @@
     }
     
 }
+
+@media screen and (max-width: 375px) {
+
+    .footer{
+        .socials{
+            .socials-container{
+                gap: 10px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 360px) {
+
+    .footer{
+        .socials{
+            .socials-container{
+                gap: 2px;
+            }
+        }
+    }
+}

@@ -126,3 +126,28 @@
     }
     
 }
+
+@media screen and (max-width: 375px) {
+    .dyp-main-hero{
+        .dyp-coin-wrapper{
+            .background{
+                left: 12%;
+            }
+            .coin{
+                right: 2%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 360px) {
+    .dyp-main-hero{
+        .dyp-coin-wrapper{
+            .background{
+                left: 9%;
+            }
+            .coin{
+                right: 0%;
+            }
+        }
+    }
+}
