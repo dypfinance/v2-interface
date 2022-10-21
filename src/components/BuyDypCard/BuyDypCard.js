@@ -9,7 +9,7 @@ const BuyDypCard = ({ title, logo, link, totalvids, videos, id }) => {
     <div className="buydypcard-wrapper">
       <div className="row m-0 gap-2 justify-content-between align-items-center">
         <div className="d-flex gap-2 p-0 align-items-center">
-          <img src={logo} alt="" className="buydypcard-logo" />
+          <img src={logo} alt="" className="buydypcard-logo" loading="lazy"/>
           <div className="d-flex flex-column gap-1">
             <span className="buydypcard-title">{title}</span>
             <div className="videodesc-wrapper" style={{display: totalvids === "0" ? "none" : ''}}>
@@ -19,7 +19,7 @@ const BuyDypCard = ({ title, logo, link, totalvids, videos, id }) => {
         </div>
         <a href={link} target="_blank" rel="noreferrer" className="pr-0">
           <div className="rightarrow-wrapper">
-            <img src={rightArrow} alt="" />
+            <img src={rightArrow} alt="" loading="lazy"/>
           </div>
         </a>
       </div>
@@ -56,7 +56,7 @@ const BuyDypCard = ({ title, logo, link, totalvids, videos, id }) => {
                   className="row ml-0 mr-0 gap-2 justify-content-around align-items-center buyitemcard"
                   key={index}
                 >
-                  <img src={require(`../../Screens/BuyDyp/assets/vids/${item.thumbnail}`)} alt="" className="vidthumbnail p-0" />
+                  <img src={require(`../../Screens/BuyDyp/assets/vids/${item.thumbnail}`)} alt="" className="vidthumbnail p-0" loading="lazy"/>
                   
                   <div className="d-flex gap-0 flex-column p-0">
                     <span>
@@ -70,7 +70,7 @@ const BuyDypCard = ({ title, logo, link, totalvids, videos, id }) => {
                       <p className="videotitle">{item.title.slice(0, 60) + '...'}</p>
                     </a>
                   </div>
-                  <img src={filledArrow} alt="" className="p-0" />
+                  <img src={filledArrow} alt="" className="p-0" loading="lazy"/>
                 </div>
               );
             })}

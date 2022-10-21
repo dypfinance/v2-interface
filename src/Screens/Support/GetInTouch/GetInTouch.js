@@ -69,7 +69,7 @@ const GetInTouch = () => {
                     <p className="text-white socials-title">Follow us for more</p>
                     {socials.map((social, index) => (
                         <a target="_blank" key={index} href={social.link} className="d-flex flex-column justify-content-center align-items-center gap-2">
-                            <img src={require(`../assets/${social.icon}.svg`)} alt="" />
+                            <img src={require(`../assets/${social.icon}.svg`)} alt="" loading="lazy"/>
                             <p className="social-title mb-0">{social.title}</p>
                         </a>
                     ))}

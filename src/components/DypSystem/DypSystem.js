@@ -104,7 +104,7 @@ const DypSystem = ({
         </div>
 
         <div className="planet">
-          <img src={DypRect} alt="dypPlanet" />
+          <img src={DypRect} alt="dypPlanet" loading="lazy" />
         </div>
       </div>
     </div>

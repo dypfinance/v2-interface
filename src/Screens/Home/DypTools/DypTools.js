@@ -40,7 +40,7 @@ const DypTools = () => {
 
             </div>
             <a href={'https://tools.dyp.finance'} target={'_blank'} rel='noreferrer' className="btn d-flex align-items-center justify-content-center outline-btn m-md-auto m-sm-auto m-lg-0" data-aos='fade-up' data-aos-delay='500' data-aos-duration='1000'>
-              Go to DYP Tools <img src={filledArrow} alt="" className="ml-2" />
+              Go to DYP Tools <img src={filledArrow} alt="" className="ml-2" loading="lazy"/>
             </a>
           </div>
         </div>
@@ -48,9 +48,9 @@ const DypTools = () => {
           <div className="rotate-scale-up">
             {/* <img className="iphoneBackground" src={iphoneBg} alt="" /> */}
           </div>
-          <img src={Triangle} className="triangle" />
-          <img className="iphone" src={Laptop} alt="" />
-          <img className="dots2" src={dots} alt="" />
+          <img src={Triangle} className="triangle" loading="lazy"/>
+          <img className="iphone" src={Laptop} alt="" loading="lazy"/>
+          <img className="dots2" src={dots} alt="" loading="lazy"/>
         </div>
       </div>
     </div>

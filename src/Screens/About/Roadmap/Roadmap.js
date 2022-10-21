@@ -211,7 +211,7 @@ const Roadmap = () => {
               }`}
               onClick={previous}
             >
-              <img src={filledLeft} alt="left arrow" className="p-2" />
+              <img src={filledLeft} alt="left arrow" className="p-2" loading="lazy"/>
             </div>
             <div
               className={`right-button d-flex justify-content-center align-items-center ${
@@ -222,7 +222,7 @@ const Roadmap = () => {
               }`}
               onClick={next}
             >
-              <img src={emptyRight} alt="rightArrow" className="p-2" />
+              <img src={emptyRight} alt="rightArrow" className="p-2" loading="lazy"/>
             </div>
           </div>
         </div>
@@ -236,7 +236,7 @@ const Roadmap = () => {
           {JSON.stringify(roadmap) === JSON.stringify(roadmap2022) && (
             <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
               <div className="date-card selected d-flex flex-column align-items-center">
-                <img src={selectedRoadmap} alt="" />
+                <img src={selectedRoadmap} alt="" loading="lazy"/>
                 <h2 style={{ color: "#EFF0F6" }}>2022 Q3/Q4</h2>
                 <div className="outer-circle d-flex justify-content-center align-items-center">
                   <div className="inner-circle"></div>
@@ -244,42 +244,42 @@ const Roadmap = () => {
               </div>
               <div className="roadmap-items highlight d-flex flex-column gap-3 p-4">
                 <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={completedIcon} alt="" />
+                  <img src={completedIcon} alt="" loading="lazy" />
                   <p>Metaverse Research and Launch of Different Products</p>
                 </div>
                 <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={completedIcon} alt="" />
+                  <img src={completedIcon} alt="" loading="lazy"/>
                   <p>Building Extra Features for DYP Tools</p>
                 </div>
                 <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={completedIcon} alt="" />
+                  <img src={completedIcon} alt="" loading="lazy"/>
                   <p>Rebranding Process</p>
                 </div>
                 <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={completedIcon} alt="" />
+                  <img src={completedIcon} alt="" loading="lazy"/>
                   <p>Metaverse Begins for the CAWS</p>
                 </div>
                 <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={completedIcon} alt="" />
+                  <img src={completedIcon} alt="" loading="lazy"/>
                   <p>Further Extension and Project Growth in Different Areas</p>
                 </div>
                 <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={uncompletedIcon} alt="" />
+                  <img src={uncompletedIcon} alt="" loading="lazy"/>
                   <p>
                     Incorporation of a Legal Entity for upcoming Regulation For
                     Decentralized Finance
                   </p>
                 </div>
                 <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={uncompletedIcon} alt="" />
+                  <img src={uncompletedIcon} alt="" loading="lazy"/>
                   <p>Expanding our Products to other Chains</p>
                 </div>
                 <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={uncompletedIcon} alt="" />
+                  <img src={uncompletedIcon} alt="" loading="lazy"/>
                   <p>Launch App for iOS and Android</p>
                 </div>
                 <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={uncompletedIcon} alt="" />
+                  <img src={uncompletedIcon} alt="" loading="lazy"/>
                   <p>Launch Multi-Chain DEX</p>
                 </div>
               </div>

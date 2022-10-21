@@ -39,7 +39,7 @@ const IDypToken = () => {
     <div className="container-fluid mt-0 position-relative" id="ourTokens" style={{top: '-90px'}}>
       
       <div className="ourtokens-wrapper container-lg position-relative">
-      <img src={bluehero} className="blueheroidyp" alt="" />
+      <img src={bluehero} className="blueheroidyp" alt="" loading="lazy"/>
         <div>
           <div className="row justify-content-between m-0 gap-2 position-relative mb-4">
             <div className="col-lg-5 col-xl-5 p-xl-0 p-lg-0 p-md-0 pt-4">

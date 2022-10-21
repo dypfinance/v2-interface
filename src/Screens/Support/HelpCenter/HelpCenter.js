@@ -22,18 +22,16 @@ import { useRef } from "react";
 import removebtn from "../../About/assets/remove-btn.svg";
 import selectBtn from "../assets/selectBtn.svg";
 import Modal from "../../../components/Modal/Modal";
-import ring from '../../../assets/tokenCircle.png'
+import ring from "../../../assets/tokenCircle.png";
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
     borderRadius: "8px",
-    
   },
   "& .MuiInputLabel-root": {
     color: "#A0A3BD",
     fontWeight: 400,
-    fontFamily: 'Poppins',
-
+    fontFamily: "Poppins",
   },
 }));
 
@@ -43,7 +41,7 @@ const StyledSelect = styled(Select)(({ theme }) => ({
   },
   "& .MuiInputLabel-root": {
     color: "#A0A3BD",
-    fontFamily: 'Poppins',
+    fontFamily: "Poppins",
     fontWeight: 400,
   },
 }));
@@ -155,6 +153,7 @@ const HelpCenter = () => {
     job_title: false,
     subject: false,
   });
+
   const recaptchaRef = useRef(null);
 
   const handleChange = async (e) => {
@@ -173,7 +172,6 @@ const HelpCenter = () => {
       ...businessValues,
       [name]: value,
     });
-    
   };
 
   const handleSubmit = async (e) => {
@@ -204,7 +202,6 @@ const HelpCenter = () => {
         const send = await axios
           .post("https://api-mail.dyp.finance/api/help_form", data)
           .then(function (result) {
-            
             return result.data;
           })
           .catch(function (error) {
@@ -221,7 +218,6 @@ const HelpCenter = () => {
 
       setValues({ ...helpState });
       setSelectedFile(null);
-
     }
   };
 
@@ -252,7 +248,6 @@ const HelpCenter = () => {
         const send = await axios
           .post("https://api-mail.dyp.finance/api/business_form", data)
           .then(function (result) {
-            
             return result.data;
           })
           .catch(function (error) {
@@ -269,11 +264,10 @@ const HelpCenter = () => {
 
       setBusinessValues({ ...businessState });
       setSelectedFile(null);
-
     }
   };
 
-  const onFileChange = (event, type) => { 
+  const onFileChange = (event, type) => {
     const fileTypes = [
       "image/jpg",
       "image/png",
@@ -296,7 +290,6 @@ const HelpCenter = () => {
     } else {
       alert("Image type not supported");
     }
-    
   };
 
   const handleChangeBg = (event) => {
@@ -328,8 +321,11 @@ const HelpCenter = () => {
           inquiries.
         </p>
       </div>
-      <div className="row contact-container position-relative" style={{ marginTop: "7rem" }}>
-        <img src={ring} alt="" className="help-ring d-none d-lg-block" />
+      <div
+        className="row contact-container position-relative"
+        style={{ marginTop: "7rem" }}
+      >
+        <img src={ring} alt="" className="help-ring d-none d-lg-block" loading="lazy"/>
         <FormContainer
           title="General Inquiry"
           desc="Get immediate help and support for Dypius products and solutions."
@@ -809,13 +805,15 @@ const HelpCenter = () => {
           </div>
         </FormContainer>
       </div>
-      <Modal
-        visible={success}
-        modalId="tymodal"
-        setIsVisible={() => {
-          setSuccess(false);
-        }}
-      />
+      {success === true && (
+        <Modal
+          visible={success}
+          modalId="tymodal"
+          setIsVisible={() => {
+            setSuccess(false);
+          }}
+        />
+      )}
     </div>
   );
 };

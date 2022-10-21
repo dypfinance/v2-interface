@@ -120,8 +120,8 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
         <div className="col-12 d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center ps-4 ps-lg-2 mb-5 mb-lg-0 gap-4">
           {page === "news" ? (
             <>
-              <img src={rainbowHero} alt="" className="rainbow-hero" />
-              <img src={rainbowHero} alt="" className="rainbow-hero-2" />
+              <img src={rainbowHero} alt="" className="rainbow-hero" loading="lazy"/>
+              <img src={rainbowHero} alt="" className="rainbow-hero-2" loading="lazy"/>
             </>
           ) : (
             <img
@@ -137,13 +137,13 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
                   className="prev-button d-flex justify-content-center align-items-center"
                   onClick={previous}
                 >
-                  <img src={prevArrow} alt="" />
+                  <img src={prevArrow} alt="" loading="lazy"/>
                 </div>
                 <div
                   className="next-button d-flex justify-content-center align-items-center"
                   onClick={next}
                 >
-                  <img src={nextArrow} alt="" />
+                  <img src={nextArrow} alt="" loading="lazy"/>
                 </div>
               </div>
             ) : (
