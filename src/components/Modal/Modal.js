@@ -3,6 +3,7 @@ import envelope from "../../assets/envelope.svg";
 import Title from "../Title/Title";
 
 const Modal = ({ visible, modalId, setIsVisible }) => {
+  
   let className = "modal fade ";
   let style = {};
   if (visible === true) {
@@ -11,9 +12,8 @@ const Modal = ({ visible, modalId, setIsVisible }) => {
   }
 
   const closeModal = () => {
-    setIsVisible(false)
-}
-
+    setIsVisible(false);
+  };
 
   return (
     <div
@@ -24,7 +24,6 @@ const Modal = ({ visible, modalId, setIsVisible }) => {
       aria-hidden="true"
       style={style}
       onClick={closeModal}
-
     >
       <div className="modal-dialog tymodal">
         <div className="modal-content">
@@ -40,7 +39,7 @@ const Modal = ({ visible, modalId, setIsVisible }) => {
               <img src={envelope} alt="" style={{ width: 200 }} />
               <Title top={"Thank"} bottom={"you"} align="d-flex gap-1" />
               <p className="text-secondary">
-              The form was submitted successfully.
+                The form was submitted successfully.
               </p>
             </div>
           </div>
@@ -51,7 +50,7 @@ const Modal = ({ visible, modalId, setIsVisible }) => {
 };
 
 Modal.defaultProps = {
-  setIsVisible: () => {}
-}
+  setIsVisible: () => {},
+};
 
 export default Modal;

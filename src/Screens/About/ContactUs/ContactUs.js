@@ -483,13 +483,15 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <Modal
-        visible={success}
-        modalId="tymodal"
-        setIsVisible={() => {
-          setSuccess(false);
-        }}
-      />
+      {success === true && (
+        <Modal
+          visible={success}
+          modalId="tymodal"
+          setIsVisible={() => {
+            setSuccess(false);
+          }}
+        />
+      )}
      
     </div>
   );
