@@ -72,9 +72,9 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
             aria-expanded="false"
             aria-controls="collapseExample"
             onClick={() => {
-              setTokenomicData("dyp");
-              setToggleDyp(!toggledyp);
-              setToggleIDyp(false);
+              // setTokenomicData("dyp");
+              // setToggleDyp(!toggledyp);
+              // setToggleIDyp(false);
             }}
           >
             DYP Tokenomics

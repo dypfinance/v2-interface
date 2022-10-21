@@ -57,13 +57,7 @@ const SupportedWallets = () => {
               <div className="d-flex flex-column dypaddr-wrapper ">
                 <span className="dypcontractaddr">
                   DYP Contract Address (Ethereum, BNB Chain, Avalanche):
-                  <span
-                    data-toggle="tooltip"
-                    data-placement="right"
-                    title="Hooray!"
-                  >
-                    Right
-                  </span>
+                 
                 </span>
                 <span className="contractaddr">
                   {windowSize.width < 526

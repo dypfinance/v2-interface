@@ -271,6 +271,7 @@ const HelpCenter = () => {
     const fileTypes = [
       "image/jpg",
       "image/png",
+      "image/jpeg",
       "application/pdf",
       "application/vnd.openxmlformats-officedocument.wordprocessingml.doc",
       "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
@@ -659,7 +660,7 @@ const HelpCenter = () => {
                 <StyledTextField
                   error={businessErrors.organization ? true : false}
                   size="small"
-                  label="Organisation"
+                  label="Organization"
                   id="organization"
                   name="organization"
                   value={businessValues.organization}
