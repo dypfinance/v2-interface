@@ -56,42 +56,49 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
   var options = { year: "numeric", month: "short", day: "numeric" };
 
   const [newsData, setNewsData] = useState([]);
-  const [testnews, setTestnews] = useState([])
+  const [announcements, setAnnouncements] = useState([])
+  const [events, setEvents] = useState([])
 
   const fetchNews = async () => {
-    const url =  page === "news" ? `https://news-manage.dyp.finance/api/organics/all` : `https://news-manage.dyp.finance/api/announcements/9`;
+    if(page === 'news'){
+      const url = `https://news-manage.dyp.finance/api/organics/all`;
     await axios
       .get(url)
       .then((response) => {
         setNewsData(response.data);
       })
       .catch((error) => console.error(error));
+    }else{
+      return
+    }
   };
-
 
   const fetchTest = async() => {
     const urls = [`https://news-manage.dyp.finance/api/announcements/9`, `https://news-manage.dyp.finance/api/events/9`]
-    var tempNews = []
-    await Promise.all(
-      urls.map((url) => {
-        axios.get(url).then((response) => {
-          response.data.map((item) => {
-            tempNews.push(item)
-          })
-        }).catch((err) => console.error(err))
-      })
-    )
-    setTestnews(tempNews)
+    const announcements = axios.get(urls[0])
+    const events = axios.get(urls[1])
+    await axios.all([announcements, events]).then(axios.spread((...responses) => {
+      setAnnouncements(responses[0].data)
+      setEvents(responses[1].data)
+    }))
+  }
 
+
+  const concatNews = () => {
+    if(page !== 'news'){
+      setNewsData([...announcements, ...events])
+    }
   }
 
   useEffect(() => {
     fetchNews();
-    fetchTest()
-  }, []);
+    fetchTest();
+    concatNews();
+  }, [announcements.length]);
 
 
   
+  console.log(newsData);
   const slider = useRef();
 
   const next = () => {
