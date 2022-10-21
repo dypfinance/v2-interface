@@ -10,6 +10,7 @@ const HamburgerMenu = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [show, setShow] = useState(false);
+  const [logo, setLogo] = useState(false)
 
   const showNavbar = () => {
     if (typeof window !== "undefined") {
@@ -21,29 +22,57 @@ const HamburgerMenu = () => {
     }
 
     setLastScrollY(window.scrollY);
+
+    if (window.location.href.includes("dyp") && !window.location.href.includes("dyp")) {
+      if (window.scrollY >= 500) {
+        setLogo(true);
+      } else {
+        setLogo(false);
+      }
+    } else if (
+      window.location.href.includes("about") ||
+      window.location.href.includes("disclaimer") ||
+      window.location.href.includes("governance") ||
+      window.location.href.includes("support") ||
+      window.location.href.includes("news")  ||
+      window.location.href.includes("buydyp")
+    ) {
+      setLogo(true);
+    } else {
+      if (window.scrollY >= 800) {
+        setLogo(true);
+      } else {
+        setLogo(false);
+      }
+    }
   };
 
   const bgmenu = document.querySelector("#bgmenu");
-  const body = document.querySelector("body");
+  const hamburger = document.querySelector('#hamburgermenu')
+  const html = document.querySelector("html");
 
   useEffect(() => {
     if (openMenu === true) {
-      body.style.pointerEvents = "none";
+      html.style.pointerEvents = "none";
+      html.style.overflow = 'hidden'
       bgmenu.style.pointerEvents = "auto";
+      hamburger.style.pointerEvents = "auto";
     } else {
       // Enable scroll
-      body.style.overflow = "auto";
-      body.style.pointerEvents = "auto";
+      html.style.overflow = "auto";
+      html.style.pointerEvents = "auto";
     }
   }, [openMenu]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", showNavbar);
+      window.addEventListener("click", showNavbar);
     }
 
     return () => {
       window.removeEventListener("scroll", showNavbar);
+      window.removeEventListener("click", showNavbar);
     };
   }, [lastScrollY]);
 
@@ -55,16 +84,16 @@ const HamburgerMenu = () => {
     >
       <>
         <div
-          className={`container-fluid mobile-navbar py-3 d-flex justify-content-between align-items-center d-lg-none ${
+          className={`container-fluid mobile-navbar ${logo && 'white-navbar'} py-3 d-flex justify-content-between align-items-center d-lg-none ${
             show ? "hide-nav" : ""
           }`}
         >
           <NavLink to="/">
-            <img src={dypiusLogo} alt="" loading="lazy"/>
+            <img src={logo ? dypiusLogoPurple : dypiusLogo} alt="" loading="lazy"/>
           </NavLink>
           <div
             id="hamburgermenu"
-            className={`d-block d-lg-none d-xl-none ${
+            className={`d-block ${logo && 'white-burger'} d-lg-none d-xl-none ${
               openMenu && "hamburgermenu open"
             }`}
             onClick={() => {

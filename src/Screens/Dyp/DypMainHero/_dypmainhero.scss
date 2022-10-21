@@ -127,6 +127,16 @@
     
 }
 
+
+@media screen and (max-width: 820px) {
+    .dyp-main-hero{
+        .background{
+            left: 20%;
+            bottom: 8%;
+        }
+    }
+}
+
 @media screen and (max-width: 375px) {
     .dyp-main-hero{
         .dyp-coin-wrapper{

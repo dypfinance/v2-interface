@@ -17,7 +17,7 @@ const BuyDyp = () => {
       <img className="sphere-1" src={sphere} alt="" />
       <img className="sphere-2" src={sphere} alt="" />
       <div className="row  px-4">
-        <div className="col-12 col-lg-5 d-flex flex-column justify-content-center gap-4">
+        <div className="col-12 col-sm-6 col-lg-5 d-flex flex-column justify-content-center gap-4">
           <Title
             top="Buy DYP"
             bottom="in a few steps"
@@ -46,7 +46,7 @@ const BuyDyp = () => {
             </NavLink>
           ) : null}
         </div>
-        <div className="col-12 col-lg-6 position-relative">
+        <div className="col-12 col-sm-6 col-lg-6 position-relative">
           <img className="coin" src={coin} alt="" />
           <img className="coinBackground" src={coinBg} alt="" />
         </div>
