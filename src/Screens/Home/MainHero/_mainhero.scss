@@ -87,8 +87,13 @@ h1 {
 @media only screen and (max-width: 500px) {
  .main-hero{
   padding-top: 50px;
+  .heading{
+    min-height: 1000px;
+   }
  }
  
+
+
  
   h1 {
     font-size: 28px !important;
