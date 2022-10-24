@@ -200,17 +200,17 @@ const Roadmap = () => {
         "Play to Earn NFT Concept becomes active for CAWS Holders",
       ],
     },
-  ]
+  ];
 
-  const [counter, setCounter] = useState(roadmap2021.length)
-  const [initialSlide, setInitialSlide] = useState(roadmap.length - 1)
+  const [oldSlide, setOldSlide] = useState(0);
+  const [activeSlide, setActiveSlide] = useState(6);
+  const [activeSlide2, setActiveSlide2] = useState(6);
+
   const [activeYear, setActiveYear] = useState({
     roadmap2020: false,
-    roadmap2021: false, 
+    roadmap2021: false,
     roadmap2022: true,
-    
-  })
-  
+  });
 
   const settings = {
     dots: false,
@@ -220,7 +220,14 @@ const Roadmap = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: roadmap.length - 2,
-    // beforeChange: beforeChange,
+    beforeChange: (current, next) => {
+      setOldSlide(current);
+      setActiveSlide(next);
+    },
+    afterChange: (current) => {
+      setActiveSlide2(current);
+    },
+
     responsive: [
       {
         breakpoint: 1024,
@@ -254,48 +261,95 @@ const Roadmap = () => {
 
   const next = () => {
     slider.current.slickNext();
-    setActiveYear({
-      roadmap2020: false,
-      roadmap2021: false,
-      roadmap2022: false
-    })
+    if (activeYear.roadmap2022 === true) {
+      setActiveYear({
+        roadmap2020: true,
+        roadmap2021: false,
+        roadmap2022: false,
+      });
+      slider.current.innerSlider.slickGoTo(0);
+      setActiveSlide2(0);
+    }
+
+    if (activeSlide2 === 1) {
+      setActiveYear({
+        roadmap2020: false,
+        roadmap2021: true,
+        roadmap2022: false,
+      });
+
+      slider.current.innerSlider.slickGoTo(2);
+    }
+
+    if (activeSlide2 === 5) {
+      setActiveYear({
+        roadmap2020: false,
+        roadmap2021: false,
+        roadmap2022: true,
+      });
+
+      slider.current.innerSlider.slickGoTo(6);
+    }
   };
   const previous = () => {
     slider.current.slickPrev();
+    if (activeYear.roadmap2022 === true) {
+      if (activeSlide2 < 5) {
+        console.log("test");
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: true,
+          roadmap2022: false,
+        });
+      }
+    }
+    if (activeSlide2 === 2) {
+      setActiveYear({
+        roadmap2020: true,
+        roadmap2021: false,
+        roadmap2022: false,
+      });
+    }
+
+    if(activeSlide2 === 0) {
+      setActiveYear({
+        roadmap2020: false,
+        roadmap2021: false,
+        roadmap2022: true,
+      });
+    slider.current.innerSlider.slickGoTo(6);
+
+    }
+  };
+
+  const goto2020 = () => {
+    slider.current.innerSlider.slickGoTo(0);
+    setActiveYear({
+      roadmap2020: true,
+      roadmap2021: false,
+      roadmap2022: false,
+    });
+  };
+  const goto2021 = () => {
+    slider.current.innerSlider.slickGoTo(2);
+    setActiveYear({
+      roadmap2020: false,
+      roadmap2021: true,
+      roadmap2022: false,
+    });
+  };
+  const goto2022 = () => {
+    slider.current.innerSlider.slickGoTo(6);
     setActiveYear({
       roadmap2020: false,
       roadmap2021: false,
-      roadmap2022: false
-    })
+      roadmap2022: true,
+    });
   };
 
-
-  const goto2020 = () => {
-    slider.current.innerSlider.slickGoTo(0)
-    setActiveYear({
-      roadmap2020: true, 
-      roadmap2021: false,
-      roadmap2022: false
-    })
-  }
-  const goto2021 = () => {
-    slider.current.innerSlider.slickGoTo(2)
-    setActiveYear({
-      roadmap2020: false, 
-      roadmap2021: true,
-      roadmap2022: false
-    })
-  }
-  const goto2022 = () => {
-    slider.current.innerSlider.slickGoTo(6)
-    setActiveYear({
-      roadmap2020: false, 
-      roadmap2021: false,
-      roadmap2022: true
-    })
-  }
-  
-
+  useEffect(() => {
+    goto2022();
+  }, []);
 
   return (
     <div className="container-lg roadmap-wrapper overflow-hidden" id="roadmap">
@@ -306,28 +360,19 @@ const Roadmap = () => {
           <div className="d-flex flex-row gap-lg-4 gap-xl-4 gap-md-4 gap-3">
             <div className="years-wrapper d-flex flex-row px-2 gap-1 justify-content-center align-items-center">
               <p
-                className={`${
-                  activeYear.roadmap2020 &&
-                  "selected-year"
-                }`}
+                className={`${activeYear.roadmap2020 && "selected-year"}`}
                 onClick={goto2020}
               >
                 2020
               </p>
               <p
-                className={`${
-                  activeYear.roadmap2021 &&
-                  "selected-year"
-                }`}
+                className={`${activeYear.roadmap2021 && "selected-year"}`}
                 onClick={goto2021}
               >
                 2021
               </p>
               <p
-                className={`${
-                  activeYear.roadmap2022 &&
-                  "selected-year"
-                }`}
+                className={`${activeYear.roadmap2022 && "selected-year"}`}
                 onClick={goto2022}
               >
                 2022
@@ -337,13 +382,23 @@ const Roadmap = () => {
               className={`left-button d-flex justify-content-center align-items-center enabled`}
               onClick={previous}
             >
-              <img src={filledLeft} alt="left arrow" className="p-4" loading="lazy"/>
+              <img
+                src={filledLeft}
+                alt="left arrow"
+                className="p-4"
+                loading="lazy"
+              />
             </div>
             <div
               className={`right-button d-flex justify-content-center align-items-center enabled`}
               onClick={next}
             >
-              <img src={emptyRight} alt="rightArrow" className="p-4" loading="lazy"/>
+              <img
+                src={emptyRight}
+                alt="rightArrow"
+                className="p-4"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -354,57 +409,57 @@ const Roadmap = () => {
           {roadmap.map((item, index) => (
             <RoadmapCard key={index} data={item} />
           ))}
-          
-            <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-              <div className="date-card selected d-flex flex-column align-items-center">
-                <img src={selectedRoadmap} alt="" loading="lazy"/>
-                <h2 style={{ color: "#EFF0F6" }}>2022 Q3/Q4</h2>
-                <div className="outer-circle d-flex justify-content-center align-items-center">
-                  <div className="inner-circle"></div>
-                </div>
-              </div>
-              <div className="roadmap-items highlight d-flex flex-column gap-3 p-4">
-                <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={completedIcon} alt="" loading="lazy" />
-                  <p>Metaverse Research and Launch of Different Products</p>
-                </div>
-                <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={completedIcon} alt="" loading="lazy"/>
-                  <p>Building Extra Features for DYP Tools</p>
-                </div>
-                <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={completedIcon} alt="" loading="lazy"/>
-                  <p>Rebranding Process</p>
-                </div>
-                <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={completedIcon} alt="" loading="lazy"/>
-                  <p>Metaverse Begins for the CAWS</p>
-                </div>
-                <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={completedIcon} alt="" loading="lazy"/>
-                  <p>Further Extension and Project Growth in Different Areas</p>
-                </div>
-                <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={uncompletedIcon} alt="" loading="lazy"/>
-                  <p>
-                    Incorporation of a Legal Entity for upcoming Regulation For
-                    Decentralized Finance
-                  </p>
-                </div>
-                <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={uncompletedIcon} alt="" loading="lazy"/>
-                  <p>Expanding our Products to other Chains</p>
-                </div>
-                <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={uncompletedIcon} alt="" loading="lazy"/>
-                  <p>Launch App for iOS and Android</p>
-                </div>
-                <div className="d-flex flex-row align-items-center gap-2">
-                  <img src={uncompletedIcon} alt="" loading="lazy"/>
-                  <p>Launch Multi-Chain DEX</p>
-                </div>
+
+          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
+            <div className="date-card selected d-flex flex-column align-items-center">
+              <img src={selectedRoadmap} alt="" loading="lazy" />
+              <h2 style={{ color: "#EFF0F6" }}>2022 Q3/Q4</h2>
+              <div className="outer-circle d-flex justify-content-center align-items-center">
+                <div className="inner-circle"></div>
               </div>
             </div>
+            <div className="roadmap-items highlight d-flex flex-column gap-3 p-4">
+              <div className="d-flex flex-row align-items-center gap-2">
+                <img src={completedIcon} alt="" loading="lazy" />
+                <p>Metaverse Research and Launch of Different Products</p>
+              </div>
+              <div className="d-flex flex-row align-items-center gap-2">
+                <img src={completedIcon} alt="" loading="lazy" />
+                <p>Building Extra Features for DYP Tools</p>
+              </div>
+              <div className="d-flex flex-row align-items-center gap-2">
+                <img src={completedIcon} alt="" loading="lazy" />
+                <p>Rebranding Process</p>
+              </div>
+              <div className="d-flex flex-row align-items-center gap-2">
+                <img src={completedIcon} alt="" loading="lazy" />
+                <p>Metaverse Begins for the CAWS</p>
+              </div>
+              <div className="d-flex flex-row align-items-center gap-2">
+                <img src={completedIcon} alt="" loading="lazy" />
+                <p>Further Extension and Project Growth in Different Areas</p>
+              </div>
+              <div className="d-flex flex-row align-items-center gap-2">
+                <img src={uncompletedIcon} alt="" loading="lazy" />
+                <p>
+                  Incorporation of a Legal Entity for upcoming Regulation For
+                  Decentralized Finance
+                </p>
+              </div>
+              <div className="d-flex flex-row align-items-center gap-2">
+                <img src={uncompletedIcon} alt="" loading="lazy" />
+                <p>Expanding our Products to other Chains</p>
+              </div>
+              <div className="d-flex flex-row align-items-center gap-2">
+                <img src={uncompletedIcon} alt="" loading="lazy" />
+                <p>Launch App for iOS and Android</p>
+              </div>
+              <div className="d-flex flex-row align-items-center gap-2">
+                <img src={uncompletedIcon} alt="" loading="lazy" />
+                <p>Launch Multi-Chain DEX</p>
+              </div>
+            </div>
+          </div>
         </Slider>
       </div>
     </div>
