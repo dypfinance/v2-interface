@@ -82,3 +82,11 @@
     }
     
 }
+
+
+@media screen and (max-width: 500px) {
+    .inner-pool{
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    
+}

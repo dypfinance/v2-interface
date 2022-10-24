@@ -4,8 +4,6 @@ import Title from "../../../components/Title/Title";
 import { TextField } from "@mui/material";
 import "./_faq.scss";
 import FAQAccordion from "../../../components/FaqAccordionItem/FAQAccordion";
-import book from "../assets/book.svg";
-import activeBook from "../assets/activeBook.svg";
 import axios from "axios";
 import sphere from '../../../assets/newsSphere.png'
 

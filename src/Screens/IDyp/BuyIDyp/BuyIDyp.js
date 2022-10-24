@@ -23,7 +23,7 @@ const BuyIDyp = () => {
             </div>
           </div>
         </div>
-        <div className="col-12 col-lg-6 row m-0 pb-5 justify-content-center align-items-center position-relative">
+        <div className="col-12 col-lg-6 row m-0 pb-5 justify-content-center align-items-center position-relative marketplace-container">
           <a style={{height: '100px'}}
             href={
               "https://www.mexc.com/exchange/IDYP_USDT"

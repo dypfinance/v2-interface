@@ -24,7 +24,7 @@ const DypMainHero = () => {
       />
       <div className="container-lg d-flex justify-content-between">
       <div className="row justify-content-between px-3">
-      <div className="col-12 col-lg-7 text-white d-flex flex-column gap-3 justify-content-lg-end justify-content-xl-end">
+      <div className="col-12 col-sm-6 col-lg-7 text-white d-flex flex-column gap-3 justify-content-lg-end justify-content-xl-end">
           <h1>DYP Token</h1>
           <p>
             DYP is a governance token that facilitates the transactions
@@ -34,7 +34,7 @@ const DypMainHero = () => {
             in the world.
           </p>
         </div>
-        <div className="col-12 col-lg-3 position-relative dyp-coin-wrapper">
+        <div className="col-12 col-sm-6 col-lg-3 position-relative dyp-coin-wrapper">
           <img
             className="coin"
             src={require(`../../../assets/coin.png`)}

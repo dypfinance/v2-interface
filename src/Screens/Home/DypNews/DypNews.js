@@ -12,6 +12,7 @@ import rainbowHero from "../../../assets/rainbowHero.png";
 import "./_dypnews.scss";
 import { useRef } from "react";
 import { NavLink } from "react-router-dom";
+import useWindowSize from '.././../../hooks/useWindowSize'
 
 const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
   const settings = {
@@ -58,6 +59,7 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
   const [newsData, setNewsData] = useState([]);
   const [announcements, setAnnouncements] = useState([])
   const [events, setEvents] = useState([])
+  const windowSize = useWindowSize();
 
   const fetchNews = async () => {
     if(page === 'news'){
@@ -98,7 +100,6 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
 
 
   
-  console.log(newsData);
   const slider = useRef();
 
   const next = () => {
@@ -131,11 +132,13 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
           )}
           <Title top={topTitle} bottom={bottomTitle} align={titleAlign} />
           <div className="button-group">
-            {page === "news" ? (
+            {page === "news" ? 
+              windowSize.width > 786 &&
               <div className="slider-buttons d-flex flex-row gap-4">
                 <div
                   className="prev-button d-flex justify-content-center align-items-center"
                   onClick={previous}
+                  style={{zIndex: 3}}
                 >
                   <img src={prevArrow} alt="" loading="lazy"/>
                 </div>
@@ -146,14 +149,14 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
                   <img src={nextArrow} alt="" loading="lazy"/>
                 </div>
               </div>
-            ) : (
+             : 
               <NavLink
                 className="btn d-flex align-items-center filled-btn mr-3"
                 to="/news"
               >
                 Read more
               </NavLink>
-            )}
+            }
           </div>
         </div>
         <div className="col-12">
@@ -181,7 +184,26 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
               <RingLoader color="#9664FF" size={150} />
             </div>
           )}
+         
+          
         </div>
+        {page === 'news' &&
+              windowSize.width < 786 &&
+              <div className="slider-buttons d-flex flex-row w-100 justify-content-between px-5 pb-3" style={{marginTop: '5rem'}}>
+              <div
+                className="prev-button d-flex justify-content-center align-items-center"
+                onClick={previous}
+              >
+                <img src={prevArrow} alt="" loading="lazy"/>
+              </div>
+              <div
+                className="next-button d-flex justify-content-center align-items-center"
+                onClick={next}
+              >
+                <img src={nextArrow} alt="" loading="lazy"/>
+              </div>
+            </div>
+          }
       </div>
     </div>
   );
