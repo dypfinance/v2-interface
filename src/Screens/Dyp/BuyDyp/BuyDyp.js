@@ -54,9 +54,10 @@ const BuyDyp = () => {
         </div>
       </div>
       {windowSize.width < 786 ? (
-        <div className="row ps-5" style={{zIndex: 5}}>
-             
-          <NavLink to='/buydyp' className="btn filled-btn w-75 d-flex justify-content-center align-items-center" onClick={()=>{window.scrollTo(0,0)}} >
+
+        <div className="row justify-content-center" style={{zIndex: 5}}>
+          <NavLink to='/buydyp' className="btn filled-btn w-75 d-flex justify-content-center align-items-center">
+
             Explore
             <img
               className="ps-2"

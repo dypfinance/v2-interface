@@ -103,6 +103,17 @@
 
 @media screen and (max-width: 786px) {
 
+
+    .footer{
+        .footer-links{
+            min-height: 400px;
+
+            h4{
+                font-size: 18px !important;
+            }
+        }
+    }
+
     .socials{
         row-gap: 20px;
 

@@ -14,7 +14,7 @@ const NewsPage = () => {
   return (
     <div
       className="container-fluid px-0 d-flex flex-column overflow-hidden"
-      style={{ paddingTop: "150px", gap: "150px" }}
+      style={{ paddingTop: "130px", gap: "30px" }}
     >
       <DypNews
         topTitle="Dypius"

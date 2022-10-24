@@ -6,6 +6,7 @@ import "./_faq.scss";
 import FAQAccordion from "../../../components/FaqAccordionItem/FAQAccordion";
 import axios from "axios";
 import sphere from '../../../assets/newsSphere.png'
+import useWindowSize from "../../../hooks/useWindowSize";
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -83,6 +84,8 @@ const FAQ = () => {
     },
   ];
 
+  const windowSize = useWindowSize()
+
   const [faqItems, setFaqItems] = useState([]);
   const [faqTitle, setFaqTitle] = useState("");
   const [searchItems, setSearchItems] = useState([])
@@ -103,26 +106,27 @@ const FAQ = () => {
         })
         .catch((err) => console.error(err));
     }
+
+    if(windowSize.width > 786){
+      window.scrollTo(0, 1200)
+    }else{
+      window.scrollTo(0, 1900)
+    }
   };
 
 
   const searchFaq = async() => { 
 
-    if(searchString.length >= 4){
       await axios.get(`https://news-manage.dyp.finance/api/faqs/search/${searchString}`).then((res) => {
         setSearchItems(res.data)
         setFaqTitle('')
         setSearchBox(true)
         
       }).catch((err) => console.error(err))
-    } else{
-      setSearchItems([])
-      setSearchBox(false)
-    }
+   
   }
 
   const selectSearchFaq = async(id, collapse) => {
-    const faqContainer = document.getElementById('faq-container')
     await axios.get(`https://news-manage.dyp.finance/api/faqs/${id}`).then((res) => {
       setFaqItems(res.data)
       categories.map((category) => {
@@ -132,7 +136,11 @@ const FAQ = () => {
       })
     }).catch((err) => console.error(err))
     setSearchBox(false)
-    faqContainer.scrollIntoView();
+    if(windowSize.width > 786){
+      window.scrollTo(0, 1200)
+    }else{
+      window.scrollTo(0, 1900)
+    }
   }
 
   useEffect(() => {

@@ -83,10 +83,23 @@
   }
 }
 
+
 @media screen and (max-width: 786px) {
   .proposals-wrapper{
     .proposal-container{
-      grid-template-columns: auto;
+      gap: 10px !important;
+      margin-bottom: 15px;
+      .proposal-card{
+        width: 115px;
+        height: 165px;
+        .proposals{
+          font-size: 45px;
+        }
+        .chain{
+          font-size: 13px;
+        }
+      }
     }
   }
+  
 }

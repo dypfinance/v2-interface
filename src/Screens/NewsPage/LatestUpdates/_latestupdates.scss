@@ -105,6 +105,9 @@
 
     .update-card-container{
         grid-template-columns: auto !important;
+        .update-card{
+            width: 275px !important;
+        }
     }
 
     .updates-ring{

@@ -16,3 +16,10 @@
   .scrollTop:hover {
     opacity: 1;
   }
+
+
+  @media screen and (max-width: 786px) {
+    .scrollTop{
+      bottom: 45px;
+    }
+  }
