@@ -7,20 +7,27 @@ const DypMainHero = () => {
       <img
         className="waves"
         src={require(`../assets/wavesTop.svg`).default}
-        alt="topWaves"
+        alt=""
+        loading="lazy"
+
       />
       <img
         className="waves d-none d-lg-block"
         src={require(`../assets/wavesBottom.svg`).default}
-        alt="bottomWaves"
+        alt=""
+        loading="lazy"
       />
       <img
         className="mobile-waves d-block d-lg-none"
         src={require(`../assets/mobileWaves.svg`).default}
+        loading="lazy"
+
       />
       <img
         className="ring d-none d-lg-block"
         src={require(`../../../assets/tokenCircle.png`)}
+        loading="lazy"
+
       />
       <div className="container-lg d-flex justify-content-between">
       <div className="row justify-content-between px-3">

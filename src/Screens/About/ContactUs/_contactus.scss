@@ -75,6 +75,14 @@
         visibility: hidden;
       }
 
+      .custom-file-input::-moz-file-upload-button {
+        visibility: hidden;
+      }
+
+      input::file-selector-button  {
+        visibility: hidden !important;
+      }
+
       .custom-file-input::before {
         content: "";
         background-repeat: no-repeat;

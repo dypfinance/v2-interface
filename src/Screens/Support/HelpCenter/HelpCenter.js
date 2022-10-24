@@ -534,6 +534,7 @@ const HelpCenter = () => {
                         backgroundPosition: "center",
                         width: "55%",
                         border: "2px solid #D6D8E7",
+                        fontSize: 0
                       }}
                     />
                     <img

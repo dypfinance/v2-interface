@@ -13,7 +13,6 @@ const BuyDypScreen = () => {
     <div className="container-fluid px-0 buydypscreen">
       <div style={{ paddingTop: windowSize.width < 786 ? "6rem" : "10rem" }}>
         <BuyDypHero />
-        {/* <SupportedWallets/> */}
       </div>
     </div>
   );
