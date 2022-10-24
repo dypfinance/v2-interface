@@ -441,7 +441,7 @@ const ContactUs = () => {
               <div className="row m-0 gap-3 justify-content-between w-100 mb-3">
                 <div
                   className="d-grid gap-1 p-0"
-                  style={{ width: windowSize.width < 999 ? "100%" : "" }}
+                  style={{ width: windowSize.width < 999 ? "100%" : "20%" }}
                 >
                   <span className="d-flex gap-2">
                   <input
@@ -458,7 +458,8 @@ const ContactUs = () => {
                       backgroundRepeat: "no-repeat",
                       backgroundPosition: "center",
                       border: '2px solid #D6D8E7',
-                      width:  "40%",
+                      width:  "100%",
+                      fontSize: 0
                     }}
                   />
                   <img src={removebtn} alt='' loading="lazy"  style={{display: selectedFile ? 'block' : 'none', cursor: 'pointer'}} onClick={(e) => {

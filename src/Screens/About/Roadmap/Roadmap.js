@@ -295,7 +295,6 @@ const Roadmap = () => {
     slider.current.slickPrev();
     if (activeYear.roadmap2022 === true) {
       if (activeSlide2 < 5) {
-        console.log("test");
         setActiveYear({
           roadmap2020: false,
           roadmap2021: true,
