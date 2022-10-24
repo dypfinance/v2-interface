@@ -7,7 +7,7 @@ const PressRelease = () => {
     <div
       className="container-lg mb-5"
       id="press"
-      style={{ paddingBottom: "10rem" }}
+      style={{ paddingBottom: "5rem", marginTop: '4rem' }}
     >
       <div className="farming-header">
         <Title

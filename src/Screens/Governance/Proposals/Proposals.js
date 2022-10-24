@@ -96,9 +96,9 @@ const settings = {
         <h4 className="mb-5" style={{ color: "#554FD8", fontSize: '20px' }}>
         Lifetime proposals
       </h4>
-          <div className="proposal-container gap-5">
+          <div className="proposal-container justify-content-center align-items-center gap-5">
           {totalProposals.map((proposal, index) => (
-            <div className="proposal-card d-flex flex-column justify-content-between align-items-center py-5 position-relative" key={index}>
+            <div className="proposal-card d-flex flex-column justify-content-center justify-content-lg-between align-items-center py-0 py-lg-5 position-relative" key={index}>
               <img className="chain-icon" src={proposal.icon} alt="" />
               <h5 className="chain mb-0">{proposal.chain}</h5>
               <p className="proposals mb-0">{proposal.total}</p>

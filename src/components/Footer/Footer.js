@@ -310,7 +310,7 @@ const Footer = () => {
                 >
                   <div className="row">
                     <div className="col-6 d-flex flex-column gap-3">
-                      {products.slice(0, 6).map((item, index) => (
+                      {products.map((item, index) => (
                         <Link
                           key={index}
                           to={item.link}
@@ -320,17 +320,7 @@ const Footer = () => {
                         </Link>
                       ))}
                     </div>
-                    <div className="col-6 d-flex flex-column gap-3">
-                      {products.slice(products.length-1, products.length).map((item, index) => (
-                        <a
-                          key={index}
-                          href={item.link}
-                          className="text-white text-decoration-none"
-                        >
-                          <h5>{item.title}</h5>
-                        </a>
-                      ))}
-                    </div>
+                  
                   </div>
                 </div>
               </div>
@@ -424,7 +414,12 @@ const Footer = () => {
                         <h5>{item.title}</h5>
                       </Link>
                     ))}
-                    <div className="d-flex flex-row gap-3 position-relative" >
+                    
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div className="d-flex flex-row gap-3 position-relative mt-3" >
                       <a
                         target="_blank"
                         href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
@@ -442,10 +437,6 @@ const Footer = () => {
                         <img src={disclaimer} alt="" loading="lazy"/>
                       </Link>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <hr />
             </div>
           ) : (
             <>

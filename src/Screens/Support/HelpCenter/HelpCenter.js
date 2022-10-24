@@ -180,16 +180,7 @@ const HelpCenter = () => {
     setErrors(validate(values));
 
     if (Object.keys(errors).length === 0) {
-      const captchaToken = await recaptchaRef.current.executeAsync();
-      const data = {
-        name: values.name,
-        email: values.email,
-        social_account: values.social_account,
-        username: values.username,
-        topic: values.topic,
-        message: values.message,
-        recaptcha: captchaToken,
-      };
+     
 
       if (
         values.name !== "" &&
@@ -199,6 +190,18 @@ const HelpCenter = () => {
         values.topic !== "" &&
         values.message !== ""
       ) {
+
+        const captchaToken = await recaptchaRef.current.executeAsync();
+        const data = {
+          name: values.name,
+          email: values.email,
+          social_account: values.social_account,
+          username: values.username,
+          topic: values.topic,
+          message: values.message,
+          recaptcha: captchaToken,
+        };
+
         const send = await axios
           .post("https://api-mail.dyp.finance/api/help_form", data)
           .then(function (result) {
@@ -226,7 +229,18 @@ const HelpCenter = () => {
     setBusinessErrors(validateBusiness(businessValues));
 
     if (Object.keys(businessErrors).length === 0) {
-      const captchaToken = await recaptchaRef.current.executeAsync();
+      
+
+      if (
+        businessValues.name !== "" &&
+        businessValues.job !== "" &&
+        businessValues.organization !== "" &&
+        businessValues.email !== "" &&
+        businessValues.subject !== "" &&
+        businessValues.message !== ""
+      ) {
+
+        const captchaToken = await recaptchaRef.current.executeAsync();
       const data = {
         name: businessValues.name,
         job: businessValues.job,
@@ -237,14 +251,6 @@ const HelpCenter = () => {
         recaptcha: captchaToken,
       };
 
-      if (
-        businessValues.name !== "" &&
-        businessValues.job !== "" &&
-        businessValues.organization !== "" &&
-        businessValues.email !== "" &&
-        businessValues.subject !== "" &&
-        businessValues.message !== ""
-      ) {
         const send = await axios
           .post("https://api-mail.dyp.finance/api/business_form", data)
           .then(function (result) {
@@ -509,7 +515,7 @@ const HelpCenter = () => {
               />
 
               <div className="row px-0 flex-row mt-4">
-                <div className="d-flex col-6 flex-column gap-2">
+                <div className="d-flex col-12 col-lg-6  flex-column gap-2">
                   <span className="d-flex gap-2">
                     <input
                       type="file"
@@ -551,7 +557,7 @@ const HelpCenter = () => {
                     ref={recaptchaRef}
                   />
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-lg-6 ">
                   <button
                     className="btn filled-btn w-100"
                     onClick={handleSubmit}
@@ -753,7 +759,7 @@ const HelpCenter = () => {
                 maxRows={5}
               />
               <div className="row px-0 flex-row mt-4">
-                <div className="d-flex col-6 flex-column gap-2">
+                <div className="d-flex col-12 col-lg-6  flex-column gap-2">
                   <span className="d-flex gap-2">
                     <input
                       type="file"
@@ -793,7 +799,7 @@ const HelpCenter = () => {
                     ref={recaptchaRef}
                   />
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-lg-6 ">
                   <button
                     className="btn filled-btn w-100"
                     onClick={handleBusinessSubmit}
