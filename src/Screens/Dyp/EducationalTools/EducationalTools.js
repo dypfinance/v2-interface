@@ -47,7 +47,7 @@ const [playbtn, setPlaybtn] = useState('passive')
           </a>
         </div>
 
-        <div className="col-12 col-lg-8 educational-wrapper gap-5 justify-content-between p-4 position-relative">
+        <div className="col-12 col-lg-8 educational-wrapper gap-5 justify-content-center p-4 position-relative">
           <img
             className="edu-sphere"
             src={require(`../../../assets/newsSphere.png`)}
