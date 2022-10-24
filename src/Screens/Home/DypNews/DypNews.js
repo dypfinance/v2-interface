@@ -138,6 +138,7 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
                 <div
                   className="prev-button d-flex justify-content-center align-items-center"
                   onClick={previous}
+                  style={{zIndex: 3}}
                 >
                   <img src={prevArrow} alt="" loading="lazy"/>
                 </div>
