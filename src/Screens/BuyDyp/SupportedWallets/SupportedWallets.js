@@ -59,7 +59,7 @@ const SupportedWallets = () => {
                   DYP Contract Address (Ethereum, BNB Chain, Avalanche):
                  
                 </span>
-                <span className="contractaddr">
+                <span className="contractaddr justify-content-center">
                   {windowSize.width < 526
                     ? shortAddress("0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17")
                     : "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"}

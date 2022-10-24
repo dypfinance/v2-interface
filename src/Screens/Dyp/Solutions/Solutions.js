@@ -8,7 +8,7 @@ import "./_solutions.scss";
 const Solutions = () => {
   const windowSize = useWindowSize();
 
-  const [solutionLength, setSolutionLength] = useState(6);
+  const [solutionLength, setSolutionLength] = useState(2);
 
   const solutions = [
     {
@@ -88,7 +88,7 @@ const Solutions = () => {
         <div className="row px-5" style={{ marginTop: "150px" }}>
           <Title top="Our" bottom="Solutions"  animation="fade-up" duration="1000"/>
         </div>
-        <div className="row d-grid px-5 solutions-card-container">
+        <div className="row d-grid px-3 solutions-card-container">
           {windowSize.width < 786
             ? solutions
                 .slice(0, solutionLength)

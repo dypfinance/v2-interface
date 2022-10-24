@@ -138,7 +138,7 @@ const [partnersLength, setPartnersLength] = useState(12)
   }
 
   return (
-    <div className="container-fluid" id="our-partners">
+    <div className="container-fluid" id="our-partners" style={{padding: '0px 30px'}}>
       <div className="container-lg d-flex flex-column justify-content-center align-items-center p-0 p-lg-2">
         <div className="row flex-column justify-content-center align-items-center gap-2">
           <Title top="Our" bottom="Partners" align="d-flex flex-row gap-2" />

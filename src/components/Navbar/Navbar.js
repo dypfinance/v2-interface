@@ -59,6 +59,7 @@ const Navbar = () => {
 
   useEffect(() => {
    if(typeof window !== 'undefined'){
+    changeBackground()
     window.addEventListener('scroll', changeBackground)
       window.addEventListener("click", changeBackground);
    }
@@ -68,12 +69,11 @@ const Navbar = () => {
     window.removeEventListener("click", changeBackground);
 
    }
+
   }, [lastScrollY])
   
   
-  // window.addEventListener("scroll", changeBackground);
-  // window.addEventListener("click", changeBackground);
-
+  
 
   return (
     <div

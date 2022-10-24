@@ -377,7 +377,6 @@ const BuyDypHero = () => {
               className="buydypcoin"
               src={require(`../../../assets/coin.png`)}
               alt=""
-              sty
             />
 
             <img

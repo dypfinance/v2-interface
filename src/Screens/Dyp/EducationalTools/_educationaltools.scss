@@ -19,9 +19,9 @@
   display: grid;
   grid-template-columns: repeat(2,1fr);
 
-  @media screen and (max-width: 786px) {
-    grid-template-columns: auto;
-  }
+  // @media screen and (max-width: 786px) {
+  //   grid-template-columns: auto;
+  // }
   
   .cardWrapper {
     border-radius: 12px 0px;
@@ -46,12 +46,14 @@
 
   .eduImg {
     border-radius: 12px 0px;
-    height: 190px;
+    height: auto;
     object-fit: cover;
     width: 100%;
+    
 
     @media only screen and (max-width: 991px) {
-        height: 140px !important; 
+        height: auto !important;
+        width: 125px; 
     }
   }
 

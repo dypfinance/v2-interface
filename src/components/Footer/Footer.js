@@ -6,7 +6,7 @@ import coinmarketcap from "../../assets/coinMarketCap.svg";
 import coinGecko from "../../assets/coinGecko.svg";
 import contactUs from "../../assets/contactUs.svg";
 import disclaimer from "../../assets/disclaimer.svg";
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink as Link } from "react-router-hash-link";
 const Footer = () => {
   const windowSize = useWindowSize();
 
@@ -310,7 +310,36 @@ const Footer = () => {
                 >
                   <div className="row">
                     <div className="col-6 d-flex flex-column gap-3">
-                      {products.slice(0, 6).map((item, index) => (
+                      {products.slice(0, 2).map((item, index) => (
+                        <a
+                          key={index}
+                          href={item.link}
+                          className="text-white text-decoration-none"
+                        >
+                          <h5>{item.title}</h5>
+                        </a>
+                      ))}
+
+                      {products.slice(2, 3).map((item, index) => (
+                        <Link
+                          key={index}
+                          to={item.link}
+                          className="text-white text-decoration-none"
+                        >
+                          <h5>{item.title}</h5>
+                        </Link>
+                      ))}
+                      {products.slice(3, 4).map((item, index) => (
+                        <a
+                          key={index}
+                          href={item.link}
+                          className="text-white text-decoration-none"
+                        >
+                          <h5>{item.title}</h5>
+                        </a>
+                      ))}
+
+                      {products.slice(4, 6).map((item, index) => (
                         <Link
                           key={index}
                           to={item.link}
@@ -321,15 +350,17 @@ const Footer = () => {
                       ))}
                     </div>
                     <div className="col-6 d-flex flex-column gap-3">
-                      {products.slice(products.length-1, products.length).map((item, index) => (
-                        <a
-                          key={index}
-                          href={item.link}
-                          className="text-white text-decoration-none"
-                        >
-                          <h5>{item.title}</h5>
-                        </a>
-                      ))}
+                      {products
+                        .slice(products.length - 1, products.length)
+                        .map((item, index) => (
+                          <a
+                            key={index}
+                            href={item.link}
+                            className="text-white text-decoration-none"
+                          >
+                            <h5>{item.title}</h5>
+                          </a>
+                        ))}
                     </div>
                   </div>
                 </div>
@@ -367,10 +398,9 @@ const Footer = () => {
                   <div className="d-flex flex-column gap-3">
                     {learn.map((item, index) => (
                       <a
-                      
                         key={index}
                         href={item.link}
-                        rel='noreferrer'
+                        rel="noreferrer"
                         target="_blank"
                         className="text-white text-decoration-none"
                       >
@@ -418,28 +448,27 @@ const Footer = () => {
                         key={index}
                         to={item.link}
                         className="text-white text-decoration-none"
-                    state={{newsType: item.props}}
-
+                        state={{ newsType: item.props }}
                       >
                         <h5>{item.title}</h5>
                       </Link>
                     ))}
-                    <div className="d-flex flex-row gap-3 position-relative" >
+                    <div className="d-flex flex-row gap-3 position-relative">
                       <a
                         target="_blank"
                         href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
                       >
-                        <img src={coinmarketcap} alt="" loading="lazy"/>
+                        <img src={coinmarketcap} alt="" loading="lazy" />
                       </a>
                       <a
                         target="_blank"
                         href="https://www.coingecko.com/en/coins/defi-yield-protocol"
                       >
-                        <img src={coinGecko} alt="" loading="lazy"/>
+                        <img src={coinGecko} alt="" loading="lazy" />
                       </a>
 
                       <Link to="/disclaimer">
-                        <img src={disclaimer} alt="" loading="lazy"/>
+                        <img src={disclaimer} alt="" loading="lazy" />
                       </Link>
                     </div>
                   </div>
@@ -450,7 +479,7 @@ const Footer = () => {
           ) : (
             <>
               <Link to="/">
-                <img src={logo} alt="" width={160} height={90} loading="lazy"/>
+                <img src={logo} alt="" width={160} height={90} loading="lazy" />
               </Link>
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">About Us</h4>
@@ -466,14 +495,57 @@ const Footer = () => {
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">Solutions</h4>
-                {products.map((item, index) => (
-                   <Link
-                   key={index}
-                   to={item.link}
-                   className="text-white text-decoration-none"
-                 >
-                   <h5>{item.title}</h5>
-                 </Link>
+
+                {products.slice(0, 2).map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.link}
+                    className="text-white text-decoration-none"
+                  >
+                    <h5>{item.title}</h5>
+                  </a>
+                ))}
+
+                {products.slice(2, 3).map((item, index) => (
+                  <Link
+                    key={index}
+                    to={item.link}
+                    className="text-white text-decoration-none"
+                    onClick={()=>{window.scrollTo(0,0)}}
+
+                  >
+                    <h5>{item.title}</h5>
+                  </Link>
+                ))}
+                {products.slice(3, 4).map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.link}
+                    className="text-white text-decoration-none"
+                  >
+                    <h5>{item.title}</h5>
+                  </a>
+                ))}
+
+                {products.slice(4, 6).map((item, index) => (
+                  <Link
+                    key={index}
+                    to={item.link}
+                    className="text-white text-decoration-none"
+                    onClick={()=>{window.scrollTo(0,0)}}
+
+                  >
+                    <h5>{item.title}</h5>
+                  </Link>
+                ))}
+                {products.slice(6, 7).map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.link}
+                    className="text-white text-decoration-none"
+                  >
+                    <h5>{item.title}</h5>
+                  </a>
                 ))}
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">
@@ -503,12 +575,15 @@ const Footer = () => {
                     </Link>
                   ))}
                 </div>
-                <div className="d-flex flex-row gap-3 position-relative" style={{bottom: '-90px'}}>
+                <div
+                  className="d-flex flex-row gap-3 position-relative"
+                  style={{ bottom: "-90px" }}
+                >
                   <a
                     target="_blank"
                     href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
                   >
-                    <img src={coinmarketcap} alt="" loading="lazy"/>
+                    <img src={coinmarketcap} alt="" loading="lazy" />
                   </a>
                   <a
                     target="_blank"
@@ -517,7 +592,8 @@ const Footer = () => {
                     <img src={coinGecko} alt="" loading="lazy" />
                   </a>
 
-                  <Link to="/disclaimer">
+                  <Link to="/disclaimer"  onClick={()=>{window.scrollTo(0,0)}}>
+                  
                     <img src={disclaimer} alt="" loading="lazy" />
                   </Link>
                 </div>

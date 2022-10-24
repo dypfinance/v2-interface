@@ -41,9 +41,11 @@ const BuyDyp = () => {
               to='/buydyp'
               data-aos="fade-up"
               data-aos-duration="1000"
+              // onClick={()=>{ window.scrollTo(0, 0)}}
             >
               Explore
             </NavLink>
+            
           ) : null}
         </div>
         <div className="col-12 col-sm-6 col-lg-6 position-relative">
@@ -52,8 +54,10 @@ const BuyDyp = () => {
         </div>
       </div>
       {windowSize.width < 786 ? (
-        <div className="row ps-5" style={{zIndex: 5}}>
+
+        <div className="row justify-content-center" style={{zIndex: 5}}>
           <NavLink to='/buydyp' className="btn filled-btn w-75 d-flex justify-content-center align-items-center">
+
             Explore
             <img
               className="ps-2"
