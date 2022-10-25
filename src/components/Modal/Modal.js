@@ -1,5 +1,5 @@
 import React from "react";
-import envelope from "../../assets/envelope.svg";
+import envelope from "../../assets/envelope.png";
 import Title from "../Title/Title";
 
 const Modal = ({ visible, modalId, setIsVisible }) => {
