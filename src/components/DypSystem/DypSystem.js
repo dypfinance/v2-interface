@@ -33,7 +33,7 @@ const DypSystem = ({
               style={{ width: 50, height: 50 }}
               onMouseEnter={onShowFifthDesc}
               onMouseLeave={onRemoveDesc}
-              loading="lazy" 
+                
             />
           </div>
 
@@ -49,7 +49,7 @@ const DypSystem = ({
                 style={{ width: 50, height: 50 }}
                 onMouseEnter={onShowThirdDesc}
                 onMouseLeave={onRemoveDesc}
-                loading="lazy" 
+                  
               /></a>
             </div>
           
@@ -60,7 +60,7 @@ const DypSystem = ({
               style={{ width: 50, height: 50 }}
               onMouseEnter={onShowFourthDesc}
               onMouseLeave={onRemoveDesc}
-              loading="lazy" 
+                
             />
           </div>
         </div>
@@ -72,7 +72,7 @@ const DypSystem = ({
               style={{ width: 50, height: 50 }}
               onMouseEnter={onShowFirstDesc}
               onMouseLeave={onRemoveDesc}
-              loading="lazy" 
+                
             />
           </div>
           <div className="satellite44">
@@ -83,7 +83,7 @@ const DypSystem = ({
               style={{ width: 50, height: 50 }}
               onMouseEnter={onShowSecondDesc}
               onMouseLeave={onRemoveDesc}
-              loading="lazy" 
+                
             />
             </NavLink>
           </div>
@@ -94,7 +94,7 @@ const DypSystem = ({
               style={{ width: 50, height: 50 }}
               onMouseEnter={onShowSixthDesc}
               onMouseLeave={onRemoveDesc}
-              loading="lazy" 
+                
             />
           </div>
 
@@ -105,13 +105,13 @@ const DypSystem = ({
               style={{ width: 50, height: 50 }}
               onMouseEnter={onShowSeventhDesc}
               onMouseLeave={onRemoveDesc}
-              loading="lazy" 
+                
             />
           </div>
         </div>
 
         <div className="planet">
-          <img src={DypRect} alt="dypPlanet" loading="lazy" />
+          <img src={DypRect} alt="dypPlanet"   />
         </div>
       </div>
     </div>

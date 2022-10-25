@@ -107,7 +107,7 @@ const Security = () => {
                             </p>
                           </div>
                           <span className="viewsite">
-                            View site <img src={filledArrow} className="ms-1" alt="" loading="lazy"/>
+                            View site <img src={filledArrow} className="ms-1" alt=""  />
                           </span>
                         </div></a>
                     </div>
@@ -125,7 +125,7 @@ const Security = () => {
                   find our audit results stored in our
                   repository!
                 </p>
-                <img src={github} alt='' className="github-logo" loading="lazy"/>
+                <img src={github} alt='' className="github-logo"  />
               </a>
             </div>
 
@@ -141,7 +141,7 @@ const Security = () => {
                       <div className="d-flex m-0 justify-content-between gap-2 align-items-center">
                         <span>{item.title}</span>
                         <div className="github-btn">
-                          <span>Github <img src={link} alt="" style={{ height: 25 }} loading="lazy" /></span>
+                          <span>Github <img src={link} alt="" style={{ height: 25 }}   /></span>
                         </div>
 
                       </div>
@@ -160,7 +160,7 @@ const Security = () => {
                           dangerouslySetInnerHTML={{ __html: item.title }}
                         ></span>
                         <div className="github-btn">
-                          <span>Github <img src={link} alt="" style={{ height: 25 }} loading="lazy"/></span>
+                          <span>Github <img src={link} alt="" style={{ height: 25 }}  /></span>
                         </div>
                       </div>
                     </a>
@@ -180,7 +180,7 @@ const Security = () => {
                           dangerouslySetInnerHTML={{ __html: item.title }}
                         ></span>
                       <div className="github-btn">
-                          <span>Github <img src={link} alt="" style={{ height: 25 }} loading="lazy"/></span>
+                          <span>Github <img src={link} alt="" style={{ height: 25 }}  /></span>
                         </div>
                       </div>
                     </a>
@@ -200,7 +200,7 @@ const Security = () => {
                           dangerouslySetInnerHTML={{ __html: item.title }}
                         ></span>
                         <div className="github-btn">
-                          <span>Github <img src={link} alt="" style={{ height: 25 }} loading="lazy"/></span>
+                          <span>Github <img src={link} alt="" style={{ height: 25 }}  /></span>
                         </div>
                       </div>
                     </a>
@@ -217,7 +217,7 @@ const Security = () => {
                           dangerouslySetInnerHTML={{ __html: item.title }}
                         ></span>
                          <div className="github-btn">
-                          <span>Github <img src={link} alt="" style={{ height: 25 }} loading="lazy"/></span>
+                          <span>Github <img src={link} alt="" style={{ height: 25 }}  /></span>
                         </div>
                       </div>
                     </a>
@@ -226,7 +226,7 @@ const Security = () => {
               })}
           </div>
         </div>
-        <img className='bluehero-solutions' src={require(`../../../assets/metaverse-blueHero.svg`).default} loading="lazy" alt="" style={{ bottom: '-186px', right: 0 }} />
+        <img className='bluehero-solutions' src={require(`../../../assets/metaverse-blueHero.svg`).default}   alt="" style={{ bottom: '-186px', right: 0 }} />
 
       </div>
     </div>

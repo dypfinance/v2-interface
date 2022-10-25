@@ -5,7 +5,7 @@ const ProposalCard = ({title, icon}) => {
     <>
     <div className="d-flex align-items-center justify-content-between w-100 px-4">
                     <div className="d-flex flex-row align-items-center gap-2">
-                        <img src={icon} alt="" loading="lazy"/>
+                        <img src={icon} alt=""  />
                         <p className="fw-bold mb-0">{title}</p>
                     </div>
                     <div className="d-flex gap-4">

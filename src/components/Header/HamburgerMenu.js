@@ -96,7 +96,7 @@ const HamburgerMenu = () => {
           }`}
         >
           <NavLink to="/">
-            <img src={logo ? dypiusLogoPurple : dypiusLogo} alt="" loading="lazy"/>
+            <img src={logo ? dypiusLogoPurple : dypiusLogo} alt=""  />
           </NavLink>
           <div
             id="hamburgermenu"
@@ -184,7 +184,7 @@ const HamburgerMenu = () => {
           </ul>
             <a href="https://tools.dyp.finance/news" target="_blank" rel="noreferrer" className="p-4 position-relative">
             <button className="btn dyp-tools-btn text-white py-2 px-3">
-                <img src={toolsLogo} className="pe-2" loading="lazy"/>
+                <img src={toolsLogo} className="pe-2"  />
                 DYP Tools
               </button>
               <img src={toolsBorder} className="tools-border" alt="" />

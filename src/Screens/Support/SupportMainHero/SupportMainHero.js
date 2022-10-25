@@ -15,17 +15,17 @@ const SupportMainHero = () => {
         <div className="container-lg d-flex justify-content-center align-items-end py-5">
         <div className="row justify-content-between w-100 align-items-center" style={{minHeight: 200}}>
         <div className="col-12 col-lg-5 col-md-5 mt-5 mt-lg-0 position-relative">
-          <img src={sphere} alt="" className="support-sphere d-none d-lg-block" loading="lazy"/>
+          <img src={sphere} alt="" className="support-sphere d-none d-lg-block"  />
           <Title top="Dypius" bottom="Support" align="d-flex flex-row gap-2" />
           <p className='text-secondary'>
           Get up to date information about Dypius products and solutions in one place. 
           </p>
         </div>
         <div className="col-12 col-lg-5 col-md-5 image-container position-relative">
-          <img src={supportShape} alt="" className="shape" loading="lazy"/>
-          <img src={supportPhone} alt="" className="phone" loading="lazy"/>
-          <img src={supportBrain} alt="" className="brain" loading="lazy"/>
-          <img src={bluehero} alt="" className="bluehero" loading="lazy"/>
+          <img src={supportShape} alt="" className="shape"  />
+          <img src={supportPhone} alt="" className="phone"  />
+          <img src={supportBrain} alt="" className="brain"  />
+          <img src={bluehero} alt="" className="bluehero"  />
         </div>
         </div>
         </div>
@@ -35,15 +35,15 @@ const SupportMainHero = () => {
       >
         <a href="#faq" className="text-decoration-none submenu-link">
           FAQs
-          <img src={indicator} className="submenu-indicator" alt="" loading="lazy"/>
+          <img src={indicator} className="submenu-indicator" alt=""  />
         </a>
         <a href="#tutorials" className="text-decoration-none submenu-link">
           Tutorials
-          <img src={indicator} className="submenu-indicator" alt="" loading="lazy"/>
+          <img src={indicator} className="submenu-indicator" alt=""  />
         </a>
         <a href="#helpcenter" className="text-decoration-none submenu-link">
           Contact us
-          <img src={indicator} className="submenu-indicator" alt="" loading="lazy"/>
+          <img src={indicator} className="submenu-indicator" alt=""  />
         </a>
       </div>
     </div>
