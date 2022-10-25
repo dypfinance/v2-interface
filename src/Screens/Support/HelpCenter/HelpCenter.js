@@ -350,9 +350,9 @@ const HelpCenter = () => {
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div className="help-form p-4">
+            <div className="help-form p-4 d-flex flex-column gap-3 mb-4">
               <h5 className="text-secondary mb-3">Fill out form</h5>
-              <div className="row gap-4 justify-content-center">
+              <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                 <StyledTextField
                   error={errors.name ? true : false}
                   size="small"
@@ -363,7 +363,7 @@ const HelpCenter = () => {
                   helperText={errors.name}
                   required
                   onChange={handleChange}
-                  sx={{ width: "250px" }}
+                  
                 />
                 <StyledTextField
                   error={errors.email ? true : false}
@@ -375,12 +375,12 @@ const HelpCenter = () => {
                   helperText={errors.email}
                   required
                   onChange={handleChange}
-                  sx={{ width: "250px" }}
+                  
                 />
               </div>
-              <div className="row gap-4 justify-content-center">
+              <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                 {formState.topic === true ? (
-                  <div className="selected-field d-flex gap-2 mt-lg-3 px-0">
+                  <div className="selected-field d-flex gap-2 px-0">
                     <StyledTextField
                       error={errors.topic ? true : false}
                       size="small"
@@ -391,7 +391,7 @@ const HelpCenter = () => {
                       helperText={errors.topic}
                       required
                       onChange={handleChange}
-                      sx={{ width: "200px" }}
+                      
                     />
                     <img
                       src={selectBtn}
@@ -409,9 +409,8 @@ const HelpCenter = () => {
                 ) : (
                   <FormControl
                     fullWidth
-                    className="mt-3"
                     size="small"
-                    sx={{ width: "250px" }}
+                    
                   >
                     <InputLabel id="demo-simple-select-error-label">
                       Select topic*
@@ -447,9 +446,7 @@ const HelpCenter = () => {
                 {values.social_account === "" ? (
                   <FormControl
                     fullWidth
-                    className="mt-0 mt-lg-3"
                     size="small"
-                    sx={{ width: "250px" }}
                   >
                     <InputLabel id="demo-simple-select-error-label">
                       Social account
@@ -472,7 +469,7 @@ const HelpCenter = () => {
                     <FormHelperText>{errors.social_account}</FormHelperText>
                   </FormControl>
                 ) : (
-                  <div className="selected-field d-flex gap-2 mt-lg-3 px-0">
+                  <div className="selected-field d-flex gap-2 px-0">
                     <StyledTextField
                       error={errors.username ? true : false}
                       size="small"
@@ -483,7 +480,6 @@ const HelpCenter = () => {
                       helperText={errors.username}
                       required
                       onChange={handleChange}
-                      sx={{ width: "200px" }}
                     />
                     <img
                       src={selectBtn}
@@ -510,13 +506,13 @@ const HelpCenter = () => {
                 helperText={errors.message}
                 required
                 onChange={handleChange}
-                className="w-100 mt-3"
+                className="w-100"
                 multiline
                 minRows={6}
                 maxRows={6}
               />
 
-              <div className="row px-0 flex-row mt-4">
+              <div className="row px-0 flex-row">
                 <div className="d-flex col-12 col-lg-6  flex-column gap-2">
                   <span className="d-flex gap-2">
                     <input
@@ -534,7 +530,7 @@ const HelpCenter = () => {
                           : `url(${filebg1})`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
-                        width: windowSize.width < 999 ? '100%' : '55%',
+                        width: windowSize.width < 999 ? '100%' : '75%',
                         border: "2px solid #D6D8E7",
                         fontSize: 0
                       }}
@@ -588,10 +584,10 @@ const HelpCenter = () => {
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div className="help-form p-4">
+            <div className="help-form p-4 p-4 d-flex flex-column gap-3 mb-4">
               <h5 className="text-secondary mb-3">Fill out form</h5>
 
-              <div className="row gap-4 justify-content-center">
+              <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                 <StyledTextField
                   error={businessErrors.name ? true : false}
                   size="small"
@@ -602,10 +598,11 @@ const HelpCenter = () => {
                   helperText={businessErrors.name}
                   onChange={handleBusinessChange}
                   required
-                  sx={{ width: "250px" }}
+                  sx={{ width: "100%" }}
+                  
                 />
                 {formState.job_title === false ? (
-                  <FormControl fullWidth sx={{ width: "250px" }} size="small">
+                  <FormControl fullWidth size="small">
                     <InputLabel id="demo-simple-select-error-label">
                       Job Title*
                     </InputLabel>
@@ -648,7 +645,6 @@ const HelpCenter = () => {
                       helperText={businessErrors.job}
                       required
                       onChange={handleBusinessChange}
-                      sx={{ width: "200px" }}
                     />
                     <img
                       src={selectBtn}
@@ -665,7 +661,7 @@ const HelpCenter = () => {
                   </div>
                 )}
               </div>
-              <div className="row gap-4 justify-content-center mt-3">
+              <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                 <StyledTextField
                   error={businessErrors.organization ? true : false}
                   size="small"
@@ -676,7 +672,7 @@ const HelpCenter = () => {
                   helperText={businessErrors.organization}
                   onChange={handleBusinessChange}
                   required
-                  sx={{ width: "250px" }}
+                  
                 />
                 <StyledTextField
                   error={businessErrors.email ? true : false}
@@ -688,11 +684,11 @@ const HelpCenter = () => {
                   helperText={businessErrors.email}
                   onChange={handleBusinessChange}
                   required
-                  sx={{ width: "250px" }}
+                  
                 />
               </div>
               {formState.subject === false ? (
-                <FormControl fullWidth className="mt-4" size="small">
+                <FormControl fullWidth className="selected-field d-flex gap-2 px-0" size="small">
                   <InputLabel id="demo-simple-select-error-label">
                     Subject*
                   </InputLabel>
@@ -722,7 +718,7 @@ const HelpCenter = () => {
                   <FormHelperText>{businessErrors.subject}</FormHelperText>
                 </FormControl>
               ) : (
-                <div className="selected-field d-flex gap-2 mt-lg-3 px-0">
+                <div className="selected-field d-flex gap-2 px-0">
                   <StyledTextField
                     error={businessErrors.subject ? true : false}
                     size="small"
@@ -733,7 +729,7 @@ const HelpCenter = () => {
                     helperText={businessErrors.subject}
                     required
                     onChange={handleBusinessChange}
-                    sx={{ width: "500px" }}
+                    
                   />
                   <img
                     src={selectBtn}
@@ -756,12 +752,12 @@ const HelpCenter = () => {
                 helperText={businessErrors.message}
                 onChange={handleBusinessChange}
                 required
-                className="w-100 mt-3"
+                className="w-100 "
                 multiline
                 minRows={3}
                 maxRows={5}
               />
-              <div className="row px-0 flex-row mt-4">
+              <div className="row px-0 flex-row ">
                 <div className="d-flex col-12 col-lg-6  flex-column gap-2">
                   <span className="d-flex gap-2">
                     <input
@@ -776,7 +772,7 @@ const HelpCenter = () => {
                           : `url(${filebg1})`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
-                        width: windowSize.width < 999 ? '100%' : '55%',
+                        width: windowSize.width < 999 ? '100%' : '75%',
                         border: "2px solid #D6D8E7",
                       }}
                     />
