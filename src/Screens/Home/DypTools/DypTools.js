@@ -5,28 +5,20 @@ import Title from "../../../components/Title/Title";
 import filledArrow from "../../../assets/filledArrow.svg";
 import Laptop from "../../../assets/laptop.png";
 import dots from "../../../assets/dots.png";
-import { tada } from "react-animations";
 import Triangle from "../../../assets/purple-triangle.svg";
 import useWindowSize from '../../../hooks/useWindowSize'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
-
-const taDa = keyframes`${tada}`;
-const TadaDiv = styled.span`
-  animation: 4s ${taDa} infinite;
-`;
-
 const DypTools = () => {
  
+  const windowSize = useWindowSize()
+
   useEffect(() => {
     AOS.init()
   }, [])
+
   
-  const windowSize = useWindowSize()
-
-
   return (
     <div className="container-lg d-flex justify-content-center">
       <div className="row dyp-tools">

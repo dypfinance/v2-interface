@@ -27,8 +27,8 @@ const BuyDyp = () => {
           />
           <p
             className="text-secondary"
-            data-aos="fade-up"
-            data-aos-duration="1000"
+             data-aos="fade-up"
+             data-aos-duration="1000"
           >
             At Dypius, we want to make it easy for you to purchase our token. We
             have a variety of centralized and decentralized exchanges that you
@@ -39,8 +39,8 @@ const BuyDyp = () => {
               className="btn filled-btn d-flex justify-content-center align-items-center "
               style={{ width: "24%" }}
               to='/buydyp'
-              data-aos="fade-up"
-              data-aos-duration="1000"
+               data-aos="fade-up"
+               data-aos-duration="1000"
               // onClick={()=>{ window.scrollTo(0, 0)}}
             >
               Explore
