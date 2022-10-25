@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./_dyppartners.scss";
 import Title from "../../../components/Title/Title";
-import Slider from "react-slick";
 import { useState } from "react";
+import useWindowSize from '../../../hooks/useWindowSize'
 
 const DypPartners = () => {
 
-const [partnersLength, setPartnersLength] = useState(12)
+const windowSize = useWindowSize();
+const [partnersLength, setPartnersLength] = useState(0)
 
   const partnersArray = [
     {
@@ -49,11 +50,6 @@ const [partnersLength, setPartnersLength] = useState(12)
       text: "Coin98",
       href: "https://coin98.com/wallet",
     },
-    // {
-    //     image: "uniswap.png",
-    //     text: "Uniswap V2",
-    //     href: 'https://app.uniswap.org/'
-    // },
     {
       image: "efficient-frontier.png",
       text: "Efficient Frontier",
@@ -121,20 +117,26 @@ const [partnersLength, setPartnersLength] = useState(12)
     },
   ];
 
-  const settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 4000,
-    autoplaySpeed: 4000,
-    cssEase: "linear",
-  };
+
+  const partnerSize = () =>{
+    if(windowSize.width < 786){
+      setPartnersLength(4)
+    }else{
+      setPartnersLength(12)
+    }
+  }
+
+  useEffect(() => {
+   partnerSize()
+  }, [windowSize.width])
+  
+
+  const loadLess = () => {
+    windowSize.width < 786 ? setPartnersLength(4) : setPartnersLength(12)
+  }
 
   const loadMore = () => {
-    setPartnersLength(partnersLength + 12)
+    setPartnersLength(partnersLength + partnersArray.length)
   }
 
   return (
@@ -163,8 +165,10 @@ const [partnersLength, setPartnersLength] = useState(12)
               </div>
             </a>
           ))}
-          <div className={`btn outline-btn ${partnersLength < 23 ? 'd-flex' : 'd-none'} justify-content-center align-items-center position-absolute load-more`}  onClick={loadMore}>Load More</div>
         </div>
+         <div className="w-100 d-flex justify-content-center align-items-center">
+         <div className={`btn outline-btn d-flex justify-content-center align-items-center position-absolute load-more`}  onClick={partnersLength > partnersArray.length ? loadLess : loadMore}>{partnersLength > partnersArray.length ? "Show Less" : "Load More"}</div>
+         </div>
       </div>
     </div>
   );
