@@ -6,9 +6,9 @@ import AvaxLogo from "../../../assets/avax.svg";
 import CountUp from "react-countup";
 import AuditedByItem from "../../../components/AuditedByItem/AuditedByItem";
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
-import Pin from '../../../assets/pin.svg'
+import Pin from "../../../assets/pin.svg";
 
-const   ChainlinkData = () => {
+const ChainlinkData = () => {
   const [totalpaid, setTotalPaid] = useState();
 
   const getTotalPaidData = async () => {
@@ -40,10 +40,19 @@ const   ChainlinkData = () => {
       <div className="container-lg position-relative">
         <div className="row justify-content-between mt-5 gap-4">
           <div className="d-grid">
-            <span className="chainlink-data-title">Provided by Chainlink</span>
+            <a
+              href="https://data.chain.link/"
+              target={"_blank"}
+              rel="noreferrer"
+              // style={{zIndex: 10}}
+            >
+              <span className="chainlink-data-title">
+                Provided by Chainlink
+              </span>
+            </a>
             <div className="row chainlink-row m-0">
               <div className="chainlink-cell">
-                <img src={EthereumLogo} alt="eth" loading="lazy"/>{" "}
+                <img src={EthereumLogo} alt="eth" loading="lazy" />{" "}
                 <div className="d-flex align-items-baseline gap-2">
                   <span className="totalpaid-amount">
                     {getFormattedNumber(
@@ -55,7 +64,7 @@ const   ChainlinkData = () => {
                 </div>
               </div>
               <div className="chainlink-cell">
-                <img src={BnbLogo} alt="bnb" loading="lazy"/>
+                <img src={BnbLogo} alt="bnb" loading="lazy" />
                 <div className="d-flex align-items-baseline gap-2">
                   <span className="totalpaid-amount">
                     {getFormattedNumber(
@@ -67,7 +76,7 @@ const   ChainlinkData = () => {
                 </div>
               </div>
               <div className="chainlink-cell">
-                <img src={AvaxLogo} alt="avax" loading="lazy"/>
+                <img src={AvaxLogo} alt="avax" loading="lazy" />
                 <div className="d-flex align-items-baseline gap-2">
                   <span className="totalpaid-amount">
                     {getFormattedNumber(
@@ -102,10 +111,8 @@ const   ChainlinkData = () => {
             </div>
           </div>
 
-          <div className="d-grid" style={{gap: 15}}>
-            <span className="chainlink-data-title">
-              Audited by
-            </span>
+          <div className="d-grid" style={{ gap: 15 }}>
+            <span className="chainlink-data-title">Audited by</span>
             <div className="row audit">
               {auditedByArray.map((item, index) => {
                 return (
@@ -119,8 +126,8 @@ const   ChainlinkData = () => {
             </div>
           </div>
         </div>
-   <img src={Pin} className='pin' loading="lazy"/>     </div>
-    
+        <img src={Pin} className="pin" loading="lazy" />{" "}
+      </div>
     </div>
   );
 };
