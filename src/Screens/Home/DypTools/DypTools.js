@@ -5,16 +5,11 @@ import Title from "../../../components/Title/Title";
 import filledArrow from "../../../assets/filledArrow.svg";
 import Laptop from "../../../assets/laptop.png";
 import dots from "../../../assets/dots.png";
-import { tada } from "react-animations";
 import Triangle from "../../../assets/purple-triangle.svg";
 import useWindowSize from "../../../hooks/useWindowSize";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const taDa = keyframes`${tada}`;
-const TadaDiv = styled.span`
-  animation: 4s ${taDa} infinite;
-`;
 
 const DypTools = () => {
   const windowSize = useWindowSize();
@@ -28,8 +23,8 @@ const DypTools = () => {
               <Title
                 top="DYP Tools"
                 bottom="Powerful dApps"
-                animation="fade-up"
-                duration="1000"
+                // animation="fade-up"
+                // duration="1000"
               />
               <ListCard
                 content="A wide range of impressive decentralized applications"
