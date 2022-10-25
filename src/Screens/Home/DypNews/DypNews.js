@@ -53,6 +53,15 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
           dots: page === "news" ? false : true,
         },
       },
+      {
+        breakpoint: 300,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          fade: true,
+          dots: page === "news" ? false : true,
+        },
+      },
     ],
   };
 
@@ -191,7 +200,7 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
         </div>
         {page === 'news' &&
               windowSize.width < 786 &&
-              <div className="slider-buttons d-flex flex-row w-100 justify-content-between px-5 pb-3" style={{marginTop: '8rem'}}>
+              <div className="slider-buttons d-flex flex-row w-100 justify-content-end gap-4 px-5 pb-3" style={{marginTop: '8rem'}}>
               <div
                 className="prev-button d-flex justify-content-center align-items-center"
                 onClick={previous}
