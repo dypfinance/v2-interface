@@ -20,7 +20,7 @@ const Home = () => {
       <Suspense fallback={<div>Loading</div>}>
       <DypPartners />
       </Suspense>
-      <DypNews topTitle='Announcements' bottomTitle='Stay tuned'/>
+      {/* <DypNews topTitle='Announcements' bottomTitle='Stay tuned'/> */}
     </div>
   );
 };

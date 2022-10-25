@@ -33,8 +33,8 @@ const DypToken = () => {
             top="DYP Token"
             bottom="Empower your future"
             align="text-end"
-            animation="fade-up"
-            duration="1000"
+            // animation="fade-up"
+            // duration="1000"
           />
           <p className="text-end" 
           // data-aos="fade-up"

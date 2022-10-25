@@ -59,9 +59,9 @@ const DypTools = () => {
         </div>
         <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center position-relative">
           <div
-            className={`${
-              windowSize.width < 786 ? "pulse" : `rotate-scale-up`
-            }`}
+            // className={`${
+            //   windowSize.width < 786 ? "pulse" : `rotate-scale-up`
+            // }`}
           >
             {/* <img className="iphoneBackground" src={iphoneBg} alt="" /> */}
           </div>
