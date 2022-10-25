@@ -41,6 +41,7 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
+          dots: page === "news" ? false : true,
         },
       },
       {
@@ -49,6 +50,16 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
           slidesToShow: 1,
           slidesToScroll: 1,
           fade: true,
+          dots: page === "news" ? false : true,
+        },
+      },
+      {
+        breakpoint: 300,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          fade: true,
+          dots: page === "news" ? false : true,
         },
       },
     ],
@@ -121,8 +132,8 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
         <div className="col-12 d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center ps-4 ps-lg-2 mb-5 mb-lg-0 gap-4">
           {page === "news" ? (
             <>
-              <img src={rainbowHero} alt="" className="rainbow-hero" loading="lazy"/>
-              <img src={rainbowHero} alt="" className="rainbow-hero-2" loading="lazy"/>
+              <img src={rainbowHero} alt="" className="rainbow-hero"  />
+              <img src={rainbowHero} alt="" className="rainbow-hero-2"  />
             </>
           ) : (
             <img
@@ -140,13 +151,13 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
                   onClick={previous}
                   style={{zIndex: 3}}
                 >
-                  <img src={prevArrow} alt="" loading="lazy"/>
+                  <img src={prevArrow} alt=""  />
                 </div>
                 <div
                   className="next-button d-flex justify-content-center align-items-center"
                   onClick={next}
                 >
-                  <img src={nextArrow} alt="" loading="lazy"/>
+                  <img src={nextArrow} alt=""  />
                 </div>
               </div>
              : 
@@ -189,18 +200,18 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
         </div>
         {page === 'news' &&
               windowSize.width < 786 &&
-              <div className="slider-buttons d-flex flex-row w-100 justify-content-between px-5 pb-3" style={{marginTop: '5rem'}}>
+              <div className="slider-buttons d-flex flex-row w-100 justify-content-end gap-4 px-5 pb-3" style={{marginTop: '8rem'}}>
               <div
                 className="prev-button d-flex justify-content-center align-items-center"
                 onClick={previous}
               >
-                <img src={prevArrow} alt="" loading="lazy"/>
+                <img src={prevArrow} alt=""  />
               </div>
               <div
                 className="next-button d-flex justify-content-center align-items-center"
                 onClick={next}
               >
-                <img src={nextArrow} alt="" loading="lazy"/>
+                <img src={nextArrow} alt=""  />
               </div>
             </div>
           }

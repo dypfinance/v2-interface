@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaArrowCircleUp } from "react-icons/fa";
+import backToTop from '../../assets/backToTop.svg'
 
 const ScrollTop = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -25,14 +25,8 @@ const ScrollTop = () => {
 
   return (
     <div className="container-lg">
-    <FaArrowCircleUp
-      className="scrollTop"
-      onClick={scrollTop}
-      style={{
-        height: 40,
-        display: showScroll ? "flex" : "none",
-      }}
-    /></div>
+    <img src={backToTop} className={`scrollTop ${showScroll ? 'd-flex' : 'd-none'}`} onClick={scrollTop} alt="" />
+    </div>
   );
 };
 

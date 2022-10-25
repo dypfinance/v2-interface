@@ -88,7 +88,7 @@ const Navbar = () => {
       >
         <div className="col-2 d-flex justify-content-start">
           <NavLink className="d-flex" to="/">
-            <img src={logo ? dypiusLogoPurple : dypiusLogo} alt="" loading="lazy"/>
+            <img src={logo ? dypiusLogoPurple : dypiusLogo} alt=""  />
           </NavLink>
         </div>
         <div className="col-6 bg-white d-flex justify-content-around align-items-center py-3 links">
@@ -144,7 +144,7 @@ const Navbar = () => {
             href="https://tools.dyp.finance/news"
           >
             <button className="btn tools-btn text-white">
-              <img src={toolsLogo} className="pe-2" alt="" loading="lazy"/>
+              <img src={toolsLogo} className="pe-2" alt=""  />
               DYP Tools
             </button>
           </a>

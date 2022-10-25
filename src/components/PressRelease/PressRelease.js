@@ -28,7 +28,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coinmarketcap.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/coinmarketcap.png")} alt=""  />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
@@ -38,7 +38,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitinsider.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/bitinsider.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius4"></td>
@@ -50,7 +50,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/medium.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/medium.png")} alt=""  />
                 </a>
               </td>
 
@@ -61,12 +61,12 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitcoincom.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/bitcoincom.png")} alt=""  />
                 </a>
               </td>
               <td className="radius6 presscell"></td>
               <td className="radius5 presscell">
-                <img src={require("./news/gateio.png")} alt="" loading="lazy"/>
+                <img src={require("./news/gateio.png")} alt=""  />
               </td>
               <td className="presscell radius2"></td>
               <td className="radius1 presscell"></td>
@@ -76,7 +76,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitcoinist.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/bitcoinist.png")} alt=""  />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
@@ -86,7 +86,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coinmarketcap.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/coinmarketcap.png")} alt=""  />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
@@ -96,7 +96,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitinsider.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/bitinsider.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius4"></td>
@@ -108,7 +108,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/medium.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/medium.png")} alt=""  />
                 </a>
               </td>
 
@@ -119,12 +119,12 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitcoincom.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/bitcoincom.png")} alt=""  />
                 </a>
               </td>
               <td className="radius6 presscell"></td>
               <td className="radius5 presscell">
-                <img src={require("./news/gateio.png")} alt="" loading="lazy"/>
+                <img src={require("./news/gateio.png")} alt=""  />
               </td>
               <td className="presscell radius2"></td>
               <td className="radius1 presscell"></td>
@@ -134,7 +134,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitcoinist.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/bitcoinist.png")} alt=""  />
                 </a>
               </td>
             </tr>
@@ -146,7 +146,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/yahoo.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/yahoo.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius10"></td>
@@ -156,7 +156,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/marketwatch.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/marketwatch.png")} alt=""  />
                 </a>
               </td>
               <td className="radius4 presscell"></td>
@@ -166,7 +166,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/apnews.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/apnews.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -176,7 +176,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptofold.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/cryptofold.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius10">
@@ -185,7 +185,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/newsbtc.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/newsbtc.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -198,7 +198,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/hackernoon.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/hackernoon.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -209,7 +209,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/yahoo.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/yahoo.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius10"></td>
@@ -219,7 +219,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/marketwatch.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/marketwatch.png")} alt=""  />
                 </a>
               </td>
               <td className="radius4 presscell"></td>
@@ -229,7 +229,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/apnews.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/apnews.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -239,7 +239,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptofold.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/cryptofold.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius10">
@@ -248,7 +248,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/newsbtc.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/newsbtc.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -261,7 +261,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/hackernoon.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/hackernoon.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -273,7 +273,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/blokonomi.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/blokonomi.png")} alt=""  />
                 </a>
               </td>
               <td className="radius10 presscell"></td>
@@ -283,7 +283,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/techbullion.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/techbullion.png")} alt=""  />
                 </a>
               </td>
 
@@ -295,7 +295,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/utoday.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/utoday.png")} alt=""  />
                 </a>
               </td>
 
@@ -307,13 +307,13 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptopress.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/cryptopress.png")} alt=""  />
                 </a>
               </td>
               <td className="radius7 presscell"></td>
 
               <td className="presscell radius10">
-                <img src={require("./news/coinspeaker.png")} alt="" loading="lazy"/>
+                <img src={require("./news/coinspeaker.png")} alt=""  />
               </td>
               <td className="presscell radius1">
                 <a
@@ -321,7 +321,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptocompare.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/cryptocompare.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius7">
@@ -330,13 +330,13 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cointelegraph.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/cointelegraph.png")} alt=""  />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
 
               <td className="presscell radius7">
-                <img src={require("./news/mycointainer.png")} alt="" loading="lazy"/>
+                <img src={require("./news/mycointainer.png")} alt=""  />
               </td>
 
               <td className="presscell radius1">
@@ -345,7 +345,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/blokonomi.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/blokonomi.png")} alt=""  />
                 </a>
               </td>
               <td className="radius10 presscell"></td>
@@ -355,7 +355,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/techbullion.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/techbullion.png")} alt=""  />
                 </a>
               </td>
 
@@ -367,7 +367,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/utoday.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/utoday.png")} alt=""  />
                 </a>
               </td>
 
@@ -379,7 +379,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptopress.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/cryptopress.png")} alt=""  />
                 </a>
               </td>
               <td className="radius7 presscell"></td>
@@ -393,7 +393,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptocompare.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/cryptocompare.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius7">
@@ -402,18 +402,18 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cointelegraph.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/cointelegraph.png")} alt=""  />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
 
               <td className="presscell radius7">
-                <img src={require("./news/mycointainer.png")} alt="" loading="lazy"/>
+                <img src={require("./news/mycointainer.png")} alt=""  />
               </td>
             </tr>
             <tr>
               <td className="presscell radius7">
-                <img src={require("./news/uptrennd.png")} alt="" loading="lazy"/>
+                <img src={require("./news/uptrennd.png")} alt=""  />
               </td>
               <td className="radius1 presscell"></td>
 
@@ -423,7 +423,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coindex.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/coindex.png")} alt=""  />
                 </a>
               </td>
 
@@ -434,7 +434,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coindoo.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/coindoo.png")} alt=""  />
                 </a>
               </td>
 
@@ -445,13 +445,13 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coinmanager.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/coinmanager.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius1"></td>
 
               <td className="presscell radius2">
-                <img src={require("./news/bithumb.png")} alt="" loading="lazy"/>
+                <img src={require("./news/bithumb.png")} alt=""  />
               </td>
               <td className="presscell radius1">
                 <a
@@ -459,18 +459,18 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptopotato.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/cryptopotato.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius5"></td>
               <td className="presscell radius8"></td>
               <td className="presscell radius1">
-                <img src={require("./news/coingape.png")} alt="" loading="lazy"/>
+                <img src={require("./news/coingape.png")} alt=""  />
               </td>
 
               <td className="presscell radius2"></td>
               <td className="presscell radius7">
-                <img src={require("./news/uptrennd.png")} alt="" loading="lazy"/>
+                <img src={require("./news/uptrennd.png")} alt=""  />
               </td>
               <td className="radius1 presscell"></td>
 
@@ -480,7 +480,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coindex.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/coindex.png")} alt=""  />
                 </a>
               </td>
 
@@ -491,7 +491,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coindoo.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/coindoo.png")} alt=""  />
                 </a>
               </td>
 
@@ -502,13 +502,13 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coinmanager.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/coinmanager.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius1"></td>
 
               <td className="presscell radius2">
-                <img src={require("./news/bithumb.png")} alt="" loading="lazy"/>
+                <img src={require("./news/bithumb.png")} alt=""  />
               </td>
               <td className="presscell radius1">
               <a
@@ -516,7 +516,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptopotato.png")} alt="" loading="lazy"/>
+                  <img src={require("./news/cryptopotato.png")} alt=""  />
                 </a>
               </td>
               <td className="presscell radius5"></td>
@@ -527,7 +527,7 @@ const PressRelease = () => {
                 target="_blank"
                 rel="noreferrer nofollow"
               >
-                <img src={require("./news/coingape.png")} alt="" loading="lazy"/>
+                <img src={require("./news/coingape.png")} alt=""  />
                 </a>
               </td>
 

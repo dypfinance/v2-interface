@@ -5,25 +5,20 @@ import Title from "../../../components/Title/Title";
 import filledArrow from "../../../assets/filledArrow.svg";
 import Laptop from "../../../assets/laptop.png";
 import dots from "../../../assets/dots.png";
-import { tada } from "react-animations";
 import Triangle from "../../../assets/purple-triangle.svg";
+import useWindowSize from '../../../hooks/useWindowSize'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
-const taDa = keyframes`${tada}`;
-const TadaDiv = styled.span`
-  animation: 4s ${taDa} infinite;
-`;
-
 const DypTools = () => {
  
+  const windowSize = useWindowSize()
+
   useEffect(() => {
     AOS.init()
   }, [])
+
   
-
-
   return (
     <div className="container-lg d-flex justify-content-center">
       <div className="row dyp-tools">
@@ -40,17 +35,17 @@ const DypTools = () => {
 
             </div>
             <a href={'https://tools.dyp.finance'} target={'_blank'} rel='noreferrer' className="btn d-flex align-items-center justify-content-center outline-btn m-md-auto m-sm-auto m-lg-0" data-aos='fade-up' data-aos-delay='500' data-aos-duration='1000'>
-              Go to DYP Tools <img src={filledArrow} alt="" className="ml-2" loading="lazy"/>
+              Go to DYP Tools <img src={filledArrow} alt="" className="ml-2"  />
             </a>
           </div>
         </div>
         <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center position-relative">
-          <div className="rotate-scale-up">
+          <div className={`${windowSize.width < 786 ? 'pulse' : `rotate-scale-up`}`}>
             {/* <img className="iphoneBackground" src={iphoneBg} alt="" /> */}
           </div>
-          <img src={Triangle} className="triangle" loading="lazy"/>
-          <img className="iphone" src={Laptop} alt="" loading="lazy"/>
-          <img className="dots2" src={dots} alt="" loading="lazy"/>
+          <img src={Triangle} className="triangle"  />
+          <img className="iphone" src={Laptop} alt=""  />
+          <img className="dots2" src={dots} alt=""  />
         </div>
       </div>
     </div>

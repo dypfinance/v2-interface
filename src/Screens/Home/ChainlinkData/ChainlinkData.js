@@ -52,7 +52,7 @@ const ChainlinkData = () => {
             </a>
             <div className="row chainlink-row m-0">
               <div className="chainlink-cell">
-                <img src={EthereumLogo} alt="eth" loading="lazy" />{" "}
+                <img src={EthereumLogo} alt="eth"   />{" "}
                 <div className="d-flex align-items-baseline gap-2">
                   <span className="totalpaid-amount">
                     {getFormattedNumber(
@@ -64,7 +64,7 @@ const ChainlinkData = () => {
                 </div>
               </div>
               <div className="chainlink-cell">
-                <img src={BnbLogo} alt="bnb" loading="lazy" />
+                <img src={BnbLogo} alt="bnb"   />
                 <div className="d-flex align-items-baseline gap-2">
                   <span className="totalpaid-amount">
                     {getFormattedNumber(
@@ -76,7 +76,7 @@ const ChainlinkData = () => {
                 </div>
               </div>
               <div className="chainlink-cell">
-                <img src={AvaxLogo} alt="avax" loading="lazy" />
+                <img src={AvaxLogo} alt="avax"   />
                 <div className="d-flex align-items-baseline gap-2">
                   <span className="totalpaid-amount">
                     {getFormattedNumber(
@@ -126,7 +126,7 @@ const ChainlinkData = () => {
             </div>
           </div>
         </div>
-        <img src={Pin} className="pin" loading="lazy" />{" "}
+        <img src={Pin} className="pin"   />{" "}
       </div>
     </div>
   );

@@ -23,6 +23,7 @@ import removebtn from "../../About/assets/remove-btn.svg";
 import selectBtn from "../assets/selectBtn.svg";
 import Modal from "../../../components/Modal/Modal";
 import ring from "../../../assets/tokenCircle.png";
+import useWindowSize from "../../../hooks/useWindowSize";
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -155,6 +156,7 @@ const HelpCenter = () => {
   });
 
   const recaptchaRef = useRef(null);
+  const windowSize = useWindowSize();
 
   const handleChange = async (e) => {
     const { name, value } = e.target;
@@ -332,7 +334,7 @@ const HelpCenter = () => {
         className="row contact-container position-relative"
         style={{ marginTop: "7rem" }}
       >
-        <img src={ring} alt="" className="help-ring d-none d-lg-block" loading="lazy"/>
+        <img src={ring} alt="" className="help-ring d-none d-lg-block"  />
         <FormContainer
           title="General Inquiry"
           desc="Get immediate help and support for Dypius products and solutions."
@@ -532,7 +534,7 @@ const HelpCenter = () => {
                           : `url(${filebg1})`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
-                        width: "55%",
+                        width: windowSize.width < 999 ? '100%' : '55%',
                         border: "2px solid #D6D8E7",
                         fontSize: 0
                       }}
@@ -774,7 +776,7 @@ const HelpCenter = () => {
                           : `url(${filebg1})`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
-                        width: "55%",
+                        width: windowSize.width < 999 ? '100%' : '55%',
                         border: "2px solid #D6D8E7",
                       }}
                     />

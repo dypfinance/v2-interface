@@ -4,9 +4,9 @@ const GovCards = ({ title, description, number, step, icon, delay }) => {
   return (
     <div
       className={`gov-card position-relative py-4 py-lg-auto ${step}`}
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-delay={delay}
+       data-aos="fade-up"
+       data-aos-duration="1000"
+       data-aos-delay={delay}
     >
       <div className="row gap-3 m-0 justify-content-between align-items-center">
         <div className="d-flex flex-column gap-2 pl-0">

@@ -83,15 +83,6 @@
   margin-left: -13em;
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-
-  -webkit-animation-name: orbit;
-  animation-name: orbit;
-  -webkit-animation-duration: 15s;
-  animation-duration: 15s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
 }
 
 .satellite3 {
@@ -403,7 +394,6 @@
    scale: 0.8 !important;
    transform: translate(110px, -50px) !important;
   }
-  .outline-btn {
-    width: auto !important;
-  }
+
+  
  }

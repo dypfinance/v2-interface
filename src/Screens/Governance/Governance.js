@@ -68,7 +68,7 @@ const Governance = () => {
               governance initiatives, and other programs.
             </p>
             <button className="filled-btn btn">
-              View more <img src={rightArrow} alt="" className="ml-2" loading="lazy"/>
+              View more <img src={rightArrow} alt="" className="ml-2"  />
             </button>
           </div>
           <div className="row m-0 justify-content-between gap-4 mt-4 position-relative">
@@ -76,18 +76,18 @@ const Governance = () => {
               src={purplelink}
               className="purplelink"
               alt=""
-              loading="lazy"
-              data-aos="fade-up"
-              data-aos-duration="1000"
+               
+               data-aos="fade-up"
+               data-aos-duration="1000"
             />
 
             <img
               src={purplelinkmd}
               className="purplelinkmd"
               alt=""
-              loading="lazy"
-              data-aos="fade-up"
-              data-aos-duration="1000"
+               
+               data-aos="fade-up"
+               data-aos-duration="1000"
             />
             {govcards.length > 0 &&
               govcards.map((item, index) => {

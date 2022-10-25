@@ -98,3 +98,31 @@
   -webkit-animation-delay: 3s, 1s;
   animation-delay: 3s, 1s;
 }
+
+
+@media only screen and (max-width: 500px) {
+  .comet {
+    animation: none !important;
+  }
+
+  .comet:nth-of-type(2) {
+    top: 141px !important;
+  }
+  
+  .comet:nth-of-type(3) {
+    left: 30% !important;
+    top: 440px !important;
+  }
+
+  .comet:nth-of-type(5) {
+    left: 14% !important; 
+    top: 600px !important;
+}
+
+.comet:nth-of-type(6) {
+  left: 22% !important;
+}
+.comet:nth-of-type(7) {
+  left: 58% !important; 
+}
+}

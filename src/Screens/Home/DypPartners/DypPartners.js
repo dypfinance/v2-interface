@@ -151,8 +151,8 @@ const [partnersLength, setPartnersLength] = useState(0)
 
         <div
           className="row dyp-partners position-relative p-5 justify-content-center"
-          data-aos="fade-up"
-          data-aos-duration="1000"
+           data-aos="fade-up"
+           data-aos-duration="1000"
         >
           {partnersArray.slice(0, partnersLength).map((partner, index) => (
             <a href={partner.href} target="_blank"  key={index}>
@@ -160,7 +160,7 @@ const [partnersLength, setPartnersLength] = useState(0)
               
                 className="partner_wrapper d-flex flex-column align-items-center justify-content-center"
               >
-                <img src={`/PartnerIcons/${partner.image}`} alt="" loading="lazy"/>
+                <img src={`/PartnerIcons/${partner.image}`} alt=""  />
                 <p className="mb-0 text-dark">{partner.text}</p>
               </div>
             </a>
