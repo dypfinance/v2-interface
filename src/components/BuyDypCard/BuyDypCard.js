@@ -26,7 +26,7 @@ const BuyDypCard = ({ title, logo, link, totalvids, videos, id }) => {
       <div className="accordion-item border-0">
         <h2 className="accordion-header" id={title}>
           <button
-            className="pl-0 pr-0 accordion-button viewtutorials pb-0"
+            className="pl-0 pr-0 accordion-button collapsed viewtutorials pb-0"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target={`#${id}`}
