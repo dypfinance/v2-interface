@@ -5,6 +5,9 @@ import toolsLogo from "../../assets/dypToolsLogo.svg";
 import { NavLink } from "react-router-dom";
 import dypiusLogo from "../../assets/dypiusLogo.svg";
 import dypiusLogoPurple from "../../assets/dypius-purple.svg";
+import mobileNavArrow from '../../assets/mobileNavArrow.svg';
+import toolsBorder from "../../assets/toolsBorder.svg";
+
 
 const HamburgerMenu = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -14,10 +17,14 @@ const HamburgerMenu = () => {
 
   const showNavbar = () => {
     if (typeof window !== "undefined") {
-      if (window.scrollY > lastScrollY) {
-        setShow(true);
-      } else {
-        setShow(false);
+      if(window.scrollY < 300){
+        setShow(false)
+      }else{
+        if (window.scrollY > lastScrollY) {
+          setShow(true);
+        } else {
+          setShow(false);
+        }
       }
     }
 
@@ -107,67 +114,81 @@ const HamburgerMenu = () => {
         </div>
         <div
           id="bgmenu"
-          className={`bg-white d-flex d-lg-none d-xl-none justify-content-around align-items-center py-3 links menu ${
+          className={`bg-white d-flex flex-column d-lg-none d-xl-none justify-content-start align-items-center py-3 links menu ${
             openMenu === true && "openMenu"
           }`}
         >
-          <ul>
-            <li>
+          <ul className="w-100 px-0">
+            <li className="mobile-navlink m-0 p-4">
               <NavLink
-                className="text-decoration-none"
+                className="text-decoration-none d-flex justify-content-between align-items-center"
                 to="/dyp"
                 onClick={() => {
                   setOpenMenu(!openMenu);
                 }}
               >
                 DYP
+                <img src={mobileNavArrow} alt="" />
               </NavLink>
             </li>
-            <li>
-              <a className="text-decoration-none" href="#metaverse">
+              <hr className="mobile-hr" />
+            <li className="mobile-navlink m-0 p-4">
+              <a className="text-decoration-none d-flex justify-content-between align-items-center" href="#metaverse">
                 Metaverse World
+                <img src={mobileNavArrow} alt="" />
               </a>
             </li>
-            <li>
+              <hr className="mobile-hr" />
+            <li className="mobile-navlink m-0 p-4">
               <NavLink
-                className="text-decoration-none"
+                className="text-decoration-none d-flex justify-content-between align-items-center"
                 to="/governance"
                 onClick={() => {
                   setOpenMenu(!openMenu);
                 }}
               >
                 Governance
+                <img src={mobileNavArrow} alt="" />
+
               </NavLink>
             </li>
-            <li>
+              <hr className="mobile-hr" />
+            <li className="mobile-navlink m-0 p-4">
               <NavLink
-                className="text-decoration-none"
+                className="text-decoration-none d-flex justify-content-between align-items-center"
                 to="/support"
                 onClick={() => {
                   setOpenMenu(!openMenu);
                 }}
               >
                 Support
+                <img src={mobileNavArrow} alt="" />
+
               </NavLink>
             </li>
-            <li>
+              <hr className="mobile-hr" />
+            <li className="mobile-navlink m-0 p-4">
               <NavLink
-                className="text-decoration-none"
+                className="text-decoration-none d-flex justify-content-between align-items-center"
                 to="/about"
                 onClick={() => {
                   setOpenMenu(!openMenu);
                 }}
               >
                 About Us
+                <img src={mobileNavArrow} alt="" />
+
               </NavLink>
             </li>
-            <li>
-              <button className="btn text-white py-2">
+              <hr className="mobile-hr" />
+          </ul>
+            <a href="https://tools.dyp.finance/news" target="_blank" rel="noreferrer" className="p-4 position-relative">
+            <button className="btn dyp-tools-btn text-white py-2 px-3">
                 <img src={toolsLogo} className="pe-2" loading="lazy"/>
                 DYP Tools
               </button>
-            </li>
-          </ul>
+              <img src={toolsBorder} className="tools-border" alt="" />
+            </a>
         </div>
       </>
     </OutsideClickHandler>

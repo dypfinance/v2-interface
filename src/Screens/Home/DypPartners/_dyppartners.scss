@@ -10,14 +10,14 @@
     transform: translate3d(0,0,0);
     position: relative;
     display: grid;
-    gap: 40px;
+    gap: 20px;
     grid-template-columns: repeat(6, 1fr);
 
 
-    .load-more{
-      bottom: -18px;
-      left: 46%;
-    }
+    // .load-more{
+    //   bottom: -18px;
+    //   left: 46%;
+    // }
 
 
         .partner_wrapper{
@@ -79,10 +79,10 @@
   .dyp-partners{
     grid-template-columns: auto auto;
 
-    .load-more{
-      bottom: -20px;
-      left: 33%;
-    }
+    // .load-more{
+    //   bottom: -20px;
+    //   left: 33%;
+    // }
   }
   
 }

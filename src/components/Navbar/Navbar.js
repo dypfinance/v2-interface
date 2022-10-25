@@ -4,7 +4,6 @@ import dypiusLogoPurple from "../../assets/dypius-purple.svg";
 import toolsLogo from "../../assets/dypToolsLogo.svg";
 import toolsBorder from "../../assets/toolsBorder.svg";
 import { NavLink } from "react-router-dom";
-import { HashLink as Link } from "react-router-hash-link";
 import "./_navbar.scss";
 import { useEffect } from "react";
 
@@ -29,7 +28,6 @@ const Navbar = () => {
         setShow(false)
       }
     }
-
     setLastScrollY(window.scrollY)
 
     if (window.location.href.includes("dyp") && !window.location.href.includes("dyp")) {
@@ -59,7 +57,7 @@ const Navbar = () => {
 
   useEffect(() => {
    if(typeof window !== 'undefined'){
-    
+
     window.addEventListener('scroll', changeBackground)
       window.addEventListener("click", changeBackground);
       window.addEventListener("load", changeBackground);
@@ -81,7 +79,7 @@ const Navbar = () => {
   return (
     <div
       className={`container-fluid  d-none d-lg-flex page-navigation ${
-        show ? "opacity" : null
+        show && 'opacity'
       }`}
     >
       <div
