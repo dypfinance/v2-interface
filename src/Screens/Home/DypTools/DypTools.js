@@ -20,9 +20,7 @@ const TadaDiv = styled.span`
 
 const DypTools = () => {
  
-  useEffect(() => {
-    AOS.init()
-  }, [])
+
   
   const windowSize = useWindowSize()
 

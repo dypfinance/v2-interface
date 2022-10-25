@@ -30,9 +30,7 @@ const DypMetaverse = () => {
 
   
 
-  useEffect(() => {
-    AOS.init();
-  }, [])
+
 
   return (
     <div className="container-fluid overflow-hidden">
