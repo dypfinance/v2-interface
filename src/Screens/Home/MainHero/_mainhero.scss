@@ -2,6 +2,8 @@
   background: linear-gradient(121.83deg, #554fd8 14.64%, #7770e0 85.55%);
   border-radius: 0 0 30px 30px;
   overflow: hidden;
+  z-index: 2;
+  position: relative;
 
   .heading {
     // background-image: url("../../../assets/fallingStars.svg");

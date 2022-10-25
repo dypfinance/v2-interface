@@ -57,14 +57,17 @@ const Navbar = () => {
 
   useEffect(() => {
    if(typeof window !== 'undefined'){
-    window.addEventListener("load", changeBackground);
+
     window.addEventListener('scroll', changeBackground)
       window.addEventListener("click", changeBackground);
+      window.addEventListener("load", changeBackground);
+
    }
 
    return () => {
     window.removeEventListener('scroll', changeBackground)
     window.removeEventListener("click", changeBackground);
+    window.removeEventListener("load", changeBackground);
 
    }
 
