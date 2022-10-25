@@ -9,6 +9,9 @@ import metaverse3 from "../../../assets/metaverse-3.png";
 import BlueHero from "../../../assets/metaverse-blueHero.svg";
 import Cube from "../../../assets/cube.png";
 import metaverseWaves from "../../../assets/metaverseWaves.svg";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const pulsing = keyframes`${pulse}`;
 
@@ -23,6 +26,11 @@ const FadeInDiv = styled.span`
 `;
 
 const DypMetaverse = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+  
   return (
     <div className="container-fluid overflow-hidden">
       <div className="container-lg position-relative metaverse-inner overlow-hidden">

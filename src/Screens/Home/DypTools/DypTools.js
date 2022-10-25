@@ -7,12 +7,18 @@ import Laptop from "../../../assets/laptop.png";
 import dots from "../../../assets/dots.png";
 import Triangle from "../../../assets/purple-triangle.svg";
 import useWindowSize from '../../../hooks/useWindowSize'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const DypTools = () => {
  
   const windowSize = useWindowSize()
 
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
+  
   return (
     <div className="container-lg d-flex justify-content-center">
       <div className="row dyp-tools">
