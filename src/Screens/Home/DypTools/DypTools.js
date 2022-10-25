@@ -7,8 +7,10 @@ import Laptop from "../../../assets/laptop.png";
 import dots from "../../../assets/dots.png";
 import { tada } from "react-animations";
 import Triangle from "../../../assets/purple-triangle.svg";
+import useWindowSize from '../../../hooks/useWindowSize'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 
 
 const taDa = keyframes`${tada}`;
@@ -22,6 +24,7 @@ const DypTools = () => {
     AOS.init()
   }, [])
   
+  const windowSize = useWindowSize()
 
 
   return (
@@ -45,7 +48,7 @@ const DypTools = () => {
           </div>
         </div>
         <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center position-relative">
-          <div className="rotate-scale-up">
+          <div className={`${windowSize.width < 786 ? 'pulse' : `rotate-scale-up`}`}>
             {/* <img className="iphoneBackground" src={iphoneBg} alt="" /> */}
           </div>
           <img src={Triangle} className="triangle"  />
