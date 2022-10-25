@@ -776,7 +776,7 @@ const HelpCenter = () => {
                           : `url(${filebg1})`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
-                        width: "55%",
+                        width: windowSize.width < 999 ? '100%' : '55%',
                         border: "2px solid #D6D8E7",
                       }}
                     />
