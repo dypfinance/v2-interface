@@ -37,8 +37,8 @@ const DypMetaverse = () => {
                 top="Metaverse World"
                 bottom="becoming a reality"
                 align="metaverse-title"
-                animation="fade-up"
-                duration="1000"
+                // animation="fade-up"
+                // duration="1000"
               />
               <br />
               <p
@@ -70,22 +70,22 @@ const DypMetaverse = () => {
             />
             <div className="image-grid">
               <div className="image-1">
-                <PulseDiv>
+                {/* <PulseDiv> */}
                   <img src={metaverse1} alt="" className="img1" />
-                </PulseDiv>
+                {/* </PulseDiv> */}
               </div>
               <div className="image-2 position-relative">
-                <PulseDiv>
+                {/* <PulseDiv> */}
                   <img src={metaverse2} alt="" className="img2" />
-                </PulseDiv>
-                <PulseDiv>
+                {/* </PulseDiv> */}
+                {/* <PulseDiv> */}
                   <img src={Cube} alt="cube" className="cube" />
-                </PulseDiv>
+                {/* </PulseDiv> */}
               </div>
               <div className="image-3">
-                <PulseDiv>
+                {/* <PulseDiv> */}
                   <img src={metaverse3} alt="" className="img3" />
-                </PulseDiv>
+                {/* </PulseDiv> */}
               </div>
             </div>
           </div>
