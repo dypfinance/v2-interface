@@ -20,13 +20,14 @@
 
     .telegram {
       position: absolute;
-      bottom: -40px;
-      left: -15px;
+      bottom: 15px;
+      left: 15px;
       transition: all .5s;
     }
     .discord {
       position: absolute;
-      right: -25px;
+      right: 15px;
+      top: 15px;
       transition: all .5s;
     }
 
@@ -69,35 +70,18 @@
         grid-template-columns: repeat(2,1fr) !important;
     }
 
-    .telegram{
-        top: 10px;
-        left: -5px !important;
-        width: 300px;
+    .general-container{
+      display: flex;
+      flex-direction: column;
+      min-height: 300px !important;
+      justify-content: center;
+      gap: 20px;
     }
 
-    .discord{
-        bottom: -30px;
-        width: 300px;
-        right: auto !important;
-        left: -5px;
-    }
-    
-}
-@media screen and (max-width: 360px) {
-
-  
-
-    .telegram{
-        top: 10px;
-        left: -19px !important;
-        width: 300px;
-    }
-
-    .discord{
-        bottom: -30px;
-        width: 300px;
-        right: auto !important;
-        left: -19px;
-    }
-    
+   .discord,
+   .telegram{
+    position: unset !important;
+    width: 260px;
+    height: 105px;
+   }
 }
