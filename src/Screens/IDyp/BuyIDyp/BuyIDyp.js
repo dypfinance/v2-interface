@@ -31,7 +31,7 @@ const BuyIDyp = () => {
             target={"_blank"}
             rel="noreferrer"
           >
-            <img src={mexc} alt="" className="mexc-card" loading="lazy"/>
+            <img src={mexc} alt="" className="mexc-card"  />
           </a>
           <a style={{height: '100px'}}
             href={
@@ -40,7 +40,7 @@ const BuyIDyp = () => {
             target={"_blank"}
             rel="noreferrer"
           >
-            <img src={uniswap} alt="" className="uni-card" loading="lazy"/>
+            <img src={uniswap} alt="" className="uni-card"  />
           </a>
           <a style={{height: '100px'}}
             href={
@@ -49,7 +49,7 @@ const BuyIDyp = () => {
             target={"_blank"}
             rel="noreferrer"
           >
-            <img src={pancakeswap} alt="" className="pancake-card" loading="lazy"/>
+            <img src={pancakeswap} alt="" className="pancake-card"  />
           </a>
           <a style={{height: '100px'}}
             href={
@@ -58,7 +58,7 @@ const BuyIDyp = () => {
             target={"_blank"}
             rel="noreferrer"
           >
-            <img src={pangolin} alt="" className="pangolin-card" loading="lazy"/>
+            <img src={pangolin} alt="" className="pangolin-card"  />
           </a>
           
         </div>

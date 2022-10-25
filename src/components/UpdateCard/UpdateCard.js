@@ -19,7 +19,7 @@ const UpdateCard = ({title, image, link, date, month}) => {
             <div className='d-flex'>
         <div className="update-title d-flex flex-column justify-content-between">
             <p className='mb-0' style={{color: 'black', fontSize: '13px'}}>{title.slice(0, 35) + '...'}</p>
-            <p className='d-flex flex-row mb-0 align-items-center justify-content-between' style={{color: '#6962DC', fontSize: '10px'}}>View Article <img src={filledArrow} alt="" loading="lazy"/></p>
+            <p className='d-flex flex-row mb-0 align-items-center justify-content-between' style={{color: '#6962DC', fontSize: '10px'}}>View Article <img src={filledArrow} alt=""  /></p>
             </div>
         </div>
 </a>

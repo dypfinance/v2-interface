@@ -18,18 +18,18 @@ const AboutMainHero = () => {
           </p>
         </div>
         <div className="col-12 col-lg-5 col-md-5 image-container position-relative">
-          <img src={bull} className="bull" alt="" loading="lazy"/>
-          <img src={flower} className="flower" alt="" loading="lazy"/>
+          <img src={bull} className="bull" alt=""  />
+          <img src={flower} className="flower" alt=""  />
           <div className="painting-container d-flex justify-content-center align-items-center">
             <img
               src={painting}
               className="painting"
               alt=""
-              loading="lazy"
+               
               style={{ borderRadius: "28px" }}
             />
           </div>
-          <img src={bluehero} className="bluehero" alt="" loading="lazy"/>
+          <img src={bluehero} className="bluehero" alt=""  />
         </div>
       </div>
       <div
@@ -38,27 +38,27 @@ const AboutMainHero = () => {
       >
         <a href="#ourteam" className="text-decoration-none submenu-link">
           Our team
-          <img src={indicator} className='submenu-indicator'  alt="" loading="lazy"/>
+          <img src={indicator} className='submenu-indicator'  alt=""  />
         </a>
         <a href="#roadmap" className="text-decoration-none submenu-link">
           Roadmap
-          <img src={indicator} className='submenu-indicator'  alt="" loading="lazy"/>
+          <img src={indicator} className='submenu-indicator'  alt=""  />
         </a>
         <a href="#brand" className="text-decoration-none submenu-link">
           Brand
-          <img src={indicator} className='submenu-indicator'  alt="" loading="lazy"/>
+          <img src={indicator} className='submenu-indicator'  alt=""  />
         </a>
         <a href="#security" className="text-decoration-none submenu-link">
           Security
-          <img src={indicator}  className='submenu-indicator' alt="" loading="lazy"/>
+          <img src={indicator}  className='submenu-indicator' alt=""  />
         </a>
         <a href="#tokenomics" className="text-decoration-none submenu-link">
           Tokenomics
-          <img src={indicator} className='submenu-indicator'  alt="" loading="lazy"/>
+          <img src={indicator} className='submenu-indicator'  alt=""  />
         </a>
         <a href="#contactus" className="text-decoration-none submenu-link">
           Contact Us
-          <img src={indicator} className='submenu-indicator'  alt="" loading="lazy"/>
+          <img src={indicator} className='submenu-indicator'  alt=""  />
         </a>
       </div>
     </div>

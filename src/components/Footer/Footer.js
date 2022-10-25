@@ -458,17 +458,17 @@ const Footer = () => {
                         target="_blank"
                         href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
                       >
-                        <img src={coinmarketcap} alt="" loading="lazy" />
+                        <img src={coinmarketcap} alt=""   />
                       </a>
                       <a
                         target="_blank"
                         href="https://www.coingecko.com/en/coins/defi-yield-protocol"
                       >
-                        <img src={coinGecko} alt="" loading="lazy" />
+                        <img src={coinGecko} alt=""   />
                       </a>
 
                       <Link to="/disclaimer">
-                        <img src={disclaimer} alt="" loading="lazy" />
+                        <img src={disclaimer} alt=""   />
                       </Link>
                     </div>
                   </div>
@@ -479,7 +479,7 @@ const Footer = () => {
           ) : (
             <>
               <Link to="/">
-                <img src={logo} alt="" width={160} height={90} loading="lazy" />
+                <img src={logo} alt="" width={160} height={90}   />
               </Link>
               <div className="col-2 text-white d-flex flex-column gap-3">
                 <h4 className="fw-normal">About Us</h4>
@@ -583,18 +583,18 @@ const Footer = () => {
                     target="_blank"
                     href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
                   >
-                    <img src={coinmarketcap} alt="" loading="lazy" />
+                    <img src={coinmarketcap} alt=""   />
                   </a>
                   <a
                     target="_blank"
                     href="https://www.coingecko.com/en/coins/defi-yield-protocol"
                   >
-                    <img src={coinGecko} alt="" loading="lazy" />
+                    <img src={coinGecko} alt=""   />
                   </a>
 
                   <Link to="/disclaimer"  onClick={()=>{window.scrollTo(0,0)}}>
                   
-                    <img src={disclaimer} alt="" loading="lazy" />
+                    <img src={disclaimer} alt=""   />
                   </Link>
                 </div>
               </div>

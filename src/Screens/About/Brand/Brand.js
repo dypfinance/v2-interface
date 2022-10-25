@@ -17,7 +17,7 @@ const Brand = () => {
         style={{ bottom: "-50px", right: "18%" }}
       />
       <div className="container-lg position-relative">
-      <img src={ring} alt="" className="brand-ring" loading="lazy"/>
+      <img src={ring} alt="" className="brand-ring"  />
 
         <Title top={"Brand"} align="d-flex flex-row gap-2" />
         <div className="row m-0 justify-content-between gap-3">
@@ -30,7 +30,7 @@ const Brand = () => {
               />
 
               <div className="brand-icon mb-3">
-                <img src={mediaKit} alt="" loading="lazy"/>
+                <img src={mediaKit} alt=""  />
               </div>
               <a  href="https://drive.google.com/drive/folders/1Sh77agasJV4iYn3xU25JS3phIIVBGeZg" target={'_blank'} rel='noreferrer' className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4">
                 Download
@@ -63,7 +63,7 @@ const Brand = () => {
           <div className="col-lg-5 col-xl-5 branditem">
             <div className="row m-0 justify-content-between gap-3 align-items-center">
             <div className="brand-icon mb-3">
-                <img src={pitchDeck} alt="" loading="lazy"/>
+                <img src={pitchDeck} alt=""  />
               </div>
               <a href="https://drive.google.com/drive/folders/1PprliiDlNB6Cx-35eaEun-gmjk0-a1O4" target={'_blank'} rel='noreferrer' className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4">
                 Download

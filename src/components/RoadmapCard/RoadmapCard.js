@@ -18,7 +18,7 @@ const RoadmapCard = ({data}) => {
     <div className="roadmap-items d-flex flex-column gap-3 p-4">
       {data.name.map((item, index) => (
         <div key={index} className="d-flex flex-row align-items-center gap-2">
-        <img src={completedIcon} alt="" loading="lazy"/>
+        <img src={completedIcon} alt=""  />
         <p>{item}</p>
       </div>
       ))}

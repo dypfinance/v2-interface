@@ -18,7 +18,7 @@ const TeamCard = ({ name, position, id, content, photo, link }) => {
     <div className="accordion" id="accordionExample">
       <div className="team-card d-flex flex-column justify-content-center gap-3 align-items-center">
         <a href={link} target="_blank" rel="noreferrer">
-          <img src={photo} alt="profile" className="profile-pic" loading="lazy"/>
+          <img src={photo} alt="profile" className="profile-pic"  />
         </a>
         <div className="d-flex justify-content-between title-container" style={{width: '270px'}}>
           <div className={`d-flex flex-column `}>

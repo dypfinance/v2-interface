@@ -36,7 +36,7 @@ const Modal = ({ visible, modalId, setIsVisible }) => {
           </div>
           <div className="modal-body">
             <div className="d-flex flex-column gap-2 justify-content-center align-items-center text-center">
-              <img src={envelope} alt="" style={{ width: 200 }} loading="lazy" />
+              <img src={envelope} alt="" style={{ width: 200 }}   />
               <Title top={"Thank"} bottom={"you"} align="d-flex gap-1" />
               <p className="text-secondary">
                 The form was submitted successfully.

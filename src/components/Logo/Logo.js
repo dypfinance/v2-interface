@@ -3,7 +3,7 @@ import Placeholder from '../../assets/placeholder.svg'
 
 const Logo = ()=>{
     return(<div>
-        <img src={Placeholder} alt='logo' loading="lazy"/>
+        <img src={Placeholder} alt='logo'  />
     </div>)
 }
 

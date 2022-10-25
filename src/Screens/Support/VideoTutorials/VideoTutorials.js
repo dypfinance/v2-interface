@@ -43,13 +43,13 @@ const VideoTutorials = () => {
                     Watch our latest tutorials on Dypius solutions and learn how to become an expert in no time.
                     </p>
                     <button className="btn filled-btn d-flex justify-content-center align-items-center gap-2" style={{width: 'fit-content'}}>
-                        View More <img src={rightArrow} alt="" loading="lazy"/>
+                        View More <img src={rightArrow} alt=""  />
                     </button>
                 </div>
                 <div className="col-12 col-lg-9 d-grid video-wrapper justify-content-center p-4 position-relative">
-                  <img src={sphere} className='sphere position-absolute d-none d-lg-block' alt="" loading="lazy"/>
-                  <img src={sphere} className='sphere position-absolute d-none d-lg-block' alt="" loading="lazy"/>
-                  <img src={sphere} className='sphere position-absolute d-none d-lg-block' alt="" loading="lazy"/>
+                  <img src={sphere} className='sphere position-absolute d-none d-lg-block' alt=""  />
+                  <img src={sphere} className='sphere position-absolute d-none d-lg-block' alt=""  />
+                  <img src={sphere} className='sphere position-absolute d-none d-lg-block' alt=""  />
                 {vidsArray.length > 0 &&
             vidsArray.map((item, index) => {
               return (
@@ -60,10 +60,10 @@ const VideoTutorials = () => {
                         src={require(`../../../assets/DypAssets/${item.image}`)}
                         alt=""
                         className="eduImg"
-                        loading="lazy"
+                         
                       />
                     </div>
-                    <img src={playButton} alt="" className="ml-2 purpleArrow" loading="lazy"/>
+                    <img src={playButton} alt="" className="ml-2 purpleArrow"  />
                   </a>
                 </div>
               );

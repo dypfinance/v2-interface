@@ -58,9 +58,9 @@ const LatestUpdates = ({type}) => {
   return (
     <div className="container-fluid updates-wrapper">
         <div className="container-lg updates-container p-5 position-relative">
-          <img src={blueHero} alt="" className="updates-bluehero" loading="lazy"/>
-          <img src={rainbowHero} alt="" className="updates-rainbowHero" loading="lazy"/>
-          <img src={ring} alt="" className="updates-ring" loading="lazy"/>
+          <img src={blueHero} alt="" className="updates-bluehero"  />
+          <img src={rainbowHero} alt="" className="updates-rainbowHero"  />
+          <img src={ring} alt="" className="updates-ring"  />
             <div className="row justify-content-center justify-content-lg-between gap-5">
                 <Title top='Latest' bottom='updates' align='d-flex flex-row gap-2' />
                 <div
@@ -80,7 +80,7 @@ const LatestUpdates = ({type}) => {
                     {year}
                   </div>
               
-                <img src={dropdownIndicator} alt="" loading="lazy"/>
+                <img src={dropdownIndicator} alt=""  />
               </div>
               <ul className="dropdown-menu coin-menu p-1" style={{width: '200px'}}>
                 <li
@@ -106,8 +106,8 @@ const LatestUpdates = ({type}) => {
                 </li>
               </ul>
                 <div className="years-wrapper d-flex flex-row px-2 gap-1 justify-content-center align-items-center">
-              <p className={`${newsType === 'announcements' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={fetchAnnouncements}><img src={newsType === 'announcements' ? announcementsActive : announcementsInactive} alt="" loading="lazy" />Announcements</p>
-              <p className={` ${newsType === 'events' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={fetchEvents}><img src={newsType === 'events' ? eventsActive : eventsInactive} alt="" loading="lazy"/>Events</p>
+              <p className={`${newsType === 'announcements' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={fetchAnnouncements}><img src={newsType === 'announcements' ? announcementsActive : announcementsInactive} alt=""   />Announcements</p>
+              <p className={` ${newsType === 'events' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={fetchEvents}><img src={newsType === 'events' ? eventsActive : eventsInactive} alt=""  />Events</p>
             </div>
             </div>
                 {news.length !== 0 ? 

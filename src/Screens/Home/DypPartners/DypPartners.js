@@ -160,7 +160,7 @@ const [partnersLength, setPartnersLength] = useState(0)
               
                 className="partner_wrapper d-flex flex-column align-items-center justify-content-center"
               >
-                <img src={`/PartnerIcons/${partner.image}`} alt="" loading="lazy"/>
+                <img src={`/PartnerIcons/${partner.image}`} alt=""  />
                 <p className="mb-0 text-dark">{partner.text}</p>
               </div>
             </a>
