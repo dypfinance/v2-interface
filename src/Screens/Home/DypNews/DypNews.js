@@ -41,6 +41,7 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
+          dots: page === "news" ? false : true,
         },
       },
       {
@@ -49,6 +50,7 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
           slidesToShow: 1,
           slidesToScroll: 1,
           fade: true,
+          dots: page === "news" ? false : true,
         },
       },
     ],
