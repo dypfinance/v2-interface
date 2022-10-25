@@ -40,16 +40,16 @@
       width: 500px;
     }
 
-    // .coin:first-child {
-    //   -webkit-animation: scale-up-center 1s linear infinite alternate both;
-    //           animation: scale-up-center 1s linear infinite alternate both;
-    // }
+    .coin:first-child {
+      -webkit-animation: scale-up-center 1s linear infinite alternate both;
+              animation: scale-up-center 1s linear infinite alternate both;
+    }
 
-    // .coin:first-child{
-    //   animation-name: scale-up-center;
-    //   animation-duration: 1.5s;
-    //   animation-iteration-count: infinite;
-    // }
+    .coin:first-child{
+      animation-name: scale-up-center;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+    }
 
     @-webkit-keyframes scale-up-center {
       0% {

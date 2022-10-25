@@ -9,8 +9,6 @@ import metaverse3 from "../../../assets/metaverse-3.png";
 import BlueHero from "../../../assets/metaverse-blueHero.svg";
 import Cube from "../../../assets/cube.png";
 import metaverseWaves from "../../../assets/metaverseWaves.svg";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const pulsing = keyframes`${pulse}`;
 
@@ -37,14 +35,14 @@ const DypMetaverse = () => {
                 top="Metaverse World"
                 bottom="becoming a reality"
                 align="metaverse-title"
-                // animation="fade-up"
-                // duration="1000"
+                animation="fade-up"
+                duration="1000"
               />
               <br />
               <p
-                // data-aos="fade-up"
-                // data-aos-delay="500"
-                // data-aos-duration="1000"
+                 data-aos="fade-up"
+                 data-aos-delay="500"
+                 data-aos-duration="1000"
               >
                 An innovative metaverse platform that redefines the gaming
                 industry and digital currency services. Platform utilizes
@@ -52,9 +50,9 @@ const DypMetaverse = () => {
               </p>
               <div
                 className="button-group mt-3 row gap-3 ms-0"
-                // data-aos="fade-up"
-                // data-aos-delay="500"
-                // data-aos-duration="1000"
+                 data-aos="fade-up"
+                 data-aos-delay="500"
+                 data-aos-duration="1000"
               >
                 <button className="btn filled-btn">
                   View now <img src={rightArrow} alt="" className="ml-2" />
@@ -70,22 +68,22 @@ const DypMetaverse = () => {
             />
             <div className="image-grid">
               <div className="image-1">
-                {/* <PulseDiv> */}
+                <PulseDiv>
                   <img src={metaverse1} alt="" className="img1" />
-                {/* </PulseDiv> */}
+                </PulseDiv>
               </div>
               <div className="image-2 position-relative">
-                {/* <PulseDiv> */}
+                <PulseDiv>
                   <img src={metaverse2} alt="" className="img2" />
-                {/* </PulseDiv> */}
-                {/* <PulseDiv> */}
+                </PulseDiv>
+                <PulseDiv>
                   <img src={Cube} alt="cube" className="cube" />
-                {/* </PulseDiv> */}
+                </PulseDiv>
               </div>
               <div className="image-3">
-                {/* <PulseDiv> */}
+                <PulseDiv>
                   <img src={metaverse3} alt="" className="img3" />
-                {/* </PulseDiv> */}
+                </PulseDiv>
               </div>
             </div>
           </div>

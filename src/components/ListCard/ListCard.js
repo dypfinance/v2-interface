@@ -4,9 +4,9 @@ const ListCard = ({ content, image }) => {
   return (
     <div
       className="list-card d-flex flex-row align-items-center"
-      // data-aos="fade-up"
-      // data-aos-delay="500"
-      // data-aos-duration="1000"
+       data-aos="fade-up"
+       data-aos-delay="500"
+       data-aos-duration="1000"
     >
       <img
         src={require(`./assets/${image}`)}

@@ -20,9 +20,9 @@ import NewsPage from "./Screens/NewsPage/NewsPage";
 import BuyDypScreen from "./Screens/BuyDyp/BuyDypScreen";
 
 function App() {
-  // useEffect(() => {
-  //   AOS.init();
-  // }, []);
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <BrowserRouter>

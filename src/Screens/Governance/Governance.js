@@ -77,8 +77,8 @@ const Governance = () => {
               className="purplelink"
               alt=""
                
-              // data-aos="fade-up"
-              // data-aos-duration="1000"
+               data-aos="fade-up"
+               data-aos-duration="1000"
             />
 
             <img
@@ -86,8 +86,8 @@ const Governance = () => {
               className="purplelinkmd"
               alt=""
                
-              // data-aos="fade-up"
-              // data-aos-duration="1000"
+               data-aos="fade-up"
+               data-aos-duration="1000"
             />
             {govcards.length > 0 &&
               govcards.map((item, index) => {

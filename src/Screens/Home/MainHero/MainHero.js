@@ -43,7 +43,7 @@ const MainHero = () => {
                   Explore
                 </NavLink>
               </div>
-              <div className="sliderwrapper  d-flex flex-column mt-3 pl-0">
+              {/* <div className="sliderwrapper  d-flex flex-column mt-3 pl-0">
                 <Slider {...settings} ref={slickref}>
                   <div className="d-flex flex-column gap-0 rowwrapper">
                     <p>
@@ -118,7 +118,7 @@ const MainHero = () => {
                     </p>
                   </div>
                 </Slider>
-              </div>
+              </div> */}
             </div>
             <div className="col-12 col-lg-5 d-flex justify-content-center flex-column text-white ml-4">
               <DypSystem
