@@ -44,7 +44,7 @@
     content: "";
     background: #eff0f6;
     background-image:
-     url("../../../assets/dyptools-bg.svg"),
+    //  url("../../../assets/dyptools-bg.svg"),
       linear-gradient(#caccd9, #fff);
     background-size: cover;
     position: absolute;
@@ -103,7 +103,7 @@
   top: 30px;
   right: 70px;
   width: 120px;
-  animation: diagonal 5s ease infinite
+  // animation: diagonal 5s ease infinite
 }
 
 @keyframes diagonal {
@@ -206,8 +206,8 @@
   
 
   .rotate-scale-up {
-    -webkit-animation: rotate-scale-up 25s linear infinite both;
-            animation: rotate-scale-up 25s linear infinite both;
+    // -webkit-animation: rotate-scale-up 25s linear infinite both;
+            // animation: rotate-scale-up 25s linear infinite both;
     background: url(../../../assets/coinbackground.png);
     background-repeat: no-repeat;
     max-width: 400px;
