@@ -16,10 +16,10 @@ const Home = () => {
       <MainHero/>
      <DypMetaverse/>
        <DypTools/>
-      {/* <DypToken/> */}
-      {/* <Suspense fallback={<div>Loading</div>}> */}
+      <DypToken/>
+      <Suspense fallback={<div>Loading</div>}>
       <DypPartners />
-      {/* </Suspense> */}
+      </Suspense>
       <DypNews topTitle='Announcements' bottomTitle='Stay tuned'/>
     </div>
   );

@@ -123,7 +123,7 @@ const MainHero = () => {
               </div>
             </div>
             <div className="col-12 col-lg-5 d-flex justify-content-center flex-column text-white ml-4">
-              <DypSystem
+              {/* <DypSystem
                 onShowFirstDesc={() => {
                   slickref.current.innerSlider.slickGoTo(0);
                 }}
@@ -148,7 +148,7 @@ const MainHero = () => {
                 onRemoveDesc={() => {
                   // slickref.current.innerSlider.slickPlay();
                 }}
-              />
+              /> */}
             </div>
           </div>
         </div>
