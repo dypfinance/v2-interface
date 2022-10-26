@@ -40,8 +40,38 @@
       width: 500px;
     }
 
-   
-  }
+    .coin:first-child {
+      // -webkit-animation: scale-up-center 1s linear infinite alternate both;
+      //         animation: scale-up-center 1s linear infinite alternate both;
+    }
+
+    .coin:first-child{
+      // animation-name: scale-up-center;
+      // animation-duration: 1.5s;
+      // animation-iteration-count: infinite;
+    }
+
+    // @-webkit-keyframes scale-up-center {
+    //   0% {
+    //     -webkit-transform: scale(1.0);
+    //             transform: scale(1.0);
+    //   }
+    //   100% {
+    //     -webkit-transform: scale(1.1);
+    //             transform: scale(1.1);
+    //   }
+    // }
+    // @keyframes scale-up-center {
+    //   0% {
+    //     -webkit-transform: scale(1.0);
+    //             transform: scale(1.0);
+    //   }
+    //   100% {
+    //     -webkit-transform: scale(1.1);
+    //             transform: scale(1.1);
+    //   }
+    // }
+  
 
   .token-info {
     gap: 20px;
@@ -89,6 +119,7 @@
     }
 
   }
+}
 
 .dyp-token::before {
   content: "";
