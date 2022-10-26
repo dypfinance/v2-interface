@@ -119,8 +119,8 @@
 .dyp-token::before {
   content: "";
   background: #eff0f6;
-  // background-image: url("../../../assets/dypTokenBackground.svg"),
-    // linear-gradient(270deg, #eff0f6 0%, #fff 49.11%);
+  background-image: url("../../../assets/dypTokenBackground.svg"),
+    linear-gradient(270deg, #eff0f6 0%, #fff 49.11%);
   background-size: cover;
   position: absolute;
   top: 0px;

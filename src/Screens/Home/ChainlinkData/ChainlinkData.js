@@ -44,7 +44,6 @@ const ChainlinkData = () => {
               href="https://data.chain.link/"
               target={"_blank"}
               rel="noreferrer"
-              // style={{zIndex: 10}}
             >
               <span className="chainlink-data-title">
                 Provided by Chainlink
@@ -96,7 +95,7 @@ const ChainlinkData = () => {
               <div className="chainlink-cell">
                 <div className="d-flex align-items-baseline gap-2">
                   <span className="totalpaid-amount">
-                    {/* <CountUp
+                    <CountUp
                       style={{ fontSize: 26, fontWeight: 300 }}
                       start={totalpaid?.totalPaidInUsd - 400.0}
                       end={totalpaid?.totalPaidInUsd}
@@ -104,12 +103,7 @@ const ChainlinkData = () => {
                       separator=","
                       decimals={2}
                       prefix="$"
-                    /> */}
-                    $ {getFormattedNumber(
-                      totalpaid?.totalPaidInUsd,
-                      0
-                    )}
-                    
+                    />
                   </span>
                 </div>
               </div>
