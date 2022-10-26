@@ -44,7 +44,6 @@ const ChainlinkData = () => {
               href="https://data.chain.link/"
               target={"_blank"}
               rel="noreferrer"
-              // style={{zIndex: 10}}
             >
               <span className="chainlink-data-title">
                 Provided by Chainlink

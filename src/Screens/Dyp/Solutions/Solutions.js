@@ -13,62 +13,51 @@ const Solutions = () => {
   const solutions = [
     {
       title: "DYP Tools",
-      image: 'dyptools',
+      image: "dyptools",
     },
     {
       title: "Governance",
-      image: 'governance'
-
+      image: "governance",
     },
     {
       title: "Stake",
-      image: 'stake'
-
+      image: "stake",
     },
     {
       title: "Farm",
-      image: 'farm'
-
+      image: "farm",
     },
     {
       title: "Vault",
-      image: 'vault'
-
+      image: "vault",
     },
     {
       title: "Buyback",
-      image: 'buyback'
-
+      image: "buyback",
     },
     {
       title: "Bridge",
-      image: 'bridge'
-
+      image: "bridge",
     },
     {
       title: "CAWS NFT",
-      image: 'caws'
-
+      image: "caws",
     },
     {
       title: "Launchpad",
-      image: 'launchpad'
-
+      image: "launchpad",
     },
     {
       title: "Metaverse",
-      image: 'metaverse'
-
+      image: "metaverse",
     },
     {
       title: "DYP Locker",
-      image: 'dyplocker'
-
-    }, 
+      image: "dyplocker",
+    },
     {
       title: "CAWS Adventure",
-      image: 'cawsadventure'
-
+      image: "cawsadventure",
     },
   ];
 
@@ -78,45 +67,56 @@ const Solutions = () => {
 
   return (
     <div className="container-fluid position-relative">
-      <img
+      {/* <img
         className="rings"
         src={require(`../assets/solutionRings.svg`).default}
         alt=""
-      />
+      /> */}
 
       <div className="container-lg position-relative" id="solutions">
         <div className="row" style={{ marginTop: "150px" }}>
-          <Title top="Our" bottom="Solutions"  animation="fade-up" duration="1000"/>
+          <Title
+            top="Our"
+            bottom="Solutions"
+            // animation="fade-up"
+            // duration="1000"
+          />
         </div>
         <div className="row d-grid px-3 solutions-card-container">
           {windowSize.width < 786
             ? solutions
                 .slice(0, solutionLength)
                 .map((solution, index) => (
-                  <SolutionsCard key={index} title={solution.title} image={solution.image}/>
+                  <SolutionsCard
+                    key={index}
+                    title={solution.title}
+                    image={solution.image}
+                  />
                 ))
             : solutions.map((solution, index) => (
-                <SolutionsCard key={index} title={solution.title}  image={solution.image}/>
+                <SolutionsCard
+                  key={index}
+                  title={solution.title}
+                  image={solution.image}
+                />
               ))}
         </div>
         <div className="row justify-content-center my-5">
           <button
             onClick={loadMore}
-            className={`btn outline-btn ${solutionLength < 12 ? 'd-flex' : 'd-none'} d-lg-none d-xl-none justify-content-center align-items-center`}
+            className={`btn outline-btn ${
+              solutionLength < 12 ? "d-flex" : "d-none"
+            } d-lg-none d-xl-none justify-content-center align-items-center`}
           >
-            Load More  <img
-              src={PurpleArrowDown}
-              alt=""
-              className="ml-2"
-            />
+            Load More <img src={PurpleArrowDown} alt="" className="ml-2" />
           </button>
         </div>
       </div>
-      <img
+      {/* <img
         className="bluehero-solutions"
         src={require(`../../../assets/metaverse-blueHero.svg`).default}
         alt=""
-      />
+      /> */}
     </div>
   );
 };

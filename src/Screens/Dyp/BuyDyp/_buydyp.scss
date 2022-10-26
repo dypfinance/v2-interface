@@ -13,7 +13,8 @@
         position: absolute;
         width: 450px;
         right: -10%;
-        animation: rotate 10s linear infinite;
+        // animation: rotate 10s linear infinite;
+
     }
 
    
@@ -43,7 +44,7 @@
 
 .buy-dyp::before{
     content: "";
-    background-image: url("../assets/buyDypBackground.svg"), linear-gradient(90deg, #EFF0F6 0%, rgba(239, 240, 246, 0) 75%);;
+    background-image: url("../assets/dypcoinbackground.png"), linear-gradient(90deg, #EFF0F6 0%, rgba(239, 240, 246, 0) 75%);;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;

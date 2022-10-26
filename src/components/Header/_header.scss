@@ -107,7 +107,7 @@
   width: 100%;
   border-radius: 0px 0px 20px 20px;
   transform: translateY(-700px);
-  transition: all 0.5s ease-in;
+  transition: all 0.3s ease-in;
   ul li {
     list-style-type: none;
     margin: 8px;
@@ -130,7 +130,7 @@
 box-shadow: 0px 16px 32px rgba(241, 101, 63, 0.6);
 border-radius: 12px 0px;
 z-index: 55;
-transition: all .5s;
+transition: all .3s;
  }
 
  .dyp-tools-btn:active{
@@ -171,7 +171,7 @@ border-radius: 0px 0px 14px 0px;
 position: fixed;
 z-index: 30;
 transform: translateY(0px);
-transition: all .25s ease-in;
+// transition: all .25s ease-in;
 }
 
 .white-navbar{

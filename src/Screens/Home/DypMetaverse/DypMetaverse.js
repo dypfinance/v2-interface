@@ -43,14 +43,14 @@ const DypMetaverse = () => {
                 top="Metaverse World"
                 bottom="becoming a reality"
                 align="metaverse-title"
-                animation="fade-up"
-                duration="1000"
+                // animation="fade-up"
+                // duration="1000"
               />
               <br />
               <p
-                 data-aos="fade-up"
-                 data-aos-delay="500"
-                 data-aos-duration="1000"
+                //  data-aos="fade-up"
+                //  data-aos-delay="500"
+                //  data-aos-duration="1000"
               >
                 An innovative metaverse platform that redefines the gaming
                 industry and digital currency services. Platform utilizes
@@ -58,9 +58,9 @@ const DypMetaverse = () => {
               </p>
               <div
                 className="button-group mt-3 row gap-3 ms-0"
-                 data-aos="fade-up"
-                 data-aos-delay="500"
-                 data-aos-duration="1000"
+                //  data-aos="fade-up"
+                //  data-aos-delay="500"
+                //  data-aos-duration="1000"
               >
                 <button className="btn filled-btn">
                   View now <img src={rightArrow} alt="" className="ml-2" />

@@ -53,12 +53,12 @@ const OurTokens = () => {
   
   return (
     <div className="container-fluid mt-5" id="ourTokens">
-      <img className="dotframe position-absolute" src={DotFrame} />
+      {/* <img className="dotframe position-absolute" src={DotFrame} /> */}
       <div className="ourtokens-wrapper container-lg position-relative">
-        <img
+        {/* <img
           className="ourtoken-sphere"
           src={require(`../../../assets/newsSphere.png`)}
-        />
+        /> */}
         <div>
           <div className="row justify-content-between m-0 gap-2 position-relative mb-4">
             {/* <img src={TokenGraph} alt="" className="tokengraph" /> */}

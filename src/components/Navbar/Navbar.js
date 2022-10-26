@@ -16,16 +16,16 @@ const Navbar = () => {
 
   const changeBackground = () => {
     if (window.scrollY >= 75) {
-      setShow(true);
+      // setShow(true);
     } else {
-      setShow(false);
+      // setShow(false);
     }
 
     if(typeof window !== 'undefined'){
       if(window.scrollY > lastScrollY){
-        setShow(true)
+        // setShow(true)
       }else{
-        setShow(false)
+        // setShow(false)
       }
     }
     setLastScrollY(window.scrollY)

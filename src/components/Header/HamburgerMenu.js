@@ -92,7 +92,7 @@ const HamburgerMenu = () => {
       <>
         <div
           className={`container-fluid mobile-navbar ${logo && 'white-navbar'} py-3 d-flex justify-content-between align-items-center d-lg-none ${
-            show ? "hide-nav" : ""
+            show ? "" : ""
           }`}
         >
           <NavLink to="/">

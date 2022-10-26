@@ -1,5 +1,6 @@
 import React from "react";
 import './_dypmainhero.scss'
+import coinBg from "../assets/dypcoinbackground.png";
 
 const DypMainHero = () => {
   return (
@@ -49,7 +50,7 @@ const DypMainHero = () => {
           />
           <img
             className="background"
-            src={require(`../assets/dypCoinBackground.svg`).default}
+            src={coinBg}
             alt=""
           />
         </div>

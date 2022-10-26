@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CoinCard from "../../../components/CoinCard/CoinCard";
 import Title from "../../../components/Title/Title";
 import coin from "../../../assets/coin.png";
-import coinBg from "../../../assets/coinbg2.svg";
+import coinBg from "../../../assets/coinbg2.png";
 import rightArrow from "../../../assets/right-arrow.svg";
 import "./_dyptoken.scss";
 import { NavLink } from "react-router-dom";
@@ -33,12 +33,12 @@ const DypToken = () => {
             top="DYP Token"
             bottom="Empower your future"
             align="text-end"
-            animation="fade-up"
-            duration="1000"
+            // animation="fade-up"
+            // duration="1000"
           />
           <p className="text-end" 
-           data-aos="fade-up"
-           data-aos-duration="1000"
+          //  data-aos="fade-up"
+          //  data-aos-duration="1000"
            >
             An immersive ecosystem with a wide range of unique products and
             solutions.
@@ -47,12 +47,12 @@ const DypToken = () => {
           <div className="row">
             <div
               className="d-flex flex-row infinite-cards-container"
-               data-aos="fade-up"
-               data-aos-duration="1000"
+              //  data-aos="fade-up"
+              //  data-aos-duration="1000"
             >
-              {/* <CoinCard title='Dypius Earn' stakeAmount='30%' description='Earn rewards by securely depositing your assets into the staking smart contract'  />
-                <CoinCard title='Dypius Earn' stakeAmount='75%' description='Earn rewards by securely depositing your assets into the staking smart contract' />
-            */}
+              {/* <CoinCard title='Dypius Earn' stakeAmount='30%' description='Earn rewards by securely depositing your assets into the staking smart contract'  /> */}
+                {/* <CoinCard title='Dypius Earn' stakeAmount='75%' description='Earn rewards by securely depositing your assets into the staking smart contract' /> */}
+           
 
               <InfiniteCards />
             </div>
@@ -60,8 +60,8 @@ const DypToken = () => {
           <NavLink
             to="/dyp"
             className="btn filled-btn d-flex align-items-center"
-             data-aos="fade-up"
-             data-aos-duration="1000"
+            //  data-aos="fade-up"
+            //  data-aos-duration="1000"
             style={{ zIndex: 5 }}
           >
             Learn more
