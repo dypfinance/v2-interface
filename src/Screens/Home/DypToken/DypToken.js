@@ -50,11 +50,11 @@ const DypToken = () => {
               //  data-aos="fade-up"
               //  data-aos-duration="1000"
             >
-              {/* <CoinCard title='Dypius Earn' stakeAmount='30%' description='Earn rewards by securely depositing your assets into the staking smart contract'  />
+              {/* <CoinCard title='Dypius Earn' stakeAmount='30%' description='Earn rewards by securely depositing your assets into the staking smart contract'  /> */}
                 <CoinCard title='Dypius Earn' stakeAmount='75%' description='Earn rewards by securely depositing your assets into the staking smart contract' />
-            */}
+           
 
-              <InfiniteCards />
+              {/* <InfiniteCards /> */}
             </div>
           </div>
           <NavLink
