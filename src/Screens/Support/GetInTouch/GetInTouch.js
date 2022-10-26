@@ -56,10 +56,10 @@ const GetInTouch = () => {
                 <Title top='Get in touch with' bottom='Dypius team' />
                 <div className="general-container position-relative" style={{minHeight: '250px'}}>
                 <p className="touch-title text-white">General chat</p>
-                <a target="_blank" href="https://t.me/dypfinance">
+                <a target="_blank" href="https://t.me/dypfinance" className='d-flex justify-content-center'>
                 <img className='telegram' src={touchTelegram} alt="" />
                 </a>
-                <a target="_blank" href="https://discord.gg/dypcaws">
+                <a target="_blank" href="https://discord.gg/dypcaws" className='d-flex justify-content-center'>
                 <img className='discord' src={touchDiscord} alt="" />
                 </a>
                 </div>

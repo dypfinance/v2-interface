@@ -350,7 +350,7 @@ const HelpCenter = () => {
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div className="help-form p-4 d-flex flex-column gap-3 mb-4">
+            <div className="help-form p-4 d-flex flex-column gap-4 gap-lg-3 mb-4">
               <h5 className="text-secondary mb-3">Fill out form</h5>
               <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                 <StyledTextField
@@ -363,6 +363,7 @@ const HelpCenter = () => {
                   helperText={errors.name}
                   required
                   onChange={handleChange}
+                  sx={{width: '100%'}}
                   
                 />
                 <StyledTextField
@@ -375,6 +376,8 @@ const HelpCenter = () => {
                   helperText={errors.email}
                   required
                   onChange={handleChange}
+                  sx={{width: '100%'}}
+
                   
                 />
               </div>
@@ -584,7 +587,7 @@ const HelpCenter = () => {
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div className="help-form p-4 p-4 d-flex flex-column gap-3 mb-4">
+            <div className="help-form p-4 p-4 d-flex flex-column gap-4 gap-lg-3 mb-4">
               <h5 className="text-secondary mb-3">Fill out form</h5>
 
               <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
@@ -672,6 +675,8 @@ const HelpCenter = () => {
                   helperText={businessErrors.organization}
                   onChange={handleBusinessChange}
                   required
+                  sx={{width: '100%'}}
+
                   
                 />
                 <StyledTextField
@@ -684,6 +689,8 @@ const HelpCenter = () => {
                   helperText={businessErrors.email}
                   onChange={handleBusinessChange}
                   required
+                  sx={{width: '100%'}}
+
                   
                 />
               </div>
