@@ -109,7 +109,7 @@ const FAQ = () => {
     
     if(faqTitle === ""){
       if(windowSize.width > 786){
-        window.scrollTo(0, 1200)
+        window.scrollTo(0, 900)
       }else{
         window.scrollTo(0, 1800)
       }
@@ -141,7 +141,7 @@ const FAQ = () => {
     }).catch((err) => console.error(err))
     setSearchBox(false)
     if(windowSize.width > 786){
-      window.scrollTo(0, 1200)
+      window.scrollTo(0, 900)
     }else{
       window.scrollTo(0, 1800)
     }
