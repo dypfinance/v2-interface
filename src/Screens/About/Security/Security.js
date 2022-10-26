@@ -226,7 +226,7 @@ const Security = () => {
               })}
           </div>
         </div>
-        <img className='bluehero-solutions' src={require(`../../../assets/metaverse-blueHero.svg`).default}   alt="" style={{ bottom: '-186px', right: 0 }} />
+        {/* <img className='bluehero-solutions' src={require(`../../../assets/metaverse-blueHero.svg`).default}   alt="" style={{ bottom: '-186px', right: 0 }} /> */}
 
       </div>
     </div>

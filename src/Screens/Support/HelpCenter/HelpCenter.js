@@ -334,7 +334,7 @@ const HelpCenter = () => {
         className="row contact-container position-relative"
        
       >
-        <img src={ring} alt="" className="help-ring d-none d-lg-block"  />
+        {/* <img src={ring} alt="" className="help-ring d-none d-lg-block"  /> */}
         <FormContainer
           title="General Inquiry"
           desc="Get immediate help and support for Dypius products and solutions."

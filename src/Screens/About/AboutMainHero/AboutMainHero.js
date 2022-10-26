@@ -4,7 +4,7 @@ import Title from "../../../components/Title/Title";
 import bull from "../assets/bull.png";
 import flower from "../assets/aboutFlower.png";
 import painting from "../assets/aboutPainting.png";
-import bluehero from "../../../assets/metaverse-blueHero.svg";
+// import bluehero from "../../../assets/metaverse-blueHero.svg";
 import indicator from "../assets/aboutIndicator.svg";
 
 const AboutMainHero = () => {
