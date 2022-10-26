@@ -99,7 +99,10 @@
     width: 150px;
     left: 0;
   }
-
+  .submenu-container{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
   
   
 }

@@ -163,6 +163,40 @@
   }
 }
 
+
+@media screen and (max-width: 1400px) {
+  .why-dypius{
+    margin-bottom: 100px;
+   .card-wrapper{
+    .why-card{
+      h5{
+        font-size: 19px;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+   }
+  }
+  
+}
+
+
+@media screen and (max-width: 991px) {
+  .why-dypius{
+    .purple-card{
+      width: 320px;
+    }
+    .purple-background{
+      top: -47%;
+    }
+  }
+}
+
+  
+
+
+
 @media screen and (max-width: 786px) {
   .why-dypius {
     padding-bottom: 20px;

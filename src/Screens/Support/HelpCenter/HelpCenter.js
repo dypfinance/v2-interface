@@ -332,7 +332,7 @@ const HelpCenter = () => {
       </div>
       <div
         className="row contact-container position-relative"
-        style={{ marginTop: "7rem" }}
+       
       >
         <img src={ring} alt="" className="help-ring d-none d-lg-block"  />
         <FormContainer

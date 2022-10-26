@@ -6,7 +6,7 @@ import formEmail from '../../assets/formEmail.svg'
 
 const FormContainer = ({onClick, accordionState, children, title, desc, collapse, email, emailLink}) => {
   return (
-    <div className="col-12 col-lg-6">
+    <div className="col-12 col-xl-6">
           <div className="help-card position-relative p-4 d-flex flex-column justify-content-between">
             <img
               src={supportPhone}

@@ -67,7 +67,8 @@ const WhyDypius = () => {
           <div className="col-12 col-lg-4 d-flex justify-content-center align-items-center">
             <div className="d-flex flex-column gap-5 title-container mt-5 mt-lg-0">
               <Title top="Why" bottom="Dypius?" /> 
-              <div className="position-relative">
+             <div className="d-flex flex-column flex-md-row flex-lg-column gap-5">
+             <div className="position-relative">
                 <img
                   className="orange-border"
                   src={require(`../assets/orangeBorder.svg`).default}
@@ -117,6 +118,7 @@ const WhyDypius = () => {
                     <p className="mb-0" style={{fontSize: '12px', fontWeight: '400'}}>Liquidity Providers</p>
                   </div>
                 </div>
+             </div>
              </div>
             </div>
           </div>

@@ -21,9 +21,10 @@ const BuyDyp = () => {
           <Title
             top="Buy DYP"
             bottom="in a few steps"
-            align={"d-flex flex-column flex-lg-row gap-2 align-items-start"}
+            align={"d-flex flex-column flex-xxl-row gap-2 align-items-start"}
             // animation="fade-up"
             // duration="1000"
+
           />
           <p
             className="text-secondary"

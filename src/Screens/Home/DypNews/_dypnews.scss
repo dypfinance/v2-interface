@@ -208,6 +208,32 @@ cursor: pointer;
   }
 
 
+@media screen and (max-width: 1400px) {
+  .dyp-news{
+    .news-card{
+      width: 300px;
+      min-height: 455px;
+
+      .news-image{
+        height: 190px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .dyp-news{
+    .news-card{
+      width: 300px;
+      min-height: 455px;
+
+      .news-image{
+        height: 190px;
+      }
+    }
+  }
+}
+
+
   @media screen and (max-width: 786px) {
 
 

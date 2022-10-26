@@ -29,7 +29,7 @@ const [playbtn, setPlaybtn] = useState('passive')
     
     <div className="eduactionalwrapper container-lg" id="learn">
       <div className="row justify-content-between align-items-center p-4">
-        <div className="col-12 col-lg-4">
+        <div className="col-12 col-lg-4 d-flex flex-column px-1 px-lg-3 gap-2">
           <Title top="Educational" bottom="Videos" />
           <p style={{marginBottom: 32}}>
             Hit the ground running with our quick start guide! Get tips, watch
@@ -47,8 +47,10 @@ const [playbtn, setPlaybtn] = useState('passive')
           </a>
         </div>
 
-        <div className="col-12 col-lg-8 educational-wrapper gap-5 justify-content-center p-4 position-relative">
+
+        <div className="col-12 col-lg-8 educational-wrapper gap-4 gap-lg-5 justify-content-center p-4 position-relative">
           {/* <img
+
             className="edu-sphere"
             src={require(`../../../assets/newsSphere.png`)}
           />

@@ -83,7 +83,7 @@
     .faq-sphere {
       position: absolute;
       width: 180px;
-      right: -90px;
+      right: -100px;
       bottom: 0;
     }
 
@@ -109,6 +109,13 @@
       }
 
     }
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+  .faq-sphere{
+    bottom: -70px !important;
   }
 }
 

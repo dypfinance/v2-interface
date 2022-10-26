@@ -132,7 +132,16 @@ const [partnersLength, setPartnersLength] = useState(0)
   
 
   const loadLess = () => {
-    windowSize.width < 786 ? setPartnersLength(4) : setPartnersLength(12)
+    if(windowSize.width < 786){
+      setPartnersLength(4) 
+      window.scrollTo(0, 4000)
+    } else{
+
+      setPartnersLength(12)
+    } 
+
+    
+
   }
 
   const loadMore = () => {
@@ -155,7 +164,7 @@ const [partnersLength, setPartnersLength] = useState(0)
           //  data-aos-duration="1000"
         >
           {partnersArray.slice(0, partnersLength).map((partner, index) => (
-            <a href={partner.href} target="_blank"  key={index}>
+            <a href={partner.href} target="_blank" rel="noreferrer"  key={index}>
               <div
               
                 className="partner_wrapper d-flex flex-column align-items-center justify-content-center"

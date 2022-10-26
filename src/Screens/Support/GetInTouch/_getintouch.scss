@@ -68,6 +68,15 @@
   }
 }
 
+
+@media screen and (max-width: 1400px) {
+    .telegram,
+    .discord{
+      width: 280px !important;
+    }  
+}
+
+
 @media screen and (max-width: 786px) {
 
     .touch-socials{

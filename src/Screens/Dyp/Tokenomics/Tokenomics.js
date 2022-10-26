@@ -56,10 +56,10 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
           </div>
           <Title top={isDyp === true ? "Tokenomics" : "iDYP Tokenomics"} />
         </div>
-        <div className="row m-0 gap-4 pl-0 col-lg-3 col-xl-3 align-items-center justify-content-end">
+        <div className="row m-0 gap-4 pl-0 col-lg-3 col-xl-3 align-items-center justify-content-end px-0 px-lg-2 py-3 py-lg-0">
           <button
             className={
-              toggledyp === true ? "btn filled-btn" : "btn outline-btn"
+              `tokenomics-btn ${toggledyp === true ? "btn filled-btn" : "btn outline-btn"}`
             }
             type="button"
             data-bs-toggle="collapse"
@@ -118,7 +118,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
         <div className="card card-body pb-4">
           {tokenomicData === "dyp" ? (
             <div className="row m-0 justify-content-between gap-2">
-              <div className="col-xl-7 col-lg-7">
+              <div className="col-xl-7 col-lg-7 px-2">
                 <div className="d-flex flex-column mt-0">
                   <span className="dypcontract-title">
                     DYP Contract Address:

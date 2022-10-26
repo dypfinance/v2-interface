@@ -70,6 +70,10 @@
 
 
 @media screen and (max-width: 786px) {
+
+
+  
+
   .cardWrapper{
     width: 100% !important;
   }
@@ -78,13 +82,13 @@
 .edu-sphere {
   position: absolute;
   right: 55%;
-  top: 0;
+  top: -10%;
   z-index: 0;
 }
 
 .edu-sphere2 {
   position: absolute;
-  right: 22%;
+  right: -20%;
   bottom: -80px;
   z-index: 0;
   width: 200px;

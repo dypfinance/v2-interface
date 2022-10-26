@@ -141,6 +141,7 @@ const Navbar = () => {
           <a
             className="d-flex text-decoration-none"
             target="_blank"
+            rel="noreferrer"
             href="https://tools.dyp.finance/news"
           >
             <button className="btn tools-btn text-white">
