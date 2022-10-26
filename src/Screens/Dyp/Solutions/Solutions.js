@@ -78,8 +78,8 @@ const Solutions = () => {
           <Title
             top="Our"
             bottom="Solutions"
-            animation="fade-up"
-            duration="1000"
+            // animation="fade-up"
+            // duration="1000"
           />
         </div>
         <div className="row d-grid px-3 solutions-card-container">
