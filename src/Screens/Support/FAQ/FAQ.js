@@ -111,7 +111,7 @@ const FAQ = () => {
       if(windowSize.width > 786){
         window.scrollTo(0, 1200)
       }else{
-        window.scrollTo(0, 1900)
+        window.scrollTo(0, 1800)
       }
     }
   };
@@ -143,7 +143,7 @@ const FAQ = () => {
     if(windowSize.width > 786){
       window.scrollTo(0, 1200)
     }else{
-      window.scrollTo(0, 1900)
+      window.scrollTo(0, 1800)
     }
   }
 

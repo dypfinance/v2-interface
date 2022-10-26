@@ -93,6 +93,8 @@
       top: 25%;
     }
 
+    
+
     .painting-container {
       width: 173px;
       height: 123px;
@@ -115,5 +117,10 @@
       left: 40% !important;
       filter: blur(25px);
     }
+  }
+
+  .submenu-container{
+    display: grid;
+    grid-template-columns: auto auto;
   }
 }

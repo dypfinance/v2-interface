@@ -214,7 +214,7 @@ const ContactUs = () => {
 
   return (
     <div className="container-fluid contact-wrapper" id="contactus">
-      <div className="container-lg contact-container pt-5">
+      <div className="container-lg contact-container pt-5 px-2 px-lg-4">
         <div className="row flex-column">
           <Title top="Contact us" />
           <p className="text-secondary" style={{ marginBottom: "7rem" }}>

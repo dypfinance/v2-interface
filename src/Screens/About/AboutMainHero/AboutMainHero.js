@@ -33,7 +33,7 @@ const AboutMainHero = () => {
         </div>
       </div>
       <div
-        className="row pt-5 p-4 justify-content-center gap-5"
+        className="row pt-5 p-4 justify-content-center gap-5 submenu-container"
         style={{ zIndex: 5 }}
       >
         <a href="#ourteam" className="text-decoration-none submenu-link">
