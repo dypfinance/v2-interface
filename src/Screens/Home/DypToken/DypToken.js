@@ -33,12 +33,12 @@ const DypToken = () => {
             top="DYP Token"
             bottom="Empower your future"
             align="text-end"
-            // animation="fade-up"
-            // duration="1000"
+            animation="fade-up"
+            duration="1000"
           />
           <p className="text-end" 
-          //  data-aos="fade-up"
-          //  data-aos-duration="1000"
+           data-aos="fade-up"
+           data-aos-duration="1000"
            >
             An immersive ecosystem with a wide range of unique products and
             solutions.
@@ -60,8 +60,8 @@ const DypToken = () => {
           <NavLink
             to="/dyp"
             className="btn filled-btn d-flex align-items-center"
-            //  data-aos="fade-up"
-            //  data-aos-duration="1000"
+             data-aos="fade-up"
+             data-aos-duration="1000"
             style={{ zIndex: 5 }}
           >
             Learn more
