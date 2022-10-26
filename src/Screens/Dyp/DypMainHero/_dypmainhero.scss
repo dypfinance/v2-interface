@@ -142,7 +142,7 @@
         .dyp-coin-wrapper{
             min-height: 300px;
             .coin{
-                right: 10%;
+                right: 13%;
                 bottom: 0%;
             }
             .background{
@@ -163,6 +163,18 @@
     }
 }
 
+@media screen and (max-width: 390px) {
+    .dyp-main-hero{
+        .dyp-coin-wrapper{
+            .background{
+                left: 18%;
+            }
+            .coin{
+                right: 8%;
+            }
+        }
+    }
+}
 @media screen and (max-width: 375px) {
     .dyp-main-hero{
         .dyp-coin-wrapper{
@@ -179,10 +191,10 @@
     .dyp-main-hero{
         .dyp-coin-wrapper{
             .background{
-                left: 9%;
+                left: 15%;
             }
             .coin{
-                right: 0%;
+                top: 2% ;
             }
         }
     }
