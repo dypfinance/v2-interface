@@ -46,9 +46,9 @@ const DypTools = () => {
               target={"_blank"}
               rel="noreferrer"
               className="btn d-flex align-items-center justify-content-center outline-btn m-md-auto m-sm-auto m-lg-0"
-              // data-aos="fade-up"
+              data-aos="fade-up"
               // data-aos-delay="500"
-              // data-aos-duration="1000"
+              data-aos-duration="1000"
             >
               Go to DYP Tools <img src={filledArrow} alt="" className="ml-2" />
             </a>
@@ -63,7 +63,7 @@ const DypTools = () => {
             {/* <img className="iphoneBackground" src={iphoneBg} alt="" /> */}
           </div>
           <img src={Triangle} className="triangle" />
-          {/* <img className="iphone" src={Laptop} alt="" /> */}
+          <img className="iphone" src={Laptop} alt="" />
           {/* <img className="dots2" src={dots} alt="" /> */}
         </div>
       </div>
