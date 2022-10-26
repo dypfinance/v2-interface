@@ -23,12 +23,16 @@
       bottom: 15px;
       left: 15px;
       transition: all .5s;
+      border-radius: 0 0 12px 0px;
+      box-shadow: 0px 22px 44px rgba(36, 161, 222, 0.32);
     }
     .discord {
       position: absolute;
       right: 15px;
       top: 15px;
       transition: all .5s;
+      border-radius: 0 0 12px 0px;
+      box-shadow: 0px 22px 44px rgba(88, 101, 242, 0.32);
     }
 
     .telegram:hover,
@@ -81,7 +85,7 @@
    .discord,
    .telegram{
     position: unset !important;
-    width: 260px;
-    height: 105px;
+    width: 250px;
+    height: 95px;
    }
 }

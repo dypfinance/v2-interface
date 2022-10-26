@@ -5,7 +5,7 @@ import ethDropdown from "../assets/ethereumDropdown.svg";
 import bnbDropdown from "../assets/bnbDropdown.svg";
 import avaDropdown from "../assets/avaDropdown.svg";
 import dropdownIndicator from "../assets/dropdownIndicator.svg";
-import Spiral from "../../../assets/DypAssets/spiral.svg";
+import Spiral from "../../../assets/DypAssets/spiral.png";
 import rightArrow from "../../../assets/filledArrow.svg";
 
 const SupportedAssets = () => {

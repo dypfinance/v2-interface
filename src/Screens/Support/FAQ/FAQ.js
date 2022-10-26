@@ -116,17 +116,23 @@ const FAQ = () => {
 
 
   const searchFaq = async() => { 
-
-      await axios.get(`https://news-manage.dyp.finance/api/faqs/search/${searchString}`).then((res) => {
-        setSearchItems(res.data)
-        setFaqTitle('')
-        setSearchBox(true)
+      if(searchString === ""){
+        setSearchItems([])
+        setSearchBox(false)
         
-      }).catch((err) => console.error(err))
-   
+      }else{
+        await axios.get(`https://news-manage.dyp.finance/api/faqs/search/${searchString}`).then((res) => {
+          setSearchItems(res.data)
+          setFaqTitle('')
+          setSearchBox(true)
+          
+        }).catch((err) => console.error(err))
+        
+      }
+      
   }
 
-  const selectSearchFaq = async(id, collapse) => {
+  const selectSearchFaq = async(id) => {
     await axios.get(`https://news-manage.dyp.finance/api/faqs/${id}`).then((res) => {
       setFaqItems(res.data)
       categories.map((category) => {
@@ -186,8 +192,8 @@ const FAQ = () => {
             {searchBox &&
             <div className="search-items p-4 mt-4 w-50">
             {searchItems.length > 0 ?
-              searchItems.slice(0, 3).map((searchItem) => (
-                <div className="search-item p-3" onClick={() => selectSearchFaq(searchItem.category, searchItem.collapse)}>
+              searchItems.slice(0, 3).map((searchItem, index) => (
+                <div key={index} className="search-item p-3" onClick={() => selectSearchFaq(searchItem.category, searchItem.collapse)}>
                   <p className="mb-0">{searchItem.title.slice(0, 50) + '...'}</p>
                 </div>
               ))
@@ -201,7 +207,7 @@ const FAQ = () => {
           <div className="row categories-grid mt-5 gap-4">
             {categories.map((category, index) => (
               <div
-                onClick={() => fetchFaq(category.id, category.title)}
+                onClick={() => fetchFaq(category.id)}
                 key={index}
                 className={`category-card d-flex justify-content-center ${
                   faqTitle === category.title ? "active-category" : null
