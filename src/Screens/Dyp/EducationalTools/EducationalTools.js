@@ -48,14 +48,14 @@ const [playbtn, setPlaybtn] = useState('passive')
         </div>
 
         <div className="col-12 col-lg-8 educational-wrapper gap-5 justify-content-center p-4 position-relative">
-          <img
+          {/* <img
             className="edu-sphere"
             src={require(`../../../assets/newsSphere.png`)}
           />
           <img
             className="edu-sphere2"
             src={require(`../../../assets/newsSphere.png`)}
-          />
+          /> */}
 
           {vidsArray.length > 0 &&
             vidsArray.map((item, index) => {

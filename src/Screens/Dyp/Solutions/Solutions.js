@@ -112,11 +112,11 @@ const Solutions = () => {
           </button>
         </div>
       </div>
-      <img
+      {/* <img
         className="bluehero-solutions"
         src={require(`../../../assets/metaverse-blueHero.svg`).default}
         alt=""
-      />
+      /> */}
     </div>
   );
 };
