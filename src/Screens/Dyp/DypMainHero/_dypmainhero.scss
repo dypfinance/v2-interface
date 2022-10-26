@@ -80,13 +80,13 @@
   
 
     .submenu-link{
-        display: flex;
-        justify-content: space-between;
-        width: 135px;
+      display: flex;
+    justify-content: center;
+    width: 140px;
+    gap: 9px;
+    font-size: 15px;
 
-        .submenu-indicator{
-            // animation: pulse 1.5s linear infinite;
-        }
+        
     }
 
 }
