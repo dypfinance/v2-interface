@@ -40,9 +40,11 @@
 
   .submenu-link {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 140px;
     color: rgba(85, 79, 216, 1);
+    gap: 9px;
+    font-size: 15px;
 
     .submenu-indicator{
         animation: pulse 1.5s linear infinite
