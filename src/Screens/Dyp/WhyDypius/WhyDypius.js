@@ -121,11 +121,11 @@ const WhyDypius = () => {
             </div>
           </div>
           <div className="col-12 col-lg-8 card-wrapper d-grid ">
-            <img
+            {/* <img
               className="ring"
                
               src={require(`../../../assets/tokenCircle.png`)}
-            />
+            /> */}
             {windowSize.width <= 786 ? (
               <>
                 {cards.slice(0, 3).map((card, index) => (
