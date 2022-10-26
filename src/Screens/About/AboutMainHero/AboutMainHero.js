@@ -4,7 +4,7 @@ import Title from "../../../components/Title/Title";
 import bull from "../assets/bull.png";
 import flower from "../assets/aboutFlower.png";
 import painting from "../assets/aboutPainting.png";
-import bluehero from "../../../assets/metaverse-blueHero.svg";
+// import bluehero from "../../../assets/metaverse-blueHero.svg";
 import indicator from "../assets/aboutIndicator.svg";
 
 const AboutMainHero = () => {
@@ -29,7 +29,7 @@ const AboutMainHero = () => {
               style={{ borderRadius: "28px" }}
             />
           </div>
-          <img src={bluehero} className="bluehero" alt=""  />
+          {/* <img src={bluehero} className="bluehero" alt=""  /> */}
         </div>
       </div>
       <div

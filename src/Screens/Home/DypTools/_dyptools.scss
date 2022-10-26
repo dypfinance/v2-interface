@@ -23,8 +23,8 @@
   
     .iphone {
       position: absolute;
-      height: 300px;
-      top: 135px;
+      height: 190px;
+      top: 160px;
     }
   
     .dots2 {
@@ -44,7 +44,7 @@
     content: "";
     background: #eff0f6;
     background-image:
-     url("../../../assets/dyptools-bg.svg"),
+    //  url("../../../assets/dyptools-bg.svg"),
       linear-gradient(#caccd9, #fff);
     background-size: cover;
     position: absolute;
@@ -72,31 +72,31 @@
 
   
 
-// .rotate-center {
-// 	-webkit-animation: rotate-center 8s ease-in-out infinite both;
-// 	        animation: rotate-center 8s ease-in-out infinite both;
-// }
+.rotate-center {
+	-webkit-animation: rotate-center 8s ease-in-out infinite both;
+	        animation: rotate-center 8s ease-in-out infinite both;
+}
 
-//  @-webkit-keyframes rotate-center {
-//   0% {
-//     -webkit-transform: rotate(0);
-//             transform: rotate(0);
-//   }
-//   100% {
-//     -webkit-transform: rotate(360deg);
-//             transform: rotate(360deg);
-//   }
-// }
-// @keyframes rotate-center {
-//   0% {
-//     -webkit-transform: rotate(0);
-//             transform: rotate(0);
-//   }
-//   100% {
-//     -webkit-transform: rotate(360deg);
-//             transform: rotate(360deg);
-//   }
-// }
+ @-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 
 .triangle {
   position: absolute;
@@ -106,17 +106,29 @@
   // animation: diagonal 5s ease infinite
 }
 
-// @keyframes diagonal {
-//   0%{
-//     transform: translateX(0px) translateY(0px);
-//   }
-//   50%{
-//     transform: translateX(8px) translateY(-8px);
-//   }
-//   100%{
-//     transform: translateX(0px) translateY(0px);
-//   }
-// }
+@keyframes diagonal {
+  0%{
+    transform: translateX(0px) translateY(0px);
+  }
+  50%{
+    transform: translateX(8px) translateY(-8px);
+  }
+  100%{
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+@-webkit-keyframes diagonal {
+  0%{
+    transform: translateX(0px) translateY(0px);
+  }
+  50%{
+    transform: translateX(8px) translateY(-8px);
+  }
+  100%{
+    transform: translateX(0px) translateY(0px);
+  }
+}
 
 
   @media only screen and (max-width: 500px) {
@@ -138,52 +150,64 @@
    }
 
 
-  //  @-webkit-keyframes rotate-scale-up {
-  //   0% {
-  //     -webkit-transform: scale(1) rotateZ(0);
-  //             transform: scale(1) rotateZ(0);
-  //   }
-  //   50% {
-  //     -webkit-transform: scale(1.2) rotateZ(180deg);
-  //             transform: scale(1.2) rotateZ(180deg);
-  //   }
-  //   100% {
-  //     -webkit-transform: scale(1) rotateZ(360deg);
-  //             transform: scale(1) rotateZ(360deg);
-  //   }
-  // }
-  // @keyframes rotate-scale-up {
-  //   0% {
-  //     -webkit-transform: scale(1) rotateZ(0);
-  //             transform: scale(1) rotateZ(0);
-  //   }
-  //   50% {
-  //     -webkit-transform: scale(1.2) rotateZ(180deg);
-  //             transform: scale(1.2) rotateZ(180deg);
-  //   }
-  //   100% {
-  //     -webkit-transform: scale(1) rotateZ(360deg);
-  //             transform: scale(1) rotateZ(360deg);
-  //   }
-  // }
+   @-webkit-keyframes rotate-scale-up {
+    0% {
+      -webkit-transform: scale(1) rotateZ(0);
+              transform: scale(1) rotateZ(0);
+    }
+    50% {
+      -webkit-transform: scale(1.2) rotateZ(180deg);
+              transform: scale(1.2) rotateZ(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateZ(360deg);
+              transform: scale(1) rotateZ(360deg);
+    }
+  }
+  @keyframes rotate-scale-up {
+    0% {
+      -webkit-transform: scale(1) rotateZ(0);
+              transform: scale(1) rotateZ(0);
+    }
+    50% {
+      -webkit-transform: scale(1.2) rotateZ(180deg);
+              transform: scale(1.2) rotateZ(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateZ(360deg);
+              transform: scale(1) rotateZ(360deg);
+    }
+  }
 
 
-  // @keyframes pulse{
-  //   0%{
-  //     transform: scale(1);
-  //   }
-  //   50%{
-  //     transform: scale(1.1);
-  //   }
-  //   100%{
-  //     transform: scale(1);
-  //   }
-  // }
+  @keyframes pulse{
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.1);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+
+  @-webkit-keyframes pulse{
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.1);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
   
 
   .rotate-scale-up {
     // -webkit-animation: rotate-scale-up 25s linear infinite both;
-    //         animation: rotate-scale-up 25s linear infinite both;
+            // animation: rotate-scale-up 25s linear infinite both;
     background: url(../../../assets/coinbackground.png);
     background-repeat: no-repeat;
     max-width: 400px;
@@ -194,8 +218,8 @@
 
 
   .pulse{
-    // -webkit-animation: pulse 5s linear infinite both;
-    // animation: pulse 5s linear infinite both;
+    -webkit-animation: pulse 5s linear infinite both;
+    animation: pulse 5s linear infinite both;
 background: url(../../../assets/coinbackground.png);
 background-repeat: no-repeat;
 max-width: 400px;
