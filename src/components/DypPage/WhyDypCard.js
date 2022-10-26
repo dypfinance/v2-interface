@@ -4,8 +4,8 @@ const WhyDypCard = ({ title, description, icon }) => {
   return (
     <div
       className="why-card position-relative py-4 py-lg-auto"
-       data-aos="fade-up"
-       data-aos-duration="1000"
+      //  data-aos="fade-up"
+      //  data-aos-duration="1000"
     >
       <div className="green-tag"></div>
       <div className="tag d-flex justify-content-center align-items-center">
