@@ -5,7 +5,7 @@ import sphere from '../../../assets/newsSphere.png';
 const DisclaimerContent = () => {
   return (
     <div className="container-lg disclaimer-content">
-      <img className='sphere-2' src={sphere} alt="" style={{position: 'absolute', right: '8%', top: '-9%'}}/>
+      {/* <img className='sphere-2' src={sphere} alt="" style={{position: 'absolute', right: '8%', top: '-9%'}}/> */}
 
       <div className="container pt-5 pb-5">
         <Title top={"Dypius"} bottom={"Disclaimer"} /> <br/>

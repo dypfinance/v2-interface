@@ -11,7 +11,7 @@ import lorena from "../../../assets/team/lorena.jpeg";
 import aldi from "../../../assets/team/aldi.jpg";
 import alexandra from "../../../assets/team/alexandra.jpg";
 import gazmend from "../../../assets/team/gazmend.jpg";
-import bogdan from "../../../assets/team/const.png";
+import bogdan from "../../../assets/team/bogdan.jpg";
 import daniel from "../../../assets/team/daniel.jpg";
 import dinakar from "../../../assets/team/dinakar.jpg";
 import sheyn from "../../../assets/team/jubi.jpg";

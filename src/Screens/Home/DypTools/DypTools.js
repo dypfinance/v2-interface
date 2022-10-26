@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 import ListCard from "../../../components/ListCard/ListCard";
 import Title from "../../../components/Title/Title";
 import filledArrow from "../../../assets/filledArrow.svg";
-import Laptop from "../../../assets/laptop2.png";
+import Laptop from "../../../assets/laptop.png";
 import dots from "../../../assets/dots.png";
 import Triangle from "../../../assets/purple-triangle.png";
 import useWindowSize from "../../../hooks/useWindowSize";
@@ -26,7 +26,7 @@ const DypTools = () => {
               <Title
                 top="DYP Tools"
                 bottom="Powerful dApps"
-                //  animation='fade-up' duration='1000'
+                 animation='fade-up' duration='1000'
               />
               <ListCard
                 content="A wide range of impressive decentralized applications"
@@ -46,9 +46,9 @@ const DypTools = () => {
               target={"_blank"}
               rel="noreferrer"
               className="btn d-flex align-items-center justify-content-center outline-btn m-md-auto m-sm-auto m-lg-0"
-              // data-aos="fade-up"
-              // data-aos-delay="500"
-              // data-aos-duration="1000"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="1000"
             >
               Go to DYP Tools <img src={filledArrow} alt="" className="ml-2" />
             </a>
@@ -56,14 +56,14 @@ const DypTools = () => {
         </div>
         <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center position-relative">
           <div
-            // className={`${
-              // windowSize.width < 786 ? "pulse" : `rotate-scale-up`
-            // }`}
+            className={`${
+              windowSize.width < 786 ? "pulse" : `rotate-scale-up`
+            }`}
           >
             {/* <img className="iphoneBackground" src={iphoneBg} alt="" /> */}
           </div>
-          {/* <img src={Triangle} className="triangle" /> */}
-          {/* <img className="iphone" src={Laptop} alt="" /> */}
+          <img src={Triangle} className="triangle" />
+          <img className="iphone" src={Laptop} alt="" />
           {/* <img className="dots2" src={dots} alt="" /> */}
         </div>
       </div>

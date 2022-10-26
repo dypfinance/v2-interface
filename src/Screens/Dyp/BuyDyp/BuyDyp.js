@@ -22,14 +22,14 @@ const BuyDyp = () => {
             top="Buy DYP"
             bottom="in a few steps"
             align={"d-flex flex-column flex-xxl-row gap-2 align-items-start"}
-            // animation="fade-up"
-            // duration="1000"
+            animation="fade-up"
+            duration="1000"
 
           />
           <p
             className="text-secondary"
-            //  data-aos="fade-up"
-            //  data-aos-duration="1000"
+             data-aos="fade-up"
+             data-aos-duration="1000"
           >
             At Dypius, we want to make it easy for you to purchase our token. We
             have a variety of centralized and decentralized exchanges that you
@@ -40,8 +40,8 @@ const BuyDyp = () => {
               className="btn filled-btn d-flex justify-content-center align-items-center "
               style={{ width: "24%" }}
               to='/buydyp'
-              //  data-aos="fade-up"
-              //  data-aos-duration="1000"
+               data-aos="fade-up"
+               data-aos-duration="1000"
               // onClick={()=>{ window.scrollTo(0, 0)}}
             >
               Explore

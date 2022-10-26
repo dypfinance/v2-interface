@@ -172,7 +172,7 @@ const FAQ = () => {
           </p>
         </div>
         <div className="categories-container  p-4 w-100 position-relative">
-          <img src={sphere} alt="" className="faq-sphere d-none d-lg-flex"   />
+          {/* <img src={sphere} alt="" className="faq-sphere d-none d-lg-flex"   /> */}
           <div className="row align-items-center justify-content-center flex-column position-relative">
 
             <div className=" search-container d-flex justify-content-center align-items-center px-4 w-50">

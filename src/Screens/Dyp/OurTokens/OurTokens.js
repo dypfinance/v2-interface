@@ -76,11 +76,7 @@ const OurTokens = () => {
                 price={getFormattedNumber(dyptokenData,4)}
                 percentage={`${dypPercentage} %`}
               />
-              {/* <TokenCards
-                title={"iDYP Token"}
-                price={getFormattedNumber(idyptokenData,4)}
-                percentage={`${idypPercentage} %`}
-              /> */}
+              
             </div>
           </div>
         </div>

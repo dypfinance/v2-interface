@@ -2,37 +2,41 @@ import React from "react";
 import Title from "../../../components/Title/Title";
 import pasteimg from "../assets/paste-icon.svg";
 import DotFrame from "../../../assets/DypAssets/dotFrame.svg";
-import ring from '../../../assets/tokenCircle.png';
-import mediaKit from '../assets/mediaKit.svg'
-import pitchDeck from '../assets/pitchDeck.svg'
-
+import ring from "../../../assets/tokenCircle.png";
+import mediaKit from "../assets/mediaKit.svg";
+import pitchDeck from "../assets/pitchDeck.svg";
 
 const Brand = () => {
   return (
     <div className="container-fluid mt-5 mb-5 position-relative" id="brand">
-      <img
+      {/* <img
         className="bluehero-solutions"
         src={require(`../../../assets/metaverse-blueHero.svg`).default}
         alt=""
         style={{ bottom: "-50px", right: "18%" }}
-      />
+      /> */}
       <div className="container-lg position-relative">
-      <img src={ring} alt="" className="brand-ring"  />
+        {/* <img src={ring} alt="" className="brand-ring" /> */}
 
         <Title top={"Brand"} align="d-flex flex-row gap-2 mb-3" />
         <div className="row m-0 justify-content-between gap-3">
           <div className="col-lg-5 col-xl-5 branditem">
             <div className="row m-0 justify-content-between gap-3 align-items-center">
-              <img
+              {/* <img
                 className="dotframe position-absolute"
                 src={DotFrame}
                 style={{ zIndex: "-1", bottom: "-100px" }}
-              />
+              /> */}
 
               <div className="brand-icon mb-3">
-                <img src={mediaKit} alt=""  />
+                <img src={mediaKit} alt="" />
               </div>
-              <a  href="https://drive.google.com/drive/folders/1Sh77agasJV4iYn3xU25JS3phIIVBGeZg" target={'_blank'} rel='noreferrer' className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4">
+              <a
+                href="https://drive.google.com/drive/folders/1Sh77agasJV4iYn3xU25JS3phIIVBGeZg"
+                target={"_blank"}
+                rel="noreferrer"
+                className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4"
+              >
                 Download
                 <svg
                   width="24"
@@ -62,10 +66,15 @@ const Brand = () => {
           </div>
           <div className="col-lg-5 col-xl-5 branditem">
             <div className="row m-0 justify-content-between gap-3 align-items-center">
-            <div className="brand-icon mb-3">
-                <img src={pitchDeck} alt=""  />
+              <div className="brand-icon mb-3">
+                <img src={pitchDeck} alt="" />
               </div>
-              <a href="https://drive.google.com/drive/folders/1PprliiDlNB6Cx-35eaEun-gmjk0-a1O4" target={'_blank'} rel='noreferrer' className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4">
+              <a
+                href="https://drive.google.com/drive/folders/1PprliiDlNB6Cx-35eaEun-gmjk0-a1O4"
+                target={"_blank"}
+                rel="noreferrer"
+                className="filled-btn btn d-flex align-items-center gap-2 pl-4 pr-4"
+              >
                 Download
                 <svg
                   width="24"
