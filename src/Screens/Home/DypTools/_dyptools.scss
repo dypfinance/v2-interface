@@ -43,8 +43,9 @@
   .dyp-tools::before {
     content: "";
     background: #eff0f6;
-    background-image: url("../../../assets/dyptools-bg.svg"),
-      linear-gradient(#caccd9, #fff);
+    // background-image:
+    //  url("../../../assets/dyptools-bg.svg"),
+      // linear-gradient(#caccd9, #fff);
     background-size: cover;
     position: absolute;
     top: 0px;

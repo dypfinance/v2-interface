@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 import ListCard from "../../../components/ListCard/ListCard";
 import Title from "../../../components/Title/Title";
 import filledArrow from "../../../assets/filledArrow.svg";
-import Laptop from "../../../assets/laptop.png";
+import Laptop from "../../../assets/laptop2.png";
 import dots from "../../../assets/dots.png";
 import Triangle from "../../../assets/purple-triangle.svg";
 import useWindowSize from "../../../hooks/useWindowSize";
