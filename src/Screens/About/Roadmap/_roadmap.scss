@@ -157,6 +157,22 @@
   opacity: 0.5;
 }
 
+@media screen and (max-width: 1399px) {
+  .carousel-wrapper {
+    .slick-list {
+      width: 1120px !important;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .carousel-wrapper {
+    .slick-list {
+      width: 945px !important;
+    }
+  }
+}
+
+
 @media screen and (max-width: 786px) {
   .roadmap-wrapper {
     min-height: 900px;

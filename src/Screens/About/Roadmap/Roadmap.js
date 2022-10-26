@@ -10,105 +10,7 @@ import Slider from "react-slick";
 import { useRef } from "react";
 
 const Roadmap = () => {
-  const roadmap2020 = [
-    {
-      date: "2020 Q3",
-      name: [
-        "Creation of DeFi Yield Protocol",
-        "DeFi Yield Protocol Documentation Release",
-        "Building DYP ERC-20 Token Smart Contract",
-        "DeFi Yield Protocol Community Marketing",
-      ],
-    },
-    {
-      date: "2020 Q4",
-      name: [
-        "Token Crowdsale",
-        "Uniswap Listing",
-        "Liquidity Lock",
-        "Building Smart Contract for Uniswap LP",
-        "Smart Contract Security Audit",
-        "Launch Yield Farming Pools on Ethereum",
-        "Development of New Smart Contracts",
-        "Launch Governance",
-        "Launch Referral",
-      ],
-    },
-  ];
-
-  const roadmap2021 = [
-    {
-      date: "2021 Q1",
-      name: [
-        "Launch Stake V1 on Ethereum",
-        "Launch Yield Farming on Binance Smart Chain",
-        "Launch DYP Vault V1 on Ethereum",
-        "Building DYP Tools V1",
-        "Building Bridge for Binance Smart Chain",
-        "Partnerships and Integrations",
-        "DeFi Yield Protocol Dapps Development",
-      ],
-    },
-    {
-      date: "2021 Q2",
-      name: [
-        "Release New UI Design for Main Website and Dapps",
-        "Launch NFT Dapp V1 on Ethereum",
-        "Launch Yield Farming on Avalanche Chain",
-        "Bridge for Binance Smart Chain and Avalanche",
-        "Launch DYP Tools V1 on Ethereum",
-        "Launch Buyback Pools",
-        "Integrating Chainlink Price Feeds",
-        "Building DYP Launchpad with DYP Tools Safety Features Integrated",
-      ],
-    },
-    {
-      date: "2021 Q3",
-      name: [
-        "Launch DYP Tools V1 on Avalanche Chain",
-        "Integration with Pangolin DEX, Coin98 Wallet, and Kyber Network",
-        "Integration for Wallet Connect",
-        "Building New Smart Contract for Farm, Stake, Buyback, and Governance",
-        "Launch New Smart Contract for Farm, Stake, Buyback, and Governance",
-        "Launch iDYP Token as part of the New Smart Contracts",
-      ],
-    },
-    {
-      date: "2021 Q4",
-      name: [
-        "Launch DYP Launchpad with DYP Tools Safety Features integrated",
-        "Building New UI Design for Dapps",
-        "Building New UI Design for Main Website",
-        "Building New Smart Contract for DYP Vault",
-        "Integration with Crypto.com RSS News Feed",
-      ],
-    },
-  ];
-
-  const roadmap2022 = [
-    {
-      date: "2022 Q1",
-      name: [
-        "Launch Cats and Watches Society NFT",
-        "Launch New Smart Contract for DYP Vault",
-        "Building CAWS Adventures 2D Game",
-        "Building CAWS Staking Smart Contract",
-        "Building New Smart Contract for DYP Staking",
-      ],
-    },
-    {
-      date: "2022 Q2",
-      name: [
-        "Launch New Smart Contract for DYP Staking",
-        "Launch Cats and Watches Society Staking Pool",
-        "Launch New UI Design for Main Website",
-        "Launch New UI Design for Dapps",
-        "Launch CAWS Adventures 2D Game",
-        "Play to Earn NFT Concept becomes active for CAWS Holders",
-      ],
-    },
-  ];
-
+ 
   const roadmap = [
     {
       date: "2020 Q3",
@@ -229,6 +131,15 @@ const Roadmap = () => {
     },
 
     responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: false,
+          dots: false,
+        },
+      },
       {
         breakpoint: 1024,
         settings: {

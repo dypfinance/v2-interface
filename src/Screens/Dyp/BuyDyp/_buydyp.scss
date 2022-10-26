@@ -5,15 +5,16 @@
 
     .coin{
         position: absolute;
-        right: -3%;
+        right: -20%;
     }
 
     .coinBackground{
         top: 9%;
         position: absolute;
         width: 450px;
-        right: 7%;
-        animation: rotate 10s linear infinite;
+        right: -10%;
+        // animation: rotate 10s linear infinite;
+
     }
 
    
@@ -43,7 +44,7 @@
 
 .buy-dyp::before{
     content: "";
-    background-image: url("../assets/buyDypBackground.svg"), linear-gradient(90deg, #EFF0F6 0%, rgba(239, 240, 246, 0) 75%);;
+    background-image: url("../assets/dypcoinbackground.png"), linear-gradient(90deg, #EFF0F6 0%, rgba(239, 240, 246, 0) 75%);;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -56,13 +57,24 @@
 }
 
 
+@media screen and (max-width: 1399px) {
+    .buy-dyp{
+        .coin{
+        right: -30%;
+        }
+        .coinBackground{
+            right: -20%;
+        }
+    }
+}
 
 
 @media screen and (max-width: 786px) {
 
     .buy-dyp{
         min-height: 680px;
-
+        margin-bottom: 50px;
+        margin-top: 50px;
         .coinBackground{
             top: -45%;
             width: 300px;
@@ -71,6 +83,7 @@
 
         .coin{
             width: 320px;
+            right: 0%;
         }
         .ring{   
             right: -30%;

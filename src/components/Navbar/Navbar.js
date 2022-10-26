@@ -16,16 +16,16 @@ const Navbar = () => {
 
   const changeBackground = () => {
     if (window.scrollY >= 75) {
-      setShow(true);
+      // setShow(true);
     } else {
-      setShow(false);
+      // setShow(false);
     }
 
     if(typeof window !== 'undefined'){
       if(window.scrollY > lastScrollY){
-        setShow(true)
+        // setShow(true)
       }else{
-        setShow(false)
+        // setShow(false)
       }
     }
     setLastScrollY(window.scrollY)
@@ -141,6 +141,7 @@ const Navbar = () => {
           <a
             className="d-flex text-decoration-none"
             target="_blank"
+            rel="noreferrer"
             href="https://tools.dyp.finance/news"
           >
             <button className="btn tools-btn text-white">

@@ -67,7 +67,8 @@ const WhyDypius = () => {
           <div className="col-12 col-lg-4 d-flex justify-content-center align-items-center">
             <div className="d-flex flex-column gap-5 title-container mt-5 mt-lg-0">
               <Title top="Why" bottom="Dypius?" /> 
-              <div className="position-relative">
+             <div className="d-flex flex-column flex-md-row flex-lg-column gap-5">
+             <div className="position-relative">
                 <img
                   className="orange-border"
                   src={require(`../assets/orangeBorder.svg`).default}
@@ -101,8 +102,8 @@ const WhyDypius = () => {
                 
               </div>
              <div className="position-relative">
-              <img src={sphere} alt="" className="why-sphere"  />
-             <img src={purpleBg} alt="" className="purple-background"  />
+              {/* <img src={sphere} alt="" className="why-sphere"  /> */}
+             {/* <img src={purpleBg} alt="" className="purple-background"  /> */}
              <div className="purple-card position text-white position-relative p-3">
                 <div className="d-flex flex-column justify-content-start justify-content-center mx-auto ">
                     <h5 style={{fontWeight: '275', fontSize: '32px'}}>$42B+</h5>
@@ -118,14 +119,15 @@ const WhyDypius = () => {
                   </div>
                 </div>
              </div>
+             </div>
             </div>
           </div>
           <div className="col-12 col-lg-8 card-wrapper d-grid ">
-            <img
+            {/* <img
               className="ring"
                
               src={require(`../../../assets/tokenCircle.png`)}
-            />
+            /> */}
             {windowSize.width <= 786 ? (
               <>
                 {cards.slice(0, 3).map((card, index) => (

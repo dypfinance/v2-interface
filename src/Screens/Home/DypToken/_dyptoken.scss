@@ -41,37 +41,37 @@
     }
 
     .coin:first-child {
-      -webkit-animation: scale-up-center 1s linear infinite alternate both;
-              animation: scale-up-center 1s linear infinite alternate both;
+      // -webkit-animation: scale-up-center 1s linear infinite alternate both;
+      //         animation: scale-up-center 1s linear infinite alternate both;
     }
 
     .coin:first-child{
-      animation-name: scale-up-center;
-      animation-duration: 1.5s;
-      animation-iteration-count: infinite;
+      // animation-name: scale-up-center;
+      // animation-duration: 1.5s;
+      // animation-iteration-count: infinite;
     }
 
-    @-webkit-keyframes scale-up-center {
-      0% {
-        -webkit-transform: scale(1.0);
-                transform: scale(1.0);
-      }
-      100% {
-        -webkit-transform: scale(1.1);
-                transform: scale(1.1);
-      }
-    }
-    @keyframes scale-up-center {
-      0% {
-        -webkit-transform: scale(1.0);
-                transform: scale(1.0);
-      }
-      100% {
-        -webkit-transform: scale(1.1);
-                transform: scale(1.1);
-      }
-    }
-  }
+    // @-webkit-keyframes scale-up-center {
+    //   0% {
+    //     -webkit-transform: scale(1.0);
+    //             transform: scale(1.0);
+    //   }
+    //   100% {
+    //     -webkit-transform: scale(1.1);
+    //             transform: scale(1.1);
+    //   }
+    // }
+    // @keyframes scale-up-center {
+    //   0% {
+    //     -webkit-transform: scale(1.0);
+    //             transform: scale(1.0);
+    //   }
+    //   100% {
+    //     -webkit-transform: scale(1.1);
+    //             transform: scale(1.1);
+    //   }
+    // }
+  
 
   .token-info {
     gap: 20px;
@@ -83,20 +83,25 @@
       right: -17%;
       top: 42%;
       filter: blur(2px) drop-shadow(0px 34px 34px rgba(85, 79, 216, 0.24));
-      animation: bounce 5s ease-in-out infinite;
+
 
     }
-    @keyframes bounce {
-      0%{
-        transform: translateX(0px) translateY(0px);
-      }
-      50%{
-        transform: translateX(-10px) translateY(-10px);
-      }
-      100%{
-        transform: translateX(0px) translateY(0px);
-      }
+   
+
+
     }
+    // @keyframes bounce {
+    //   0%{
+    //     transform: translateX(0px) translateY(0px);
+    //   }
+    //   50%{
+    //     transform: translateX(-10px) translateY(-10px);
+    //   }
+    //   100%{
+    //     transform: translateX(0px) translateY(0px);
+    //   }
+    // }
+
 
     .coin-card {
       width: 270px;
@@ -104,7 +109,7 @@
       border: 2px solid rgb(214, 216, 231);
 
       .card-line {
-        background: #9664ff;
+        background: #7770E0;
         height: 40px;
         width: 5px;
         position: absolute;
@@ -119,8 +124,8 @@
 .dyp-token::before {
   content: "";
   background: #eff0f6;
-  background-image: url("../../../assets/dypTokenBackground.svg"),
-    linear-gradient(270deg, #eff0f6 0%, #fff 49.11%);
+  // background-image: url("../../../assets/dypTokenBackground.svg"),
+    // linear-gradient(270deg, #eff0f6 0%, #fff 49.11%);
   background-size: cover;
   position: absolute;
   top: 0px;

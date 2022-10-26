@@ -38,13 +38,12 @@ const ChainlinkData = () => {
   return (
     <div className="container-fluid chainlink-wrapper">
       <div className="container-lg position-relative">
-        <div className="row justify-content-between mt-5 gap-4">
+        <div className="row justify-content-between mt-5 gap-3">
           <div className="d-grid">
             <a
               href="https://data.chain.link/"
               target={"_blank"}
               rel="noreferrer"
-              // style={{zIndex: 10}}
             >
               <span className="chainlink-data-title">
                 Provided by Chainlink

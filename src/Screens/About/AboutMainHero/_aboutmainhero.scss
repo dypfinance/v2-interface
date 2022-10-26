@@ -70,6 +70,20 @@
   }
   
 
+@media screen and (max-width: 1200px) {
+  .about-main-hero{
+    .painting-container{
+      top: 100%;
+    }
+    .bull,
+    .flower{
+      top: 60%;
+    }
+   
+  }
+}
+
+
 @media screen and (max-width: 786px) {
   .image-container {
     min-height: 250px !important;
@@ -78,6 +92,8 @@
       height: 200px !important;
       top: 25%;
     }
+
+    
 
     .painting-container {
       width: 173px;
@@ -101,5 +117,10 @@
       left: 40% !important;
       filter: blur(25px);
     }
+  }
+
+  .submenu-container{
+    display: grid;
+    grid-template-columns: auto auto;
   }
 }

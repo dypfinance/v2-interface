@@ -106,22 +106,23 @@
 
     .footer{
         .footer-links{
-            min-height: 400px;
-
+            min-height: 350px;
+            border-radius:  28px 28px 0px 0px;
             h4{
                 font-size: 18px !important;
             }
         }
-    }
-
-    .socials{
-        row-gap: 20px;
-
-        .socials-container{
-            grid-template-columns: repeat(3, 1fr) !important;
+        .socials{
+            row-gap: 20px;
+            border-radius:  28px 28px 0px 0px;
+            .socials-container{
+                grid-template-columns: repeat(3, 1fr);
+            }
+         
         }
-     
     }
+
+
 
 
     .marketplaces{

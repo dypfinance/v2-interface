@@ -1,7 +1,7 @@
 .idypcoin {
     position: absolute;
     top: -5%;
-    left: -2%;
+    left: 2px;
     height: 280px;
     width: 280px;
 }
@@ -31,8 +31,31 @@
     .backgroundbuydyp{
         top: -10%;
     }
-    .idypcoin{
-        left: 6%;
+   
+}
+
+
+@media screen and (max-width: 1400px) {
+    .idyp-hero-images{
+        .backgroundbuydyp{
+            top: 0%;
+        }
+        .idypcoin{
+            left: -5%;
+        }
+       
+    }
+}
+@media screen and (max-width: 1200px) {
+    .idyp-hero-images{
+        .backgroundbuydyp{
+            top: 15%;
+        }
+        .idypcoin{
+            left: -15%;
+            top: 2%;
+        }
+       
     }
 }
 

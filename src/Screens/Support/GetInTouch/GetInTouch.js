@@ -56,10 +56,10 @@ const GetInTouch = () => {
                 <Title top='Get in touch with' bottom='Dypius team' />
                 <div className="general-container position-relative" style={{minHeight: '250px'}}>
                 <p className="touch-title text-white">General chat</p>
-                <a target="_blank" href="https://t.me/dypfinance">
+                <a target="_blank" rel="noreferrer" href="https://t.me/dypfinance" className='d-flex justify-content-center'>
                 <img className='telegram' src={touchTelegram} alt="" />
                 </a>
-                <a target="_blank" href="https://discord.gg/dypcaws">
+                <a target="_blank" rel="noreferrer" href="https://discord.gg/dypcaws" className='d-flex justify-content-center'>
                 <img className='discord' src={touchDiscord} alt="" />
                 </a>
                 </div>
@@ -68,7 +68,7 @@ const GetInTouch = () => {
                 <div className="touch-socials d-grid p-4 position-relative w-100">
                     <p className="text-white socials-title">Follow us for more</p>
                     {socials.map((social, index) => (
-                        <a target="_blank" key={index} href={social.link} className="d-flex flex-column justify-content-center align-items-center gap-2">
+                        <a target="_blank" rel="noreferrer" key={index} href={social.link} className="d-flex flex-column justify-content-center align-items-center gap-2">
                             <img src={require(`../assets/${social.icon}.svg`)} alt=""  />
                             <p className="social-title mb-0">{social.title}</p>
                         </a>

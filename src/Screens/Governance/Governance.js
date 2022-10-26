@@ -49,7 +49,7 @@ const Governance = () => {
 
   return (
     <div className="container-fluid px-0">
-      <div className="container-fluid d-flex justify-content-center align-items-center gov-main-wrapper flex-column">
+      <div className="container-fluid d-flex justify-content-center align-items-center gov-main-wrapper flex-column px-2">
         <div className="container-lg px-0 px-lg-2">
           <div
             className="col-lg-7 col-xl-7 mr-auto"

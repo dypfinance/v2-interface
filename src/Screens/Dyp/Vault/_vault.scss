@@ -18,3 +18,8 @@
   position: relative;
 }
 
+@media screen and (max-width: 786px) {
+  #vault{
+    padding: 50px 0;
+  }
+}

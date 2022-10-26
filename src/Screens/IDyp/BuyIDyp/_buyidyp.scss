@@ -62,6 +62,25 @@
   border-radius: 0px 0px 56px 56px;
 }
 
+@media screen and (max-width: 1200px) {
+  .marketplace-container{
+    .mexc-card{
+      left: -70px;
+    }
+    .uni-card{
+      right: -15px;
+    }
+    .pancake-card{
+      left: -30px;
+    }
+    .pangolin-card{
+      left: 210px;
+    }
+  }
+}
+
+
+
 @media only screen and (max-width: 991px) {
  .marketplace-container{
 

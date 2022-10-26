@@ -106,18 +106,22 @@ const FAQ = () => {
         })
         .catch((err) => console.error(err));
     }
-
-    if(windowSize.width > 786){
-      window.scrollTo(0, 1200)
-    }else{
-      window.scrollTo(0, 1900)
+    
+    if(faqTitle === ""){
+      if(windowSize.width > 786){
+        window.scrollTo(0, 1200)
+      }else{
+        window.scrollTo(0, 1800)
+      }
     }
   };
 
 
-  const searchFaq = async() => { 
-
-      await axios.get(`https://news-manage.dyp.finance/api/faqs/search/${searchString}`).then((res) => {
+  const searchFaq = async(search) => { 
+      if(search === ""){
+        setSearchBox(false)
+      }
+      await axios.get(`https://news-manage.dyp.finance/api/faqs/search/${search}`).then((res) => {
         setSearchItems(res.data)
         setFaqTitle('')
         setSearchBox(true)
@@ -139,15 +143,15 @@ const FAQ = () => {
     if(windowSize.width > 786){
       window.scrollTo(0, 1200)
     }else{
-      window.scrollTo(0, 1900)
+      window.scrollTo(0, 1800)
     }
   }
 
-  useEffect(() => {
+  // useEffect(() => {
    
-    searchFaq()
+  //   searchFaq()
 
-  }, [searchString])
+  // }, [searchString])
   
 
 
@@ -176,9 +180,8 @@ const FAQ = () => {
                 id="outlined-search"
                 type="search"
                 label="Search"
-                value={searchString}
                 ref={search}
-                onChange={(e) => setSearchString(e.target.value)}
+                onChange={(e) => searchFaq(e.target.value)}
                 size="small"
                 sx={{ width: "100%" }}
               />

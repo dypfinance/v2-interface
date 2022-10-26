@@ -212,7 +212,7 @@ const Footer = () => {
           {socials.map((social, index) => (
             <div key={index} className="col-4 col-lg">
               <a
-                target="_blank"
+                target="_blank" rel="noreferrer"
                 className="text-decoration-none"
                 href={social.link}
               >
@@ -309,7 +309,7 @@ const Footer = () => {
                   data-bs-parent="#accordionFooter"
                 >
                   <div className="row">
-                    <div className="col-6 d-flex flex-column gap-3">
+                    <div className="col-12 d-flex flex-column gap-3">
                       {products.slice(0, 2).map((item, index) => (
                         <a
                           key={index}
@@ -348,8 +348,6 @@ const Footer = () => {
                           <h5>{item.title}</h5>
                         </Link>
                       ))}
-                    </div>
-                    <div className="col-6 d-flex flex-column gap-3">
                       {products
                         .slice(products.length - 1, products.length)
                         .map((item, index) => (
@@ -401,7 +399,7 @@ const Footer = () => {
                         key={index}
                         href={item.link}
                         rel="noreferrer"
-                        target="_blank"
+                        target="_blank" 
                         className="text-white text-decoration-none"
                       >
                         <h5>{item.title}</h5>
@@ -453,15 +451,20 @@ const Footer = () => {
                         <h5>{item.title}</h5>
                       </Link>
                     ))}
-                    <div className="d-flex flex-row gap-3 position-relative">
+                   
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div className="d-flex flex-row gap-3 position-relative mt-3">
                       <a
-                        target="_blank"
+                        target="_blank" rel="noreferrer"
                         href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
                       >
                         <img src={coinmarketcap} alt=""   />
                       </a>
                       <a
-                        target="_blank"
+                        target="_blank" rel="noreferrer"
                         href="https://www.coingecko.com/en/coins/defi-yield-protocol"
                       >
                         <img src={coinGecko} alt=""   />
@@ -471,10 +474,6 @@ const Footer = () => {
                         <img src={disclaimer} alt=""   />
                       </Link>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <hr />
             </div>
           ) : (
             <>
@@ -554,7 +553,7 @@ const Footer = () => {
                   <a
                     key={index}
                     href={item.link}
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     className="text-white text-decoration-none"
                   >
                     <h5>{item.title}</h5>
@@ -580,13 +579,13 @@ const Footer = () => {
                   style={{ bottom: "-90px" }}
                 >
                   <a
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     href="https://coinmarketcap.com/currencies/defi-yield-protocol/"
                   >
                     <img src={coinmarketcap} alt=""   />
                   </a>
                   <a
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     href="https://www.coingecko.com/en/coins/defi-yield-protocol"
                   >
                     <img src={coinGecko} alt=""   />

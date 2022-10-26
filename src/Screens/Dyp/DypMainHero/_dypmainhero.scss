@@ -17,7 +17,9 @@
         left: 8%;
         bottom: 10%;
         z-index: 1;
-        animation: rotate 10s linear infinite;
+        width: 250px;
+
+        // animation: rotate 10s linear infinite;
     }
 
     @keyframes rotate {
@@ -83,7 +85,7 @@
         width: 135px;
 
         .submenu-indicator{
-            animation: pulse 1.5s linear infinite;
+            // animation: pulse 1.5s linear infinite;
         }
     }
 
@@ -104,6 +106,32 @@
   }
   
 
+@media screen and (max-width: 1400px) {
+    .dyp-main-hero{
+        .coin{
+            right: -6%;
+        }
+    }
+}
+@media screen and (max-width: 1199px) {
+    .dyp-main-hero{
+        .coin{
+            right: -25%;
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .dyp-main-hero{
+        .coin{
+            right: 0%;
+        }
+        .background{
+            left: 42%;
+        }
+    }
+}
+
+
 @media screen and (max-width: 786px) {
     .dyp-main-hero{
         padding-top: 100px;
@@ -116,11 +144,12 @@
         .dyp-coin-wrapper{
             min-height: 300px;
             .coin{
-                right: 10%;
+                right: 13%;
                 bottom: 0%;
             }
             .background{
-                left: 15%;
+                left: 9%;
+                width: 250px;
             }
         }
     }
@@ -137,6 +166,18 @@
     }
 }
 
+@media screen and (max-width: 390px) {
+    .dyp-main-hero{
+        .dyp-coin-wrapper{
+            .background{
+                left: 18%;
+            }
+            .coin{
+                right: 8%;
+            }
+        }
+    }
+}
 @media screen and (max-width: 375px) {
     .dyp-main-hero{
         .dyp-coin-wrapper{
@@ -153,10 +194,10 @@
     .dyp-main-hero{
         .dyp-coin-wrapper{
             .background{
-                left: 9%;
+                left: 15%;
             }
             .coin{
-                right: 0%;
+                top: 2% ;
             }
         }
     }
