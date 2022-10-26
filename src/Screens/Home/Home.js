@@ -16,7 +16,7 @@ const Home = () => {
       <MainHero/>
      <DypMetaverse/>
        <DypTools/>
-      <DypToken/>
+      {/* <DypToken/> */}
       {/* <Suspense fallback={<div>Loading</div>}> */}
       <DypPartners />
       {/* </Suspense> */}
