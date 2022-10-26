@@ -26,7 +26,7 @@ const DypTools = () => {
               <Title
                 top="DYP Tools"
                 bottom="Powerful dApps"
-                //  animation='fade-up' duration='1000'
+                 animation='fade-up' duration='1000'
               />
               <ListCard
                 content="A wide range of impressive decentralized applications"
@@ -46,9 +46,9 @@ const DypTools = () => {
               target={"_blank"}
               rel="noreferrer"
               className="btn d-flex align-items-center justify-content-center outline-btn m-md-auto m-sm-auto m-lg-0"
-              // data-aos="fade-up"
-              // data-aos-delay="500"
-              // data-aos-duration="1000"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="1000"
             >
               Go to DYP Tools <img src={filledArrow} alt="" className="ml-2" />
             </a>

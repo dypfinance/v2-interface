@@ -52,7 +52,7 @@ cursor: pointer;
     left: 23%;
     top: 10%;
     z-index: -1;
-    // animation: bounce 5s ease-in-out infinite ;
+    animation: bounce 5s ease-in-out infinite ;
   }
 
   
@@ -64,20 +64,20 @@ cursor: pointer;
     z-index: 0;
     right: -6%;
     bottom: -9%;
-    // animation: bounce 5s ease-in-out infinite ;
+    animation: bounce 5s ease-in-out infinite ;
   }
 
-  // @keyframes bounce{
-  //   0%{
-  //     transform: translateX(0px) translateY(0px);
-  //   }
-  //   50%{
-  //     transform: translateX(10px) translateY(-10px);
-  //   }
-  //   100%{
-  //     transform: translateX(0px) translateY(0px);
-  //   }
-  // }
+  @keyframes bounce{
+    0%{
+      transform: translateX(0px) translateY(0px);
+    }
+    50%{
+      transform: translateX(10px) translateY(-10px);
+    }
+    100%{
+      transform: translateX(0px) translateY(0px);
+    }
+  }
 
 
 

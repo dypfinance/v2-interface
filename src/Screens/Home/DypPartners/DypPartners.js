@@ -151,8 +151,8 @@ const [partnersLength, setPartnersLength] = useState(0)
 
         <div
           className="row dyp-partners position-relative p-5 justify-content-center"
-          //  data-aos="fade-up"
-          //  data-aos-duration="1000"
+           data-aos="fade-up"
+           data-aos-duration="1000"
         >
           {partnersArray.slice(0, partnersLength).map((partner, index) => (
             <a href={partner.href} target="_blank"  key={index}>
