@@ -29,7 +29,7 @@ const AboutMainHero = () => {
               style={{ borderRadius: "28px" }}
             />
           </div>
-          <img src={bluehero} className="bluehero" alt=""  />
+          {/* <img src={bluehero} className="bluehero" alt=""  /> */}
         </div>
       </div>
       <div
