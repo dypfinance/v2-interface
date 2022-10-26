@@ -13,9 +13,9 @@ const BuyDyp = () => {
 
   return (
     <div className="container-lg buy-dyp d-flex position-relative justify-content-between flex-column flex-lg-row py-4 py-lg-0">
-      <img className="ring" src={ring} alt="" />
+      {/* <img className="ring" src={ring} alt="" />
       <img className="sphere-1" src={sphere} alt="" />
-      <img className="sphere-2" src={sphere} alt="" />
+      <img className="sphere-2" src={sphere} alt="" /> */}
       <div className="row  px-4">
         <div className="col-12 col-sm-6 col-lg-5 d-flex flex-column justify-content-center gap-4">
           <Title
