@@ -85,7 +85,7 @@ const Solutions = () => {
       />
 
       <div className="container-lg position-relative" id="solutions">
-        <div className="row px-5" style={{ marginTop: "150px" }}>
+        <div className="row" style={{ marginTop: "150px" }}>
           <Title top="Our" bottom="Solutions"  animation="fade-up" duration="1000"/>
         </div>
         <div className="row d-grid px-3 solutions-card-container">

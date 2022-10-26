@@ -21,7 +21,9 @@ import BuyDypScreen from "./Screens/BuyDyp/BuyDypScreen";
 
 function App() {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      once: true
+    });
   }, []);
 
   return (
