@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CoinCard from "../../../components/CoinCard/CoinCard";
 import Title from "../../../components/Title/Title";
 import coin from "../../../assets/coin.png";
-import coinBg from "../../../assets/coinbg2.svg";
+import coinBg from "../../../assets/coinbg2.png";
 import rightArrow from "../../../assets/right-arrow.svg";
 import "./_dyptoken.scss";
 import { NavLink } from "react-router-dom";
