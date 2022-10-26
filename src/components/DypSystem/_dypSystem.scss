@@ -301,6 +301,15 @@
   }
 }
 
+@-webkit-keyframes orbit-reverse {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
 /*
   In order to invert the rotation, do the rotate* transforms in reverse order.
   
