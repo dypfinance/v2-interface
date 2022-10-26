@@ -4,7 +4,7 @@ const DisclaimerHero = () => {
   return (
     <div className="container-fluid">
       <div className="container-fluid disclaimer-hero">
-        <img
+        {/* <img
           className="bluehero-solutions"
           src={require(`../../../assets/metaverse-blueHero.svg`).default}
           alt=""
@@ -15,7 +15,7 @@ const DisclaimerHero = () => {
           src={require(`../../../assets/metaverse-blueHero.svg`).default}
           alt=""
           style={{ bottom: "-100px", right: '10%', transform: 'rotate(230deg)' }}
-        />
+        /> */}
       </div>
       <DisclaimerContent/>
 
