@@ -30,8 +30,8 @@ const DypMainHero = () => {
 
       />
       <div className="container-lg d-flex justify-content-between">
-      <div className="row justify-content-between px-3">
-      <div className="col-12 col-sm-6 col-lg-7 text-white d-flex flex-column gap-3 justify-content-lg-end justify-content-xl-end">
+      <div className="row justify-content-between px-0 px-lg-3">
+      <div className="col-12 col-sm-6 col-lg-7 text-white d-flex flex-column gap-3 justify-content-lg-end justify-content-xl-end px-0 px-lg-3">
           <h1>DYP Token</h1>
           <p>
             DYP is a governance token that facilitates the transactions

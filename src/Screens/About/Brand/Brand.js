@@ -19,7 +19,7 @@ const Brand = () => {
       <div className="container-lg position-relative">
       <img src={ring} alt="" className="brand-ring"  />
 
-        <Title top={"Brand"} align="d-flex flex-row gap-2" />
+        <Title top={"Brand"} align="d-flex flex-row gap-2 mb-3" />
         <div className="row m-0 justify-content-between gap-3">
           <div className="col-lg-5 col-xl-5 branditem">
             <div className="row m-0 justify-content-between gap-3 align-items-center">

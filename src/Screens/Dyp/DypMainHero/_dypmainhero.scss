@@ -104,6 +104,32 @@
   }
   
 
+@media screen and (max-width: 1400px) {
+    .dyp-main-hero{
+        .coin{
+            right: -6%;
+        }
+    }
+}
+@media screen and (max-width: 1199px) {
+    .dyp-main-hero{
+        .coin{
+            right: -25%;
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .dyp-main-hero{
+        .coin{
+            right: 0%;
+        }
+        .background{
+            left: 42%;
+        }
+    }
+}
+
+
 @media screen and (max-width: 786px) {
     .dyp-main-hero{
         padding-top: 100px;

@@ -38,7 +38,7 @@ const SupportedAssets = () => {
     <div className="container-lg supportedAssets-wrapper">
       <div className="px-4">
         <div className="col-12 col-lg-5 mb-5 px-0 px-lg-auto">
-          <Title top="Supported" bottom={"Assets"} align={"d-flex gap-2"} />
+          <Title top="Supported" bottom={"Assets"} align={"d-flex gap-2 justify-content-center justify-content-lg-start"} />
           <p style={{ color: "rgba(30, 32, 41, 0.6)" }} className='supported-description'>
             We support the most popular coins on three different chains
           </p>
@@ -163,7 +163,7 @@ const SupportedAssets = () => {
             </div>
           </div>
           <div
-            className="row gap-4 px-4 position-relative justify-content-center justify-content-lg-between justify-content-xl-between"
+            className="row gap-4 px-0 px-lg-4 position-relative justify-content-center justify-content-lg-between justify-content-xl-between assets-container"
             style={{ paddingBottom: "4rem", zIndex: 1 }}
           >
             <SupAssetCard
@@ -172,7 +172,7 @@ const SupportedAssets = () => {
               tvl={"$48,382.30"}
               lockTime={"No lock"}
               chain={
-                ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"
+                `supported-assets-card ${ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"}`
               }
             />
             <SupAssetCard
@@ -181,7 +181,7 @@ const SupportedAssets = () => {
               tvl={"$48,382.30"}
               lockTime={"No lock"}
               chain={
-                ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"
+                `supported-assets-card ${ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"}`
               }
             />
             <SupAssetCard
@@ -190,7 +190,7 @@ const SupportedAssets = () => {
               tvl={"$48,382.30"}
               lockTime={"No lock"}
               chain={
-                ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"
+                `supported-assets-card ${ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"}`
               }
             />
             <img className="spiral2" src={Spiral} alt="" />

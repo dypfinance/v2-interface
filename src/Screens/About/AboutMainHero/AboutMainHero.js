@@ -10,8 +10,8 @@ import indicator from "../assets/aboutIndicator.svg";
 const AboutMainHero = () => {
   return (
     <div className="container-fluid about-main-hero d-flex flex-column justify-content-lg-end justify-content-xl-end justify-content-center" id="aboutmain">
-      <div className="container-lg d-flex flex-column flex-lg-row flex-md-row justify-content-between mt-5 mt-lg-0 align-items-md-baseline align-items-sm-center">
-        <div className="col-12 col-lg-5 col-md-5 mt-5 mt-lg-0">
+      <div className="container-lg d-flex flex-column flex-lg-row flex-md-row justify-content-between mt-5 mt-lg-0 align-items-md-baseline align-items-sm-center px-0 px-lg-3">
+        <div className="col-12 col-lg-5 col-md-5 mt-5 mt-lg-0 px-0 px-lg-2">
           <Title top="About" bottom="us" align="d-flex flex-row gap-2" />
           <p className="text-secondary">
           Dypius was created with the goal of bringing a powerful decentralized ecosystem that faces the future. We offer a variety of products and services that cater to both beginners and advanced users in the digital space, including yield farming, staking, DeFi tools, NFTs, and Metaverse gaming.

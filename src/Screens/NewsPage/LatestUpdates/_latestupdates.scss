@@ -95,6 +95,15 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+   .updates-container{
+    .update-card-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+   }
+}
+
+
 @media screen and (max-width: 786px) {
 
     .updates-container{

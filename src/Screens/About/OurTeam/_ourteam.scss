@@ -20,7 +20,7 @@
         gap: 20px;
 
         .team-card{
-            width: 310px;
+            width: 340px;
             height: 420px;
             background: linear-gradient(180deg, #7770E0 0%, #554FD8 100%);
             box-shadow: 0px 32px 64px rgb(20 20 43 / 8%);
@@ -131,7 +131,13 @@
 }
 
 @media screen and (max-width: 600px) {
+    .profile-pic{
+        width: 290px !important;
+    }
 
+    .title-container{
+        width: 290px !important;
+    }
 
     .our-team{
 
