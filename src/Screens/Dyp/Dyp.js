@@ -29,7 +29,7 @@ const Dyp = () => {
           {/* <Tokenomics bottom={55} showBtn={true} isDyp={true} /> */}
         </div>
         {/* <BuyDyp /> */}
-        <SupportedAssets />
+        {/* <SupportedAssets /> */}
       </div>
       <Vault />
       <EducationalTools />
