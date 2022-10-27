@@ -48,7 +48,9 @@
   gap: 9px;
   color: rgba(85, 79, 216, 1);
     
-    
+  @media screen and (max-width: 786px) {
+    justify-content: space-between;
+  }
     
       .submenu-indicator{
         animation: pulse 1.5s linear infinite;
@@ -99,9 +101,9 @@
     width: 150px;
     left: 0;
   }
-  .submenu-container{
+  .support-submenu-container{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
   }
   
   
