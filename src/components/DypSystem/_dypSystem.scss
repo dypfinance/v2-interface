@@ -280,7 +280,7 @@
     transform: rotateZ(0deg);
   }
   100% {
-    transform: rotateZ(360deg);
+    transform: rotateZ(-360deg);
   }
 }
 @keyframes orbit {
@@ -288,13 +288,13 @@
     transform: rotateZ(0deg);
   }
   100% {
-    transform: rotateZ(360deg);
+    transform: rotateZ(-360deg);
   }
 }
 
 @keyframes orbit-reverse {
   0% {
-    transform: rotateZ(360deg);
+    transform: rotateZ(-360deg);
   }
   100% {
     transform: rotateZ(0deg);
@@ -303,7 +303,7 @@
 
 @-webkit-keyframes orbit-reverse {
   0% {
-    transform: rotateZ(360deg);
+    transform: rotateZ(-360deg);
   }
   100% {
     transform: rotateZ(0deg);
@@ -320,7 +320,7 @@
 @-webkit-keyframes invert-orbit {
   0% {
     scale: 1.5;
-    transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
+    transform: rotateZ(-360deg) rotateY(30deg) rotateX(-75deg);
   }
 
 
@@ -333,7 +333,7 @@
 @keyframes invert-orbit {
   0% {
     scale: 1;
-    transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
+    transform: rotateZ(-360deg) rotateY(30deg) rotateX(-75deg);
   }
 
 
@@ -354,7 +354,7 @@
 
 
   100% {
-    transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
+    transform: rotateZ(-360deg) rotateY(30deg) rotateX(-75deg);
     scale: 1;
   }
 
@@ -369,7 +369,7 @@
 
 
   100% {
-    transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
+    transform: rotateZ(-360deg) rotateY(30deg) rotateX(-75deg);
     scale: 1;
   }
 
