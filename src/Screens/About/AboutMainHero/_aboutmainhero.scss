@@ -46,6 +46,10 @@
     gap: 9px;
     font-size: 15px;
 
+        @media screen and (max-width: 786px) {
+          justify-content: space-between;
+          width: 150px;
+        }
     .submenu-indicator{
         animation: pulse 1.5s linear infinite
     }

@@ -30,7 +30,7 @@ const SupportMainHero = () => {
         </div>
         </div>
         <div
-        className="row pt-5 p-4 justify-content-center gap-4 submenu-container"
+        className="row pt-5 p-4 justify-content-center gap-4 support-submenu-container"
         style={{ zIndex: 5 }}
       >
         <a href="#faq" className="text-decoration-none submenu-link">

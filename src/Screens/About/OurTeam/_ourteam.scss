@@ -1,6 +1,9 @@
 .our-team{
     min-height: 700px;
     position: relative;
+    background-image: url('../assets/ourTeamBg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 
     .our-team-background{
         position: absolute;
@@ -9,7 +12,6 @@
         right: 0;
         left: 0;
         height: 700px;
-        background: linear-gradient(180deg, rgba(239, 240, 246, 0) 0%, #EFF0F6 100%);
         border-radius: 56px 0px;
         z-index: -1;
     }

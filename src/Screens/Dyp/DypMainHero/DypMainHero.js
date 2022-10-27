@@ -57,7 +57,7 @@ const DypMainHero = () => {
       </div>
       </div>
       <div
-        className="row pt-5 p-4 justify-content-center gap-5"
+        className="row pt-5 p-4 justify-content-center gap-5 dyp-submenu-container"
         style={{ zIndex: 1 }}
       >
         <a
