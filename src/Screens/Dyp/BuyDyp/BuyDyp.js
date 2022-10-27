@@ -35,7 +35,7 @@ const BuyDyp = () => {
             have a variety of centralized and decentralized exchanges that you
             can use to do so.
           </p>
-          {windowSize.width > 786 ? (
+          {windowSize.width > 576 ? (
             <NavLink
               className="btn filled-btn d-flex justify-content-center align-items-center "
               style={{ width: "24%" }}
@@ -54,7 +54,7 @@ const BuyDyp = () => {
           <img className="coinBackground" src={coinBg} alt="" />
         </div>
       </div>
-      {windowSize.width < 786 ? (
+      {windowSize.width < 576 ? (
 
         <div className="row justify-content-center" style={{zIndex: 5}}>
           <NavLink to='/buydyp' className="btn filled-btn w-75 d-flex justify-content-center align-items-center">
