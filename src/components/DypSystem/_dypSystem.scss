@@ -286,24 +286,35 @@
   100% { 
 
   -webkit-transform: rotateZ(-360deg);
+  
+
 
   }
 }
 @keyframes orbit {
   0% {
     transform: rotateZ(0deg);
+  -webkit-transform: rotateZ(0deg);
+
   }
   100% {
     transform: rotateZ(-360deg);
+  -webkit-transform: rotateZ(-360deg);
+
   }
 }
 
 @keyframes orbit-reverse {
   0% {
     transform: rotateZ(-360deg);
+  -webkit-transform: rotateZ(-360deg);
+
+    
   }
   100% {
     transform: rotateZ(0deg);
+  -webkit-transform: rotateZ(0deg);
+
   }
 }
 
@@ -349,12 +360,16 @@
   0% {
     scale: 1;
     transform: rotateZ(-360deg) rotateY(30deg) rotateX(-75deg);
+    -webkit-transform: rotateZ(-360deg) rotateY(30deg) rotateX(-75deg);
+    
   }
 
 
 
   100% {
     transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
+    -webkit-transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
+
     scale: 1;
 
   }
@@ -364,12 +379,16 @@
   0% {
     scale: 1;
     transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
+    -webkit-transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
+
    
   }
 
 
   100% {
     transform: rotateZ(-360deg) rotateY(30deg) rotateX(-75deg);
+    -webkit-transform: rotateZ(-360deg) rotateY(30deg) rotateX(-75deg);
+
     scale: 1;
   }
 
