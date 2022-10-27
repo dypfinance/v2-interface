@@ -54,6 +54,7 @@
     
       .submenu-indicator{
         animation: pulse 1.5s linear infinite;
+        -webkit-animation: pulse 1.5s linear infinite;
       }
       
       
@@ -72,6 +73,20 @@
 
   100%{
     transform: scale(1);
+  }
+}
+
+@-webkit-keyframes pulse{
+  0%{
+    -webkit-transform: scale(1);
+  }
+
+  50%{
+    -webkit-transform: scale(1.4);
+  }
+
+  100%{
+    -webkit-transform: scale(1);
   }
 }
 

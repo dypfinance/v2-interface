@@ -93,11 +93,15 @@
 
 .indicator{
     transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
     transition: all .25s;
+    -webkit-transition: all .25s;
 }
 
 .turn{
     transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+
 }
 
 

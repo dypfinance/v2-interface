@@ -61,6 +61,8 @@
         height: 120px;
         cursor: pointer;
         transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+
 
         p {
           color: #7670e0;
@@ -107,6 +109,8 @@
       .search-item{
         cursor: pointer;
         transition: all .3s;
+        -webkit-transition: all .3s;
+
       }
 
       .search-item:hover{
