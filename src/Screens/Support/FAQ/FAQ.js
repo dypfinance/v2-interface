@@ -109,9 +109,9 @@ const FAQ = () => {
     
     if(faqTitle === ""){
       if(windowSize.width > 786){
-        window.scrollTo(0, 900)
+        window.scrollTo(0, 1200)
       }else{
-        window.scrollTo(0, 1800)
+        window.scrollTo(0, 1900)
       }
     }
   };
@@ -119,7 +119,7 @@ const FAQ = () => {
 
   const searchFaq = async() => { 
     if(searchString.length < 1){
-      return
+      setSearchBox(false)
     }else{
 
       await axios.get(`https://news-manage.dyp.finance/api/faqs/search/${searchString}`).then((res) => {
@@ -143,9 +143,9 @@ const FAQ = () => {
     }).catch((err) => console.error(err))
     setSearchBox(false)
     if(windowSize.width > 786){
-      window.scrollTo(0, 900)
+      window.scrollTo(0, 1200)
     }else{
-      window.scrollTo(0, 1800)
+      window.scrollTo(0, 1900)
     }
   }
 

@@ -101,7 +101,18 @@
 }
 
 
-@media screen and (max-width: 786px) {
+
+@media screen and (max-width: 912px) {
+    .footer{
+        .socials{
+            .socials-container{
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
 
 
     .footer{

@@ -60,7 +60,7 @@ const LatestUpdates = ({type}) => {
         <div className="container-lg updates-container p-5 position-relative">
           <img src={blueHero} alt="" className="updates-bluehero"  />
           <img src={rainbowHero} alt="" className="updates-rainbowHero"  />
-          <img src={ring} alt="" className="updates-ring"  />
+          <img src={ring} alt="" className="updates-ring d-none d-lg-block"  />
             <div className="row justify-content-center justify-content-lg-between gap-5">
                 <Title top='Latest' bottom='updates' align='d-flex flex-row gap-2' />
                 <div
