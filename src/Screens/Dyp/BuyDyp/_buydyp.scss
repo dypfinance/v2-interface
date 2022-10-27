@@ -44,7 +44,9 @@
 
 .buy-dyp::before{
     content: "";
-    background-image: url("../assets/dypcoinbackground.png"), linear-gradient(90deg, #EFF0F6 0%, rgba(239, 240, 246, 0) 75%);;
+    background-image: 
+    url("../assets/dypcoinbackground.png"),
+    linear-gradient(180deg, rgba(239, 240, 246, 0) 0%, #eff0f6 100%);
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
