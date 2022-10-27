@@ -44,7 +44,12 @@
       display: grid;
       grid-template-columns: repeat(6, 1fr);
 
-      @media screen and (max-width: 786px) {
+      @media screen and (max-width: 912px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+
+      @media screen and (max-width: 576px) {
         grid-template-columns: repeat(2, 1fr);
       }
       .category-card {

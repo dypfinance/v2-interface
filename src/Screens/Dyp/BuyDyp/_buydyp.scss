@@ -70,8 +70,21 @@
     }
 }
 
+@media screen and (max-width: 912px) {
+    .buy-dyp{
+        min-height: 400px;
+        .coinBackground{
+            right: -15%;
+            top: -15%;
+        }
+        .coin{
+            right: -30%;
+            top: -30%;
+        }
+    }
+}
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 576px) {
 
     .buy-dyp{
         min-height: 680px;

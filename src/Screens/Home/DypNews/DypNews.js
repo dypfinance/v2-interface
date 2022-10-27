@@ -38,8 +38,8 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
       {
         breakpoint: 850,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           initialSlide: 1,
           dots: page === "news" ? false : true,
         },
