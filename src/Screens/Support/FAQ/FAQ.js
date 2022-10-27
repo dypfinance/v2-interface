@@ -117,16 +117,18 @@ const FAQ = () => {
   };
 
 
-  const searchFaq = async(search) => { 
-      if(search === ""){
-        setSearchBox(false)
-      }
-      await axios.get(`https://news-manage.dyp.finance/api/faqs/search/${search}`).then((res) => {
+  const searchFaq = async() => { 
+    if(searchString.length < 1){
+      return
+    }else{
+
+      await axios.get(`https://news-manage.dyp.finance/api/faqs/search/${searchString}`).then((res) => {
         setSearchItems(res.data)
         setFaqTitle('')
         setSearchBox(true)
         
       }).catch((err) => console.error(err))
+    }
    
   }
 
@@ -147,11 +149,11 @@ const FAQ = () => {
     }
   }
 
-  // useEffect(() => {
+  useEffect(() => {
    
-  //   searchFaq()
+    searchFaq()
 
-  // }, [searchString])
+  }, [searchString])
   
 
 
@@ -181,7 +183,8 @@ const FAQ = () => {
                 type="search"
                 label="Search"
                 ref={search}
-                onChange={(e) => searchFaq(e.target.value)}
+                value={searchString}
+                onChange={(e) => setSearchString(e.target.value)}
                 size="small"
                 sx={{ width: "100%" }}
               />
@@ -189,8 +192,8 @@ const FAQ = () => {
             {searchBox &&
             <div className="search-items p-4 mt-4 w-50">
             {searchItems.length > 0 ?
-              searchItems.slice(0, 3).map((searchItem) => (
-                <div className="search-item p-3" onClick={() => selectSearchFaq(searchItem.category, searchItem.collapse)}>
+              searchItems.slice(0, 3).map((searchItem, index) => (
+                <div key={index} className="search-item p-3" onClick={() => selectSearchFaq(searchItem.category, searchItem.collapse)}>
                   <p className="mb-0">{searchItem.title.slice(0, 50) + '...'}</p>
                 </div>
               ))
