@@ -161,8 +161,9 @@
         bottom: 0%;
       }
       .background {
-        left: 9%;
+        left: 50%;
         width: 250px;
+        margin-left: -126px;
       }
     }
   }
@@ -185,9 +186,9 @@
 @media screen and (max-width: 390px) {
   .dyp-main-hero {
     .dyp-coin-wrapper {
-      .background {
-        left: 18%;
-      }
+      // .background {
+      //   left: 18%;
+      // }
       .coin {
         right: 8%;
       }
@@ -197,9 +198,9 @@
 @media screen and (max-width: 375px) {
   .dyp-main-hero {
     .dyp-coin-wrapper {
-      .background {
-        left: 12%;
-      }
+      // .background {
+      //   left: 12%;
+      // }
       .coin {
         right: 2%;
       }
@@ -209,9 +210,9 @@
 @media screen and (max-width: 360px) {
   .dyp-main-hero {
     .dyp-coin-wrapper {
-      .background {
-        left: 15%;
-      }
+      // .background {
+      //   left: 15%;
+      // }
       .coin {
         top: 2%;
       }

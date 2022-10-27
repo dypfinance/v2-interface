@@ -173,7 +173,10 @@ hr{
 
 @media screen and (max-width: 880px) {
   .assets-container{
-    grid-template-columns: auto !important;
+    // grid-template-columns: auto !important;
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
