@@ -15,17 +15,17 @@ const Navbar = () => {
   const [logo, setLogo] = useState(false);
 
   const changeBackground = () => {
-    if (window.scrollY >= 75) {
-      // setShow(true);
-    } else {
-      // setShow(false);
-    }
+    // if (window.scrollY >= 75) {
+    //   setShow(true);
+    // } else {
+    //   setShow(false);
+    // }
 
     if(typeof window !== 'undefined'){
       if(window.scrollY > lastScrollY){
-        // setShow(true)
+        setShow(true)
       }else{
-        // setShow(false)
+        setShow(false)
       }
     }
     setLastScrollY(window.scrollY)
@@ -79,7 +79,7 @@ const Navbar = () => {
   return (
     <div
       className={`container-fluid  d-none d-lg-flex page-navigation ${
-        show && 'opacity'
+        show && 'hide-navbar'
       }`}
     >
       <div

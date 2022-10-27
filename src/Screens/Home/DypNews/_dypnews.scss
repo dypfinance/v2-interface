@@ -126,6 +126,7 @@ cursor: pointer;
       p{
         font-size: 16px !important;
         font-weight: 400 !important;
+        margin-bottom: 0 !important;
       }
       em{
         font-size: 16px !important;
@@ -134,6 +135,11 @@ cursor: pointer;
       strong{
         font-size: 16px !important;
         font-weight: 400 !important;
+      }
+
+      br{
+        height: 0px !important;
+        margin: 0 !important;
       }
      
     }

@@ -23,7 +23,7 @@ const IDypHero = () => {
       <div className="container-lg d-flex justify-content-between">
         <div className="col-12 col-lg-6 text-white d-flex flex-column gap-3 justify-content-lg-end justify-content-xl-end">
           <h1>iDYP Token</h1>
-          <p>
+          <p> 
             iDYP is an ERC-20 token used in the Dypius ecosystem as a component
             of smart contract strategies. It is accessible on three major
             networks like Ethereum, BNB chain, and Avalanche. The Dypius
