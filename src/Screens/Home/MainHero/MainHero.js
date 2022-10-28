@@ -26,7 +26,7 @@ const MainHero = () => {
         <div className="container-lg">
           <div className="heading row">
             <div className="col-12 col-lg-5 d-flex justify-content-lg-evenly justify-content-xl-evenly justify-content-inherit flex-column text-white ml-lg-4 pt-5 px-0 px-lg-2">
-              <div className="d-flex flex-column gap-4">
+              <div className="d-grid gap-4">
                 <div>
                   <h1>Embrace</h1>
                   <h1>the future</h1>
@@ -49,7 +49,7 @@ const MainHero = () => {
                       <b>Earn</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                    Make the most of your assets by embracing Dypius Earn products
+                    Make the most of your assets by embracing Dypius Earn products.
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">
@@ -65,7 +65,7 @@ const MainHero = () => {
                       <b>DYP Tools</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                    Advanced analytic tools designed to provide accurate data, news, project support, and much more 
+                    Advanced analytic tools designed to provide accurate data, news, project support, and much more.
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">
