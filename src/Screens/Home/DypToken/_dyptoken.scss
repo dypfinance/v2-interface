@@ -49,6 +49,10 @@
       animation-name: scale-up-center;
       animation-duration: 1.5s;
       animation-iteration-count: infinite;
+
+      -webkit-animation-name: scale-up-center;
+      -webkit-animation-duration: 1.5s;
+      -webkit-animation-iteration-count: infinite;
     }
 
     @-webkit-keyframes scale-up-center {
@@ -84,6 +88,8 @@
       top: 42%;
       filter: blur(2px) drop-shadow(0px 34px 34px rgba(85, 79, 216, 0.24));
       animation: bounce 5s ease-in-out infinite;
+      -webkit-animation: bounce 5s ease-in-out infinite;
+
 
     }
     @keyframes bounce {
@@ -97,6 +103,19 @@
         transform: translateX(0px) translateY(0px);
       }
     }
+
+    @-webkit-keyframes bounce {
+      0%{
+        -webkit-transform: translateX(0px) translateY(0px);
+      }
+      50%{
+        -webkit-transform: translateX(-10px) translateY(-10px);
+      }
+      100%{
+        -webkit-transform: translateX(0px) translateY(0px);
+      }
+    }
+
 
     .coin-card {
       width: 270px;

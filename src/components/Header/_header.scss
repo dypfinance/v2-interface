@@ -13,7 +13,9 @@
   width: 45px;
   height: 45px;
   transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
   transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
   cursor: pointer;
   border-radius: 8px;
   right: 12px;
@@ -100,6 +102,8 @@
 
 .menu {
   transition: all .3s,background 0s;
+  -webkit-transition: all .3s,background 0s;
+
   position: fixed;
   right: 0;
   top: 0;
@@ -107,7 +111,11 @@
   width: 100%;
   border-radius: 0px 0px 20px 20px;
   transform: translateY(-700px);
+  -webkit-transform: translateY(-700px);
+
   transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+
   ul li {
     list-style-type: none;
     margin: 8px;
@@ -131,10 +139,14 @@ box-shadow: 0px 16px 32px rgba(241, 101, 63, 0.6);
 border-radius: 12px 0px;
 z-index: 55;
 transition: all .3s;
+-webkit-transition: all .3s;
+
  }
 
  .dyp-tools-btn:active{
   transform: translateX(10px) translateY(10px);
+  -webkit-transform: translateX(10px) translateY(10px);
+
  }
 
   ul li a{
@@ -160,6 +172,7 @@ border-radius: 0px 0px 14px 0px;
 
 .openMenu{
   transform: translateY(70px);
+  -webkit-transform: translateY(70px);
   box-shadow:0 0 0 1000px rgba(0,0,0,.50);
 }
 
@@ -171,7 +184,11 @@ border-radius: 0px 0px 14px 0px;
 position: fixed;
 z-index: 30;
 transform: translateY(0px);
+-webkit-transform: translateY(0px);
+
 transition: all .25s ease-in;
+-webkit-transition: all .25s ease-in;
+
 }
 
 .white-navbar{
@@ -187,4 +204,6 @@ transition: all .25s ease-in;
 
 .hide-nav{
   transform: translateY(-100px);
+  -webkit-transform: translateY(-100px);
+
 }

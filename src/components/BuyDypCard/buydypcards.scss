@@ -19,6 +19,8 @@
   flex-direction: column;
   gap: 15px;
   transition: all .25s ;
+  -webkit-transition: all .25s ;
+
 
 
 
@@ -89,6 +91,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     transition: all .25s;
+    -webkit-transition: all .25s;
     flex-wrap: inherit;
   }
 
