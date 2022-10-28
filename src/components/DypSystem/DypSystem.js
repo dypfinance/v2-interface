@@ -21,57 +21,84 @@ const DypSystem = ({
   onRemoveDesc,
 }) => {
   return (
+    // <div id="orbit-system">
+    //   <div className="system">
+    //     <div className="satellite-orbit2"></div>
+
+    //     <div className="satellite-orbit3">
+    //       <div
+    //         className="satellite"
+    //         onMouseEnter={onShowFifthDesc}
+    //         onMouseLeave={onRemoveDesc}
+    //       ></div>
+
+    //       <div
+    //         className="satellite3"
+    //         onMouseEnter={onShowThirdDesc}
+    //         onMouseLeave={onRemoveDesc}
+    //       >
+    //         <a
+    //           href="https://tools.dyp.finance/"
+    //           target={"_blank"}
+    //           rel="noreferrer"
+    //           style={{ width: 50, height: 50, display: "flex" }}
+    //         ></a>
+    //       </div>
+
+    //       <div
+    //         className="satellite33"
+    //         onMouseEnter={onShowFourthDesc}
+    //         onMouseLeave={onRemoveDesc}
+    //       ></div>
+    //     </div>
+    //     <div className="satellite-orbit4">
+    //       <div
+    //         className="satellite4"
+    //         onMouseEnter={onShowFirstDesc}
+    //         onMouseLeave={onRemoveDesc}
+    //       ></div>
+    //       <div
+    //         className="satellite44"
+    //         onMouseEnter={onShowSecondDesc}
+    //         onMouseLeave={onRemoveDesc}
+    //       >
+    //         <NavLink
+    //           to="/governance"
+    //           style={{ width: 50, height: 50, display: "flex" }}
+    //         >
+    //           {/* <img
+    //             src={Governance}
+    //             alt="dyp-item"
+    //           /> */}
+    //         </NavLink>
+    //       </div>
+    //       <div
+    //         className="satellite22"
+    //         onMouseEnter={onShowSixthDesc}
+    //         onMouseLeave={onRemoveDesc}
+    //       ></div>
+    //       <div
+    //         className="satellite2"
+    //         onMouseEnter={onShowSeventhDesc}
+    //         onMouseLeave={onRemoveDesc}
+    //       ></div>
+    //     </div>
+
+    //     <div className="planet">
+    //       <img src={DypRect} alt="dypPlanet" />
+    //     </div>
+    //   </div>
+    // </div>
     <div id="orbit-system">
-      <div className="system">
-        <div className="satellite-orbit2"></div>
-
-        <div className="satellite-orbit3">
-          <div
-            className="satellite"
-            onMouseEnter={onShowFifthDesc}
-            onMouseLeave={onRemoveDesc}
-          >
-          </div>
-
-          <div className="satellite3" onMouseEnter={onShowThirdDesc} onMouseLeave={onRemoveDesc}>
-            <a
-              href="https://tools.dyp.finance/"
-              target={"_blank"}
-              rel="noreferrer"   style={{ width: 50, height: 50, display: 'flex' }}
-            >
-            </a>
-          </div>
-
-          <div className="satellite33" onMouseEnter={onShowFourthDesc} onMouseLeave={onRemoveDesc}>
-           
-          </div>
-        </div>
-        <div className="satellite-orbit4">
-          <div className="satellite4" onMouseEnter={onShowFirstDesc} onMouseLeave={onRemoveDesc}>
-           
-          </div>
-          <div className="satellite44" onMouseEnter={onShowSecondDesc} onMouseLeave={onRemoveDesc}>
-            <NavLink to="/governance"style={{ width: 50, height: 50, display: 'flex' }}>
-              {/* <img
-                src={Governance}
-                alt="dyp-item"
-              /> */}
-            </NavLink>
-          </div>
-          <div className="satellite22" onMouseEnter={onShowSixthDesc}  onMouseLeave={onRemoveDesc}>
-           
-          </div>
-
-          <div className="satellite2" onMouseEnter={onShowSeventhDesc} onMouseLeave={onRemoveDesc}>
-           
-          </div>
-        </div>
-
-        <div className="planet">
-          <img src={DypRect} alt="dypPlanet" />
-        </div>
-      </div>
+  <div class="system">
+    <div class="satellite-orbit">
+      <div class="satellite">SAT</div>
+      <div class="satellite2">SAT2</div>
+      
     </div>
+    <div class="planet">PLANET</div>
+  </div>
+</div>
   );
 };
 
