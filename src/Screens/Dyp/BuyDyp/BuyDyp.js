@@ -16,11 +16,11 @@ const BuyDyp = () => {
       {/* <img className="ring" src={ring} alt="" />
       <img className="sphere-1" src={sphere} alt="" />
       <img className="sphere-2" src={sphere} alt="" /> */}
-      <div className="row  px-4">
+      <div className="row w-100 px-4">
         <div className="col-12 col-sm-6 col-lg-5 d-flex flex-column justify-content-center gap-4">
           <Title
-            top="Buy DYP"
-            bottom="in a few steps"
+            top="Buying DYP"
+            bottom="has never been easier"
             align={"d-flex flex-column flex-xxl-row gap-2 align-items-start"}
             animation="fade-up"
             duration="1000"
@@ -31,9 +31,7 @@ const BuyDyp = () => {
              data-aos="fade-up"
              data-aos-duration="1000"
           >
-            At Dypius, we want to make it easy for you to purchase our token. We
-            have a variety of centralized and decentralized exchanges that you
-            can use to do so.
+            You can purchase it using a variety of centralized and decentralized exchanges.
           </p>
           {windowSize.width > 576 ? (
             <NavLink
@@ -44,7 +42,7 @@ const BuyDyp = () => {
                data-aos-duration="1000"
               // onClick={()=>{ window.scrollTo(0, 0)}}
             >
-              Explore
+              Buy now
             </NavLink>
             
           ) : null}

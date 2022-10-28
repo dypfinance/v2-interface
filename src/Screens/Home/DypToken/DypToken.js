@@ -24,14 +24,14 @@ const DypToken = () => {
             src={require(`../../../assets/tokenCircle.png`)}
           />
         </div>
-        <div className="token-info col-12 col-lg-5 d-flex justify-content-center align-items-end flex-column pr-3 pr-lg-5 order-1 order-lg-2">
+        <div className="token-info col-12 col-lg-6 d-flex justify-content-center align-items-end flex-column pr-3 pr-lg-5 order-1 order-lg-2">
           {/* <img
             className="ring"
             src={require(`../../../assets/tokenCircle.png`)}
           /> */}
           <Title
             top="DYP Token"
-            bottom="Empower your future"
+            bottom="Empowering your future"
             align="text-end"
             animation="fade-up"
             duration="1000"
@@ -40,8 +40,7 @@ const DypToken = () => {
            data-aos="fade-up"
            data-aos-duration="1000"
            >
-            An immersive ecosystem with a wide range of unique products and
-            solutions.
+            A diverse ecosystem with a wide range of quality products and solutions.
           </p>
 
           <div className="row">

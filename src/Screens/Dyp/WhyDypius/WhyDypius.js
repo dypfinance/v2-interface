@@ -25,37 +25,37 @@ const WhyDypius = () => {
     {
       title: "Unique solutions",
       description:
-        "Dypius offers unique solutions in the DeFi space like Anti-Manipulation, so that users can benefit from even on simpliest daily operations.",
+        "Dypius offers unique features in the DeFi space like our innovative anti-manipulation feature that protects users and their funds.",
         icon: 'uniqueSolutions'
     },
     {
       title: "Adaptability",
       description:
-        "Dypius prides itself in its ability to quickly adapt to the new and emerging market trends. Dypius flexibility and expertise allows for pioneering in the market space in a quick and unparalleled innovative way.",
+        "Dypius posses the expertise and flexibility to quickly adapt to new and emerging market trends.",
         icon: 'adaptability'
     },
     {
-      title: "Extended product catalogue",
+      title: "Wide variety of products",
       description:
-        "Dypius offers a large diversity of products on the platform that generates value to users like Staking, Farming, Vault, Buyback, CAWS NFT, DYP Governance and much more.",
+        "Dypius offers many products that generate value to our users like Staking, Farming, Vault, Buyback, NFTs, DYP Governance and more.",
         icon: 'extendedProduct'
     },
     {
-      title: "Market consistency",
+      title: "Commitment to Security",
       description:
-        "Dypius has a very well-known, trusted, and stable history in the market which is reflected on its outstanding statistics and users feedback.",
+        "Our smart contracts are audited and monitored by the industry's best companies 24 hours a day, 7 days a week.",
         icon: 'marketConsistency'
     },
     {
       title: "Trusted partner",
       description:
-        "Dypius is proud of its growing list of trusted and secure partners and all smart contracts audited and monitored 24/7 by the best companies in the business.",
+        "Dypius is committed to partner only with teams that are dedicated to providing a secure and trustworthy service.",
         icon: 'trustedPartner'
     },
     {
       title: "Education and protection",
       description:
-        "Dypius helps, educate, and protect every user by giving them the right information, data analytics, and new trends through our unique solutions safety measures.",
+        "Dypius empowers users with the information they need to make informed decisions. We provide competitive data analytics, unique safety measures and fresh market trends.",
         icon: 'educationProtection'
     },
   ];

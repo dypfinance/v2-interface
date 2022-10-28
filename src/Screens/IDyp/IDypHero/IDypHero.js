@@ -24,12 +24,7 @@ const IDypHero = () => {
         <div className="col-12 col-lg-6 text-white d-flex flex-column gap-3 justify-content-lg-end justify-content-xl-end">
           <h1>iDYP Token</h1>
           <p> 
-            iDYP is an ERC-20 token used in the Dypius ecosystem as a component
-            of smart contract strategies. It is accessible on three major
-            networks like Ethereum, BNB chain, and Avalanche. The Dypius
-            ecosystem is based on the blockchain technology and focuses on
-            scalability, security, and global adoption which makes it one of the
-            most powerful ecosystems in the world.
+          iDYP is part of the Dypius dual token economy and is used as a compnent of smart contract strategies. It is available on Ethereum, BNB and Avlalanche chains.
           </p>
         </div>
         <div className="col-9 col-lg-3 position-relative d-lg-block d-xl-block d-none idyp-hero-images">

@@ -37,10 +37,10 @@ const SupportedAssets = () => {
   return (
     <div className="container-lg supportedAssets-wrapper">
       <div className="px-4">
-        <div className="col-12 col-lg-5 mb-5 px-0 px-lg-auto">
+        <div className="col-12 col-lg-6 mb-5 px-0 px-lg-auto">
           <Title top="Supported" bottom={"Assets"} align={"d-flex gap-2 justify-content-center justify-content-lg-start"} />
           <p style={{ color: "rgba(30, 32, 41, 0.6)" }} className='supported-description'>
-            We support the most popular coins on three different chains
+          We support multiple tokens on the Ethereum, BNB, and Avalanche chains
           </p>
         </div>
 

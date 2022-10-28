@@ -35,11 +35,10 @@ const DypMainHero = () => {
       <div className="col-12 col-sm-6 col-lg-7 text-white d-flex flex-column gap-3 justify-content-lg-end justify-content-xl-end px-0 px-lg-3">
           <h1>DYP Token</h1>
           <p>
-            DYP is a governance token that facilitates the transactions
-            within the Dypius ecosystem. <br/>The Dypius ecosystem is based on the
-            blockchain technology and focuses on scalability, security, and
-            global adoption which makes it one of the most powerful ecosystems
-            in the world.
+          DYP is a utility token that provides the foundation for the Dypius ecosystem within a decentralized platform that focuses on scalability, security, and global adoption.
+          <br/>
+          <br/>
+          <br/>
           </p>
         </div>
         <div className="col-12 col-sm-6 col-lg-3 position-relative dyp-coin-wrapper">
@@ -49,7 +48,7 @@ const DypMainHero = () => {
             alt=""
           />
           <img
-            className="background"
+            className="coin"
             src={coinBg}
             alt=""
           />

@@ -8,12 +8,10 @@
     letter-spacing: 0.0075em;
   }
 
-  .background {
-    position: absolute;
-    left: 8%;
-    bottom: 10%;
-    z-index: 1;
-    width: 250px;
+ 
+
+
+  .coin:nth-child(2){
     animation: rotate 10s linear infinite;
     -webkit-animation: rotate 10s linear infinite;
 

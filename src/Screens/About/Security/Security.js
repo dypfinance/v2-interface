@@ -70,7 +70,7 @@ const Security = () => {
   ];
 
   return (
-    <div className="container-fluid mb-5 " id="security" style={{ marginTop: '7rem' }}>
+    <div className="container-fluid mb-5 px-0 px-lg-2" id="security" style={{ marginTop: '7rem' }}>
       <div className="container-lg">
 
         <div className="row m-0 justify-content-between gap-3 align-items-start">

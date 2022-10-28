@@ -170,7 +170,7 @@ const FAQ = () => {
             align="d-flex flex-row gap-2 justify-content-center"
           />
           <p className="text-secondary text-center">
-            We’re here to help and answer any question you might have.
+          We’re here to answer any questions you may have.
           </p>
         </div>
         <div className="categories-container  p-4 w-100 position-relative">

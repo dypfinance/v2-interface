@@ -40,7 +40,7 @@ const VideoTutorials = () => {
                 <div className="col-12 col-xl-3 d-flex flex-column gap-3">
                     <Title top="Popular" bottom="Tutorials" />
                     <p className="text-secondary">
-                    Watch our latest tutorials on Dypius solutions and learn how to become an expert in no time.
+                    Watch the latest Dypius tutorials and become an expert in no time.
                     </p>
                     <button className="btn filled-btn d-flex justify-content-center align-items-center gap-2" style={{width: 'fit-content'}}>
                         View More <img src={rightArrow} alt=""  />

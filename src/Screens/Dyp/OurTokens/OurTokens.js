@@ -67,7 +67,7 @@ const OurTokens = () => {
                 DYP Token
               </h2>
               <p className="ourtoken-desc">
-              Explore endless possibilities with our powerful token
+              Explore multiple possibilites with our unique token.
               </p>
             </div>
             <div className="col-lg-6 col-xl-6 p-0 row justify-content-xl-end justify-content-lg-end justify-content-between gap-3 m-0 position-relative">
@@ -85,7 +85,7 @@ const OurTokens = () => {
             classname={"bridge"}
             title={"Bridge"}
             desc={
-              "Bridge tokens between Ethereum to Binance, Avalanche and many more to come. Instant and secure transactions."
+              "Dypius Bridge offers users the possibility to send tokens from Ethereum to BNB and Avalanche chains with ease. Every transaction is instant and secure."
             }
             link={'#'}
           />
@@ -94,7 +94,7 @@ const OurTokens = () => {
             classname={"earn"}
             title={"Earn"}
             desc={
-              "Put your assets to work by depositing them on our immersive Dypius products and start earning high value rewards."
+              "Make the most of your assets with Dypius Earn products. Start earning today!"
             }
             link={'#'}
           />
