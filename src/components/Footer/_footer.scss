@@ -27,7 +27,7 @@
     }
 
     .footer-links{
-        min-height: 500px;
+        min-height: 400px;
         position: relative;
         background: #554fd8;
         border-radius:  60px 60px 0 0;
@@ -45,7 +45,8 @@
             width: 100%;
             background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 53.13%, rgba(255, 255, 255, 0) 101%);
             height: 3px;
-            margin: 30px 0;
+            margin-top: 30px;
+            margin-bottom: 0;
         }
 
         .spiral{

@@ -12,7 +12,7 @@
       background: linear-gradient(138.68deg, #a6e1dc 7.17%, #75cac2 67.7%);
       border-radius: 12px 0px;
       width: fit-content;
-      padding: 7px;
+      padding: 7px 16px;
       position: absolute;
       top: -15px;
       left: -2px;
@@ -53,12 +53,13 @@
     gap: 20px;
     justify-content: center;
     align-items: end;
+    padding: 35px 25px;
 
     .socials-title {
         background: linear-gradient(106.2deg, #F59979 12.72%, #F8845B 50.47%);
         border-radius: 12px 0px;
         width: fit-content;
-        padding: 7px;
+        padding: 7px 16px;
         position: absolute;
         top: -15px;
         left: -2px;

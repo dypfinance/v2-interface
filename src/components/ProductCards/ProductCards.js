@@ -6,7 +6,7 @@ import rightArrow from "../../assets/right-arrow.svg";
 
 const ProductCard = ({ title, desc, link, classname }) => {
   return (
-    <div className={classname}>
+    <div className={classname + 'col-12 col-lg-5'}>
       <div className={ `bg${classname}`}>
       <div className="row m-0 justify-content-start gap-0 h-100">
         <img src={classname === 'bridge' ? BridgeAsset : EarnAsset} style={{padding: 0, height: 77}}  />
