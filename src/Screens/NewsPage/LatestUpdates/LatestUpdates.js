@@ -85,13 +85,6 @@ const LatestUpdates = ({type}) => {
               <ul className="dropdown-menu coin-menu p-1" style={{width: '200px'}}>
                 <li
                   className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
-                  style={{ cursor: 'pointer', color: "#566FCE" }}
-                  onClick={() => setYear('2020')}
-                >
-                   2020
-                </li>
-                <li
-                  className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
                   style={{ cursor: 'pointer', color: "#566FCE"}}
                   onClick={() => setYear('2021')}
                 >

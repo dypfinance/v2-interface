@@ -30,15 +30,15 @@ const DypTools = () => {
                  animation='fade-up' duration='1000'
               />
               <ListCard
-                content="A wide range of impressive decentralized applications"
+                content="A wide range of interactive, decentralized applications"
                 image={"layers.svg"}
               />
               <ListCard
-                content="Interactive platform with real-time data analytics "
+                content="Access to real-time data analytics"
                 image={"graph.svg"}
               />
               <ListCard
-                content="Support promising crypto tokens from various projects "
+                content="Review and support tokens from various promising projects"
                 image={"token.svg"}
               />
             </div>

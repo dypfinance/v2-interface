@@ -41,7 +41,7 @@ const DypMetaverse = () => {
             <div className="d-flex justify-content-center flex-column">
               <Title
                 top="Metaverse World"
-                bottom="becoming a reality"
+                bottom="is becoming a reality"
                 align="metaverse-title"
                 animation="fade-up"
                 duration="1000"
@@ -52,9 +52,7 @@ const DypMetaverse = () => {
                  data-aos-delay="500"
                  data-aos-duration="1000"
               >
-                An innovative metaverse platform that redefines the gaming
-                industry and digital currency services. Platform utilizes
-                cutting-edge blockchain technology, giving an unique experience.
+                An innovative platform that redefines the gaming industry by implementing cutting-edge technology. Users will get access to an immersive experience unlike anything available in the market today.
               </p>
               <div
                 className="button-group mt-3 row gap-3 ms-0"

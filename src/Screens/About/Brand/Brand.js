@@ -8,7 +8,7 @@ import pitchDeck from "../assets/pitchDeck.svg";
 
 const Brand = () => {
   return (
-    <div className="container-fluid mt-5 mb-5 position-relative" id="brand">
+    <div className="container-fluid mt-5 mb-5 position-relative px-0 px-lg-2" id="brand">
       {/* <img
         className="bluehero-solutions"
         src={require(`../../../assets/metaverse-blueHero.svg`).default}
