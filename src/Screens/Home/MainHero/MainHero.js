@@ -26,7 +26,7 @@ const MainHero = () => {
         <div className="container-lg">
           <div className="heading row">
             <div className="col-12 col-lg-5 d-flex justify-content-lg-evenly justify-content-xl-evenly justify-content-inherit flex-column text-white ml-lg-4 pt-5 px-0 px-lg-2">
-              <div className="d-flex flex-column gap-4">
+              <div className="d-grid gap-4">
                 <div>
                   <h1>Embrace</h1>
                   <h1>the future</h1>
