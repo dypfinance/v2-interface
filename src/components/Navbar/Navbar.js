@@ -15,17 +15,17 @@ const Navbar = () => {
   const [logo, setLogo] = useState(false);
 
   const changeBackground = () => {
-    // if (window.scrollY >= 75) {
-    //   setShow(true);
-    // } else {
-    //   setShow(false);
-    // }
+   
 
-    if(typeof window !== 'undefined'){
-      if(window.scrollY > lastScrollY){
-        setShow(true)
-      }else{
+    if (typeof window !== "undefined") {
+      if(window.scrollY < 300){
         setShow(false)
+      }else{
+        if (window.scrollY > lastScrollY) {
+          setShow(true);
+        } else {
+          setShow(false);
+        }
       }
     }
     setLastScrollY(window.scrollY)
