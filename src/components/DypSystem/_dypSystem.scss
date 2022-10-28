@@ -130,15 +130,14 @@
   border-radius: 50%;
   background-position: center;
   background-size: cover;
-  // -webkit-animation-name: webkit-reverse-orbit;
-  // animation-name: reverse-orbit;
-  // -webkit-animation-duration: 20s;
-  // animation-duration: 20s;
-  // -webkit-animation-iteration-count: infinite;
-  // animation-iteration-count: infinite;
-  // -webkit-animation-timing-function: linear;
-  // animation-timing-function: linear;
-  animation: reverse-orbit 20s linear 0.01s infinite;
+  -webkit-animation-name: webkit-reverse-orbit;
+  animation-name: reverse-orbit;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
   animation-direction: initial;
 }
 

@@ -32,7 +32,7 @@ const DypSystem = ({
             onMouseLeave={onRemoveDesc}
           >
           </div>
-{/* 
+
           <div className="satellite3" onMouseEnter={onShowThirdDesc} onMouseLeave={onRemoveDesc}>
             <a
               href="https://tools.dyp.finance/"
@@ -52,7 +52,10 @@ const DypSystem = ({
           </div>
           <div className="satellite44" onMouseEnter={onShowSecondDesc} onMouseLeave={onRemoveDesc}>
             <NavLink to="/governance"style={{ width: 50, height: 50, display: 'flex' }}>
-            
+              {/* <img
+                src={Governance}
+                alt="dyp-item"
+              /> */}
             </NavLink>
           </div>
           <div className="satellite22" onMouseEnter={onShowSixthDesc}  onMouseLeave={onRemoveDesc}>
@@ -61,8 +64,8 @@ const DypSystem = ({
 
           <div className="satellite2" onMouseEnter={onShowSeventhDesc} onMouseLeave={onRemoveDesc}>
            
-          </div>*/}
-        </div> 
+          </div>
+        </div>
 
         <div className="planet">
           <img src={DypRect} alt="dypPlanet" />
