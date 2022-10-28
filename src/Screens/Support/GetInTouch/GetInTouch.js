@@ -65,7 +65,7 @@ const GetInTouch = () => {
                 </div>
             </div>
             <div className="col-12 col-lg-5 d-flex justify-content-center align-items-center">
-                <div className="touch-socials d-grid p-4 position-relative w-100">
+                <div className="touch-socials d-grid position-relative w-100">
                     <p className="text-white socials-title">Follow us for more</p>
                     {socials.map((social, index) => (
                         <a target="_blank" rel="noreferrer" key={index} href={social.link} className="d-flex flex-column justify-content-center align-items-center gap-2">

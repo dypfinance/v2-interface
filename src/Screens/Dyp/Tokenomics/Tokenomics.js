@@ -10,6 +10,7 @@ import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
 import tokenomicsIcon from "../../../assets/tokenomicsIcon.svg";
 import Success from "../../../components/Success/Success";
+import minus from '../../../assets/minus.svg'
 
 const Tokenomics = ({ bottom, showBtn, isDyp }) => {
   const [tokenomicData, setTokenomicData] = useState("dyp");
@@ -59,7 +60,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
         <div className="row m-0 gap-4 pl-0 col-lg-3 col-xl-3 align-items-center justify-content-end px-0 px-lg-2 py-3 py-lg-0">
           <button
             className={
-              `tokenomics-btn ${toggledyp === true ? "btn filled-btn" : "btn outline-btn"}`
+              `tokenomics-btn btn outline-btn d-flex justify-content-center align-items-center`
             }
             type="button"
             data-bs-toggle="collapse"
@@ -73,13 +74,13 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
             aria-controls="collapseExample"
             onClick={() => {
               // setTokenomicData("dyp");
-              // setToggleDyp(!toggledyp);
+              setToggleDyp(!toggledyp);
               // setToggleIDyp(false);
             }}
           >
             DYP Tokenomics
             <img
-              src={toggledyp === true ? WhiteArrowUp : PurpleArrowDown}
+              src={toggledyp === true ? minus : PurpleArrowDown}
               alt=""
               className="ml-2"
                
