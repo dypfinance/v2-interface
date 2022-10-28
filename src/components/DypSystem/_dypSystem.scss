@@ -1,99 +1,71 @@
-// #orbit-system {
-//   position: relative;
-//   width: 18em;
-//   height: 18em;
-//   margin: 0 auto;
-//   scale: 1.2;
-//   transform: translate(300px, -50px);
-//   -webkit-transform: translate(300px, -50px);
-// }
-
-// .system {
-//   position: relative;
-//   width: 100%;
-//   height: 100%;
-
-//   -webkit-transform: rotateX(80deg) rotateY(-30deg);
-//   transform: rotateX(70deg) rotateY(-15deg);
-//   -webkit-transform-style: preserve-3d;
-//   transform-style: preserve-3d;
-// }
-
-// .planet,
-// .satellite-orbit,
-// .satellite-orbit2,
-// .satellite-orbit3,
-// .satellite-orbit4,
-// .satellite,
-// .satellite3,
-// .satellite2,
-// .satellite4,
-// .satelite22,
-// .satellite33,
-// .satellite44 {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-
-//   -webkit-transform-style: preserve-3d;
-//   transform-style: preserve-3d;
-// }
-
 #orbit-system {
   position: relative;
   width: 18em;
   height: 18em;
   margin: 0 auto;
+  scale: 1.2;
+  transform: translate(300px, -50px);
+  -webkit-transform: translate(300px, -50px);
 }
 
 .system {
   position: relative;
   width: 100%;
   height: 100%;
-  
-  -webkit-transform: rotateX(75deg) rotateY(-30deg);
-  transform: rotateX(75deg) rotateY(-30deg);
+
+  -webkit-transform: rotateX(80deg) rotateY(-30deg);
+  transform: rotateX(70deg) rotateY(-15deg);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-
-.planet, .satellite-orbit, .satellite  {
+.planet,
+.satellite-orbit,
+.satellite-orbit2,
+.satellite-orbit3,
+.satellite-orbit4,
+.satellite,
+.satellite3,
+.satellite2,
+.satellite4,
+.satelite22,
+.satellite33,
+.satellite44 {
   position: absolute;
   top: 50%;
   left: 50%;
-  
+
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
 .planet {
-  width: 9em;
-  height: 9em;
-  margin-top: -4.5em;
-  margin-left: -4.5em;
-  
+  width: 7em;
+  margin-top: -8.5em;
+  margin-left: -7.5em;
+  background-size: cover;
   border-radius: 50%;
-  background-color: rgba(0,0,0,0.5);
   color: white;
-  
-  text-align: center;
   line-height: 9em;
-  
+
   -webkit-transform: rotateY(30deg) rotateX(-75deg);
   transform: rotateY(30deg) rotateX(-75deg);
+
+  img {
+    width: 280px;
+    height: 270px;
+  }
 }
 
 .satellite-orbit {
-	width: 16em;
+  width: 16em;
   height: 16em;
   margin-top: -8em;
   margin-left: -8em;
-  
-  border: 1px solid black;
+  border: 3px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
-  
-  -webkit-animation-name: orbit;
+
+  -webkit-animation-name: webkit-orbit;
   animation-name: orbit;
   -webkit-animation-duration: 10s;
   animation-duration: 10s;
@@ -103,354 +75,246 @@
   animation-timing-function: linear;
 }
 
+.satellite-orbit2 {
+  width: 27em;
+  height: 27em;
+  margin-top: -10em;
+  margin-left: -13em;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.satellite3 {
+  top: 100%;
+  // width: 3em;
+  height: 3em;
+  margin-top: -4.5em;
+  margin-left: 8.5em;
+  cursor: pointer;
+  color: black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3em;
+  background-image: url("../../assets/satellites/dyptool3.png");
+  width: 50px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  -webkit-animation-name: webkit-reverse-orbit;
+  animation-name: reverse-orbit;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
 .satellite {
   top: 100%;
-  width: 3em;
+  // width: 3em;
+  height: 3em;
+  margin-top: -2.5em;
+  margin-left: -7.5em;
+  cursor: pointer;
+  color: black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3em;
+  background-image: url("../../assets/satellites/launchpad.png");
+  width: 50px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  -webkit-animation-name: webkit-reverse-orbit;
+  animation-name: reverse-orbit;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-direction: initial;
+}
+
+.satellite33 {
+  top: 93%;
+  height: 50px;
+  margin-top: -28.5em;
+  margin-left: -19.5em;
+  cursor: pointer;
+  color: black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3em;
+  background-image: url("../../assets/satellites/bridge.png");
+  width: 50px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+
+  -webkit-animation-name: webkit-reverse-orbit;
+  animation-name: reverse-orbit;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-direction: initial;
+  -webkit-animation-direction: initial;
+}
+
+.satellite-orbit3 {
+  width: 40em;
+  height: 40em;
+  margin-top: -14em;
+  margin-left: -19em;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+
+  -webkit-animation-name: webkit-orbit-reverse;
+  animation-name: orbit-reverse;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.satellite4 {
+  top: 100%;
+  height: 50px;
+  margin-top: -36.5em;
+  margin-left: 23.5em;
+  cursor: pointer;
+  color: black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3em;
+  background-image: url("../../assets/satellites/earn.png");
+  width: 50px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+
+  -webkit-animation-name: webkit-invert-orbit;
+  animation-name: invert-orbit;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  -webkit-animation-direction: normal;
+}
+
+.satellite44 {
+  top: 90%;
+  left: 19%;
   height: 3em;
   margin-top: -1.5em;
   margin-left: -1.5em;
-  
+  cursor: pointer;
   color: black;
-  background-image: url('https://thumbs.dreamstime.com/z/bee-flower-27533578.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   border-radius: 50%;
   text-align: center;
   line-height: 3em;
-  
-  -webkit-animation-name: invert-orbit;
+  background-image: url("../../assets/satellites/governance.png");
+  width: 50px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+
+  -webkit-animation-name: webkit-invert-orbit;
   animation-name: invert-orbit;
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
+  animation-direction: normal;
+  -webkit-animation-direction: normal;
 }
-
 
 .satellite2 {
   top: 100%;
-  width: 3em;
-  height: 3em;
-  margin-top: 6em;
-  margin-left: -1.5em;
-  
+  // width: 3em;
+  height: 50px;
+  margin-top: -2.5em;
+  margin-left: -8.5em;
+  cursor: pointer;
   color: black;
-  background-image: url('https://thumbs.dreamstime.com/z/bee-flower-27533578.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   border-radius: 50%;
   text-align: center;
   line-height: 3em;
-  
-  -webkit-animation-name: invert-orbit;
+  background-image: url("../../assets/satellites/metaverse.png");
+  width: 50px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+
+  -webkit-animation-name: webkit-invert-orbit;
   animation-name: invert-orbit;
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  -webkit-animation-direction: normal;
+}
+
+.satellite22 {
+  top: 100%;
+  // width: 3em;
+  height: 50px;
+  margin-top: 0em;
+  margin-left: 16em;
+  cursor: pointer;
+  color: black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3em;
+  background-image: url("../../assets/satellites/caws.png");
+  width: 50px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+
+  -webkit-animation-name: webkit-invert-orbit;
+  animation-name: invert-orbit;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  -webkit-animation-direction: normal;
+}
+
+.satellite-orbit4 {
+  width: 53em;
+  height: 53em;
+  margin-top: -18em;
+  margin-left: -25em;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+
+  -webkit-animation-name: webkit-orbit;
+  animation-name: orbit;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
-
-// #orbit-system {
-//   position: relative;
-//   width: 18em;
-//   height: 18em;
-//   margin: 0 auto;
-// }
-
-// .system {
-//   position: relative;
-//   width: 100%;
-//   height: 100%;
-  
-//   -webkit-transform: rotateX(75deg) rotateY(-30deg);
-//   transform: rotateX(75deg) rotateY(-30deg);
-//   -webkit-transform-style: preserve-3d;
-//   transform-style: preserve-3d;
-// }
-
-
-// .planet {
-//   width: 7em;
-//   margin-top: -8.5em;
-//   margin-left: -7.5em;
-//   background-size: cover;
-//   border-radius: 50%;
-//   color: white;
-//   line-height: 9em;
-
-//   -webkit-transform: rotateY(30deg) rotateX(-75deg);
-//   transform: rotateY(30deg) rotateX(-75deg);
-
-//   img {
-//     width: 280px;
-//     height: 270px;
-//   }
-// }
-
-// .satellite-orbit {
-//   width: 16em;
-//   height: 16em;
-//   margin-top: -8em;
-//   margin-left: -8em;
-//   border: 3px solid rgba(255, 255, 255, 0.4);
-//   border-radius: 50%;
-
-//   -webkit-animation-name: webkit-orbit;
-//   animation-name: orbit;
-//   -webkit-animation-duration: 10s;
-//   animation-duration: 10s;
-//   -webkit-animation-iteration-count: infinite;
-//   animation-iteration-count: infinite;
-//   -webkit-animation-timing-function: linear;
-//   animation-timing-function: linear;
-// }
-
-// .satellite-orbit2 {
-//   width: 27em;
-//   height: 27em;
-//   margin-top: -10em;
-//   margin-left: -13em;
-//   border: 3px solid rgba(255, 255, 255, 0.3);
-//   border-radius: 50%;
-// }
-
-// .satellite3 {
-//   top: 100%;
-//   // width: 3em;
-//   height: 3em;
-//   margin-top: -4.5em;
-//   margin-left: 8.5em;
-//   cursor: pointer;
-//   color: black;
-//   border-radius: 50%;
-//   text-align: center;
-//   line-height: 3em;
-//   background-image: url("../../assets/satellites/dyptool3.png");
-//   width: 50px;
-//   border-radius: 50%;
-//   background-position: center;
-//   background-size: cover;
-//   -webkit-animation-name: webkit-reverse-orbit;
-//   animation-name: reverse-orbit;
-//   -webkit-animation-duration: 20s;
-//   animation-duration: 20s;
-//   -webkit-animation-iteration-count: infinite;
-//   animation-iteration-count: infinite;
-//   -webkit-animation-timing-function: linear;
-//   animation-timing-function: linear;
-// }
-
-// .satellite {
-//   top: 100%;
-//   // width: 3em;
-//   height: 3em;
-//   margin-top: -2.5em;
-//   margin-left: -7.5em;
-//   cursor: pointer;
-//   color: black;
-//   border-radius: 50%;
-//   text-align: center;
-//   line-height: 3em;
-//   background-image: url("../../assets/satellites/launchpad.png");
-//   width: 50px;
-//   border-radius: 50%;
-//   background-position: center;
-//   background-size: cover;
-//   -webkit-animation-name: webkit-reverse-orbit;
-//   animation-name: reverse-orbit;
-//   -webkit-animation-duration: 20s;
-//   animation-duration: 20s;
-//   -webkit-animation-iteration-count: infinite;
-//   animation-iteration-count: infinite;
-//   -webkit-animation-timing-function: linear;
-//   animation-timing-function: linear;
-//   animation-direction: initial;
-// }
-
-// .satellite33 {
-//   top: 93%;
-//   height: 50px;
-//   margin-top: -28.5em;
-//   margin-left: -19.5em;
-//   cursor: pointer;
-//   color: black;
-//   border-radius: 50%;
-//   text-align: center;
-//   line-height: 3em;
-//   background-image: url("../../assets/satellites/bridge.png");
-//   width: 50px;
-//   border-radius: 50%;
-//   background-position: center;
-//   background-size: cover;
-
-//   -webkit-animation-name: webkit-reverse-orbit;
-//   animation-name: reverse-orbit;
-//   -webkit-animation-duration: 20s;
-//   animation-duration: 20s;
-//   -webkit-animation-iteration-count: infinite;
-//   animation-iteration-count: infinite;
-//   -webkit-animation-timing-function: linear;
-//   animation-timing-function: linear;
-//   animation-direction: initial;
-//   -webkit-animation-direction: initial;
-// }
-
-// .satellite-orbit3 {
-//   width: 40em;
-//   height: 40em;
-//   margin-top: -14em;
-//   margin-left: -19em;
-//   border: 3px solid rgba(255, 255, 255, 0.3);
-//   border-radius: 50%;
-
-//   -webkit-animation-name: webkit-orbit-reverse;
-//   animation-name: orbit-reverse;
-//   -webkit-animation-duration: 20s;
-//   animation-duration: 20s;
-//   -webkit-animation-iteration-count: infinite;
-//   animation-iteration-count: infinite;
-//   -webkit-animation-timing-function: linear;
-//   animation-timing-function: linear;
-// }
-
-// .satellite4 {
-//   top: 100%;
-//   height: 50px;
-//   margin-top: -36.5em;
-//   margin-left: 23.5em;
-//   cursor: pointer;
-//   color: black;
-//   border-radius: 50%;
-//   text-align: center;
-//   line-height: 3em;
-//   background-image: url("../../assets/satellites/earn.png");
-//   width: 50px;
-//   border-radius: 50%;
-//   background-position: center;
-//   background-size: cover;
-
-//   -webkit-animation-name: webkit-invert-orbit;
-//   animation-name: invert-orbit;
-//   -webkit-animation-duration: 20s;
-//   animation-duration: 20s;
-//   -webkit-animation-iteration-count: infinite;
-//   animation-iteration-count: infinite;
-//   -webkit-animation-timing-function: linear;
-//   animation-timing-function: linear;
-//   animation-direction: normal;
-//   -webkit-animation-direction: normal;
-// }
-
-// .satellite44 {
-//   top: 90%;
-//   left: 19%;
-//   height: 3em;
-//   margin-top: -1.5em;
-//   margin-left: -1.5em;
-//   cursor: pointer;
-//   color: black;
-//   border-radius: 50%;
-//   text-align: center;
-//   line-height: 3em;
-//   background-image: url("../../assets/satellites/governance.png");
-//   width: 50px;
-//   border-radius: 50%;
-//   background-position: center;
-//   background-size: cover;
-
-//   -webkit-animation-name: webkit-invert-orbit;
-//   animation-name: invert-orbit;
-//   -webkit-animation-duration: 20s;
-//   animation-duration: 20s;
-//   -webkit-animation-iteration-count: infinite;
-//   animation-iteration-count: infinite;
-//   -webkit-animation-timing-function: linear;
-//   animation-timing-function: linear;
-//   animation-direction: normal;
-//   -webkit-animation-direction: normal;
-// }
-
-// .satellite2 {
-//   top: 100%;
-//   // width: 3em;
-//   height: 50px;
-//   margin-top: -2.5em;
-//   margin-left: -8.5em;
-//   cursor: pointer;
-//   color: black;
-//   border-radius: 50%;
-//   text-align: center;
-//   line-height: 3em;
-//   background-image: url("../../assets/satellites/metaverse.png");
-//   width: 50px;
-//   border-radius: 50%;
-//   background-position: center;
-//   background-size: cover;
-
-//   -webkit-animation-name: webkit-invert-orbit;
-//   animation-name: invert-orbit;
-//   -webkit-animation-duration: 20s;
-//   animation-duration: 20s;
-//   -webkit-animation-iteration-count: infinite;
-//   animation-iteration-count: infinite;
-//   -webkit-animation-timing-function: linear;
-//   animation-timing-function: linear;
-//   animation-direction: normal;
-//   -webkit-animation-direction: normal;
-// }
-
-// .satellite22 {
-//   top: 100%;
-//   // width: 3em;
-//   height: 50px;
-//   margin-top: 0em;
-//   margin-left: 16em;
-//   cursor: pointer;
-//   color: black;
-//   border-radius: 50%;
-//   text-align: center;
-//   line-height: 3em;
-//   background-image: url("../../assets/satellites/caws.png");
-//   width: 50px;
-//   border-radius: 50%;
-//   background-position: center;
-//   background-size: cover;
-
-//   -webkit-animation-name: webkit-invert-orbit;
-//   animation-name: invert-orbit;
-//   -webkit-animation-duration: 20s;
-//   animation-duration: 20s;
-//   -webkit-animation-iteration-count: infinite;
-//   animation-iteration-count: infinite;
-//   -webkit-animation-timing-function: linear;
-//   animation-timing-function: linear;
-//   animation-direction: normal;
-//   -webkit-animation-direction: normal;
-// }
-
-// .satellite-orbit4 {
-//   width: 53em;
-//   height: 53em;
-//   margin-top: -18em;
-//   margin-left: -25em;
-//   border: 3px solid rgba(255, 255, 255, 0.3);
-//   border-radius: 50%;
-
-//   -webkit-animation-name: webkit-orbit;
-//   animation-name: orbit;
-//   -webkit-animation-duration: 20s;
-//   animation-duration: 20s;
-//   -webkit-animation-iteration-count: infinite;
-//   animation-iteration-count: infinite;
-//   -webkit-animation-timing-function: linear;
-//   animation-timing-function: linear;
-// }
 
 @-webkit-keyframes webkit-orbit {
   0% {
