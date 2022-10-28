@@ -6,7 +6,6 @@
   scale: 1.2;
   transform: translate(300px, -50px);
   -webkit-transform: translate(300px, -50px);
-
 }
 
 .system {
@@ -22,14 +21,16 @@
 
 .planet,
 .satellite-orbit,
-.satellite,
 .satellite-orbit2,
-.satellite2,
 .satellite-orbit3,
-.satellite3,
 .satellite-orbit4,
+.satellite,
+.satellite3,
+.satellite2,
 .satellite4,
-.satelite22, .satellite33, .satellite44 {
+.satelite22,
+.satellite33,
+.satellite44 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -74,10 +75,6 @@
   animation-timing-function: linear;
 }
 
-
-
-
-
 .satellite-orbit2 {
   width: 27em;
   height: 27em;
@@ -86,7 +83,6 @@
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
 }
-
 
 .satellite3 {
   top: 100%;
@@ -99,7 +95,7 @@
   border-radius: 50%;
   text-align: center;
   line-height: 3em;
-  background-image: url('../../assets/satellites/dyptool3.png');
+  background-image: url("../../assets/satellites/dyptool3.png");
   width: 50px;
   border-radius: 50%;
   background-position: center;
@@ -113,7 +109,6 @@
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
-
 
 .satellite {
   top: 100%;
@@ -126,7 +121,7 @@
   border-radius: 50%;
   text-align: center;
   line-height: 3em;
-  background-image: url('../../assets/satellites/launchpad.png');
+  background-image: url("../../assets/satellites/launchpad.png");
   width: 50px;
   border-radius: 50%;
   background-position: center;
@@ -141,7 +136,6 @@
   animation-timing-function: linear;
   animation-direction: initial;
 }
-
 
 .satellite33 {
   top: 93%;
@@ -153,7 +147,7 @@
   border-radius: 50%;
   text-align: center;
   line-height: 3em;
-  background-image: url('../../assets/satellites/bridge.png');
+  background-image: url("../../assets/satellites/bridge.png");
   width: 50px;
   border-radius: 50%;
   background-position: center;
@@ -168,8 +162,8 @@
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   animation-direction: initial;
+  -webkit-animation-direction: initial;
 }
-
 
 .satellite-orbit3 {
   width: 40em;
@@ -187,9 +181,7 @@
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  animation-direction: initial;
 }
-
 
 .satellite4 {
   top: 100%;
@@ -201,7 +193,7 @@
   border-radius: 50%;
   text-align: center;
   line-height: 3em;
-  background-image: url('../../assets/satellites/earn.png');
+  background-image: url("../../assets/satellites/earn.png");
   width: 50px;
   border-radius: 50%;
   background-position: center;
@@ -216,9 +208,8 @@
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   animation-direction: normal;
-
+  -webkit-animation-direction: normal;
 }
-
 
 .satellite44 {
   top: 90%;
@@ -231,7 +222,7 @@
   border-radius: 50%;
   text-align: center;
   line-height: 3em;
-  background-image: url('../../assets/satellites/governance.png');
+  background-image: url("../../assets/satellites/governance.png");
   width: 50px;
   border-radius: 50%;
   background-position: center;
@@ -246,9 +237,8 @@
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   animation-direction: normal;
-
+  -webkit-animation-direction: normal;
 }
-
 
 .satellite2 {
   top: 100%;
@@ -261,7 +251,7 @@
   border-radius: 50%;
   text-align: center;
   line-height: 3em;
-  background-image: url('../../assets/satellites/metaverse.png');
+  background-image: url("../../assets/satellites/metaverse.png");
   width: 50px;
   border-radius: 50%;
   background-position: center;
@@ -276,10 +266,8 @@
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   animation-direction: normal;
-
+  -webkit-animation-direction: normal;
 }
-
-
 
 .satellite22 {
   top: 100%;
@@ -292,7 +280,7 @@
   border-radius: 50%;
   text-align: center;
   line-height: 3em;
-  background-image: url('../../assets/satellites/caws.png');
+  background-image: url("../../assets/satellites/caws.png");
   width: 50px;
   border-radius: 50%;
   background-position: center;
@@ -307,7 +295,7 @@
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   animation-direction: normal;
-
+  -webkit-animation-direction: normal;
 }
 
 .satellite-orbit4 {
@@ -328,60 +316,43 @@
   animation-timing-function: linear;
 }
 
-
 @-webkit-keyframes webkit-orbit {
   0% {
-    
-  -webkit-transform: rotateZ(0deg);
-
+    -webkit-transform: rotateZ(0deg);
   }
-  100% { 
-
-  -webkit-transform: rotateZ(360deg);
-  
-
-
+  100% {
+    -webkit-transform: rotateZ(360deg);
   }
 }
 
 @keyframes orbit {
   0% {
     transform: rotateZ(0deg);
-  -webkit-transform: rotateZ(0deg);
-
+    -webkit-transform: rotateZ(0deg);
   }
   100% {
     transform: rotateZ(360deg);
-  -webkit-transform: rotateZ(360deg);
-
+    -webkit-transform: rotateZ(360deg);
   }
 }
 
 @keyframes orbit-reverse {
   0% {
     transform: rotateZ(360deg);
-  -webkit-transform: rotateZ(360deg);
-
-    
+    -webkit-transform: rotateZ(360deg);
   }
   100% {
     transform: rotateZ(0deg);
-  -webkit-transform: rotateZ(0deg);
-
+    -webkit-transform: rotateZ(0deg);
   }
 }
 
 @-webkit-keyframes webkit-orbit-reverse {
   0% {
-    
-  -webkit-transform: rotateZ(360deg);
-
-    
+    -webkit-transform: rotateZ(360deg);
   }
   100% {
-    
-  -webkit-transform: rotateZ(0deg);
-
+    -webkit-transform: rotateZ(0deg);
   }
 }
 
@@ -395,15 +366,12 @@
 @-webkit-keyframes webkit-invert-orbit {
   0% {
     scale: 1.5;
-    
-  -webkit-transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
 
+    -webkit-transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
   }
 
-
   100% {
-    
-  -webkit-transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
+    -webkit-transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
 
     scale: 1.5;
   }
@@ -414,17 +382,13 @@
     scale: 1;
     transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
     -webkit-transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
-    
   }
-
-
 
   100% {
     transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
     -webkit-transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
 
     scale: 1;
-
   }
 }
 
@@ -433,36 +397,27 @@
     scale: 1;
     transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
     -webkit-transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
-
-   
   }
-
 
   100% {
     transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
     -webkit-transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
     scale: 1;
   }
-
 }
 
 @-webkit-keyframes webkit-reverse-orbit {
   0% {
     scale: 1;
-  -webkit-transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
-
-   
+    -webkit-transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
   }
-
 
   100% {
     -webkit-transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);
 
     scale: 1;
   }
-
 }
-
 
 // .satellite-orbit3:hover, .satellite-orbit2:hover, .satellite-orbit:hover, .satellite-orbit4:hover  {
 //   animation-play-state:paused;
@@ -473,28 +428,23 @@
 //   }
 // }
 
-
 @media only screen and (max-width: 1200px) {
   #orbit-system {
     margin: 0 !important;
   }
- }
+}
 
- @media only screen and (max-width: 991px) {
+@media only screen and (max-width: 991px) {
   #orbit-system {
     transform: translate(150px, -50px) !important;
-  -webkit-transform: translate(150px, -50px) !important;
-
+    -webkit-transform: translate(150px, -50px) !important;
   }
- }
+}
 
- @media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   #orbit-system {
-   scale: 0.8 !important;
-   transform: translate(110px, -50px) !important;
-  -webkit-transform:  translate(110px, -50px) !important;
-
+    scale: 0.8 !important;
+    transform: translate(110px, -50px) !important;
+    -webkit-transform: translate(110px, -50px) !important;
   }
-
-  
- }
+}
