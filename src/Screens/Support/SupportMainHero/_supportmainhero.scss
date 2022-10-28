@@ -118,7 +118,13 @@
   }
   .support-submenu-container{
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: repeat(3, 1fr);
+    .submenu-link{
+      width: 100px;
+      font-size: 12px;
+      padding: 0;
+      justify-content: center;
+    }
   }
   
   
