@@ -64,6 +64,8 @@
 
 .filled-orange-btn {
   background: linear-gradient(276.34deg, #E04C24 0%, #F8845B 100%);
+  background: -webkit-linear-gradient(276.34deg, #E04C24 0%, #F8845B 100%) !important;
+
 box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.09);
 border-radius: 10px;
 color: white !important;
@@ -75,10 +77,14 @@ height: 40px;
 
 .filled-orange-btn:hover {
   background: linear-gradient(276.34deg, #E04C24 0%, #F8845B 100%) !important;
+  background: -webkit-linear-gradient(276.34deg, #E04C24 0%, #F8845B 100%) !important;
+
 }
 
 .filled-orange-btn:focus {
   background: linear-gradient(276.34deg, #F8845B 0%, #F8845B 100%) !important;
+  background: -webkit-linear-gradient(276.34deg, #F8845B 0%, #F8845B 100%) !important;
+
   border: 3px solid #FFDBCF !important;
   outline: #FFDBCF !important;
 }
@@ -111,7 +117,7 @@ height: 40px;
 
 .tymodal {
   border: 6px solid #AAA5EB;
-box-shadow: 0px 60px 120px rgba(20, 20, 42, 0.12);
+box-shadow: 0px 60px 120px #14142a1f;
 border-radius: 56px 0px;
 }
 
