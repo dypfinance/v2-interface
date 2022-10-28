@@ -22,14 +22,13 @@
 
 .planet,
 .satellite-orbit,
-.satellite,
 .satellite-orbit2,
-.satellite2,
 .satellite-orbit3,
-.satellite3,
 .satellite-orbit4,
-.satellite4,
-.satelite22, .satellite33, .satellite44 {
+.satellite,
+.satellite3,.satellite2,.satellite4,
+.satelite22, .satellite33, .satellite44
+ {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -215,7 +214,7 @@
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  animation-direction: normal;
+  animation-direction: initial;
 
 }
 
@@ -245,7 +244,7 @@
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  animation-direction: normal;
+  animation-direction: initial;
 
 }
 
@@ -275,7 +274,7 @@
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  animation-direction: normal;
+  animation-direction: initial;
 
 }
 
@@ -306,7 +305,7 @@
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  animation-direction: normal;
+  animation-direction: initial;
 
 }
 
