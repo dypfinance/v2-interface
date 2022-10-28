@@ -44,6 +44,8 @@
     padding: 0;
     top: -50px;
     transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+
 
     @media only screen and (max-width: 991px) {
       right: auto;

@@ -32,8 +32,7 @@ const [playbtn, setPlaybtn] = useState('passive')
         <div className="col-12 col-lg-4 d-flex flex-column px-1 px-lg-3 gap-2">
           <Title top="Educational" bottom="Videos" />
           <p style={{marginBottom: 32}}>
-            Hit the ground running with our quick start guide! Get tips, watch
-            how-to videos and learn how to become an expert in no time.
+          Become an expert interacting with our platform utilizing these how-to videos.
           </p>
 
           <a

@@ -8,9 +8,9 @@ const ProductCard = ({ title, desc, link, classname }) => {
   return (
     <div className={classname}>
       <div className={ `bg${classname}`}>
-      <div className="row m-0 justify-content-start gap-0">
+      <div className="row m-0 justify-content-start gap-0 h-100">
         <img src={classname === 'bridge' ? BridgeAsset : EarnAsset} style={{padding: 0, height: 77}}  />
-        <div className="d-flex flex-column gap-3 pt-3">
+        <div className="d-flex flex-column justify-content-between py-3">
           <h6 className="title">{title}</h6>
           <p className="desc">{desc}</p>
           <a

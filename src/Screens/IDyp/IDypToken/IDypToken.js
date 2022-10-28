@@ -62,7 +62,7 @@ const IDypToken = () => {
             classname={"bridge"}
             title={"Bridge"}
             desc={
-              "Bridge tokens between Ethereum to Binance, Avalanche and many more to come. Instant and secure transactions."
+              "Dypius Bridge offers users the possibility to send tokens from Ethereum to BNB and Avalanche chains with ease. Every transaction is instant and secure."
             }
             link={"#"}
           />
@@ -71,7 +71,7 @@ const IDypToken = () => {
             classname={"earn"}
             title={"Stake"}
             desc={
-              "Put your assets to work by depositing them on our immersive Dypius products and start earning high value rewards."
+              "Make the most of your assets with Dypius Earn products. Start earning today!"
             }
             link={"#"}
           />

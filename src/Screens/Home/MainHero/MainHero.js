@@ -28,14 +28,11 @@ const MainHero = () => {
             <div className="col-12 col-lg-5 d-flex justify-content-lg-evenly justify-content-xl-evenly justify-content-inherit flex-column text-white ml-lg-4 pt-5 px-0 px-lg-2">
               <div className="d-flex flex-column gap-4">
                 <div>
-                  <h1>Welcome</h1>
-                  <h1>to the future</h1>
+                  <h1>Embrace</h1>
+                  <h1>the future</h1>
                 </div>
                 <p className="text-white">
-                  Dypius is a powerful decentralized ecosystem that faces the
-                  future. A new era with special focus on scalability, security,
-                  and global adoption. Powered by a next-gen infrastructure
-                  through our strong foundation, and much more!
+                Dypius is a powerful, decentralized ecosystem with a focus on scalability, security, and global adoption through next-gen infrastructure.
                 </p>
                 <NavLink
                   type="button"
@@ -52,8 +49,7 @@ const MainHero = () => {
                       <b>Earn</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                      Start earning high value rewards by depositing assets on
-                      our immersive Dypius products and solutions
+                    Make the most of your assets by embracing Dypius Earn products
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">
@@ -61,9 +57,7 @@ const MainHero = () => {
                       <b>Governance</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                      DYP holders can vote on whether to add more pools, burn
-                      tokens, allocate DYP toward grants, strategic
-                      partnerships, and different initiatives.
+                    DYP holders can actively influence the future of the ecosystem by voting to add more pools, burn tokens, and create other unique proposals.
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">
@@ -71,9 +65,7 @@ const MainHero = () => {
                       <b>DYP Tools</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                      An advanced analytics data tools that provides easier
-                      navigation to decentralized networks, new trends,
-                      protection, support for new projects and much more.
+                    Advanced analytic tools designed to provide accurate data, news, project support, and much more 
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">
@@ -91,9 +83,7 @@ const MainHero = () => {
                       <b>Launchpad</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                      Support new projects to raise capital in a decentralized
-                      environment by bringing token offerings to the market in
-                      the highest secure way.
+                    Support new projects in a decentralized and secure environment.
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">
@@ -101,11 +91,7 @@ const MainHero = () => {
                       <b>CAWS NFT</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                      A limited Cat and Watches Society NFT collection of 10,000
-                      randomly generated, hand-drawn utility NFTs developed by
-                      Dypius. These unique NFTs consist of over 235 different
-                      traits, each outfitted with its own luxury watch of
-                      various rarities.
+                    The Cat and Watches Society NFT is a unique collection developed by Dypius that offers multiple benefits, including staking and metaverse integration.
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">

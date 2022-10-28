@@ -387,7 +387,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-xl-4 col-md-4">
+              <div className="col-lg-4 col-xl-4 col-md-4 px-0 px-lg-2">
                 <div className="circulating-wrapper w-100 mb-3">
                   <div className="d-flex flex-column gap-3">
                     <span className="circulating-title">

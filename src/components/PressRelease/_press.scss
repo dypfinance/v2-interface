@@ -99,13 +99,14 @@
 
 @-webkit-keyframes moveSlideshow {
   100% {
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    
   }
 }
 
 @keyframes moveSlideshow {
   100% {
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
   }
 }
 
