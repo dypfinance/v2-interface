@@ -45,7 +45,7 @@ const DypToken = () => {
 
           <div className="row">
             <div
-              className="d-flex flex-row infinite-cards-container"
+              className="d-flex flex-row infinite-cards-container px-1"
                data-aos="fade-up"
                data-aos-duration="1000"
             >

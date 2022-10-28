@@ -60,14 +60,12 @@ const HamburgerMenu = () => {
 
   useEffect(() => {
     if (openMenu === true) {
-      html.style.pointerEvents = "none";
-      html.style.overflow = 'hidden'
+      html.classList.add('hidescroll')
       bgmenu.style.pointerEvents = "auto";
       hamburger.style.pointerEvents = "auto";
     } else {
       // Enable scroll
-      html.style.overflow = "auto";
-      html.style.pointerEvents = "auto";
+      html.classList.remove('hidescroll')
     }
   }, [openMenu]);
 

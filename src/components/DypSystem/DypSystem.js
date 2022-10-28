@@ -26,92 +26,66 @@ const DypSystem = ({
         <div className="satellite-orbit2"></div>
 
         <div className="satellite-orbit3">
-          <div className="satellite">
-            <img
-              src={Launchpad}
-              alt="dyp-item"
-              style={{ width: 50, height: 50 }}
-              onMouseEnter={onShowFifthDesc}
-              onMouseLeave={onRemoveDesc}
-                
-            />
+          <div
+            className="satellite"
+            onMouseEnter={onShowFifthDesc}
+            onMouseLeave={onRemoveDesc}
+          ></div>
+
+          <div
+            className="satellite3"
+            onMouseEnter={onShowThirdDesc}
+            onMouseLeave={onRemoveDesc}
+          >
+            <a
+              href="https://tools.dyp.finance/"
+              target={"_blank"}
+              rel="noreferrer"
+              style={{ width: 50, height: 50, display: "flex" }}
+            ></a>
           </div>
 
-            <div className="satellite3">
-                        <a
-            href="https://tools.dyp.finance/"
-            target={"_blank"}
-            rel="noreferrer"
-          >
-              <img
-                src={Dyptools}
-                alt="dyp-item"
-                style={{ width: 50, height: 50 }}
-                onMouseEnter={onShowThirdDesc}
-                onMouseLeave={onRemoveDesc}
-                  
-              /></a>
-            </div>
-          
-          <div className="satellite33">
-            <img
-              src={Bridge}
-              alt="dyp-item"
-              style={{ width: 50, height: 50 }}
-              onMouseEnter={onShowFourthDesc}
-              onMouseLeave={onRemoveDesc}
-                
-            />
-          </div>
+          <div
+            className="satellite33"
+            onMouseEnter={onShowFourthDesc}
+            onMouseLeave={onRemoveDesc}
+          ></div>
         </div>
         <div className="satellite-orbit4">
-          <div className="satellite4">
-            <img
-              src={Earn}
-              alt="dyp-item"
-              style={{ width: 50, height: 50 }}
-              onMouseEnter={onShowFirstDesc}
-              onMouseLeave={onRemoveDesc}
-                
-            />
-          </div>
-          <div className="satellite44">
-            <NavLink to='/governance'>
-            <img
-              src={Governance}
-              alt="dyp-item"
-              style={{ width: 50, height: 50 }}
-              onMouseEnter={onShowSecondDesc}
-              onMouseLeave={onRemoveDesc}
-                
-            />
+          <div
+            className="satellite4"
+            onMouseEnter={onShowFirstDesc}
+            onMouseLeave={onRemoveDesc}
+          ></div>
+          <div
+            className="satellite44"
+            onMouseEnter={onShowSecondDesc}
+            onMouseLeave={onRemoveDesc}
+          >
+            <NavLink
+              to="/governance"
+              style={{ width: 50, height: 50, display: "flex" }}
+            >
+              {/* <img
+                src={Governance}
+                alt="dyp-item"
+              /> */}
             </NavLink>
           </div>
-          <div className="satellite22">
-            <img
-              src={Caw}
-              alt="dyp-item"
-              style={{ width: 50, height: 50 }}
-              onMouseEnter={onShowSixthDesc}
-              onMouseLeave={onRemoveDesc}
-                
-            />
-          </div>
-
-          <div className="satellite2">
-            <img
-              src={Metaverse}
-              alt="dyp-item"
-              style={{ width: 50, height: 50 }}
-              onMouseEnter={onShowSeventhDesc}
-              onMouseLeave={onRemoveDesc}
-                
-            />
-          </div>
+          <div
+            className="satellite22"
+            onMouseEnter={onShowSixthDesc}
+            onMouseLeave={onRemoveDesc}
+          ></div>
+          <div
+            className="satellite2"
+            onMouseEnter={onShowSeventhDesc}
+            onMouseLeave={onRemoveDesc}
+          ></div>
         </div>
 
         <div className="planet">
-          <img src={DypRect} alt="dypPlanet"   />
+          <img src={DypRect} alt="dypPlanet" />
         </div>
       </div>
     </div>

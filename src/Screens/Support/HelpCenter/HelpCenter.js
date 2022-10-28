@@ -419,6 +419,9 @@ const HelpCenter = () => {
                       Select topic*
                     </InputLabel>
                     <StyledSelect
+                    MenuProps={{
+                      disableScrollLock: false
+                    }}
                       sx={{ borderRadius: "8px", fontFamily: "Poppins" }}
                       labelId="demo-simple-select-error-label"
                       id="topic"
@@ -727,6 +730,7 @@ const HelpCenter = () => {
               ) : (
                 <div className="selected-field d-flex gap-2 px-0">
                   <StyledTextField
+                  fullWidth
                     error={businessErrors.subject ? true : false}
                     size="small"
                     label="Subject"
