@@ -5,6 +5,7 @@
     z-index: 1;
     width: 100%;
     animation: scale 3s ease-in-out infinite;
+    -webkit-animation: scale 3s ease-in-out infinite;
 }
 
 @keyframes scale {
@@ -18,6 +19,18 @@
     transform: scale(1);
    }
 }
+
+@-webkit-keyframes scale {
+    0%{
+     -webkit-transform: scale(1);
+    }
+    50%{
+     -webkit-transform: scale(1.1);
+    }
+    100%{
+     -webkit-transform: scale(1);
+    }
+ }
 
 .buydyp-main-hero {
     min-height: 500px;

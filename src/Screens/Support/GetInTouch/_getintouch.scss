@@ -23,6 +23,7 @@
       bottom: 15px;
       left: 15px;
       transition: all .5s;
+      -webkit-transition: all .5s;
       border-radius: 0 0 12px 0px;
       box-shadow: 0px 22px 44px rgba(36, 161, 222, 0.32);
     }
@@ -31,6 +32,7 @@
       right: 15px;
       top: 15px;
       transition: all .5s;
+      -webkit-transition: all .5s;
       border-radius: 0 0 12px 0px;
       box-shadow: 0px 22px 44px rgba(88, 101, 242, 0.32);
     }
@@ -38,6 +40,8 @@
     .telegram:hover,
     .discord:hover{
       transform: translateX(5px) translateY(-5px);
+      -webkit-transform: translateX(5px) translateY(-5px);
+
     }
 
   }

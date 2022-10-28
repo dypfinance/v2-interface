@@ -22,6 +22,8 @@
       border-radius: 12px 0px;
       cursor: pointer;
       transition: all 1s;
+      -webkit-transition: all 1s;
+
 
       .form-email {
         font-size: 14px;
@@ -29,6 +31,8 @@
         color: #7670e0;
         display: none;
         transition: all 1s;
+      -webkit-transition: all 1s;
+
       }
     }
 

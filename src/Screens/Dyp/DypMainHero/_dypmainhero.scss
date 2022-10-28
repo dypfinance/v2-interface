@@ -13,14 +13,16 @@
 
   .coin:nth-child(2){
     animation: rotate 10s linear infinite;
+    -webkit-animation: rotate 10s linear infinite;
+
   }
 
   @keyframes rotate {
     from {
-      -webkit-transform: rotate(0deg);
+      -ransform: rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
     }
   }
 
@@ -106,15 +108,15 @@
 
 @-webkit-keyframes pulse {
     0% {
-      transform: scale(1);
+      -webkit-transform: scale(1);
     }
   
     50% {
-      transform: scale(1.4);
+      -webkit-transform: scale(1.4);
     }
   
     100% {
-      transform: scale(1);
+      -webkit-transform: scale(1);
     }
   }
 

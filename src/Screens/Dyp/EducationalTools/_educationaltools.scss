@@ -27,10 +27,13 @@
     border-radius: 12px 0px;
     position: relative;
     transition: all .5s;
+    -webkit-transition: all .5s;
+
   }
 
   .cardWrapper:hover{
     transform: translateX(5px) translateY(-5px);
+    -webkit-transform: translateX(5px) translateY(-5px);
   }
 
   .cardWrapper:nth-child(odd){

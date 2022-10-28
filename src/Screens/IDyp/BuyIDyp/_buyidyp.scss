@@ -4,6 +4,8 @@
   right: 0;
   top: 60px;
   transition: all .5s;
+  -webkit-transition: all .5s;
+
 }
 
 .mexc-card{
@@ -12,6 +14,8 @@
   left: 0;
   top: 30px;
   transition: all .5s;
+  -webkit-transition: all .5s;
+
 }
 
 .pancake-card {
@@ -20,6 +24,8 @@
   left: 32px;
   top: 170px;
   transition: all .5s;
+  -webkit-transition: all .5s;
+
 }
 
 .pangolin-card {
@@ -28,6 +34,8 @@
   left: 300px;
   top: 195px;
   transition: all 0.5s;
+  -webkit-transition: all .5s;
+
 }
 
 .uni-card:hover,
@@ -35,6 +43,8 @@
 .pangolin-card:hover,
 .mexc-card:hover{
   transform: translateX(5px) translateY(5px);
+  -webkit-transform: translateX(5px) translateY(5px);
+
 }
 
 

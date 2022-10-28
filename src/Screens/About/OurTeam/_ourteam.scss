@@ -41,10 +41,13 @@
 
             .accordion-toggler{
                 transition: all .25s;
+                -webkit-transition: all .25s;
+
             }
 
             .rotate{
                 transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
             }
            }
            
