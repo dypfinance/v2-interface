@@ -2,7 +2,7 @@ import React from "react";
 import Title from "../../../components/Title/Title";
 import "./_ourteam.scss";
 import TeamCard from "../../../components/TeamCard/TeamCard";
-import michael from "../../../assets/team/michael.png";
+import michael from "../../../assets/team/mihai.jpg";
 import razvan from "../../../assets/team/razvan.png";
 import teki from "../../../assets/team/tek.png";
 import gino from "../../../assets/team/gino.jpg";
