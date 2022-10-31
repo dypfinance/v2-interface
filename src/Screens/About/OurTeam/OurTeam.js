@@ -7,7 +7,7 @@ import razvan from "../../../assets/team/razvan.png";
 import teki from "../../../assets/team/tek.png";
 import gino from "../../../assets/team/gino.jpg";
 import fatjon from "../../../assets/team/fatjon.jpg";
-import lorena from "../../../assets/team/lorena.jpeg";
+import lorena from "../../../assets/team/lorena.jpg";
 import aldi from "../../../assets/team/aldi.jpg";
 import alexandra from "../../../assets/team/alexandra.jpg";
 import gazmend from "../../../assets/team/gazmend.jpg";
