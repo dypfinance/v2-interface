@@ -73,9 +73,7 @@ const MainHero = () => {
                       <b>Bridge</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                      Powerful dApp that allows to swap tokens between Ethereum
-                      to Binance, Avalanche and many more to come. Instant and
-                      secure transactions.
+                    Dypius Bridge offers users the possibility to send tokens from Ethereum to BNB and Avalanche chains with ease. Every transaction is instant and secure.
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">
