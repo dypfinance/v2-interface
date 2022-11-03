@@ -32,7 +32,7 @@ const ChainlinkData = () => {
     },
     {
       img: "certik.svg",
-      name: "CertiK Security",
+      name: "CertiK",
     },
   ];
   return (
