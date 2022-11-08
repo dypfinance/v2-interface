@@ -221,7 +221,7 @@ const ContactUs = () => {
             Interested in collaborating with us? <br />
             Please complete this short form.
           </p>
-          <div className="outer-form p-lg-4 p-xl-4 p-md-4 p-1 position-relative">
+          <div className="outer-form p-lg-4 p-xl-4 p-md-4 p-1 position-relative mx-2">
             <div className="d-lg-flex d-xl-flex align-items-center mx-2 mt-4 titlewrapper">
               <img
                 src={contactHeader}

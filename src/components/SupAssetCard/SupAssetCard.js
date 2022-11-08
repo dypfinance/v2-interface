@@ -1,17 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import DypPool from "../../assets/DypAssets/dypPool.svg";
 import rightArrow from "../../assets/right-arrow.svg";
 
-const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain }) => {
+const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainType }) => {
+
+  const ethCoins = ["ethereum", "wbtc", "usdc", "usdt"];
+  const bscCoins = ["bsc", "btcb", "ethereum", "busd", "pancakeswap", "idypius" ]
+  const avaxCoins = ["avax", "ethereum", "wbtc", "usdt", "usdc", "dai", "idypius", "pangolin", "benqi", "xava", "link"]
+
+  const [coins, setCoins] = useState(ethCoins)
+  
+
+  useEffect(() => {
+    if(chainType === "eth"){
+      setCoins(ethCoins)
+    }else if(chainType === "bnb"){
+      setCoins(bscCoins)
+    }else{
+      setCoins(avaxCoins)
+    }
+  }, [chainType])
+  
+
+
   return (
     <div className={`vaultWrapper bg-white ${chain}`}>
       <div className="purplediv"></div>
       <div className="d-flex flex-column gap-3">
         <div className="row justify-content-between gap-2 m-0 align-items-center">
-          <div className="row gap-1 align-items-center">
-            <img src={DypPool} alt="eth_pool" className="pl-0"  />
-            <span className="poolTitle p-0">{pool}</span>
+          {listType !== "Stake" ?
+          <div className="coins-container px-0">
+            {coins.slice(0,5).map((coin) => (
+            <img src={require(`./assets/${coin}.svg`)} className="list-coin" alt="" />
+          ))}
           </div>
+          :
+          <div className="row gap-1 align-items-center">
+          <img src={DypPool} alt="eth_pool" className="pl-0"  />
+          <span className="poolTitle p-0">{pool}</span>
+        </div>  
+        }
           <span className="aprTitle p-0">
             {apr}
             <span className="aprText ml-2">APR</span>

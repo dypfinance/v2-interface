@@ -38,12 +38,12 @@ const GetInTouch = () => {
             icon: 'touchGithub'
         },
         {
-            link: "mailto:contact@dyp.finance",
+            link: "mailto:helpcenter@dypius.com",
             title: 'General Inquiry',
             icon: 'touchInquiry'
         },
         {
-            link: "mailto:contact@dyp.finance",
+            link: "mailto:business@dypius.com",
             title: 'Business',
             icon: 'touchInquiry'
         },
