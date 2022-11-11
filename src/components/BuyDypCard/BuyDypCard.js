@@ -23,6 +23,7 @@ const BuyDypCard = ({ title, logo, link, totalvids, videos, id }) => {
           </div>
         </a>
       </div>
+      <hr style={{marginBottom: 0, marginTop: 10 }} />
       <div className="accordion-item border-0">
         <h2 className="accordion-header" id={title}>
           <button
