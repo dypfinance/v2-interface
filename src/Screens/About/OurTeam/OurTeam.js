@@ -4,7 +4,7 @@ import "./_ourteam.scss";
 import TeamCard from "../../../components/TeamCard/TeamCard";
 import michael from "../../../assets/team/mihai.jpg";
 import razvan from "../../../assets/team/razvan.jpg";
-import teki from "../../../assets/team/tek.png";
+import teki from "../../../assets/team/teki.jpg";
 import gino from "../../../assets/team/gino.jpg";
 import fatjon from "../../../assets/team/fatjon.jpg";
 import lorena from "../../../assets/team/lorena.jpg";
