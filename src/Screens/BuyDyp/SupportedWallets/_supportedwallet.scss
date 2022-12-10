@@ -1,11 +1,12 @@
 .supportedwallet-wrapper {
-  background: url(../assets/supportedwalletbg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: linear-gradient(360deg, #554FD8 0%, #756EDF 98.32%);
+    border: 6px solid #EFF0F6;
+    border-radius: 56px 0px;
+
 
   h1 {
     font-weight: 700;

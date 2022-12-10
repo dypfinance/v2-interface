@@ -1,23 +1,45 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import ProposalCard from "../../../components/ProposalCard/ProposalCard";
 import "./_proposals.scss";
 
 const Proposals = () => {
+
+
+  const [proposals, setProposals] = useState()
+
+  const fetchProposals = async() => {
+    await axios.get('https://api.dyp.finance/api/gov-stats').then((res) => {
+      setProposals(res.data.proposals)
+    }).catch((err) => {
+      console.error(err);
+    })
+  }
+
+
+  useEffect(() => {
+    
+    fetchProposals();
+    
+  }, [])
+  
+
+
   const totalProposals = [
     {
       chain: "Ethereum",
-      total: "52",
+      total: proposals?.eth,
       icon: "https://newsbucketgino.s3.eu-central-1.amazonaws.com/ethereumDropdown.svg",
     },
     {
       chain: "BNB Chain",
-      total: "64",
+      total: proposals?.bsc,
       icon: "https://newsbucketgino.s3.eu-central-1.amazonaws.com/bnbDropdown.svg",
     },
     {
       chain: "Avalanche",
-      total: "38",
+      total: proposals?.avax,
       icon: "https://newsbucketgino.s3.eu-central-1.amazonaws.com/avaDropdown.svg",
     },
   ];

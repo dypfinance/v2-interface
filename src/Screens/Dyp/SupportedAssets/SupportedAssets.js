@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SupAssetCard from "../../../components/SupAssetCard/SupAssetCard";
 import Title from "../../../components/Title/Title";
 import ethDropdown from "../assets/ethereumDropdown.svg";
@@ -7,32 +7,148 @@ import avaDropdown from "../assets/avaDropdown.svg";
 import dropdownIndicator from "../assets/dropdownIndicator.svg";
 import Spiral from "../../../assets/DypAssets/spiral.png";
 import rightArrow from "../../../assets/filledArrow.svg";
+import axios from "axios";
+import getFormattedNumber from '../../../hooks/getFormattedNumber'
 
 const SupportedAssets = () => {
+
+  const stake = [
+    {
+        apy: '1.1',
+        tvl_usd: '43832.30',
+        lockTime: 'No lock',
+        pool: 'DYP'
+    },
+    {
+        apy: '1.1',
+        tvl_usd: '43832.30',
+        lockTime: 'No lock',
+        pool: 'DYP'
+    },
+    {
+        apy: '1.1',
+        tvl_usd: '43832.30',
+        lockTime: 'No lock',
+        pool: 'DYP'
+    },
+  ]
+  const buyback = [
+    {
+        apy: '5.6',
+        tvl_usd: '43832.30',
+        lockTime: 'No lock',
+        pool: 'DYP'
+    },
+    {
+        apy: '5.6',
+        tvl_usd: '43832.30',
+        lockTime: 'No lock',
+        pool: 'DYP'
+    },
+    {
+        apy: '5.6',
+        tvl_usd: '43832.30',
+        lockTime: 'No lock',
+        pool: 'DYP'
+    },
+  ]
+
   const [ethState, setEthState] = useState(true);
   const [bnbState, setBnbState] = useState(false);
   const [avaxState, setAvaxState] = useState(false);
-
+  const [farmingItem, setFarmingItem] = useState([])
+  const [cards, setCards] = useState(stake)
   const types = ["Stake", "Yield", "Buyback"];
   const [activeType, setActiveType] = useState(types[0]);
+  var farming = []
 
-  const handleEthPool = () => {
+ 
+
+
+  const handleEthPool = async() => {
     setAvaxState(false);
     setBnbState(false);
     setEthState(true);
+
   };
 
-  const handleBnbPool = () => {
+  const handleBnbPool = async() => {
     setAvaxState(false);
     setBnbState(true);
     setEthState(false);
   };
 
-  const handleAvaxPool = () => {
+  const handleAvaxPool = async() => {
     setAvaxState(true);
     setBnbState(false);
     setEthState(false);
   };
+
+
+  const fetchEthFarming = async() => {
+    await axios
+    .get("https://api.dyp.finance/api/the_graph_eth_v2")
+    .then((res) => {
+      let temparray = Object.entries(res.data.the_graph_eth_v2.lp_data);
+      // let farming = [];
+      temparray.map((item) => {
+        farming.push(item[1]);
+      });
+      setFarmingItem(farming)
+    })
+    .catch((err) => console.error(err));
+    
+  }
+
+  const fetchBscFarming = async() => {
+  
+    await axios
+    .get("https://api.dyp.finance/api/the_graph_bsc_v2")
+    .then((res) => {
+      let temparray = Object.entries(res.data.the_graph_bsc_v2.lp_data);
+      // let farming = [];
+      temparray.map((item) => {
+        farming.push(item[1]);
+      });
+      setFarmingItem(farming)
+    })
+    .catch((err) => console.error(err));
+  }
+
+
+    const fetchAvaxFarming = async() => {
+      await axios
+      .get("https://api.dyp.finance/api/the_graph_avax_v2")
+      .then((res) => {
+        let temparray = Object.entries(res.data.the_graph_avax_v2.lp_data);
+        // let farming = [];
+        temparray.map((item) => {
+          farming.push(item[1]);
+        });
+        setFarmingItem(farming)
+      })
+      .catch((err) => console.error(err));
+    }
+
+  useEffect(() => {
+    if(ethState){
+      fetchEthFarming();
+    }else if(bnbState){
+      fetchBscFarming();
+    }else if(avaxState){
+      fetchAvaxFarming();
+    }
+
+    if(activeType === 'Stake'){
+      setCards(stake)
+    }else if(activeType === 'Yield'){
+      setCards(farming)
+    }else if(activeType === 'Buyback'){
+      setCards(buyback)
+    }
+
+  }, [ethState, bnbState, avaxState, activeType])
+  
 
   return (
     <div className="container-lg supportedAssets-wrapper">
@@ -166,40 +282,28 @@ const SupportedAssets = () => {
             className="row gap-4 px-0 px-lg-4 position-relative justify-content-center justify-content-lg-between justify-content-xl-between assets-container"
             style={{ paddingBottom: "4rem", zIndex: 1 }}
           >
-            <SupAssetCard
-              pool={"DYP"}
-              apr={"1.1%"}
-              tvl={"$48,382.30"}
-              lockTime={"No lock"}
-              chain={
-                `supported-assets-card ${ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"}`
-              }
-            />
-            <SupAssetCard
-              pool={"DYP"}
-              apr={"1.1%"}
-              tvl={"$48,382.30"}
-              lockTime={"No lock"}
-              chain={
-                `supported-assets-card ${ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"}`
-              }
-            />
-            <SupAssetCard
-              pool={"DYP"}
-              apr={"1.1%"}
-              tvl={"$48,382.30"}
-              lockTime={"No lock"}
-              chain={
-                `supported-assets-card ${ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"}`
-              }
-            />
+            {cards.slice(0,3).map((card, index) => (
+                   <SupAssetCard
+                   key={index}
+                   pool={"DYP"}
+                   apr={card.apy + "%"}
+                   tvl={"$" + getFormattedNumber(card.tvl_usd)}
+                   lockTime={"No lock"}
+                   chain={
+                     `supported-assets-card ${ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"}`
+                   }
+                   listType ={activeType}
+                  chainType={ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"}
+                 />
+            ))}
             {/* <img className="spiral2" src={Spiral} alt="" /> */}
-            <button
+            <a
+            href='https://betatools.dyp.finance/earn' target={'_blank'} rel='noreferrer'
               className="outline-btn position-absolute d-flex align-items-center viewmorebtn"
-              style={{ bottom: "-19px"}}
+              style={{ bottom: "-19px", width: 'fit-content'}}
             >
               View more <img src={rightArrow} alt="" className="ml-3"  />
-            </button>
+            </a>
           </div>
         </div>
       </div>

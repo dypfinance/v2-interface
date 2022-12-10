@@ -24,7 +24,7 @@ const IDypHero = () => {
         <div className="col-12 col-lg-6 text-white d-flex flex-column gap-3 justify-content-lg-end justify-content-xl-end">
           <h1>iDYP Token</h1>
           <p> 
-          iDYP is part of the Dypius dual token economy and is used as a compnent of smart contract strategies. It is available on Ethereum, BNB and Avlalanche chains.
+          iDYP is part of the Dypius dual token economy and is used as a component of smart contract strategies. It is available on Ethereum, BNB and Avalanche chains.
           </p>
         </div>
         <div className="col-9 col-lg-3 position-relative d-lg-block d-xl-block d-none idyp-hero-images">

@@ -30,7 +30,15 @@ const DypSystem = ({
             className="satellite"
             onMouseEnter={onShowFifthDesc}
             onMouseLeave={onRemoveDesc}
-          ></div>
+          >
+             <a
+              href="https://betatools.dyp.finance/launchpad"
+              target={"_blank"}
+              rel="noreferrer"
+              style={{ width: 50, height: 50, display: "flex" }}
+            ></a>
+
+          </div>
 
           <div
             className="satellite3"
@@ -38,7 +46,7 @@ const DypSystem = ({
             onMouseLeave={onRemoveDesc}
           >
             <a
-              href="https://tools.dyp.finance/"
+              href="https://betatools.dyp.finance/"
               target={"_blank"}
               rel="noreferrer"
               style={{ width: 50, height: 50, display: "flex" }}
@@ -49,14 +57,30 @@ const DypSystem = ({
             className="satellite33"
             onMouseEnter={onShowFourthDesc}
             onMouseLeave={onRemoveDesc}
-          ></div>
+          >
+             <a
+              href="https://betatools.dyp.finance/bridge"
+              target={"_blank"}
+              rel="noreferrer"
+              style={{ width: 50, height: 50, display: "flex" }}
+            ></a>
+
+          </div>
         </div>
         <div className="satellite-orbit4">
           <div
             className="satellite4"
             onMouseEnter={onShowFirstDesc}
             onMouseLeave={onRemoveDesc}
-          ></div>
+          >
+             <a
+              href="https://betatools.dyp.finance/earn"
+              target={"_blank"}
+              rel="noreferrer"
+              style={{ width: 50, height: 50, display: "flex" }}
+            ></a>
+
+          </div>
           <div
             className="satellite44"
             onMouseEnter={onShowSecondDesc}

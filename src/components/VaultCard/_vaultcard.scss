@@ -144,3 +144,33 @@
       padding: 5px 10px 5px 0;
   }
 }
+
+.list-coin{
+  width: 40px;
+  height: 40px;
+  transition: all .25s;
+}
+
+.list-coin:hover{
+  z-index: 7;
+  scale: 1.1;
+}
+
+.list-coin:nth-child(2){
+  transform: translateX(-10px);
+}
+.list-coin:nth-child(3){
+  transform: translateX(-20px);
+}
+.list-coin:nth-child(4){
+  transform: translateX(-30px);
+}
+.list-coin:nth-child(5){
+  transform: translateX(-40px);
+}
+.list-coin:nth-child(6){
+  transform: translateX(-50px);
+}
+.list-coin:nth-child(7){
+  transform: translateX(-60px);
+}

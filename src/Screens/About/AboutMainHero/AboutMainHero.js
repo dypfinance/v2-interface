@@ -57,7 +57,7 @@ const AboutMainHero = () => {
           <img src={indicator} className='submenu-indicator'  alt=""  />
         </a>
         <a href="#contactus" className="text-decoration-none submenu-link">
-          Contact Us
+          Contact us
           <img src={indicator} className='submenu-indicator'  alt=""  />
         </a>
       </div>

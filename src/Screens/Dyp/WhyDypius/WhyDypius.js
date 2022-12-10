@@ -88,7 +88,7 @@ const WhyDypius = () => {
                     />
                     <div className="child-1 d-flex flex-column justify-content-start justify-content-center mx-auto ">
                       <h5 style={{ fontSize: "32px", fontWeight: "275" }}>
-                        42
+                        25
                       </h5>
                       <p style={{ fontSize: "12px", fontWeight: "400" }}>
                         Active pools
@@ -104,7 +104,7 @@ const WhyDypius = () => {
                     </div>
                     <div className="child-3 d-flex flex-column justify-content-start justify-content-center mx-auto ">
                       <h5 style={{ fontSize: "32px", fontWeight: "275" }}>
-                        70%
+                        40%
                       </h5>
                       <p style={{ fontSize: "12px", fontWeight: "400" }}>
                         DYP Locked
@@ -148,13 +148,13 @@ const WhyDypius = () => {
                     </div>
                     <div className="d-flex flex-column justify-content-start justify-content-center mx-auto ">
                       <h5 style={{ fontWeight: "275", fontSize: "32px" }}>
-                        2.5K+
+                        25K+
                       </h5>
                       <p
                         className="mb-0"
                         style={{ fontSize: "12px", fontWeight: "400" }}
                       >
-                        Liquidity Providers
+                        Token Holders
                       </p>
                     </div>
                   </div>
