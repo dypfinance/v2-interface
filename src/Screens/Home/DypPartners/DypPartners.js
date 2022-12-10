@@ -111,7 +111,7 @@ const [partnersLength, setPartnersLength] = useState(0)
       href: "https://www.ankr.com/",
     },
     {
-      image: "swft.svg",
+      image: "swft.png",
       text: "SWFT",
       href: "https://www.swft.pro/",
     },
