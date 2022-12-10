@@ -8,23 +8,23 @@ import Success from "../../../components/Success/Success";
 const SupportedWallets = () => {
   const wallets = [
     {
-      logo: "coinbase.png",
+      logo: "coinbase.svg",
       title: "Coinbase",
     },
     {
-      logo: "metamask.png",
+      logo: "metamask.svg",
       title: "Metamask",
     },
     {
-      logo: "trustwallet.png",
+      logo: "trustwallet.svg",
       title: "Trust wallet",
     },
     {
-      logo: "coin98.png",
+      logo: "coin98.svg",
       title: "Coin98",
     },
     {
-      logo: "safepal.png",
+      logo: "safepal.svg",
       title: "SafePal",
     },
   ];
