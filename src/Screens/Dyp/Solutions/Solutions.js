@@ -40,12 +40,12 @@ const Solutions = () => {
       link: 'https://betatools.dyp.finance/earn'
 
     },
-    {
-      title: "Buyback",
-      image: "buyback",
-      link: 'https://betatools.dyp.finance/earn'
+    // {
+    //   title: "Buyback",
+    //   image: "buyback",
+    //   link: 'https://betatools.dyp.finance/earn'
 
-    },
+    // },
     {
       title: "Bridge",
       image: "bridge",
