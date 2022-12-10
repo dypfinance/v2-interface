@@ -14,50 +14,73 @@ const Solutions = () => {
     {
       title: "DYP Tools",
       image: "dyptools",
+      link: 'https://betatools.dyp.finance/'
     },
     {
       title: "Governance",
       image: "governance",
+      link: 'https://betatools.dyp.finance/governance'
+
     },
     {
       title: "Stake",
       image: "stake",
+      link: 'https://betatools.dyp.finance/earn'
+
     },
     {
       title: "Farm",
       image: "farm",
+      link: 'https://betatools.dyp.finance/earn'
+
     },
     {
       title: "Vault",
       image: "vault",
+      link: 'https://betatools.dyp.finance/earn'
+
     },
     {
       title: "Buyback",
       image: "buyback",
+      link: 'https://betatools.dyp.finance/earn'
+
     },
     {
       title: "Bridge",
       image: "bridge",
+      link: 'https://betatools.dyp.finance/bridge'
+
     },
     {
       title: "CAWS NFT",
       image: "caws",
+      link: 'https://betatools.dyp.finance/earn'
+
     },
     {
       title: "Launchpad",
       image: "launchpad",
+      link: 'https://betatools.dyp.finance/launchpad'
+
     },
     {
       title: "Metaverse",
       image: "metaverse",
+      link: '#'
+
     },
     {
       title: "DYP Locker",
       image: "dyplocker",
+      link: 'https://betatools.dyp.finance/locker'
+
     },
     {
       title: "CAWS Adventure",
       image: "cawsadventure",
+      link: '#'
+
     },
   ];
 
@@ -91,6 +114,7 @@ const Solutions = () => {
                     key={index}
                     title={solution.title}
                     image={solution.image}
+                    link={solution.link}
                   />
                 ))
             : solutions.map((solution, index) => (
@@ -98,6 +122,8 @@ const Solutions = () => {
                   key={index}
                   title={solution.title}
                   image={solution.image}
+                  link={solution.link}
+
                 />
               ))}
         </div>

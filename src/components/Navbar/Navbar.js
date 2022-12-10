@@ -142,7 +142,7 @@ const Navbar = () => {
             className="d-flex text-decoration-none"
             target="_blank"
             rel="noreferrer"
-            href="https://tools.dyp.finance/news"
+            href="https://betatools.dyp.finance/"
           >
             <button className="btn tools-btn text-white">
               <img src={toolsLogo} className="pe-2" alt=""  />
