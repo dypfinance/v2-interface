@@ -14,73 +14,89 @@ const Solutions = () => {
     {
       title: "DYP Tools",
       image: "dyptools",
-      link: 'https://betatools.dyp.finance/'
+      link: 'https://betatools.dyp.finance/',
+      arrow: true
     },
     {
       title: "Governance",
       image: "governance",
-      link: 'https://betatools.dyp.finance/governance'
+      link: 'https://betatools.dyp.finance/governance',
+      arrow: true
 
     },
     {
       title: "Stake",
       image: "stake",
-      link: 'https://betatools.dyp.finance/earn'
+      link: 'https://betatools.dyp.finance/earn',
+      arrow: true
 
     },
     {
       title: "Farm",
       image: "farm",
-      link: 'https://betatools.dyp.finance/earn'
+      link: 'https://betatools.dyp.finance/earn',
+      arrow: true
 
     },
     {
       title: "Vault",
       image: "vault",
-      link: 'https://betatools.dyp.finance/earn'
+      link: 'https://betatools.dyp.finance/earn',
+      arrow: true
 
     },
-    {
-      title: "Buyback",
-      image: "buyback",
-      link: 'https://betatools.dyp.finance/earn'
+    // {
+    //   title: "Buyback",
+    //   image: "buyback",
+    //   link: 'https://betatools.dyp.finance/earn'
 
-    },
+    // },
     {
       title: "Bridge",
       image: "bridge",
-      link: 'https://betatools.dyp.finance/bridge'
+      link: 'https://betatools.dyp.finance/bridge',
+      arrow: true
 
     },
     {
       title: "CAWS NFT",
       image: "caws",
-      link: 'https://betatools.dyp.finance/earn'
+      link: 'https://betatools.dyp.finance/earn',
+      arrow: true
 
     },
     {
       title: "Launchpad",
       image: "launchpad",
-      link: 'https://betatools.dyp.finance/launchpad'
+      link: 'https://betatools.dyp.finance/launchpad',
+      arrow: true
 
     },
     {
       title: "Metaverse",
       image: "metaverse",
-      link: '#'
+      link: '#',
+      arrow: true
 
     },
     {
       title: "DYP Locker",
       image: "dyplocker",
-      link: 'https://betatools.dyp.finance/locker'
+      link: 'https://betatools.dyp.finance/locker',
+      arrow: true
 
     },
     {
       title: "CAWS Adventure",
       image: "cawsadventure",
-      link: '#'
-
+      link: '#',
+      arrow: true
+    },
+    {
+      title: "Referral",
+      image: "referral",
+      link: '#',
+      arrow: false
     },
   ];
 
@@ -115,6 +131,7 @@ const Solutions = () => {
                     title={solution.title}
                     image={solution.image}
                     link={solution.link}
+                    arrow={solution.arrow}
                   />
                 ))
             : solutions.map((solution, index) => (
@@ -123,6 +140,7 @@ const Solutions = () => {
                   title={solution.title}
                   image={solution.image}
                   link={solution.link}
+                  arrow={solution.arrow}
 
                 />
               ))}

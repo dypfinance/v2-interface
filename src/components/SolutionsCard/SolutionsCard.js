@@ -1,6 +1,6 @@
 import React from "react";
 
-const SolutionsCard = ({ title, image, link }) => {
+const SolutionsCard = ({ title, image, link, arrow }) => {
   return (
     <div
       className="solutions-card d-flex justify-content-between align-items-center py-4 px-3"
@@ -18,7 +18,8 @@ const SolutionsCard = ({ title, image, link }) => {
         </div>
         <h4>{title}</h4>
       </div>
-      <img src={require(`../../assets/filledArrow.svg`).default} alt="" /></a>
+     {arrow &&  <img src={require(`../../assets/filledArrow.svg`).default} alt="" />}
+      </a>
     </div>
   );
 };
