@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
+import EmptyProposalCard from "../../../components/ProposalCard/EmptyProposalCard";
 import ProposalCard from "../../../components/ProposalCard/ProposalCard";
 import "./_proposals.scss";
 
@@ -134,14 +135,14 @@ const settings = {
                 <span className="proposal-span" />
             <div className="row justify-content-between align-items-center mb-4">
               <h4 className="mb-0" style={{ color: "#554FD8", fontSize: '20px' }}>Recent proposals</h4>
-              <p className="active-pools mb-0">9 Active</p>
+              <p className="inactive-pools mb-0">No proposals available</p>
             </div>
             <div className="row recents-container">
                 <Slider {...settings}>
                     {recentProposalGroups.map((proposal, index) => (
                         <div key={index}>
                             {proposal.content.map((item, index) => (
-                                <ProposalCard title={item.title} icon={item.icon} key={index}/>
+                                <EmptyProposalCard title={item.title} icon={item.icon} key={index}/>
                             ))}
                         </div>
                     ))}
