@@ -130,22 +130,65 @@ const SupportedAssets = () => {
       .catch((err) => console.error(err));
     }
 
+
+    const fetchEthStaking = async () => {
+      await axios
+        .get(`https://api.dyp.finance/api/get_staking_info_eth`)
+        .then((res) => {
+          const dypIdyp = res.data.stakingInfoDYPEth.concat(
+            res.data.stakingInfoiDYPEth
+          );
+          setCards(dypIdyp);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    const fetchBnbStaking = async () => {
+      await axios
+        .get(`https://api.dyp.finance/api/get_staking_info_bnb`)
+        .then((res) => {
+          const dypIdypBnb = res.data.stakingInfoDYPBnb.concat(
+            res.data.stakingInfoiDYPBnb
+          );
+          setCards(dypIdypBnb);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    const fetchAvaxStaking = async () => {
+      await axios
+        .get(`https://api.dyp.finance/api/get_staking_info_avax`)
+        .then((res) => {
+          const dypIdypAvax = res.data.stakingInfoDYPAvax.concat(
+            res.data.stakingInfoiDYPAvax
+          );
+          setCards(dypIdypAvax);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+
+
+
   useEffect(() => {
     if(ethState){
-      fetchEthFarming();
+      fetchEthStaking();
     }else if(bnbState){
-      fetchBscFarming();
+      fetchBnbStaking();
     }else if(avaxState){
-      fetchAvaxFarming();
+      fetchAvaxStaking();
     }
 
-    if(activeType === 'Stake'){
-      setCards(stake)
-    }else if(activeType === 'Yield'){
-      setCards(farming)
-    }else if(activeType === 'Buyback'){
-      setCards(buyback)
-    }
+    // if(activeType === 'Stake'){
+    //   setCards(stake)
+    // }else if(activeType === 'Yield'){
+    //   setCards(farming)
+    // }else if(activeType === 'Buyback'){
+    //   setCards(buyback)
+    // }
 
   }, [ethState, bnbState, avaxState, activeType])
   
@@ -254,7 +297,7 @@ const SupportedAssets = () => {
                 </li>
               </ul>
             </div>
-            <div
+            {/* <div
               className="type-wrapper d-flex flex-row justify-content-center align-items-center"
               style={{ gap: 8 }}
             >
@@ -276,7 +319,7 @@ const SupportedAssets = () => {
               >
                 Buyback
               </p>
-            </div>
+            </div> */}
           </div>
           <div
             className="row gap-4 px-0 px-lg-4 position-relative justify-content-center justify-content-lg-between justify-content-xl-between assets-container"
@@ -286,9 +329,9 @@ const SupportedAssets = () => {
                    <SupAssetCard
                    key={index}
                    pool={"DYP"}
-                   apr={card.apy + "%"}
+                   apr={card.apy_percent + "%"}
                    tvl={"$" + getFormattedNumber(card.tvl_usd)}
-                   lockTime={"No lock"}
+                   lockTime={card.lock_time}
                    chain={
                      `supported-assets-card ${ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"}`
                    }

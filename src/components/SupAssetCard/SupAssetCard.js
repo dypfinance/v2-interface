@@ -57,7 +57,7 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainTy
         </div>
         <a
           className="btn filled-btn d-flex align-items-center justify-content-center"
-          href={link}
+          href='https://betatools.dyp.finance/earn'
           target="_blank"
           rel="noreferrer"
         >
