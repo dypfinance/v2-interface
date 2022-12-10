@@ -30,6 +30,33 @@
 @import "../components/ScrollTop/scrollTop";
 @import "../components/GovCards/govcards";
 @import '../components/BuyDypCard/buydypcards.scss';
+@import "../Screens/Caws/colors";
+@import "../Screens/Caws/responsive";
+@import "../Screens/Caws/caws";
+@import "../Screens/Caws/nftWhiteList";
+@import "../Screens/Caws/components/nftStaking";
+@import "../Screens/Caws/components/Nft/AdoptACat/adoptACat";
+@import "../Screens/Caws/components/Nft/CatsAndWatchesSociety/catsAndWatchesSociety";
+@import "../Screens/Caws/components/Nft/CatsAndWatchesSocietyBenefits/catsAndWatchesSocietyBenefits";
+@import "../Screens/Caws/components/Nft/CatSocietyRanking/catSocietyRanking";
+@import "../Screens/Caws/components/Nft/CatsTimeLine/catsTimeLine";
+@import "../Screens/Caws/components/Nft/CatWhiteList/catWhiteList";
+@import "../Screens/Caws/components/Nft/CawsRoadmap/cawsRoadmap";
+@import "../Screens/Caws/components/Nft/CawsTraits/cawsTraits";
+@import "../Screens/Caws/components/General/AssetsCard/assetsCard";
+@import "../Screens/Caws/components/General/Button/button";
+@import "../Screens/Caws/components/General/AuditedByItem/auditedByItem";
+@import "../Screens/Caws/components/General/Header/header";
+@import "../Screens/Caws/components/General/PillButton/pillButton";
+@import "../Screens/Caws/components/General/PillsSlider/pillsSlider";
+@import "../Screens/Caws/components/General/SingleAsset/singleAsset";
+@import "../Screens/Caws/components/General/TitleWithParagraph/titleWithParagraph";
+@import "../Screens/Caws/CawsGame/cawsgame";
+
+
+@import "../Screens/Caws/components/Nft/FullScreenMainHero/fullScreenMainHero";
+
+
 
 * {
   font-family: "Poppins", sans-serif !important;
