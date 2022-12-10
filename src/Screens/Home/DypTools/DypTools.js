@@ -43,7 +43,7 @@ const DypTools = () => {
               />
             </div>
             <a
-              href={"https://tools.dyp.finance"}
+              href={"https://betatools.dyp.finance/"}
               target={"_blank"}
               rel="noreferrer"
               className="btn d-flex align-items-center justify-content-center outline-btn m-md-auto m-sm-auto m-lg-0"

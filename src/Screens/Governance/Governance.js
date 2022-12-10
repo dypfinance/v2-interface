@@ -67,9 +67,9 @@ const Governance = () => {
               tokens, or allocate DYP toward grants, strategic partnerships,
               governance initiatives, and other programs.
             </p>
-            <button className="filled-btn btn">
+            <a className="filled-btn btn d-flex align-items-center" style={{width: 'fit-content'}} href="https://betatools.dyp.finance/governance" target={'_blank'} rel='noreferrer'>
               View more <img src={rightArrow} alt="" className="ml-2"  />
-            </button>
+            </a>
           </div>
           <div className="row m-0 justify-content-between gap-4 mt-4 position-relative">
             <img

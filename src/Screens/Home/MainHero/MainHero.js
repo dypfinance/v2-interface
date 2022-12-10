@@ -32,7 +32,9 @@ const MainHero = () => {
                   <h1>the future</h1>
                 </div>
                 <p className="text-white">
-                Dypius is a powerful, decentralized ecosystem with a focus on scalability, security, and global adoption through next-gen infrastructure.
+                  Dypius is a powerful, decentralized ecosystem with a focus on
+                  scalability, security, and global adoption through next-gen
+                  infrastructure.
                 </p>
                 <NavLink
                   type="button"
@@ -49,7 +51,8 @@ const MainHero = () => {
                       <b>Earn</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                    Make the most of your assets by embracing Dypius Earn products.
+                      Make the most of your assets by embracing Dypius Earn
+                      products.
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">
@@ -57,7 +60,9 @@ const MainHero = () => {
                       <b>Governance</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                    DYP holders can actively influence the future of the ecosystem by voting to add more pools, burn tokens, and create other unique proposals.
+                      DYP holders can actively influence the future of the
+                      ecosystem by voting to add more pools, burn tokens, and
+                      create other unique proposals.
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">
@@ -65,7 +70,8 @@ const MainHero = () => {
                       <b>DYP Tools</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                    Advanced analytic tools designed to provide accurate data, news, project support, and much more.
+                      Advanced analytic tools designed to provide accurate data,
+                      news, project support, and much more.
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">
@@ -73,7 +79,9 @@ const MainHero = () => {
                       <b>Bridge</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                    Dypius Bridge offers users the possibility to send tokens from Ethereum to BNB and Avalanche chains with ease. Every transaction is instant and secure.
+                      Dypius Bridge offers users the possibility to send tokens
+                      from Ethereum to BNB and Avalanche chains with ease. Every
+                      transaction is instant and secure.
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">
@@ -81,7 +89,8 @@ const MainHero = () => {
                       <b>Launchpad</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                    Support new projects in a decentralized and secure environment.
+                      Support new projects in a decentralized and secure
+                      environment.
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">
@@ -89,7 +98,9 @@ const MainHero = () => {
                       <b>CAWS NFT</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                    The Cat and Watches Society NFT is a unique collection developed by Dypius that offers multiple benefits, including staking and metaverse integration.
+                      The Cat and Watches Society NFT is a unique collection
+                      developed by Dypius that offers multiple benefits,
+                      including staking and metaverse integration.
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">

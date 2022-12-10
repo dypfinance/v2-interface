@@ -297,12 +297,13 @@ const SupportedAssets = () => {
                  />
             ))}
             {/* <img className="spiral2" src={Spiral} alt="" /> */}
-            <button
+            <a
+            href='https://betatools.dyp.finance/earn' target={'_blank'} rel='noreferrer'
               className="outline-btn position-absolute d-flex align-items-center viewmorebtn"
-              style={{ bottom: "-19px"}}
+              style={{ bottom: "-19px", width: 'fit-content'}}
             >
               View more <img src={rightArrow} alt="" className="ml-3"  />
-            </button>
+            </a>
           </div>
         </div>
       </div>
