@@ -48,7 +48,7 @@ const BuyDypHero = () => {
     },
     {
       title: "Gate.io",
-      logo: "Gate.png",
+      logo: "gateio.png",
       link: "https://www.gate.io/zh/trade/DYP_USDT",
       totalvids: "1 video",
       videos: [
@@ -62,6 +62,14 @@ const BuyDypHero = () => {
         },
       ],
       id: "collapsefour",
+    },
+    {
+      title: "Poloniex",
+      logo: "poloniex.png",
+      link: "https://poloniex.com/spot/BTC_USDT",
+      totalvids: "0",
+      videos: "",
+      id: "collapsetwelve",
     },
     {
       title: "MEXC",
@@ -350,14 +358,7 @@ const BuyDypHero = () => {
       ],
       id: "collapseeleven",
     },
-    {
-      title: "Poloniex",
-      logo: "poloniex.png",
-      link: "https://poloniex.com/spot/BTC_USDT",
-      totalvids: "0",
-      videos: "",
-      id: "collapsetwelve",
-    },
+ 
   ];
 
   return (
