@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import {
   motion,
   useMotionValue,
@@ -7,6 +7,7 @@ import {
 } from "framer-motion";
 import CoinCard from "../CoinCard/CoinCard";
 import "./_infinite.scss";
+import axios from "axios";
 
 const Card = ({
   card,
@@ -35,6 +36,29 @@ const Card = ({
   </motion.div>
 );
 const InfiniteCards = () => {
+
+
+const [stakeApr, setStakeApr] = useState()
+
+
+const fetchBnbStaking = async () => {
+  await axios
+    .get(`https://api.dyp.finance/api/get_staking_info_bnb`)
+    .then((res) => {
+      setStakeApr(res.data.highestAPY_BNB[0].highest_apy)
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+useEffect(() => {
+  
+fetchBnbStaking();
+  
+}, [])
+
+
   const [cards, setCards] = useState([
     {
       title: "Dypius Vault",
@@ -44,16 +68,16 @@ const InfiniteCards = () => {
     },
     {
       title: "Dypius Stake",
-      stake: "45%",
+      stake: stakeApr ? stakeApr + "%" : "30%",
       description:
         "Earn rewards by securely depositing your assets into the staking smart contract",
     },
-    {
-      title: "Dypius Farm",
-      stake: "80%",
-      description:
-        "Earn rewards by securely depositing your assets into the farming smart contract",
-    },
+    // {
+    //   title: "Dypius Farm",
+    //   stake: "80%",
+    //   description:
+    //     "Earn rewards by securely depositing your assets into the farming smart contract",
+    // },
   ]);
   const [dragStart, setDragStart] = useState({
     axis: null,
@@ -84,16 +108,16 @@ const InfiniteCards = () => {
         },
         {
           title: "Dypius Stake",
-          stake: "45%",
+          stake: stakeApr ? stakeApr + "%" : "30%",
           description:
             "Earn rewards by securely depositing your assets into the staking smart contract",
         },
-        {
-          title: "Dypius Farm",
-          stake: "80%",
-          description:
-            "Earn rewards by securely depositing your assets into the staking smart contract",
-        },
+        // {
+        //   title: "Dypius Farm",
+        //   stake: "80%",
+        //   description:
+        //     "Earn rewards by securely depositing your assets into the staking smart contract",
+        // },
         ...cards.slice(0, cards.length - 1),
       ]);
     }, 200);
