@@ -33,6 +33,21 @@
     }
   }
 
+
+  .gray-box-large{
+    width: 118px;
+border-radius: 12px;
+height: 34px;
+
+background: #EFF0F6;
+  }
+
+  .gray-box-small{
+    width: 61px;
+height: 34px;
+border-radius: 12px;
+background: #EFF0F6;
+  }
   .recent-proposals {
     background: #ffffff;
 
@@ -43,6 +58,12 @@
       padding: 5px 13px;
       color: #57b6ab;
       background: #caf7f3;
+      border-radius: 6px;
+    }
+    .inactive-pools {
+      padding: 5px 13px;
+      color: #f7f7f7;
+      background: #AAA7EC;
       border-radius: 6px;
     }
     .proposal-span {

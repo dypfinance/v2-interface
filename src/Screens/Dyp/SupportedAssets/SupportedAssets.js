@@ -138,7 +138,11 @@ const SupportedAssets = () => {
           const dypIdyp = res.data.stakingInfoDYPEth.concat(
             res.data.stakingInfoiDYPEth
           );
-          setCards(dypIdyp);
+
+          const cleanCards = dypIdyp.filter((item) => {
+            return item.expired !== "Yes"
+          })
+          setCards(cleanCards);
         })
         .catch((err) => {
           console.log(err);
@@ -151,7 +155,10 @@ const SupportedAssets = () => {
           const dypIdypBnb = res.data.stakingInfoDYPBnb.concat(
             res.data.stakingInfoiDYPBnb
           );
-          setCards(dypIdypBnb);
+          const cleanCards = dypIdypBnb.filter((item) => {
+            return item.expired !== "Yes"
+          })
+          setCards(cleanCards);
         })
         .catch((err) => {
           console.log(err);
@@ -164,7 +171,10 @@ const SupportedAssets = () => {
           const dypIdypAvax = res.data.stakingInfoDYPAvax.concat(
             res.data.stakingInfoiDYPAvax
           );
-          setCards(dypIdypAvax);
+          const cleanCards = dypIdypAvax.filter((item) => {
+            return item.expired !== "Yes"
+          })
+          setCards(cleanCards);
         })
         .catch((err) => {
           console.log(err);
@@ -205,6 +215,7 @@ const SupportedAssets = () => {
 
         <div className="d-flex flex-column gap-5 position-relative">
           <div className="types-wrapper px-2">
+            <Title top={"Staking"} />
             <div className="dropdown">
               <p
                 className="mb-0 select-chain"
