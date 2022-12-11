@@ -46,7 +46,7 @@ const ChainlinkData = () => {
               rel="noreferrer"
             >
               <span className="chainlink-data-title">
-                Provided by Chainlink
+              Data Feed Provided by Chainlink
               </span>
             </a>
             <div className="row chainlink-row m-0">
@@ -90,7 +90,7 @@ const ChainlinkData = () => {
             </div>
           </div>
           <div className="d-grid" style={{ width: 220 }}>
-            <span className="chainlink-data-title">Paid to users</span>
+            <span className="chainlink-data-title" style={{whiteSpace: 'pre'}}>Total rewards paid to users ($USD)</span>
             <div className="row chainlink-row m-0">
               <div className="chainlink-cell">
                 <div className="d-flex align-items-baseline gap-2">
