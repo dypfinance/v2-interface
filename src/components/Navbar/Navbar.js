@@ -6,6 +6,11 @@ import toolsBorder from "../../assets/toolsBorder.svg";
 import { NavLink } from "react-router-dom";
 import "./_navbar.scss";
 import { useEffect } from "react";
+import metaverseModal from './assets/metaverseModal.svg'
+import commingSoon from './assets/commingSoon.png'
+import xMark from './assets/xMark.svg'
+import Title from '../Title/Title'
+import OutsideClickHandler from "react-outside-click-handler";
 
 const Navbar = () => {
 
@@ -13,6 +18,7 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0)
   const [show, setShow] = useState(false);
   const [logo, setLogo] = useState(false);
+  const [metaverse, setMetaverse] = useState(false)
 
   const changeBackground = () => {
 
@@ -55,14 +61,26 @@ const Navbar = () => {
   };
 
 
+  const html = document.querySelector("html");
+  const metaverseModalIndicator = document.querySelector('.metaverse-modal-wrapper')
+
+  
+
   useEffect(() => {
    if(typeof window !== 'undefined'){
 
     window.addEventListener('scroll', changeBackground)
       window.addEventListener("click", changeBackground);
       window.addEventListener("load", changeBackground);
-
    }
+
+   if (metaverse === true) {
+    html.classList.add('hidescroll')
+    metaverseModalIndicator.style.pointerEvents = "auto";
+  } else {
+    // Enable scroll
+    html.classList.remove('hidescroll')
+  }
 
    return () => {
     window.removeEventListener('scroll', changeBackground)
@@ -71,12 +89,13 @@ const Navbar = () => {
 
    }
 
-  }, [lastScrollY])
+  }, [lastScrollY, metaverse])
 
 
 
 
   return (
+   <>
     <div
       className={`container-fluid  d-none d-lg-flex page-navigation ${
         show && 'hide-navbar'
@@ -102,7 +121,7 @@ const Navbar = () => {
           >
             DYP
           </NavLink>
-          <a className="text-decoration-none navlink" href="#metaverse">
+          <a className="text-decoration-none navlink" href="#metaverse" onClick={() => setMetaverse(true)}>
             Metaverse World
           </a>
           {/* <NavLink
@@ -169,6 +188,15 @@ const Navbar = () => {
         </div>
       </div>
     </div>
+   <OutsideClickHandler onOutsideClick={() => setMetaverse(false)}>
+   <div className={`metaverse-modal-wrapper ${metaverse && 'metaverse-active'} flex-column p-5 d-flex gap-3 align-items-center justify-content-center`}>
+        <img src={xMark} alt="" className="x-mark" onClick={() => setMetaverse(false)} />
+        <img src={metaverseModal} alt="" />
+        <img src={commingSoon} alt="" width={400} />
+        <Title top="Stay" bottom="tuned" align="d-flex flex-row align-items-center gap-2" />
+      </div>
+   </OutsideClickHandler>
+   </>
   );
 };
 
