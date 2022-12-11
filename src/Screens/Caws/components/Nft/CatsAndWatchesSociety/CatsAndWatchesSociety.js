@@ -39,7 +39,7 @@ const CatsAndWatchesSociety = () => {
                         </TitleWithParagraph>
                     </div>
                     <div className="col-md-7">
-                        <img src={require("../../../assets/Nft/cats-and-watches-society.png")}
+                        <img src={require("../../../assets/Nft/join-society-image.png")}
                             className="main-hero-graphics graphics"
                             alt="phone-graphics" />
                     </div>
