@@ -180,7 +180,7 @@ const HamburgerMenu = () => {
             </li>
               <hr className="mobile-hr" />
           </ul>
-            <a href="https://betatools.dyp.finance/" target="_blank" rel="noreferrer" className="p-4 position-relative">
+            <a href="https://app.dypius.com/" target="_blank" rel="noreferrer" className="p-4 position-relative">
             <button className="btn dyp-tools-btn text-white py-2 px-3">
                 <img src={toolsLogo} className="pe-2"  />
                 DYP Tools

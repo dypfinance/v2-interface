@@ -60,7 +60,7 @@ console.log(logo);
         </div>
         <a
           className="btn filled-btn d-flex align-items-center justify-content-center"
-          href='https://betatools.dyp.finance/earn'
+          href='https://app.dypius.com/earn'
           target="_blank"
           rel="noreferrer"
         >
