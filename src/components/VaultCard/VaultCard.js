@@ -23,7 +23,7 @@ const VaultCards = ({ pool, apr, link, top_tick, icon }) => {
           </div>
           <a
             className="btn filled-btn d-flex align-items-center"
-            href="https://betatools.dyp.finance/earn"
+            href="https://app.dypius.com/earn"
             target="_blank"
             rel="noreferrer"
           >
