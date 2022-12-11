@@ -50,7 +50,7 @@ const FullScreenMainHero = ({ image, hasScroll }) => {
 
             <div className="container-fluid">
                 <div className="row align-items-center position-relative">
-                    <img onClick={player} className='play-icon' src={require('../../../assets/General/play-icon-filled.png')} style={showVideoModal ? {display: 'none'} : {display: 'block'}} />
+                    <img onClick={player} className='play-icon' src={require('../../../assets/General/play-icon-filled2.png')} style={showVideoModal ? {display: 'none'} : {display: 'block'}} />
                     <div className='col-12 px-0'>
                         {/*<img src={require('../../../../../assets/Nft/' + image)}*/}
                         {/*    className="main-hero-graphics graphics"*/}
