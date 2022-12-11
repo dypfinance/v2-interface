@@ -15,7 +15,7 @@ const Navbar = () => {
   const [logo, setLogo] = useState(false);
 
   const changeBackground = () => {
-   
+
 
     if (typeof window !== "undefined") {
       if(window.scrollY < 300){
@@ -72,9 +72,9 @@ const Navbar = () => {
    }
 
   }, [lastScrollY])
-  
-  
-  
+
+
+
 
   return (
     <div
@@ -105,6 +105,17 @@ const Navbar = () => {
           <a className="text-decoration-none navlink" href="#metaverse">
             Metaverse World
           </a>
+          <NavLink
+              state={{link: 'navlink'}}
+              className={({ isActive }) =>
+                  isActive
+                      ? "text-decoration-none navlink highlight"
+                      : "text-decoration-none navlink"
+              }
+              to="/caws"
+          >
+            Caws
+          </NavLink>
           <NavLink
             className={({ isActive }) =>
               isActive
