@@ -45,7 +45,7 @@ const Footer = () => {
     },
     {
       name: "Email",
-      link: "mailto:contact@dyp.finance",
+      link: "mailto:business@dypius.com",
     },
   ];
 
