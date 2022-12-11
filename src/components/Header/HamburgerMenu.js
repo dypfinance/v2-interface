@@ -7,13 +7,19 @@ import dypiusLogo from "../../assets/dypiusLogo.svg";
 import dypiusLogoPurple from "../../assets/dypius-purple.svg";
 import mobileNavArrow from '../../assets/mobileNavArrow.svg';
 import toolsBorder from "../../assets/toolsBorder.svg";
+import metaverseModal from '../Navbar/assets/metaverseModal.svg'
+import commingSoon from '../Navbar/assets/commingSoon.png'
+import xMark from '../Navbar/assets/xMark.svg'
+import Title from "../Title/Title";
 
 
 const HamburgerMenu = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [show, setShow] = useState(false);
-  const [logo, setLogo] = useState(false)
+  const [logo, setLogo] = useState(false);
+  const [metaverse, setMetaverse] = useState(false)
+
 
   const showNavbar = () => {
     if (typeof window !== "undefined") {
@@ -57,6 +63,8 @@ const HamburgerMenu = () => {
   const bgmenu = document.querySelector("#bgmenu");
   const hamburger = document.querySelector('#hamburgermenu')
   const html = document.querySelector("html");
+  const metaverseModalIndicator = document.querySelector('.metaverse-modal-wrapper')
+
 
   useEffect(() => {
     if (openMenu === true) {
@@ -67,7 +75,17 @@ const HamburgerMenu = () => {
       // Enable scroll
       html.classList.remove('hidescroll')
     }
-  }, [openMenu]);
+
+    if (metaverse === true) {
+    html.classList.add('hidescroll')
+    metaverseModalIndicator.style.pointerEvents = "auto";
+  } else {
+    // Enable scroll
+    html.classList.remove('hidescroll')
+  }
+
+
+  }, [openMenu, metaverse]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -82,6 +100,7 @@ const HamburgerMenu = () => {
   }, [lastScrollY]);
 
   return (
+   <>
     <OutsideClickHandler
       onOutsideClick={() => {
         setOpenMenu(false);
@@ -130,7 +149,7 @@ const HamburgerMenu = () => {
               </NavLink>
             </li>
               <hr className="mobile-hr" />
-            <li className="mobile-navlink m-0 p-4">
+            <li className="mobile-navlink m-0 p-4" onClick={() => {setMetaverse(true); setOpenMenu(false)}}>
               <a className="text-decoration-none d-flex justify-content-between align-items-center" href="#metaverse">
                 Metaverse World
                 <img src={mobileNavArrow} alt="" />
@@ -190,6 +209,15 @@ const HamburgerMenu = () => {
         </div>
       </>
     </OutsideClickHandler>
+     <OutsideClickHandler onOutsideClick={() => setMetaverse(false)}>
+   <div className={`metaverse-modal-wrapper ${metaverse && 'metaverse-active'} flex-column p-5 d-flex gap-3 align-items-center justify-content-center`}>
+        <img src={xMark} alt="" className="x-mark" onClick={() => setMetaverse(false)} />
+        <img src={metaverseModal} alt="" className="metaverse-title" />
+        <img src={commingSoon} alt="" width={400} className="comming-soon" />
+        <Title top="Stay" bottom="tuned" align="d-flex flex-row align-items-center gap-2" />
+      </div>
+   </OutsideClickHandler>
+   </>
   );
 };
 

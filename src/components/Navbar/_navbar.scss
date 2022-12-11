@@ -1,3 +1,42 @@
+.metaverse-modal-wrapper{
+  position: fixed;
+  background: #FFFFFF;
+border: 6px solid #AAA5EB;
+box-shadow: 0px 60px 120px rgba(20, 20, 42, 0.12);
+border-radius: 56px 0px;
+left: 0;
+right: 0;
+top: -2000px;
+bottom: 0;
+margin: auto;
+width: fit-content;
+height: fit-content;
+z-index: 9;
+transition: all .25s;
+.x-mark{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+}
+
+}
+
+.metaverse-active{
+  top: 0;
+  box-shadow:0 0 0 1000px rgba(0,0,0,.50);
+}
+
+@media screen and (max-width: 786px) {
+  .comming-soon{
+    width: 180px;
+  }
+  .metaverse-title{
+    width: 180px;
+  }
+}
+
+
 .page-navigation {
   padding: 10px 12px !important;
 
@@ -32,6 +71,9 @@
       }
     }
   }
+
+
+
 
   .highlight {
     padding: 5px 10px;
