@@ -34,7 +34,7 @@
         height: 200px;
         padding-top: 30px;
         padding-bottom: 30px;
-        background: linear-gradient(360deg, rgba(227, 6, 19, 0.6), rgba(250, 72, 51, 0) 30%);
+        background: linear-gradient(360deg, rgba(30, 40, 234, 0.3), rgba(250, 72, 51, 0) 30%);
         @include medium {
              //background: linear-gradient(360deg, scale-color($accent-red, $alpha: -40%), scale-color($accent-orange-red, $alpha: -100%) 70.49%);
         }
@@ -50,10 +50,10 @@
         left: 0;
         right: 0;
         margin: auto;
-        width: 50px;
+        width: 190px;
         cursor: pointer;
         @include medium {
-            width: 86px;
+            width: 196px;
         }
     }
 

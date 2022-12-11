@@ -14,47 +14,47 @@ const Solutions = () => {
     {
       title: "DYP Tools",
       image: "dyptools",
-      link: 'https://betatools.dyp.finance/',
+      link: 'https://app.dypius.com/',
       arrow: true
     },
     {
       title: "Governance",
       image: "governance",
-      link: 'https://betatools.dyp.finance/governance',
+      link: 'https://app.dypius.com/governance',
       arrow: true
 
     },
     {
       title: "Stake",
       image: "stake",
-      link: 'https://betatools.dyp.finance/earn',
+      link: 'https://app.dypius.com/earn',
       arrow: true
 
     },
     {
       title: "Farm",
       image: "farm",
-      link: 'https://betatools.dyp.finance/earn',
+      link: 'https://app.dypius.com/earn',
       arrow: true
 
     },
     {
       title: "Vault",
       image: "vault",
-      link: 'https://betatools.dyp.finance/earn',
+      link: 'https://app.dypius.com/earn',
       arrow: true
 
     },
     // {
     //   title: "Buyback",
     //   image: "buyback",
-    //   link: 'https://betatools.dyp.finance/earn'
+    //   link: 'https://app.dypius.com/earn'
 
     // },
     {
       title: "Bridge",
       image: "bridge",
-      link: 'https://betatools.dyp.finance/bridge',
+      link: 'https://app.dypius.com/bridge',
       arrow: true
 
     },
@@ -68,7 +68,7 @@ const Solutions = () => {
     {
       title: "Launchpad",
       image: "launchpad",
-      link: 'https://betatools.dyp.finance/launchpad',
+      link: 'https://app.dypius.com/launchpad',
       arrow: true
 
     },
@@ -82,7 +82,7 @@ const Solutions = () => {
     {
       title: "DYP Locker",
       image: "dyplocker",
-      link: 'https://betatools.dyp.finance/locker',
+      link: 'https://app.dypius.com/locker',
       arrow: true
 
     },

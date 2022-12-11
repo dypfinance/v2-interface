@@ -361,7 +361,7 @@ const SupportedAssets = () => {
             ))}
             {/* <img className="spiral2" src={Spiral} alt="" /> */}
             <a
-            href='https://betatools.dyp.finance/earn' target={'_blank'} rel='noreferrer'
+            href='https://app.dypius.com/earn' target={'_blank'} rel='noreferrer'
               className="outline-btn position-absolute d-flex align-items-center viewmorebtn"
               style={{ bottom: "-19px", width: 'fit-content'}}
             >
