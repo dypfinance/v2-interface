@@ -32,7 +32,7 @@ const DypSystem = ({
             onMouseLeave={onRemoveDesc}
           >
              <a
-              href="https://betatools.dyp.finance/launchpad"
+              href="https://app.dypius.com/launchpad"
               target={"_blank"}
               rel="noreferrer"
               style={{ width: 50, height: 50, display: "flex" }}
@@ -46,7 +46,7 @@ const DypSystem = ({
             onMouseLeave={onRemoveDesc}
           >
             <a
-              href="https://betatools.dyp.finance/"
+              href="https://app.dypius.com/"
               target={"_blank"}
               rel="noreferrer"
               style={{ width: 50, height: 50, display: "flex" }}
@@ -59,7 +59,7 @@ const DypSystem = ({
             onMouseLeave={onRemoveDesc}
           >
              <a
-              href="https://betatools.dyp.finance/bridge"
+              href="https://app.dypius.com/bridge"
               target={"_blank"}
               rel="noreferrer"
               style={{ width: 50, height: 50, display: "flex" }}
@@ -74,7 +74,7 @@ const DypSystem = ({
             onMouseLeave={onRemoveDesc}
           >
              <a
-              href="https://betatools.dyp.finance/earn"
+              href="https://app.dypius.com/earn"
               target={"_blank"}
               rel="noreferrer"
               style={{ width: 50, height: 50, display: "flex" }}
