@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import DypPool from "../../assets/DypAssets/dypPool.svg";
 import rightArrow from "../../assets/right-arrow.svg";
+import caws from './assets/CAWS.svg'
+import dyp from './assets/DYP.svg'
+import idyp from './assets/iDYP.svg'
 
-const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainType }) => {
+const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainType, logo }) => {
 
   const ethCoins = ["ethereum", "wbtc", "usdc", "usdt"];
   const bscCoins = ["bsc", "btcb", "ethereum", "busd", "pancakeswap", "idypius" ]
@@ -21,7 +24,7 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainTy
     }
   }, [chainType])
   
-
+console.log(logo);
 
   return (
     <div className={`vaultWrapper bg-white ${chain}`}>
@@ -36,7 +39,7 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainTy
           </div>
           :
           <div className="row gap-1 align-items-center">
-          <img src={DypPool} alt="eth_pool" className="pl-0"  />
+          <img src={pool === "CAWS" ? caws : pool === "iDYP" ? idyp : dyp} alt="eth_pool" width={50} height={50} className="pl-0"  />
           <span className="poolTitle p-0">{pool}</span>
         </div>  
         }

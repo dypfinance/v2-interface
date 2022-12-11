@@ -142,7 +142,11 @@ const SupportedAssets = () => {
           const cleanCards = dypIdyp.filter((item) => {
             return item.expired !== "Yes"
           })
-          setCards(cleanCards);
+
+          const sortedAprs = cleanCards.sort(function(a, b){return b.tvl_usd - a.tvl_usd}) 
+          console.log(sortedAprs);
+          const finalEthCards = res.data.stakingInfoCAWS.concat(sortedAprs.slice(0,2))
+          setCards(finalEthCards);
         })
         .catch((err) => {
           console.log(err);
@@ -158,7 +162,9 @@ const SupportedAssets = () => {
           const cleanCards = dypIdypBnb.filter((item) => {
             return item.expired !== "Yes"
           })
-          setCards(cleanCards);
+
+          const sortedAprs = cleanCards.sort(function(a, b){return b.tvl_usd - a.tvl_usd}) 
+          setCards(sortedAprs);
         })
         .catch((err) => {
           console.log(err);
@@ -174,7 +180,8 @@ const SupportedAssets = () => {
           const cleanCards = dypIdypAvax.filter((item) => {
             return item.expired !== "Yes"
           })
-          setCards(cleanCards);
+          const sortedAprs = cleanCards.sort(function(a, b){return b.tvl_usd - a.tvl_usd}) 
+          setCards(sortedAprs);
         })
         .catch((err) => {
           console.log(err);
@@ -339,10 +346,12 @@ const SupportedAssets = () => {
             {cards.slice(0,3).map((card, index) => (
                    <SupAssetCard
                    key={index}
-                   pool={"DYP"}
+                   pool={card.pair_name}
                    apr={card.apy_percent + "%"}
+                   logo={card.pair_name && card.pair_name}
                    tvl={"$" + getFormattedNumber(card.tvl_usd)}
-                   lockTime={card.lock_time}
+                   lockTime={card.lock_time && card.lock_time}
+                   totalNfts={card.total_nfts_locked && card.total_nfts_locked}
                    chain={
                      `supported-assets-card ${ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"}`
                    }
