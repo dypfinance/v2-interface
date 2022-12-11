@@ -40,7 +40,7 @@ const DypMetaverse = () => {
           <div className={`col-12 col-lg-5 col-md-6 col-sm-6`}>
             <div className="d-flex justify-content-center flex-column">
               <Title
-                top="Metaverse World"
+                top="The Dypius Metaverse"
                 bottom="is becoming a reality"
                 align="metaverse-title"
                 animation="fade-up"

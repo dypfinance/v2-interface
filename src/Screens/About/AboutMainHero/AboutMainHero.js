@@ -14,7 +14,7 @@ const AboutMainHero = () => {
         <div className="col-12 col-lg-5 col-md-5 mt-5 mt-lg-0 px-0 px-lg-2">
           <Title top="About" bottom="us" align="d-flex flex-row gap-2" />
           <p className="text-secondary">
-          Dypius was created with the goal of bringing a powerful decentralized ecosystem that faces the future. We offer a variety of products and services that cater to both beginners and advanced users in the digital space, including yield farming, staking, DeFi tools, NFTs, and Metaverse gaming.
+          Dypius is a powerful, decentralized ecosystem with a focus on scalability, security, and global adoption through next-gen infrastructure.  We offer a variety of products and services that cater to both beginners and advanced users in the crypto space including Earn solutions, analytical tools, NFTs, Metaverse and more!
           </p>
         </div>
         <div className="col-12 col-lg-5 col-md-5 image-container position-relative">

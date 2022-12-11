@@ -108,10 +108,7 @@ const MainHero = () => {
                       <b>Metaverse</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                      An innovative metaverse platform that redefines the gaming
-                      industry and digital currency services. Platform utilizes
-                      cutting-edge blockchain technology, giving an unique
-                      experience.
+                    An innovative platform that redefines the gaming industry by implementing cutting-edge technology. 
                     </p>
                   </div>
                 </Slider>
