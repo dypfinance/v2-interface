@@ -53,7 +53,7 @@ const GetInTouch = () => {
     <div className="container-lg touch-wrapper p-5">
         <div className="row gap-5 gap-lg-0">
             <div className="col-12 col-lg-7 d-flex flex-column gap-4">
-                <Title top='Get in touch with' bottom='Dypius team' />
+                <Title top='Get in touch with the' bottom='Dypius team' />
                 <div className="general-container position-relative" style={{minHeight: '250px'}}>
                 <p className="touch-title text-white">General chat</p>
                 <a target="_blank" rel="noreferrer" href="https://t.me/dypfinance" className='d-flex justify-content-center'>

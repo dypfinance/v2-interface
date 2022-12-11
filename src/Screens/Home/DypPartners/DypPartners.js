@@ -91,7 +91,7 @@ const [partnersLength, setPartnersLength] = useState(0)
       href: "https://crypto.com/price/defi-yield-protocol",
     },
     {
-      image: "gate.io.png",
+      image: "gateio.png",
       text: "Gate.io",
       href: "https://www.gate.io/trade/dyp_usdt",
     },
@@ -101,7 +101,7 @@ const [partnersLength, setPartnersLength] = useState(0)
       href: "https://poloniex.com/exchange/USDT_DYP",
     },
     {
-      image: "mexc.png",
+      image: "mexc1.png",
       text: "Mexc",
       href: "https://www.mexc.com/",
     },

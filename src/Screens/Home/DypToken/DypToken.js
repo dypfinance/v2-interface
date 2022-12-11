@@ -31,7 +31,7 @@ const DypToken = () => {
           /> */}
           <Title
             top="DYP Token"
-            bottom="Empowering your future"
+            bottom="Empowering the future"
             align="text-end"
             animation="fade-up"
             duration="1000"
@@ -40,7 +40,7 @@ const DypToken = () => {
            data-aos="fade-up"
            data-aos-duration="1000"
            >
-            A diverse ecosystem with a wide range of quality products and solutions.
+            Explore the multiple possibilites with our unique token
           </p>
 
           <div className="row">

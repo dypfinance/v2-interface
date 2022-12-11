@@ -32,11 +32,11 @@ const FAQ = () => {
       title: "Farm",
       icon: "farm"
     },
-    {
-      id: "63488547062d4b709c4a250b",
-      title: "Buyback",
-      icon: "buyback"
-    },
+    // {
+    //   id: "63488547062d4b709c4a250b",
+    //   title: "Buyback",
+    //   icon: "buyback"
+    // },
     {
       id: "634885c5062d4b709c4a250f",
       title: "Vault",
@@ -216,6 +216,8 @@ const FAQ = () => {
                 <img
                   src={faqTitle === category.title ? require(`../assets/${category.icon}IconSelected.png`) : require(`../assets/${category.icon}Icon.png`)}
                   alt=""
+                  width={64}
+                  height={64}
                 />
                 <p className="mb-0">{category.title}</p>
               </div>

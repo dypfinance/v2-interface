@@ -37,7 +37,7 @@ const WhyDypius = () => {
     {
       title: "Adaptability",
       description:
-        "Dypius posses the expertise and flexibility to quickly adapt to new and emerging market trends.",
+        "Dypius possesses the expertise and flexibility to quickly adapt to new and emerging market trends.",
       icon: "adaptability",
     },
     {
@@ -55,13 +55,13 @@ const WhyDypius = () => {
     {
       title: "Trusted partner",
       description:
-        "Dypius is committed to partner only with teams that are dedicated to providing a secure and trustworthy service.",
+        "Dypius is committed to partner  with teams that are dedicated to providing a secure and trustworthy service.",
       icon: "trustedPartner",
     },
     {
       title: "Education and protection",
       description:
-        "Dypius empowers users with the information they need to make informed decisions. We provide competitive data analytics, unique safety measures and fresh market trends.",
+        "Dypius empowers users with the information they need to make informed decisions. We provide competitive data analytics, unique safety measures, and fresh market trends.",
       icon: "educationProtection",
     },
   ];

@@ -342,8 +342,8 @@ const BuyDypHero = () => {
     },
     {
       title: "KyberDMM",
-      logo: "kyber-dmm.png",
-      link: "https://dmm.exchange/#/swap?outputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17&networkId=43114",
+      logo: "kyber1.png",
+      link: "https://kyberswap.com/swap/bnb/bnb-to-dyp",
       totalvids: "1 video",
       videos: [
         {
@@ -368,9 +368,7 @@ const BuyDypHero = () => {
           <div className="col-12 col-lg-5 text-white d-flex flex-column gap-3 justify-content-lg-center justify-content-xl-center">
             <Title top={"Buy"} bottom={"DYP"} align={"d-flex gap-1"} />
             <p className="text-secondary">
-              At Dypius, we want to make it easy for you to purchase our token.
-              We have a variety of centralized and decentralized exchanges that
-              you can use to do so.
+            You can purchase our token through a variety of centralized and decentralized exchanges.
             </p>
           </div>
           <div className="col-9 col-lg-3 position-relative d-xl-block d-lg-block d-none">
