@@ -61,7 +61,7 @@ const Solutions = () => {
     {
       title: "CAWS NFT",
       image: "caws",
-      link: 'https://betatools.dyp.finance/earn',
+      link: '/caws',
       arrow: true
 
     },

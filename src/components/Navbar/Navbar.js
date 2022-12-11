@@ -105,7 +105,7 @@ const Navbar = () => {
           <a className="text-decoration-none navlink" href="#metaverse">
             Metaverse World
           </a>
-          <NavLink
+          {/* <NavLink
               state={{link: 'navlink'}}
               className={({ isActive }) =>
                   isActive
@@ -115,7 +115,7 @@ const Navbar = () => {
               to="/caws"
           >
             Caws
-          </NavLink>
+          </NavLink> */}
           <NavLink
             className={({ isActive }) =>
               isActive
