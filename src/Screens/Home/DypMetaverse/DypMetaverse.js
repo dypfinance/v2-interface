@@ -11,6 +11,13 @@ import Cube from "../../../assets/cube.png";
 import metaverseWaves from "../../../assets/metaverseWaves.svg";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import metaverseModal from '../../../components/Navbar/assets/metaverseModal.svg'
+import commingSoon from '../../../components/Navbar/assets/commingSoon.png'
+import xMark from '../../../components/Navbar/assets/xMark.svg'
+import OutsideClickHandler from "react-outside-click-handler";
+
+
+
 
 
 const pulsing = keyframes`${pulse}`;
@@ -30,7 +37,22 @@ const DypMetaverse = () => {
   useEffect(() => {
     AOS.init();
   }, [])
-  
+  const [metaverse, setMetaverse] = useState(false)
+ 
+
+  const html = document.querySelector("html");
+  const metaverseModalIndicator = document.querySelector('.metaverse-modal-wrapper')
+
+ useEffect(()=>{
+
+  if (metaverse === true) {
+    html.classList.add('hidescroll')
+    metaverseModalIndicator.style.pointerEvents = "auto";
+  } else {
+    // Enable scroll
+    html.classList.remove('hidescroll')
+  }
+ }, [metaverse])
   return (
     <div className="container-fluid overflow-hidden">
       <div className="container-lg position-relative metaverse-inner overlow-hidden">
@@ -60,7 +82,7 @@ const DypMetaverse = () => {
                  data-aos-delay="500"
                  data-aos-duration="1000"
               >
-                <button className="btn filled-btn">
+                <button className="btn filled-btn" onClick={() => setMetaverse(true)}>
                   View now <img src={rightArrow} alt="" className="ml-2" />
                 </button>
               </div>
@@ -95,6 +117,14 @@ const DypMetaverse = () => {
           </div>
         </div>
       </div>
+      <OutsideClickHandler onOutsideClick={() => setMetaverse(false)}>
+   <div className={`metaverse-modal-wrapper ${metaverse && 'metaverse-active'} flex-column p-5 d-flex gap-3 align-items-center justify-content-center`}>
+        <img src={xMark} alt="" className="x-mark" onClick={() => setMetaverse(false)} />
+        <img src={metaverseModal} alt="" />
+        <img src={commingSoon} alt="" width={400} />
+        <Title top="Stay" bottom="tuned" align="d-flex flex-row align-items-center gap-2" />
+      </div>
+   </OutsideClickHandler>
     </div>
   );
 };
