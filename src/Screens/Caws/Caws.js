@@ -81,7 +81,7 @@ const Caws = () => {
     return (
         <div className="nft-page-container">
             <FullScreenMainHero image={"nft-main-image2.jpg"} hasScroll={true} />
-            <div style={{paddingLeft: "70px", paddingRight: "70px"}}>
+            <div className="caws-container">
                 <CatsAndWatchesSociety />
                 <CawsGame/>
                 {/*<div className="containerCaws col-lg-12">*/}

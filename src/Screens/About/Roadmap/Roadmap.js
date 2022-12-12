@@ -329,10 +329,7 @@ const Roadmap = () => {
               </div>
             </div>
             <div className="roadmap-items highlight d-flex flex-column gap-3 p-4">
-              <div className="d-flex flex-row align-items-center gap-2">
-                <img src={completedIcon} alt=""   />
-                <p>Metaverse Research and Launch of Different Products</p>
-              </div>
+             
               <div className="d-flex flex-row align-items-center gap-2">
                 <img src={completedIcon} alt=""   />
                 <p>Building Extra Features for DYP Tools</p>
@@ -342,15 +339,19 @@ const Roadmap = () => {
                 <p>Rebranding Process</p>
               </div>
               <div className="d-flex flex-row align-items-center gap-2">
-                <img src={completedIcon} alt=""   />
+                <img src={uncompletedIcon} alt=""   />
+                <p>Metaverse Research and Launch of Different Products</p>
+              </div>
+              <div className="d-flex flex-row align-items-center gap-2">
+                <img src={uncompletedIcon} alt=""   />
                 <p>Metaverse Begins for the CAWS</p>
               </div>
               <div className="d-flex flex-row align-items-center gap-2">
-                <img src={completedIcon} alt=""   />
+                <img src={uncompletedIcon} alt=""   />
                 <p>Further Extension and Project Growth in Different Areas</p>
               </div>
               <div className="d-flex flex-row align-items-center gap-2">
-                <img src={completedIcon} alt=""   />
+                <img src={uncompletedIcon} alt=""   />
                 <p>
                   Incorporation of a Legal Entity for upcoming Regulation For
                   Decentralized Finance
