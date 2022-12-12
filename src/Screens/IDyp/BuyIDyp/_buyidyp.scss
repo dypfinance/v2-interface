@@ -9,12 +9,12 @@
 }
 
 .mexc-card{
-  width: 290px;
+  width: 220px;
   position: absolute;
-  left: 0;
-  top: 30px;
-  transition: all .5s;
-  -webkit-transition: all .5s;
+  left: 50px;
+  top: 65px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 
 }
 
@@ -29,12 +29,12 @@
 }
 
 .pangolin-card {
-  width: 290px;
+  width: 230px;
   position: absolute;
-  left: 300px;
+  left: 315px;
   top: 195px;
   transition: all 0.5s;
-  -webkit-transition: all .5s;
+  -webkit-transition: all 0.5s;
 
 }
 
@@ -107,6 +107,14 @@
     top: auto;
     width: 350px;
   }
+
+  .pangolin-card,
+  .mexc-card{
+    top: 20px;
+    width: 270px;
+    left: 40px;
+  }
+
 
  }
   #ourTokens{

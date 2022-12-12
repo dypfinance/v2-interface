@@ -281,9 +281,7 @@ const HelpCenter = () => {
       "image/png",
       "image/jpeg",
       "application/pdf",
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.doc",
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+  
     ];
 
     if (fileTypes.includes(event.target.files[0].type)) {
@@ -343,6 +341,7 @@ const HelpCenter = () => {
           collapse="collapseHelp"
           emailLink="mailto:helpcenter@dypius.com"
           email="helpcenter@dypius.com"
+          image="inquiry"
         >
           <div
             id="collapseHelp"
@@ -583,6 +582,7 @@ const HelpCenter = () => {
           collapse="collapseBusiness"
           emailLink="mailto:business@dypius.com"
           email="business@dypius.com"
+          image="business"
         >
           <div
             id="collapseBusiness"

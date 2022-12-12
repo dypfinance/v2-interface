@@ -47,9 +47,11 @@
     }
 
     .phone-image {
-      top: -115px;
-      left: -5%;
-      height: 270px;
+      top: -85px;
+      left: 5%;
+      height: 175px;
+      width: 320px;
+      object-fit: contain;
     }
 
     .help-form {
@@ -110,7 +112,9 @@ label{
     .help-card {
       .phone-image {
         height: 150px;
-        top: -60px;
+    width: 150px;
+    top: -85px;
+    left: 0;
       }
     }
 

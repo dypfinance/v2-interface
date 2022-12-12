@@ -6,6 +6,7 @@ import flower from "../assets/aboutFlower.png";
 import painting from "../assets/aboutPainting.png";
 // import bluehero from "../../../assets/metaverse-blueHero.svg";
 import indicator from "../assets/aboutIndicator.svg";
+import aboutCollage from '../assets/aboutCollage.png'
 
 const AboutMainHero = () => {
   return (
@@ -18,7 +19,7 @@ const AboutMainHero = () => {
           </p>
         </div>
         <div className="col-12 col-lg-5 col-md-5 image-container position-relative">
-          <img src={bull} className="bull" alt=""  />
+          {/* <img src={bull} className="bull" alt=""  />
           <img src={flower} className="flower" alt=""  />
           <div className="painting-container d-flex justify-content-center align-items-center">
             <img
@@ -28,8 +29,9 @@ const AboutMainHero = () => {
                
               style={{ borderRadius: "28px" }}
             />
-          </div>
+          </div> */}
           {/* <img src={bluehero} className="bluehero" alt=""  /> */}
+          <img src={aboutCollage} alt="" className="about-collage" />
         </div>
       </div>
       <div

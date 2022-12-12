@@ -83,20 +83,28 @@ transition: all .25s;
   }
 
   .tools-btn {
-    background: linear-gradient(280.88deg, #f1643e 9.02%, #f78057 90.66%);
-    box-shadow: 0px 16px 32px rgba(241, 101, 63, 0.6);
+    background: linear-gradient(280.88deg, #48C7C4 9.02%, #53E4E1 90.66%);
+    box-shadow: 0px 16px 32px rgb(72 199 196 / 60%);
     border-radius: 12px 0px;
     z-index: 5;
-    width: 155px;
+    width: 175px;
     height: 50px;
     transition: all 0.25s;
     -webkit-transition: all 0.25s;
 
   }
 
+  .tools-outline{
+    width: 300px;
+    height: 180px;
+    z-index: 1;
+    top: -15px;
+    right: -27%;
+  }
+
   .tools-btn:hover {
-    transform: translateX(11px) translateY(14px);
-  -webkit-transform: translateX(11px) translateY(14px);
+    transform: translateX(11px) translateY(15px);
+  -webkit-transform: translateX(11px) translateY(15px);
 
   }
 
