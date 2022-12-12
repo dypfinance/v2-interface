@@ -84,11 +84,11 @@ const Footer = () => {
   const products = [
     {
       title: "Earn",
-      link: "#",
+      link: "https://app.dypius.com/earn",
     },
     {
       title: "DYP Tools",
-      link: "#",
+      link: "https://app.dypius.com/earn",
     },
     {
       title: "Governance",
@@ -96,7 +96,7 @@ const Footer = () => {
     },
     {
       title: "Bridge",
-      link: "#",
+      link: "https://app.dypius.com/bridge",
     },
     {
       title: "Buy DYP",
@@ -499,6 +499,7 @@ const Footer = () => {
                   <a
                     key={index}
                     href={item.link}
+                    target="_blank"
                     className="text-white text-decoration-none"
                   >
                     <h5>{item.title}</h5>
@@ -509,6 +510,7 @@ const Footer = () => {
                   <Link
                     key={index}
                     to={item.link}
+                    
                     className="text-white text-decoration-none"
                     onClick={()=>{window.scrollTo(0,0)}}
 
@@ -520,6 +522,7 @@ const Footer = () => {
                   <a
                     key={index}
                     href={item.link}
+                    target="_blank"
                     className="text-white text-decoration-none"
                   >
                     <h5>{item.title}</h5>
@@ -541,6 +544,8 @@ const Footer = () => {
                   <a
                     key={index}
                     href={item.link}
+                    target="_blank"
+
                     className="text-white text-decoration-none"
                   >
                     <h5>{item.title}</h5>

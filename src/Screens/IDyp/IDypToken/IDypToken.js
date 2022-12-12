@@ -64,7 +64,7 @@ const IDypToken = () => {
             desc={
               "Dypius Bridge offers users the possibility to send tokens from Ethereum to BNB and Avalanche chains with ease. Every transaction is instant and secure."
             }
-            link={"#"}
+            link={"https://app.dypius.com/bridge"}
           />
 
           <ProductCard
@@ -73,7 +73,7 @@ const IDypToken = () => {
             desc={
               "Make the most of your assets with Dypius Earn products. Start earning today!"
             }
-            link={"#"}
+            link={"https://app.dypius.com/earn"}
           />
         </div>
       </div>
