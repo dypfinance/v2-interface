@@ -341,7 +341,7 @@ const BuyDypHero = () => {
       id: "collapseten",
     },
     {
-      title: "KyberDMM",
+      title: "KyberSwap",
       logo: "kyber1.png",
       link: "https://kyberswap.com/swap/bnb/bnb-to-dyp",
       totalvids: "1 video",

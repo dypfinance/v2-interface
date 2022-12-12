@@ -350,7 +350,7 @@ const Roadmap = () => {
                 <p>Further Extension and Project Growth in Different Areas</p>
               </div>
               <div className="d-flex flex-row align-items-center gap-2">
-                <img src={uncompletedIcon} alt=""   />
+                <img src={completedIcon} alt=""   />
                 <p>
                   Incorporation of a Legal Entity for upcoming Regulation For
                   Decentralized Finance

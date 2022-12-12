@@ -35,9 +35,11 @@ const NftStaking = () => {
               Staking is as easy as you’d expect: To get started, simply select one or all of your minted NFTs, and
               begin earning continuous ETH rewards!
             </p>
-            <button className="start-staking-btn" onClick={() => gotoMint()}>
+            <a href="https://app.dypius.com/earn" target="_blank">
+            <button className="start-staking-btn">
               Start Earning
             </button>
+            </a>
           </div>
         </div>
       </div>
