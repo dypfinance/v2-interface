@@ -17,6 +17,7 @@ import xMark from '../../../components/Navbar/assets/xMark.svg'
 import OutsideClickHandler from "react-outside-click-handler";
 
 
+
 const pulsing = keyframes`${pulse}`;
 
 const PulseDiv = styled.div`
@@ -39,6 +40,7 @@ const DypMetaverse = () => {
 
   useEffect(() => {
     AOS.init();
+    
     if (metaverse === true) {
       html.classList.add('hidescroll')
       metaverseModalIndicator.style.pointerEvents = "auto";
@@ -48,7 +50,7 @@ const DypMetaverse = () => {
     }
 
   }, [metaverse])
-  
+
   return (
     <>
       <div className="container-fluid overflow-hidden">
@@ -114,6 +116,14 @@ const DypMetaverse = () => {
           </div>
         </div>
       </div>
+      <OutsideClickHandler onOutsideClick={() => setMetaverse(false)}>
+   <div className={`metaverse-modal-wrapper ${metaverse && 'metaverse-active'} flex-column p-5 d-flex gap-3 align-items-center justify-content-center`}>
+        <img src={xMark} alt="" className="x-mark" onClick={() => setMetaverse(false)} />
+        <img src={metaverseModal} alt="" />
+        <img src={commingSoon} alt="" width={400} />
+        <Title top="Stay" bottom="tuned" align="d-flex flex-row align-items-center gap-2" />
+      </div>
+   </OutsideClickHandler>
     </div>
     <OutsideClickHandler onOutsideClick={() => setMetaverse(false)}>
    <div className={`metaverse-modal-wrapper ${metaverse && 'metaverse-active'} flex-column p-5 d-flex gap-3 align-items-center justify-content-center`}>
