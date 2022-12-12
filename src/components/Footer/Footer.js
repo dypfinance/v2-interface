@@ -88,7 +88,7 @@ const Footer = () => {
     },
     {
       title: "DYP Tools",
-      link: "https://app.dypius.com/earn",
+      link: "https://app.dypius.com",
     },
     {
       title: "Governance",

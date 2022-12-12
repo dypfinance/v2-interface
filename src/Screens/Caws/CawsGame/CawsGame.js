@@ -2,7 +2,7 @@ import React from "react";
 import Ship from "../assets/images/ship.svg";
 import MultipleCaws from "../assets/images/multi-caws.png";
 import Console from "../assets/images/game-console.svg";
-import CawsLogo from "../assets/images/caws-logo.png";
+import CawsLogo from "../assets/images/caws-logo2.png";
 import MiniConsole from "../assets/images/console-small.svg";
 import ChevronArrowSvg from "../assets/General/ChevronArrowSvg/ChevronArrowSvg";
 import $alert from "../functions/$alert";
@@ -29,7 +29,7 @@ const CawsGame = () => {
     >
       <div className="caws-left-wrapper">
         <div className="buy-caws-wrapper">
-          <div className="justify-content-between m-0 caws-content-wrapper">
+          <div className="justify-content-between m-0 caws-content-wrapper flex-column flex-lg-row gap-3 gap-lg-0">
             <div>
               <h1>Cats and Watches Society</h1>
               <p className="m-0">
@@ -53,7 +53,7 @@ const CawsGame = () => {
       </div>
       <div className="caws-right-wrapper">
         <div className="caw-game-wrapper">
-          <div className="caws-content-wrapper justify-content-between m-0">
+          <div className="caws-content-wrapper flex-column flex-lg-row justify-content-between m-0">
             <div>
               <h1>CAWS 2D GAME</h1>
               <p>

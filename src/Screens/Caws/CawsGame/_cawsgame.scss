@@ -156,3 +156,26 @@
     }
   }
 }
+
+.nft-rarity-button{
+  background: linear-gradient(87.11deg, #bd185d 8.56%, #ba18bd 93.03%);
+  box-shadow: 20px 10px 30px rgb(189 24 93 / 32%);
+  border-radius: 6px;
+  color: white !important;
+  font-size: 16px;
+  padding: 10px 15px 12px 10px;
+}
+
+@media screen and (max-width: 786px) {
+  .caws-left-wrapper{
+    max-width: 100%;
+  }
+
+  .caws-right-wrapper{
+    max-width: 100%;
+  }
+  .cats-and-watches-society-benefits .graphics {
+    position: relative;
+    right: 30px;
+  }
+}
