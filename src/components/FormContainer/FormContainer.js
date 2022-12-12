@@ -3,15 +3,17 @@ import supportPhone from '../../Screens/Support/assets/supportPhone.png'
 import plus from '../../Screens/Support/assets/plus.svg'
 import minus from '../../Screens/Support/assets/minus.svg'
 import formEmail from '../../assets/formEmail.svg'
+import supportInquiry from '../../Screens/Support/assets/supportInquiry.png'
+import supportBusiness from '../../Screens/Support/assets/supportBusiness.png'
 
-const FormContainer = ({onClick, accordionState, children, title, desc, collapse, email, emailLink}) => {
+const FormContainer = ({onClick, accordionState, children, title, desc, collapse, email, emailLink, image}) => {
   return (
     <div className="col-12 col-xl-6">
           <div className="help-card position-relative p-4 d-flex flex-column justify-content-between">
             <img
-              src={supportPhone}
+              src={image === "business" ? supportBusiness: supportInquiry}
               alt=""
-              className="position-absolute phone-image"
+              className={`${image} position-absolute phone-image `}
             />
             <div className="row justify-content-end" style={{height: '110px'}}>
               <button

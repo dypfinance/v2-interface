@@ -11,6 +11,8 @@ import commingSoon from './assets/commingSoon.png'
 import xMark from './assets/xMark.svg'
 import Title from '../Title/Title'
 import OutsideClickHandler from "react-outside-click-handler";
+import toolsBtn from './assets/toolsBtn.svg'
+import toolsOutline from './assets/toolsOutline.svg'
 
 const Navbar = () => {
 
@@ -174,15 +176,16 @@ const Navbar = () => {
             rel="noreferrer"
             href="https://app.dypius.com/"
           >
-            <button className="btn tools-btn text-white">
+            {/* <button className="btn tools-btn text-white">
               <img src={toolsLogo} className="pe-2" alt=""  />
               DYP Tools
-            </button>
+            </button> */}
+            <img src={toolsBtn} className="tools-btn" alt="" />
           </a>
           <img
-            src={toolsBorder}
-            className="position-absolute"
-            style={{ zIndex: 1, top: "-15px", right: "-22%" }}
+            src={toolsOutline}
+            className="position-absolute tools-outline"
+            
             alt=""
           />
         </div>

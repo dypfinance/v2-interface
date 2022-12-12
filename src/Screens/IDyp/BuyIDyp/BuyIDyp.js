@@ -1,8 +1,8 @@
 import React from "react";
 import uniswap from "../assets/uniswap.png";
 import pancakeswap from "../assets/pancakeswap.png";
-import pangolin from "../assets/pangolin.png";
-import mexc from '../assets/mexc.png'
+import pangolin from "../assets/pangolin2.png";
+import mexc from '../assets/mexc2.png'
 
 const BuyIDyp = () => {
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 import sphere from "../../../assets/newsSphere.png";
+import iDyp from '../assets/idypCoin.png'
 
 const IDypHero = () => {
   return (
@@ -30,7 +31,7 @@ const IDypHero = () => {
         <div className="col-9 col-lg-3 position-relative d-lg-block d-xl-block d-none idyp-hero-images">
           <img
             className="idypcoin"
-            src={require(`../../../assets/coin.png`)}
+            src={iDyp}
             alt=""
           />
           <img

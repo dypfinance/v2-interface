@@ -18,8 +18,6 @@ import OutsideClickHandler from "react-outside-click-handler";
 
 
 
-
-
 const pulsing = keyframes`${pulse}`;
 
 const PulseDiv = styled.div`
@@ -34,27 +32,28 @@ const FadeInDiv = styled.span`
 
 const DypMetaverse = () => {
 
-  useEffect(() => {
-    AOS.init();
-  }, [])
   const [metaverse, setMetaverse] = useState(false)
- 
-
   const html = document.querySelector("html");
   const metaverseModalIndicator = document.querySelector('.metaverse-modal-wrapper')
 
- useEffect(()=>{
 
-  if (metaverse === true) {
-    html.classList.add('hidescroll')
-    metaverseModalIndicator.style.pointerEvents = "auto";
-  } else {
-    // Enable scroll
-    html.classList.remove('hidescroll')
-  }
- }, [metaverse])
+
+  useEffect(() => {
+    AOS.init();
+    
+    if (metaverse === true) {
+      html.classList.add('hidescroll')
+      metaverseModalIndicator.style.pointerEvents = "auto";
+    } else {
+      // Enable scroll
+      html.classList.remove('hidescroll')
+    }
+
+  }, [metaverse])
+
   return (
-    <div className="container-fluid overflow-hidden">
+    <>
+      <div className="container-fluid overflow-hidden">
       <div className="container-lg position-relative metaverse-inner overlow-hidden">
         {/* <img src={BlueHero} alt="bluehero" className="bluehero" /> */}
         {/* <img src={BlueHero} alt="bluehero2" className="bluehero2" /> */}
@@ -126,6 +125,15 @@ const DypMetaverse = () => {
       </div>
    </OutsideClickHandler>
     </div>
+    <OutsideClickHandler onOutsideClick={() => setMetaverse(false)}>
+   <div className={`metaverse-modal-wrapper ${metaverse && 'metaverse-active'} flex-column p-5 d-flex gap-3 align-items-center justify-content-center`}>
+        <img src={xMark} alt="" className="x-mark" onClick={() => setMetaverse(false)} />
+        <img src={metaverseModal} alt="" className="metaverse-title" />
+        <img src={commingSoon} alt="" width={400} className="comming-soon" />
+        <Title top="Stay" bottom="tuned" align="d-flex flex-row align-items-center gap-2" />
+      </div>
+   </OutsideClickHandler>
+    </>
   );
 };
 
