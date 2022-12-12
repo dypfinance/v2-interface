@@ -63,7 +63,7 @@ const DypMetaverse = () => {
               <Title
                 top="The Dypius Metaverse"
                 bottom="is becoming a reality"
-                align="metaverse-title"
+                align="metaverse-title w-100"
                 animation="fade-up"
                 duration="1000"
               />
