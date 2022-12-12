@@ -144,7 +144,7 @@ const HelpCenter = () => {
   const [businessValues, setBusinessValues] = useState(businessState);
   const [errors, setErrors] = useState({});
   const [businessErrors, setBusinessErrors] = useState({});
-  const [selectedFile, setSelectedFile] = useState();
+  const [selectedFile, setSelectedFile] = useState("");
   const [businessFile, setBusinessFile] = useState();
   const [help, setHelp] = useState(false);
   const [business, setBusiness] = useState(false);
@@ -190,7 +190,9 @@ const HelpCenter = () => {
         values.social_account !== "" &&
         values.username !== "" &&
         values.topic !== "" &&
-        values.message !== ""
+        values.message !== "" &&
+        selectedFile !== ""
+        
       ) {
 
         const captchaToken = await recaptchaRef.current.executeAsync();
@@ -201,6 +203,7 @@ const HelpCenter = () => {
           username: values.username,
           topic: values.topic,
           message: values.message,
+          image: selectedFile,
           recaptcha: captchaToken,
         };
 
@@ -215,8 +218,11 @@ const HelpCenter = () => {
 
         if (send.status === 1) {
           setSuccess(true);
+          console.log(values, selectedFile);
         } else {
           setSuccess(false);
+          console.log("fail");
+
         }
       }
       recaptchaRef.current.reset();
@@ -283,20 +289,35 @@ const HelpCenter = () => {
       "application/pdf",
   
     ];
+    
+    const file = event.target.files[0]
+    const reader = new FileReader();
+    const testImage = new Image();
 
-    if (fileTypes.includes(event.target.files[0].type)) {
-      if (event.target.files && event.target.files[0]) {
-        if (event.target.files[0].size < 5000000) {
-          if (type === "help") {
-            setSelectedFile(event.target.files[0]);
-          } else {
-            setBusinessFile(event.target.files[0]);
-          }
-        } else alert("File size too big");
+    reader.onload = function () {
+      if (reader !== null && typeof reader.result == "string") {
+        testImage.src = reader.result;
       }
-    } else {
-      alert("Image type not supported");
+    };
+    reader.readAsDataURL(file);
+
+    testImage.onload = async function () {
+      if (fileTypes.includes(event.target.files[0].type)) {
+        if (event.target.files && event.target.files[0]) {
+          if (event.target.files[0].size < 5000000) {
+            if (type === "help") {
+              setSelectedFile(reader.result);
+              console.log(reader.result);
+            } else {
+              setBusinessFile(event.target.files[0]);
+            }
+          } else alert("File size too big");
+        }
+      } else {
+        alert("Image type not supported");
+      }
     }
+   
   };
 
   const handleChangeBg = (event) => {
