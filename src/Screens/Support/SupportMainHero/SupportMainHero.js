@@ -4,6 +4,7 @@ import './_supportmainhero.scss'
 import supportBrain from '../assets/supportBrain.png'
 import supportPhone from '../assets/supportPhone.png'
 import supportShape from '../assets/supportShape.png'
+import supportBanner from '../assets/supportBanner.png'
 import bluehero from '../../../assets/metaverse-blueHero.svg'
 import indicator from '../../About/assets/aboutIndicator.svg'
 import  sphere from '../../../assets/newsSphere.png'
@@ -12,8 +13,8 @@ import  sphere from '../../../assets/newsSphere.png'
 const SupportMainHero = () => {
   return (
     <div className="container-fluid d-flex flex-column justify-content-end support-main-wrapper">
-        <div className="container-lg d-flex justify-content-center align-items-end py-5">
-        <div className="row justify-content-between w-100 align-items-center" style={{minHeight: 200}}>
+        <div className="container-lg d-flex justify-content-center align-items-end ">
+        <div className="row justify-content-between w-100 align-items-center position-relative" style={{minHeight: 200, top: 55}}>
         <div className="col-12 col-lg-5 col-md-5 mt-5 mt-lg-0 position-relative">
           {/* <img src={sphere} alt="" className="support-sphere d-none d-lg-block"  /> */}
           <Title top="Dypius" bottom="Support" align="d-flex flex-row gap-2" />
@@ -22,15 +23,16 @@ const SupportMainHero = () => {
           </p>
         </div>
         <div className="col-12 col-lg-5 col-md-5 image-container position-relative">
-          <img src={supportShape} alt="" className="shape"  />
+          {/* <img src={supportShape} alt="" className="shape"  />
           <img src={supportPhone} alt="" className="phone"  />
-          <img src={supportBrain} alt="" className="brain"  />
+          <img src={supportBrain} alt="" className="brain"  /> */}
           {/* <img src={bluehero} alt="" className="bluehero"  /> */}
-        </div>
+          <img src={supportBanner} className="support-banner" alt="" />
+        </div> 
         </div>
         </div>
         <div
-        className="row pt-5 p-4 justify-content-center gap-2 gap-lg-4 support-submenu-container"
+        className="row  p-4 justify-content-center gap-2 gap-lg-4 support-submenu-container"
         style={{ zIndex: 5 }}
       >
         <a href="#faq" className="text-decoration-none submenu-link">

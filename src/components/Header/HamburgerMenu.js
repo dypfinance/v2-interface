@@ -11,6 +11,8 @@ import metaverseModal from '../Navbar/assets/metaverseModal.svg'
 import commingSoon from '../Navbar/assets/commingSoon.png'
 import xMark from '../Navbar/assets/xMark.svg'
 import Title from "../Title/Title";
+import toolsBtn from '../../components/Navbar/assets/toolsBtn.svg'
+import toolsOutline from '../../components/Navbar/assets/toolsOutline.svg'
 
 
 const HamburgerMenu = () => {
@@ -199,13 +201,26 @@ const HamburgerMenu = () => {
             </li>
               <hr className="mobile-hr" />
           </ul>
-            <a href="https://app.dypius.com/" target="_blank" rel="noreferrer" className="p-4 position-relative">
-            <button className="btn dyp-tools-btn text-white py-2 px-3">
-                <img src={toolsLogo} className="pe-2"  />
-                DYP Tools
-              </button>
-              <img src={toolsBorder} className="tools-border" alt="" />
-            </a>
+          <div className="col-12 d-flex justify-content-center position-relative">
+          <a
+            className="d-flex text-decoration-none"
+            target="_blank"
+            rel="noreferrer"
+            href="https://app.dypius.com/"
+          >
+            {/* <button className="btn tools-btn text-white">
+              <img src={toolsLogo} className="pe-2" alt=""  />
+              DYP Tools
+            </button> */}
+            <img src={toolsBtn} className="tools-btn" alt="" />
+          </a>
+          {/* <img
+            src={toolsOutline}
+            className="position-absolute tools-outline"
+            
+            alt=""
+          /> */}
+        </div>
         </div>
       </>
     </OutsideClickHandler>

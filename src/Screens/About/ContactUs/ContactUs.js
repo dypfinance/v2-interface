@@ -140,9 +140,6 @@ const ContactUs = () => {
       "image/jpeg",
       "image/png",
       "application/pdf",
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.doc",
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "application/vnd.openxmlformats-officedocument.presentationml.presentation",
     ];
 
     if (fileTypes.includes(event.target.files[0].type)) {

@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SolutionsCard from "../../../components/SolutionsCard/SolutionsCard";
 import Title from "../../../components/Title/Title";
 import useWindowSize from "../../../hooks/useWindowSize";
 import PurpleArrowDown from "../../../assets/DypAssets/purpleArrow-down.svg";
+import metaverseModal from '../../../components/Navbar/assets/metaverseModal.svg'
+import commingSoon from '../../../components/Navbar/assets/commingSoon.png'
+import xMark from '../../../components/Navbar/assets/xMark.svg'
 import "./_solutions.scss";
+import OutsideClickHandler from "react-outside-click-handler";
 
 const Solutions = () => {
   const windowSize = useWindowSize();
 
   const [solutionLength, setSolutionLength] = useState(2);
+  const [metaverse, setMetaverse] = useState(false)
+
 
   const solutions = [
     {
@@ -89,7 +95,7 @@ const Solutions = () => {
     {
       title: "CAWS Adventure",
       image: "cawsadventure",
-      link: '#',
+      link: 'https://game.dypius.com',
       arrow: true
     },
     {
@@ -104,7 +110,29 @@ const Solutions = () => {
     setSolutionLength(solutionLength + 3);
   };
 
+  const onMetaverseOpen = () => {
+    setMetaverse(true)
+    console.log("hello");
+  }
+
+
+  const html = document.querySelector("html");
+  const metaverseModalIndicator = document.querySelector('.metaverse-modal-wrapper')
+
+  useEffect(() => {
+    if (metaverse === true) {
+      html.classList.add('hidescroll')
+      metaverseModalIndicator.style.pointerEvents = "auto";
+    } else {
+      // Enable scroll
+      html.classList.remove('hidescroll')
+    }
+  
+  }, [])
+  
+
   return (
+   <>
     <div className="container-fluid position-relative">
       {/* <img
         className="rings"
@@ -132,6 +160,7 @@ const Solutions = () => {
                     image={solution.image}
                     link={solution.link}
                     arrow={solution.arrow}
+                    onMetaverseOpen={onMetaverseOpen}
                   />
                 ))
             : solutions.map((solution, index) => (
@@ -141,6 +170,8 @@ const Solutions = () => {
                   image={solution.image}
                   link={solution.link}
                   arrow={solution.arrow}
+                  onMetaverseOpen={onMetaverseOpen}
+
 
                 />
               ))}
@@ -162,6 +193,15 @@ const Solutions = () => {
         alt=""
       /> */}
     </div>
+     <OutsideClickHandler onOutsideClick={() => setMetaverse(false)}>
+   <div className={`metaverse-modal-wrapper ${metaverse && 'metaverse-active'} flex-column p-5 d-flex gap-3 align-items-center justify-content-center`}>
+        <img src={xMark} alt="" className="x-mark" onClick={() => setMetaverse(false)} />
+        <img src={metaverseModal} alt="" className="metaverse-title" />
+        <img src={commingSoon} alt="" width={400} className="comming-soon" />
+        <Title top="Stay" bottom="tuned" align="d-flex flex-row align-items-center gap-2" />
+      </div>
+   </OutsideClickHandler>
+   </>
   );
 };
 
