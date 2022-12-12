@@ -158,7 +158,7 @@ const ContactUs = () => {
       if (fileTypes.includes(event.target.files[0].type)) {
       if (event.target.files && event.target.files[0]) {
         if (event.target.files[0].size < 5000000) {
-          setSelectedFile(event.target.files[0]);
+          setSelectedFile(reader.result);
         } else alert("File size too big");
       }
     } else {
