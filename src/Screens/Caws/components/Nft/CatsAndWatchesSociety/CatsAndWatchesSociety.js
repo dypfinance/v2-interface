@@ -1,5 +1,6 @@
 import React from 'react'
 import TitleWithParagraph from '../../General/TitleWithParagraph'
+import arrowFilled from '../../../assets/General/ArrowIcons/arrow-filled2.png'
 
 const CatsAndWatchesSociety = () => {
 
@@ -34,13 +35,13 @@ const CatsAndWatchesSociety = () => {
                             </p>
                             <p onClick={scrollToRoadMap} className='mb-4 cursor-pointer'>
                                 <mark>Our roadmap includes many other upcoming Benefits!</mark>
-                                <img className='ml-2' src={require("../../../assets/General/ArrowIcons/arrow-filled.svg").default} />
+                                <img className='ml-2' src={arrowFilled} />
                             </p>
                         </TitleWithParagraph>
                     </div>
                     <div className="col-md-7">
                         <img src={require("../../../assets/Nft/join-society-image.png")}
-                            className="main-hero-graphics graphics"
+                            className="main-hero-graphics graphics w-100"
                             alt="phone-graphics" />
                     </div>
                 </div>
