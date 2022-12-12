@@ -54,7 +54,7 @@ const Navbar = () => {
     ) {
       setLogo(true);
     } else {
-      if (window.scrollY >= 800) {
+      if (window.scrollY >= 500) {
         setLogo(true);
       } else {
         setLogo(false);
