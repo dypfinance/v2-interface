@@ -96,7 +96,7 @@ const ContactUs = () => {
 
 
   const [values, setValues] = useState(initialState);
-  const [selectedFile, setSelectedFile] = useState();
+  const [selectedFile, setSelectedFile] = useState("");
   const [success, setSuccess] = useState(false);
   const [formState, setFormState] = useState({
     job: false,
@@ -142,7 +142,20 @@ const ContactUs = () => {
       "application/pdf",
     ];
 
-    if (fileTypes.includes(event.target.files[0].type)) {
+    const file = event.target.files[0]
+    const reader = new FileReader();
+    const testImage = new Image();
+
+     reader.onload = function () {
+      if (reader !== null && typeof reader.result == "string") {
+        testImage.src = reader.result;
+      }
+    };
+    reader.readAsDataURL(file);
+
+
+    testImage.onload = async function () {
+      if (fileTypes.includes(event.target.files[0].type)) {
       if (event.target.files && event.target.files[0]) {
         if (event.target.files[0].size < 5000000) {
           setSelectedFile(event.target.files[0]);
@@ -150,6 +163,7 @@ const ContactUs = () => {
       }
     } else {
       alert("Image type not supported");
+    }
     }
   };
 
@@ -167,6 +181,7 @@ const ContactUs = () => {
         organization: values.organization,
         job: values.job,
         message: values.message,
+        image: selectedFile,
         recaptcha: captchaToken,
       };
 
@@ -176,7 +191,8 @@ const ContactUs = () => {
         values.organization !== "" &&
         values.message !== "" &&
         values.subject !== "" &&
-        values.email !== ""
+        values.email !== "" &&
+        selectedFile !== ""
       ) {
         const send = await axios
           .post("https://api-mail.dyp.finance/api/business", data)
