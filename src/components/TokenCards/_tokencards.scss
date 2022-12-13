@@ -1,7 +1,7 @@
 .tokenwrapper {
   background: #fff;
   border-radius: 12px;
-  padding: 16px;
+  padding: 16px 16px 8px 16px;
   max-width: 325px;
   height: fit-content;
   @media only screen and (max-width: 991px) {
@@ -57,6 +57,8 @@
     font-size: 12px;
     line-height: 18px;
     color: rgba(119, 112, 224, 0.6);
+    position: relative;
+    bottom: 8px;
   }
 }
 

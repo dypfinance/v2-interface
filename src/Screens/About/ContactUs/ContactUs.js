@@ -119,7 +119,7 @@ const ContactUs = () => {
   const body = document.querySelector("body");
 
   const showModal = function (e) {
-    if (modal.className.includes("show")) {
+    if (modal.class.includes("show")) {
       // Disable scroll
       body.style.overflow = "hidden";
     } else {
