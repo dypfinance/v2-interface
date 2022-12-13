@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import dypiusLogo from "../../assets/dypiusLogo.svg";
+import dypiusLogo from "../../assets/dypiusLogo2.svg";
 import dypiusLogoPurple from "../../assets/dypius-purple.svg";
 import toolsLogo from "../../assets/dypToolsLogo.svg";
 import toolsBorder from "../../assets/toolsBorder.svg";
@@ -109,7 +109,7 @@ const Navbar = () => {
       >
         <div className="col-2 d-flex justify-content-start">
           <NavLink className="d-flex" to="/">
-            <img src={logo ? dypiusLogoPurple : dypiusLogo} alt=""  />
+            <img src={logo ? dypiusLogoPurple : dypiusLogo} width={170} alt=""  />
           </NavLink>
         </div>
         <div className="col-6 bg-white d-flex justify-content-around align-items-center py-3 links">
