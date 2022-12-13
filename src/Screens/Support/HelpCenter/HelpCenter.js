@@ -145,7 +145,7 @@ const HelpCenter = () => {
   const [errors, setErrors] = useState({});
   const [businessErrors, setBusinessErrors] = useState({});
   const [selectedFile, setSelectedFile] = useState("");
-  const [businessFile, setBusinessFile] = useState();
+  const [businessFile, setBusinessFile] = useState("");
   const [help, setHelp] = useState(false);
   const [business, setBusiness] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -245,7 +245,8 @@ const HelpCenter = () => {
         businessValues.organization !== "" &&
         businessValues.email !== "" &&
         businessValues.subject !== "" &&
-        businessValues.message !== ""
+        businessValues.message !== "" &&
+        businessFile !== ""
       ) {
 
         const captchaToken = await recaptchaRef.current.executeAsync();
@@ -256,6 +257,7 @@ const HelpCenter = () => {
         email: businessValues.email,
         subject: businessValues.subject,
         message: businessValues.message,
+        image: businessFile,
         recaptcha: captchaToken,
       };
 
@@ -309,7 +311,8 @@ const HelpCenter = () => {
               setSelectedFile(reader.result);
               console.log(reader.result);
             } else {
-              setBusinessFile(event.target.files[0]);
+              setBusinessFile(reader.result);
+              console.log(reader.result);
             }
           } else alert("File size too big");
         }
