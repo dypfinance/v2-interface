@@ -566,7 +566,7 @@ const Footer = () => {
                 ))}
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">
-                <h4 className="fw-normal">Anouncements</h4>
+                <h4 className="fw-normal">Announcements</h4>
                 <div className="d-flex flex-column gap-3">
                   {announcements.map((item, index) => (
                     <Link
