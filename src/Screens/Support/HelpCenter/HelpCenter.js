@@ -24,6 +24,15 @@ import selectBtn from "../assets/selectBtn.svg";
 import Modal from "../../../components/Modal/Modal";
 import ring from "../../../assets/tokenCircle.png";
 import useWindowSize from "../../../hooks/useWindowSize";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#7770e0'
+    }
+  }
+})
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -344,7 +353,8 @@ const HelpCenter = () => {
   };
 
   return (
-    <div className="container-lg help-wrapper" id="helpcenter">
+    <ThemeProvider theme={theme}>
+      <div className="container-lg help-wrapper" id="helpcenter">
       <div className="row flex-column align-items-center">
         <Title top="Contact" bottom="us" align="d-flex flex-row gap-2" />
         <p className="text-secondary">
@@ -856,6 +866,7 @@ const HelpCenter = () => {
         />
       )}
     </div>
+    </ThemeProvider>
   );
 };
 

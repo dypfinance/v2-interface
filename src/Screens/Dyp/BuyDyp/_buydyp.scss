@@ -45,17 +45,17 @@
 .buy-dyp::before{
     content: "";
     background-image: 
-    url("../assets/dypcoinbackground.png"),
-    linear-gradient(180deg, rgba(239, 240, 246, 0) 0%, #eff0f6 100%);
+    url("../assets/buy-dyp-bgshape.png"),
+    linear-gradient(270deg, rgba(239, 240, 246, 0) 0%, #eff0f6 100%);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 0.4;
-    border-radius: 56px 0px;
+    opacity: 1;
+    border-radius: 56px 0 0 0;
 }
 
 
@@ -119,6 +119,7 @@
 
     .buy-dyp::before{
         background-position: center;
+        background-size: cover;
     }
     
 }

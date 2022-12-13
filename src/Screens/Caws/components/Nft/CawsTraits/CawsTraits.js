@@ -8,7 +8,7 @@ const CawsTraits = () => {
             <div className="container-fluid">
                 <div className="row align-items-center">
                     {/* to be checked if text on blue cards is static */}
-                    <div className="col-md-5 position-relative order-2 order-md-1 mt-5 mt-md-0">
+                    <div className="col-md-5 d-flex align-items-center justify-content-center position-relative order-2 order-md-1 mt-5 mt-md-0">
                         {/* <span className='blur-backgroud-top-left left-0' /> */}
                         <img src={require("../../../assets/Nft/caw_trait.gif")}
                             className="graphics white-gif"

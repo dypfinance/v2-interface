@@ -50,7 +50,7 @@ const GetInTouch = () => {
     ]
 
   return (
-    <div className="container-lg touch-wrapper p-5">
+    <div className="container-lg touch-wrapper p-3 p-lg-5">
         <div className="row gap-5 gap-lg-0">
             <div className="col-12 col-lg-7 d-flex flex-column gap-4">
                 <Title top='Get in touch with the' bottom='Dypius team' />
