@@ -134,14 +134,14 @@ const Solutions = () => {
   return (
    <>
     <div className="container-fluid position-relative">
-      {/* <img
+      <img
         className="rings"
         src={require(`../assets/solutionRings.svg`).default}
         alt=""
-      /> */}
+      />
 
       <div className="container-lg position-relative" id="solutions">
-        <div className="row" style={{ marginTop: "150px" }}>
+        <div className="row" style={{ marginTop: "100px" }}>
           <Title
             top="Our"
             bottom="Solutions"
@@ -176,12 +176,12 @@ const Solutions = () => {
                 />
               ))}
         </div>
-        <div className="row justify-content-center my-5">
+        <div className={`row justify-content-center my-5 ${
+              solutionLength < 12 ? "d-flex" : "d-none"
+            } d-lg-none d-xl-none`}>
           <button
             onClick={loadMore}
-            className={`btn outline-btn ${
-              solutionLength < 12 ? "d-flex" : "d-none"
-            } d-lg-none d-xl-none justify-content-center align-items-center`}
+            className={`btn outline-btn   justify-content-center align-items-center`}
           >
             Load More <img src={PurpleArrowDown} alt="" className="ml-2" />
           </button>

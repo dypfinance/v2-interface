@@ -122,7 +122,7 @@ const WhyDypius = () => {
                 </div>
                 <div className="position-relative">
                   {/* <img src={sphere} alt="" className="why-sphere"  /> */}
-                  {/* <img src={purpleBg} alt="" className="purple-background"  /> */}
+                  <img src={purpleBg} alt="" className="purple-background"  />
                   <div className="purple-card position text-white position-relative p-3">
                     <div className="d-flex flex-column justify-content-start justify-content-center mx-auto ">
                       <h5 style={{ fontWeight: "275", fontSize: "32px" }}>
@@ -178,10 +178,10 @@ const WhyDypius = () => {
                     icon={card.icon}
                   />
                 ))}
-                <div className="row justify-content-center my-5">
+                <div className={`row justify-content-center my-5  ${whyCardSlice < cards.length ? "d-flex" : "d-none"}`}>
                   <button
                     onClick={viewMore}
-                    className={`btn outline-btn ${whyCardSlice < cards.length ? "d-flex" : "d-none"} d-lg-none d-xl-none justify-content-center align-items-center`}
+                    className={`btn outline-btn d-lg-none d-xl-none justify-content-center align-items-center`}
                   >
                     Load More
                     <img src={PurpleArrowDown} alt="" className="ml-2" />

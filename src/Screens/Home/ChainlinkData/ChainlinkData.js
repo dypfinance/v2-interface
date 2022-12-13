@@ -6,7 +6,7 @@ import AvaxLogo from "../../../assets/avax.svg";
 import CountUp from "react-countup";
 import AuditedByItem from "../../../components/AuditedByItem/AuditedByItem";
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
-import Pin from "../../../assets/pin.svg";
+import Pin from "../../../assets/pin.png";
 
 const ChainlinkData = () => {
   const [totalpaid, setTotalPaid] = useState();

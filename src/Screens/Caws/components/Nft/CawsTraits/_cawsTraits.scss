@@ -26,3 +26,9 @@
         display: inline;
     }
 }
+
+@media screen and (max-width: 786px) {
+    .white-gif{
+        max-height: 450px !important;
+    }
+}

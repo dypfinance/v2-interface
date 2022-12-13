@@ -10,6 +10,9 @@
   background-size: cover;
   background-position: bottom;
   border-radius: 0 0 56px 56px;
+  position: relative;
+  z-index: -1;
+  bottom: 60px;
 
   .orange-border {
     position: absolute;

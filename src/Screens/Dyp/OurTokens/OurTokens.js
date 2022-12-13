@@ -52,7 +52,7 @@ const OurTokens = () => {
   }, []);
   
   return (
-    <div className="container-fluid mt-5" id="ourTokens">
+    <div className="mt-5" id="ourTokens">
       {/* <img className="dotframe position-absolute" src={DotFrame} /> */}
       <div className="ourtokens-wrapper container-lg position-relative">
         {/* <img
@@ -70,7 +70,7 @@ const OurTokens = () => {
               Explore multiple possibilites with our unique token.
               </p>
             </div>
-            <div className="col-lg-6 col-xl-6 p-0 row justify-content-xl-end justify-content-lg-end justify-content-between gap-3 m-0 position-relative">
+            <div className="col-lg-6 col-xl-6 row justify-content-xl-end justify-content-lg-end justify-content-between gap-3 m-0 position-relative">
               <TokenCards
                 title={"DYP Token"}
                 price={getFormattedNumber(dyptokenData,4)}
