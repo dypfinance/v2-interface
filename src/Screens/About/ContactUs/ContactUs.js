@@ -159,6 +159,7 @@ const ContactUs = () => {
       if (event.target.files && event.target.files[0]) {
         if (event.target.files[0].size < 5000000) {
           setSelectedFile(reader.result);
+          console.log(reader.result);
         } else alert("File size too big");
       }
     } else {
@@ -206,6 +207,7 @@ const ContactUs = () => {
 
         if (send.status === 1) {
           setSuccess(true);
+          console.log(values, selectedFile);
         } else {
           setSuccess(false);
         }
@@ -292,7 +294,7 @@ const ContactUs = () => {
                       name="name"
                       id="name"
                       value={values.name}
-                      onChange={handleChange}
+                      onChange={() => {handleChange(); console.log(values.name);}}
                       helperText={errors.name}
                     />
                      {formState.job === false ? 
