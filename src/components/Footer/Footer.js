@@ -252,7 +252,7 @@ const Footer = () => {
                         indicators.about ? `indicator turn` : "indicator"
                       }
                       src={
-                        require(`../../assets/accordionIndicator.svg`).default
+                        require(`../../assets/accordionIndicator2.svg`).default
                       }
                       alt=""
                     />
@@ -296,7 +296,7 @@ const Footer = () => {
                         indicators.products ? `indicator turn` : "indicator"
                       }
                       src={
-                        require(`../../assets/accordionIndicator.svg`).default
+                        require(`../../assets/accordionIndicator2.svg`).default
                       }
                       alt=""
                     />
@@ -381,7 +381,7 @@ const Footer = () => {
                         indicators.learn ? `indicator turn` : "indicator"
                       }
                       src={
-                        require(`../../assets/accordionIndicator.svg`).default
+                        require(`../../assets/accordionIndicator2.svg`).default
                       }
                       alt=""
                     />
@@ -428,7 +428,7 @@ const Footer = () => {
                           : "indicator "
                       }
                       src={
-                        require(`../../assets/accordionIndicator.svg`).default
+                        require(`../../assets/accordionIndicator2.svg`).default
                       }
                       alt=""
                     />

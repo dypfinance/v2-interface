@@ -10,7 +10,7 @@ import InfiniteCards from "../../../components/InfiniteCards/InfiniteCards";
 
 const DypToken = () => {
   return (
-    <div className="container-lg d-flex justify-content-center">
+    <div className="container-lg d-flex justify-content-center mb-4 mb-lg-0">
       <div className="row dyp-token justify-content-between">
         <div className="col-6 col-lg-3 blue-half order-2 order-lg-1">
           <img src={coin} className="coin" alt="" />

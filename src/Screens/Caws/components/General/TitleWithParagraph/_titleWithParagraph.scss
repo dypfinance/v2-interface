@@ -49,3 +49,9 @@
         text-align: center;
     }
 }
+
+@media screen and (max-width: 786px) {
+    .common-title-text{
+        margin-top: 20px;
+    }
+}

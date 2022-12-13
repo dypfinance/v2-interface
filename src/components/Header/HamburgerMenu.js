@@ -69,22 +69,16 @@ const HamburgerMenu = () => {
 
 
   useEffect(() => {
-    if (openMenu === true) {
+    if (openMenu === true || metaverse === true) {
       html.classList.add('hidescroll')
       bgmenu.style.pointerEvents = "auto";
+    metaverseModalIndicator.style.pointerEvents = "auto";
       hamburger.style.pointerEvents = "auto";
     } else {
       // Enable scroll
       html.classList.remove('hidescroll')
     }
 
-    if (metaverse === true) {
-    html.classList.add('hidescroll')
-    metaverseModalIndicator.style.pointerEvents = "auto";
-  } else {
-    // Enable scroll
-    html.classList.remove('hidescroll')
-  }
 
 
   }, [openMenu, metaverse]);

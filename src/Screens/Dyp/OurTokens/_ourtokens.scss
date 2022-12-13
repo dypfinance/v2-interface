@@ -1,6 +1,6 @@
 .ourtokens-wrapper {
   background: url(./tokenbg.png);
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 56px 0px;
   padding: 3rem;
@@ -13,6 +13,10 @@
     padding: 1rem 6px 1rem 1rem;
     border-radius: 0px;
   }
+  @media screen and (max-width: 786px) {
+    background-size: cover;
+    
+  }
 
   .ourtoken-title {
     font-weight: 700;
@@ -23,7 +27,7 @@
 
     @media only screen and (max-width: 500px) {
       font-size: 40px;
-      text-align: center;
+      text-align: left;
     }
   }
 
@@ -34,7 +38,7 @@
     color: rgba(255, 255, 255, 0.8);
 
     @media only screen and (max-width: 500px) {
-      text-align: center;
+      text-align: left;
     }
   }
 
