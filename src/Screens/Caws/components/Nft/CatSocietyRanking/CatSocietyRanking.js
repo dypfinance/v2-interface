@@ -8,12 +8,11 @@ const CatSocietyRanking = () => {
                 <div className="row align-items-center pt-5 px-4">
                     <div className='col-md-4'>
                         <TitleWithParagraph>
-                            <h1 className='mb-4' style={{color: 'white'}}>
+                            <h1 className='mb-4 d-flex flex-column' style={{color: 'white'}}>
 
                                 <small>
                                     THE
                                 </small>
-                                <br />
                                 SOCIETY
                             </h1>
                             <p className='mb-5' style={{color: 'white'}}>
