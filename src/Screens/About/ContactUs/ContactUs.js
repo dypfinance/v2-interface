@@ -24,6 +24,17 @@ import Modal from "../../../components/Modal/Modal";
 import { useEffect } from "react";
 import removebtn from '../assets/remove-btn.svg'
 import selectBtn from '../../Support/assets/selectBtn.svg'
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#7770e0'
+    }
+  }
+})
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -228,11 +239,12 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="container-fluid contact-wrapper" id="contactus">
+    <ThemeProvider theme={theme}>
+        <div className="container-fluid contact-wrapper" id="contactus">
       <div className="container-lg contact-container pt-5 px-2 px-lg-4">
         <div className="row flex-column">
           <Title top="Contact us" />
-          <p className="text-secondary" style={{ marginBottom: "7rem" }}>
+          <p className="text-secondary business-content">
             Interested in collaborating with us? <br />
             Please complete this short form.
           </p>
@@ -242,10 +254,10 @@ const ContactUs = () => {
                 src={contactHeader}
                 alt=""
                  
-                className="col-lg-3 col-xl-3 pl-0 contactimg"
+                className="col-lg-3 col-xl-3 px-0 px-lg-2 contactimg"
               />
               <div className="d-flex flex-lg-row flex-xl-row flex-md-row flex-column  m-0 justify-content-between gap-2 w-100 align-items-center">
-                <div>
+                <div className="ms-0 ms-lg-3">
                   <h2 className="fw-bold">Business</h2>
                   <p className="text-secondary">
                     We appreciate your interest in Dypius
@@ -514,6 +526,7 @@ const ContactUs = () => {
       )}
      
     </div>
+    </ThemeProvider>
   );
 };
 

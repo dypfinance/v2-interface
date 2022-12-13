@@ -3,6 +3,8 @@
     // background: linear-gradient(360deg, #EFF0F6 0%, rgba(239, 240, 246, 0) 65.48%);
     border-radius: 56px 0px;
     min-height: 620px;
+    position: relative;
+    bottom: 60px;
 
   p {
     font-family: "Poppins";
@@ -19,9 +21,9 @@
   display: grid;
   grid-template-columns: repeat(2,1fr);
 
-  // @media screen and (max-width: 786px) {
-  //   grid-template-columns: auto;
-  // }
+  @media screen and (max-width: 786px) {
+    grid-template-columns: auto;
+  }
   
   .cardWrapper {
     border-radius: 12px 0px;
@@ -56,7 +58,7 @@
 
     @media only screen and (max-width: 576px) {
         height: auto !important;
-        width: 125px; 
+        // width: 125px; 
     }
   }
 

@@ -13,8 +13,8 @@ const NftStaking = () => {
   return (
     <div className="caws-traits container-padding nft-staking-wrapper" style={{margin: '5rem auto', maxWidth: '93%'}}>
       <div className="row justify-content-between">
-        <div className="col-lg-4">
-          <img src={CatHero} alt="" height={ devicewidth < 450 ? 200 : 350} />
+        <div className="col-lg-4 d-flex align-items-center justify-content-center">
+          <img src={CatHero} alt="" style={{width: '75%', height: '100%'}} />
         </div>
         <div className="col-lg-7">
           <div className="innerwrapper">

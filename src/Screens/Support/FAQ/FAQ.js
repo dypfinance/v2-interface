@@ -107,13 +107,11 @@ const FAQ = () => {
         .catch((err) => console.error(err));
     }
     
-    if(faqTitle === ""){
       if(windowSize.width > 786){
         window.scrollTo(0, 1200)
       }else{
-        window.scrollTo(0, 1900)
+        window.scrollTo(0, 1700)
       }
-    }
   };
 
 
@@ -162,7 +160,7 @@ const FAQ = () => {
 
   return (
     <div className="container-fluid faq-wrapper" id="faq">
-      <div className="container-lg d-flex justify-content-center align-items-center flex-column py-5">
+      <div className="container-lg d-flex px-0 justify-content-center align-items-center flex-column py-5">
         <div className="col-12 col-lg-6">
           <Title
             top="Got"
@@ -227,7 +225,7 @@ const FAQ = () => {
       </div>
 
       {faqItems.length !== 0 &&
-      <div className="faq-container container-lg w-100 mt-4 p-5" id="faq-container">
+      <div className="faq-container container-lg w-100 mt-4 p-4 p-lg-5" id="faq-container">
       <div className="row justify-content-between align-items-center">
         <h2 className="fw-bold mb-5">{`${faqTitle} FAQs`}</h2>
       </div>
