@@ -294,7 +294,7 @@ const ContactUs = () => {
                       name="name"
                       id="name"
                       value={values.name}
-                      onChange={() => {handleChange(); console.log(values.name);}}
+                      onChange={handleChange}
                       helperText={errors.name}
                     />
                      {formState.job === false ? 

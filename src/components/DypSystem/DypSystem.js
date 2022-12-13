@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import DypRect from "../../assets/dypRect.svg";
+import planetImg from '../../assets/planetImg.svg'
+import planetShadow from '../../assets/planetShadow.svg'
 import DypPlanet from "../../assets/planetItem.png";
 import Launchpad from "../../assets/satellites/launchpad.png";
 import Dyptools from "../../assets/satellites/dyptool3.png";
@@ -109,7 +111,8 @@ const DypSystem = ({
         </div>
 
         <div className="planet">
-          <img src={DypRect} alt="dypPlanet" />
+          <img src={planetImg} className="planet-image" alt="dypPlanet" />
+          <img src={planetShadow} className="planet-shadow" alt="dypPlanet" />
         </div>
       </div>
     </div>
