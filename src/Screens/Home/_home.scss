@@ -1,6 +1,14 @@
+
+.main-wrapper{
+    gap: 70px;
+    padding-bottom: 5rem;
+    }
+
+
 @media screen and (max-width: 786px) {
     .main-wrapper{
         overflow-x: clip;
+        gap: 32px;
     }
     
 }
