@@ -7,8 +7,21 @@ import coinGecko from "../../assets/coinGecko.svg";
 import contactUs from "../../assets/contactUs.svg";
 import disclaimer from "../../assets/disclaimer.svg";
 import { HashLink as Link } from "react-router-hash-link";
+import metaverseModal from '../Navbar/assets/metaverseModal.svg'
+import commingSoon from '../Navbar/assets/commingSoon.png'
+import xMark from '../Navbar/assets/xMark.svg'
+import Title from '../Title/Title'
+import OutsideClickHandler from "react-outside-click-handler";
+
+
 const Footer = () => {
   const windowSize = useWindowSize();
+
+
+  const [metaverse, setMetaverse] = useState(false)
+
+
+
 
   const socials = [
     {
@@ -205,7 +218,23 @@ const Footer = () => {
     }
   };
 
+  const html = document.querySelector("html");
+  const metaverseModalIndicator = document.querySelector('.metaverse-modal-wrapper')
+
+  useEffect(() => {
+    if (metaverse === true) {
+      html.classList.add('hidescroll')
+      metaverseModalIndicator.style.pointerEvents = "auto";
+    } else {
+      // Enable scroll
+      html.classList.remove('hidescroll')
+    }
+  
+  }, [])
+  
+
   return (
+    <>
     <div className="container-fluid p-0 footer">
       <div className="socials container-fluid">
         <div className="container-lg socials-container d-grid align-items-center">
@@ -269,7 +298,7 @@ const Footer = () => {
                       <Link
                         key={index}
                         to={item.link}
-                        className="text-white text-decoration-none"
+                        className="text-white text-decoration-none footer-type-link"
                       >
                         <h5>{item.title}</h5>
                       </Link>
@@ -314,7 +343,7 @@ const Footer = () => {
                         <a
                           key={index}
                           href={item.link}
-                          className="text-white text-decoration-none"
+                          className="text-white text-decoration-none footer-type-link"
                         >
                           <h5>{item.title}</h5>
                         </a>
@@ -324,7 +353,7 @@ const Footer = () => {
                         <Link
                           key={index}
                           to={item.link}
-                          className="text-white text-decoration-none"
+                          className="text-white text-decoration-none footer-type-link"
                         >
                           <h5>{item.title}</h5>
                         </Link>
@@ -333,7 +362,7 @@ const Footer = () => {
                         <a
                           key={index}
                           href={item.link}
-                          className="text-white text-decoration-none"
+                          className="text-white text-decoration-none footer-type-link"
                         >
                           <h5>{item.title}</h5>
                         </a>
@@ -343,7 +372,7 @@ const Footer = () => {
                         <Link
                           key={index}
                           to={item.link}
-                          className="text-white text-decoration-none"
+                          className="text-white text-decoration-none footer-type-link"
                         >
                           <h5>{item.title}</h5>
                         </Link>
@@ -351,13 +380,12 @@ const Footer = () => {
                       {products
                         .slice(products.length - 1, products.length)
                         .map((item, index) => (
-                          <a
-                            key={index}
-                            href={item.link}
-                            className="text-white text-decoration-none"
+                          <div
+                            className="text-white text-decoration-none footer-type-link"
+                            onClick={() => setMetaverse(true)}
                           >
                             <h5>{item.title}</h5>
-                          </a>
+                          </div>
                         ))}
                     </div>
                   </div>
@@ -400,7 +428,7 @@ const Footer = () => {
                         href={item.link}
                         rel="noreferrer"
                         target="_blank" 
-                        className="text-white text-decoration-none"
+                        className="text-white text-decoration-none footer-type-link"
                       >
                         <h5>{item.title}</h5>
                       </a>
@@ -445,7 +473,7 @@ const Footer = () => {
                       <Link
                         key={index}
                         to={item.link}
-                        className="text-white text-decoration-none"
+                        className="text-white text-decoration-none footer-type-link"
                         state={{ newsType: item.props }}
                       >
                         <h5>{item.title}</h5>
@@ -486,7 +514,7 @@ const Footer = () => {
                   <Link
                     key={index}
                     to={item.link}
-                    className="text-white text-decoration-none"
+                    className="text-white text-decoration-none footer-type-link"
                   >
                     <h5>{item.title}</h5>
                   </Link>
@@ -500,7 +528,7 @@ const Footer = () => {
                     key={index}
                     href={item.link}
                     target="_blank"
-                    className="text-white text-decoration-none"
+                    className="text-white text-decoration-none footer-type-link"
                   >
                     <h5>{item.title}</h5>
                   </a>
@@ -511,7 +539,7 @@ const Footer = () => {
                     key={index}
                     to={item.link}
                     
-                    className="text-white text-decoration-none"
+                    className="text-white text-decoration-none footer-type-link"
                     onClick={()=>{window.scrollTo(0,0)}}
 
                   >
@@ -523,7 +551,7 @@ const Footer = () => {
                     key={index}
                     href={item.link}
                     target="_blank"
-                    className="text-white text-decoration-none"
+                    className="text-white text-decoration-none footer-type-link"
                   >
                     <h5>{item.title}</h5>
                   </a>
@@ -533,7 +561,7 @@ const Footer = () => {
                   <Link
                     key={index}
                     to={item.link}
-                    className="text-white text-decoration-none"
+                    className="text-white text-decoration-none footer-type-link"
                     onClick={()=>{window.scrollTo(0,0)}}
 
                   >
@@ -541,15 +569,15 @@ const Footer = () => {
                   </Link>
                 ))}
                 {products.slice(6, 7).map((item, index) => (
-                  <a
+                  <div
                     key={index}
-                    href={item.link}
-                    target="_blank"
 
-                    className="text-white text-decoration-none"
+                    onClick={() => setMetaverse(true)}
+                    className="text-white text-decoration-none footer-type-link "
+                    style={{cursor: 'pointer'}}
                   >
                     <h5>{item.title}</h5>
-                  </a>
+                  </div>
                 ))}
               </div>
               <div className="col-2 text-white d-flex flex-column gap-3">
@@ -559,7 +587,7 @@ const Footer = () => {
                     key={index}
                     href={item.link}
                     target="_blank" rel="noreferrer"
-                    className="text-white text-decoration-none"
+                    className="text-white text-decoration-none footer-type-link"
                   >
                     <h5>{item.title}</h5>
                   </a>
@@ -572,7 +600,7 @@ const Footer = () => {
                     <Link
                       key={index}
                       to={item.link}
-                      className="text-white text-decoration-none"
+                      className="text-white text-decoration-none footer-type-link"
                       state={{ newsType: item.props }}
                     >
                       <h5>{item.title}</h5>
@@ -619,6 +647,15 @@ const Footer = () => {
         </div>
       </div>
     </div>
+    <OutsideClickHandler onOutsideClick={() => setMetaverse(false)}>
+   <div className={`metaverse-modal-wrapper ${metaverse && 'metaverse-active'} flex-column p-5 d-flex gap-3 align-items-center justify-content-center`}>
+        <img src={xMark} alt="" className="x-mark" onClick={() => setMetaverse(false)} />
+        <img src={metaverseModal} alt="" />
+        <img src={commingSoon} alt="" width={400} />
+        <Title top="Stay" bottom="tuned" align="d-flex flex-row align-items-center gap-2" />
+      </div>
+   </OutsideClickHandler>
+    </>
   );
 };
 

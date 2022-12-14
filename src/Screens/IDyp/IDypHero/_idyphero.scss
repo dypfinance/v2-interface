@@ -7,6 +7,9 @@
 }
 
 
+
+
+
 .idypmainhero{
     min-height: 500px;
     background: linear-gradient(121.83deg, #554FD8 14.64%, #7770E0 85.55%);
@@ -30,6 +33,7 @@
 }
 
 .idyp-hero-images{
+    min-height: 100px;
     .backgroundbuydyp{
         top: -30%;
     }
@@ -64,8 +68,35 @@
 
 @media screen and (max-width: 786px) {
 
+    .idyp-row-wrapper{
+        position: relative;
+        bottom: 25px;
+    }
+
     .idypmainhero{
         padding-top: 25px;
+        border-radius: 0 0 28px 28px;
+        min-height: 550px;
     }
-    
+    .idypcoin{
+        left: 0 !important;
+    right: 0;
+    top: 75px !important;
+    bottom: 0;
+    width: 175px;
+    height: 175px;
+    margin: auto;
+    z-index: 3;
+    }
+
+    .backgroundbuydyp{
+        left: 0 !important;
+        right: 40px;
+        top: 75px !important;
+        bottom: 30px;
+        width: 250px;
+        height: 250px;
+        margin: auto;
+        z-index: 2;
+    }
 }

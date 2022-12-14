@@ -36,9 +36,9 @@ const IDypToken = () => {
   }, []);
 
   return (
-    <div className="container-fluid mt-0 position-relative" id="ourTokens" style={{top: '-90px'}}>
+    <div className="container-fluid px-0 mt-0 position-relative" id="ourTokens" style={{top: '-90px'}}>
       
-      <div className="ourtokens-wrapper container-lg position-relative">
+      <div className="ourtokens-wrapper container-lg position-relative idyp-token-wrapper">
       <img src={bluehero} className="blueheroidyp" alt=""  />
         <div>
           <div className="row justify-content-between m-0 gap-2 position-relative mb-4">

@@ -7,6 +7,15 @@ import FAQAccordion from "../../../components/FaqAccordionItem/FAQAccordion";
 import axios from "axios";
 import sphere from '../../../assets/newsSphere.png'
 import useWindowSize from "../../../hooks/useWindowSize";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#7770e0'
+    }
+  }
+})
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
@@ -159,7 +168,8 @@ const FAQ = () => {
 
 
   return (
-    <div className="container-fluid faq-wrapper" id="faq">
+    <ThemeProvider theme={theme}>
+      <div className="container-fluid faq-wrapper" id="faq">
       <div className="container-lg d-flex px-0 justify-content-center align-items-center flex-column py-5">
         <div className="col-12 col-lg-6">
           <Title
@@ -246,6 +256,7 @@ const FAQ = () => {
     </div>
       }
     </div>
+    </ThemeProvider>
   );
 };
 
