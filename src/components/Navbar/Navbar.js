@@ -12,7 +12,7 @@ import xMark from './assets/xMark.svg'
 import Title from '../Title/Title'
 import OutsideClickHandler from "react-outside-click-handler";
 import toolsBtn from './assets/toolsBtn.svg'
-import toolsOutline from './assets/toolsOutline.svg'
+import toolsOutline from './assets/toolsOutline.png'
 
 const Navbar = () => {
 

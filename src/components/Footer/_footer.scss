@@ -2,6 +2,11 @@
     // margin-top: 10rem;
     overflow: hidden;
 
+
+    .footer-type-link:hover{
+        text-decoration: underline !important;
+    }
+
     .socials{
         background: rgba(239, 240, 246, 1);
         border-radius: 56px 56px 0 0;

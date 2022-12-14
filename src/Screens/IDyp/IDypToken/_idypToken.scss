@@ -1,3 +1,11 @@
+
+.idyp-token-wrapper{
+  bottom: 80px;
+  @media screen and (max-width: 786px) {
+    bottom: 0;
+  }
+}
+
 .ourtokens-wrapper {
   background: url(./tokenbg.svg);
   background-size: 100% 100%;
@@ -11,6 +19,7 @@
 
   @media only screen and (max-width: 991px) {
     padding: 1rem 6px 1rem 1rem;
+    border-radius: 28px 0px;
   }
 
   .ourtoken-title {
