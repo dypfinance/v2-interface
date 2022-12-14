@@ -357,7 +357,7 @@ const HelpCenter = () => {
       <div className="container-lg help-wrapper" id="helpcenter">
       <div className="row flex-column align-items-center">
         <Title top="Contact" bottom="us" align="d-flex flex-row gap-2" />
-        <p className="text-secondary">
+        <p className="text-secondary text-center">
           Reach out to us anytime and we will happily answer all of your
           inquiries.
         </p>
@@ -383,7 +383,7 @@ const HelpCenter = () => {
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div className="help-form p-4 d-flex flex-column gap-4 gap-lg-3 mb-4">
+            <div className="help-form mt-3 p-0 p-lg-4 d-flex flex-column gap-4 gap-lg-3">
               <h5 className="text-secondary mb-3">Fill out form</h5>
               <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">
                 <StyledTextField
@@ -624,7 +624,7 @@ const HelpCenter = () => {
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div className="help-form p-4 p-4 d-flex flex-column gap-4 gap-lg-3 mb-4">
+            <div className="help-form mt-3 p-0 p-lg-4 p-4 d-flex flex-column gap-4 gap-lg-3">
               <h5 className="text-secondary mb-3">Fill out form</h5>
 
               <div className="d-flex flex-lg-row flex-xl-row flex-column m-0 justify-content-between gap-4">

@@ -15,7 +15,7 @@ const FormContainer = ({onClick, accordionState, children, title, desc, collapse
               alt=""
               className={`${image} position-absolute phone-image `}
             />
-            <div className="row justify-content-end" style={{height: '110px'}}>
+            <div className="row justify-content-start justify-content-lg-end align-items-end align-items-lg-start mb-4 pb-2 pb-lg-0 ms-0 mb-lg-0" style={{height: '110px'}}>
               <button
                 onClick={onClick}
                 className={`btn ${accordionState ? 'outline-btn' : 'filled-btn'} d-flex align-items-center gap-2 form-button`}
@@ -30,7 +30,7 @@ const FormContainer = ({onClick, accordionState, children, title, desc, collapse
             <div className="row w-100 position-relative justify-content-between align-items-center">
              <div className='col-12'>
              <h3 className="fw-bold">{title}</h3>
-              <p className="text-secondary">
+              <p className="text-secondary mb-0 form-container-desc">
                 {desc}
               </p>
              </div>

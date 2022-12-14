@@ -363,7 +363,7 @@ const BuyDypHero = () => {
 
   return (
     <div className="container-fluid buydyp-main-hero d-flex flex-column justify-content-lg-end justify-content-xl-end justify-content-center mb-5">
-      <div className="container-lg d-flex justify-content-between align-items-center flex-column mt-5">
+      <div className="container-lg px-0 d-flex justify-content-between align-items-center flex-column mt-5">
         <div className="container-lg d-flex justify-content-between align-items-center mb-5 px-0">
           <div className="col-12 col-lg-5 text-white d-flex flex-column gap-3 justify-content-lg-center justify-content-xl-center">
             <Title top={"Buy"} bottom={"DYP"} align={"d-flex gap-1"} />
@@ -385,7 +385,7 @@ const BuyDypHero = () => {
             />
           </div>
         </div>
-        <div className="row gap-4 justify-content-center pb-5">
+        <div className="row justify-content-center pb-5">
           {buyDypItems.length > 0 &&
             buyDypItems.map((item, index) => {
               return (

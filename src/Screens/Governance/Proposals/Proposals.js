@@ -133,9 +133,9 @@ const settings = {
         <div className="col-12 col-lg-5">
           <div className="recent-proposals p-4 position-relative">
                 <span className="proposal-span" />
-            <div className="row justify-content-between align-items-center mb-4">
-              <h4 className="mb-0" style={{ color: "#554FD8", fontSize: '20px' }}>Recent proposals</h4>
-              <p className="inactive-pools mb-0">No proposals available</p>
+            <div className="row justify-content-between align-items-center mb-4 gap-3 gap-lg-0">
+              <h4 className="mb-0 ms-1 ms-lg-0" style={{ color: "#554FD8", fontSize: '20px' }}>Recent proposals</h4>
+              <p className="inactive-pools mb-0 ms-3 ms-lg-0">No proposals available</p>
             </div>
             <div className="row recents-container">
                 <Slider {...settings}>

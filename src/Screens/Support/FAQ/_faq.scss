@@ -11,6 +11,10 @@
     box-shadow: 0px 24px 60px rgba(85, 79, 216, 0.25);
     border-radius: 56px 0px;
 
+    @media screen and (max-width: 786px) {
+      border-radius: 28px 0;
+    }
+
     .form-select {
       font-size: 14px;
       border: 1px solid #a0a3bd;
@@ -84,6 +88,10 @@
         p {
           color: #f7f7fc !important;
         }
+      }
+
+      .active-category:hover{
+        border: 2px solid transparent;
       }
     }
 
