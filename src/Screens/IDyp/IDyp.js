@@ -17,9 +17,7 @@ const IDyp = () => {
       <IDypHero />
       <BuyIDyp />
       <IDypToken/>
-      <div className="container-lg pl-xl-5 pl-lg-5 pl-md-5 pl-0 pr-xl-5 pr-lg-5 pr-md-5 px-0 ">
-        <Tokenomics bottom={285} showBtn={false} isDyp={false} />
-      </div>
+        <Tokenomics bottom={55} showBtn={false} isDyp={false} />
     </div>
   );
 };

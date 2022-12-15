@@ -12,7 +12,7 @@ import tokenomicsIcon from "../../../assets/tokenomicsIcon.svg";
 import Success from "../../../components/Success/Success";
 import minus from '../../../assets/minus.svg'
 
-const Tokenomics = ({ bottom, showBtn, isDyp }) => {
+const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   const [tokenomicData, setTokenomicData] = useState("dyp");
   const [toggledyp, setToggleDyp] = useState(showBtn === false ? true : false);
   const [toggleIdyp, setToggleIDyp] = useState(false);
@@ -49,7 +49,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
   };
 
   return (
-    <div className="outer-wrapper" id="tokenomics" style={{ bottom: bottom }}>
+    <div className={`outer-wrapper container-lg px-0 ${isDyp === true ? 'dypTokenomics' : isDyp === false ? 'iDypTokenomics' : isAbout === true ? null : null}`} id="tokenomics" >
       <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
         <div className="row m-0 align-items-center justify-content-center gap-2 pl-0">
           <div className="tokenomics-icon d-flex justify-content-center align-items-center">
@@ -60,7 +60,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp }) => {
         <div className="row m-0 gap-4 pl-0 col-lg-3 col-xl-3 align-items-center justify-content-end px-0 px-lg-2 py-3 py-lg-0">
           <button
             className={
-              `tokenomics-btn btn outline-btn d-flex justify-content-center align-items-center`
+              `${isAbout === true ? 'd-none' : 'd-flex'} tokenomics-btn btn outline-btn justify-content-center align-items-center `
             }
             type="button"
             data-bs-toggle="collapse"
