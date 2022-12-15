@@ -25,9 +25,9 @@ const Dyp = () => {
       <Solutions />
       <div className="container-fluid" style={{ gap: 100 }}>
         <OurTokens />
-        <div className="container-lg pl-xl-5 pl-lg-5 pl-md-5 pl-0 pr-xl-5 pr-lg-5 pr-md-5 px-0 ">
+        {/* <div className="container-lg pl-xl-5 pl-lg-5 pl-md-5 pl-0 pr-xl-5 pr-lg-5 pr-md-5 px-0 "> */}
           <Tokenomics bottom={55} showBtn={true} isDyp={true} />
-        </div>
+        {/* </div> */}
         <BuyDyp />
         <SupportedAssets />
       </div>

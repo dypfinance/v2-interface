@@ -67,7 +67,7 @@ const WhyDypius = () => {
   ];
 
   return (
-    <div className="container-fluid d-flex flex-column justify-content-center why-dypius mt-n5">
+    <div className="container-fluid d-flex flex-column justify-content-center why-dypius mt-n5" style={{zIndex: 2}}>
       <div className="container-lg mt-5">
         <div className="row">
           <div className="col-12 col-lg-4 d-flex justify-content-center align-items-center">

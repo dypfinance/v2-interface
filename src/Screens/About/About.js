@@ -36,7 +36,7 @@ const About = () => {
       <Security />
       <DypPartners />
       <div className="container-lg p-0" style={{ marginTop: "4rem", overflow: windowSize.width < 700 ? 'hidden' : 'inherit' }}>
-        <Tokenomics bottom={0} showBtn={false} isDyp={true}/>
+        <Tokenomics bottom={0} showBtn={false} isAbout={true}/>
       </div>
       <ContactUs />
     </div>

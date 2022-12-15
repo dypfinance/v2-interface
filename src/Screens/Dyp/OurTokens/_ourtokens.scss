@@ -1,5 +1,6 @@
+
 .ourtokens-wrapper {
-  background: url(./tokenbg.png);
+  // background: url(./tokenbg.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 56px 0px;
@@ -7,11 +8,15 @@
   min-height: 590px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
+  background: linear-gradient(360deg, #554FD8 0%, #756EDF 98.32%);
+border: 6px solid #EFF0F6;
+border-radius: 56px 0px;
 
   @media only screen and (max-width: 991px) {
     padding: 1rem 6px 1rem 1rem;
-    border-radius: 0px;
+    border-radius: 28px 0px;
+    min-height: 1230px;
   }
   @media screen and (max-width: 786px) {
     background-size: cover;
