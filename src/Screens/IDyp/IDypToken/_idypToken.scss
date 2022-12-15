@@ -1,4 +1,14 @@
 
+.dypTokenomics{
+  bottom: 55px !important;
+
+  @media screen and (max-width: 786px) {
+    bottom: 200px !important;
+  }
+}
+
+
+
 .idyp-token-wrapper{
   bottom: 80px;
   @media screen and (max-width: 786px) {
@@ -7,7 +17,7 @@
 }
 
 .ourtokens-wrapper {
-  background: url(./tokenbg.svg);
+  // background: url(./tokenbg.svg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 56px 0px;
@@ -15,7 +25,7 @@
   min-height: 653px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  // justify-content: space-around;
 
   @media only screen and (max-width: 991px) {
     padding: 1rem 6px 1rem 1rem;

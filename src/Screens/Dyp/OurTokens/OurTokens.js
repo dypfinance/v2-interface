@@ -52,9 +52,9 @@ const OurTokens = () => {
   }, []);
   
   return (
-    <div className="mt-5" id="ourTokens">
+    <div className="container-fluid px-0 mt-0 position-relative" id="ourTokens">
       {/* <img className="dotframe position-absolute" src={DotFrame} /> */}
-      <div className="ourtokens-wrapper container-lg position-relative">
+      <div className="ourtokens-wrapper container-lg position-relative justify-content-start gap-0 gap-lg-5">
         {/* <img
           className="ourtoken-sphere"
           src={require(`../../../assets/newsSphere.png`)}
