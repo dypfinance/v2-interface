@@ -5,6 +5,7 @@ import DypTools from './DypTools/DypTools'
 import DypToken from "./DypToken/DypToken";
 import DypNews from "./DypNews/DypNews";
 import DypPartners from "./DypPartners/DypPartners";
+import './DypNews/_dypnews.scss'
 
 const Home = () => {
   useEffect(()=>{
