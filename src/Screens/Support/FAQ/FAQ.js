@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Title from "../../../components/Title/Title";
-import { TextField } from "@mui/material";
+import { IconButton, InputAdornment, TextField } from "@mui/material";
 import "./_faq.scss";
 import FAQAccordion from "../../../components/FaqAccordionItem/FAQAccordion";
 import axios from "axios";
 import sphere from '../../../assets/newsSphere.png'
 import useWindowSize from "../../../hooks/useWindowSize";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import searchIcon from '../../../assets/searchIcon.svg'
 
 const theme = createTheme({
   palette: {
@@ -20,10 +21,13 @@ const theme = createTheme({
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
     borderRadius: "8px",
+    paddingLeft: '0px'
   },
   "& .MuiInputLabel-root": {
     color: "#A0A3BD",
     fontWeight: 400,
+    paddingLeft: '0px'
+
   },
 }));
 
@@ -187,6 +191,16 @@ const FAQ = () => {
 
             <div className=" search-container d-flex justify-content-center align-items-center px-4 w-50">
               <StyledTextField
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment>
+                      <IconButton>
+                      <img src={searchIcon} alt="" />
+                      </IconButton>
+                    </InputAdornment>
+                  )
+                }}
+
                 id="outlined-search"
                 type="search"
                 label="Search"
