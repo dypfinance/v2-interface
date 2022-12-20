@@ -203,8 +203,8 @@ const ContactUs = () => {
         values.organization !== "" &&
         values.message !== "" &&
         values.subject !== "" &&
-        values.email !== "" &&
-        selectedFile !== ""
+        values.email !== ""
+        // selectedFile !== ""
       ) {
         const send = await axios
           .post("https://api-mail.dyp.finance/api/business", data)
@@ -225,7 +225,7 @@ const ContactUs = () => {
       }
       recaptchaRef.current.reset();
 
-      setValues({ ...initialState });
+      // setValues({ ...initialState });
       setSelectedFile(null);
 
     }

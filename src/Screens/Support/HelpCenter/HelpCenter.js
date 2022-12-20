@@ -185,12 +185,11 @@ const HelpCenter = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
 
-    setErrors(validate(values));
+    // setErrors(validate(values));
 
-    if (Object.keys(errors).length === 0) {
+    // if (Object.keys(errors).length === 0) {
      
 
       if (
@@ -199,8 +198,8 @@ const HelpCenter = () => {
         values.social_account !== "" &&
         values.username !== "" &&
         values.topic !== "" &&
-        values.message !== "" &&
-        selectedFile !== ""
+        values.message !== "" 
+        // selectedFile !== ""
         
       ) {
 
@@ -228,6 +227,9 @@ const HelpCenter = () => {
         if (send.status === 1) {
           setSuccess(true);
           console.log(values, selectedFile);
+  
+
+
         } else {
           setSuccess(false);
           console.log("fail");
@@ -235,10 +237,10 @@ const HelpCenter = () => {
         }
       }
       recaptchaRef.current.reset();
-
       setValues({ ...helpState });
       setSelectedFile(null);
-    }
+
+    // }
   };
 
   const handleBusinessSubmit = async (e) => {
@@ -254,8 +256,8 @@ const HelpCenter = () => {
         businessValues.organization !== "" &&
         businessValues.email !== "" &&
         businessValues.subject !== "" &&
-        businessValues.message !== "" &&
-        businessFile !== ""
+        businessValues.message !== ""
+        // businessFile !== ""
       ) {
 
         const captchaToken = await recaptchaRef.current.executeAsync();
@@ -281,14 +283,17 @@ const HelpCenter = () => {
 
         if (send.status === 1) {
           setSuccess(true);
+  
+
+
         } else {
           setSuccess(false);
         }
       }
       recaptchaRef.current.reset();
-
       setBusinessValues({ ...businessState });
       setSelectedFile(null);
+
     }
   };
 
