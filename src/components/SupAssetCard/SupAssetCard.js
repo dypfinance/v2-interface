@@ -24,7 +24,7 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainTy
     }
   }, [chainType])
   
-console.log(logo);
+  
 
   return (
     <div className={`vaultWrapper bg-white ${chain}`}>
