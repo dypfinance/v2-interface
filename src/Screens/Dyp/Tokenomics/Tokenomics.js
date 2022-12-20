@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import NoteIcon from "../../../components/NoteIcon/NoteIcon";
 import Title from "../../../components/Title/Title";
 import Clipboard from "../assets/filledClipboard.svg";
@@ -10,32 +11,36 @@ import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
 import tokenomicsIcon from "../../../assets/tokenomicsIcon.svg";
 import Success from "../../../components/Success/Success";
-import minus from '../../../assets/minus.svg'
+import minus from "../../../assets/minus.svg";
+import getFormattedNumber from "../../../hooks/getFormattedNumber";
 
 const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   const [tokenomicData, setTokenomicData] = useState("dyp");
   const [toggledyp, setToggleDyp] = useState(showBtn === false ? true : false);
   const [toggleIdyp, setToggleIDyp] = useState(false);
 
-  useEffect(() => {
-    if (toggleIdyp === false && toggledyp === false) {
-      setTokenomicData("");
-    }
-  }, [toggleIdyp, toggledyp]);
+  // useEffect(() => {
+  //   if (toggleIdyp === false && toggledyp === false) {
+  //     setTokenomicData("");
+  //   }
+  // }, [toggleIdyp, toggledyp]);
 
   useEffect(() => {
-    if (isDyp === true) {
+    if (isDyp === true || isAbout === true) {
       setTokenomicData("dyp");
     }
 
     if (isDyp === false) {
       setTokenomicData("idyp");
     }
-  }, [isDyp]);
+  }, [isDyp, isAbout]);
 
   const windowSize = useWindowSize();
   const [copied, setCopied] = useState(false);
   const [visible, setVisible] = useState(false);
+  const [dypSupply, setDypSupply] = useState('0.0');
+  const [idypSupply, setiDypSupply] = useState('0.0');
+
 
   const handleCopy = (address) => {
     navigator.clipboard.writeText(address);
@@ -48,46 +53,92 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
     }, 2000);
   };
 
+  const getCirculatingSupplyiDYP=async()=> {
+    try {
+      await axios.get(
+        "https://api.dyp.finance/api/circulating-supply-idyp"
+      ).then((data)=>{
+      setiDypSupply(data.data)
+
+      })
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  
+
+  
+  async function getCirculatingSupplyDYP() {
+    try {
+      await axios.get("https://api.dyp.finance/api/circulating-supply").then((data)=>{
+        setDypSupply(data.data)
+      })
+      //console.log(res)
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+
+  useEffect(()=>{
+    getCirculatingSupplyiDYP()
+    getCirculatingSupplyDYP()
+  },[])
+  
+
   return (
-    <div className={`outer-wrapper container-lg px-0 ${isDyp === true ? 'dypTokenomics' : isDyp === false ? 'iDypTokenomics' : isAbout === true ? null : null}`} id="tokenomics" >
+    <div
+      className={`outer-wrapper container-lg px-0 ${
+        isDyp === true
+          ? "dypTokenomics"
+          : isDyp === false
+          ? "iDypTokenomics"
+          : isAbout === true
+          ? null
+          : null
+      }`}
+      id="tokenomics"
+    >
       <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
         <div className="row m-0 align-items-center justify-content-center gap-2 pl-0">
           <div className="tokenomics-icon d-flex justify-content-center align-items-center">
-            <img src={tokenomicsIcon} alt=""  />
+            <img src={tokenomicsIcon} alt="" />
           </div>
           <Title top={isDyp === true ? "Tokenomics" : "iDYP Tokenomics"} />
         </div>
         <div className="row m-0 gap-4 pl-0 col-lg-3 col-xl-3 align-items-center justify-content-end px-0 px-lg-2 py-3 py-lg-0">
+          {isDyp === true ? (
+            <button
+              className={`${
+                isAbout === true ? "d-none" : "d-flex"
+              } tokenomics-btn btn outline-btn justify-content-center align-items-center `}
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target={
+                tokenomicData === "idyp"
+                  ? "#collapseExample3"
+                  : "#collapseExample"
+              }
+              style={{ display: showBtn === true ? "block" : "none" }}
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              onClick={() => {
+                // setTokenomicData("dyp");
+                isDyp === false
+                  ? setToggleDyp(!toggledyp)
+                  : setToggleIDyp(!toggleIdyp);
+                // setToggleIDyp(false);
+              }}
+            >
+              DYP Tokenomics
+              <img
+                src={toggledyp === true ? minus : PurpleArrowDown}
+                alt=""
+                className="ml-2"
+              />
+            </button>
+          ) :
           <button
-            className={
-              `${isAbout === true ? 'd-none' : 'd-flex'} tokenomics-btn btn outline-btn justify-content-center align-items-center `
-            }
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target={
-              tokenomicData === "idyp"
-                ? "#collapseExample3"
-                : "#collapseExample"
-            }
-            style={{ display: showBtn === true ? "block" : "none" }}
-            aria-expanded="false"
-            aria-controls="collapseExample"
-            onClick={() => {
-              // setTokenomicData("dyp");
-              setToggleDyp(!toggledyp);
-              // setToggleIDyp(false);
-            }}
-          >
-            DYP Tokenomics
-            <img
-              src={toggledyp === true ? minus : PurpleArrowDown}
-              alt=""
-              className="ml-2"
-               
-            />
-          </button>
-
-          {/* <button
             className={
               toggleIdyp === true ? "btn filled-btn" : "btn outline-btn"
             }
@@ -109,7 +160,8 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
               src={toggleIdyp === true ? WhiteArrowUp : PurpleArrowDown}
               alt=""
             />
-          </button> */}
+          </button>
+          }
         </div>
       </div>
       <div
@@ -133,7 +185,6 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                     <img
                       src={Clipboard}
                       alt=""
-                       
                       onClick={() => {
                         handleCopy(
                           "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
@@ -150,9 +201,9 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                         tabindex="0"
                         data-toggle="tooltip"
                         title="Copied"
-                        data-placement="top" 
+                        data-placement="top"
                       >
-                        <Success bgColor={'#544ED5'} svgColor={'#FFF'}/>
+                        <Success bgColor={"#544ED5"} svgColor={"#FFF"} />
                       </span>
                     )}
                   </span>
@@ -395,7 +446,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                       Circulating supply
                     </span>
                     <span className="circulating-amount">
-                      23,631,124.00 DYP
+                      {getFormattedNumber(dypSupply, 6)} DYP
                     </span>
                   </div>
                 </div>
@@ -404,7 +455,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                   data-design="modern"
                   data-coin-ids="2669"
                 ></div>
-                <img src={Graph} alt="" className="w-100"  />
+                <img src={Graph} alt="" className="w-100" />
                 <div className="">
                   <div className="circulating-wrapper w-100">
                     <div className="d-flex flex-column gap-3">
@@ -436,7 +487,6 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                     <img
                       src={Clipboard}
                       alt=""
-                       
                       onClick={() => {
                         handleCopy(
                           "0xbd100d061e120b2c67a24453cf6368e63f1be056"
@@ -447,7 +497,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                         display: copied === true ? "none" : "",
                       }}
                     />
-                     {copied === true && (
+                    {copied === true && (
                       <span
                         className="d-inline-block"
                         tabindex="0"
@@ -455,7 +505,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                         title="Copied"
                         data-placement="top"
                       >
-                        <Success bgColor={'#544ED5'} svgColor={'#FFF'}/>
+                        <Success bgColor={"#544ED5"} svgColor={"#FFF"} />
                       </span>
                     )}
                   </span>
@@ -733,7 +783,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                 <div className="circulating-wrapper w-100 mb-3">
                   <div className="d-flex flex-column gap-3">
                     <span className="circulating-title">Max Total Supply</span>
-                    <span className="circulating-amount">300,000,000 iDYP</span>
+                    <span className="circulating-amount">{getFormattedNumber(idypSupply, 6)} iDYP</span>
                   </div>
                 </div>
                 <div>
@@ -742,7 +792,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                     data-design="modern"
                     data-coin-ids="9517"
                   ></div>
-                  <img src={idypGraph} alt="" className="w-100"  />
+                  <img src={idypGraph} alt="" className="w-100" />
                 </div>
                 <div className="">
                   <div className="circulating-wrapper w-100 mb-3">
