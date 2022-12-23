@@ -116,7 +116,7 @@ const Footer = () => {
     },
     {
       title: "Metaverse",
-      link: "https://worldofdypians.com",
+      link: "https://www.worldofdypians.com/",
     },
   ];
 

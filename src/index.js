@@ -3,6 +3,24 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import {createRoot} from 'react-dom/client';
 import "./Styles/main.scss";
+import ReactGA from 'react-ga';
+
+const GOOGLE_ANALYTICS_ID = process.env.REACT_APP_GOOGLE_ANALYTICS_ID
+if (typeof GOOGLE_ANALYTICS_ID === 'string') {
+    ReactGA.initialize(GOOGLE_ANALYTICS_ID)
+    // ReactGA.set({
+    //     customBrowserType: !isMobile ? 'desktop' : 'web3' in window || 'ethereum' in window ? 'mobileWeb3' : 'mobileRegular'
+    // })
+} else {
+    ReactGA.initialize('test', { testMode: true, debug: true })
+}
+
+window.addEventListener('error', error => {
+    ReactGA.exception({
+        description: `${error.message} @ ${error.filename}:${error.lineno}:${error.colno}`,
+        fatal: true
+    })
+})
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);

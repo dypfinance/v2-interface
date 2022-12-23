@@ -109,7 +109,7 @@ const DypSystem = ({
             onMouseLeave={onRemoveDesc}
           >
              <a
-              href="https://worldofdypians.com"
+              href="https://www.worldofdypians.com/"
               target={"_blank"}
               rel="noreferrer"
               style={{ width: 50, height: 50, display: "flex" }}

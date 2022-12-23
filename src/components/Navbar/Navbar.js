@@ -123,7 +123,7 @@ const Navbar = () => {
           >
             DYP
           </NavLink>
-          <a className="text-decoration-none navlink" href="https://worldofdypians.com" target={'_blank'} rel='noreferrer'>
+          <a className="text-decoration-none navlink" href="https://www.worldofdypians.com/" target={'_blank'} rel='noreferrer'>
             Metaverse World
           </a>
           {/* <NavLink
