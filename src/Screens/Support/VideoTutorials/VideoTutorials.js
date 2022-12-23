@@ -42,9 +42,9 @@ const VideoTutorials = () => {
                     <p className="text-secondary">
                     Watch the latest Dypius tutorials and become an expert in no time.
                     </p>
-                    <button className="btn filled-btn d-flex justify-content-center align-items-center gap-2" style={{width: 'fit-content'}}>
+                    <a href='https://www.youtube.com/@DeFiYieldProtocol' target={'_blank'} rel='noreferrer' className="btn filled-btn d-flex justify-content-center align-items-center gap-2" style={{width: 'fit-content'}}>
                         View More <img src={rightArrow} alt=""  />
-                    </button>
+                    </a>
                 </div>
                 <div className="col-12 col-xl-9 d-grid video-wrapper justify-content-center p-4 position-relative">
                   <img src={sphere} className='sphere position-absolute d-none d-lg-block' alt=""  />

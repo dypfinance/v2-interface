@@ -145,8 +145,8 @@ const HamburgerMenu = () => {
               </NavLink>
             </li>
               <hr className="mobile-hr" />
-            <li className="mobile-navlink m-0 p-4" onClick={() => {setMetaverse(true); setOpenMenu(false)}}>
-              <a className="text-decoration-none d-flex justify-content-between align-items-center" href="#metaverse">
+            <li className="mobile-navlink m-0 p-4">
+              <a className="text-decoration-none d-flex justify-content-between align-items-center" href="https://worldofdypians.com" target={'_blank'} rel='noreferrer'>
                 Metaverse World
                 <img src={mobileNavArrow} alt="" />
               </a>

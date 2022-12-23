@@ -41,7 +41,6 @@ function App() {
                 <Route exact path="/buydyp" element={<BuyDypScreen />} />
                 <Route exact path="/news" element={<NewsPage />} />
                 <Route exact path="/idyp" element={<IDyp />} />
-                <Route exact path="/caws" element={<Caws />} />
             </Routes>
             <ScrollTop />
             <Footer />
