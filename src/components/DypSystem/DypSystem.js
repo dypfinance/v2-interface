@@ -107,7 +107,15 @@ const DypSystem = ({
             className="satellite2"
             onMouseEnter={onShowSeventhDesc}
             onMouseLeave={onRemoveDesc}
-          ></div>
+          >
+             <a
+              href="https://worldofdypians.com"
+              target={"_blank"}
+              rel="noreferrer"
+              style={{ width: 50, height: 50, display: "flex" }}
+            ></a>
+
+          </div>
         </div>
 
         <div className="planet">

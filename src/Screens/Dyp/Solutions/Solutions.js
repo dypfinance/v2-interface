@@ -67,7 +67,7 @@ const Solutions = () => {
     {
       title: "CAWS NFT",
       image: "caws",
-      link: '/caws',
+      link: 'https://worldofdypians.com/caws',
       arrow: true
 
     },
@@ -81,7 +81,7 @@ const Solutions = () => {
     {
       title: "Metaverse",
       image: "metaverse",
-      link: '#',
+      link: 'https://worldofdypians.com/',
       arrow: true
 
     },
@@ -160,7 +160,6 @@ const Solutions = () => {
                     image={solution.image}
                     link={solution.link}
                     arrow={solution.arrow}
-                    onMetaverseOpen={onMetaverseOpen}
                   />
                 ))
             : solutions.map((solution, index) => (
@@ -170,7 +169,6 @@ const Solutions = () => {
                   image={solution.image}
                   link={solution.link}
                   arrow={solution.arrow}
-                  onMetaverseOpen={onMetaverseOpen}
 
 
                 />
