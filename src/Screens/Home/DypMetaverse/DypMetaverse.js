@@ -81,9 +81,9 @@ const DypMetaverse = () => {
                  data-aos-delay="500"
                  data-aos-duration="1000"
               >
-                <button className="btn filled-btn" onClick={() => setMetaverse(true)}>
+                <a className="btn filled-btn d-flex gap-2 align-items-center justify-content-center" href='https://worldofdypians.com' target='_blank' rel="noreferrer">
                   View now <img src={rightArrow} alt="" className="ml-2" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
