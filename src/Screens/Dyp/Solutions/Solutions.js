@@ -67,7 +67,7 @@ const Solutions = () => {
     {
       title: "CAWS NFT",
       image: "caws",
-      link: 'https://worldofdypians.com/caws',
+      link: 'https://www.worldofdypians.com/caws',
       arrow: true
 
     },
@@ -81,7 +81,7 @@ const Solutions = () => {
     {
       title: "Metaverse",
       image: "metaverse",
-      link: 'https://worldofdypians.com/',
+      link: 'https://www.worldofdypians.com/',
       arrow: true
 
     },
