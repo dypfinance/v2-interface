@@ -17,7 +17,7 @@ const Modal = ({ visible, modalId, setIsVisible }) => {
 
   return (
     <div
-      className={className}
+      className="modal fade show"
       id={modalId}
       tabIndex="-1"
       aria-labelledby={"modalLabel" + modalId}

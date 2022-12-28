@@ -126,24 +126,24 @@ const ContactUs = () => {
     });
   };
 
-  const modal = document.querySelector("#tymodal");
-  const body = document.querySelector("body");
+  // const modal = document.querySelector("#tymodal");
+  // const body = document.querySelector("body");
 
-  const showModal = function (e) {
-    if (modal.class.includes("show")) {
-      // Disable scroll
-      body.style.overflow = "hidden";
-    } else {
-      // Enable scroll
-      body.style.overflow = "auto";
-    }
-  };
+  // const showModal = function (e) {
+  //   if (modal.classList.includes("show")) {
+  //     // Disable scroll
+  //     body.style.overflow = "hidden";
+  //   } else {
+  //     // Enable scroll
+  //     body.style.overflow = "auto";
+  //   }
+  // };
 
-  useEffect(() => {
-    if (success === true) {
-      showModal();
-    }
-  }, [modal, success]);
+  // useEffect(() => {
+  //   if (success === true) {
+  //     showModal();
+  //   }
+  // }, [modal, success]);
 
   const onFileChange = (event) => {
     const fileTypes = [
@@ -184,7 +184,7 @@ const ContactUs = () => {
 
     setErrors(validate(values));
 
-    if (Object.keys(errors).length === 0) {
+    if (Object.keys(validate(values)).length === 0) {
       const captchaToken = await recaptchaRef.current.executeAsync();
       const data = {
         email: values.email,
@@ -225,7 +225,7 @@ const ContactUs = () => {
       }
       recaptchaRef.current.reset();
 
-      // setValues({ ...initialState });
+      setValues({ ...initialState });
       setSelectedFile(null);
 
     }
