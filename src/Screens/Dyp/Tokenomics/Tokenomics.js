@@ -782,7 +782,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
               <div className="col-lg-4 col-xl-4 col-md-4 flex-column justify-content-between">
                 <div className="circulating-wrapper w-100 mb-3">
                   <div className="d-flex flex-column gap-3">
-                    <span className="circulating-title">Max Total Supply</span>
+                    <span className="circulating-title">Circulating supply</span>
                     <span className="circulating-amount">{getFormattedNumber(idypSupply, 6)} iDYP</span>
                   </div>
                 </div>
