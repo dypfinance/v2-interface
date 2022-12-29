@@ -3,16 +3,20 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import EmptyProposalCard from "../../../components/ProposalCard/EmptyProposalCard";
 import ProposalCard from "../../../components/ProposalCard/ProposalCard";
+import totalProposalsIcon from '../assets/totalProposalsIcon.svg'
+import getFormattedNumber from '../../../hooks/getFormattedNumber'
 import "./_proposals.scss";
 
 const Proposals = () => {
 
 
   const [proposals, setProposals] = useState()
+  const [totalVotes, setTotalVotes] = useState()
 
   const fetchProposals = async() => {
     await axios.get('https://api.dyp.finance/api/gov-stats').then((res) => {
       setProposals(res.data.proposals)
+      setTotalVotes(res.data.totalVotes)
     }).catch((err) => {
       console.error(err);
     })
@@ -112,9 +116,18 @@ const settings = {
 
 
   return (
-    <div className="container-lg proposals-wrapper">
-      
+    <div className="container-lg proposals-wrapper position-relative">
       <div className="row align-items-end">
+      <div className="col-12 col-lg-5 total-proposals-wrapper">
+        <div className="total-proposals position-relative p-3 d-flex align-items-center justify-content-between">
+        <span className="proposal-span" />
+          <div className="d-flex align-items-center gap-2">
+            <img src={totalProposalsIcon} alt="propsals icon" />
+            <span className="total-votes-text">Total Governance votes</span>
+          </div>
+          <h6 className="total-votes-amount mb-0">{getFormattedNumber(totalVotes)}</h6>
+        </div>
+      </div>
         <div className="col-12 col-lg-7 pb-2">
         <h4 className="mb-5" style={{ color: "#554FD8", fontSize: '20px' }}>
         Lifetime proposals
