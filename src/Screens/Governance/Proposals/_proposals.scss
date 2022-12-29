@@ -2,6 +2,49 @@
   margin-top: -245px;
   margin-bottom: 50px;
 
+
+
+  .total-proposals-wrapper{
+    position: absolute;
+    right: 0;
+    top: -105px;
+    .total-proposals{
+      background: #ffffff;
+      border-radius: 12px;
+
+      .total-votes-text{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #1E2029;
+        
+      }
+      .total-votes-amount{
+        font-weight: 300;
+font-size: 28px;
+line-height: 42px;
+text-align: right;
+color: #7770DF;
+
+      }
+
+      .proposal-span {
+        background: #7770E0;
+        height: 40px;
+        width: 5px;
+        position: absolute;
+        left: 0;
+        top: 17px;
+        border-radius: 0 5px 5px 0;
+  
+        @media screen and (max-width: 786px) {
+          top: 15px;
+        }
+  
+      }
+    }
+  }
+
   .proposal-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
