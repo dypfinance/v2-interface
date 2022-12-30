@@ -328,47 +328,127 @@ const Roadmap = () => {
                 <div className="inner-circle"></div>
               </div>
             </div>
-            <div className="roadmap-items highlight d-flex flex-column gap-3 p-4">
+            <div className="accordion accordion-flush roadmap-items highlight d-flex flex-column p-4" id="roadmapAccordion">
              
-              <div className="d-flex flex-row align-items-center gap-2">
+             <div className="accordion-item">
+             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aroa-aria-controls="collapseOne">
                 <img src={completedIcon} alt=""   />
                 <p>Building Extra Features for DYP Tools</p>
               </div>
-              <div className="d-flex flex-row align-items-center gap-2">
+              <div id="collapseOne" className="accordion-collapse collapse" aria-aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                <ul className="mb-0 py-2">
+                  <li className="accordion-list-item">News Section available on Ethereum, BNB Chain, and Avalanche</li>
+                  <li className="accordion-list-item">Yields Section on BNB Chain</li>
+                  <li className="accordion-list-item">DYP Locker on BNB Chain </li>
+                  <li className="accordion-list-item">New benefits on DYP Tools Premium subscription</li>
+                  <li className="accordion-list-item">Improved voting system</li>
+                </ul>
+              </div>
+             </div>
+             <div className="accordion-item">
+             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aroa-aria-controls="collapseTwo">
                 <img src={completedIcon} alt=""   />
                 <p>Rebranding Process</p>
               </div>
-              <div className="d-flex flex-row align-items-center gap-2">
-                <img src={uncompletedIcon} alt=""   />
+              <div id="collapseTwo" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
+                <ul className="mb-0 py-2">
+                  <li className="accordion-list-item">A brand-new and improved UI/UX</li>
+                  <li className="accordion-list-item">Enhanced dApps on DYP Tools</li>
+                </ul>
+              </div>
+             </div>
+             <div className="accordion-item">
+             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aroa-aria-controls="collapseThree">
+                <img src={completedIcon} alt=""   />
                 <p>Metaverse Research and Launch of Different Products</p>
               </div>
-              <div className="d-flex flex-row align-items-center gap-2">
-                <img src={uncompletedIcon} alt=""   />
+              <div id="collapseThree" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
+                <ul className="mb-0 py-2">
+                  <li className="accordion-list-item">Deep analysis on Metaverse platforms</li>
+                  <li className="accordion-list-item">Dypius product integration</li>
+                  <li className="accordion-list-item">Partners areas development</li>
+                  <li className="accordion-list-item">Navigation, looting, and fighting systems</li>
+                  <li className="accordion-list-item">Character classes, abilities, tools, and gears</li>
+                  <li className="accordion-list-item">Talent tree</li>
+                </ul>
+              </div>
+             </div>
+             <div className="accordion-item">
+             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aroa-aria-controls="collapseFour">
+                <img src={completedIcon} alt=""   />
                 <p>Metaverse Begins for the CAWS</p>
               </div>
-              <div className="d-flex flex-row align-items-center gap-2">
-                <img src={uncompletedIcon} alt=""   />
-                <p>Further Extension and Project Growth in Different Areas</p>
+              <div id="collapseFour" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
+                <ul className="mb-0 py-2">
+                  <li className="accordion-list-item">CAWS NFT integration on World of Dypians</li>
+                </ul>
               </div>
-              <div className="d-flex flex-row align-items-center gap-2">
-                <img src={uncompletedIcon} alt=""   />
+             </div>
+             <div className="accordion-item">
+             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aroa-aria-controls="collapseFive">
+                <img src={completedIcon} alt=""   />
+                <p>Further Extension and Project Growth in Different Areas</p>
+
+              </div>
+              <div id="collapseFive" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
+                <ul className="mb-0 py-2">
+                  <li className="accordion-list-item">Multiple Partners integrations on World of Dypians</li>
+               
+                </ul>
+              </div>
+             </div>
+             <div className="accordion-item">
+             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aroa-aria-controls="collapseSix">
+                <img src={completedIcon} alt=""   />
                 <p>
                   Incorporation of a Legal Entity for upcoming Regulation For
                   Decentralized Finance
                 </p>
+
               </div>
-              <div className="d-flex flex-row align-items-center gap-2">
-                <img src={uncompletedIcon} alt=""   />
+              <div id="collapseSix" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
+                <ul className="mb-0 py-2">
+                  <li className="accordion-list-item"><a href="https://drive.google.com/file/d/16-aemFDx8ozgerUze6uMMKmAygTNWn0c/view?usp=sharing" target={"_blank"}>DYP Finance LTD registration certificate</a></li>
+            
+                </ul>
+              </div>
+             </div>
+             <div className="accordion-item">
+             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aroa-aria-controls="collapseSeven">
+                <img src={completedIcon} alt=""   />
                 <p>Expanding our Products to other Chains</p>
               </div>
-              <div className="d-flex flex-row align-items-center gap-2">
-                <img src={uncompletedIcon} alt=""   />
+              <div id="collapseSeven" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
+                <ul className="mb-0 py-2">
+                  <li className="accordion-list-item">Multichain integration on World of Dypians</li>
+              
+                </ul>
+              </div>
+             </div>
+             <div className="accordion-item">
+             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aroa-aria-controls="collapseEight">
+                <img src={completedIcon} alt=""   />
                 <p>Launch App for iOS and Android</p>
               </div>
-              <div className="d-flex flex-row align-items-center gap-2">
-                <img src={uncompletedIcon} alt=""   />
+              <div id="collapseEight" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
+                <ul className="mb-0 py-2">
+                  <li className="accordion-list-item"> App approval pending (expected approval and release time estimated on Q1 2023)</li>
+                
+                </ul>
+              </div>
+             </div>
+             <div className="accordion-item">
+             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aroa-aria-controls="collapseNine">
+                <img src={completedIcon} alt=""   />
                 <p>Launch Multi-Chain DEX</p>
               </div>
+              <div id="collapseNine" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
+                <ul className="mb-0 py-2">
+                  <li className="accordion-list-item">Token Swaps with 1inch Plugin on DYP Tools</li>
+                </ul>
+              </div>
+             </div>
+             
             </div>
           </div>
         </Slider>
