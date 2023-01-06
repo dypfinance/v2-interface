@@ -339,7 +339,7 @@ const Roadmap = () => {
                 <ul className="mb-0 py-2">
                   <li className="accordion-list-item">News Section available on Ethereum, BNB Chain, and Avalanche</li>
                   <li className="accordion-list-item">Yields Section on BNB Chain</li>
-                  <li className="accordion-list-item">DYP Locker on BNB Chain</li>
+                  <li className="accordion-list-item">DYP Locker on BNB Chain </li>
                   <li className="accordion-list-item">New benefits on DYP Tools Premium subscription</li>
                   <li className="accordion-list-item">Improved voting system</li>
                 </ul>

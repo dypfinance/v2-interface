@@ -13,6 +13,7 @@ import tokenomicsIcon from "../../../assets/tokenomicsIcon.svg";
 import Success from "../../../components/Success/Success";
 import minus from "../../../assets/minus.svg";
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
+import AvaxTokenomics from "./AvaxTokenomics";
 
 const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   const [tokenomicData, setTokenomicData] = useState("dyp");
@@ -38,9 +39,8 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   const windowSize = useWindowSize();
   const [copied, setCopied] = useState(false);
   const [visible, setVisible] = useState(false);
-  const [dypSupply, setDypSupply] = useState('0.0');
-  const [idypSupply, setiDypSupply] = useState('0.0');
-
+  const [dypSupply, setDypSupply] = useState("0.0");
+  const [idypSupply, setiDypSupply] = useState("0.0");
 
   const handleCopy = (address) => {
     navigator.clipboard.writeText(address);
@@ -53,40 +53,38 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
     }, 2000);
   };
 
-  const getCirculatingSupplyiDYP=async()=> {
+  const getCirculatingSupplyiDYP = async () => {
     try {
-      await axios.get(
-        "https://api.dyp.finance/api/circulating-supply-idyp"
-      ).then((data)=>{
-      setiDypSupply(data.data)
-
-      })
+      await axios
+        .get("https://api.dyp.finance/api/circulating-supply-idyp")
+        .then((data) => {
+          setiDypSupply(data.data);
+        });
     } catch (err) {
       console.log(err);
     }
-  }
-  
+  };
 
-  
   async function getCirculatingSupplyDYP() {
     try {
-      await axios.get("https://api.dyp.finance/api/circulating-supply").then((data)=>{
-        setDypSupply(data.data)
-      })
+      await axios
+        .get("https://api.dyp.finance/api/circulating-supply")
+        .then((data) => {
+          setDypSupply(data.data);
+        });
       //console.log(res)
     } catch (err) {
       console.log(err);
     }
   }
 
-
-  useEffect(()=>{
-    getCirculatingSupplyiDYP()
-    getCirculatingSupplyDYP()
-  },[])
-  
+  useEffect(() => {
+    getCirculatingSupplyiDYP();
+    getCirculatingSupplyDYP();
+  }, []);
 
   return (
+    <>
     <div
       className={`outer-wrapper container-lg px-0 ${
         isDyp === true
@@ -96,7 +94,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
           : isAbout === true
           ? null
           : null
-      }`}
+      } ${toggledyp === true || toggleIdyp === true ? 'dypborder' : ''}`}
       id="tokenomics"
     >
       <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
@@ -124,9 +122,8 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
               aria-controls="collapseExample"
               onClick={() => {
                 // setTokenomicData("dyp");
-                isDyp === false
-                  ? setToggleDyp(!toggledyp)
-                  : setToggleIDyp(!toggleIdyp);
+                 setToggleDyp(!toggledyp)
+                 setToggleIDyp(!toggleIdyp);
                 // setToggleIDyp(false);
               }}
             >
@@ -137,31 +134,33 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                 className="ml-2"
               />
             </button>
-          ) :
-          <button
-            className={
-              toggleIdyp === true ? "btn filled-btn" : "btn outline-btn"
-            }
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target={
-              tokenomicData === "dyp" ? "#collapseExample3" : "#collapseExample"
-            }
-            aria-expanded="false"
-            aria-controls="collapseExample"
-            onClick={() => {
-              setTokenomicData("idyp");
-              setToggleIDyp(!toggleIdyp);
-              setToggleDyp(false);
-            }}
-          >
-            iDYP Tokenomics
-            <img
-              src={toggleIdyp === true ? WhiteArrowUp : PurpleArrowDown}
-              alt=""
-            />
-          </button>
-          }
+          ) : (
+            <button
+              className={
+                toggleIdyp === true ? "btn filled-btn" : "btn outline-btn"
+              }
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target={
+                tokenomicData === "dyp"
+                  ? "#collapseExample3"
+                  : "#collapseExample"
+              }
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              onClick={() => {
+                setTokenomicData("idyp");
+                setToggleIDyp(!toggleIdyp);
+                setToggleDyp(false);
+              }}
+            >
+              iDYP Tokenomics
+              <img
+                src={toggleIdyp === true ? WhiteArrowUp : PurpleArrowDown}
+                alt=""
+              />
+            </button>
+          )}
         </div>
       </div>
       <div
@@ -210,15 +209,23 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                 </div>
                 <div className="mininginfo-wrapper ">
                   <p className="m-0">
-                    30,000,000 DYP have been minted at genesis and will become
-                    accessible over the course of 2 years.
+                    30,000,000 DYP have been minted at{" "}
+                    <a
+                      href="https://etherscan.io/tx/0x0a579e87c2615ba29d7a3f9c0bc1491415a44e0fa2e9dd40ef5fc40dcb769c4f"
+                      target={"_blank"}
+                      rel="noreferrer"
+                      style={{color: '#554FD8'}}
+                    >
+                     <b>Genesis</b> 
+                    </a>{" "}
+                    and will become accessible over the course of 2 years.
                     <br />
                     <b>The 2-year allocation is as follows:</b>
                   </p>
                 </div>
                 <div className="d-flex flex-column gap-3 mt-3">
                   <div>
-                    <span>Community</span>
+                    <span style={{color: '#554fd8'}}>Community</span>
                     <br />
                     <svg
                       width="353"
@@ -268,7 +275,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                             className="dypcontract-title"
                             style={{ fontSize: 12 }}
                           >
-                            Distributed to Avalanche Network
+                            Distributed to Avalanche Chain
                           </span>
                           <span className="dypcontract-addr">
                             2,090,000.00 DYP
@@ -293,7 +300,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                             className="dypcontract-title"
                             style={{ fontSize: 12 }}
                           >
-                            Distributed to Binance Smart Chain
+                            Distributed to BNB Chain
                           </span>
                           <span className="dypcontract-addr">
                             4,500,000.00 DYP
@@ -316,8 +323,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                             className="dypcontract-title"
                             style={{ fontSize: 12 }}
                           >
-                            Reserved for other pools or chains - Locked on smart
-                            contract
+                            Reserved for other pools or chains
                           </span>
                           <span className="dypcontract-addr">
                             2,584,689.00 DYP
@@ -327,7 +333,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                     </div>
                   </div>
                   <div>
-                    <span>Users</span>
+                    <span style={{color: '#554fd8'}}>Users</span>
                     <br />
                     <svg
                       width="353"
@@ -379,7 +385,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                             className="dypcontract-title"
                             style={{ fontSize: 12 }}
                           >
-                            Burned and removed from the total supply
+                            Burned
                           </span>
                           <span className="dypcontract-addr">
                             4,348,469.00 DYP
@@ -389,7 +395,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                     </div>
                   </div>
                   <div>
-                    <span>Team</span>
+                    <span style={{color: '#554fd8'}}>Team</span>
                     <br />
                     <svg
                       width="353"
@@ -782,8 +788,12 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
               <div className="col-lg-4 col-xl-4 col-md-4 flex-column justify-content-between">
                 <div className="circulating-wrapper w-100 mb-3">
                   <div className="d-flex flex-column gap-3">
-                    <span className="circulating-title">Max Total Supply</span>
-                    <span className="circulating-amount">{getFormattedNumber(idypSupply, 6)} iDYP</span>
+                    <span className="circulating-title">
+                      Circulating supply
+                    </span>
+                    <span className="circulating-amount">
+                      {getFormattedNumber(idypSupply, 6)} iDYP
+                    </span>
                   </div>
                 </div>
                 <div>
@@ -810,8 +820,11 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
             </div>
           )}
         </div>
+      
       </div>
     </div>
+    {tokenomicData === 'dyp' && toggledyp === true && <AvaxTokenomics/>}
+    </>
   );
 };
 
