@@ -54,7 +54,7 @@ const AvaxTokenomics = () => {
                       Locked
                     </span>
                     <span className="dypcontract-addr">
-                      {getFormattedNumber(bnbData.locked, 2)} DYP
+                      {getFormattedNumber(bnbData.locked, 0)} DYP
                     </span>
                   </div>
 
@@ -66,7 +66,7 @@ const AvaxTokenomics = () => {
                       Unlocked
                     </span>
                     <span className="dypcontract-addr">
-                      {getFormattedNumber(bnbData.unlocked, 2)} DYP
+                      {getFormattedNumber(bnbData.unlocked, 0)} DYP
                     </span>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ const AvaxTokenomics = () => {
                       Locked
                     </span>
                     <span className="dypcontract-addr">
-                      {getFormattedNumber(avaxData.locked, 2)} DYP
+                      {getFormattedNumber(avaxData.locked, 0)} DYP
                     </span>
                   </div>
 
@@ -109,7 +109,7 @@ const AvaxTokenomics = () => {
                       Unlocked
                     </span>
                     <span className="dypcontract-addr">
-                      {getFormattedNumber(avaxData.unlocked, 2)} DYP
+                      {getFormattedNumber(avaxData.unlocked, 0)} DYP
                     </span>
                   </div>
                 </div>
