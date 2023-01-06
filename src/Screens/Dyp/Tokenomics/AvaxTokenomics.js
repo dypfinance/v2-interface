@@ -23,7 +23,7 @@ const AvaxTokenomics = () => {
   }, []);
 
   return (
-    <div className={`container-lg px-0 row m-auto justify-content-between align-items-start `} style={{boxShadow: '0px 32px 64px rgb(17 17 17 / 8%)'}}>
+    <div className={`container-lg px-0 row m-auto justify-content-between align-items-start dypborder`} style={{boxShadow: '0px 32px 64px rgb(17 17 17 / 8%)', borderRadius: 0}}>
       <div className="col-lg-6 col-xl-6 col-md-5 p-0" >
         <div className="card card-body" style={{top: 0, borderRadius: 0}}>
           <div className="px-2">
@@ -74,7 +74,7 @@ const AvaxTokenomics = () => {
               <div>
                 <div className="row m-0 justify-content-between gap-2">
                   <span className="headertitle">
-                    DYP on Avalanche{" "}
+                    DYP on Avalanche Chain{" "}
                     <a
                       href="https://snowtrace.io/tx/0xb64b8d10129a763b22cb0be4df661d85d0c15a31c34596f8a906b79b5c69ecf1"
                       target={"_blank"}

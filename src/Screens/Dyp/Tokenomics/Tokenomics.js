@@ -94,7 +94,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
           : isAbout === true
           ? null
           : null
-      }`}
+      } ${toggledyp === true || toggleIdyp === true ? 'dypborder' : ''}`}
       id="tokenomics"
     >
       <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
