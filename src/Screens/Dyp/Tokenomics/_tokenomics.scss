@@ -114,6 +114,10 @@ gap: 10px;
   img {
     cursor: pointer;
   }
+
+  @media screen and (max-width: 786px) {
+    font-size: 15px;
+  }
 }
 
 .mininginfo-wrapper {
