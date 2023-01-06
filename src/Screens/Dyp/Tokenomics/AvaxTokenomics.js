@@ -123,7 +123,7 @@ const AvaxTokenomics = () => {
           <div className="row m-0 justify-content-center justify-content-lg-end justify-content-xl-end gap-2 align-items-center ">
             <div className="legendborder row m-0 justify-content-center">
             <div className="legendwrapper">
-              <div className="d-flex flex-column ">
+              <div className="d-flex flex-column legenditem">
                 <span className="legendTitle">Community</span>
                 <span className="legendDesc" style={{ color: "#554FD8" }}>
                   <svg
@@ -139,7 +139,7 @@ const AvaxTokenomics = () => {
                 </span>
               </div>
 
-              <div className="d-flex flex-column ">
+              <div className="d-flex flex-column legenditem">
                 <span className="legendTitle">Ecosystem Development</span>
                 <span className="legendDesc" style={{ color: "#F0603A" }}>
                   <svg
@@ -155,7 +155,7 @@ const AvaxTokenomics = () => {
                 </span>
               </div>
 
-              <div className="d-flex flex-column ">
+              <div className="d-flex flex-column legenditem">
                 <span className="legendTitle">Bridges</span>
                 <span className="legendDesc" style={{ color: "#EE82EE" }}>
                   <svg
@@ -171,7 +171,7 @@ const AvaxTokenomics = () => {
                 </span>
               </div>
 
-              <div className="d-flex flex-column ">
+              <div className="d-flex flex-column legenditem">
                 <span className="legendTitle">Liquidity Pools</span>
                 <span className="legendDesc" style={{ color: "#57B6AB" }}>
                   <svg
@@ -188,7 +188,7 @@ const AvaxTokenomics = () => {
               </div>
             </div>
             <div>
-              <img src={idypGraph} alt="" style={{ height: 260 }} />
+              <img src={idypGraph} alt="" style={{ height: 260, width: '100%', objectFit: 'contain' }} />
             </div></div>
           </div>
         </div>

@@ -16,10 +16,11 @@ border-radius: 56px 0px;
   @media only screen and (max-width: 991px) {
     padding: 1rem 6px 1rem 1rem;
     border-radius: 28px 0px;
-    min-height: 1230px;
+    // min-height: 1230px;
   }
   @media screen and (max-width: 786px) {
     background-size: cover;
+    min-height: auto;
     
   }
 

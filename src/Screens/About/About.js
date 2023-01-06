@@ -35,7 +35,7 @@ const About = () => {
       <Brand />
       <Security />
       <DypPartners />
-      <div className="container-lg p-0" style={{ marginTop: "5rem", overflow: windowSize.width < 700 ? 'hidden' : '' }}>
+      <div className="container-lg" style={{ marginTop: "5rem", overflow: windowSize.width < 700 ? 'hidden' : '' }}>
         <Tokenomics bottom={0} showBtn={false} isAbout={true} isDyp={true}/>
       </div>
       <ContactUs />
