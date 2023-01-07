@@ -138,6 +138,12 @@ transition: all .5s;
 }
 
 
+@media only screen and (max-width: 500px) {
+  #ourTokens{
+    // top: -140px !important;
+    margin-bottom: 0px;
+  }
+}
 
 @media only screen and (max-width: 375px) {
   .uni-card,
@@ -150,10 +156,7 @@ transition: all .5s;
     top: auto;
   }
 
-  #ourTokens{
-    // top: -140px !important;
-    margin-bottom: 0px;
-  }
+
 
 }
 
