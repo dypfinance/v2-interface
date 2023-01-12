@@ -49,7 +49,7 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          fade: true,
+          // fade: true,
           dots: page === "news" ? false : true,
         },
       },
@@ -58,7 +58,7 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          fade: true,
+          // fade: true,
           dots: page === "news" ? false : true,
         },
       },
