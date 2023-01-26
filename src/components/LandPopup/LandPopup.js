@@ -42,7 +42,7 @@ const LandPopup = () => {
         </div>
         <img src={landPopup} className="w-75" alt="land nft" />
         <span className="popup-content">A world limited only by your imagination</span>
-        <a href='https://betatools.dyp.finance/land' target={"_blank"} onClick={() => setActive(false)}>
+        <a href='https://www.worldofdypians.com/land' target={"_blank"} onClick={() => setActive(false)}>
         <button className="btn filled-btn m-3">Explore more</button>
         </a>
     </div>
