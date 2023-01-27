@@ -51,7 +51,7 @@ const Security = () => {
     {
       subtitle: "Security",
       title: "Certik Security Oracle",
-      link: "https://www.certik.com/projects/dypfinance",
+      link: "https://www.certik.com/projects/dypius",
     },
     {
       subtitle: "Security",
