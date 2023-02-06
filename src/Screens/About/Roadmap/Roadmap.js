@@ -12,8 +12,13 @@ import roadmapIcon from "./assets/roadmapIcon.svg";
 import RoadmapCard from "../../../components/RoadmapCard/RoadmapCard";
 import Slider from "react-slick";
 import { useRef } from "react";
+import useWindowSize from '../../../hooks/useWindowSize'
 
 const Roadmap = () => {
+
+
+  const windowSize = useWindowSize();
+
   const roadmap = [
     {
       date: "2020 Q3",
@@ -436,12 +441,12 @@ const Roadmap = () => {
     console.log(activeSlide2);
   };
 
-  // const nextSlide = () => {
-  //   slider.current.slickNext();
-  // };
-  // const prevSlide = () => {
-  //   slider.current.slickPrev();
-  // };
+  const nextSlide = () => {
+    slider.current.slickNext();
+  };
+  const prevSlide = () => {
+    slider.current.slickPrev();
+  };
 
   const goto2020 = () => {
     slider.current.innerSlider.slickGoTo(0);
@@ -486,14 +491,14 @@ const Roadmap = () => {
 
   return (
     <div className="container-lg roadmap-wrapper overflow-hidden" id="roadmap">
-      <div className="row flex-column gap-1 p-5 roadmap-title">
+      <div className="row flex-column gap-1 p-3 p-lg-5 roadmap-title">
         <div className="d-flex flex-column flex-lg-row align-items-center align-items-lg-end justify-content-between">
         <h1 className="text-white text-center text-lg-start">Dypius roadmap</h1>
         <p>Our journey to success</p>
         </div>
-        <div className="d-flex flex-column-reverse flex-lg-row w-100 justify-content-between align-items-start gap-4">
+        <div className="d-flex flex-column-reverse flex-lg-row w-100 justify-content-between align-items-center align-items-lg-start gap-4">
              <div className={`roadmap-desc-wrapper p-3  ${!activeYear.roadmap2023 && 'no-visibility' }`}>
-             <p className={`roadmap-desc`}>
+             <p className={`roadmap-desc mb-0`}>
                It is important for us to keep our focus on delivering high-quality
                products and improving the current offerings to provide our users with
                the best experience possible. As part of our efforts to continuously
@@ -554,7 +559,10 @@ const Roadmap = () => {
       </div>
       <div className="row justify-content-evenly position-relative carousel-wrapper">
         <hr />
-        <div
+        {windowSize.width > 786 ? 
+        
+          <>
+          <div
           className={`left-button d-flex justify-content-center align-items-center enabled`}
           onClick={previous}
         >
@@ -566,6 +574,23 @@ const Roadmap = () => {
         >
           <img src={emptyRight} alt="rightArrow" className="p-4" />
         </div>
+          </>
+          :
+          <>
+          <div
+          className={`left-button d-flex justify-content-center align-items-center enabled`}
+          onClick={prevSlide}
+        >
+          <img src={filledLeft} alt="left arrow" className="p-4" />
+        </div>
+        <div
+          className={`right-button d-flex justify-content-center align-items-center enabled`}
+          onClick={nextSlide}
+        >
+          <img src={emptyRight} alt="rightArrow" className="p-4" />
+        </div>
+          </>
+      }
         <Slider ref={(c) => (slider.current = c)} {...settings}>
           {roadmap.map((item, index) => (
             <RoadmapCard key={index} data={item} />
@@ -574,9 +599,8 @@ const Roadmap = () => {
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card d-flex flex-column align-items-center">
               <img
-                src={selectedRoadmap}
+                src={selectedRoadmap} style={{visibility: 'hidden'}}
                 alt=""
-                style={{ visibility: "hidden" }}
               />
               <h2 style={{ color: "#EFF0F6" }}>2022 Q3/Q4</h2>
               <div className="outer-circle d-flex justify-content-center align-items-center">
@@ -628,7 +652,7 @@ const Roadmap = () => {
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card d-flex flex-column align-items-center">
-              <img src={selectedRoadmap} alt="" />
+              <img src={selectedRoadmap} style={{visibility: 'hidden'}} alt=""  />
               <h2 style={{ color: "#EFF0F6" }}>2023 Q1</h2>
               <div className="outer-circle d-flex justify-content-center align-items-center">
                 <div className="inner-circle"></div>
@@ -673,7 +697,7 @@ const Roadmap = () => {
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card d-flex flex-column align-items-center">
-              <img src={selectedRoadmap} alt="" />
+              <img src={selectedRoadmap} style={{visibility: 'hidden'}} alt="" />
               <h2 style={{ color: "#EFF0F6" }}>2023 Q2</h2>
               <div className="outer-circle d-flex justify-content-center align-items-center">
                 <div className="inner-circle"></div>
@@ -714,7 +738,7 @@ const Roadmap = () => {
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card d-flex flex-column align-items-center">
-              <img src={selectedRoadmap} alt="" />
+              <img src={selectedRoadmap} style={{visibility: 'hidden'}} alt="" />
               <h2 style={{ color: "#EFF0F6" }}>2023 Q3</h2>
               <div className="outer-circle d-flex justify-content-center align-items-center">
                 <div className="inner-circle"></div>
@@ -756,7 +780,7 @@ const Roadmap = () => {
 
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card d-flex flex-column align-items-center">
-              <img src={selectedRoadmap} alt="" />
+              <img src={selectedRoadmap} style={{visibility: 'hidden'}} alt="" />
               <h2 style={{ color: "#EFF0F6" }}>2023 Q4</h2>
               <div className="outer-circle d-flex justify-content-center align-items-center">
                 <div className="inner-circle"></div>
