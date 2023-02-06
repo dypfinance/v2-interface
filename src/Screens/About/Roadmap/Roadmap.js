@@ -507,7 +507,7 @@ const Roadmap = () => {
                our users are always up-to-date with the latest advancements in
                technology and have access to the most advanced features and tools
                available.
-               <a href="https://www.worldofdypians.com/roadmap" target="_blank" style={{fontWeight: '800'}}>   World of Dypians roadmap</a>
+               <a href="https://www.worldofdypians.com/roadmap" target="_blank" style={{fontWeight: '800', color: '#F0603A'}}>   World of Dypians roadmap</a>
              </p>
            </div>
         
@@ -598,7 +598,7 @@ const Roadmap = () => {
           ))}
 
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card d-flex flex-column align-items-center">
+            <div className="date-card selected d-flex flex-column align-items-center">
               <img
                 src={selectedRoadmap} style={{visibility: 'hidden'}}
                 alt=""
@@ -652,7 +652,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card d-flex flex-column align-items-center">
+            <div className="date-card selected d-flex flex-column align-items-center">
               <img src={selectedRoadmap} style={{visibility: 'hidden'}} alt=""  />
               <h2 style={{ color: "#EFF0F6" }}>2023 Q1</h2>
               <div className="outer-circle d-flex justify-content-center align-items-center">

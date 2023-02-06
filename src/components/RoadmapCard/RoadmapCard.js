@@ -9,9 +9,9 @@ const RoadmapCard = ({data}) => {
 
   return (
     <div className="col-12 d-flex flex-column gap-4">
-    <div className="date-card d-flex flex-column align-items-center">
+    <div className="date-card selected d-flex flex-column align-items-center">
       <h2 style={{ color: "#EFF0F6" }}>{data.date}</h2>
-      <div className="outer-circle d-flex justify-content-center align-items-center">
+      <div className="outer-circle  d-flex justify-content-center align-items-center">
         <div className="inner-circle"></div>
       </div>
     </div>
