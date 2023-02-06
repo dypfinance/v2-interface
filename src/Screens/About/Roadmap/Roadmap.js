@@ -497,7 +497,7 @@ const Roadmap = () => {
         <p>Our journey to success</p>
         </div>
         <div className="d-flex flex-column-reverse flex-lg-row w-100 justify-content-between align-items-center align-items-lg-start gap-4">
-             <div className={`roadmap-desc-wrapper p-3  ${!activeYear.roadmap2023 && 'no-visibility' }`}>
+             <div className={`roadmap-desc-wrapper p-3  ${!activeYear.roadmap2023 && 'no-visibility' }`} style={{zIndex: 9}}>
              <p className={`roadmap-desc mb-0`}>
                It is important for us to keep our focus on delivering high-quality
                products and improving the current offerings to provide our users with
@@ -507,6 +507,7 @@ const Roadmap = () => {
                our users are always up-to-date with the latest advancements in
                technology and have access to the most advanced features and tools
                available.
+               <a href="https://www.worldofdypians.com/roadmap" target="_blank" style={{fontWeight: '800'}}>   World of Dypians roadmap</a>
              </p>
            </div>
         
