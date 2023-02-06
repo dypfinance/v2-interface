@@ -4,13 +4,16 @@ import filledLeft from "../assets/filledLeft.svg";
 import emptyRight from "../assets/emptyRight.svg";
 import selectedRoadmap from "../assets/selectedRoadmap.svg";
 import uncompletedIcon from "../assets/uncompletedIcon.svg";
-import completedIcon from "../assets/completedOrangeIcon.svg";
+import completedOrangeIcon from "../assets/completedOrangeIcon.svg";
+import completedIcon from "../../About/assets/completedIcon.svg";
+import rightArrow from "./assets/rightArrow.svg";
+import wodIcon from "./assets/wodIcon.svg";
+import roadmapIcon from "./assets/roadmapIcon.svg";
 import RoadmapCard from "../../../components/RoadmapCard/RoadmapCard";
 import Slider from "react-slick";
 import { useRef } from "react";
 
 const Roadmap = () => {
- 
   const roadmap = [
     {
       date: "2020 Q3",
@@ -104,6 +107,170 @@ const Roadmap = () => {
     },
   ];
 
+  const q3q4 = [
+    {
+      title: "Building Extra Features for DYP Tools",
+      content: [
+        "News Section available on Ethereum, BNB Chain, and Avalanche",
+        "Yields Section on BNB Chain",
+        "DYP Locker on BNB Chain",
+        "New benefits on DYP Tools Premium subscription",
+        "Improved voting system",
+      ],
+    },
+    {
+      title: "Rebranding Process",
+      content: [
+        "A brand-new and improved UI/UX",
+        "Enhanced dApps on DYP Tools",
+      ],
+    },
+    {
+      title: "Metaverse Research and Launch of Different Products",
+      content: [
+        "Deep analysis on Metaverse platforms",
+        "Dypius product integration",
+        "Partners areas development",
+        "Navigation, looting, and fighting systems",
+        "Character classes, abilities, tools, and gears",
+        "Talent tree",
+      ],
+    },
+    {
+      title: "Metaverse Begins for the CAWS",
+      content: ["CAWS NFT integration on World of Dypians"],
+    },
+    {
+      title: "Further Extension and Project Growth in Different Areas",
+      content: ["Multipe Partners integrations on World of Dypians"],
+    },
+    {
+      title:
+        "Incorporation of a Legal Entity for upcoming Regulation For Decentralized Finance",
+      content: ["DYP Finance LTD registration certificate"],
+    },
+    {
+      title: "Expanding our products to other Chains",
+      content: ["Multichain integration on World of Dypians"],
+    },
+    {
+      title: "Launch App for iOS and Android",
+      content: [
+        "App approval pending (expected approval and release time estimated on Q1 2023)",
+      ],
+    },
+    {
+      title: "Launch Multi-Chain DEX",
+      content: ["Token Swaps with 1inch Plugin on DYP Tools"],
+    },
+  ];
+
+  const quarterOne2023 = [
+    {
+      title: "Beta Testers Program",
+      content:
+        "Release a Beta Testers Program that allows a selected group of users to play and experience the World of Dypians before it is officially released to the public.",
+    },
+    {
+      title: "Genesis Land NFT Launch",
+      content:
+        "World of Dypians Genesis edition is limited to 1,000 NFTs, each of which represents a piece of land located in a prime area within the game that will provide players with a wide range of benefits.",
+    },
+    {
+      title: "Dedicated Genesis staking pool",
+      content:
+        "A dedicated staking pool for Genesis Land NFTs that allows users to stake their NFTs into a 25% APR pool and earn rewards in Ethereum",
+    },
+    {
+      title: "Introducing the CAWS Timepiece NFT collection",
+      content:
+        "The CAWS Timepiece NFT collection will provide users additional utility and perks in the World of Dypians Metaverse. CAWS owners will have the ability to mint CAWS Timepiece for free.",
+    },
+    {
+      title: "Metaverse Multichain Integration",
+      content:
+        "By incorporating a multichain system into World of Dypians (WoD), the game and the native token, DYP will be able to interact with multiple blockchain networks, allowing for greater interoperability, more utility, and accessibility for players.",
+    },
+    {
+      title: "Introducing new staking pools",
+      content:
+        "Launch a dedicated staking pool that lets users receive rewards by depositing asset combinations such as DYP token, iDYP token, CAWS NFT, and Genesis NFT.",
+    },
+  ];
+
+  const quarterTwo2023 = [
+    {
+      title: "Referral Program v2",
+      content:
+        "The updated version of the referral program features a new platform and an improved user journey, making it easier for users to refer friends and earn rewards.",
+    },
+    {
+      title: "Introduction of NFT Marketplace",
+      content:
+        "Users can access WoD marketplace to purchase assets used to customize and enhance their experience.",
+    },
+    {
+      title: "Introduction of 25,000 Land NFTs",
+      content:
+        "The creation of a multi-tiered NFT Land collection with different features such as special rewards, futuristic buildings, AI driven NPCs, and much more. Each user can preview the in-game land before purchasing the associated NFT.",
+    },
+    {
+      title: "DYP Locker enhancement",
+      content: "Improving DYP Locker functionalities on the BNB Chain",
+    },
+  ];
+
+  const quarterThree2023 = [
+    {
+      title: "News v2",
+      content:
+        "Enhanced News section with new features to provide users with a more comprehensive and user-friendly experience",
+    },
+    {
+      title: "Launch Mobile App (iOS and Android)",
+      content:
+        "The mobile app will provide each user with an interesting and engaging experience, thanks to its user-friendly UI and seamless integration with the WoD platform.",
+    },
+    {
+      title: "Introducing DYP Tools Premium users to Metaverse",
+      content:
+        "The introduction of DYP Tools Premium users to the metaverse opens up a world of opportunities for those who are looking for additional benefits and a more enhanced experience within the ecosystem.",
+    },
+    {
+      title: "Introducing new users to Metaverse",
+      content:
+        "Introducing new users to crypto space and providing them with the tools and resources necessary to participate in the metaverse ecosystem.",
+    },
+  ];
+
+  const quarterFour2023 = [
+    {
+      title: "e-Commerce",
+      content:
+        "Providing a virtual shopping experience in order to reach a worldwide audience and provide customers with new, engaging experiences.",
+    },
+    {
+      title: "Introducing Governance in Metaverse",
+      content:
+        "Users will have control over the development and decision-making process of World of Dypians by using the native token, DYP.",
+    },
+    {
+      title: "Weapons and armor customization",
+      content:
+        "Users can customize unique in-game assets such as weapons, armor, skins, and much more. These NFTs can be bought, sold, and traded on the open market. In addition, these tailor-made NFTs can be equipped and used by players in game.",
+    },
+    {
+      title: "Multiplayer PVE",
+      content:
+        "Adventure with other players to complete quests, fight bosses, survive against waves of enemies, earn rewards and much more.",
+    },
+    {
+      title: "Multiplayer PVP",
+      content:
+        "Engage in huge battle events against other players in real-time. Players can compete and interact against each other in 1v1 or group battle to complete objectives.",
+    },
+  ];
+
   const [oldSlide, setOldSlide] = useState(0);
   const [activeSlide, setActiveSlide] = useState(6);
   const [activeSlide2, setActiveSlide2] = useState(6);
@@ -112,6 +279,7 @@ const Roadmap = () => {
     roadmap2020: false,
     roadmap2021: false,
     roadmap2022: true,
+    roadmap2023: false,
   });
 
   const settings = {
@@ -119,9 +287,9 @@ const Roadmap = () => {
     infinite: false,
     arrows: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
-    initialSlide: roadmap.length - 2,
+    initialSlide: roadmap.length + 3,
     beforeChange: (current, next) => {
       setOldSlide(current);
       setActiveSlide(next);
@@ -172,11 +340,12 @@ const Roadmap = () => {
 
   const next = () => {
     slider.current.slickNext();
-    if (activeYear.roadmap2022 === true) {
+    if (activeYear.roadmap2023 === true) {
       setActiveYear({
         roadmap2020: true,
         roadmap2021: false,
         roadmap2022: false,
+        roadmap2023: false,
       });
       slider.current.innerSlider.slickGoTo(0);
       setActiveSlide2(0);
@@ -187,6 +356,7 @@ const Roadmap = () => {
         roadmap2020: false,
         roadmap2021: true,
         roadmap2022: false,
+        roadmap2023: false,
       });
 
       slider.current.innerSlider.slickGoTo(2);
@@ -197,40 +367,81 @@ const Roadmap = () => {
         roadmap2020: false,
         roadmap2021: false,
         roadmap2022: true,
+        roadmap2023: false,
       });
 
       slider.current.innerSlider.slickGoTo(6);
     }
+    if (activeSlide2 === 8) {
+      setActiveYear({
+        roadmap2020: false,
+        roadmap2021: false,
+        roadmap2022: false,
+        roadmap2023: true,
+      });
+
+      // slider.current.innerSlider.slickGoTo(0);
+    }
+    console.log(activeSlide2);
   };
+
   const previous = () => {
     slider.current.slickPrev();
-    if (activeYear.roadmap2022 === true) {
+    if (activeYear.roadmap2023 === true) {
       if (activeSlide2 < 5) {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: true,
           roadmap2022: false,
+          roadmap2023: false,
         });
       }
     }
-    if (activeSlide2 === 2) {
-      setActiveYear({
-        roadmap2020: true,
-        roadmap2021: false,
-        roadmap2022: false,
-      });
-    }
-
-    if(activeSlide2 === 0) {
+    if (activeSlide2 === 6) {
       setActiveYear({
         roadmap2020: false,
         roadmap2021: false,
         roadmap2022: true,
+        roadmap2023: false,
       });
-    slider.current.innerSlider.slickGoTo(6);
-
     }
+    if (activeSlide2 === 3) {
+      setActiveYear({
+        roadmap2020: false,
+        roadmap2021: true,
+        roadmap2022: false,
+        roadmap2023: false,
+      });
+    }
+
+    if (activeSlide2 === 1) {
+      setActiveYear({
+        roadmap2020: true,
+        roadmap2021: false,
+        roadmap2022: false,
+        roadmap2023: false,
+      });
+      // slider.current.innerSlider.slickGoTo(9);
+    }
+    if (activeSlide2 === 0) {
+      setActiveYear({
+        roadmap2020: false,
+        roadmap2021: false,
+        roadmap2022: false,
+        roadmap2023: true,
+      });
+      slider.current.innerSlider.slickGoTo(9);
+    }
+
+    console.log(activeSlide2);
   };
+
+  // const nextSlide = () => {
+  //   slider.current.slickNext();
+  // };
+  // const prevSlide = () => {
+  //   slider.current.slickPrev();
+  // };
 
   const goto2020 = () => {
     slider.current.innerSlider.slickGoTo(0);
@@ -238,6 +449,7 @@ const Roadmap = () => {
       roadmap2020: true,
       roadmap2021: false,
       roadmap2022: false,
+      roadmap2023: false,
     });
   };
   const goto2021 = () => {
@@ -246,29 +458,57 @@ const Roadmap = () => {
       roadmap2020: false,
       roadmap2021: true,
       roadmap2022: false,
+      roadmap2023: false,
     });
   };
   const goto2022 = () => {
-    slider.current.innerSlider.slickGoTo(6);
+    slider.current.innerSlider.slickGoTo(5);
     setActiveYear({
       roadmap2020: false,
       roadmap2021: false,
       roadmap2022: true,
+      roadmap2023: false,
+    });
+  };
+  const goto2023 = () => {
+    slider.current.innerSlider.slickGoTo(9);
+    setActiveYear({
+      roadmap2020: false,
+      roadmap2021: false,
+      roadmap2022: false,
+      roadmap2023: true,
     });
   };
 
   useEffect(() => {
-    goto2022();
+    goto2023();
   }, []);
 
   return (
     <div className="container-lg roadmap-wrapper overflow-hidden" id="roadmap">
       <div className="row flex-column gap-1 p-5 roadmap-title">
+        <div className="d-flex flex-column flex-lg-row align-items-center align-items-lg-end justify-content-between">
         <h1 className="text-white text-center text-lg-start">Dypius roadmap</h1>
-        <div className="d-flex flex-column flex-lg-row w-100 justify-content-between align-items-center">
-          <p>Our journey to success</p>
+        <p>Our journey to success</p>
+        </div>
+        <div className="d-flex flex-column-reverse flex-lg-row w-100 justify-content-between align-items-start gap-4">
+             <div className={`roadmap-desc-wrapper p-3  ${!activeYear.roadmap2023 && 'no-visibility' }`}>
+             <p className={`roadmap-desc`}>
+               It is important for us to keep our focus on delivering high-quality
+               products and improving the current offerings to provide our users with
+               the best experience possible. As part of our efforts to continuously
+               improve our offerings, we will be continually developing new products
+               and enhancing existing features in the roadmap. This will ensure that
+               our users are always up-to-date with the latest advancements in
+               technology and have access to the most advanced features and tools
+               available.
+             </p>
+           </div>
+        
+            
           <div className="d-flex flex-row gap-lg-4 gap-xl-4 gap-md-4 gap-3">
-            <div className="years-wrapper d-flex flex-row px-2 gap-1 justify-content-center align-items-center">
+            
+           <div className="years-wrapper d-flex flex-row p-2 gap-1 justify-content-center align-items-center">
               <p
                 className={`${activeYear.roadmap2020 && "selected-year"}`}
                 onClick={goto2020}
@@ -287,168 +527,272 @@ const Roadmap = () => {
               >
                 2022
               </p>
-            </div>
-            <div
-              className={`left-button d-flex justify-content-center align-items-center enabled`}
-              onClick={previous}
+              <p
+                className={`${activeYear.roadmap2023 && "selected-year"}`}
+                onClick={goto2023}
+              >
+                2023
+              </p>
+            </div> 
+            {/* <div className="d-flex flex-column gap-1">
+            <span className="to-roadmap">World of Dypians roadmap</span>
+            <a
+              href="https://www.worldofdypians.com/roadmap"
+              target={"_blank"}
+              className="d-flex align-items-center p-3 gap-5 to-roadmap-wrapper position-relative"
             >
-              <img
-                src={filledLeft}
-                alt="left arrow"
-                className="p-4"
-                 
-              />
-            </div>
-            <div
-              className={`right-button d-flex justify-content-center align-items-center enabled`}
-              onClick={next}
-            >
-              <img
-                src={emptyRight}
-                alt="rightArrow"
-                className="p-4"
-                 
-              />
-            </div>
+              <div className="d-flex align-items-center gap-2">
+                <img src={roadmapIcon} alt="roadmap icon" />
+                <img src={wodIcon} alt="world of dypians" />
+              </div>
+              <img src={rightArrow} alt="right arrow" />
+            </a>
+          </div> */}
           </div>
         </div>
+       
       </div>
       <div className="row justify-content-evenly position-relative carousel-wrapper">
         <hr />
+        <div
+          className={`left-button d-flex justify-content-center align-items-center enabled`}
+          onClick={previous}
+        >
+          <img src={filledLeft} alt="left arrow" className="p-4" />
+        </div>
+        <div
+          className={`right-button d-flex justify-content-center align-items-center enabled`}
+          onClick={next}
+        >
+          <img src={emptyRight} alt="rightArrow" className="p-4" />
+        </div>
         <Slider ref={(c) => (slider.current = c)} {...settings}>
           {roadmap.map((item, index) => (
             <RoadmapCard key={index} data={item} />
           ))}
 
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card selected d-flex flex-column align-items-center">
-              <img src={selectedRoadmap} alt=""   />
+            <div className="date-card d-flex flex-column align-items-center">
+              <img
+                src={selectedRoadmap}
+                alt=""
+                style={{ visibility: "hidden" }}
+              />
               <h2 style={{ color: "#EFF0F6" }}>2022 Q3/Q4</h2>
               <div className="outer-circle d-flex justify-content-center align-items-center">
                 <div className="inner-circle"></div>
               </div>
             </div>
-            <div className="accordion accordion-flush roadmap-items highlight d-flex flex-column p-4" id="roadmapAccordion">
-             
-             <div className="accordion-item">
-             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aroa-aria-controls="collapseOne">
-                <img src={completedIcon} alt=""   />
-                <p>Building Extra Features for DYP Tools</p>
+            <div
+              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
+              id="roadmapAccordion"
+            >
+              {q3q4.map((item, index) => (
+                <div className="accordion-item">
+                  <div
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapse${index}`}
+                    aria-expanded="false"
+                    aroa-aria-controls={`collapse${index}`}
+                  >
+                    <img src={completedIcon} alt="" />
+                    <p>{item.title}</p>
+                  </div>
+                  <div
+                    id={`collapse${index}`}
+                    className="accordion-collapse collapse"
+                    aria-aria-labelledby={`heading${index}`}
+                    data-bs-parent="#roadmapAccordion"
+                  >
+                    <ul className="mb-0 py-2 roadmap-list">
+                      {item.content.map((listItem) => (
+                        <li className="accordion-list-item">
+                          {index === 5 ? (
+                            <a
+                              href="https://drive.google.com/file/d/16-aemFDx8ozgerUze6uMMKmAygTNWn0c/view?usp=sharing"
+                              target={"_blank"}
+                            >
+                              {listItem}
+                            </a>
+                          ) : (
+                            listItem
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
+            <div className="date-card d-flex flex-column align-items-center">
+              <img src={selectedRoadmap} alt="" />
+              <h2 style={{ color: "#EFF0F6" }}>2023 Q1</h2>
+              <div className="outer-circle d-flex justify-content-center align-items-center">
+                <div className="inner-circle"></div>
               </div>
-              <div id="collapseOne" className="accordion-collapse collapse" aria-aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-                <ul className="mb-0 py-2">
-                  <li className="accordion-list-item">News Section available on Ethereum, BNB Chain, and Avalanche</li>
-                  <li className="accordion-list-item">Yields Section on BNB Chain</li>
-                  <li className="accordion-list-item">DYP Locker on BNB Chain </li>
-                  <li className="accordion-list-item">New benefits on DYP Tools Premium subscription</li>
-                  <li className="accordion-list-item">Improved voting system</li>
-                </ul>
+            </div>
+            <div
+              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              id="roadmapAccordion"
+            >
+              {quarterOne2023.map((item, index) => (
+                <div className="accordion-item">
+                  <div
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseOne${index}`}
+                    aria-expanded="false"
+                    aroa-aria-controls={`collapseOne${index}`}
+                  >
+                    {index === 0 ? (
+                      <img src={completedOrangeIcon} alt="" />
+                    ) : (
+                      <img src={uncompletedIcon} alt="" />
+                    )}
+                    <p>{item.title}</p>
+                  </div>
+                  <div
+                    id={`collapseOne${index}`}
+                    className="accordion-collapse collapse"
+                    aria-aria-labelledby={`headingOne${index}`}
+                    data-bs-parent="#roadmapAccordion"
+                  >
+                    <ul
+                      className="mb-0 py-2 ps-2"
+                      style={{ listStyle: "none" }}
+                    >
+                      <li className="accordion-list-item">{item.content}</li>
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
+            <div className="date-card d-flex flex-column align-items-center">
+              <img src={selectedRoadmap} alt="" />
+              <h2 style={{ color: "#EFF0F6" }}>2023 Q2</h2>
+              <div className="outer-circle d-flex justify-content-center align-items-center">
+                <div className="inner-circle"></div>
               </div>
-             </div>
-             <div className="accordion-item">
-             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aroa-aria-controls="collapseTwo">
-                <img src={completedIcon} alt=""   />
-                <p>Rebranding Process</p>
+            </div>
+            <div
+              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              id="roadmapAccordion"
+            >
+              {quarterTwo2023.map((item, index) => (
+                <div className="accordion-item">
+                  <div
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseTwo${index}`}
+                    aria-expanded="false"
+                    aroa-aria-controls={`collapseTwo${index}`}
+                  >
+                    <img src={uncompletedIcon} alt="" />
+                    <p>{item.title}</p>
+                  </div>
+                  <div
+                    id={`collapseTwo${index}`}
+                    className="accordion-collapse collapse"
+                    aria-aria-labelledby={`headingTwo${index}`}
+                    data-bs-parent="#roadmapAccordion"
+                  >
+                    <ul
+                      className="mb-0 py-2 ps-2"
+                      style={{ listStyle: "none" }}
+                    >
+                      <li className="accordion-list-item">{item.content}</li>
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
+            <div className="date-card d-flex flex-column align-items-center">
+              <img src={selectedRoadmap} alt="" />
+              <h2 style={{ color: "#EFF0F6" }}>2023 Q3</h2>
+              <div className="outer-circle d-flex justify-content-center align-items-center">
+                <div className="inner-circle"></div>
               </div>
-              <div id="collapseTwo" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
-                <ul className="mb-0 py-2">
-                  <li className="accordion-list-item">A brand-new and improved UI/UX</li>
-                  <li className="accordion-list-item">Enhanced dApps on DYP Tools</li>
-                </ul>
-              </div>
-             </div>
-             <div className="accordion-item">
-             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aroa-aria-controls="collapseThree">
-                <img src={completedIcon} alt=""   />
-                <p>Metaverse Research and Launch of Different Products</p>
-              </div>
-              <div id="collapseThree" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
-                <ul className="mb-0 py-2">
-                  <li className="accordion-list-item">Deep analysis on Metaverse platforms</li>
-                  <li className="accordion-list-item">Dypius product integration</li>
-                  <li className="accordion-list-item">Partners areas development</li>
-                  <li className="accordion-list-item">Navigation, looting, and fighting systems</li>
-                  <li className="accordion-list-item">Character classes, abilities, tools, and gears</li>
-                  <li className="accordion-list-item">Talent tree</li>
-                </ul>
-              </div>
-             </div>
-             <div className="accordion-item">
-             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aroa-aria-controls="collapseFour">
-                <img src={completedIcon} alt=""   />
-                <p>Metaverse Begins for the CAWS</p>
-              </div>
-              <div id="collapseFour" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
-                <ul className="mb-0 py-2">
-                  <li className="accordion-list-item">CAWS NFT integration on World of Dypians</li>
-                </ul>
-              </div>
-             </div>
-             <div className="accordion-item">
-             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aroa-aria-controls="collapseFive">
-                <img src={completedIcon} alt=""   />
-                <p>Further Extension and Project Growth in Different Areas</p>
+            </div>
+            <div
+              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              id="roadmapAccordion"
+            >
+              {quarterThree2023.map((item, index) => (
+                <div className="accordion-item">
+                  <div
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseThree${index}`}
+                    aria-expanded="false"
+                    aroa-aria-controls={`collapseThree${index}`}
+                  >
+                    <img src={uncompletedIcon} alt="" />
+                    <p>{item.title}</p>
+                  </div>
+                  <div
+                    id={`collapseThree${index}`}
+                    className="accordion-collapse collapse"
+                    aria-aria-labelledby={`headingThree${index}`}
+                    data-bs-parent="#roadmapAccordion"
+                  >
+                    <ul
+                      className="mb-0 py-2 ps-2"
+                      style={{ listStyle: "none" }}
+                    >
+                      <li className="accordion-list-item">{item.content}</li>
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
+          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
+            <div className="date-card d-flex flex-column align-items-center">
+              <img src={selectedRoadmap} alt="" />
+              <h2 style={{ color: "#EFF0F6" }}>2023 Q4</h2>
+              <div className="outer-circle d-flex justify-content-center align-items-center">
+                <div className="inner-circle"></div>
               </div>
-              <div id="collapseFive" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
-                <ul className="mb-0 py-2">
-                  <li className="accordion-list-item">Multiple Partners integrations on World of Dypians</li>
-               
-                </ul>
-              </div>
-             </div>
-             <div className="accordion-item">
-             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aroa-aria-controls="collapseSix">
-                <img src={completedIcon} alt=""   />
-                <p>
-                  Incorporation of a Legal Entity for upcoming Regulation For
-                  Decentralized Finance
-                </p>
-
-              </div>
-              <div id="collapseSix" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
-                <ul className="mb-0 py-2">
-                  <li className="accordion-list-item"><a href="https://drive.google.com/file/d/16-aemFDx8ozgerUze6uMMKmAygTNWn0c/view?usp=sharing" target={"_blank"}>DYP Finance LTD registration certificate</a></li>
-            
-                </ul>
-              </div>
-             </div>
-             <div className="accordion-item">
-             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aroa-aria-controls="collapseSeven">
-                <img src={completedIcon} alt=""   />
-                <p>Expanding our Products to other Chains</p>
-              </div>
-              <div id="collapseSeven" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
-                <ul className="mb-0 py-2">
-                  <li className="accordion-list-item">Multichain integration on World of Dypians</li>
-              
-                </ul>
-              </div>
-             </div>
-             <div className="accordion-item">
-             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aroa-aria-controls="collapseEight">
-                <img src={completedIcon} alt=""   />
-                <p>Launch App for iOS and Android</p>
-              </div>
-              <div id="collapseEight" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
-                <ul className="mb-0 py-2">
-                  <li className="accordion-list-item"> App approval pending (expected approval and release time estimated on Q1 2023)</li>
-                
-                </ul>
-              </div>
-             </div>
-             <div className="accordion-item">
-             <div className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aroa-aria-controls="collapseNine">
-                <img src={completedIcon} alt=""   />
-                <p>Launch Multi-Chain DEX</p>
-              </div>
-              <div id="collapseNine" className="accordion-collapse collapse" aria-aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion">
-                <ul className="mb-0 py-2">
-                  <li className="accordion-list-item">Token Swaps with 1inch Plugin on DYP Tools</li>
-                </ul>
-              </div>
-             </div>
-             
+            </div>
+            <div
+              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              id="roadmapAccordion"
+            >
+              {quarterFour2023.map((item, index) => (
+                <div className="accordion-item">
+                  <div
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseFour${index}`}
+                    aria-expanded="false"
+                    aroa-aria-controls={`collapseFour${index}`}
+                  >
+                    <img src={uncompletedIcon} alt="" />
+                    <p>{item.title}</p>
+                  </div>
+                  <div
+                    id={`collapseFour${index}`}
+                    className="accordion-collapse collapse"
+                    aria-aria-labelledby={`headingFour${index}`}
+                    data-bs-parent="#roadmapAccordion"
+                  >
+                    <ul
+                      className="mb-0 py-2 ps-2"
+                      style={{ listStyle: "none" }}
+                    >
+                      <li className="accordion-list-item">{item.content}</li>
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </Slider>
