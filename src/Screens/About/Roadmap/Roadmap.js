@@ -507,7 +507,7 @@ const Roadmap = () => {
                our users are always up-to-date with the latest advancements in
                technology and have access to the most advanced features and tools
                available.
-               <a href="https://www.worldofdypians.com/roadmap" target="_blank" style={{fontWeight: '800'}}>   World of Dypians roadmap</a>
+               <a href="https://www.worldofdypians.com/roadmap" target="_blank" style={{fontWeight: '800', color: '#F0603A'}}>   World of Dypians roadmap</a>
              </p>
            </div>
         
