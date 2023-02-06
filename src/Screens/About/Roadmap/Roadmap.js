@@ -598,7 +598,7 @@ const Roadmap = () => {
           ))}
 
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card d-flex flex-column align-items-center">
+            <div className="date-card selected d-flex flex-column align-items-center">
               <img
                 src={selectedRoadmap} style={{visibility: 'hidden'}}
                 alt=""
@@ -652,7 +652,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card d-flex flex-column align-items-center">
+            <div className="date-card selected d-flex flex-column align-items-center">
               <img src={selectedRoadmap} style={{visibility: 'hidden'}} alt=""  />
               <h2 style={{ color: "#EFF0F6" }}>2023 Q1</h2>
               <div className="outer-circle d-flex justify-content-center align-items-center">
