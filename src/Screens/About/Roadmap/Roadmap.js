@@ -352,57 +352,90 @@ const Roadmap = () => {
   const slider = useRef();
 
   const next = () => {
-    slider.current.slickNext();
-    if (activeYear.roadmap2023 === true) {
-      setActiveYear({
-        roadmap2020: true,
-        roadmap2021: false,
-        roadmap2022: false,
-        roadmap2023: false,
-      });
-      setShowText(false);
-      slider.current.innerSlider.slickGoTo(0);
-      setActiveSlide2(0);
+    if(windowSize.width > 786){
+      slider.current.slickNext();
+      if (activeYear.roadmap2023 === true) {
+        setActiveYear({
+          roadmap2020: true,
+          roadmap2021: false,
+          roadmap2022: false,
+          roadmap2023: false,
+        });
+        setShowText(false);
+        slider.current.innerSlider.slickGoTo(0);
+        setActiveSlide2(0);
+      }
+  
+      if (activeSlide2 === 0) {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: true,
+          roadmap2022: false,
+          roadmap2023: false,
+        });
+        setShowText(false);
+  
+        slider.current.innerSlider.slickGoTo(4);
+      }
+  
+      if (activeSlide2 === 4) {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: true,
+          roadmap2023: false,
+        });
+        setShowText(false);
+  
+        slider.current.innerSlider.slickGoTo(8);
+      }
+      if (activeSlide2 === 8) {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: false,
+          roadmap2023: true,
+        });
+        setShowText(true);
+  
+        slider.current.innerSlider.slickGoTo(12);
+      }
+    }else{
+    slider.current.innerSlider.slickNext();
+      if(activeSlide2 < 1){
+        setActiveYear({
+          roadmap2020: true,
+          roadmap2021: false,
+          roadmap2022: false,
+          roadmap2023: false,
+        });
+      }else if(activeSlide2 < 5){
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: true,
+          roadmap2022: false,
+          roadmap2023: false,
+        });
+      }else if(activeSlide2 < 9){
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: true,
+          roadmap2023: false,
+        });
+      }else{
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: false,
+          roadmap2023: true,
+        });
+      }
     }
-
-    if (activeSlide2 === 0) {
-      setActiveYear({
-        roadmap2020: false,
-        roadmap2021: true,
-        roadmap2022: false,
-        roadmap2023: false,
-      });
-      setShowText(false);
-
-      slider.current.innerSlider.slickGoTo(4);
-    }
-
-    if (activeSlide2 === 4) {
-      setActiveYear({
-        roadmap2020: false,
-        roadmap2021: false,
-        roadmap2022: true,
-        roadmap2023: false,
-      });
-      setShowText(false);
-
-      slider.current.innerSlider.slickGoTo(8);
-    }
-    if (activeSlide2 === 8) {
-      setActiveYear({
-        roadmap2020: false,
-        roadmap2021: false,
-        roadmap2022: false,
-        roadmap2023: true,
-      });
-      setShowText(true);
-
-      slider.current.innerSlider.slickGoTo(12);
-    }
-    console.log(activeSlide2);
   };
 
   const previous = () => {
+   if(windowSize.width > 786){
     slider.current.slickPrev();
     if (activeYear.roadmap2023 === true) {
       if (activeSlide2 < 5) {
@@ -458,16 +491,41 @@ const Roadmap = () => {
       setShowText(true);
       slider.current.innerSlider.slickGoTo(12);
     }
-
-    console.log(activeSlide2);
-  };
-
-  const nextSlide = () => {
-    slider.current.innerSlider.slickNext();
-  };
-  const prevSlide = () => {
+   }else{
     slider.current.innerSlider.slickPrev();
+    if(activeSlide2 < 3){
+      setActiveYear({
+        roadmap2020: true,
+        roadmap2021: false,
+        roadmap2022: false,
+        roadmap2023: false,
+      });
+    }else if(activeSlide2 < 7){
+      setActiveYear({
+        roadmap2020: false,
+        roadmap2021: true,
+        roadmap2022: false,
+        roadmap2023: false,
+      });
+    }else if(activeSlide2 < 11){
+      setActiveYear({
+        roadmap2020: false,
+        roadmap2021: false,
+        roadmap2022: true,
+        roadmap2023: false,
+      });
+    }else{
+      setActiveYear({
+        roadmap2020: false,
+        roadmap2021: false,
+        roadmap2022: false,
+        roadmap2023: true,
+      });
+    }
+   }
   };
+
+ 
 
   const goto2020 = () => {
     slider.current.innerSlider.slickGoTo(0);
@@ -526,7 +584,7 @@ const Roadmap = () => {
     if (windowSize.width < 786) {
       goto2023();
     }
-  }, []);
+  }, [windowSize.width]);
   
   useEffect(() => {
     if (windowSize.width < 786) {
@@ -620,8 +678,6 @@ const Roadmap = () => {
       </div>
       <div className="row justify-content-evenly position-relative carousel-wrapper">
         <hr />
-        {windowSize.width > 786 ? (
-          <>
             <div
               className={`left-button d-flex justify-content-center align-items-center enabled`}
               onClick={previous}
@@ -633,24 +689,7 @@ const Roadmap = () => {
               onClick={next}
             >
               <img src={emptyRight} alt="rightArrow" className="p-4" />
-            </div>
-          </>
-        ) : (
-          <>
-            <div
-              className={`left-button d-flex justify-content-center align-items-center enabled`}
-              onClick={prevSlide}
-            >
-              <img src={filledLeft} alt="left arrow" className="p-4" />
-            </div>
-            <div
-              className={`right-button d-flex justify-content-center align-items-center enabled`}
-              onClick={nextSlide}
-            >
-              <img src={emptyRight} alt="rightArrow" className="p-4" />
-            </div>
-          </>
-        )}
+            </div>      
         <Slider ref={(c) => (slider.current = c)} {...settings}>
           {windowSize.width > 786 && (
             <div className="col-12 d-flex flex-column gap-4 selected-roadmap hidden-roadmap">
