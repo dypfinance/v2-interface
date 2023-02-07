@@ -249,6 +249,10 @@
   }
 }
 
+.hidden-roadmap{
+  visibility: hidden !important;
+}
+
 @media screen and (max-width: 1399px) {
   .carousel-wrapper {
     .slick-list {
