@@ -123,13 +123,7 @@ const Roadmap = () => {
         "Improved voting system",
       ],
     },
-    {
-      title: "Rebranding Process",
-      content: [
-        "A brand-new and improved UI/UX",
-        "Enhanced dApps on DYP Tools",
-      ],
-    },
+   
     {
       title: "Metaverse Research and Launch of Different Products",
       content: [
@@ -141,23 +135,31 @@ const Roadmap = () => {
         "Talent tree",
       ],
     },
-    {
-      title: "Metaverse Begins for the CAWS",
-      content: ["CAWS NFT integration on World of Dypians"],
-    },
+  
     {
       title: "Further Extension and Project Growth in Different Areas",
       content: ["Multipe Partners integrations on World of Dypians"],
     },
-   
-  ];
-
-  const quarterFour2022 = [
     {
       title:
         "Incorporation of a Legal Entity for upcoming Regulation For Decentralized Finance",
       content: ["DYP Finance LTD registration certificate"],
     },
+  ];
+
+  const quarterFour2022 = [
+    {
+      title: "Rebranding Process",
+      content: [
+        "A brand-new and improved UI/UX",
+        "Enhanced dApps on DYP Tools",
+      ],
+    },
+    {
+      title: "Metaverse Begins for the CAWS",
+      content: ["CAWS NFT integration on World of Dypians"],
+    },
+ 
     {
       title: "Expanding our products to other Chains",
       content: ["Multichain integration on World of Dypians"],
@@ -299,7 +301,7 @@ const Roadmap = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    initialSlide: roadmap.length + 3,
+    initialSlide: 12,
     beforeChange: (current, next) => {
       setOldSlide(current);
       setActiveSlide(next);
@@ -520,6 +522,7 @@ const Roadmap = () => {
       roadmap2021: false,
       roadmap2022: false,
       roadmap2023: true,
+      
     });
     setShowText(true)
 
@@ -798,9 +801,19 @@ const Roadmap = () => {
                     data-bs-parent="#roadmapAccordion"
                   >
                     <ul className="mb-0 py-2 roadmap-list">
-                      {item.content.map((listItem) => (
+                     
+                         {item.content.map((listItem) => (
                         <li className="accordion-list-item">
-                            {listItem}
+                          {index === 3 ? (
+                            <a
+                              href="https://drive.google.com/file/d/16-aemFDx8ozgerUze6uMMKmAygTNWn0c/view?usp=sharing"
+                              target={"_blank"}
+                            >
+                              {listItem}
+                            </a>
+                          ) : (
+                            listItem
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -843,18 +856,9 @@ const Roadmap = () => {
                     data-bs-parent="#roadmapAccordion"
                   >
                     <ul className="mb-0 py-2 roadmap-list">
-                      {item.content.map((listItem) => (
+                    {item.content.map((listItem) => (
                         <li className="accordion-list-item">
-                          {index === 0 ? (
-                            <a
-                              href="https://drive.google.com/file/d/16-aemFDx8ozgerUze6uMMKmAygTNWn0c/view?usp=sharing"
-                              target={"_blank"}
-                            >
-                              {listItem}
-                            </a>
-                          ) : (
-                            listItem
-                          )}
+                            {listItem}
                         </li>
                       ))}
                     </ul>
