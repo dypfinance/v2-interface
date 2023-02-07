@@ -12,11 +12,9 @@ import roadmapIcon from "./assets/roadmapIcon.svg";
 import RoadmapCard from "../../../components/RoadmapCard/RoadmapCard";
 import Slider from "react-slick";
 import { useRef } from "react";
-import useWindowSize from '../../../hooks/useWindowSize'
+import useWindowSize from "../../../hooks/useWindowSize";
 
 const Roadmap = () => {
-
-
   const windowSize = useWindowSize();
 
   const roadmap = [
@@ -123,7 +121,7 @@ const Roadmap = () => {
         "Improved voting system",
       ],
     },
-   
+
     {
       title: "Metaverse Research and Launch of Different Products",
       content: [
@@ -135,7 +133,7 @@ const Roadmap = () => {
         "Talent tree",
       ],
     },
-  
+
     {
       title: "Further Extension and Project Growth in Different Areas",
       content: ["Multipe Partners integrations on World of Dypians"],
@@ -159,7 +157,7 @@ const Roadmap = () => {
       title: "Metaverse Begins for the CAWS",
       content: ["CAWS NFT integration on World of Dypians"],
     },
- 
+
     {
       title: "Expanding our products to other Chains",
       content: ["Multichain integration on World of Dypians"],
@@ -174,7 +172,7 @@ const Roadmap = () => {
       title: "Launch Multi-Chain DEX",
       content: ["Token Swaps with 1inch Plugin on DYP Tools"],
     },
-  ]
+  ];
 
   const quarterOne2023 = [
     {
@@ -284,14 +282,16 @@ const Roadmap = () => {
 
   const [oldSlide, setOldSlide] = useState(0);
   const [activeSlide, setActiveSlide] = useState(6);
-  const [activeSlide2, setActiveSlide2] = useState(6);
-  const [showText, setShowText] = useState(false)
+  const [activeSlide2, setActiveSlide2] = useState(
+    window.innerWidth < 786 ? 10 : 12
+  );
+  const [showText, setShowText] = useState(true);
 
   const [activeYear, setActiveYear] = useState({
     roadmap2020: false,
     roadmap2021: false,
-    roadmap2022: true,
-    roadmap2023: false,
+    roadmap2022: false,
+    roadmap2023: true,
   });
 
   const settings = {
@@ -301,7 +301,8 @@ const Roadmap = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    initialSlide: 12,
+    initialSlide: window.innerWidth < 786 ? 10 : 12,
+
     beforeChange: (current, next) => {
       setOldSlide(current);
       setActiveSlide(next);
@@ -342,7 +343,7 @@ const Roadmap = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: roadmap.length,
+          initialSlide: 10,
         },
       },
     ],
@@ -359,7 +360,7 @@ const Roadmap = () => {
         roadmap2022: false,
         roadmap2023: false,
       });
-      setShowText(false)
+      setShowText(false);
       slider.current.innerSlider.slickGoTo(0);
       setActiveSlide2(0);
     }
@@ -371,7 +372,7 @@ const Roadmap = () => {
         roadmap2022: false,
         roadmap2023: false,
       });
-      setShowText(false)
+      setShowText(false);
 
       slider.current.innerSlider.slickGoTo(4);
     }
@@ -383,7 +384,7 @@ const Roadmap = () => {
         roadmap2022: true,
         roadmap2023: false,
       });
-      setShowText(false)
+      setShowText(false);
 
       slider.current.innerSlider.slickGoTo(8);
     }
@@ -394,7 +395,7 @@ const Roadmap = () => {
         roadmap2022: false,
         roadmap2023: true,
       });
-      setShowText(true)
+      setShowText(true);
 
       slider.current.innerSlider.slickGoTo(12);
     }
@@ -420,10 +421,9 @@ const Roadmap = () => {
         roadmap2022: true,
         roadmap2023: false,
       });
-      setShowText(false)
+      setShowText(false);
 
       slider.current.innerSlider.slickGoTo(8);
-
     }
     if (activeSlide2 === 8) {
       setActiveYear({
@@ -432,10 +432,9 @@ const Roadmap = () => {
         roadmap2022: false,
         roadmap2023: false,
       });
-      setShowText(false)
+      setShowText(false);
 
       slider.current.innerSlider.slickGoTo(4);
-
     }
 
     if (activeSlide2 === 4) {
@@ -445,7 +444,7 @@ const Roadmap = () => {
         roadmap2022: false,
         roadmap2023: false,
       });
-      setShowText(false)
+      setShowText(false);
 
       slider.current.innerSlider.slickGoTo(0);
     }
@@ -456,7 +455,7 @@ const Roadmap = () => {
         roadmap2022: false,
         roadmap2023: true,
       });
-      setShowText(true)
+      setShowText(true);
       slider.current.innerSlider.slickGoTo(12);
     }
 
@@ -464,10 +463,10 @@ const Roadmap = () => {
   };
 
   const nextSlide = () => {
-    slider.current.slickNext();
+    slider.current.innerSlider.slickNext();
   };
   const prevSlide = () => {
-    slider.current.slickPrev();
+    slider.current.innerSlider.slickPrev();
   };
 
   const goto2020 = () => {
@@ -478,13 +477,12 @@ const Roadmap = () => {
       roadmap2022: false,
       roadmap2023: false,
     });
-    setShowText(false)
-
+    setShowText(false);
   };
   const goto2021 = () => {
-    if(windowSize.width < 786){
+    if (windowSize.width < 786) {
       slider.current.innerSlider.slickGoTo(2);
-    }else{
+    } else {
       slider.current.innerSlider.slickGoTo(4);
     }
     setActiveYear({
@@ -493,13 +491,12 @@ const Roadmap = () => {
       roadmap2022: false,
       roadmap2023: false,
     });
-    setShowText(false)
-
+    setShowText(false);
   };
   const goto2022 = () => {
-    if(windowSize.width < 786){
+    if (windowSize.width < 786) {
       slider.current.innerSlider.slickGoTo(6);
-    }else{
+    } else {
       slider.current.innerSlider.slickGoTo(8);
     }
     setActiveYear({
@@ -508,13 +505,12 @@ const Roadmap = () => {
       roadmap2022: true,
       roadmap2023: false,
     });
-    setShowText(false)
-
+    setShowText(false);
   };
   const goto2023 = () => {
-    if(windowSize.width < 786){
+    if (windowSize.width < 786) {
       slider.current.innerSlider.slickGoTo(10);
-    }else{
+    } else {
       slider.current.innerSlider.slickGoTo(12);
     }
     setActiveYear({
@@ -522,25 +518,22 @@ const Roadmap = () => {
       roadmap2021: false,
       roadmap2022: false,
       roadmap2023: true,
-      
     });
-    setShowText(true)
-
+    setShowText(true);
   };
-
-  useEffect(() => {
-    goto2023();
-
-  }, [])
   
-
   useEffect(() => {
-
-    if(windowSize.width < 786){
-      if(activeSlide2 < 10){
-        setShowText(false)
-      }else{
-        setShowText(true)
+    if (windowSize.width < 786) {
+      goto2023();
+    }
+  }, []);
+  
+  useEffect(() => {
+    if (windowSize.width < 786) {
+      if (activeSlide2 < 10) {
+        setShowText(false);
+      } else {
+        setShowText(true);
       }
     }
   }, [activeSlide2]);
@@ -549,28 +542,40 @@ const Roadmap = () => {
     <div className="container-lg roadmap-wrapper overflow-hidden" id="roadmap">
       <div className="row flex-column gap-1 p-3 p-lg-5 roadmap-title">
         <div className="d-flex flex-column flex-lg-row align-items-center align-items-lg-end justify-content-between">
-        <h1 className="text-white text-center text-lg-start">Dypius roadmap</h1>
-        <p>Our journey to success</p>
+          <h1 className="text-white text-center text-lg-start">
+            Dypius roadmap
+          </h1>
+          <p>Our journey to success</p>
         </div>
         <div className="d-flex flex-column-reverse flex-lg-row w-100 justify-content-between align-items-center align-items-lg-start gap-4">
-             <div className={`roadmap-desc-wrapper p-3  ${!showText && 'no-visibility' }`} style={{zIndex: 9}}>
-             <p className={`roadmap-desc mb-0`}>
-               It is important for us to keep our focus on delivering high-quality
-               products and improving the current offerings to provide our users with
-               the best experience possible. As part of our efforts to continuously
-               improve our offerings, we will be continually developing new products
-               and enhancing existing features in the roadmap. This will ensure that
-               our users are always up-to-date with the latest advancements in
-               technology and have access to the most advanced features and tools
-               available.
-               <a href="https://www.worldofdypians.com/roadmap" target="_blank" style={{fontWeight: '800', color: '#F0603A'}}>   World of Dypians roadmap</a>
-             </p>
-           </div>
-        
-            
+          <div
+            className={`roadmap-desc-wrapper p-3  ${
+              !showText && "no-visibility"
+            }`}
+            style={{ zIndex: 9 }}
+          >
+            <p className={`roadmap-desc mb-0`}>
+              It is important for us to keep our focus on delivering
+              high-quality products and improving the current offerings to
+              provide our users with the best experience possible. As part of
+              our efforts to continuously improve our offerings, we will be
+              continually developing new products and enhancing existing
+              features in the roadmap. This will ensure that our users are
+              always up-to-date with the latest advancements in technology and
+              have access to the most advanced features and tools available.
+              <a
+                href="https://www.worldofdypians.com/roadmap"
+                target="_blank"
+                style={{ fontWeight: "800", color: "#F0603A" }}
+              >
+                {" "}
+                World of Dypians roadmap
+              </a>
+            </p>
+          </div>
+
           <div className="d-flex flex-row gap-lg-4 gap-xl-4 gap-md-4 gap-3">
-            
-           <div className="years-wrapper d-flex flex-row p-2 gap-1 justify-content-center align-items-center">
+            <div className="years-wrapper d-flex flex-row p-2 gap-1 justify-content-center align-items-center">
               <p
                 className={`${activeYear.roadmap2020 && "selected-year"}`}
                 onClick={goto2020}
@@ -595,7 +600,7 @@ const Roadmap = () => {
               >
                 2023
               </p>
-            </div> 
+            </div>
             {/* <div className="d-flex flex-column gap-1">
             <span className="to-roadmap">World of Dypians roadmap</span>
             <a
@@ -612,157 +617,155 @@ const Roadmap = () => {
           </div> */}
           </div>
         </div>
-       
       </div>
       <div className="row justify-content-evenly position-relative carousel-wrapper">
         <hr />
-        {windowSize.width > 786 ? 
-        
+        {windowSize.width > 786 ? (
           <>
-          <div
-          className={`left-button d-flex justify-content-center align-items-center enabled`}
-          onClick={previous}
-        >
-          <img src={filledLeft} alt="left arrow" className="p-4" />
-        </div>
-        <div
-          className={`right-button d-flex justify-content-center align-items-center enabled`}
-          onClick={next}
-        >
-          <img src={emptyRight} alt="rightArrow" className="p-4" />
-        </div>
+            <div
+              className={`left-button d-flex justify-content-center align-items-center enabled`}
+              onClick={previous}
+            >
+              <img src={filledLeft} alt="left arrow" className="p-4" />
+            </div>
+            <div
+              className={`right-button d-flex justify-content-center align-items-center enabled`}
+              onClick={next}
+            >
+              <img src={emptyRight} alt="rightArrow" className="p-4" />
+            </div>
           </>
-          :
+        ) : (
           <>
-          <div
-          className={`left-button d-flex justify-content-center align-items-center enabled`}
-          onClick={prevSlide}
-        >
-          <img src={filledLeft} alt="left arrow" className="p-4" />
-        </div>
-        <div
-          className={`right-button d-flex justify-content-center align-items-center enabled`}
-          onClick={nextSlide}
-        >
-          <img src={emptyRight} alt="rightArrow" className="p-4" />
-        </div>
+            <div
+              className={`left-button d-flex justify-content-center align-items-center enabled`}
+              onClick={prevSlide}
+            >
+              <img src={filledLeft} alt="left arrow" className="p-4" />
+            </div>
+            <div
+              className={`right-button d-flex justify-content-center align-items-center enabled`}
+              onClick={nextSlide}
+            >
+              <img src={emptyRight} alt="rightArrow" className="p-4" />
+            </div>
           </>
-      }
+        )}
         <Slider ref={(c) => (slider.current = c)} {...settings}>
-      {windowSize.width > 786 &&
-        <div className="col-12 d-flex flex-column gap-4 selected-roadmap hidden-roadmap">
-            <div className="date-card selected d-flex flex-column align-items-center">
-              <img
-                src={selectedRoadmap} style={{visibility: 'hidden'}}
-                alt=""
-              />
-              <h2 style={{ color: "#EFF0F6" }}>2022 Q4</h2>
-              <div className="outer-circle d-flex justify-content-center align-items-center">
-                <div className="inner-circle"></div>
+          {windowSize.width > 786 && (
+            <div className="col-12 d-flex flex-column gap-4 selected-roadmap hidden-roadmap">
+              <div className="date-card selected d-flex flex-column align-items-center">
+                <img
+                  src={selectedRoadmap}
+                  style={{ visibility: "hidden" }}
+                  alt=""
+                />
+                <h2 style={{ color: "#EFF0F6" }}>2022 Q4</h2>
+                <div className="outer-circle d-flex justify-content-center align-items-center">
+                  <div className="inner-circle"></div>
+                </div>
+              </div>
+              <div
+                className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
+                id="roadmapAccordion"
+              >
+                {quarterFour2022.map((item, index) => (
+                  <div className="accordion-item">
+                    <div
+                      className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target={`#collapseQuarterFour${index}`}
+                      aria-expanded="false"
+                      aroa-aria-controls={`collapseQuarterFour${index}`}
+                    >
+                      <img src={completedIcon} alt="" />
+                      <p>{item.title}</p>
+                    </div>
+                    <div
+                      id={`collapseQuarterFour${index}`}
+                      className="accordion-collapse collapse"
+                      aria-aria-labelledby={`headingQuarterFour${index}`}
+                      data-bs-parent="#roadmapAccordion"
+                    >
+                      <ul className="mb-0 py-2 roadmap-list">
+                        {item.content.map((listItem) => (
+                          <li className="accordion-list-item">
+                            {index === 0 ? (
+                              <a
+                                href="https://drive.google.com/file/d/16-aemFDx8ozgerUze6uMMKmAygTNWn0c/view?usp=sharing"
+                                target={"_blank"}
+                              >
+                                {listItem}
+                              </a>
+                            ) : (
+                              listItem
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-            <div
-              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
-              id="roadmapAccordion"
-            >
-              {quarterFour2022.map((item, index) => (
-                <div className="accordion-item">
-                  <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
-                    data-bs-toggle="collapse"
-                    data-bs-target={`#collapseQuarterFour${index}`}
-                    aria-expanded="false"
-                    aroa-aria-controls={`collapseQuarterFour${index}`}
-                  >
-                    <img src={completedIcon} alt="" />
-                    <p>{item.title}</p>
-                  </div>
-                  <div
-                    id={`collapseQuarterFour${index}`}
-                    className="accordion-collapse collapse"
-                    aria-aria-labelledby={`headingQuarterFour${index}`}
-                    data-bs-parent="#roadmapAccordion"
-                  >
-                    <ul className="mb-0 py-2 roadmap-list">
-                      {item.content.map((listItem) => (
-                        <li className="accordion-list-item">
-                          {index === 0 ? (
-                            <a
-                              href="https://drive.google.com/file/d/16-aemFDx8ozgerUze6uMMKmAygTNWn0c/view?usp=sharing"
-                              target={"_blank"}
-                            >
-                              {listItem}
-                            </a>
-                          ) : (
-                            listItem
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+          )}
+          {windowSize.width > 786 && (
+            <div className="col-12 d-flex flex-column gap-4 selected-roadmap hidden-roadmap">
+              <div className="date-card selected d-flex flex-column align-items-center">
+                <img
+                  src={selectedRoadmap}
+                  style={{ visibility: "hidden" }}
+                  alt=""
+                />
+                <h2 style={{ color: "#EFF0F6" }}>2022 Q4</h2>
+                <div className="outer-circle d-flex justify-content-center align-items-center">
+                  <div className="inner-circle"></div>
                 </div>
-              ))}
-            </div>
-          </div>
-          
-      }
-      {windowSize.width > 786 &&
-        <div className="col-12 d-flex flex-column gap-4 selected-roadmap hidden-roadmap">
-            <div className="date-card selected d-flex flex-column align-items-center">
-              <img
-                src={selectedRoadmap} style={{visibility: 'hidden'}}
-                alt=""
-              />
-              <h2 style={{ color: "#EFF0F6" }}>2022 Q4</h2>
-              <div className="outer-circle d-flex justify-content-center align-items-center">
-                <div className="inner-circle"></div>
+              </div>
+              <div
+                className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
+                id="roadmapAccordion"
+              >
+                {quarterFour2022.map((item, index) => (
+                  <div className="accordion-item">
+                    <div
+                      className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target={`#collapseQuarterFour${index}`}
+                      aria-expanded="false"
+                      aroa-aria-controls={`collapseQuarterFour${index}`}
+                    >
+                      <img src={completedIcon} alt="" />
+                      <p>{item.title}</p>
+                    </div>
+                    <div
+                      id={`collapseQuarterFour${index}`}
+                      className="accordion-collapse collapse"
+                      aria-aria-labelledby={`headingQuarterFour${index}`}
+                      data-bs-parent="#roadmapAccordion"
+                    >
+                      <ul className="mb-0 py-2 roadmap-list">
+                        {item.content.map((listItem) => (
+                          <li className="accordion-list-item">
+                            {index === 0 ? (
+                              <a
+                                href="https://drive.google.com/file/d/16-aemFDx8ozgerUze6uMMKmAygTNWn0c/view?usp=sharing"
+                                target={"_blank"}
+                              >
+                                {listItem}
+                              </a>
+                            ) : (
+                              listItem
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-            <div
-              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
-              id="roadmapAccordion"
-            >
-              {quarterFour2022.map((item, index) => (
-                <div className="accordion-item">
-                  <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
-                    data-bs-toggle="collapse"
-                    data-bs-target={`#collapseQuarterFour${index}`}
-                    aria-expanded="false"
-                    aroa-aria-controls={`collapseQuarterFour${index}`}
-                  >
-                    <img src={completedIcon} alt="" />
-                    <p>{item.title}</p>
-                  </div>
-                  <div
-                    id={`collapseQuarterFour${index}`}
-                    className="accordion-collapse collapse"
-                    aria-aria-labelledby={`headingQuarterFour${index}`}
-                    data-bs-parent="#roadmapAccordion"
-                  >
-                    <ul className="mb-0 py-2 roadmap-list">
-                      {item.content.map((listItem) => (
-                        <li className="accordion-list-item">
-                          {index === 0 ? (
-                            <a
-                              href="https://drive.google.com/file/d/16-aemFDx8ozgerUze6uMMKmAygTNWn0c/view?usp=sharing"
-                              target={"_blank"}
-                            >
-                              {listItem}
-                            </a>
-                          ) : (
-                            listItem
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-      }
+          )}
           {roadmap.map((item, index) => (
             <RoadmapCard key={index} data={item} />
           ))}
@@ -770,7 +773,8 @@ const Roadmap = () => {
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card selected d-flex flex-column align-items-center">
               <img
-                src={selectedRoadmap} style={{visibility: 'hidden'}}
+                src={selectedRoadmap}
+                style={{ visibility: "hidden" }}
                 alt=""
               />
               <h2 style={{ color: "#EFF0F6" }}>2022 Q3</h2>
@@ -801,8 +805,7 @@ const Roadmap = () => {
                     data-bs-parent="#roadmapAccordion"
                   >
                     <ul className="mb-0 py-2 roadmap-list">
-                     
-                         {item.content.map((listItem) => (
+                      {item.content.map((listItem) => (
                         <li className="accordion-list-item">
                           {index === 3 ? (
                             <a
@@ -825,7 +828,8 @@ const Roadmap = () => {
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card selected d-flex flex-column align-items-center">
               <img
-                src={selectedRoadmap} style={{visibility: 'hidden'}}
+                src={selectedRoadmap}
+                style={{ visibility: "hidden" }}
                 alt=""
               />
               <h2 style={{ color: "#EFF0F6" }}>2022 Q4</h2>
@@ -856,10 +860,8 @@ const Roadmap = () => {
                     data-bs-parent="#roadmapAccordion"
                   >
                     <ul className="mb-0 py-2 roadmap-list">
-                    {item.content.map((listItem) => (
-                        <li className="accordion-list-item">
-                            {listItem}
-                        </li>
+                      {item.content.map((listItem) => (
+                        <li className="accordion-list-item">{listItem}</li>
                       ))}
                     </ul>
                   </div>
@@ -867,9 +869,14 @@ const Roadmap = () => {
               ))}
             </div>
           </div>
+
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card selected d-flex flex-column align-items-center">
-              <img src={selectedRoadmap} style={{visibility: 'hidden'}} alt=""  />
+              <img
+                src={selectedRoadmap}
+                style={{ visibility: "hidden" }}
+                alt=""
+              />
               <h2 style={{ color: "#EFF0F6" }}>2023 Q1</h2>
               <div className="outer-circle d-flex justify-content-center align-items-center">
                 <div className="inner-circle"></div>
@@ -914,7 +921,11 @@ const Roadmap = () => {
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card d-flex flex-column align-items-center">
-              <img src={selectedRoadmap} style={{visibility: 'hidden'}} alt="" />
+              <img
+                src={selectedRoadmap}
+                style={{ visibility: "hidden" }}
+                alt=""
+              />
               <h2 style={{ color: "#EFF0F6" }}>2023 Q2</h2>
               <div className="outer-circle d-flex justify-content-center align-items-center">
                 <div className="inner-circle"></div>
@@ -955,7 +966,11 @@ const Roadmap = () => {
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card d-flex flex-column align-items-center">
-              <img src={selectedRoadmap} style={{visibility: 'hidden'}} alt="" />
+              <img
+                src={selectedRoadmap}
+                style={{ visibility: "hidden" }}
+                alt=""
+              />
               <h2 style={{ color: "#EFF0F6" }}>2023 Q3</h2>
               <div className="outer-circle d-flex justify-content-center align-items-center">
                 <div className="inner-circle"></div>
@@ -997,7 +1012,11 @@ const Roadmap = () => {
 
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card d-flex flex-column align-items-center">
-              <img src={selectedRoadmap} style={{visibility: 'hidden'}} alt="" />
+              <img
+                src={selectedRoadmap}
+                style={{ visibility: "hidden" }}
+                alt=""
+              />
               <h2 style={{ color: "#EFF0F6" }}>2023 Q4</h2>
               <div className="outer-circle d-flex justify-content-center align-items-center">
                 <div className="inner-circle"></div>
