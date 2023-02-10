@@ -85,7 +85,7 @@ const OurTokens = () => {
             classname={"bridge"}
             title={"Bridge"}
             desc={
-              "Dypius Bridge offers users the possibility to send tokens from Ethereum to BNB and Avalanche chains with ease. Every transaction is instant and secure."
+              "Dypius Bridge offers users the possibility to send tokens from BNB to Avalanche chains with ease. Every transaction is instant and secure."
             }
             link={'https://app.dypius.com/bridge'}
           />
