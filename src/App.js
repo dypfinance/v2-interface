@@ -32,7 +32,7 @@ function App() {
         <BrowserRouter>
             <HamburgerMenu />
             <Navbar />
-            <LandPopup />
+            {/* <LandPopup /> */}
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/dyp" element={<Dyp />} />
