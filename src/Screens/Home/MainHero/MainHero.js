@@ -80,7 +80,7 @@ const MainHero = () => {
                     </p>
                     <p style={{ fontSize: 13 }}>
                       Dypius Bridge offers users the possibility to send tokens
-                      from Ethereum to BNB and Avalanche chains with ease. Every
+                      from BNB to Avalanche chains with ease. Every
                       transaction is instant and secure.
                     </p>
                   </div>
