@@ -140,16 +140,6 @@ const OurTeam = () => {
         "Highly self – motivated marketing specialist with a Master Degree in Media Communication. Managing the marketing activities by demonstrating expertise in various areas, including optimization, advertising, social media, direct marketing and event planning. With a strong attention to details, knowledge of current marketing tools and a high level of creativity my goal is to bring humanity into digital. I’m developing marketing strategies and creative content that separates DeFi Yield Protocol from the crowd.",
     },
     {
-      id: "daniel",
-      name: "Daniel Garret",
-      position: "Marketing &          Communications Manager",
-      photo: daniel,
-      link: "https://www.linkedin.com/in/thedg3/",
-      content:
-        "With 20 years of experience in Finance and Business Development, I have found my true passion in the Cryptocurrency and NFT marketplace. I've been involved in Cryptocurrency since 2015 and have been collecting and selling NFT's for the last year. I love art, technology, finance and entrepreneurship so when I was introduced to the DYP team it felt like a dream come true. In my spare time I enjoy nature and spending time with my wife and my dog.  I am excited about the opportunities that DYP offers and I truly believe in our Cats and Watches Society NFT. I look forward to help grow the discord community into something uniquely special where our members can feel welcome, safe and rewarded for being part in this new, exciting, and growing space. With rapid change comes great opportunity - Daniel.",
-    },
-
-    {
       id: "vlad",
       name: "Vlad Stefan",
       position: "Content Manager",
