@@ -248,7 +248,7 @@ const BuyDypHero = () => {
     {
       title: "Coin98",
       logo: "coin98.png",
-      link: "",
+      link: "https://exchange.coin98.com/binancesmart/bnb/0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17",
       totalvids: "3 videos",
       videos: [
         {
