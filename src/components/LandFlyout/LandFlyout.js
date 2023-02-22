@@ -29,7 +29,7 @@ const LandFlyout = () => {
             preload="auto"
             autoPlay={true}
             loop={true}
-            muted="muted"
+            muted
             playsInline={true}
             style={{ width: "100%", height: "100%" }}
           />
