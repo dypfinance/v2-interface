@@ -20,6 +20,7 @@ import NewsPage from "./Screens/NewsPage/NewsPage";
 import BuyDypScreen from "./Screens/BuyDyp/BuyDypScreen";
 import Caws from "./Screens/Caws/Caws";
 import LandPopup from "./components/LandPopup/LandPopup";
+import LandFlyout from './components/LandFlyout/LandFlyout'
 
 function App() {
     useEffect(() => {
@@ -32,7 +33,7 @@ function App() {
         <BrowserRouter>
             <HamburgerMenu />
             <Navbar />
-            {/* <LandPopup /> */}
+            <LandFlyout />
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/dyp" element={<Dyp />} />
