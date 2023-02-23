@@ -934,7 +934,7 @@ const Roadmap = () => {
                     aria-expanded="false"
                     aroa-aria-controls={`collapseOne${index}`}
                   >
-                    {index === 0 || index === 1 ? (
+                    {index === 0 || index === 1 || index === 2 ? (
                       <img src={completedOrangeIcon} alt="" />
                     ) : (
                       <img src={uncompletedIcon} alt="" />
