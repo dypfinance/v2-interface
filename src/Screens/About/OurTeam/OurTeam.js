@@ -9,16 +9,14 @@ import gino from "../../../assets/team/gino.jpg";
 import fatjon from "../../../assets/team/fatjon.jpg";
 import lorena from "../../../assets/team/lorena.jpg";
 import aldi from "../../../assets/team/aldi.jpg";
-import alexandra from "../../../assets/team/alexandra.jpg";
 import gazmend from "../../../assets/team/gazmend.jpg";
 import bogdan from "../../../assets/team/bogdan.jpg";
-import daniel from "../../../assets/team/daniel.jpg";
-import dinakar from "../../../assets/team/dinakar.jpg";
 import sheyn from "../../../assets/team/jubi.jpg";
 import gjata from "../../../assets/team/jgjata.jpg";
 import toni from "../../../assets/team/toni.jpg";
-import vlad from "../../../assets/team/vlad.jpg";
 import cristian from "../../../assets/team/cristian.jpg";
+import soni from "../../../assets/team/soni.jpeg";
+
 
 import useWindowSize from "../../../hooks/useWindowSize";
 import { useState } from "react";
@@ -80,7 +78,7 @@ const OurTeam = () => {
       photo: fatjon,
       link: "https://www.linkedin.com/in/fatjon-shaba-9a751313a",
       content:
-        "Over the last few years, I’ve worked with a wide range of products to create an insight led, human-centred digital experiences. My approach to UI/UX combines design thinking, user research and with a focus on the humans who use the designs I create. In my free time, I enjoy exploring design by seeing what can be done next in the future, trying to push my knowledge and abilities even further. I enjoy playing with designs and exploring new pathways I haven’t tried before… but most importantly I love what I do.",
+        "Over the last few years, I've worked with a wide range of products to create an insight led, human-centred digital experiences. My approach to UI/UX combines design thinking, user research and with a focus on the humans who use the designs I create. In my free time, I enjoy exploring design by seeing what can be done next in the future, trying to push my knowledge and abilities even further. I enjoy playing with designs and exploring new pathways I haven’t tried before… but most importantly I love what I do.",
     },
     {
       id: "toni",
@@ -121,6 +119,7 @@ const OurTeam = () => {
       content:
         "I'm a Blockchain Developer that is still exploring every corner of the domain. I haven't graduated yet (Currently pursuing a Computer Science Bachelor's Degree at Politehnica University of Bucharest). I had the luck to discover DeFi and since then my life has turned to a different new direction. I've been a part of the blockchain sphere for 3 years now. I also enjoy exploring different technologies in my free time, like React or Kotlin. I am also a gamer that enjoys well built MMO's.",
     },
+
     {
       id: "gjata",
       name: "Fatjon Gjata",
@@ -129,6 +128,15 @@ const OurTeam = () => {
       link: "https://www.linkedin.com/in/fatjon-gjata/",
       content:
         "I have several years of experience in the game business and am a Metaverse Expert. I acquired a great affinity for Unity, a game engine that enables you to make 3D games, as a result of my keen interest in the metaverse and how it can be utilized to provide immersive experiences for gamers. I work diligently and make it a point to develop my abilities. My ability to work well in a team and like collaborating with others to produce the finest possible results is one of my stronger traits. I'm excited to continue working in the video game business and putting my talents to use in making incredible experiences for players.",
+    },
+    {
+      id: "soni",
+      name: "Soni Seli",
+      position: "Unity Developer",
+      photo: soni,
+      link: "https://www.linkedin.com/in/soni-seli-b6abb6213/",
+      content:
+        "Soni possesses a wealth of expertise in game development, having contributed to numerous gaming and metaverse projects. His involvement in such initiatives has resulted in widespread user engagement, with several of the projects garnering a global audience in the millions.",
     },
     {
       id: "bogdan",
