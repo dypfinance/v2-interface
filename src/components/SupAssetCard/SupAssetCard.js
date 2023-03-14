@@ -4,6 +4,7 @@ import rightArrow from "../../assets/right-arrow.svg";
 import caws from './assets/CAWS.svg'
 import dyp from './assets/DYP.svg'
 import idyp from './assets/iDYP.svg'
+import wod from './assets/wod.png'
 
 const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainType, logo }) => {
 
@@ -38,8 +39,8 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainTy
           ))}
           </div>
           :
-          <div className="row gap-1 align-items-center">
-          <img src={pool === "CAWS" ? caws : pool === "iDYP" ? idyp : dyp} alt="eth_pool" width={50} height={50} className="pl-0"  />
+          <div className="row gap-2 align-items-center">
+          <img src={pool === "CAWS" ? caws : pool === "iDYP" ? idyp : pool === "WoD" ? wod : dyp} alt="eth_pool" width={40} height={40} className="p-0"  />
           <span className="poolTitle p-0">{pool}</span>
         </div>  
         }
