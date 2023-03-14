@@ -17,6 +17,8 @@ import toni from "../../../assets/team/toni.jpg";
 import cristian from "../../../assets/team/cristian.jpg";
 import soni from "../../../assets/team/soni.jpeg";
 import samuel from "../../../assets/team/samuel.jpeg";
+import arben from "../../../assets/team/arben.jpg";
+
 
 
 
@@ -130,6 +132,24 @@ const OurTeam = () => {
       link: "https://www.linkedin.com/in/fatjon-gjata/",
       content:
         "I have several years of experience in the game business and am a Metaverse Expert. I acquired a great affinity for Unity, a game engine that enables you to make 3D games, as a result of my keen interest in the metaverse and how it can be utilized to provide immersive experiences for gamers. I work diligently and make it a point to develop my abilities. My ability to work well in a team and like collaborating with others to produce the finest possible results is one of my stronger traits. I'm excited to continue working in the video game business and putting my talents to use in making incredible experiences for players.",
+    },
+    {
+      id: "arben",
+      name: "Arben Meta",
+      position: "Senior 3D/VFX Artist",
+      photo: arben,
+      link: "https://www.linkedin.com/in/arbenmeta/",
+      content:
+        `I am a 3D/VFX Artist specialized in 3D Modeling Digital Sculpting and PBR Texturing. I am also involved in Rigging and Dynamic Simulations.
+        My Pipeline is based on Procedural Creation
+        Techniques that applies on various fields like:
+        Games, Movies, VR and Real-Time Visualizations.
+        I have over 23 years of experience in 3D and
+        26 years in total including Computer Science.
+        I started coding in QBasic at age 16 and ended up
+        in C++ and 3D Applications later.
+        I keep sharpening my skills, learn new stuff and
+        update my self to the latest Technologies.`,
     },
     {
       id: "soni",
