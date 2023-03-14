@@ -145,7 +145,7 @@ const SupportedAssets = () => {
 
           const sortedAprs = cleanCards.sort(function(a, b){return b.tvl_usd - a.tvl_usd}) 
          
-          const finalEthCards = res.data.stakingInfoCAWS.concat(sortedAprs.slice(0,2))
+          const finalEthCards = res.data.stakingInfoCAWS.concat(res.data.stakingInfoLAND, sortedAprs.slice(0,1))
           setCards(finalEthCards);
         })
         .catch((err) => {
@@ -154,7 +154,7 @@ const SupportedAssets = () => {
     };
     const fetchBnbStaking = async () => {
       await axios
-        .get(`https://api.dyp.finance/api/get_staking_info_bnb`)
+        .get(`https://api2.dyp.finance/api/get_staking_info_bnb`)
         .then((res) => {
           const dypIdypBnb = res.data.stakingInfoDYPBnb.concat(
             res.data.stakingInfoiDYPBnb
@@ -163,8 +163,17 @@ const SupportedAssets = () => {
             return item.expired !== "Yes"
           })
 
-          const sortedAprs = cleanCards.sort(function(a, b){return b.tvl_usd - a.tvl_usd}) 
-          setCards(sortedAprs);
+         
+          const newPool = cleanCards.filter((item) => {
+            return item.new_pool === "Yes"
+          })
+
+          const oldPool = cleanCards.filter((item) => {
+            return item.new_pool !== "Yes"
+          })
+ 
+          const sortedAprs = oldPool.sort(function(a, b){return b.tvl_usd - a.tvl_usd}) 
+          setCards([...newPool, ...sortedAprs.slice(0,2)]);
         })
         .catch((err) => {
           console.log(err);
@@ -172,7 +181,7 @@ const SupportedAssets = () => {
     };
     const fetchAvaxStaking = async () => {
       await axios
-        .get(`https://api.dyp.finance/api/get_staking_info_avax`)
+        .get(`https://api2.dyp.finance/api/get_staking_info_avax`)
         .then((res) => {
           const dypIdypAvax = res.data.stakingInfoDYPAvax.concat(
             res.data.stakingInfoiDYPAvax
@@ -180,8 +189,17 @@ const SupportedAssets = () => {
           const cleanCards = dypIdypAvax.filter((item) => {
             return item.expired !== "Yes"
           })
-          const sortedAprs = cleanCards.sort(function(a, b){return b.tvl_usd - a.tvl_usd}) 
-          setCards(sortedAprs);
+
+          const newPool = cleanCards.filter((item) => {
+            return item.new_pool === "Yes"
+          })
+
+          const oldPool = cleanCards.filter((item) => {
+            return item.new_pool !== "Yes"
+          })
+ 
+          const sortedAprs = oldPool.sort(function(a, b){return b.tvl_usd - a.tvl_usd}) 
+          setCards([...newPool, ...sortedAprs.slice(0,2)]);
         })
         .catch((err) => {
           console.log(err);
