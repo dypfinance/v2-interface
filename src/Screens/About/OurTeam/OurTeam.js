@@ -16,6 +16,8 @@ import gjata from "../../../assets/team/jgjata.jpg";
 import toni from "../../../assets/team/toni.jpg";
 import cristian from "../../../assets/team/cristian.jpg";
 import soni from "../../../assets/team/soni.jpeg";
+import samuel from "../../../assets/team/samuel.jpeg";
+
 
 
 import useWindowSize from "../../../hooks/useWindowSize";
@@ -137,6 +139,15 @@ const OurTeam = () => {
       link: "https://www.linkedin.com/in/soni-seli-b6abb6213/",
       content:
         "Soni possesses a wealth of expertise in game development, having contributed to numerous gaming and metaverse projects. His involvement in such initiatives has resulted in widespread user engagement, with several of the projects garnering a global audience in the millions.",
+    },
+    {
+      id: "samuel",
+      name: "Samuel Mema",
+      position: "3D Artist",
+      photo: samuel,
+      link: "https://www.linkedin.com/in/samuel-mema-baa35a1ba/",
+      content:
+        "Drawing on his extensive expertise in 3D modeling, Samuel has participated in several international projects throughout his career. Driven by a natural affinity for gaming, he has dedicated himself to game development and is currently at the forefront of advancing best practices for 3D modeling within this dynamic and rapidly evolving industry.",
     },
     {
       id: "bogdan",
