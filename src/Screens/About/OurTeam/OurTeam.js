@@ -131,37 +131,9 @@ const OurTeam = () => {
         "I have several years of experience in the game business and am a Metaverse Expert. I acquired a great affinity for Unity, a game engine that enables you to make 3D games, as a result of my keen interest in the metaverse and how it can be utilized to provide immersive experiences for gamers. I work diligently and make it a point to develop my abilities. My ability to work well in a team and like collaborating with others to produce the finest possible results is one of my stronger traits. I'm excited to continue working in the video game business and putting my talents to use in making incredible experiences for players.",
     },
     {
-      id: "alexandra",
-      name: "Chifor Alexandra",
-      position: "Head of Marketing",
-      photo: alexandra,
-      link: "https://www.linkedin.com/in/alexandra-chifor/",
-      content:
-        "Highly self – motivated marketing specialist with a Master Degree in Media Communication. Managing the marketing activities by demonstrating expertise in various areas, including optimization, advertising, social media, direct marketing and event planning. With a strong attention to details, knowledge of current marketing tools and a high level of creativity my goal is to bring humanity into digital. I’m developing marketing strategies and creative content that separates DeFi Yield Protocol from the crowd.",
-    },
-    {
-      id: "vlad",
-      name: "Vlad Stefan",
-      position: "Content Manager",
-      photo: vlad,
-      link: "https://www.linkedin.com/in/vlad-stefan-874124164/",
-      content:
-        "A crypto enthusiast and a passionate content creator, responsible for developing, planning and implementing DYP's content strategy. Managing the creation and production of marketing materials online but also offline.",
-    },
-
-    {
-      id: "dinakar",
-      name: "Dinakar Kodati",
-      position: "Community Manager",
-      photo: dinakar,
-      link: "https://www.linkedin.com/in/dinakar-kodati-985ba25a/",
-      content:
-        "I am a Web Developer by profession and Crypto enthusiast by passion, I started getting involved in Crypto Late 2020's that is when I came across DYP (Defi Yield Protocol), I joined them as an user fell in love with project learned about DYP out and out, and then started helping the community sharing the knowledge I already gained. On one fine day DYP team Digital Strategy Manager Teki Kolaneci approached me to offer Moderator role to handle DYP Telegram and Discords and then rest are best movements I enjoyed every part of being part of hard working, enthusiast DYP Team, gained good name from community with this progress I got promoted to Community Manager of DYP, I am so glad and thankful for DYPians and DYP Team for putting me in this position. I will improve my skills everyday to provide better services in all the aspects I can to make DYP a successful project.",
-    },
-    {
       id: "sheyn",
       name: "Sheyn Cabalse",
-      position: "Community Manager",
+      position: "Project Coordinator",
       photo: sheyn,
       link: "https://www.linkedin.com/in/gerlie-cabalse-yael07/",
       content:
