@@ -131,6 +131,15 @@ const OurTeam = () => {
         "I have several years of experience in the game business and am a Metaverse Expert. I acquired a great affinity for Unity, a game engine that enables you to make 3D games, as a result of my keen interest in the metaverse and how it can be utilized to provide immersive experiences for gamers. I work diligently and make it a point to develop my abilities. My ability to work well in a team and like collaborating with others to produce the finest possible results is one of my stronger traits. I'm excited to continue working in the video game business and putting my talents to use in making incredible experiences for players.",
     },
     {
+      id: "bogdan",
+      name: "Constantin Bogdan",
+      position: "Marketing Manager",
+      photo: bogdan,
+      link: "https://www.linkedin.com/in/bogdan-constantin-1105b7201/",
+      content:
+        "Constantin Bogdan graduated from the University of Bucharest in 2007 and he holds a Master in Human Resource Psychology. Bogdan has ten years of experience in enterprise in a variety of roles at startups, private companies, and ANOFM Bucharest including product management, product marketing, and sales management, and is the Marketing Manager for Dypius.",
+    },
+    {
       id: "sheyn",
       name: "Sheyn Cabalse",
       position: "Project Coordinator",
