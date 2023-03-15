@@ -434,7 +434,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                             className="dypcontract-title"
                             style={{ fontSize: 12 }}
                           >
-                            Vested for 10 years, released monthly
+                            Vested for 24 months, released monthly
                           </span>
                           <span className="dypcontract-addr">
                             2,411,200.00 DYP
