@@ -169,15 +169,7 @@ const OurTeam = () => {
       content:
         "Drawing on his extensive expertise in 3D modeling, Samuel has participated in several international projects throughout his career. Driven by a natural affinity for gaming, he has dedicated himself to game development and is currently at the forefront of advancing best practices for 3D modeling within this dynamic and rapidly evolving industry.",
     },
-    {
-      id: "bogdan",
-      name: "Constantin Bogdan",
-      position: "Marketing Manager",
-      photo: bogdan,
-      link: "https://www.linkedin.com/in/bogdan-constantin-1105b7201/",
-      content:
-        "Constantin Bogdan graduated from the University of Bucharest in 2007 and he holds a Master in Human Resource Psychology. Bogdan has ten years of experience in enterprise in a variety of roles at startups, private companies, and ANOFM Bucharest including product management, product marketing, and sales management, and is the Marketing Manager for Dypius.",
-    },
+
     {
       id: "sheyn",
       name: "Sheyn Cabalse",
@@ -186,6 +178,14 @@ const OurTeam = () => {
       link: "https://www.linkedin.com/in/gerlie-cabalse-yael07/",
       content:
         "I discovered Cryptocurrency back in 2017 when bounty campaign from Bitcointalk.org is the crypto marketing trend. I saw that there is a future on digital assets and I believe that it is the future so I decided to learn more and did some trading. I started to work as bounty campaign manager and community manager for several projects since 2019. I offered a bounty campaign to Sir Mihai for DeFi Yield Protocol during the ICO and managed it then He assigned me as a telegram and discord moderator after the campaign ended. My aim as a moderator is to assist the community with every query they bring and ensure to convey the right answer. I believe that a better communication is crucial for building a solid community. I am grateful to be a part and looking forward for DeFi Yield Protocol to achieve a successfully complete DeFi ecosystem.",
+    },    {
+      id: "bogdan",
+      name: "Constantin Bogdan",
+      position: "Marketing Manager",
+      photo: bogdan,
+      link: "https://www.linkedin.com/in/bogdan-constantin-1105b7201/",
+      content:
+        "Constantin Bogdan graduated from the University of Bucharest in 2007 and he holds a Master in Human Resource Psychology. Bogdan has ten years of experience in enterprise in a variety of roles at startups, private companies, and ANOFM Bucharest including product management, product marketing, and sales management, and is the Marketing Manager for Dypius.",
     },
   ];
 
