@@ -9,16 +9,18 @@ import gino from "../../../assets/team/gino.jpg";
 import fatjon from "../../../assets/team/fatjon.jpg";
 import lorena from "../../../assets/team/lorena.jpg";
 import aldi from "../../../assets/team/aldi.jpg";
-import alexandra from "../../../assets/team/alexandra.jpg";
 import gazmend from "../../../assets/team/gazmend.jpg";
 import bogdan from "../../../assets/team/bogdan.jpg";
-import daniel from "../../../assets/team/daniel.jpg";
-import dinakar from "../../../assets/team/dinakar.jpg";
 import sheyn from "../../../assets/team/jubi.jpg";
 import gjata from "../../../assets/team/jgjata.jpg";
 import toni from "../../../assets/team/toni.jpg";
-import vlad from "../../../assets/team/vlad.jpg";
 import cristian from "../../../assets/team/cristian.jpg";
+import soni from "../../../assets/team/soni.jpeg";
+import samuel from "../../../assets/team/samuel.jpeg";
+import arben from "../../../assets/team/arben.jpg";
+
+
+
 
 import useWindowSize from "../../../hooks/useWindowSize";
 import { useState } from "react";
@@ -80,7 +82,7 @@ const OurTeam = () => {
       photo: fatjon,
       link: "https://www.linkedin.com/in/fatjon-shaba-9a751313a",
       content:
-        "Over the last few years, I’ve worked with a wide range of products to create an insight led, human-centred digital experiences. My approach to UI/UX combines design thinking, user research and with a focus on the humans who use the designs I create. In my free time, I enjoy exploring design by seeing what can be done next in the future, trying to push my knowledge and abilities even further. I enjoy playing with designs and exploring new pathways I haven’t tried before… but most importantly I love what I do.",
+        "Over the last few years, I've worked with a wide range of products to create an insight led, human-centred digital experiences. My approach to UI/UX combines design thinking, user research and with a focus on the humans who use the designs I create. In my free time, I enjoy exploring design by seeing what can be done next in the future, trying to push my knowledge and abilities even further. I enjoy playing with designs and exploring new pathways I haven’t tried before… but most importantly I love what I do.",
     },
     {
       id: "toni",
@@ -121,6 +123,7 @@ const OurTeam = () => {
       content:
         "I'm a Blockchain Developer that is still exploring every corner of the domain. I haven't graduated yet (Currently pursuing a Computer Science Bachelor's Degree at Politehnica University of Bucharest). I had the luck to discover DeFi and since then my life has turned to a different new direction. I've been a part of the blockchain sphere for 3 years now. I also enjoy exploring different technologies in my free time, like React or Kotlin. I am also a gamer that enjoys well built MMO's.",
     },
+
     {
       id: "gjata",
       name: "Fatjon Gjata",
@@ -131,41 +134,58 @@ const OurTeam = () => {
         "I have several years of experience in the game business and am a Metaverse Expert. I acquired a great affinity for Unity, a game engine that enables you to make 3D games, as a result of my keen interest in the metaverse and how it can be utilized to provide immersive experiences for gamers. I work diligently and make it a point to develop my abilities. My ability to work well in a team and like collaborating with others to produce the finest possible results is one of my stronger traits. I'm excited to continue working in the video game business and putting my talents to use in making incredible experiences for players.",
     },
     {
-      id: "alexandra",
-      name: "Chifor Alexandra",
-      position: "Head of Marketing",
-      photo: alexandra,
-      link: "https://www.linkedin.com/in/alexandra-chifor/",
+      id: "arben",
+      name: "Arben Meta",
+      position: "Senior 3D/VFX Artist",
+      photo: arben,
+      link: "https://www.linkedin.com/in/arbenmeta/",
       content:
-        "Highly self – motivated marketing specialist with a Master Degree in Media Communication. Managing the marketing activities by demonstrating expertise in various areas, including optimization, advertising, social media, direct marketing and event planning. With a strong attention to details, knowledge of current marketing tools and a high level of creativity my goal is to bring humanity into digital. I’m developing marketing strategies and creative content that separates DeFi Yield Protocol from the crowd.",
+        `I am a 3D/VFX Artist specialized in 3D Modeling Digital Sculpting and PBR Texturing. I am also involved in Rigging and Dynamic Simulations.
+        My Pipeline is based on Procedural Creation
+        Techniques that applies on various fields like:
+        Games, Movies, VR and Real-Time Visualizations.
+        I have over 23 years of experience in 3D and
+        26 years in total including Computer Science.
+        I started coding in QBasic at age 16 and ended up
+        in C++ and 3D Applications later.
+        I keep sharpening my skills, learn new stuff and
+        update my self to the latest Technologies.`,
     },
     {
-      id: "vlad",
-      name: "Vlad Stefan",
-      position: "Content Manager",
-      photo: vlad,
-      link: "https://www.linkedin.com/in/vlad-stefan-874124164/",
+      id: "soni",
+      name: "Soni Seli",
+      position: "Unity Developer",
+      photo: soni,
+      link: "https://www.linkedin.com/in/soni-seli-b6abb6213/",
       content:
-        "A crypto enthusiast and a passionate content creator, responsible for developing, planning and implementing DYP's content strategy. Managing the creation and production of marketing materials online but also offline.",
+        "Soni possesses a wealth of expertise in game development, having contributed to numerous gaming and metaverse projects. His involvement in such initiatives has resulted in widespread user engagement, with several of the projects garnering a global audience in the millions.",
+    },
+    {
+      id: "samuel",
+      name: "Samuel Mema",
+      position: "3D Artist",
+      photo: samuel,
+      link: "https://www.linkedin.com/in/samuel-mema-baa35a1ba/",
+      content:
+        "Drawing on his extensive expertise in 3D modeling, Samuel has participated in several international projects throughout his career. Driven by a natural affinity for gaming, he has dedicated himself to game development and is currently at the forefront of advancing best practices for 3D modeling within this dynamic and rapidly evolving industry.",
     },
 
     {
-      id: "dinakar",
-      name: "Dinakar Kodati",
-      position: "Community Manager",
-      photo: dinakar,
-      link: "https://www.linkedin.com/in/dinakar-kodati-985ba25a/",
-      content:
-        "I am a Web Developer by profession and Crypto enthusiast by passion, I started getting involved in Crypto Late 2020's that is when I came across DYP (Defi Yield Protocol), I joined them as an user fell in love with project learned about DYP out and out, and then started helping the community sharing the knowledge I already gained. On one fine day DYP team Digital Strategy Manager Teki Kolaneci approached me to offer Moderator role to handle DYP Telegram and Discords and then rest are best movements I enjoyed every part of being part of hard working, enthusiast DYP Team, gained good name from community with this progress I got promoted to Community Manager of DYP, I am so glad and thankful for DYPians and DYP Team for putting me in this position. I will improve my skills everyday to provide better services in all the aspects I can to make DYP a successful project.",
-    },
-    {
       id: "sheyn",
       name: "Sheyn Cabalse",
-      position: "Community Manager",
+      position: "Project Coordinator",
       photo: sheyn,
       link: "https://www.linkedin.com/in/gerlie-cabalse-yael07/",
       content:
         "I discovered Cryptocurrency back in 2017 when bounty campaign from Bitcointalk.org is the crypto marketing trend. I saw that there is a future on digital assets and I believe that it is the future so I decided to learn more and did some trading. I started to work as bounty campaign manager and community manager for several projects since 2019. I offered a bounty campaign to Sir Mihai for DeFi Yield Protocol during the ICO and managed it then He assigned me as a telegram and discord moderator after the campaign ended. My aim as a moderator is to assist the community with every query they bring and ensure to convey the right answer. I believe that a better communication is crucial for building a solid community. I am grateful to be a part and looking forward for DeFi Yield Protocol to achieve a successfully complete DeFi ecosystem.",
+    },    {
+      id: "bogdan",
+      name: "Constantin Bogdan",
+      position: "Marketing Manager",
+      photo: bogdan,
+      link: "https://www.linkedin.com/in/bogdan-constantin-1105b7201/",
+      content:
+        "Constantin Bogdan graduated from the University of Bucharest in 2007 and he holds a Master in Human Resource Psychology. Bogdan has ten years of experience in enterprise in a variety of roles at startups, private companies, and ANOFM Bucharest including product management, product marketing, and sales management, and is the Marketing Manager for Dypius.",
     },
   ];
 
