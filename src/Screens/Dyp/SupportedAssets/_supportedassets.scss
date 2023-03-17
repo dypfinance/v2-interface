@@ -143,6 +143,16 @@
     }
 }
 
+.pool-coins:first-child {
+  transform: translateX(0px);
+  /* z-index: 6; */
+}
+
+.pool-coins:nth-child(2) {
+  transform: translateX(-10px);
+  /* z-index: 5; */
+}
+
 
 .spiral {
   position: absolute;

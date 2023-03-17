@@ -12,6 +12,8 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainTy
   const bscCoins = ["bsc", "btcb", "ethereum", "busd", "pancakeswap", "idypius" ]
   const avaxCoins = ["avax", "ethereum", "wbtc", "usdt", "usdc", "dai", "idypius", "pangolin", "benqi", "xava", "link"]
 
+  const wodcawscoins = ['wod.png', 'caws.svg']
+
   const [coins, setCoins] = useState(ethCoins)
   
 
@@ -39,8 +41,15 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainTy
           ))}
           </div>
           :
-          <div className="row gap-2 align-items-center">
-          <img src={pool === "CAWS" ? caws : pool === "iDYP" ? idyp : pool === "WoD" ? wod : dyp} alt="eth_pool" width={40} height={40} className="p-0"  />
+          <div className={`row ${pool !== "WoD + CAWS" && "gap-2"} align-items-center`}>
+          {pool === "WoD + CAWS" ?
+          <>
+          <img src={wod} className="pool-coins p-0" width={40} height={40}  />
+          <img src={caws} className="pool-coins p-0" width={40} height={40}  />
+          </>
+          :
+          <img src={pool === "CAWS" ? caws : pool === "iDYP" ? idyp : pool === "WoD" ? wod : dyp} alt="eth_pool" width={40} height={40} className="p-0"  />  
+        }
           <span className="poolTitle p-0">{pool}</span>
         </div>  
         }
