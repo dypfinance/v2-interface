@@ -133,7 +133,7 @@ const SupportedAssets = () => {
 
     const fetchEthStaking = async () => {
       await axios
-        .get(`https://api2.dyp.finance/api/get_staking_info_eth`)
+        .get(`https://api.dyp.finance/api/get_staking_info_eth`)
         .then((res) => {
           const dypIdyp = res.data.stakingInfoDYPEth.concat(
             res.data.stakingInfoiDYPEth
