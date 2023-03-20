@@ -145,7 +145,7 @@ const SupportedAssets = () => {
 
           const sortedAprs = cleanCards.sort(function(a, b){return b.tvl_usd - a.tvl_usd}) 
          
-          const finalEthCards = res.data.stakingInfoCAWS.concat(res.data.stakingInfoLAND, sortedAprs.slice(0,1))
+          const finalEthCards = res.data.stakinginfoCAWSLAND.concat(res.data.stakingInfoLAND, sortedAprs.slice(0,1))
           setCards(finalEthCards);
         })
         .catch((err) => {
