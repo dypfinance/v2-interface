@@ -179,31 +179,39 @@ const Roadmap = () => {
       title: "Beta Testers Program",
       content:
         "Release a Beta Testers Program that allows a selected group of users to play and experience the World of Dypians before it is officially released to the public.",
+      completed: true,
     },
     {
       title: "Genesis Land NFT Launch",
       content:
         "World of Dypians Genesis edition is limited to 1,000 NFTs, each of which represents a piece of land located in a prime area within the game that will provide players with a wide range of benefits.",
+      completed: true,
+
     },
     {
       title: "Dedicated Genesis staking pool",
       content:
         "A dedicated staking pool for Genesis Land NFTs that allows users to stake their NFTs into a 25% APR pool and earn rewards in Ethereum",
-    },
-    {
-      title: "Introducing the CAWS Timepiece NFT collection",
-      content:
-        "The CAWS Timepiece NFT collection will provide users additional utility and perks in the World of Dypians Metaverse. CAWS owners will have the ability to mint CAWS Timepiece for free.",
+      completed: true,
+
     },
     {
       title: "Metaverse Multichain Integration",
       content:
         "By incorporating a multichain system into World of Dypians (WoD), the game and the native token, DYP will be able to interact with multiple blockchain networks, allowing for greater interoperability, more utility, and accessibility for players.",
+      completed: true,
+
     },
     {
       title: "Introducing new staking pools",
       content:
         "Launch a dedicated staking pool that lets users receive rewards by depositing asset combinations such as DYP token, iDYP token, CAWS NFT, and Genesis NFT.",
+      completed: true,
+    },
+    {
+      title: "Introducing the CAWS Timepiece NFT collection",
+      content:
+        "The CAWS Timepiece NFT collection will provide users additional utility and perks in the World of Dypians Metaverse. CAWS owners will have the ability to mint CAWS Timepiece for free.",
     },
   ];
 
@@ -934,7 +942,7 @@ const Roadmap = () => {
                     aria-expanded="false"
                     aroa-aria-controls={`collapseOne${index}`}
                   >
-                    {index === 0 || index === 1 || index === 2 || index === 5 ? (
+                    {item?.completed === true ? (
                       <img src={completedOrangeIcon} alt="" />
                     ) : (
                       <img src={uncompletedIcon} alt="" />
