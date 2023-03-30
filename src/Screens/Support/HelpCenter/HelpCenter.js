@@ -187,9 +187,9 @@ const HelpCenter = () => {
 
   const handleSubmit = async () => {
 
-    // setErrors(validate(values));
+    setErrors(validate(values));
 
-    // if (Object.keys(errors).length === 0) {
+    if (Object.keys(errors).length === 0) {
      
 
       if (
@@ -226,7 +226,6 @@ const HelpCenter = () => {
 
         if (send.status === 1) {
           setSuccess(true);
-          console.log(values, selectedFile);
   
 
 
@@ -240,7 +239,7 @@ const HelpCenter = () => {
       setValues({ ...helpState });
       setSelectedFile(null);
 
-    // }
+    }
   };
 
   const handleBusinessSubmit = async (e) => {
@@ -323,10 +322,8 @@ const HelpCenter = () => {
           if (event.target.files[0].size < 5000000) {
             if (type === "help") {
               setSelectedFile(reader.result);
-              console.log(reader.result);
             } else {
               setBusinessFile(reader.result);
-              console.log(reader.result);
             }
           } else alert("File size too big");
         }
