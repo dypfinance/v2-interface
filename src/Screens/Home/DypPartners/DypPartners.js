@@ -115,6 +115,11 @@ const [partnersLength, setPartnersLength] = useState(0)
       text: "SWFT",
       href: "https://www.swft.pro/",
     },
+    {
+      image: "altura.png",
+      text: "Altura",
+      href: "https://www.alturanft.com/",
+    },
   ];
 
 
