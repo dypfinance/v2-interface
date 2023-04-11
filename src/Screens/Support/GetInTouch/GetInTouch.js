@@ -8,27 +8,27 @@ const GetInTouch = () => {
 
     const socials = [
         {
-            link: "https://twitter.com/dypfinance",
+            link: "https://twitter.com/dypius",
             title: 'Twitter',
             icon: 'touchTwitter'
         },
         {
-      link: "https://medium.com/@dypfinance",
+      link: "https://medium.com/@dypius",
             title: 'Medium',
             icon: 'touchMedium'
         },
         {
-            link: "https://www.youtube.com/c/DeFiYieldProtocol/featured",
+            link: "https://www.youtube.com/@Dypius",
             title: 'Youtube',
             icon: 'touchYoutube'
         },
         {
-            link: "https://www.instagram.com/dyp.finance/",
+            link: "https://www.instagram.com/dyp.eth",
             title: 'Instagram',
             icon: 'touchInstagram'
         },
         {
-            link: "https://www.linkedin.com/company/defi-yield-protocol",
+            link: "https://www.linkedin.com/company/dypius-ecosystem",
             title: 'Linkedin',
             icon: 'touchLinkedin'
         },
@@ -56,10 +56,10 @@ const GetInTouch = () => {
                 <Title top='Get in touch with the' bottom='Dypius team' />
                 <div className="general-container position-relative" style={{minHeight: '250px'}}>
                 <p className="touch-title text-white">General chat</p>
-                <a target="_blank" rel="noreferrer" href="https://t.me/dypfinance" className='d-flex justify-content-center'>
+                <a target="_blank" rel="noreferrer" href="https://t.me/dypius" className='d-flex justify-content-center'>
                 <img className='telegram' src={touchTelegram} alt="" />
                 </a>
-                <a target="_blank" rel="noreferrer" href="https://discord.gg/dypcaws" className='d-flex justify-content-center'>
+                <a target="_blank" rel="noreferrer" href="https://discord.gg/worldofdypians" className='d-flex justify-content-center'>
                 <img className='discord' src={touchDiscord} alt="" />
                 </a>
                 </div>
