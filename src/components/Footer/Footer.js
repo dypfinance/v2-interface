@@ -21,31 +21,31 @@ const Footer = () => {
   const socials = [
     {
       name: "Twitter",
-      link: "https://twitter.com/dypfinance",
+      link: "https://twitter.com/dypius",
     },
     {
       name: "Telegram",
-      link: "https://t.me/dypfinance",
+      link: "https://t.me/dypius",
     },
     {
       name: "Discord",
-      link: "https://discord.gg/dypcaws",
+      link: "https://discord.gg/worldofdypians",
     },
     {
       name: "Instagram",
-      link: "https://www.instagram.com/dyp.finance/",
+      link: "https://www.instagram.com/dyp.eth",
     },
     {
       name: "Medium",
-      link: "https://medium.com/@dypfinance",
+      link: "https://medium.com/@dypius",
     },
     {
       name: "Youtube",
-      link: "https://www.youtube.com/c/DeFiYieldProtocol/featured",
+      link: "https://www.youtube.com/@Dypius",
     },
     {
       name: "Linkedin",
-      link: "https://www.linkedin.com/company/defi-yield-protocol",
+      link: "https://www.linkedin.com/company/dypius-ecosystem",
     },
     {
       name: "Github",
