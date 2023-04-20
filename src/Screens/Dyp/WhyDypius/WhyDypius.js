@@ -25,6 +25,7 @@ const WhyDypius = () => {
 
   const viewMore = () => {
     setWhyCardSlice(whyCardSlice + 3);
+    console.log("hellooooo");
   };
 
   const cards = [
@@ -67,7 +68,7 @@ const WhyDypius = () => {
   ];
 
   return (
-    <div className="container-fluid d-flex flex-column justify-content-center why-dypius mt-n5" style={{zIndex: '-1'}}>
+    <div className="container-fluid d-flex flex-column justify-content-center why-dypius mt-n5">
       <div className="container-lg mt-5">
         <div className="row">
           <div className="col-12 col-lg-4 d-flex justify-content-center align-items-center">
@@ -162,7 +163,7 @@ const WhyDypius = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-lg-8 card-wrapper d-grid ">
+          <div className="col-12 col-lg-8 card-wrapper d-grid" style={{zIndex: 15}}>
             {/* <img
               className="ring"
                
@@ -178,7 +179,7 @@ const WhyDypius = () => {
                     icon={card.icon}
                   />
                 ))}
-                <div className={`row justify-content-center my-5  ${whyCardSlice < cards.length ? "d-flex" : "d-none"}`}>
+                <div className={`row justify-content-center my-5  position-relative ${whyCardSlice < cards.length ? "d-flex" : "d-none"}`}  >
                   <button
                     onClick={viewMore}
                     className={`btn outline-btn d-lg-none d-xl-none justify-content-center align-items-center`}
