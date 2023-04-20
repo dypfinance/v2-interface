@@ -137,7 +137,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
           ) : (
             <button
               className={
-                toggleIdyp === true ? "btn filled-btn" : "btn outline-btn"
+                toggleIdyp === true ? "btn outline-btn" : "btn filled-btn"
               }
               type="button"
               data-bs-toggle="collapse"
@@ -156,7 +156,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
             >
               iDYP Tokenomics
               <img
-                src={toggleIdyp === true ? WhiteArrowUp : PurpleArrowDown}
+                src={toggleIdyp === true ?  PurpleArrowDown : WhiteArrowUp}
                 alt=""
               />
             </button>
