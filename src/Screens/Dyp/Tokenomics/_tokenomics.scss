@@ -9,7 +9,10 @@
   bottom: 210px !important;
 
   @media screen and (max-width: 786px) {
-    bottom: 500px !important;
+    bottom: 300px !important;
+  }
+  @media screen and (max-width: 500px) {
+    bottom: 165px !important;
   }
 }
 

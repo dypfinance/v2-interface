@@ -4,7 +4,7 @@ import coinBg from "../assets/dypcoinbackground.png";
 
 const DypMainHero = () => {
   return (
-    <div className="container-fluid dyp-main-hero d-flex flex-column justify-content-end position-relative overflow-hidden">
+    <div className="container-fluid dyp-main-hero d-flex flex-column justify-content-end position-relative overflow-hidden" style={{zIndex: 1}}>
       <img
         className="waves"
         src={require(`../assets/wavesTop.svg`).default}
