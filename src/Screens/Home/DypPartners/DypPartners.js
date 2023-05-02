@@ -125,6 +125,11 @@ const [partnersLength, setPartnersLength] = useState(0)
       text: "Mises Browser",
       href: "https://www.mises.site/",
     },
+    {
+      image: "easy2stake.svg",
+      text: "Easy 2 Stake",
+      href: "https://www.easy2stake.com/",
+    },
   ];
 
 
