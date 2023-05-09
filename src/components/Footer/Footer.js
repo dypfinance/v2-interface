@@ -122,7 +122,7 @@ const Footer = () => {
 
   const announcements = [
     {
-      title: "Latest anouncements",
+      title: "Latest announcements",
       link: "/news",
       props: "announcements",
     },
@@ -449,7 +449,7 @@ const Footer = () => {
                       className="d-flex align-items-center justify-content-between"
                       onClick={() => openAccordion(3)}
                     >
-                      <h4 className="fw-normal">Anouncements</h4>
+                      <h4 className="fw-normal">Announcements</h4>
                       <img
                         className={
                           indicators.announcements
@@ -598,7 +598,7 @@ const Footer = () => {
                   ))}
                 </div>
                 <div className="col-2 text-white d-flex flex-column gap-3">
-                  <h4 className="fw-normal">Anouncements</h4>
+                  <h4 className="fw-normal">Announcements</h4>
                   <div className="d-flex flex-column gap-3">
                     {announcements.map((item, index) => (
                       <Link
