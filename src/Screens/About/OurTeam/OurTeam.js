@@ -66,16 +66,7 @@ const OurTeam = () => {
   
                 “When the wind blows, some people build walls, others build windmills” - Gazmend.`,
     },
-    {
-      id: "gino",
-      name: "Gino Vizintin",
-      position: "Chief Ecosystem Officer",
-      photo: gino,
-      link: "https://github.com/gianviz",
-      content:
-        " I'm 34 years old, and at the age of 10, I started coding and learning programming basics. I have 20 years of experience in system design, software architecture, and I am a security researcher. I currently work in PHP, C#, Python, Perl, C, Ruby on Rails, Html, Mysql databases, Javascript, and Java.",
-    },
-    {
+   {
       id: "fatjon",
       name: "Fatjon Shaba",
       position: "Lead UI/UX Designer",
