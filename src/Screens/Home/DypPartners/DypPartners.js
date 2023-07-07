@@ -51,6 +51,11 @@ const [partnersLength, setPartnersLength] = useState(0)
       href: "https://coin98.com/wallet",
     },
     {
+      image: "conflux.png",
+      text: "Conflux",
+      href: "https://confluxnetwork.org/en",
+    },
+    {
       image: "efficient-frontier.png",
       text: "Efficient Frontier",
       href: "https://www.efrontier.io/",
