@@ -219,15 +219,18 @@ const Roadmap = () => {
 
   const quarterTwo2023 = [
     {
+      title: "Introduction of NFT Marketplace",
+      content:
+        "Users can access WoD marketplace to purchase assets used to customize and enhance their experience.",
+        completed: true,
+
+    },
+    {
       title: "Referral Program v2",
       content:
         "The updated version of the referral program features a new platform and an improved user journey, making it easier for users to refer friends and earn rewards.",
     },
-    {
-      title: "Introduction of NFT Marketplace",
-      content:
-        "Users can access WoD marketplace to purchase assets used to customize and enhance their experience.",
-    },
+  
     {
       title: "Introduction of 25,000 Land NFTs",
       content:
@@ -993,7 +996,11 @@ const Roadmap = () => {
                     aria-expanded="false"
                     aroa-aria-controls={`collapseTwo${index}`}
                   >
-                    <img src={uncompletedIcon} alt="" />
+                     {item?.completed === true ? (
+                      <img src={completedOrangeIcon} alt="" />
+                    ) : (
+                      <img src={uncompletedIcon} alt="" />
+                    )}
                     <p>{item.title}</p>
                   </div>
                   <div
@@ -1038,7 +1045,11 @@ const Roadmap = () => {
                     aria-expanded="false"
                     aroa-aria-controls={`collapseThree${index}`}
                   >
-                    <img src={uncompletedIcon} alt="" />
+                    {item?.completed === true ? (
+                      <img src={completedOrangeIcon} alt="" />
+                    ) : (
+                      <img src={uncompletedIcon} alt="" />
+                    )}
                     <p>{item.title}</p>
                   </div>
                   <div
@@ -1084,7 +1095,11 @@ const Roadmap = () => {
                     aria-expanded="false"
                     aroa-aria-controls={`collapseFour${index}`}
                   >
-                    <img src={uncompletedIcon} alt="" />
+                    {item?.completed === true ? (
+                      <img src={completedOrangeIcon} alt="" />
+                    ) : (
+                      <img src={uncompletedIcon} alt="" />
+                    )}
                     <p>{item.title}</p>
                   </div>
                   <div
