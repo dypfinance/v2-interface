@@ -219,6 +219,14 @@ const Roadmap = () => {
 
   const quarterTwo2023 = [
     {
+      title: "Introducing DYP Tools Premium users to Metaverse",
+      content:
+        "The introduction of DYP Tools Premium users to the metaverse opens up a world of opportunities for those who are looking for additional benefits and a more enhanced experience within the ecosystem.",
+      completed: true,
+      
+    },
+
+    {
       title: "Introduction of NFT Marketplace",
       content:
         "Users can access WoD marketplace to purchase assets used to customize and enhance their experience.",
@@ -226,12 +234,18 @@ const Roadmap = () => {
 
     },
    
-  
-  
     {
       title: "DYP Locker enhancement",
       content: "Improving DYP Locker functionalities on the BNB Chain",
       completed: true,
+    },
+   
+    {
+      title: "Introducing new users to Metaverse",
+      content:
+        "Introducing new users to crypto space and providing them with the tools and resources necessary to participate in the metaverse ecosystem.",
+      completed: true,
+
     },
   ];
 
@@ -251,21 +265,13 @@ const Roadmap = () => {
       content:
         "The updated version of the referral program features a new platform and an improved user journey, making it easier for users to refer friends and earn rewards.",
     },
-    {
-      title: "Introducing DYP Tools Premium users to Metaverse",
-      content:
-        "The introduction of DYP Tools Premium users to the metaverse opens up a world of opportunities for those who are looking for additional benefits and a more enhanced experience within the ecosystem.",
-    },
+   
     {
       title: "Introduction of 25,000 Land NFTs",
       content:
         "The creation of a multi-tiered NFT Land collection with different features such as special rewards, futuristic buildings, AI driven NPCs, and much more. Each user can preview the in-game land before purchasing the associated NFT.",
     },
-    {
-      title: "Introducing new users to Metaverse",
-      content:
-        "Introducing new users to crypto space and providing them with the tools and resources necessary to participate in the metaverse ecosystem.",
-    },
+
   ];
 
   const quarterFour2023 = [
@@ -975,7 +981,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card d-flex flex-column align-items-center">
+            <div className="date-card selected d-flex flex-column align-items-center">
               <img
                 src={selectedRoadmap}
                 style={{ visibility: "hidden" }}
@@ -1024,7 +1030,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card d-flex flex-column align-items-center">
+            <div className="date-card  d-flex flex-column align-items-center">
               <img
                 src={selectedRoadmap}
                 style={{ visibility: "hidden" }}
