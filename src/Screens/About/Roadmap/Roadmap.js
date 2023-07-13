@@ -225,20 +225,13 @@ const Roadmap = () => {
         completed: true,
 
     },
-    {
-      title: "Referral Program v2",
-      content:
-        "The updated version of the referral program features a new platform and an improved user journey, making it easier for users to refer friends and earn rewards.",
-    },
+   
   
-    {
-      title: "Introduction of 25,000 Land NFTs",
-      content:
-        "The creation of a multi-tiered NFT Land collection with different features such as special rewards, futuristic buildings, AI driven NPCs, and much more. Each user can preview the in-game land before purchasing the associated NFT.",
-    },
+  
     {
       title: "DYP Locker enhancement",
       content: "Improving DYP Locker functionalities on the BNB Chain",
+      completed: true,
     },
   ];
 
@@ -254,9 +247,19 @@ const Roadmap = () => {
         "The mobile app will provide each user with an interesting and engaging experience, thanks to its user-friendly UI and seamless integration with the WoD platform.",
     },
     {
+      title: "Referral Program v2",
+      content:
+        "The updated version of the referral program features a new platform and an improved user journey, making it easier for users to refer friends and earn rewards.",
+    },
+    {
       title: "Introducing DYP Tools Premium users to Metaverse",
       content:
         "The introduction of DYP Tools Premium users to the metaverse opens up a world of opportunities for those who are looking for additional benefits and a more enhanced experience within the ecosystem.",
+    },
+    {
+      title: "Introduction of 25,000 Land NFTs",
+      content:
+        "The creation of a multi-tiered NFT Land collection with different features such as special rewards, futuristic buildings, AI driven NPCs, and much more. Each user can preview the in-game land before purchasing the associated NFT.",
     },
     {
       title: "Introducing new users to Metaverse",
