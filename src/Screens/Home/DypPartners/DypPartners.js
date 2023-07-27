@@ -2,12 +2,11 @@ import React, { useEffect } from "react";
 import "./_dyppartners.scss";
 import Title from "../../../components/Title/Title";
 import { useState } from "react";
-import useWindowSize from '../../../hooks/useWindowSize'
+import useWindowSize from "../../../hooks/useWindowSize";
 
 const DypPartners = () => {
-
-const windowSize = useWindowSize();
-const [partnersLength, setPartnersLength] = useState(0)
+  const windowSize = useWindowSize();
+  const [partnersLength, setPartnersLength] = useState(0);
 
   const partnersArray = [
     {
@@ -135,41 +134,44 @@ const [partnersLength, setPartnersLength] = useState(0)
       text: "Easy 2 Stake",
       href: "https://www.easy2stake.com/",
     },
+    {
+      image: "dagoraxyz.png",
+      text: "Dagoraxyz",
+      href: "https://dagora.xyz/",
+    },
   ];
 
-
-  const partnerSize = () =>{
-    if(windowSize.width < 786){
-      setPartnersLength(4)
-    }else{
-      setPartnersLength(12)
+  const partnerSize = () => {
+    if (windowSize.width < 786) {
+      setPartnersLength(4);
+    } else {
+      setPartnersLength(12);
     }
-  }
+  };
 
   useEffect(() => {
-   partnerSize()
-  }, [windowSize.width])
-  
+    partnerSize();
+  }, [windowSize.width]);
 
   const loadLess = () => {
-    if(windowSize.width < 786){
-      setPartnersLength(4) 
-      window.scrollTo(0, 4000)
-    } else{
-
-      setPartnersLength(12)
-    } 
-
-    
-
-  }
+    if (windowSize.width < 786) {
+      setPartnersLength(4);
+      window.scrollTo(0, 4000);
+    } else {
+      setPartnersLength(12);
+    }
+  };
 
   const loadMore = () => {
-    setPartnersLength(partnersLength + partnersArray.length)
-  }
+    setPartnersLength(partnersLength + partnersArray.length);
+  };
 
   return (
-    <div className="container-fluid" id="our-partners" style={{padding: '0px 30px'}}>
+    <div
+      className="container-fluid"
+      id="our-partners"
+      style={{ padding: "0px 30px" }}
+    >
       <div className="container-lg d-flex flex-column justify-content-center align-items-center p-0 p-lg-3">
         <div className="row flex-column justify-content-center align-items-center gap-2">
           <Title top="Our" bottom="Partners" align="d-flex flex-row gap-2" />
@@ -184,20 +186,24 @@ const [partnersLength, setPartnersLength] = useState(0)
           //  data-aos-duration="1000"
         >
           {partnersArray.slice(0, partnersLength).map((partner, index) => (
-            <a href={partner.href} target="_blank" rel="noreferrer"  key={index}>
-              <div
-              
-                className="partner_wrapper d-flex flex-column align-items-center justify-content-center"
-              >
+            <a href={partner.href} target="_blank" rel="noreferrer" key={index}>
+              <div className="partner_wrapper d-flex flex-column align-items-center justify-content-center">
                 <img src={`/PartnerIcons/${partner.image}`} alt="" />
                 <p className="mb-0 text-dark">{partner.text}</p>
               </div>
             </a>
           ))}
         </div>
-         <div className="w-100 d-flex justify-content-center align-items-center">
-         <div className={`btn outline-btn d-flex justify-content-center align-items-center position-absolute load-more`}  onClick={partnersLength > partnersArray.length ? loadLess : loadMore}>{partnersLength > partnersArray.length ? "Show Less" : "Load More"}</div>
-         </div>
+        <div className="w-100 d-flex justify-content-center align-items-center">
+          <div
+            className={`btn outline-btn d-flex justify-content-center align-items-center position-absolute load-more`}
+            onClick={
+              partnersLength > partnersArray.length ? loadLess : loadMore
+            }
+          >
+            {partnersLength > partnersArray.length ? "Show Less" : "Load More"}
+          </div>
+        </div>
       </div>
     </div>
   );
