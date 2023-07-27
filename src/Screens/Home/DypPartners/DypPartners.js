@@ -135,7 +135,7 @@ const DypPartners = () => {
       href: "https://www.easy2stake.com/",
     },
     {
-      image: "dagoraxyz.jpg",
+      image: "dagoraxyz.png",
       text: "Dagoraxyz",
       href: "https://dagora.xyz/",
     },
