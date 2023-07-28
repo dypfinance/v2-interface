@@ -8,20 +8,20 @@ import playButton from "../assets/playButton.svg";
 const EducationalTools = () => {
   const vidsArray = [
     {
-      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPAbzuedp9ii6OszPT1STy8",
-      image: "stake.png",
+      link: "https://www.youtube.com/watch?v=1Dma3QORq9E",
+      image: "firstEducational.png",
     },
     {
-      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVM7gOLm3R2kXI3IldBqxfCA",
-      image: "governance.png",
+      link: "https://www.youtube.com/watch?v=WfY3OhuZoco",
+      image: "secondEducational.png",
     },
     {
-      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPKtu_gWiu7vm73k_TnZOs4",
-      image: "farm.png",
+      link: "https://www.youtube.com/watch?v=0kUrIP4d9Tc",
+      image: "thirdEducational.png",
     },
     {
-      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPmVy8aBOZratFGWKIBbthl",
-      image: "bridge.png",
+      link: "https://www.youtube.com/watch?v=n2NgErKU-a8",
+      image: "fourthEducational.png",
     },
   ];
 const [playbtn, setPlaybtn] = useState('passive')
@@ -30,14 +30,16 @@ const [playbtn, setPlaybtn] = useState('passive')
     <div className="eduactionalwrapper container-lg" id="learn">
       <div className="row justify-content-between align-items-center p-4">
         <div className="col-12 col-lg-4 d-flex flex-column px-1 px-lg-3 gap-2">
-          <Title top="Educational" bottom="Videos" />
+        <Title top="World of" bottom="Dypians" align="d-flex flex-row align-items-center gap-2" />
+
           <p style={{marginBottom: 32}}>
-          Become an expert interacting with our platform utilizing these how-to videos.
+          Embark on thrilling adventures, forge new alliances, and experience the future of gaming like never before.
+Button: Explore
           </p>
 
           <a
             className="btn filled-btn d-flex align-items-center"
-            href="https://www.youtube.com/c/DeFiYieldProtocol"
+            href="https://www.worldofdypians.com/"
             target={"_blank"}
             rel={"noreferrer"}
             style={{ width: "fit-content", justifyContent: "center" }}
@@ -70,7 +72,7 @@ const [playbtn, setPlaybtn] = useState('passive')
                         className="eduImg"
                       />
                     </div>
-                    <img src={ playButton} alt="" className="ml-2 purpleArrow"  />{" "}
+                    <img src={playButton} alt="" className="ml-2 purpleArrow"  />{" "}
                   </a>
                 </div>
               );
