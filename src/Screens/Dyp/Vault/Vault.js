@@ -4,9 +4,9 @@ import Title from "../../../components/Title/Title";
 const Vault = () => {
   const vaultArray = [
     {
-      icons: ["eth.svg"],
-      title: "ETH",
-      percentage: "3% - 13%",
+      icons: ["weth.svg"],
+      title: "WETH",
+      percentage: "1.9 - 3.7",
       total_value_locked: ``,
       lock_time: "No lock",
       top_tick: true,
@@ -16,7 +16,7 @@ const Vault = () => {
     {
       icons: ["bitcoin.svg"],
       title: "WBTC",
-      percentage: "3% - 13%",
+      percentage:"1.6 - 3.4",
       total_value_locked: ``,
       lock_time: "No lock",
       link: "https://vault.dyp.finance/vault-wbtc",
@@ -24,7 +24,7 @@ const Vault = () => {
     {
       icons: ["usdc.svg"],
       title: "USDC",
-      percentage: "8% - 22%",
+      percentage: "2.1 - 4.2",
       total_value_locked: ``,
       lock_time: "No lock",
       new_badge: false,
@@ -34,7 +34,7 @@ const Vault = () => {
     {
       icons: ["usdt.svg"],
       title: "USDT",
-      percentage: "9% - 23%",
+      percentage: "2.2 - 4.9",
       total_value_locked: ``,
       lock_time: "No lock",
       new_badge: false,
@@ -44,7 +44,7 @@ const Vault = () => {
     {
       icons: ["dai.svg"],
       title: "DAI",
-      percentage: "8% - 21%",
+      percentage: "2.3 - 5.3",
       total_value_locked: ``,
       lock_time: "No lock",
       new_badge: false,
