@@ -12,7 +12,7 @@ const VaultCards = ({ pool, apr, link, top_tick, icon }) => {
             <span className="poolTitle p-0">{pool}</span>
           </div>
           <span className="aprTitle p-0">
-            {apr}
+            {apr}%
             <span className="aprText ml-2">APR</span>
           </span>
         </div>
