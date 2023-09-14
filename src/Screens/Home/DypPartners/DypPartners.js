@@ -139,6 +139,11 @@ const DypPartners = () => {
       text: "Dagoraxyz",
       href: "https://dagora.xyz/",
     },
+    {
+      image: "earn.svg",
+      text: "Earn Network",
+      href: "https://earn.network/",
+    },
   ];
 
   const partnerSize = () => {
