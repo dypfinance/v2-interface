@@ -50,6 +50,11 @@ const DypPartners = () => {
       href: "https://coin98.com/wallet",
     },
     {
+      image: "coingecko.svg",
+      text: "CoinGecko",
+      href: "https://www.coingecko.com/",
+    },
+    {
       image: "conflux.png",
       text: "Conflux",
       href: "https://confluxnetwork.org/en",
@@ -144,6 +149,7 @@ const DypPartners = () => {
       text: "Earn Network",
       href: "https://earn.network/",
     },
+   
   ];
 
   const partnerSize = () => {
