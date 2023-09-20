@@ -250,11 +250,47 @@ const Roadmap = () => {
   ];
 
   const quarterThree2023 = [
+  
+    {
+      title: "Marketplace enhancement",
+      content:
+        "Enhanced World of Dypians Marketplace with new features to provide users with a more comprehensive experience.",
+        completed: true
+    },
+    {
+      title: "WoD 0.2.0 launch",
+      content:
+        "WoD 0.2.0 introduces a transformed cityscape, ushering in a futuristic era for Dypian enthusiasts.",
+        completed: true
+    },
+    {
+      title: "New Earn Pools",
+      content:
+        "Introducing dedicated staking, farming, and vault pools, enabling users to maximize their earnings effortlessly.",
+        completed: true
+    },
+    {
+      title: "Multiplayer PVE DEMO",
+      content:
+        "Experience cooperative gameplay with the multiplayer PVE demo, offering exciting challenges and teamwork opportunities.",
+        completed: true
+    },
+    {
+      title: "Multiplayer PVP DEMO",
+      content:
+        "Engage in thrilling player-versus-player action with the multiplayer PVP demo, where you'll battle against other skilled players.",
+        completed: true
+    },
     {
       title: "News v2",
       content:
-        "Enhanced News section with new features to provide users with a more comprehensive and user-friendly experience",
+        "Enhanced News section with new features to provide users with a more comprehensive and user-friendly experience.",
+        completed: true
     },
+
+  ];
+
+  const quarterFour2023 = [
     {
       title: "Launch Mobile App (iOS and Android)",
       content:
@@ -264,26 +300,6 @@ const Roadmap = () => {
       title: "Referral Program v2",
       content:
         "The updated version of the referral program features a new platform and an improved user journey, making it easier for users to refer friends and earn rewards.",
-    },
-   
-    {
-      title: "Introduction of 25,000 Land NFTs",
-      content:
-        "The creation of a multi-tiered NFT Land collection with different features such as special rewards, futuristic buildings, AI driven NPCs, and much more. Each user can preview the in-game land before purchasing the associated NFT.",
-    },
-
-  ];
-
-  const quarterFour2023 = [
-    {
-      title: "e-Commerce",
-      content:
-        "Providing a virtual shopping experience in order to reach a worldwide audience and provide customers with new, engaging experiences.",
-    },
-    {
-      title: "Introducing Governance in Metaverse",
-      content:
-        "Users will have control over the development and decision-making process of World of Dypians by using the native token, DYP.",
     },
     {
       title: "Weapons and armor customization",
@@ -1030,7 +1046,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card  d-flex flex-column align-items-center">
+            <div className="date-card selected  d-flex flex-column align-items-center">
               <img
                 src={selectedRoadmap}
                 style={{ visibility: "hidden" }}
