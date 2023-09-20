@@ -1046,7 +1046,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card  d-flex flex-column align-items-center">
+            <div className="date-card selected  d-flex flex-column align-items-center">
               <img
                 src={selectedRoadmap}
                 style={{ visibility: "hidden" }}
