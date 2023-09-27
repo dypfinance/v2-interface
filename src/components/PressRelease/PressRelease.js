@@ -7,7 +7,7 @@ const PressRelease = () => {
     <div
       className="container-lg mb-5"
       id="press"
-      style={{ paddingBottom: "5rem", marginTop: '4rem' }}
+      style={{ paddingBottom: "5rem", marginTop: "4rem" }}
     >
       <div className="farming-header">
         <Title
@@ -28,7 +28,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coinmarketcap.png")} alt=""  />
+                  <img src={require("./news/coinmarketcap.png")} alt="" />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
@@ -38,10 +38,18 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitinsider.png")} alt=""  />
+                  <img src={require("./news/bitinsider.png")} alt="" />
                 </a>
               </td>
-              <td className="presscell radius4"></td>
+              <td className="presscell radius4">
+                <a
+                  href="https://cryptoadventure.co.uk/coingecko-and-dypius-partner-to-build-and-pioneer-innovation-on-the-world-of-dypians/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cryptoadventure.png")} alt="" />
+                </a>
+              </td>
               <td className="radius4 presscell"></td>
 
               <td className="radius2 presscell">
@@ -50,7 +58,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/medium.png")} alt=""  />
+                  <img src={require("./news/medium.png")} alt="" />
                 </a>
               </td>
 
@@ -61,12 +69,21 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitcoincom.png")} alt=""  />
+                  <img src={require("./news/bitcoincom.png")} alt="" />
                 </a>
               </td>
-              <td className="radius6 presscell"></td>
+              <td className="radius6 presscell">
+                {" "}
+                <a
+                  href="https://hackernoon.com/coingecko-and-dypius-partner-up-to-build-innovation-in-the-world-of-dypians"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/hackernoon.png")} alt="" />
+                </a>
+              </td>
               <td className="radius5 presscell">
-                <img src={require("./news/gateio.png")} alt=""  />
+                <img src={require("./news/gateio.png")} alt="" />
               </td>
               <td className="presscell radius2"></td>
               <td className="radius1 presscell"></td>
@@ -76,7 +93,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitcoinist.png")} alt=""  />
+                  <img src={require("./news/bitcoinist.png")} alt="" />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
@@ -86,7 +103,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coinmarketcap.png")} alt=""  />
+                  <img src={require("./news/coinmarketcap.png")} alt="" />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
@@ -96,7 +113,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitinsider.png")} alt=""  />
+                  <img src={require("./news/bitinsider.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius4"></td>
@@ -108,7 +125,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/medium.png")} alt=""  />
+                  <img src={require("./news/medium.png")} alt="" />
                 </a>
               </td>
 
@@ -119,12 +136,12 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitcoincom.png")} alt=""  />
+                  <img src={require("./news/bitcoincom.png")} alt="" />
                 </a>
               </td>
               <td className="radius6 presscell"></td>
               <td className="radius5 presscell">
-                <img src={require("./news/gateio.png")} alt=""  />
+                <img src={require("./news/gateio.png")} alt="" />
               </td>
               <td className="presscell radius2"></td>
               <td className="radius1 presscell"></td>
@@ -134,7 +151,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitcoinist.png")} alt=""  />
+                  <img src={require("./news/bitcoinist.png")} alt="" />
                 </a>
               </td>
             </tr>
@@ -146,7 +163,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/yahoo.png")} alt=""  />
+                  <img src={require("./news/yahoo.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius10"></td>
@@ -156,7 +173,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/marketwatch.png")} alt=""  />
+                  <img src={require("./news/marketwatch.png")} alt="" />
                 </a>
               </td>
               <td className="radius4 presscell"></td>
@@ -166,7 +183,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/apnews.png")} alt=""  />
+                  <img src={require("./news/apnews.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -176,7 +193,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptofold.png")} alt=""  />
+                  <img src={require("./news/cryptofold.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius10">
@@ -185,7 +202,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/newsbtc.png")} alt=""  />
+                  <img src={require("./news/newsbtc.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -198,7 +215,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/hackernoon.png")} alt=""  />
+                  <img src={require("./news/hackernoon.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -209,7 +226,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/yahoo.png")} alt=""  />
+                  <img src={require("./news/yahoo.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius10"></td>
@@ -219,7 +236,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/marketwatch.png")} alt=""  />
+                  <img src={require("./news/marketwatch.png")} alt="" />
                 </a>
               </td>
               <td className="radius4 presscell"></td>
@@ -229,7 +246,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/apnews.png")} alt=""  />
+                  <img src={require("./news/apnews.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -239,7 +256,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptofold.png")} alt=""  />
+                  <img src={require("./news/cryptofold.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius10">
@@ -248,7 +265,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/newsbtc.png")} alt=""  />
+                  <img src={require("./news/newsbtc.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -261,7 +278,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/hackernoon.png")} alt=""  />
+                  <img src={require("./news/hackernoon.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -273,7 +290,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/blokonomi.png")} alt=""  />
+                  <img src={require("./news/blokonomi.png")} alt="" />
                 </a>
               </td>
               <td className="radius10 presscell"></td>
@@ -283,7 +300,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/techbullion.png")} alt=""  />
+                  <img src={require("./news/techbullion.png")} alt="" />
                 </a>
               </td>
 
@@ -295,7 +312,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/utoday.png")} alt=""  />
+                  <img src={require("./news/utoday.png")} alt="" />
                 </a>
               </td>
 
@@ -307,79 +324,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptopress.png")} alt=""  />
-                </a>
-              </td>
-              <td className="radius7 presscell"></td>
-
-              <td className="presscell radius10">
-                <img src={require("./news/coinspeaker.png")} alt=""  />
-              </td>
-              <td className="presscell radius1">
-                <a
-                  href="https://www.cryptocompare.com/coins/guides/dypfinance-a-unique-yield-farming-platform/"
-                  target="_blank"
-                  rel="noreferrer nofollow"
-                >
-                  <img src={require("./news/cryptocompare.png")} alt=""  />
-                </a>
-              </td>
-              <td className="presscell radius7">
-                <a
-                  href="https://cointelegraph.com/news/yield-farming-platform-announces-it-s-expanding-to-avalanche"
-                  target="_blank"
-                  rel="noreferrer nofollow"
-                >
-                  <img src={require("./news/cointelegraph.png")} alt=""  />
-                </a>
-              </td>
-              <td className="radius1 presscell"></td>
-
-              <td className="presscell radius7">
-                <img src={require("./news/mycointainer.png")} alt=""  />
-              </td>
-
-              <td className="presscell radius1">
-                <a
-                  href="https://blockonomi.com/dyp-staking-app-binance-smart-chain/"
-                  target="_blank"
-                  rel="noreferrer nofollow"
-                >
-                  <img src={require("./news/blokonomi.png")} alt=""  />
-                </a>
-              </td>
-              <td className="radius10 presscell"></td>
-              <td className="presscell radius1">
-                <a
-                  href="https://techbullion.com/dyp-launches-staking-dapp-on-binance-smart-chain-bsc/"
-                  target="_blank"
-                  rel="noreferrer nofollow"
-                >
-                  <img src={require("./news/techbullion.png")} alt=""  />
-                </a>
-              </td>
-
-              <td className="presscell radius6"></td>
-              <td className="radius1 presscell"></td>
-              <td className="presscell radius4">
-                <a
-                  href="https://u.today/defi-yield-protocol-launches-staking-and-governance-dapp"
-                  target="_blank"
-                  rel="noreferrer nofollow"
-                >
-                  <img src={require("./news/utoday.png")} alt=""  />
-                </a>
-              </td>
-
-              <td className="presscell radius7"></td>
-
-              <td className="presscell radius1">
-                <a
-                  href="https://cryptopress.news/defi-yield-protocol-dyp-staking-and-governance-is-now-live/"
-                  target="_blank"
-                  rel="noreferrer nofollow"
-                >
-                  <img src={require("./news/cryptopress.png")} alt=""  />
+                  <img src={require("./news/cryptopress.png")} alt="" />
                 </a>
               </td>
               <td className="radius7 presscell"></td>
@@ -393,7 +338,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptocompare.png")} alt=""  />
+                  <img src={require("./news/cryptocompare.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius7">
@@ -402,18 +347,90 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cointelegraph.png")} alt=""  />
+                  <img src={require("./news/cointelegraph.png")} alt="" />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
 
               <td className="presscell radius7">
-                <img src={require("./news/mycointainer.png")} alt=""  />
+                <img src={require("./news/mycointainer.png")} alt="" />
+              </td>
+
+              <td className="presscell radius1">
+                <a
+                  href="https://blockonomi.com/dyp-staking-app-binance-smart-chain/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/blokonomi.png")} alt="" />
+                </a>
+              </td>
+              <td className="radius10 presscell"></td>
+              <td className="presscell radius1">
+                <a
+                  href="https://techbullion.com/dyp-launches-staking-dapp-on-binance-smart-chain-bsc/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/techbullion.png")} alt="" />
+                </a>
+              </td>
+
+              <td className="presscell radius6"></td>
+              <td className="radius1 presscell"></td>
+              <td className="presscell radius4">
+                <a
+                  href="https://u.today/defi-yield-protocol-launches-staking-and-governance-dapp"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/utoday.png")} alt="" />
+                </a>
+              </td>
+
+              <td className="presscell radius7"></td>
+
+              <td className="presscell radius1">
+                <a
+                  href="https://cryptopress.news/defi-yield-protocol-dyp-staking-and-governance-is-now-live/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cryptopress.png")} alt="" />
+                </a>
+              </td>
+              <td className="radius7 presscell"></td>
+
+              <td className="presscell radius10">
+                <img src={require("./news/coinspeaker.png")} alt="" />
+              </td>
+              <td className="presscell radius1">
+                <a
+                  href="https://www.cryptocompare.com/coins/guides/dypfinance-a-unique-yield-farming-platform/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cryptocompare.png")} alt="" />
+                </a>
+              </td>
+              <td className="presscell radius7">
+                <a
+                  href="https://cointelegraph.com/news/yield-farming-platform-announces-it-s-expanding-to-avalanche"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cointelegraph.png")} alt="" />
+                </a>
+              </td>
+              <td className="radius1 presscell"></td>
+
+              <td className="presscell radius7">
+                <img src={require("./news/mycointainer.png")} alt="" />
               </td>
             </tr>
             <tr>
               <td className="presscell radius7">
-                <img src={require("./news/uptrennd.png")} alt=""  />
+                <img src={require("./news/uptrennd.png")} alt="" />
               </td>
               <td className="radius1 presscell"></td>
 
@@ -423,7 +440,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coindex.png")} alt=""  />
+                  <img src={require("./news/coindex.png")} alt="" />
                 </a>
               </td>
 
@@ -434,7 +451,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coindoo.png")} alt=""  />
+                  <img src={require("./news/coindoo.png")} alt="" />
                 </a>
               </td>
 
@@ -445,13 +462,13 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coinmanager.png")} alt=""  />
+                  <img src={require("./news/coinmanager.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
 
               <td className="presscell radius2">
-                <img src={require("./news/bithumb.png")} alt=""  />
+                <img src={require("./news/bithumb.png")} alt="" />
               </td>
               <td className="presscell radius1">
                 <a
@@ -459,18 +476,18 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptopotato.png")} alt=""  />
+                  <img src={require("./news/cryptopotato.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius5"></td>
               <td className="presscell radius8"></td>
               <td className="presscell radius1">
-                <img src={require("./news/coingape.png")} alt=""  />
+                <img src={require("./news/coingape.png")} alt="" />
               </td>
 
               <td className="presscell radius2"></td>
               <td className="presscell radius7">
-                <img src={require("./news/uptrennd.png")} alt=""  />
+                <img src={require("./news/uptrennd.png")} alt="" />
               </td>
               <td className="radius1 presscell"></td>
 
@@ -480,7 +497,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coindex.png")} alt=""  />
+                  <img src={require("./news/coindex.png")} alt="" />
                 </a>
               </td>
 
@@ -491,7 +508,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coindoo.png")} alt=""  />
+                  <img src={require("./news/coindoo.png")} alt="" />
                 </a>
               </td>
 
@@ -502,32 +519,32 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coinmanager.png")} alt=""  />
+                  <img src={require("./news/coinmanager.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
 
               <td className="presscell radius2">
-                <img src={require("./news/bithumb.png")} alt=""  />
+                <img src={require("./news/bithumb.png")} alt="" />
               </td>
               <td className="presscell radius1">
-              <a
+                <a
                   href="https://cryptopotato.com/tackling-volatility-issues-for-liquidity-providers-with-defi-yield-protocol-dyp/"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptopotato.png")} alt=""  />
+                  <img src={require("./news/cryptopotato.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius5"></td>
               <td className="presscell radius8"></td>
               <td className="presscell radius1">
-              <a
-                href="https://coingape.com/how-to-use-dyp-to-earn-big-defi-rois/"
-                target="_blank"
-                rel="noreferrer nofollow"
-              >
-                <img src={require("./news/coingape.png")} alt=""  />
+                <a
+                  href="https://coingape.com/how-to-use-dyp-to-earn-big-defi-rois/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/coingape.png")} alt="" />
                 </a>
               </td>
 
