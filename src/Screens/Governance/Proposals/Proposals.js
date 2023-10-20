@@ -199,27 +199,51 @@ const Proposals = () => {
               >
                 Recent proposals
               </h4>
-              <p className="active-pools mb-0 ms-3 ms-lg-0">
-                {activeProposals.length} Active
-              </p>
+              {activeProposals.length > 0 ? (
+                <p className="active-pools mb-0 ms-3 ms-lg-0">
+                  {activeProposals.length} Active
+                </p>
+              ) : (
+                <p className="inactive-pools mb-0 ms-3 ms-lg-0">
+                  No proposals available
+                </p>
+              )}
             </div>
-            <div className="recents-container w-100">
-              <Slider {...settings}>
-                <div className="d-flex flex-column gap-3 w-100">
-                  {activeProposals.slice(0, 3).map((item, index) => (
+            {activeProposals.length > 0 ? (
+              <div className="recents-container w-100">
+                <Slider {...settings}>
+                  <div className="d-flex flex-column gap-3 w-100">
+                    {activeProposals.slice(0, 3).map((item, index) => (
+                      <div key={index}>
+                        <ProposalCard
+                          title={item.title}
+                          key={index}
+                          type={item.type}
+                          date={item.date}
+                          icon={proposalICons[index].icon}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </Slider>
+              </div>
+            ) : (
+              <div className="row recents-container">
+                <Slider {...settings}>
+                  {recentProposalGroups.map((proposal, index) => (
                     <div key={index}>
-                      <ProposalCard
-                        title={item.title}
-                        key={index}
-                        type={item.type}
-                        date={item.date}
-                        icon={proposalICons[index].icon}
-                      />
+                      {proposal.content.map((item, index) => (
+                        <EmptyProposalCard
+                          title={item.title}
+                          icon={item.icon}
+                          key={index}
+                        />
+                      ))}
                     </div>
                   ))}
-                </div>
-              </Slider>
-            </div>
+                </Slider>
+              </div>
+            )}
           </div>
         </div>
       </div>
