@@ -6,6 +6,7 @@ import DypToken from "./DypToken/DypToken";
 import DypNews from "./DypNews/DypNews";
 import DypPartners from "./DypPartners/DypPartners";
 import './DypNews/_dypnews.scss'
+import LandPopup from "../../components/LandPopup/LandPopup";
 
 const Home = () => {
   useEffect(()=>{
@@ -22,6 +23,7 @@ const Home = () => {
       <DypPartners />
       </Suspense>
       <DypNews topTitle='Announcements' bottomTitle='Stay tuned'/>
+      <LandPopup />
     </div>
   );
 };
