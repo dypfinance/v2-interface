@@ -25,24 +25,60 @@ const MainHero = () => {
         <CometBg />
         <div className="container-lg">
           <div className="heading row">
-            <div className="col-12 col-lg-5 d-flex justify-content-lg-evenly justify-content-xl-evenly justify-content-inherit flex-column text-white ml-lg-4 pt-5 px-0 px-lg-2">
-              <div className="d-grid gap-4">
+            <div className="col-12 col-lg-5 d-flex justify-content-lg-center gap-5 justify-content-xl-center justify-content-inherit flex-column text-white ml-lg-4 pt-5 px-0 px-lg-2">
+              <div className="d-grid gap-4 mt-0 mt-lg-5">
                 <div>
-                  <h1>Embrace</h1>
-                  <h1>the future</h1>
+                  <h1>Dypius Migration</h1>
                 </div>
                 <p className="text-white">
-                  Dypius is a powerful, decentralized ecosystem with a focus on
-                  scalability, security, and global adoption through next-gen
-                  infrastructure.
+                  We are committed to providing our users with the best possible
+                  experience. As part of this commitment, we are enhancing the
+                  DYP token's performance, security, and utility. The migration
+                  will allow us to implement improvements and ensure the
+                  long-term sustainability of DYP token.
                 </p>
-                <NavLink
-                  type="button"
+                <div className="migrated-tokens-wrapper d-flex align-items-center justify-content-between py-2 px-4">
+                  <span className="migrated-tokens mb-0">
+                    Migrated DYP Tokens
+                  </span>
+                  <h6 className="migrated-tokens-amount mb-0">27,256,226</h6>
+                </div>
+                <div className="d-flex flex-column">
+                <div className="migration-outer-progress d-flex align-items-center justify-content-start">
+                  <div className="progress-dots d-flex align-items-center justify-content-between">
+                    <span className="migration-dot"></span>
+                    <span className="migration-dot"></span>
+                    <span className="migration-dot"></span>
+                    <span className="migration-dot"></span>
+                    <span className="migration-dot"></span>
+                    <span className="migration-dot"></span>
+                    <span className="migration-dot"></span>
+                    <span className="migration-dot"></span>
+                    <span className="migration-dot"></span>
+                    <span className="migration-dot"></span>
+                  </div>
+                  <div
+                    className="migration-inner-progress d-flex align-items-center justify-content-end px-3"
+                    style={{ width: "50%" }}
+                  >
+                    <div className="d-flex align-items-center gap-2">
+                      <h6 className="migration-percentage mb-0">50%</h6>
+                      <span className="migration-dash"></span>
+                    </div>
+                  </div>
+                </div>
+                <span className="migration-progress-info mb-0">
+                  *Total supply to be migrated: 75M DYP
+                </span>
+                </div>
+
+                <a
+                href="https://app.dypius.com/migration"
+                target="_blank"
                   className="btn filled-orange-btn d-flex align-items-center justify-content-center"
-                  to="/dyp"
                 >
-                  Explore
-                </NavLink>
+                  Migrate DYP
+                </a>
               </div>
               <div className="sliderwrapper  d-flex flex-column mt-3 pl-0">
                 <Slider {...settings} ref={slickref}>
@@ -80,8 +116,8 @@ const MainHero = () => {
                     </p>
                     <p style={{ fontSize: 13 }}>
                       Dypius Bridge offers users the possibility to send tokens
-                      from BNB to Avalanche chains with ease. Every
-                      transaction is instant and secure.
+                      from BNB to Avalanche chains with ease. Every transaction
+                      is instant and secure.
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">
@@ -108,7 +144,8 @@ const MainHero = () => {
                       <b>Metaverse</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                    An innovative platform that redefines the gaming industry by implementing cutting-edge technology. 
+                      An innovative platform that redefines the gaming industry
+                      by implementing cutting-edge technology.
                     </p>
                   </div>
                 </Slider>
