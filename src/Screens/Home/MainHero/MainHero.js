@@ -1,9 +1,34 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ChainlinkData from "../ChainlinkData/ChainlinkData";
 import DypSystem from "../../../components/DypSystem/DypSystem";
 import CometBg from "../../../components/CometBg/CometBg";
 import Slider from "react-slick";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
+import getFormattedNumber from "../../../hooks/getFormattedNumber";
+import Countdown from "react-countdown";
+
+const renderer = ({ days, hours, minutes }) => {
+  return (
+    <div className="d-flex align-items-start gap-2">
+      <div className="d-flex flex-column align-items-center">
+        <h6 className="migrated-tokens-amount mb-0">{days}</h6>
+        <span className="migrated-tokens mb-0">Days</span>
+      </div>
+      <h6 className="migrated-tokens-amount mb-0">:</h6>
+
+      <div className="d-flex flex-column align-items-center">
+        <h6 className="migrated-tokens-amount mb-0">{hours}</h6>
+        <span className="migrated-tokens mb-0">Hours</span>
+      </div>
+      <h6 className="migrated-tokens-amount mb-0">:</h6>
+      <div className="d-flex flex-column align-items-center">
+        <h6 className="migrated-tokens-amount mb-0">{minutes}</h6>
+        <span className="migrated-tokens mb-0">Minutes</span>
+      </div>
+    </div>
+  );
+};
 
 const MainHero = () => {
   const settings = {
@@ -16,6 +41,29 @@ const MainHero = () => {
     dotsClass: "button__bar",
     arrows: false,
   };
+
+  const [countdown, setCountdown] = useState(true);
+  const [migrationAmount, setMigrationAmount] = useState(0);
+  const [migrationPercentage, setMigrationPercentage] = useState(0);
+
+  let lastDay = new Date("2023-11-08T09:00:00.000+01:00");
+
+
+  const getMigrationData = async () => {
+    const result = await axios.get(
+      "https://api.dyp.finance/api/migratedTokens"
+    );
+    if (result && result.status === 200) {
+      const tokenAmount = result.data.migratedTokens;
+      const percentage = result.data.tokenPercentage;
+      setMigrationAmount(tokenAmount);
+      setMigrationPercentage(percentage);
+    }
+  };
+
+  useEffect(() => {
+    getMigrationData();
+  }, []);
 
   const slickref = useRef();
 
@@ -38,43 +86,75 @@ const MainHero = () => {
                   long-term sustainability of DYP token.
                 </p>
                 <div className="migrated-tokens-wrapper d-flex align-items-center justify-content-between py-2 px-4">
-                  <span className="migrated-tokens mb-0">
-                    Migrated DYP Tokens
-                  </span>
-                  <h6 className="migrated-tokens-amount mb-0">27,256,226</h6>
+                  {countdown ? (
+                    <>
+                      <span className="migrated-tokens mb-0">Live in</span>
+                      <Countdown
+                        renderer={renderer}
+                        date={lastDay}
+                        zeroPadTime={2}
+                        onComplete={() => setCountdown(false)}
+                      />
+                    </>
+                  ) : (
+                    <>
+                      <span className="migrated-tokens mb-0">
+                        Migrated DYP Tokens
+                      </span>
+                      <h6 className="migrated-tokens-amount mb-0">
+                        {getFormattedNumber(migrationAmount, 0)}
+                      </h6>
+                    </>
+                  )}
                 </div>
                 <div className="d-flex flex-column">
-                <div className="migration-outer-progress d-flex align-items-center justify-content-start">
-                  <div className="progress-dots d-flex align-items-center justify-content-between">
-                    <span className="migration-dot"></span>
-                    <span className="migration-dot"></span>
-                    <span className="migration-dot"></span>
-                    <span className="migration-dot"></span>
-                    <span className="migration-dot"></span>
-                    <span className="migration-dot"></span>
-                    <span className="migration-dot"></span>
-                    <span className="migration-dot"></span>
-                    <span className="migration-dot"></span>
-                    <span className="migration-dot"></span>
-                  </div>
-                  <div
-                    className="migration-inner-progress d-flex align-items-center justify-content-end px-3"
-                    style={{ width: "50%" }}
-                  >
-                    <div className="d-flex align-items-center gap-2">
-                      <h6 className="migration-percentage mb-0">50%</h6>
-                      <span className="migration-dash"></span>
+                  <div className="migration-outer-progress d-flex align-items-center justify-content-start">
+                    <div className="progress-dots d-flex align-items-center justify-content-between">
+                      <span className="migration-dot"></span>
+                      <span className="migration-dot"></span>
+                      <span className="migration-dot"></span>
+                      <span className="migration-dot"></span>
+                      <span className="migration-dot"></span>
+                      <span className="migration-dot"></span>
+                      <span className="migration-dot"></span>
+                      <span className="migration-dot"></span>
+                      <span className="migration-dot"></span>
+                      <span className="migration-dot"></span>
+                    </div>
+                    <div
+                      className="migration-inner-progress d-flex align-items-center justify-content-end px-3"
+                      style={{
+                        width: `${
+                          migrationPercentage >= 50 ? migrationPercentage : ""
+                        }%`,
+                      }}
+                    >
+                      <div className="d-flex align-items-center gap-2">
+                        {countdown ? (
+                          <>
+                            <h6 className="migration-percentage mb-0">
+                              Coming soon
+                            </h6>
+                          </>
+                        ) : (
+                          <>
+                            <h6 className="migration-percentage mb-0">
+                              {migrationPercentage}%
+                            </h6>
+                            <span className="migration-dash"></span>
+                          </>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <span className="migration-progress-info mb-0">
-                  *Total supply to be migrated: 75M DYP
-                </span>
+                  <span className="migration-progress-info mb-0">
+                    *Total supply to be migrated: 75M DYP
+                  </span>
                 </div>
 
                 <a
-                href="https://app.dypius.com/migration"
-                target="_blank"
+                  href="https://app.dypius.com/migration"
+                  target="_blank"
                   className="btn filled-orange-btn d-flex align-items-center justify-content-center"
                 >
                   Migrate DYP
@@ -115,7 +195,8 @@ const MainHero = () => {
                       <b>Bridge</b>
                     </p>
                     <p style={{ fontSize: 13 }}>
-                    Bridge tokens between Ethereum to BNB Chain, Avalanche and many more to come. Instant and secure transactions.
+                      Bridge tokens between Ethereum to BNB Chain, Avalanche and
+                      many more to come. Instant and secure transactions.
                     </p>
                   </div>
                   <div className="d-flex flex-column gap-0 rowwrapper">
