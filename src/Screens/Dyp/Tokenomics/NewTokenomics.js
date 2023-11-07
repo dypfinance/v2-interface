@@ -44,6 +44,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   const [visible, setVisible] = useState(false);
   const [dypSupply, setDypSupply] = useState("0.0");
   const [idypSupply, setiDypSupply] = useState("0.0");
+  const [totalSupply, setTotalSupply] = useState("0.0")
 
   const handleCopy = (address) => {
     navigator.clipboard.writeText(address);
@@ -71,7 +72,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   async function getCirculatingSupplyDYP() {
     try {
       await axios
-        .get("https://api.dyp.finance/api/circulating-supply")
+        .get("https://api.dyp.finance/api/circulating-supply-new")
         .then((data) => {
           setDypSupply(data.data);
         });
@@ -213,9 +214,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                   </div>
                   <div className="mininginfo-wrapper d-flex flex-column gap-4">
                     <p className="m-0">
-                      30,000,000 DYP have been minted at Dypius's native token
-                      is DYP, helping power the Dypius ecosystem. It's use cases
-                      are:
+                    Dypius's native token is DYP, helping power the Dypius ecosystem. It's use cases are:
                     </p>
                     <ul>
                       <li>Governance (for decentralized community voting)</li>
@@ -466,7 +465,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                     <div className="d-flex flex-column gap-3">
                       <span className="circulating-title">Total Supply</span>
                       <span className="circulating-amount">
-                        {getFormattedNumber(dypSupply, 6)} DYP
+                        {getFormattedNumber(229926862, 0)} DYP
                       </span>
                     </div>
                   </div>
@@ -476,7 +475,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                         Circulating supply
                       </span>
                       <span className="circulating-amount">
-                        {getFormattedNumber(dypSupply, 6)} DYP
+                        {getFormattedNumber(dypSupply, 0)} DYP
                       </span>
                     </div>
                   </div>
@@ -485,8 +484,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                       <b>DYP Migration - Swap Ratios</b>
                     </p>
                     <p className="mb-0">
-                      The swap ratio for DYP V2 vary depending on the respective
-                      blockchain.
+                    The swap ratio for DYP V2 varies depending on the respective blockchain.
                     </p>
                     <div className="d-flex align-items-center gap-2">
                       <img src={ethIcon} alt="" />
