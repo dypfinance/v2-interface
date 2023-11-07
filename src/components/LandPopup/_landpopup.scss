@@ -13,7 +13,7 @@
   pointer-events: auto !important;
   transition: all 0.25s ease-in-out;
 
-  width: 50%;
+  width: 30%;
 
   @media screen and (max-width: 1455px) {
       width: 55%;
@@ -33,8 +33,12 @@
 
 .popup-title {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 48px;
+
+  @media screen and (max-width: 786px) {
+    font-size: 15px;
+  }
 }
 
 .popup-content {
@@ -69,4 +73,9 @@
     .land-nft-image{
       width: 75% !important;
   }
+}
+
+.popup-title-wrapper{
+  border-radius: 56px;
+background: linear-gradient(0deg, #EFF0F6 0%, #EFF0F6 100%);
 }

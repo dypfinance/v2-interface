@@ -131,7 +131,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
               <img
                 src={toggledyp === true ? minus : PurpleArrowDown}
                 alt=""
-                className="ml-2"
+                className="ml-2" 
               />
             </button>
           ) : (
