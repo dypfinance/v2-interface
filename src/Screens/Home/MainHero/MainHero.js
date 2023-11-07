@@ -148,7 +148,7 @@ const MainHero = () => {
                     </div>
                   </div>
                   <span className="migration-progress-info mb-0">
-                    *Total supply to be migrated: 75M DYP
+                    *Total supply to be migrated: 79.9M DYP
                   </span>
                 </div>
 
