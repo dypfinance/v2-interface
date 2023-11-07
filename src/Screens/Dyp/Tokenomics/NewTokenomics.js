@@ -17,11 +17,14 @@ import AvaxTokenomics from "./AvaxTokenomics";
 import ethIcon from "./assets/ethIcon.svg";
 import bnbIcon from "./assets/bnbIcon.svg";
 import avaxIcon from "./assets/avaxIcon.svg";
+import Web3 from "web3";
+import { TOKEN_ABI } from "./tokenAbi";
 
 const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   const [tokenomicData, setTokenomicData] = useState("dyp");
   const [toggledyp, setToggleDyp] = useState(showBtn === false ? true : false);
   const [toggleIdyp, setToggleIDyp] = useState(false);
+  const [dypiusSupply, setdypiusSupply] = useState(0);
 
   // useEffect(() => {
   //   if (toggleIdyp === false && toggledyp === false) {
@@ -44,6 +47,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   const [visible, setVisible] = useState(false);
   const [dypSupply, setDypSupply] = useState("0.0");
   const [idypSupply, setiDypSupply] = useState("0.0");
+  const [totalSupply, setTotalSupply] = useState("0.0")
 
   const handleCopy = (address) => {
     navigator.clipboard.writeText(address);
@@ -68,10 +72,28 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
     }
   };
 
+  const getTotalSupply = async () => {
+    const infuraWeb3 = new Web3(
+      "https://mainnet.infura.io/v3/94608dc6ddba490697ec4f9b723b586e"
+    );
+
+    const tokenContract = new infuraWeb3.eth.Contract(
+      TOKEN_ABI,
+      "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+    );
+    const result = await tokenContract.methods
+      .totalSupply()
+      .call()
+      .catch((e) => {
+        console.log(e);
+      });
+    setdypiusSupply(result / 1e18);
+  };
+
   async function getCirculatingSupplyDYP() {
     try {
       await axios
-        .get("https://api.dyp.finance/api/circulating-supply")
+        .get("https://api.dyp.finance/api/circulating-supply-new")
         .then((data) => {
           setDypSupply(data.data);
         });
@@ -84,6 +106,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   useEffect(() => {
     getCirculatingSupplyiDYP();
     getCirculatingSupplyDYP();
+    getTotalSupply()
   }, []);
 
   return (
@@ -213,9 +236,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                   </div>
                   <div className="mininginfo-wrapper d-flex flex-column gap-4">
                     <p className="m-0">
-                      30,000,000 DYP have been minted at Dypius's native token
-                      is DYP, helping power the Dypius ecosystem. It's use cases
-                      are:
+                    Dypius's native token is DYP, helping power the Dypius ecosystem. It's use cases are:
                     </p>
                     <ul>
                       <li>Governance (for decentralized community voting)</li>
@@ -466,7 +487,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                     <div className="d-flex flex-column gap-3">
                       <span className="circulating-title">Total Supply</span>
                       <span className="circulating-amount">
-                        {getFormattedNumber(dypSupply, 6)} DYP
+                        {getFormattedNumber(dypiusSupply, 0)} DYP
                       </span>
                     </div>
                   </div>
@@ -476,7 +497,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                         Circulating supply
                       </span>
                       <span className="circulating-amount">
-                        {getFormattedNumber(dypSupply, 6)} DYP
+                        {getFormattedNumber(dypSupply, 0)} DYP
                       </span>
                     </div>
                   </div>
@@ -485,8 +506,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                       <b>DYP Migration - Swap Ratios</b>
                     </p>
                     <p className="mb-0">
-                      The swap ratio for DYP V2 vary depending on the respective
-                      blockchain.
+                    The swap ratio for DYP V2 varies depending on the respective blockchain.
                     </p>
                     <div className="d-flex align-items-center gap-2">
                       <img src={ethIcon} alt="" />

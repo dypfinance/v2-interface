@@ -88,7 +88,7 @@ const MainHero = () => {
                 <div className="migrated-tokens-wrapper d-flex align-items-center justify-content-between py-2 px-4">
                   {countdown ? (
                     <>
-                      <span className="migrated-tokens mb-0">Live in</span>
+                      <span className="migrated-tokens mb-0">Coming soon</span>
                       <Countdown
                         renderer={renderer}
                         date={lastDay}
@@ -125,7 +125,7 @@ const MainHero = () => {
                       className="migration-inner-progress d-flex align-items-center justify-content-end px-3"
                       style={{
                         width: `${
-                          migrationPercentage >= 50 ? migrationPercentage : ""
+                          migrationPercentage >= 35 ? migrationPercentage : ""
                         }%`,
                       }}
                     >
@@ -133,7 +133,7 @@ const MainHero = () => {
                         {countdown ? (
                           <>
                             <h6 className="migration-percentage mb-0">
-                              Coming soon
+                              0%
                             </h6>
                           </>
                         ) : (
@@ -156,6 +156,7 @@ const MainHero = () => {
                   href="https://app.dypius.com/migration"
                   target="_blank"
                   className="btn filled-orange-btn d-flex align-items-center justify-content-center"
+                  style={{width: 'fit-content'}}
                 >
                   Migrate DYP
                 </a>
