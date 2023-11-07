@@ -47,7 +47,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   const [visible, setVisible] = useState(false);
   const [dypSupply, setDypSupply] = useState("0.0");
   const [idypSupply, setiDypSupply] = useState("0.0");
-  const [totalSupply, setTotalSupply] = useState("0.0")
+  const [totalSupply, setTotalSupply] = useState("0.0");
 
   const handleCopy = (address) => {
     navigator.clipboard.writeText(address);
@@ -106,7 +106,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   useEffect(() => {
     getCirculatingSupplyiDYP();
     getCirculatingSupplyDYP();
-    getTotalSupply()
+    getTotalSupply();
   }, []);
 
   return (
@@ -195,72 +195,85 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
         >
           <div className="card card-body pb-4">
             {tokenomicData === "dyp" ? (
-         <>
-              <div className="row m-0 justify-content-between align-items-center align-items-lg-end gap-2">
-                <div className="col-xl-7 col-lg-7 px-2">
-                  <div className="d-flex flex-column mt-0">
-                    <span className="dypcontract-title">
-                      DYP Contract Address:
-                    </span>
-                    <span className="dypcontract-addr">
-                      {windowSize.width < 526
-                        ? shortAddress(
-                            "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
-                          )
-                        : "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"}
-                      <img
-                        src={Clipboard}
-                        alt=""
-                        onClick={() => {
-                          handleCopy(
-                            "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
-                          );
-                        }}
-                        style={{
-                          cursor: "pointer",
-                          display: copied === true ? "none" : "",
-                        }}
-                      />
-                      {copied === true && (
-                        <span
-                          className="d-inline-block"
-                          tabindex="0"
-                          data-toggle="tooltip"
-                          title="Copied"
-                          data-placement="top"
+              <>
+                <div className="row m-0 justify-content-between align-items-center align-items-lg-end gap-2">
+                  <div className="col-xl-7 col-lg-7 px-2">
+                    <div className="d-flex flex-column mt-0">
+                      <span className="dypcontract-title">
+                        DYP Contract Address:
+                      </span>
+                      <span className="dypcontract-addr">
+                        {windowSize.width < 526
+                          ? shortAddress(
+                              "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+                            )
+                          : "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"}
+                        <img
+                          src={Clipboard}
+                          alt=""
+                          onClick={() => {
+                            handleCopy(
+                              "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+                            );
+                          }}
+                          style={{
+                            cursor: "pointer",
+                            display: copied === true ? "none" : "",
+                          }}
+                        />
+                        {copied === true && (
+                          <span
+                            className="d-inline-block"
+                            tabindex="0"
+                            data-toggle="tooltip"
+                            title="Copied"
+                            data-placement="top"
+                          >
+                            <Success bgColor={"#544ED5"} svgColor={"#FFF"} />
+                          </span>
+                        )}
+                      </span>
+                    </div>
+                    <div className="mininginfo-wrapper d-flex flex-column gap-4">
+                      <p className="m-0">
+                        Dypius's native token is DYP, helping power the Dypius
+                        ecosystem. It's use cases are:
+                      </p>
+                      <ul>
+                        <li>Governance (for decentralized community voting)</li>
+                        <li>Staking</li>
+                        <li>Premium Subscription</li>
+                        <li>DYP Locker</li>
+                        <li>DYP News</li>
+                        <li>DYP Launchpad</li>
+                        <li>World of Dypians Events</li>
+                      </ul>
+                      <p className="mb-0">
+                        All of the above are available exclusively to New DYP
+                        token holders. The existing Old DYP token does not have
+                        any utility but can be seamlessly converted to New DYP
+                        via &nbsp;
+                        <a
+                          href="https://app.dypius.com/migration"
+                          rel="noreferrer"
+                          target="_blank"
+                          style={{
+                            color: "inherit",
+                          }}
                         >
-                          <Success bgColor={"#544ED5"} svgColor={"#FFF"} />
-                        </span>
-                      )}
-                    </span>
-                  </div>
-                  <div className="mininginfo-wrapper d-flex flex-column gap-4">
-                    <p className="m-0">
-                    Dypius's native token is DYP, helping power the Dypius ecosystem. It's use cases are:
-                    </p>
-                    <ul>
-                      <li>Governance (for decentralized community voting)</li>
-                      <li>Staking</li>
-                      <li>Premium Subscription</li>
-                      <li>DYP Locker</li>
-                      <li>DYP News</li>
-                      <li>DYP Launchpad</li>
-                      <li>World of Dypians Events</li>
-                    </ul>
-                    <p className="mb-0">
-                      All of the above are available exclusively to New DYP
-                      token holders. The existing Old DYP token does not have
-                      any utility but can be seamlessly converted to New DYP via
-                      Dypius migration.
-                    </p>
-                    <p className="mb-0">
-                      DYP is a fair launch, community-governed project. There
-                      was no seed round, no private round, and no pre-sale -
-                      91.97% of the total supply was reserved for the Dypius
-                      community.
-                    </p>
-                  </div>
-                  {/* <div className="d-flex flex-column gap-3 mt-3">
+                          <u>
+                            <b>Dypius migration.</b>
+                          </u>
+                        </a>
+                      </p>
+                      <p className="mb-0">
+                        DYP is a fair launch, community-governed project. There
+                        was no seed round, no private round, and no pre-sale -
+                        91.97% of the total supply was reserved for the Dypius
+                        community.
+                      </p>
+                    </div>
+                    {/* <div className="d-flex flex-column gap-3 mt-3">
                   <div>
                     <span style={{color: '#554fd8'}}>Community</span>
                     <br />
@@ -481,73 +494,74 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                     </div>
                   </div>
                 </div> */}
-                </div>
-                <div className="col-lg-4 col-xl-4 col-md-4 px-0 px-lg-2">
-                  <div className="circulating-wrapper w-100 mb-3">
-                    <div className="d-flex flex-column gap-3">
-                      <span className="circulating-title">Total Supply</span>
-                      <span className="circulating-amount">
-                        {getFormattedNumber(dypiusSupply, 0)} DYP
-                      </span>
-                    </div>
                   </div>
-                  <div className="circulating-wrapper w-100 mb-3">
-                    <div className="d-flex flex-column gap-3">
-                      <span className="circulating-title">
-                        Circulating supply
-                      </span>
-                      <span className="circulating-amount">
-                        {getFormattedNumber(dypSupply, 0)} DYP
-                      </span>
+                  <div className="col-lg-4 col-xl-4 col-md-4 px-0 px-lg-2">
+                    <div className="circulating-wrapper w-100 mb-3">
+                      <div className="d-flex flex-column gap-3">
+                        <span className="circulating-title">Total Supply</span>
+                        <span className="circulating-amount">
+                          {getFormattedNumber(dypiusSupply, 0)} DYP
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div className="mininginfo-wrapper d-flex flex-column gap-2">
-                    <p className="mb-0">
-                      <b>DYP Migration - Swap Ratios</b>
-                    </p>
-                    <p className="mb-0">
-                    The swap ratio for DYP V2 varies depending on the respective blockchain.
-                    </p>
-                    <div className="d-flex align-items-center gap-2">
-                      <img src={ethIcon} alt="" />
-                      <p className="mb-0" style={{ fontSize: "14px" }}>
-                        1 DYP ERC20 - 6 DYP ERC20 V2
+                    <div className="circulating-wrapper w-100 mb-3">
+                      <div className="d-flex flex-column gap-3">
+                        <span className="circulating-title">
+                          Circulating supply
+                        </span>
+                        <span className="circulating-amount">
+                          {getFormattedNumber(dypSupply, 0)} DYP
+                        </span>
+                      </div>
+                    </div>
+                    <div className="mininginfo-wrapper d-flex flex-column gap-2">
+                      <p className="mb-0">
+                        <b>DYP Migration - Swap Ratio</b>
                       </p>
-                    </div>
-                    <div className="d-flex align-items-center gap-2">
-                      <img src={bnbIcon} alt="" />
-                      <p className="mb-0" style={{ fontSize: "14px" }}>
-                        1 DYP ERC20 - 1 DYP ERC20 V2
+                      <p className="mb-0">
+                        The swap ratio for DYP V2 varies depending on the
+                        respective blockchain.
                       </p>
+                      <div className="d-flex align-items-center gap-2">
+                        <img src={ethIcon} alt="" />
+                        <p className="mb-0" style={{ fontSize: "14px" }}>
+                          1 DYP ERC20 - 6 DYP ERC20 V2
+                        </p>
+                      </div>
+                      <div className="d-flex align-items-center gap-2">
+                        <img src={bnbIcon} alt="" />
+                        <p className="mb-0" style={{ fontSize: "14px" }}>
+                          1 DYP BEP20 - 1 DYP ERC20 V2
+                        </p>
+                      </div>
+                      <div className="d-flex align-items-center gap-2">
+                        <img src={avaxIcon} alt="" />
+                        <p className="mb-0" style={{ fontSize: "14px" }}>
+                          1 DYP ARC20 - 1 DYP ERC20 V2
+                        </p>
+                      </div>
                     </div>
-                    <div className="d-flex align-items-center gap-2">
-                      <img src={avaxIcon} alt="" />
-                      <p className="mb-0" style={{ fontSize: "14px" }}>
-                        1 DYP ERC20 - 1 DYP ERC20 V2
-                      </p>
-                    </div>
-                  </div>
-                  {/* <div
+                    {/* <div
                     id="crypto-widget-CoinList"
                     data-design="modern"
                     data-coin-ids="2669"
                   ></div> */}
-                  {/* <img src={Graph} alt="" className="w-100" /> */}
-                </div>
-              </div>
-                <div className="">
-                <div className="circulating-wrapper w-100">
-                  <div className="d-flex flex-column gap-3">
-                    <span
-                      className="circulating-title"
-                      // style={{ fontSize: 12 }}
-                    >
-                      No additional tokens can be minted
-                    </span>
+                    {/* <img src={Graph} alt="" className="w-100" /> */}
                   </div>
                 </div>
-              </div>
-         </>
+                <div className="">
+                  <div className="circulating-wrapper w-100">
+                    <div className="d-flex flex-column gap-3">
+                      <span
+                        className="circulating-title"
+                        // style={{ fontSize: 12 }}
+                      >
+                        No additional tokens can be minted
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </>
             ) : (
               <div className="row m-0 justify-content-between gap-2">
                 <div className="col-lg-7 col-xl-7 col-md-7">
