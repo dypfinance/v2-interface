@@ -10,6 +10,7 @@ import Roadmap from './Roadmap/Roadmap';
 import useWindowSize from '../../hooks/useWindowSize';
 import ContactUs from './ContactUs/ContactUs';
 import { useLocation } from 'react-router-dom';
+import NewTokenomics from '../Dyp/Tokenomics/NewTokenomics';
 
 const About = () => {
 
@@ -36,7 +37,7 @@ const About = () => {
       <Security />
       <DypPartners />
       <div className="container-lg" style={{ marginTop: "5rem", overflow: windowSize.width < 700 ? 'hidden' : '' }}>
-        <Tokenomics bottom={0} showBtn={false} isAbout={true} isDyp={true}/>
+        <NewTokenomics bottom={0} showBtn={false} isAbout={true} isDyp={true}/>
       </div>
       <ContactUs />
     </div>
