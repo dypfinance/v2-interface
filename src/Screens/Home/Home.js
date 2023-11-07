@@ -23,7 +23,7 @@ const Home = () => {
       <DypPartners />
       </Suspense>
       <DypNews topTitle='Announcements' bottomTitle='Stay tuned'/>
-      {/* <LandPopup /> */}
+      <LandPopup />
     </div>
   );
 };
