@@ -156,6 +156,7 @@ const MainHero = () => {
                   href="https://app.dypius.com/migration"
                   target="_blank"
                   className="btn filled-orange-btn d-flex align-items-center justify-content-center"
+                  style={{width: 'fit-content'}}
                 >
                   Migrate DYP
                 </a>
