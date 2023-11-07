@@ -17,11 +17,14 @@ import AvaxTokenomics from "./AvaxTokenomics";
 import ethIcon from "./assets/ethIcon.svg";
 import bnbIcon from "./assets/bnbIcon.svg";
 import avaxIcon from "./assets/avaxIcon.svg";
+import Web3 from "web3";
+import { TOKEN_ABI } from "./tokenAbi";
 
 const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   const [tokenomicData, setTokenomicData] = useState("dyp");
   const [toggledyp, setToggleDyp] = useState(showBtn === false ? true : false);
   const [toggleIdyp, setToggleIDyp] = useState(false);
+  const [dypiusSupply, setdypiusSupply] = useState(0);
 
   // useEffect(() => {
   //   if (toggleIdyp === false && toggledyp === false) {
@@ -69,6 +72,24 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
     }
   };
 
+  const getTotalSupply = async () => {
+    const infuraWeb3 = new Web3(
+      "https://mainnet.infura.io/v3/94608dc6ddba490697ec4f9b723b586e"
+    );
+
+    const tokenContract = new infuraWeb3.eth.Contract(
+      TOKEN_ABI,
+      "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+    );
+    const result = await tokenContract.methods
+      .totalSupply()
+      .call()
+      .catch((e) => {
+        console.log(e);
+      });
+    setdypiusSupply(result / 1e18);
+  };
+
   async function getCirculatingSupplyDYP() {
     try {
       await axios
@@ -85,6 +106,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   useEffect(() => {
     getCirculatingSupplyiDYP();
     getCirculatingSupplyDYP();
+    getTotalSupply()
   }, []);
 
   return (
@@ -465,7 +487,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                     <div className="d-flex flex-column gap-3">
                       <span className="circulating-title">Total Supply</span>
                       <span className="circulating-amount">
-                        {getFormattedNumber(229926862, 0)} DYP
+                        {getFormattedNumber(dypiusSupply, 0)} DYP
                       </span>
                     </div>
                   </div>
