@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./_landpopup.scss";
 import landPopup from "./landPopup.webp";
 import closePopup from "./closePopup.svg";
+import migrationPopup from "./migrationPopup.webp";
 import OutsideClickHandler from "react-outside-click-handler";
 
 const LandPopup = () => {
@@ -42,22 +43,24 @@ const LandPopup = () => {
           />
         </div>
         <div className="d-flex flex-column align-items-center justify-content-center">
-          <h6 className="popup-title metaverse mb-0">Genesis</h6>
-          <h6 className="popup-title mb-2">Land NFT Launch</h6>
+          <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
+          <h6 className="popup-title d-flex align-items-center gap-2 mb-0">DYP Token migration is now</h6>
+          <h6 className="popup-title metaverse mb-0">Live</h6>
+          </div>
           <span className="popup-span mb-0">
-          Become an original World of Dypians land owner by minting a Genesis Land NFT and gain early access to rewards and benefits
+          Easily migrate your old DYP tokens from Ethereum, BNB Chain, and Avalanche to the new DYP v2 token on Ethereum. 
           </span>
         </div>
-        <img src={landPopup} className="land-nft-image" alt="land nft" />
-        <span className="popup-content">
+        <img src={migrationPopup} className="land-nft-image" alt="land nft" />
+        {/* <span className="popup-content">
           Total Genesis land supply limited to 1,000 plots
-        </span>
+        </span> */}
         <a
-          href="https://www.worldofdypians.com/land"
+          href="https://app.dypius.com/migration"
           target={"_blank"}
           onClick={() => setActive(false)}
         >
-          <button className="btn filled-btn m-3">Explore more</button>
+          <button className="btn filled-btn m-3">Migrate</button>
         </a>
       </div>
     </OutsideClickHandler>
