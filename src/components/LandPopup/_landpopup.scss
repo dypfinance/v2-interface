@@ -15,7 +15,7 @@
 
   width: 30%;
 
-  @media screen and (max-width: 1455px) {
+  @media screen and (max-width: 1590px) {
       width: 55%;
   }
   @media screen and (max-width: 1300px) {
@@ -68,6 +68,7 @@
 @media screen and (max-width: 786px) {
     .popup-span{
         width: 100%;
+        font-size: 13px;
     }
 
     .land-nft-image{

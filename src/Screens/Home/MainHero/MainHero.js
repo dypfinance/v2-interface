@@ -42,11 +42,11 @@ const MainHero = () => {
     arrows: false,
   };
 
-  const [countdown, setCountdown] = useState(true);
+ 
   const [migrationAmount, setMigrationAmount] = useState(0);
   const [migrationPercentage, setMigrationPercentage] = useState(0);
 
-  let lastDay = new Date("2023-11-08T09:00:00.000+01:00");
+ 
 
 
   const getMigrationData = async () => {
@@ -86,17 +86,7 @@ const MainHero = () => {
                   long-term sustainability of DYP token.
                 </p>
                 <div className="migrated-tokens-wrapper d-flex align-items-center justify-content-between py-2 px-4">
-                  {countdown ? (
-                    <>
-                      <span className="migrated-tokens mb-0">Coming soon</span>
-                      <Countdown
-                        renderer={renderer}
-                        date={lastDay}
-                        zeroPadTime={2}
-                        onComplete={() => setCountdown(false)}
-                      />
-                    </>
-                  ) : (
+                 
                     <>
                       <span className="migrated-tokens mb-0">
                         Migrated DYP Tokens
@@ -105,7 +95,7 @@ const MainHero = () => {
                         {getFormattedNumber(migrationAmount, 0)}
                       </h6>
                     </>
-                  )}
+                 
                 </div>
                 <div className="d-flex flex-column">
                   <div className="migration-outer-progress d-flex align-items-center justify-content-start">
@@ -130,20 +120,14 @@ const MainHero = () => {
                       }}
                     >
                       <div className="d-flex align-items-center gap-2">
-                        {countdown ? (
-                          <>
-                            <h6 className="migration-percentage mb-0">
-                              0%
-                            </h6>
-                          </>
-                        ) : (
+                    
                           <>
                             <h6 className="migration-percentage mb-0">
                               {migrationPercentage}%
                             </h6>
                             <span className="migration-dash"></span>
                           </>
-                        )}
+                        
                       </div>
                     </div>
                   </div>
