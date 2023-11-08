@@ -70,14 +70,14 @@ const OurTokens = () => {
               Explore multiple possibilites with our unique token.
               </p>
             </div>
-            <div className="col-lg-6 col-xl-6 row justify-content-xl-end justify-content-lg-end justify-content-between gap-3 m-0 position-relative">
+           {/*  <div className="col-lg-6 col-xl-6 row justify-content-xl-end justify-content-lg-end justify-content-between gap-3 m-0 position-relative">
               <TokenCards
                 title={"DYP Token"}
                 price={getFormattedNumber(dyptokenData,4)}
                 percentage={`${dypPercentage} %`}
-              />
+              /> 
               
-            </div>
+            </div>*/}
           </div>
         </div>
         <div className="row m-0 gap-5 justify-content-between flex-column flex-xl-row flex-lg-row">
