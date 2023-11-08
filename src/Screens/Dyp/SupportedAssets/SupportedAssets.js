@@ -8,116 +8,108 @@ import dropdownIndicator from "../assets/dropdownIndicator.svg";
 import Spiral from "../../../assets/DypAssets/spiral.png";
 import rightArrow from "../../../assets/filledArrow.svg";
 import axios from "axios";
-import getFormattedNumber from '../../../hooks/getFormattedNumber'
+import getFormattedNumber from "../../../hooks/getFormattedNumber";
+import EmptySupAssetCard from "../../../components/SupAssetCard/EmptySupAssetCard";
 
 const SupportedAssets = () => {
-
   const stake = [
     {
-        apy: '1.1',
-        tvl_usd: '43832.30',
-        lockTime: 'No lock',
-        pool: 'DYP'
+      apy: "1.1",
+      tvl_usd: "43832.30",
+      lockTime: "No lock",
+      pool: "DYP",
     },
     {
-        apy: '1.1',
-        tvl_usd: '43832.30',
-        lockTime: 'No lock',
-        pool: 'DYP'
+      apy: "1.1",
+      tvl_usd: "43832.30",
+      lockTime: "No lock",
+      pool: "DYP",
     },
     {
-        apy: '1.1',
-        tvl_usd: '43832.30',
-        lockTime: 'No lock',
-        pool: 'DYP'
+      apy: "1.1",
+      tvl_usd: "43832.30",
+      lockTime: "No lock",
+      pool: "DYP",
     },
-  ]
+  ];
   const buyback = [
     {
-        apy: '5.6',
-        tvl_usd: '43832.30',
-        lockTime: 'No lock',
-        pool: 'DYP'
+      apy: "5.6",
+      tvl_usd: "43832.30",
+      lockTime: "No lock",
+      pool: "DYP",
     },
     {
-        apy: '5.6',
-        tvl_usd: '43832.30',
-        lockTime: 'No lock',
-        pool: 'DYP'
+      apy: "5.6",
+      tvl_usd: "43832.30",
+      lockTime: "No lock",
+      pool: "DYP",
     },
     {
-        apy: '5.6',
-        tvl_usd: '43832.30',
-        lockTime: 'No lock',
-        pool: 'DYP'
+      apy: "5.6",
+      tvl_usd: "43832.30",
+      lockTime: "No lock",
+      pool: "DYP",
     },
-  ]
+  ];
 
   const [ethState, setEthState] = useState(true);
   const [bnbState, setBnbState] = useState(false);
   const [avaxState, setAvaxState] = useState(false);
-  const [farmingItem, setFarmingItem] = useState([])
-  const [cards, setCards] = useState(stake)
+  const [farmingItem, setFarmingItem] = useState([]);
+  const [cards, setCards] = useState(stake);
   const types = ["Stake", "Yield", "Buyback"];
   const [activeType, setActiveType] = useState(types[0]);
-  var farming = []
+  var farming = [];
 
- 
-
-
-  const handleEthPool = async() => {
+  const handleEthPool = async () => {
     setAvaxState(false);
     setBnbState(false);
     setEthState(true);
-
   };
 
-  const handleBnbPool = async() => {
+  const handleBnbPool = async () => {
     setAvaxState(false);
     setBnbState(true);
     setEthState(false);
   };
 
-  const handleAvaxPool = async() => {
+  const handleAvaxPool = async () => {
     setAvaxState(true);
     setBnbState(false);
     setEthState(false);
   };
 
-
-  const fetchEthFarming = async() => {
+  const fetchEthFarming = async () => {
     await axios
-    .get("https://api.dyp.finance/api/the_graph_eth_v2")
-    .then((res) => {
-      let temparray = Object.entries(res.data.the_graph_eth_v2.lp_data);
-      // let farming = [];
-      temparray.map((item) => {
-        farming.push(item[1]);
-      });
-      setFarmingItem(farming)
-    })
-    .catch((err) => console.error(err));
-    
-  }
+      .get("https://api.dyp.finance/api/the_graph_eth_v2")
+      .then((res) => {
+        let temparray = Object.entries(res.data.the_graph_eth_v2.lp_data);
+        // let farming = [];
+        temparray.map((item) => {
+          farming.push(item[1]);
+        });
+        setFarmingItem(farming);
+      })
+      .catch((err) => console.error(err));
+  };
 
-  const fetchBscFarming = async() => {
-  
+  const fetchBscFarming = async () => {
     await axios
-    .get("https://api.dyp.finance/api/the_graph_bsc_v2")
-    .then((res) => {
-      let temparray = Object.entries(res.data.the_graph_bsc_v2.lp_data);
-      // let farming = [];
-      temparray.map((item) => {
-        farming.push(item[1]);
-      });
-      setFarmingItem(farming)
-    })
-    .catch((err) => console.error(err));
-  }
+      .get("https://api.dyp.finance/api/the_graph_bsc_v2")
+      .then((res) => {
+        let temparray = Object.entries(res.data.the_graph_bsc_v2.lp_data);
+        // let farming = [];
+        temparray.map((item) => {
+          farming.push(item[1]);
+        });
+        setFarmingItem(farming);
+      })
+      .catch((err) => console.error(err));
+  };
 
-
-    const fetchAvaxFarming = async() => {
-      await axios
+  const fetchAvaxFarming = async () => {
+    await axios
       .get("https://api.dyp.finance/api/the_graph_avax_v2")
       .then((res) => {
         let temparray = Object.entries(res.data.the_graph_avax_v2.lp_data);
@@ -125,95 +117,100 @@ const SupportedAssets = () => {
         temparray.map((item) => {
           farming.push(item[1]);
         });
-        setFarmingItem(farming)
+        setFarmingItem(farming);
       })
       .catch((err) => console.error(err));
-    }
+  };
 
+  const fetchEthStaking = async () => {
+    await axios
+      .get(`https://api2.dyp.finance/api/get_staking_info_eth`)
+      .then((res) => {
+        const dypIdyp = res.data.stakingInfoDYPEth.concat(
+          res.data.stakingInfoiDYPEth
+        );
 
-    const fetchEthStaking = async () => {
-      await axios
-        .get(`https://api.dyp.finance/api/get_staking_info_eth`)
-        .then((res) => {
-          const dypIdyp = res.data.stakingInfoDYPEth.concat(
-            res.data.stakingInfoiDYPEth
-          );
-
-          const cleanCards = dypIdyp.filter((item) => {
-            return item.expired !== "Yes"
-          })
-
-          const sortedAprs = cleanCards.sort(function(a, b){return b.tvl_usd - a.tvl_usd}) 
-         
-          const finalEthCards = res.data.stakinginfoCAWSLAND.concat(res.data.stakingInfoLAND, sortedAprs.slice(0,1))
-          setCards(finalEthCards);
-        })
-        .catch((err) => {
-          console.log(err);
+        const cleanCards = dypIdyp.filter((item) => {
+          return item.expired !== "Yes";
         });
-    };
-    const fetchBnbStaking = async () => {
-      await axios
-        .get(`https://api.dyp.finance/api/get_staking_info_bnb`)
-        .then((res) => {
-          const dypIdypBnb = res.data.stakingInfoDYPBnb.concat(
-            res.data.stakingInfoiDYPBnb
-          );
-          const cleanCards = dypIdypBnb.filter((item) => {
-            return item.expired !== "Yes"
-          })
 
-         
-          const newPool = cleanCards.filter((item) => {
-            return item.new_pool === "Yes"
-          })
-
-          const oldPool = cleanCards.filter((item) => {
-            return item.new_pool !== "Yes"
-          })
- 
-          const sortedAprs = oldPool.sort(function(a, b){return b.tvl_usd - a.tvl_usd}) 
-          setCards([...newPool, ...sortedAprs.slice(0,2)]);
-        })
-        .catch((err) => {
-          console.log(err);
+        const sortedAprs = cleanCards.sort(function (a, b) {
+          return b.tvl_usd - a.tvl_usd;
         });
-    };
-    const fetchAvaxStaking = async () => {
-      await axios
-        .get(`https://api.dyp.finance/api/get_staking_info_avax`)
-        .then((res) => {
-          const dypIdypAvax = res.data.stakingInfoDYPAvax.concat(
-            res.data.stakingInfoiDYPAvax
-          );
-          const cleanCards = dypIdypAvax.filter((item) => {
-            return item.expired !== "Yes"
-          })
 
-          const newPool = cleanCards.filter((item) => {
-            return item.new_pool === "Yes"
-          })
-
-          const oldPool = cleanCards.filter((item) => {
-            return item.new_pool !== "Yes"
-          })
- 
-          const sortedAprs = oldPool.sort(function(a, b){return b.tvl_usd - a.tvl_usd}) 
-          setCards([...newPool, ...sortedAprs.slice(0,2)]);
-        })
-        .catch((err) => {
-          console.log(err);
+        const finalEthCards = res.data.stakinginfoCAWSLAND.concat(
+          res.data.stakingInfoLAND,
+          sortedAprs.slice(0, 1)
+        );
+        setCards(finalEthCards);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  const fetchBnbStaking = async () => {
+    await axios
+      .get(`https://api2.dyp.finance/api/get_staking_info_bnb`)
+      .then((res) => {
+        const dypIdypBnb = res.data.stakingInfoDYPBnb.concat(
+          res.data.stakingInfoiDYPBnb
+        );
+        const cleanCards = dypIdypBnb.filter((item) => {
+          return item.expired !== "Yes";
         });
-    };
 
+        const newPool = cleanCards.filter((item) => {
+          return item.new_pool === "Yes";
+        });
 
+        const oldPool = cleanCards.filter((item) => {
+          return item.new_pool !== "Yes";
+        });
+
+        const sortedAprs = oldPool.sort(function (a, b) {
+          return b.tvl_usd - a.tvl_usd;
+        });
+        setCards([...newPool, ...sortedAprs.slice(0, 2)]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  const fetchAvaxStaking = async () => {
+    await axios
+      .get(`https://api2.dyp.finance/api/get_staking_info_avax`)
+      .then((res) => {
+        const dypIdypAvax = res.data.stakingInfoDYPAvax.concat(
+          res.data.stakingInfoiDYPAvax
+        );
+        const cleanCards = dypIdypAvax.filter((item) => {
+          return item.expired !== "Yes";
+        });
+
+        const newPool = cleanCards.filter((item) => {
+          return item.new_pool === "Yes";
+        });
+
+        const oldPool = cleanCards.filter((item) => {
+          return item.new_pool !== "Yes";
+        });
+
+        const sortedAprs = oldPool.sort(function (a, b) {
+          return b.tvl_usd - a.tvl_usd;
+        });
+        setCards([...newPool, ...sortedAprs.slice(0, 2)]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   useEffect(() => {
-    if(ethState){
+    if (ethState) {
       fetchEthStaking();
-    }else if(bnbState){
+    } else if (bnbState) {
       fetchBnbStaking();
-    }else if(avaxState){
+    } else if (avaxState) {
       fetchAvaxStaking();
     }
 
@@ -224,17 +221,25 @@ const SupportedAssets = () => {
     // }else if(activeType === 'Buyback'){
     //   setCards(buyback)
     // }
-
-  }, [ethState, bnbState, avaxState, activeType])
-  
+  }, [ethState, bnbState, avaxState, activeType]);
 
   return (
     <div className="container-lg supportedAssets-wrapper">
       <div className="px-4">
         <div className="col-12 col-lg-6 mb-5 px-0 px-lg-auto">
-          <Title top="Supported" bottom={"Assets"} align={"d-flex gap-2 justify-content-center justify-content-lg-start"} />
-          <p style={{ color: "rgba(30, 32, 41, 0.6)" }} className='supported-description'>
-          We support multiple tokens on the Ethereum, BNB, and Avalanche chains
+          <Title
+            top="Supported"
+            bottom={"Assets"}
+            align={
+              "d-flex gap-2 justify-content-center justify-content-lg-start"
+            }
+          />
+          <p
+            style={{ color: "rgba(30, 32, 41, 0.6)" }}
+            className="supported-description"
+          >
+            We support multiple tokens on the Ethereum, BNB, and Avalanche
+            chains
           </p>
         </div>
 
@@ -279,7 +284,7 @@ const SupportedAssets = () => {
                       fontSize: 12,
                     }}
                   >
-                    <img src={ethDropdown} alt=""  />
+                    <img src={ethDropdown} alt="" />
                     Ethereum
                   </div>
                 ) : bnbState === true ? (
@@ -291,7 +296,7 @@ const SupportedAssets = () => {
                       fontSize: 12,
                     }}
                   >
-                    <img src={bnbDropdown} alt=""  />
+                    <img src={bnbDropdown} alt="" />
                     BNB Chain
                   </div>
                 ) : (
@@ -303,11 +308,11 @@ const SupportedAssets = () => {
                       fontSize: 12,
                     }}
                   >
-                    <img src={avaDropdown} alt=""  />
+                    <img src={avaDropdown} alt="" />
                     Avalanche
                   </div>
                 )}
-                <img src={dropdownIndicator} alt=""  />
+                <img src={dropdownIndicator} alt="" />
               </div>
               <ul className="dropdown-menu coin-menu p-1">
                 <li
@@ -315,75 +320,112 @@ const SupportedAssets = () => {
                   onClick={() => handleEthPool()}
                   style={{ color: "#566FCE" }}
                 >
-                  <img src={ethDropdown} alt=""  /> Ethereum
+                  <img src={ethDropdown} alt="" /> Ethereum
                 </li>
                 <li
                   className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
                   onClick={() => handleBnbPool()}
                   style={{ color: "#D5A404" }}
                 >
-                  <img src={bnbDropdown} alt=""  /> BNB Chain
+                  <img src={bnbDropdown} alt="" /> BNB Chain
                 </li>
                 <li
                   className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
                   onClick={() => handleAvaxPool()}
                   style={{ color: "#E84142" }}
                 >
-                  <img src={avaDropdown} alt=""  /> Avalanche
+                  <img src={avaDropdown} alt="" /> Avalanche
                 </li>
               </ul>
             </div>
-            {/* <div
-              className="type-wrapper d-flex flex-row justify-content-center align-items-center"
-              style={{ gap: 8 }}
-            >
-              <p
-                className={`${activeType === "Stake" && "active"}`}
-                onClick={() => setActiveType(types[0])}
-              >
-                Stake
-              </p>
-              <p
-                className={`${activeType === "Yield" && "active"}`}
-                onClick={() => setActiveType(types[1])}
-              >
-                Yield
-              </p>
-              <p
-                className={`${activeType === "Buyback" && "active"}`}
-                onClick={() => setActiveType(types[2])}
-              >
-                Buyback
-              </p>
-            </div> */}
           </div>
           <div
             className="row gap-4 px-0 px-lg-4 position-relative justify-content-center justify-content-lg-between justify-content-xl-between assets-container"
             style={{ paddingBottom: "4rem", zIndex: 1 }}
           >
-            {cards.slice(0,3).map((card, index) => (
-                   <SupAssetCard
-                   key={index}
-                   pool={card.pair_name}
-                   apr={card.apy_percent + "%"}
-                   logo={card.pair_name && card.pair_name}
-                   tvl={"$" + getFormattedNumber(card.tvl_usd)}
-                   lockTime={card.lock_time && card.lock_time}
-                   totalNfts={card.total_nfts_locked && card.total_nfts_locked}
-                   chain={
-                     `supported-assets-card ${ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"}`
-                   }
-                   listType ={activeType}
-                  chainType={ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"}
-                 />
-            ))}
+            <>
+              {cards.slice(0, ethState ? 2 : 1).map((card, index) => (
+                <SupAssetCard
+                  key={index}
+                  pool={card.pair_name}
+                  apr={card.apy_percent + "%"}
+                  logo={card.pair_name && card.pair_name}
+                  tvl={"$" + getFormattedNumber(card.tvl_usd)}
+                  lockTime={card.lock_time && card.lock_time}
+                  totalNfts={card.total_nfts_locked && card.total_nfts_locked}
+                  chain={`supported-assets-card ${
+                    ethState === true
+                      ? "eth"
+                      : bnbState === true
+                      ? "bnb"
+                      : "avax"
+                  }`}
+                  listType={activeType}
+                  chainType={
+                    ethState === true
+                      ? "eth"
+                      : bnbState === true
+                      ? "bnb"
+                      : "avax"
+                  }
+                />
+              ))}
+              <SupAssetCard
+                //  key={index}
+                pool={"DYP"}
+                apr={12.5 + "%"}
+                logo={"dyp"}
+                tvl={"N/A"}
+                lockTime={"No Lock"}
+                //  totalNfts={card.total_nfts_locked && card.total_nfts_locked}
+                chain={`supported-assets-card ${
+                  ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"
+                }`}
+                listType={activeType}
+                chainType={
+                  ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"
+                }
+                commingSoon={true}
+              />
+              {bnbState || avaxState ? (
+                <EmptySupAssetCard
+                  //  key={index}
+                  pool={"DYP"}
+                  apr={12.5 + "%"}
+                  logo={"dyp"}
+                  tvl={"N/A"}
+                  lockTime={"No Lock"}
+                  //  totalNfts={card.total_nfts_locked && card.total_nfts_locked}
+                  chain={`supported-assets-card ${
+                    ethState === true
+                      ? "eth"
+                      : bnbState === true
+                      ? "bnb"
+                      : "avax"
+                  }`}
+                  listType={activeType}
+                  chainType={
+                    ethState === true
+                      ? "eth"
+                      : bnbState === true
+                      ? "bnb"
+                      : "avax"
+                  }
+                  commingSoon={true}
+                />
+              ) : (
+                <></>
+              )}
+            </>
             {/* <img className="spiral2" src={Spiral} alt="" /> */}
             <a
-            href='https://app.dypius.com/earn' target={'_blank'} rel='noreferrer'
+              href="https://app.dypius.com/earn"
+              target={"_blank"}
+              rel="noreferrer"
               className="outline-btn position-absolute d-flex align-items-center viewmorebtn"
-              style={{ bottom: "-19px", width: 'fit-content'}}
+              style={{ bottom: "-19px", width: "fit-content" }}
             >
-              View more <img src={rightArrow} alt="" className="ml-3"  />
+              View more <img src={rightArrow} alt="" className="ml-3" />
             </a>
           </div>
         </div>
