@@ -10,7 +10,7 @@ const TokenCards = ({ title, price, percentage }) => {
             <span className="tokenprice">${price}</span>
           </div>
           <div className="d-flex flex-column gap-3 p-0">
-            <span
+            {/* <span
               className="token-valuechange"
               style={{
                 color: parseFloat(percentage) > 0 ? "#75cac2" : "#E07070",
@@ -56,7 +56,7 @@ const TokenCards = ({ title, price, percentage }) => {
                 </svg>
               )}
               <span>{percentage}</span>
-            </div>
+            </div> */}
           </div>
         </div>
         <span className="current-value">Current value</span>

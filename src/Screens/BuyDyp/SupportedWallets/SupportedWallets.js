@@ -56,13 +56,13 @@ const SupportedWallets = () => {
             <div className="row ml-0 mr-0 gap-2 align-items-center">
               <div className="d-flex flex-column dypaddr-wrapper ">
                 <span className="dypcontractaddr">
-                  DYP Contract Address (Ethereum, BNB Chain, Avalanche):
+                  DYP Contract Address (Ethereum):
                  
                 </span>
                 <span className="contractaddr justify-content-center">
                   {windowSize.width < 526
-                    ? shortAddress("0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17")
-                    : "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"}
+                    ? shortAddress("0x39b46b212bdf15b42b166779b9d1787a68b9d0c3")
+                    : "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"}
                   <img
                     src={require("../assets/copy.svg").default}
                     alt=""
@@ -72,7 +72,7 @@ const SupportedWallets = () => {
                       display: copied === true ? "none" : "",
                     }}
                     onClick={() => {
-                      handleCopy("0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17");
+                      handleCopy("0x39b46b212bdf15b42b166779b9d1787a68b9d0c3");
                     }}
                   />
                   {copied === true && (
