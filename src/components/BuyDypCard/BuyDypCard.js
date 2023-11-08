@@ -18,11 +18,12 @@ const BuyDypCard = ({ title, logo, link, totalvids, videos, id }) => {
             </div>
           </div>
         </div>
-        <a href={link} target="_blank" rel="noreferrer" className="pr-0">
+        {/* <a href={link} target="_blank" rel="noreferrer" className="pr-0"> */}
+          <div className="pr-0" style={{filter: 'grayscale(1)'}}>
           <div className="rightarrow-wrapper">
             <img src={rightArrow} alt=""  />
-          </div>
-        </a>
+          </div></div>
+        {/* </a> */}
       </div>
       <hr style={{marginBottom: 0, marginTop: 10 }} />
       <div className="accordion-item border-0">
