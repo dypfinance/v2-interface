@@ -60,6 +60,9 @@ const SupportedAssets = () => {
   const [cards, setCards] = useState(stake);
   const types = ["Stake", "Yield", "Buyback"];
   const [activeType, setActiveType] = useState(types[0]);
+  const [newEthPool, setNewEthPool] = useState({});
+  const [newAvaxPool, setNewAvaxPool] = useState({});
+  const [newBnbPool, setNewBnbPool] = useState({});
   var farming = [];
 
   const handleEthPool = async () => {
@@ -122,6 +125,27 @@ const SupportedAssets = () => {
       .catch((err) => console.error(err));
   };
 
+  const getNewEthPool = async () => {
+    await axios
+      .get("https://api2.dyp.finance/api/get_staking_info_eth_new")
+      .then((res) => {
+        setNewEthPool(res.data.stakingInfoDYPEth[0]);
+      });
+  };
+  const getNewBnbPool = async () => {
+    await axios
+      .get("https://api2.dyp.finance/api/get_staking_info_bnb_new")
+      .then((res) => {
+        setNewBnbPool(res.data.stakingInfoDYPBnb[0]);
+      });
+  };
+  const getNewAvaxPool = async () => {
+    await axios
+      .get("https://api2.dyp.finance/api/get_staking_info_avax_new")
+      .then((res) => {
+        setNewAvaxPool(res.data.stakingInfoDYPAvax[0]);
+      });
+  };
   const fetchEthStaking = async () => {
     await axios
       .get(`https://api2.dyp.finance/api/get_staking_info_eth`)
@@ -140,7 +164,8 @@ const SupportedAssets = () => {
 
         const finalEthCards = res.data.stakinginfoCAWSLAND.concat(
           res.data.stakingInfoLAND,
-          sortedAprs.slice(0, 1)
+          // sortedAprs.slice(0, 1)
+          newEthPool
         );
         setCards(finalEthCards);
       })
@@ -148,6 +173,7 @@ const SupportedAssets = () => {
         console.log(err);
       });
   };
+
   const fetchBnbStaking = async () => {
     await axios
       .get(`https://api2.dyp.finance/api/get_staking_info_bnb`)
@@ -170,7 +196,7 @@ const SupportedAssets = () => {
         const sortedAprs = oldPool.sort(function (a, b) {
           return b.tvl_usd - a.tvl_usd;
         });
-        setCards([...newPool, ...sortedAprs.slice(0, 2)]);
+        setCards([...newPool, ...sortedAprs.slice(0, 2), newBnbPool]);
       })
       .catch((err) => {
         console.log(err);
@@ -198,7 +224,7 @@ const SupportedAssets = () => {
         const sortedAprs = oldPool.sort(function (a, b) {
           return b.tvl_usd - a.tvl_usd;
         });
-        setCards([...newPool, ...sortedAprs.slice(0, 2)]);
+        setCards([...newPool, ...sortedAprs.slice(0, 2), newAvaxPool]);
       })
       .catch((err) => {
         console.log(err);
@@ -206,6 +232,9 @@ const SupportedAssets = () => {
   };
 
   useEffect(() => {
+    getNewEthPool();
+    getNewBnbPool();
+    getNewAvaxPool();
     if (ethState) {
       fetchEthStaking();
     } else if (bnbState) {
@@ -344,7 +373,7 @@ const SupportedAssets = () => {
             style={{ paddingBottom: "4rem", zIndex: 1 }}
           >
             <>
-              {cards.slice(0, ethState ? 2 : 1).map((card, index) => (
+              {cards.slice(0, ethState ? 3 : 2).map((card, index) => (
                 <SupAssetCard
                   key={index}
                   pool={card.pair_name}
@@ -370,7 +399,7 @@ const SupportedAssets = () => {
                   }
                 />
               ))}
-              <SupAssetCard
+              {/* <SupAssetCard
                 //  key={index}
                 pool={"DYP"}
                 apr={12.5 + "%"}
@@ -386,7 +415,7 @@ const SupportedAssets = () => {
                   ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"
                 }
                 commingSoon={true}
-              />
+              /> */}
               {bnbState || avaxState ? (
                 <EmptySupAssetCard
                   //  key={index}
