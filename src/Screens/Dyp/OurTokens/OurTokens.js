@@ -13,6 +13,13 @@ const OurTokens = () => {
   const [idypPercentage, setIDypPercentage] = useState(0)
 
 
+const getDypPrice = async () => {
+  await axios.get('https://api.geckoterminal.com/api/v2/networks/eth/pools/0x7c81087310a228470db28c1068f0663d6bf88679').then((data) => {
+    setDypTokenData(data.data.data.attributes.base_token_price_usd)
+  })
+}
+
+
   const getTokenData = async () => {
     await axios
       .get("https://api.dyp.finance/api/the_graph_eth_v2")
@@ -20,7 +27,7 @@ const OurTokens = () => {
         const propertyDyp = Object.entries(
           data.data.the_graph_eth_v2.token_data
         );
-        setDypTokenData(propertyDyp[0][1].token_price_usd);
+        // setDypTokenData(propertyDyp[0][1].token_price_usd);
 
         const propertyIDyp = Object.entries(
           data.data.the_graph_eth_v2.token_data
@@ -49,6 +56,7 @@ const OurTokens = () => {
     getTokenData();
     getDypTokenPercentage()
     // getIDypTokenPercentage()
+    getDypPrice();
   }, []);
   
   return (
@@ -70,14 +78,14 @@ const OurTokens = () => {
               Explore multiple possibilites with our unique token.
               </p>
             </div>
-           {/*  <div className="col-lg-6 col-xl-6 row justify-content-xl-end justify-content-lg-end justify-content-between gap-3 m-0 position-relative">
+            <div className="col-lg-6 col-xl-6 row justify-content-xl-end justify-content-lg-end justify-content-between gap-3 m-0 position-relative">
               <TokenCards
                 title={"DYP Token"}
                 price={getFormattedNumber(dyptokenData,4)}
                 percentage={`${dypPercentage} %`}
               /> 
               
-            </div>*/}
+            </div>
           </div>
         </div>
         <div className="row m-0 gap-5 justify-content-between flex-column flex-xl-row flex-lg-row">
