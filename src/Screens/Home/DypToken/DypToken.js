@@ -98,12 +98,12 @@ const DypToken = () => {
                 <Slider {...settings} >
                   <CoinCard
                     title="Dypius Vault"
-                    stakeAmount="20%"
+                    stakeAmount="5%"
                     description="Earn rewards by securely depositing your assets into the vault smart contract"
                   />
                   <CoinCard
                     title="Dypius Stake"
-                    stakeAmount="30%"
+                    stakeAmount="12.5%"
                     description="Earn rewards by securely depositing your assets into the staking smart contract"
                   />
                 </Slider>
