@@ -6,7 +6,7 @@ import dyp from './assets/DYP.svg'
 import idyp from './assets/iDYP.svg'
 import wod from './assets/wod.png'
 
-const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainType, logo, commingSoon }) => {
+const EmptySupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainType, logo, commingSoon }) => {
 
   const ethCoins = ["ethereum", "wbtc", "usdc", "usdt"];
   const bscCoins = ["bsc", "btcb", "ethereum", "busd", "pancakeswap", "idypius" ]
@@ -34,7 +34,7 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainTy
       <div className="purplediv"></div>
       <div className="d-flex flex-column gap-3">
         <div className="row justify-content-between gap-2 m-0 align-items-center">
-          {listType !== "Stake" ?
+          {/* {listType !== "Stake" ?
           <div className="coins-container px-0">
             {coins.slice(0,5).map((coin) => (
             <img src={require(`./assets/${coin}.svg`)} className="list-coin" alt="" />
@@ -50,15 +50,16 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainTy
           :
           <img src={pool === "CAWS" ? caws : pool === "iDYP" ? idyp : pool === "WoD" ? wod : dyp} alt="eth_pool" width={40} height={40} className="p-0"  />  
         }
-          <span className="poolTitle p-0">{pool}</span>
         </div>  
-        }
-          <span className="aprTitle p-0">
+        } */}
+        <span className="poolTitle p-0">Coming Soon</span>
+          {/* <span className="aprTitle p-0">
             {apr}
             <span className="aprText ml-2">APR</span>
-          </span>
+          </span> */}
+          <div className="gray-box-large"></div>
         </div>
-        <div className="row justify-content-between gap-2 m-0">
+        {/* <div className="row justify-content-between gap-2 m-0">
           <div className="d-flex flex-column gap-1 pl-0">
             <span className="locktime-subtitle">Total Value Locked</span>
             <span className="lock-title" style={{fontWeight: 500}}>{tvl}</span>
@@ -67,8 +68,12 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainTy
             <span className="locktime-subtitle">Lock Time</span>
             <span className="lock-title">{lockTime}</span>
           </div>
+        </div> */}
+        <div className="d-flex flex-column justify-content-between gap-4 h-100">
+        <div className="gray-box-large w-100"></div>
+        <div className="gray-box-large w-100"></div>
         </div>
-        <a
+        {/* <a
           className="btn filled-btn d-flex align-items-center justify-content-center"
           href='https://app.dypius.com/earn'
           target="_blank"
@@ -78,10 +83,10 @@ const SupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainTy
           {!commingSoon && 
           <img src={rightArrow} alt="" className="ml-3"  />
           }
-        </a>
+        </a> */}
       </div>
     </div>
   );
 };
 
-export default SupAssetCard;
+export default EmptySupAssetCard;
