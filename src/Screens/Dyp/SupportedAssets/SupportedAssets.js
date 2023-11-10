@@ -60,6 +60,7 @@ const SupportedAssets = () => {
   const [cards, setCards] = useState(stake);
   const types = ["Stake", "Yield", "Buyback"];
   const [activeType, setActiveType] = useState(types[0]);
+
   var farming = [];
 
   const handleEthPool = async () => {
@@ -122,39 +123,78 @@ const SupportedAssets = () => {
       .catch((err) => console.error(err));
   };
 
+ 
   const fetchEthStaking = async () => {
-    await axios
-      .get(`https://api2.dyp.finance/api/get_staking_info_eth`)
-      .then((res) => {
-        const dypIdyp = res.data.stakingInfoDYPEth.concat(
-          res.data.stakingInfoiDYPEth
+    const eth_result = await axios
+      .get(`https://api2.dyp.finance/api/get_staking_info_eth`).catch((err) => {
+        console.log(err);
+      });
+
+      const eth_result2 = await axios
+      .get(`https://api2.dyp.finance/api/get_staking_info_eth_new`)
+      .catch((err) => {
+        console.log(err);
+      });
+
+
+      if(eth_result && eth_result.status === 200 && eth_result2 && eth_result2.status === 200) {
+        const dypIdyp = eth_result.data.stakingInfoDYPEth.concat(
+          eth_result.data.stakingInfoiDYPEth
         );
+
+        const dypData = eth_result2.data.stakingInfoDYPEth;
+        const object2 = dypData.map((item) => {
+          return {...item, tvl_usd: item.tvl_usd/1e18}
+        })
+
+        const activeEth2 = object2.filter((item) => {
+          return item.expired !== "Yes";
+        });
 
         const cleanCards = dypIdyp.filter((item) => {
           return item.expired !== "Yes";
         });
+        const allActiveEth = [...cleanCards, ...activeEth2];
 
-        const sortedAprs = cleanCards.sort(function (a, b) {
+        const sortedAprs = allActiveEth.sort(function (a, b) {
           return b.tvl_usd - a.tvl_usd;
         });
 
-        const finalEthCards = res.data.stakinginfoCAWSLAND.concat(
-          res.data.stakingInfoLAND,
-          sortedAprs.slice(0, 1)
-        );
-        setCards(finalEthCards);
-      })
+
+        setCards([...eth_result.data.stakinginfoCAWSLAND, ...eth_result.data.stakingInfoLAND, ...activeEth2]);
+
+      }
+  };
+
+  const fetchBnbStaking = async () => {
+  const bnb_result =  await axios
+      .get(`https://api2.dyp.finance/api/get_staking_info_bnb`).catch((err) => {
+        console.log(err);
+      });
+
+      const bnb_result2 = await axios
+      .get(`https://api2.dyp.finance/api/get_staking_info_bnb_new`)
       .catch((err) => {
         console.log(err);
       });
-  };
-  const fetchBnbStaking = async () => {
-    await axios
-      .get(`https://api2.dyp.finance/api/get_staking_info_bnb`)
-      .then((res) => {
-        const dypIdypBnb = res.data.stakingInfoDYPBnb.concat(
-          res.data.stakingInfoiDYPBnb
+
+      if(bnb_result && bnb_result.status === 200 &&
+      bnb_result2 &&
+      bnb_result2.status === 200) {
+        const dypIdypBnb = bnb_result.data.stakingInfoDYPBnb.concat(
+          bnb_result.data.stakingInfoiDYPBnb
         );
+
+        const dypBnb = bnb_result2.data.stakingInfoDYPBnb 
+
+        const object2 = dypBnb.map((item) => {
+          return {...item, tvl_usd: item.tvl_usd/1e18}
+        })
+
+        const activeBnb2 = object2.filter((item) => {
+          return item.expired === "No";
+        });
+
         const cleanCards = dypIdypBnb.filter((item) => {
           return item.expired !== "Yes";
         });
@@ -170,19 +210,37 @@ const SupportedAssets = () => {
         const sortedAprs = oldPool.sort(function (a, b) {
           return b.tvl_usd - a.tvl_usd;
         });
-        setCards([...newPool, ...sortedAprs.slice(0, 2)]);
-      })
+        setCards([...newPool, ...sortedAprs.slice(0, 2), ...activeBnb2]);
+      }
+  };
+  const fetchAvaxStaking = async () => {
+  const avax_result =  await axios
+      .get(`https://api2.dyp.finance/api/get_staking_info_avax`).catch((err) => {
+        console.log(err);
+      });
+
+      const avax_result2 = await axios
+      .get(`https://api2.dyp.finance/api/get_staking_info_avax_new`)
       .catch((err) => {
         console.log(err);
       });
-  };
-  const fetchAvaxStaking = async () => {
-    await axios
-      .get(`https://api2.dyp.finance/api/get_staking_info_avax`)
-      .then((res) => {
-        const dypIdypAvax = res.data.stakingInfoDYPAvax.concat(
-          res.data.stakingInfoiDYPAvax
+
+
+      if(avax_result && avax_result.status === 200 && avax_result2 && avax_result2.status === 200) {
+        const dypIdypAvax = avax_result.data.stakingInfoDYPAvax.concat(
+          avax_result.data.stakingInfoiDYPAvax
         );
+
+        const dypAvax = avax_result2.data.stakingInfoDYPAvax;
+        const object2 = dypAvax.map((item) => {
+          return {...item, tvl_usd: item.tvl_usd/1e18}
+        })
+
+        const activeAvax2 = object2.filter((item) => {
+          return item.expired !== "Yes";
+        });
+
+        
         const cleanCards = dypIdypAvax.filter((item) => {
           return item.expired !== "Yes";
         });
@@ -198,14 +256,12 @@ const SupportedAssets = () => {
         const sortedAprs = oldPool.sort(function (a, b) {
           return b.tvl_usd - a.tvl_usd;
         });
-        setCards([...newPool, ...sortedAprs.slice(0, 2)]);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+        setCards([...newPool, ...sortedAprs.slice(0, 2), ...activeAvax2]);
+      }
   };
 
   useEffect(() => {
+ 
     if (ethState) {
       fetchEthStaking();
     } else if (bnbState) {
@@ -344,7 +400,7 @@ const SupportedAssets = () => {
             style={{ paddingBottom: "4rem", zIndex: 1 }}
           >
             <>
-              {cards.slice(0, ethState ? 2 : 1).map((card, index) => (
+              {cards.slice(0, ethState ? 3 : 2).map((card, index) => (
                 <SupAssetCard
                   key={index}
                   pool={card.pair_name}
@@ -370,7 +426,7 @@ const SupportedAssets = () => {
                   }
                 />
               ))}
-              <SupAssetCard
+              {/* <SupAssetCard
                 //  key={index}
                 pool={"DYP"}
                 apr={12.5 + "%"}
@@ -386,7 +442,7 @@ const SupportedAssets = () => {
                   ethState === true ? "eth" : bnbState === true ? "bnb" : "avax"
                 }
                 commingSoon={true}
-              />
+              /> */}
               {bnbState || avaxState ? (
                 <EmptySupAssetCard
                   //  key={index}
