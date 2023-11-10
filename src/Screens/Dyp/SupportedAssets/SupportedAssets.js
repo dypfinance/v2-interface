@@ -129,21 +129,27 @@ const SupportedAssets = () => {
     await axios
       .get("https://api2.dyp.finance/api/get_staking_info_eth_new")
       .then((res) => {
-        setNewEthPool(res.data.stakingInfoDYPEth[0]);
+        const fixedPool = res.data.stakingInfoDYPEth[0];
+        const updatedPool = {...fixedPool, tvl_usd: fixedPool.tvl_usd/1e18}
+        setNewEthPool(updatedPool);
       });
   };
   const getNewBnbPool = async () => {
     await axios
       .get("https://api2.dyp.finance/api/get_staking_info_bnb_new")
       .then((res) => {
-        setNewBnbPool(res.data.stakingInfoDYPBnb[0]);
+        const fixedPool = res.data.stakingInfoDYPBnb[0];
+        const updatedPool = {...fixedPool, tvl_usd: fixedPool.tvl_usd/1e18}
+        setNewBnbPool(updatedPool);
       });
   };
   const getNewAvaxPool = async () => {
     await axios
       .get("https://api2.dyp.finance/api/get_staking_info_avax_new")
       .then((res) => {
-        setNewAvaxPool(res.data.stakingInfoDYPAvax[0]);
+        const fixedPool = res.data.stakingInfoDYPAvax[0];
+        const updatedPool = {...fixedPool, tvl_usd: fixedPool.tvl_usd/1e18}
+        setNewAvaxPool(updatedPool);
       });
   };
   const fetchEthStaking = async () => {
@@ -162,12 +168,15 @@ const SupportedAssets = () => {
           return b.tvl_usd - a.tvl_usd;
         });
 
-        const finalEthCards = res.data.stakinginfoCAWSLAND.concat(
-          res.data.stakingInfoLAND,
-          // sortedAprs.slice(0, 1)
-          newEthPool
-        );
-        setCards(finalEthCards);
+        // const finalEthCards = res.data.stakinginfoCAWSLAND.concat(
+        //   res.data.stakingInfoLAND,
+        //   // sortedAprs.slice(0, 1)
+        //   newEthPool
+        // );
+        setCards([...res.data.stakinginfoCAWSLAND, ...res.data.stakingInfoLAND, newEthPool]);
+
+        // console.log(finalEthCards);
+        // setCards(finalEthCards);
       })
       .catch((err) => {
         console.log(err);
@@ -250,7 +259,7 @@ const SupportedAssets = () => {
     // }else if(activeType === 'Buyback'){
     //   setCards(buyback)
     // }
-  }, [ethState, bnbState, avaxState, activeType]);
+  }, [newEthPool, newBnbPool, newAvaxPool, ethState, bnbState, avaxState, activeType]);
 
   return (
     <div className="container-lg supportedAssets-wrapper">
