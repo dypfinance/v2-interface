@@ -203,11 +203,29 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                         DYP Contract Address:
                       </span>
                       <span className="dypcontract-addr">
-                        {windowSize.width < 526
-                          ? shortAddress(
-                              "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
-                            )
-                          : "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"}
+                        {windowSize.width < 526 ? (
+                          <a
+                            href="https://etherscan.io/token/0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+                            target={"_blank"}
+                            rel="noreferrer"
+                            style={{ color: "inherit" }}
+                          >
+                            <u>
+                              {shortAddress(
+                                "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+                              )}
+                            </u>
+                          </a>
+                        ) : (
+                          <a
+                            href="https://etherscan.io/token/0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+                            target={"_blank"}
+                            rel="noreferrer"
+                            style={{ color: "inherit" }}
+                          >
+                            <u>0x39b46b212bdf15b42b166779b9d1787a68b9d0c3</u>
+                          </a>
+                        )}
                         <img
                           src={Clipboard}
                           alt=""

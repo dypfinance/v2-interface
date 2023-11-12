@@ -3,8 +3,6 @@ import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
 import Success from "../../../components/Success/Success";
 
-
-
 const SupportedWallets = () => {
   const wallets = [
     {
@@ -44,25 +42,41 @@ const SupportedWallets = () => {
     }, 2000);
   };
 
-  
-
-
   return (
     <div className="supportedwallet-wrapper container-lg mt-5 mb-5">
       <div>
         <div className="row ml-0 mr-0 gap-lg-3 gap-xl-3 gap-md-3 gap-0  justify-content-lg-between justify-content-xl-between justify-content-md-between justify-content-end mb-xl-0 mb-lg-0 mb-2  align-items-center">
-          <h1>Supported wallets</h1> 
+          <h1>Supported wallets</h1>
           <div>
             <div className="row ml-0 mr-0 gap-2 align-items-center">
               <div className="d-flex flex-column dypaddr-wrapper ">
                 <span className="dypcontractaddr">
                   DYP Contract Address (Ethereum):
-                 
                 </span>
                 <span className="contractaddr justify-content-center">
-                  {windowSize.width < 526
-                    ? shortAddress("0x39b46b212bdf15b42b166779b9d1787a68b9d0c3")
-                    : "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"}
+                  {windowSize.width < 526 ? (
+                    <a
+                      href="https://etherscan.io/token/0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+                      target={"_blank"}
+                      rel="noreferrer"
+                      style={{ color: "inherit" }}
+                    >
+                      <u>
+                        {shortAddress(
+                          "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+                        )}
+                      </u>
+                    </a>
+                  ) : (
+                    <a
+                      href="https://etherscan.io/token/0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+                      target={"_blank"}
+                      rel="noreferrer"
+                      style={{ color: "inherit" }}
+                    >
+                      <u>0x39b46b212bdf15b42b166779b9d1787a68b9d0c3</u>
+                    </a>
+                  )}
                   <img
                     src={require("../assets/copy.svg").default}
                     alt=""
