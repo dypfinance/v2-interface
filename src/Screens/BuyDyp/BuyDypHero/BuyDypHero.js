@@ -175,6 +175,15 @@ const BuyDypHero = () => {
       id: "collapseeight",
     },
     {
+      title: "MEXC",
+      logo: "mexc.png",
+      link: "https://www.mexc.com/exchange/DYP_USDT",
+      totalvids: "0",
+      videos: "",
+      id: "collapsefive",
+      active: true
+    },
+    {
       title: "Coinbase",
       logo: "coinbase.png",
       link: "https://pro.coinbase.com/trade/DYP-USD",
@@ -232,14 +241,7 @@ const BuyDypHero = () => {
       videos: "",
       id: "collapsetwelve",
     },
-    {
-      title: "MEXC",
-      logo: "mexc.png",
-      link: "https://www.mexc.com/exchange/DYP_USDT",
-      totalvids: "0",
-      videos: "",
-      id: "collapsefive",
-    },
+
 
     {
       title: "Coin98",
