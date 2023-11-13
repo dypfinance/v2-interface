@@ -95,7 +95,7 @@ const ChainlinkData = () => {
               <div className="chainlink-cell">
                 <div className="d-flex align-items-baseline gap-2">
                   <span className="totalpaid-amount">
-                    <CountUp
+                    {/* <CountUp
                       style={{ fontSize: 26, fontWeight: 300 }}
                       start={totalpaid?.totalPaidInUsd - 400.0}
                       end={totalpaid?.totalPaidInUsd}
@@ -103,7 +103,8 @@ const ChainlinkData = () => {
                       separator=","
                       decimals={2}
                       prefix="$"
-                    />
+                    /> */}
+                    ${getFormattedNumber(totalpaid?.totalPaidInUsd, 2)}
                   </span>
                 </div>
               </div>
