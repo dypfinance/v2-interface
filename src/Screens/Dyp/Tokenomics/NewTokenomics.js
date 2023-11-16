@@ -46,6 +46,8 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   const [copied, setCopied] = useState(false);
   const [visible, setVisible] = useState(false);
   const [dypSupply, setDypSupply] = useState("0.0");
+  const [dypSupplyv1, setDypSupplyv1] = useState("0.0");
+
   const [idypSupply, setiDypSupply] = useState("0.0");
   const [totalSupply, setTotalSupply] = useState("0.0");
   const [dypVersion, setDypVersion] = useState("v2");
@@ -72,6 +74,19 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
       console.log(err);
     }
   };
+
+  async function getCirculatingSupplyDYPv1() {
+    try {
+      await axios
+        .get("https://api.dyp.finance/api/circulating-supply")
+        .then((data) => {
+          setDypSupplyv1(data.data);
+        });
+      //console.log(res)
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   const getTotalSupply = async () => {
     const infuraWeb3 = new Web3(
@@ -108,6 +123,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
     getCirculatingSupplyiDYP();
     getCirculatingSupplyDYP();
     getTotalSupply();
+    getCirculatingSupplyDYPv1()
   }, []);
 
   return (
@@ -1051,7 +1067,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                           Circulating supply
                         </span>
                         <span className="circulating-amount">
-                          {getFormattedNumber(dypSupply, 6)} DYP
+                          {getFormattedNumber(dypSupplyv1, 6)} DYP
                         </span>
                       </div>
                     </div>
