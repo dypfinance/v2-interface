@@ -40,7 +40,7 @@
 
   .videodesc-wrapper {
     border-radius: 100px;
-    background: rgba(117, 202, 194, 0.3);
+    background: rgba(85, 79, 216, 0.3);
     padding: 2px 5px;
     display: flex;
     justify-content: center;
@@ -49,11 +49,11 @@
   }
 
   .videodesc {
+    color: #554FD8;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
-    font-size: 8px;
-    line-height: 12px;
-    color: #75cac2;
+    line-height: normal;
   }
 
   .rightarrow-wrapper {

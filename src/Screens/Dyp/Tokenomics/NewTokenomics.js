@@ -46,8 +46,11 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   const [copied, setCopied] = useState(false);
   const [visible, setVisible] = useState(false);
   const [dypSupply, setDypSupply] = useState("0.0");
+  const [dypSupplyv1, setDypSupplyv1] = useState("0.0");
+
   const [idypSupply, setiDypSupply] = useState("0.0");
   const [totalSupply, setTotalSupply] = useState("0.0");
+  const [dypVersion, setDypVersion] = useState("v2");
 
   const handleCopy = (address) => {
     navigator.clipboard.writeText(address);
@@ -71,6 +74,19 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
       console.log(err);
     }
   };
+
+  async function getCirculatingSupplyDYPv1() {
+    try {
+      await axios
+        .get("https://api.dyp.finance/api/circulating-supply")
+        .then((data) => {
+          setDypSupplyv1(data.data);
+        });
+      //console.log(res)
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   const getTotalSupply = async () => {
     const infuraWeb3 = new Web3(
@@ -107,6 +123,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
     getCirculatingSupplyiDYP();
     getCirculatingSupplyDYP();
     getTotalSupply();
+    getCirculatingSupplyDYPv1()
   }, []);
 
   return (
@@ -193,45 +210,216 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
           className={`collapse ${showBtn === false ? "show" : ""}`}
           id="collapseExample"
         >
-          <div className="card card-body pb-4">
-            {tokenomicData === "dyp" ? (
-              <>
-                <div className="row m-0 justify-content-between align-items-center align-items-lg-end gap-2">
-                  <div className="col-xl-7 col-lg-7 px-2">
-                    <div className="d-flex flex-column mt-0">
-                      <span className="dypcontract-title">
-                        DYP Contract Address:
-                      </span>
-                      <span className="dypcontract-addr">
-                        {windowSize.width < 526 ? (
+          {dypVersion === "v2" ? (
+            <div className="card card-body pb-4">
+              {tokenomicData === "dyp" ? (
+                <>
+                  <div className="row m-0 justify-content-between align-items-center align-items-lg-end gap-2">
+                    <div className="col-xl-7 col-lg-7 px-2">
+                      <div className="d-flex align-items-center gap-2 mb-3">
+                        <button
+                          className={`btn ${
+                            dypVersion === "v2" ? "filled-btn" : "outline-btn"
+                          }`}
+                          onClick={() => setDypVersion("v2")}
+                        >
+                          DYP v2
+                        </button>
+                        <button
+                          className={`btn ${
+                            dypVersion === "v1" ? "filled-btn" : "outline-btn"
+                          }`}
+                          onClick={() => setDypVersion("v1")}
+                        >
+                          DYP v1
+                        </button>
+                      </div>
+                      <div className="d-flex flex-column mt-0">
+                        <span className="dypcontract-title">
+                          DYP v2 Contract Address:
+                        </span>
+                        <span className="dypcontract-addr">
+                          {windowSize.width < 526 ? (
+                            <a
+                              href="https://etherscan.io/token/0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+                              target={"_blank"}
+                              rel="noreferrer"
+                              style={{ color: "inherit" }}
+                            >
+                              <u>
+                                {shortAddress(
+                                  "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+                                )}
+                              </u>
+                            </a>
+                          ) : (
+                            <a
+                              href="https://etherscan.io/token/0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+                              target={"_blank"}
+                              rel="noreferrer"
+                              style={{ color: "inherit" }}
+                            >
+                              <u>0x39b46b212bdf15b42b166779b9d1787a68b9d0c3</u>
+                            </a>
+                          )}
+                          <img
+                            src={Clipboard}
+                            alt=""
+                            onClick={() => {
+                              handleCopy(
+                                "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+                              );
+                            }}
+                            style={{
+                              cursor: "pointer",
+                              display: copied === true ? "none" : "",
+                            }}
+                          />
+                          {copied === true && (
+                            <span
+                              className="d-inline-block"
+                              tabindex="0"
+                              data-toggle="tooltip"
+                              title="Copied"
+                              data-placement="top"
+                            >
+                              <Success bgColor={"#544ED5"} svgColor={"#FFF"} />
+                            </span>
+                          )}
+                        </span>
+                      </div>
+                      <div className="mininginfo-wrapper d-flex flex-column gap-4">
+                        <p className="m-0">
+                          Dypius's native token is DYP, helping power the Dypius
+                          ecosystem. It's use cases are:
+                        </p>
+                        <ul>
+                          <li>
+                            Governance (for decentralized community voting)
+                          </li>
+                          <li>Staking</li>
+                          <li>Premium Subscription</li>
+                          <li>DYP Locker</li>
+                          <li>DYP News</li>
+                          <li>DYP Launchpad</li>
+                          <li>World of Dypians Events</li>
+                        </ul>
+                        <p className="mb-0">
+                          All the mentioned use cases are accessible exclusively
+                          for DYP token holders. The migration process for DYP
+                          has been active since November 8, 2023, allowing the
+                          transition of DYP v1 tokens to DYP v2 through the
+                         &nbsp;
                           <a
-                            href="https://etherscan.io/token/0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
-                            target={"_blank"}
+                            href="https://app.dypius.com/migration"
                             rel="noreferrer"
-                            style={{ color: "inherit" }}
+                            target="_blank"
+                            style={{
+                              color: "inherit",
+                            }}
                           >
                             <u>
-                              {shortAddress(
-                                "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
-                              )}
+                              <b>Dypius Migration.</b>
                             </u>
                           </a>
-                        ) : (
-                          <a
-                            href="https://etherscan.io/token/0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
-                            target={"_blank"}
-                            rel="noreferrer"
-                            style={{ color: "inherit" }}
-                          >
-                            <u>0x39b46b212bdf15b42b166779b9d1787a68b9d0c3</u>
-                          </a>
-                        )}
+                        </p>
+                        <p className="mb-0">
+                          DYP is a fair launch, community-governed project.
+                          There was no seed round, no private round, and no
+                          pre-sale - 91.97% of the total supply was reserved for
+                          the Dypius community.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="col-lg-4 col-xl-4 col-md-4 px-0 px-lg-2">
+                      <div className="circulating-wrapper w-100 mb-3">
+                        <div className="d-flex flex-column gap-3">
+                          <span className="circulating-title">
+                            Total Supply
+                          </span>
+                          <span className="circulating-amount">
+                            {getFormattedNumber(dypiusSupply, 0)} DYP
+                          </span>
+                        </div>
+                      </div>
+                      <div className="circulating-wrapper w-100 mb-3">
+                        <div className="d-flex flex-column gap-3">
+                          <span className="circulating-title">
+                            Circulating supply
+                          </span>
+                          <span className="circulating-amount">
+                            {getFormattedNumber(dypSupply, 0)} DYP
+                          </span>
+                        </div>
+                      </div>
+                      <div className="mininginfo-wrapper d-flex flex-column gap-2">
+                        <p className="mb-0">
+                          <b>DYP Migration - Swap Ratio</b>
+                        </p>
+                        <p className="mb-0">
+                          The swap ratio for DYP V2 varies depending on the
+                          respective blockchain.
+                        </p>
+                        <div className="d-flex align-items-center gap-2">
+                          <img src={ethIcon} alt="" />
+                          <p className="mb-0" style={{ fontSize: "14px" }}>
+                            1 DYP ERC20 - 6 DYP ERC20 V2
+                          </p>
+                        </div>
+                        <div className="d-flex align-items-center gap-2">
+                          <img src={bnbIcon} alt="" />
+                          <p className="mb-0" style={{ fontSize: "14px" }}>
+                            1 DYP BEP20 - 1 DYP ERC20 V2
+                          </p>
+                        </div>
+                        <div className="d-flex align-items-center gap-2">
+                          <img src={avaxIcon} alt="" />
+                          <p className="mb-0" style={{ fontSize: "14px" }}>
+                            1 DYP ARC20 - 1 DYP ERC20 V2
+                          </p>
+                        </div>
+                      </div>
+                      {/* <div
+                 id="crypto-widget-CoinList"
+                 data-design="modern"
+                 data-coin-ids="2669"
+               ></div> */}
+                      {/* <img src={Graph} alt="" className="w-100" /> */}
+                    </div>
+                  </div>
+                  <div className="">
+                    <div className="circulating-wrapper w-100">
+                      <div className="d-flex flex-column gap-3">
+                        <span
+                          className="circulating-title"
+                          // style={{ fontSize: 12 }}
+                        >
+                          No additional tokens can be minted
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <div className="row m-0 justify-content-between gap-2">
+                  <div className="col-lg-7 col-xl-7 col-md-7">
+                    <div className="d-flex flex-column mt-0">
+                      <span className="dypcontract-title">
+                        iDYP Contract Address:
+                      </span>
+                      <span className="dypcontract-addr">
+                        {windowSize.width < 526
+                          ? shortAddress(
+                              "0xbd100d061e120b2c67a24453cf6368e63f1be056"
+                            )
+                          : "0xbd100d061e120b2c67a24453cf6368e63f1be056"}
+
                         <img
                           src={Clipboard}
                           alt=""
                           onClick={() => {
                             handleCopy(
-                              "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+                              "0xbd100d061e120b2c67a24453cf6368e63f1be056"
                             );
                           }}
                           style={{
@@ -252,544 +440,406 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                         )}
                       </span>
                     </div>
-                    <div className="mininginfo-wrapper d-flex flex-column gap-4">
+                    <div className="mininginfo-wrapper ">
                       <p className="m-0">
-                        Dypius's native token is DYP, helping power the Dypius
-                        ecosystem. It's use cases are:
-                      </p>
-                      <ul>
-                        <li>Governance (for decentralized community voting)</li>
-                        <li>Staking</li>
-                        <li>Premium Subscription</li>
-                        <li>DYP Locker</li>
-                        <li>DYP News</li>
-                        <li>DYP Launchpad</li>
-                        <li>World of Dypians Events</li>
-                      </ul>
-                      <p className="mb-0">
-                        All of the above are available exclusively to New DYP
-                        token holders. The existing Old DYP token does not have
-                        any utility but can be seamlessly converted to New DYP
-                        via &nbsp;
-                        <a
-                          href="https://app.dypius.com/migration"
-                          rel="noreferrer"
-                          target="_blank"
-                          style={{
-                            color: "inherit",
-                          }}
-                        >
-                          <u>
-                            <b>Dypius migration.</b>
-                          </u>
-                        </a>
-                      </p>
-                      <p className="mb-0">
-                        DYP is a fair launch, community-governed project. There
-                        was no seed round, no private round, and no pre-sale -
-                        91.97% of the total supply was reserved for the Dypius
-                        community.
+                        300,000,000 iDYP have been minted at genesis and will
+                        become accessible over the course of 10 years.
+                        <br />
+                        <b>The 10-year allocation is as follows:</b>
                       </p>
                     </div>
-                    {/* <div className="d-flex flex-column gap-3 mt-3">
-                  <div>
-                    <span style={{color: '#554fd8'}}>Community</span>
-                    <br />
-                    <svg
-                      width="353"
-                      height="1"
-                      viewBox="0 0 653 1"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        width="353"
-                        height="1"
-                        fill="url(#paint0_linear_95_5424)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_95_5424"
-                          x1="0"
-                          y1="0"
-                          x2="653"
-                          y2="1"
-                          gradientUnits="userSpaceOnUse"
+                    <div className="d-flex flex-column gap-3 mt-3">
+                      <div>
+                        <span>Community</span>
+                        <br />
+                        <svg
+                          width="353"
+                          height="1"
+                          viewBox="0 0 653 1"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <stop stopColor="#7770E0" />
-                          <stop
-                            offset="1"
-                            stopColor="#7770E0"
-                            stopOpacity="0"
+                          <rect
+                            width="353"
+                            height="1"
+                            fill="url(#paint0_linear_95_5424)"
                           />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                    <div className="row gap-3 justify-content-between">
-                      <div className="col-lg-6 col-xl-6 col-md-6">
-                        <div className="d-flex flex-column ">
-                          <span
-                            className="dypcontract-title"
-                            style={{ fontSize: 12 }}
-                          >
-                            Distributed for pool rewards over the next 12 months
-                          </span>
-                          <span className="dypcontract-addr">
-                            12,000,000.00 DYP
-                          </span>
-                        </div>
-                        <div className="d-flex flex-column">
-                          <span
-                            className="dypcontract-title"
-                            style={{ fontSize: 12 }}
-                          >
-                            Distributed to Avalanche Chain
-                          </span>
-                          <span className="dypcontract-addr">
-                            2,090,000.00 DYP
-                          </span>
-                        </div>
-                        <div className="d-flex flex-column">
-                          <span
-                            className="dypcontract-title"
-                            style={{ fontSize: 12 }}
-                          >
-                            Locked for one year to Uniswap liquidity on token
-                            launch
-                          </span>
-                          <span className="dypcontract-addr">
-                            200,000.00 DYP
-                          </span>
-                        </div>
-                      </div>
-                      <div className="col-lg-5 col-xl-5 col-md-5">
-                        <div className="d-flex flex-column">
-                          <span
-                            className="dypcontract-title"
-                            style={{ fontSize: 12 }}
-                          >
-                            Distributed to BNB Chain
-                          </span>
-                          <span className="dypcontract-addr">
-                            4,500,000.00 DYP
-                          </span>
-                        </div>
-                        <div className="d-flex flex-column">
-                          <span
-                            className="dypcontract-title"
-                            style={{ fontSize: 12 }}
-                          >
-                            Distributed for providing liquidity to CEX and
-                            Marketing
-                          </span>
-                          <span className="dypcontract-addr">
-                            1,214,111.00 DYP
-                          </span>
-                        </div>
-                        <div className="d-flex flex-column">
-                          <span
-                            className="dypcontract-title"
-                            style={{ fontSize: 12 }}
-                          >
-                            Reserved for other pools or chains
-                          </span>
-                          <span className="dypcontract-addr">
-                            2,584,689.00 DYP
-                          </span>
+                          <defs>
+                            <linearGradient
+                              id="paint0_linear_95_5424"
+                              x1="0"
+                              y1="0"
+                              x2="653"
+                              y2="1"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stopColor="#7770E0" />
+                              <stop
+                                offset="1"
+                                stopColor="#7770E0"
+                                stopOpacity="0"
+                              />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                        <div className="row gap-3 justify-content-between">
+                          <div className="col-lg-6 col-xl-6 col-md-6">
+                            <div className="d-flex flex-column ">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Airdrop to eligible users
+                              </span>
+                              <span className="dypcontract-addr">
+                                5,000,000 iDYP
+                              </span>
+                            </div>
+                            <div className="d-flex flex-column">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Distributed for liquidity on DEX
+                              </span>
+                              <span className="dypcontract-addr">
+                                5,550,000 iDYP
+                              </span>
+                            </div>
+                          </div>
+                          <div className="col-lg-5 col-xl-5 col-md-5">
+                            <div className="d-flex flex-column">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Distributed for pool rewards
+                              </span>
+                              <span className="dypcontract-addr">
+                                20,640,000 iDYP
+                              </span>
+                            </div>
+                            <div className="d-flex flex-column">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Allocation for eligible users
+                              </span>
+                              <span className="dypcontract-addr">
+                                1,000,000 iDYP
+                              </span>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div>
-                    <span style={{color: '#554fd8'}}>Users</span>
-                    <br />
-                    <svg
-                      width="353"
-                      height="1"
-                      viewBox="0 0 653 1"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        width="353"
-                        height="1"
-                        fill="url(#paint0_linear_95_5424)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_95_5424"
-                          x1="0"
-                          y1="0"
-                          x2="653"
-                          y2="1"
-                          gradientUnits="userSpaceOnUse"
+                      <div>
+                        <span>Reserves, Marketing, Ecosystem</span>
+                        <br />
+                        <svg
+                          width="353"
+                          height="1"
+                          viewBox="0 0 653 1"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <stop stopColor="#7770E0" />
-                          <stop
-                            offset="1"
-                            stopColor="#7770E0"
-                            stopOpacity="0"
+                          <rect
+                            width="353"
+                            height="1"
+                            fill="url(#paint0_linear_95_5424)"
                           />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                    <div className="row gap-3 justify-content-between">
-                      <div className="col-lg-6 col-xl-6 col-md-6">
-                        <div className="d-flex flex-column ">
-                          <span
-                            className="dypcontract-title"
-                            style={{ fontSize: 12 }}
-                          >
-                            Public Sale
-                          </span>
-                          <span className="dypcontract-addr">
-                            651,531.00 DYP
-                          </span>
+                          <defs>
+                            <linearGradient
+                              id="paint0_linear_95_5424"
+                              x1="0"
+                              y1="0"
+                              x2="653"
+                              y2="1"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stopColor="#7770E0" />
+                              <stop
+                                offset="1"
+                                stopColor="#7770E0"
+                                stopOpacity="0"
+                              />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                        <div className="row gap-3 justify-content-between">
+                          <div className="col-lg-6 col-xl-6 col-md-6">
+                            <div className="d-flex flex-column ">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Company Reserve Vested for 60 months, released
+                                monthly
+                              </span>
+                              <span className="dypcontract-addr">
+                                155,967,000 iDYP
+                              </span>
+                            </div>
+                            <div className="d-flex flex-column ">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Marketing
+                              </span>
+                              <span className="dypcontract-addr">
+                                15,000,000 iDYP
+                              </span>
+                            </div>
+                          </div>
+                          <div className="col-lg-5 col-xl-5 col-md-5">
+                            <div className="d-flex flex-column">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Ecosystem Vested for 60 months, released monthly
+                              </span>
+                              <span className="dypcontract-addr">
+                                66,843,000 iDYP
+                              </span>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div className="col-lg-5 col-xl-5 col-md-5">
-                        <div className="d-flex flex-column">
-                          <span
-                            className="dypcontract-title"
-                            style={{ fontSize: 12 }}
+                      <div className="row justify-content-between">
+                        <div className="col-lg-6 col-xl-6 col-md-6">
+                          <span>Team</span>
+                          <br />
+                          <svg
+                            width="353"
+                            height="1"
+                            viewBox="0 0 653 1"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            Burned
-                          </span>
-                          <span className="dypcontract-addr">
-                            4,348,469.00 DYP
-                          </span>
+                            <rect
+                              width="353"
+                              height="1"
+                              fill="url(#paint0_linear_95_5424)"
+                            />
+                            <defs>
+                              <linearGradient
+                                id="paint0_linear_95_5424"
+                                x1="0"
+                                y1="0"
+                                x2="653"
+                                y2="1"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop stopColor="#7770E0" />
+                                <stop
+                                  offset="1"
+                                  stopColor="#7770E0"
+                                  stopOpacity="0"
+                                />
+                              </linearGradient>
+                            </defs>
+                          </svg>
+                          <div className="row gap-3 justify-content-between">
+                            <div className="">
+                              <div className="d-flex flex-column ">
+                                <span
+                                  className="dypcontract-title"
+                                  style={{ fontSize: 12 }}
+                                >
+                                  Vested for 10 years, released monthly
+                                </span>
+                                <span className="dypcontract-addr">
+                                  30,000,000 iDYP
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-lg-5 col-xl-5 col-md-5">
+                          <span>Burned</span>
+                          <br />
+                          <svg
+                            width="353"
+                            height="1"
+                            viewBox="0 0 653 1"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              width="353"
+                              height="1"
+                              fill="url(#paint0_linear_95_5424)"
+                            />
+                            <defs>
+                              <linearGradient
+                                id="paint0_linear_95_5424"
+                                x1="0"
+                                y1="0"
+                                x2="653"
+                                y2="1"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop stopColor="#7770E0" />
+                                <stop
+                                  offset="1"
+                                  stopColor="#7770E0"
+                                  stopOpacity="0"
+                                />
+                              </linearGradient>
+                            </defs>
+                          </svg>
+                          <div className="row gap-3 justify-content-between">
+                            <div className="">
+                              <div className="d-flex flex-column ">
+                                <span
+                                  className="dypcontract-title"
+                                  style={{ fontSize: 12 }}
+                                >
+                                  Burned and removed from the total supply
+                                </span>
+                                <span className="dypcontract-addr">
+                                  1,325,392 iDYP
+                                </span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div>
-                    <span style={{color: '#554fd8'}}>Team</span>
-                    <br />
-                    <svg
-                      width="353"
-                      height="1"
-                      viewBox="0 0 653 1"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        width="353"
-                        height="1"
-                        fill="url(#paint0_linear_95_5424)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_95_5424"
-                          x1="0"
-                          y1="0"
-                          x2="653"
-                          y2="1"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stopColor="#7770E0" />
-                          <stop
-                            offset="1"
-                            stopColor="#7770E0"
-                            stopOpacity="0"
-                          />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                    <div className="row gap-3 justify-content-between">
-                      <div className="col-lg-6 col-xl-6 col-md-6">
-                        <div className="d-flex flex-column ">
-                          <span
-                            className="dypcontract-title"
-                            style={{ fontSize: 12 }}
-                          >
-                            Vested for 24 months, released monthly
-                          </span>
-                          <span className="dypcontract-addr">
-                            2,411,200.00 DYP
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
-                  </div>
-                  <div className="col-lg-4 col-xl-4 col-md-4 px-0 px-lg-2">
-                    <div className="circulating-wrapper w-100 mb-3">
-                      <div className="d-flex flex-column gap-3">
-                        <span className="circulating-title">Total Supply</span>
-                        <span className="circulating-amount">
-                          {getFormattedNumber(dypiusSupply, 0)} DYP
-                        </span>
-                      </div>
-                    </div>
+                  <div className="col-lg-4 col-xl-4 col-md-4 flex-column justify-content-between">
                     <div className="circulating-wrapper w-100 mb-3">
                       <div className="d-flex flex-column gap-3">
                         <span className="circulating-title">
                           Circulating supply
                         </span>
                         <span className="circulating-amount">
-                          {getFormattedNumber(dypSupply, 0)} DYP
+                          {getFormattedNumber(idypSupply, 6)} iDYP
                         </span>
                       </div>
                     </div>
-                    <div className="mininginfo-wrapper d-flex flex-column gap-2">
-                      <p className="mb-0">
-                        <b>DYP Migration - Swap Ratio</b>
-                      </p>
-                      <p className="mb-0">
-                        The swap ratio for DYP V2 varies depending on the
-                        respective blockchain.
-                      </p>
-                      <div className="d-flex align-items-center gap-2">
-                        <img src={ethIcon} alt="" />
-                        <p className="mb-0" style={{ fontSize: "14px" }}>
-                          1 DYP ERC20 - 6 DYP ERC20 V2
-                        </p>
-                      </div>
-                      <div className="d-flex align-items-center gap-2">
-                        <img src={bnbIcon} alt="" />
-                        <p className="mb-0" style={{ fontSize: "14px" }}>
-                          1 DYP BEP20 - 1 DYP ERC20 V2
-                        </p>
-                      </div>
-                      <div className="d-flex align-items-center gap-2">
-                        <img src={avaxIcon} alt="" />
-                        <p className="mb-0" style={{ fontSize: "14px" }}>
-                          1 DYP ARC20 - 1 DYP ERC20 V2
-                        </p>
+                    <div>
+                      <div
+                        id="crypto-widget-CoinList"
+                        data-design="modern"
+                        data-coin-ids="9517"
+                      ></div>
+                      <img src={idypGraph} alt="" className="w-100" />
+                    </div>
+                    <div className="">
+                      <div className="circulating-wrapper w-100 mb-3">
+                        <div className="d-flex flex-column gap-3">
+                          <span
+                            className="circulating-title"
+                            style={{ fontSize: 12 }}
+                          >
+                            No additional tokens can be minted
+                          </span>
+                        </div>
                       </div>
                     </div>
-                    {/* <div
-                    id="crypto-widget-CoinList"
-                    data-design="modern"
-                    data-coin-ids="2669"
-                  ></div> */}
-                    {/* <img src={Graph} alt="" className="w-100" /> */}
                   </div>
                 </div>
-                <div className="">
-                  <div className="circulating-wrapper w-100">
-                    <div className="d-flex flex-column gap-3">
-                      <span
-                        className="circulating-title"
-                        // style={{ fontSize: 12 }}
+              )}
+            </div>
+          ) : (
+            <div className="card card-body pb-4">
+              {tokenomicData === "dyp" ? (
+                <div className="row m-0 justify-content-between gap-2">
+                  <div className="col-xl-7 col-lg-7 px-2">
+                    <div className="d-flex align-items-center gap-2 mb-3">
+                      <button
+                        className={`btn ${
+                          dypVersion === "v2" ? "filled-btn" : "outline-btn"
+                        }`}
+                        onClick={() => setDypVersion("v2")}
                       >
-                        No additional tokens can be minted
+                        DYP v2
+                      </button>
+                      <button
+                        className={`btn ${
+                          dypVersion === "v1" ? "filled-btn" : "outline-btn"
+                        }`}
+                        onClick={() => setDypVersion("v1")}
+                      >
+                        DYP v1
+                      </button>
+                    </div>
+                    <div className="d-flex flex-column mt-0">
+                      <span className="dypcontract-title">
+                        DYP v1 Contract Address:
                       </span>
-                    </div>
-                  </div>
-                </div>
-              </>
-            ) : (
-              <div className="row m-0 justify-content-between gap-2">
-                <div className="col-lg-7 col-xl-7 col-md-7">
-                  <div className="d-flex flex-column mt-0">
-                    <span className="dypcontract-title">
-                      iDYP Contract Address:
-                    </span>
-                    <span className="dypcontract-addr">
-                      {windowSize.width < 526
-                        ? shortAddress(
-                            "0xbd100d061e120b2c67a24453cf6368e63f1be056"
-                          )
-                        : "0xbd100d061e120b2c67a24453cf6368e63f1be056"}
-
-                      <img
-                        src={Clipboard}
-                        alt=""
-                        onClick={() => {
-                          handleCopy(
-                            "0xbd100d061e120b2c67a24453cf6368e63f1be056"
-                          );
-                        }}
-                        style={{
-                          cursor: "pointer",
-                          display: copied === true ? "none" : "",
-                        }}
-                      />
-                      {copied === true && (
-                        <span
-                          className="d-inline-block"
-                          tabindex="0"
-                          data-toggle="tooltip"
-                          title="Copied"
-                          data-placement="top"
-                        >
-                          <Success bgColor={"#544ED5"} svgColor={"#FFF"} />
+                      <span className="dypcontract-addr">
+                          {windowSize.width < 526 ? (
+                            <a
+                              href="https://etherscan.io/token/0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
+                              target={"_blank"}
+                              rel="noreferrer"
+                              style={{ color: "inherit" }}
+                            >
+                              <u>
+                                {shortAddress(
+                                  "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
+                                )}
+                              </u>
+                            </a>
+                          ) : (
+                            <a
+                              href="https://etherscan.io/token/0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
+                              target={"_blank"}
+                              rel="noreferrer"
+                              style={{ color: "inherit" }}
+                            >
+                              <u>0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17</u>
+                            </a>
+                          )}
+                          <img
+                            src={Clipboard}
+                            alt=""
+                            onClick={() => {
+                              handleCopy(
+                                "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
+                              );
+                            }}
+                            style={{
+                              cursor: "pointer",
+                              display: copied === true ? "none" : "",
+                            }}
+                          />
+                          {copied === true && (
+                            <span
+                              className="d-inline-block"
+                              tabindex="0"
+                              data-toggle="tooltip"
+                              title="Copied"
+                              data-placement="top"
+                            >
+                              <Success bgColor={"#544ED5"} svgColor={"#FFF"} />
+                            </span>
+                          )}
                         </span>
-                      )}
-                    </span>
-                  </div>
-                  <div className="mininginfo-wrapper ">
-                    <p className="m-0">
-                      300,000,000 iDYP have been minted at genesis and will
-                      become accessible over the course of 10 years.
-                      <br />
-                      <b>The 10-year allocation is as follows:</b>
-                    </p>
-                  </div>
-                  <div className="d-flex flex-column gap-3 mt-3">
-                    <div>
-                      <span>Community</span>
-                      <br />
-                      <svg
-                        width="353"
-                        height="1"
-                        viewBox="0 0 653 1"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <rect
-                          width="353"
-                          height="1"
-                          fill="url(#paint0_linear_95_5424)"
-                        />
-                        <defs>
-                          <linearGradient
-                            id="paint0_linear_95_5424"
-                            x1="0"
-                            y1="0"
-                            x2="653"
-                            y2="1"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop stopColor="#7770E0" />
-                            <stop
-                              offset="1"
-                              stopColor="#7770E0"
-                              stopOpacity="0"
-                            />
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                      <div className="row gap-3 justify-content-between">
-                        <div className="col-lg-6 col-xl-6 col-md-6">
-                          <div className="d-flex flex-column ">
-                            <span
-                              className="dypcontract-title"
-                              style={{ fontSize: 12 }}
-                            >
-                              Airdrop to eligible users
-                            </span>
-                            <span className="dypcontract-addr">
-                              5,000,000 iDYP
-                            </span>
-                          </div>
-                          <div className="d-flex flex-column">
-                            <span
-                              className="dypcontract-title"
-                              style={{ fontSize: 12 }}
-                            >
-                              Distributed for liquidity on DEX
-                            </span>
-                            <span className="dypcontract-addr">
-                              5,550,000 iDYP
-                            </span>
-                          </div>
-                        </div>
-                        <div className="col-lg-5 col-xl-5 col-md-5">
-                          <div className="d-flex flex-column">
-                            <span
-                              className="dypcontract-title"
-                              style={{ fontSize: 12 }}
-                            >
-                              Distributed for pool rewards
-                            </span>
-                            <span className="dypcontract-addr">
-                              20,640,000 iDYP
-                            </span>
-                          </div>
-                          <div className="d-flex flex-column">
-                            <span
-                              className="dypcontract-title"
-                              style={{ fontSize: 12 }}
-                            >
-                              Allocation for eligible users
-                            </span>
-                            <span className="dypcontract-addr">
-                              1,000,000 iDYP
-                            </span>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                    <div>
-                      <span>Reserves, Marketing, Ecosystem</span>
-                      <br />
-                      <svg
-                        width="353"
-                        height="1"
-                        viewBox="0 0 653 1"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <rect
-                          width="353"
-                          height="1"
-                          fill="url(#paint0_linear_95_5424)"
-                        />
-                        <defs>
-                          <linearGradient
-                            id="paint0_linear_95_5424"
-                            x1="0"
-                            y1="0"
-                            x2="653"
-                            y2="1"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop stopColor="#7770E0" />
-                            <stop
-                              offset="1"
-                              stopColor="#7770E0"
-                              stopOpacity="0"
-                            />
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                      <div className="row gap-3 justify-content-between">
-                        <div className="col-lg-6 col-xl-6 col-md-6">
-                          <div className="d-flex flex-column ">
-                            <span
-                              className="dypcontract-title"
-                              style={{ fontSize: 12 }}
-                            >
-                              Company Reserve Vested for 60 months, released
-                              monthly
-                            </span>
-                            <span className="dypcontract-addr">
-                              155,967,000 iDYP
-                            </span>
-                          </div>
-                          <div className="d-flex flex-column ">
-                            <span
-                              className="dypcontract-title"
-                              style={{ fontSize: 12 }}
-                            >
-                              Marketing
-                            </span>
-                            <span className="dypcontract-addr">
-                              15,000,000 iDYP
-                            </span>
-                          </div>
-                        </div>
-                        <div className="col-lg-5 col-xl-5 col-md-5">
-                          <div className="d-flex flex-column">
-                            <span
-                              className="dypcontract-title"
-                              style={{ fontSize: 12 }}
-                            >
-                              Ecosystem Vested for 60 months, released monthly
-                            </span>
-                            <span className="dypcontract-addr">
-                              66,843,000 iDYP
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                    <div className="mininginfo-wrapper ">
+                      <p className="m-0">
+                        30,000,000 DYP have been minted at{" "}
+                        <a
+                          href="https://etherscan.io/tx/0x0a579e87c2615ba29d7a3f9c0bc1491415a44e0fa2e9dd40ef5fc40dcb769c4f"
+                          target={"_blank"}
+                          rel="noreferrer"
+                          style={{ color: "#554FD8" }}
+                        >
+                          <b>Genesis</b>
+                        </a>{" "}
+                        and will become accessible over the course of 2 years.
+                        <br />
+                        <b>The 2-year allocation is as follows:</b>
+                      </p>
                     </div>
-                    <div className="row justify-content-between">
-                      <div className="col-lg-6 col-xl-6 col-md-6">
-                        <span>Team</span>
+                    <div className="d-flex flex-column gap-3 mt-3">
+                      <div>
+                        <span style={{ color: "#554fd8" }}>Community</span>
                         <br />
                         <svg
                           width="353"
@@ -822,23 +872,83 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                           </defs>
                         </svg>
                         <div className="row gap-3 justify-content-between">
-                          <div className="">
+                          <div className="col-lg-6 col-xl-6 col-md-6">
                             <div className="d-flex flex-column ">
                               <span
                                 className="dypcontract-title"
                                 style={{ fontSize: 12 }}
                               >
-                                Vested for 10 years, released monthly
+                                Distributed for pool rewards over the next 12
+                                months
                               </span>
                               <span className="dypcontract-addr">
-                                30,000,000 iDYP
+                                12,000,000.00 DYP
+                              </span>
+                            </div>
+                            <div className="d-flex flex-column">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Distributed to Avalanche Chain
+                              </span>
+                              <span className="dypcontract-addr">
+                                2,090,000.00 DYP
+                              </span>
+                            </div>
+                            <div className="d-flex flex-column">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Locked for one year to Uniswap liquidity on
+                                token launch
+                              </span>
+                              <span className="dypcontract-addr">
+                                200,000.00 DYP
+                              </span>
+                            </div>
+                          </div>
+                          <div className="col-lg-5 col-xl-5 col-md-5">
+                            <div className="d-flex flex-column">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Distributed to BNB Chain
+                              </span>
+                              <span className="dypcontract-addr">
+                                4,500,000.00 DYP
+                              </span>
+                            </div>
+                            <div className="d-flex flex-column">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Distributed for providing liquidity to CEX and
+                                Marketing
+                              </span>
+                              <span className="dypcontract-addr">
+                                1,214,111.00 DYP
+                              </span>
+                            </div>
+                            <div className="d-flex flex-column">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Reserved for other pools or chains
+                              </span>
+                              <span className="dypcontract-addr">
+                                2,584,689.00 DYP
                               </span>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div className="col-lg-5 col-xl-5 col-md-5">
-                        <span>Burned</span>
+                      <div>
+                        <span style={{ color: "#554fd8" }}>Users</span>
                         <br />
                         <svg
                           width="353"
@@ -871,16 +981,78 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                           </defs>
                         </svg>
                         <div className="row gap-3 justify-content-between">
-                          <div className="">
+                          <div className="col-lg-6 col-xl-6 col-md-6">
                             <div className="d-flex flex-column ">
                               <span
                                 className="dypcontract-title"
                                 style={{ fontSize: 12 }}
                               >
-                                Burned and removed from the total supply
+                                Public Sale
                               </span>
                               <span className="dypcontract-addr">
-                                1,325,392 iDYP
+                                651,531.00 DYP
+                              </span>
+                            </div>
+                          </div>
+                          <div className="col-lg-5 col-xl-5 col-md-5">
+                            <div className="d-flex flex-column">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Burned
+                              </span>
+                              <span className="dypcontract-addr">
+                                4,348,469.00 DYP
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <span style={{ color: "#554fd8" }}>Team</span>
+                        <br />
+                        <svg
+                          width="353"
+                          height="1"
+                          viewBox="0 0 653 1"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            width="353"
+                            height="1"
+                            fill="url(#paint0_linear_95_5424)"
+                          />
+                          <defs>
+                            <linearGradient
+                              id="paint0_linear_95_5424"
+                              x1="0"
+                              y1="0"
+                              x2="653"
+                              y2="1"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stopColor="#7770E0" />
+                              <stop
+                                offset="1"
+                                stopColor="#7770E0"
+                                stopOpacity="0"
+                              />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                        <div className="row gap-3 justify-content-between">
+                          <div className="col-lg-6 col-xl-6 col-md-6">
+                            <div className="d-flex flex-column ">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Vested for 24 months, released monthly
+                              </span>
+                              <span className="dypcontract-addr">
+                                2,411,200.00 DYP
                               </span>
                             </div>
                           </div>
@@ -888,42 +1060,382 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="col-lg-4 col-xl-4 col-md-4 flex-column justify-content-between">
-                  <div className="circulating-wrapper w-100 mb-3">
-                    <div className="d-flex flex-column gap-3">
-                      <span className="circulating-title">
-                        Circulating supply
-                      </span>
-                      <span className="circulating-amount">
-                        {getFormattedNumber(idypSupply, 6)} iDYP
-                      </span>
+                  <div className="col-lg-4 col-xl-4 col-md-4 px-0 px-lg-2">
+                    <div className="circulating-wrapper w-100 mb-3">
+                      <div className="d-flex flex-column gap-3">
+                        <span className="circulating-title">
+                          Circulating supply
+                        </span>
+                        <span className="circulating-amount">
+                          {getFormattedNumber(dypSupplyv1, 6)} DYP
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div>
                     <div
                       id="crypto-widget-CoinList"
                       data-design="modern"
-                      data-coin-ids="9517"
+                      data-coin-ids="2669"
                     ></div>
-                    <img src={idypGraph} alt="" className="w-100" />
-                  </div>
-                  <div className="">
-                    <div className="circulating-wrapper w-100 mb-3">
-                      <div className="d-flex flex-column gap-3">
-                        <span
-                          className="circulating-title"
-                          style={{ fontSize: 12 }}
-                        >
-                          No additional tokens can be minted
-                        </span>
+                    <img src={Graph} alt="" className="w-100" />
+                    <div className="">
+                      <div className="circulating-wrapper w-100">
+                        <div className="d-flex flex-column gap-3">
+                          <span
+                            className="circulating-title"
+                            // style={{ fontSize: 12 }}
+                          >
+                            No additional tokens can be minted
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            )}
-          </div>
+              ) : (
+                <div className="row m-0 justify-content-between gap-2">
+                  <div className="col-lg-7 col-xl-7 col-md-7">
+                    <div className="d-flex flex-column mt-0">
+                      <span className="dypcontract-title">
+                        iDYP Contract Address:
+                      </span>
+                      <span className="dypcontract-addr">
+                        {windowSize.width < 526
+                          ? shortAddress(
+                              "0xbd100d061e120b2c67a24453cf6368e63f1be056"
+                            )
+                          : "0xbd100d061e120b2c67a24453cf6368e63f1be056"}
+
+                        <img
+                          src={Clipboard}
+                          alt=""
+                          onClick={() => {
+                            handleCopy(
+                              "0xbd100d061e120b2c67a24453cf6368e63f1be056"
+                            );
+                          }}
+                          style={{
+                            cursor: "pointer",
+                            display: copied === true ? "none" : "",
+                          }}
+                        />
+                        {copied === true && (
+                          <span
+                            className="d-inline-block"
+                            tabindex="0"
+                            data-toggle="tooltip"
+                            title="Copied"
+                            data-placement="top"
+                          >
+                            <Success bgColor={"#544ED5"} svgColor={"#FFF"} />
+                          </span>
+                        )}
+                      </span>
+                    </div>
+                    <div className="mininginfo-wrapper ">
+                      <p className="m-0">
+                        300,000,000 iDYP have been minted at genesis and will
+                        become accessible over the course of 10 years.
+                        <br />
+                        <b>The 10-year allocation is as follows:</b>
+                      </p>
+                    </div>
+                    <div className="d-flex flex-column gap-3 mt-3">
+                      <div>
+                        <span>Community</span>
+                        <br />
+                        <svg
+                          width="353"
+                          height="1"
+                          viewBox="0 0 653 1"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            width="353"
+                            height="1"
+                            fill="url(#paint0_linear_95_5424)"
+                          />
+                          <defs>
+                            <linearGradient
+                              id="paint0_linear_95_5424"
+                              x1="0"
+                              y1="0"
+                              x2="653"
+                              y2="1"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stopColor="#7770E0" />
+                              <stop
+                                offset="1"
+                                stopColor="#7770E0"
+                                stopOpacity="0"
+                              />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                        <div className="row gap-3 justify-content-between">
+                          <div className="col-lg-6 col-xl-6 col-md-6">
+                            <div className="d-flex flex-column ">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Airdrop to eligible users
+                              </span>
+                              <span className="dypcontract-addr">
+                                5,000,000 iDYP
+                              </span>
+                            </div>
+                            <div className="d-flex flex-column">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Distributed for liquidity on DEX
+                              </span>
+                              <span className="dypcontract-addr">
+                                5,550,000 iDYP
+                              </span>
+                            </div>
+                          </div>
+                          <div className="col-lg-5 col-xl-5 col-md-5">
+                            <div className="d-flex flex-column">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Distributed for pool rewards
+                              </span>
+                              <span className="dypcontract-addr">
+                                20,640,000 iDYP
+                              </span>
+                            </div>
+                            <div className="d-flex flex-column">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Allocation for eligible users
+                              </span>
+                              <span className="dypcontract-addr">
+                                1,000,000 iDYP
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <span>Reserves, Marketing, Ecosystem</span>
+                        <br />
+                        <svg
+                          width="353"
+                          height="1"
+                          viewBox="0 0 653 1"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            width="353"
+                            height="1"
+                            fill="url(#paint0_linear_95_5424)"
+                          />
+                          <defs>
+                            <linearGradient
+                              id="paint0_linear_95_5424"
+                              x1="0"
+                              y1="0"
+                              x2="653"
+                              y2="1"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stopColor="#7770E0" />
+                              <stop
+                                offset="1"
+                                stopColor="#7770E0"
+                                stopOpacity="0"
+                              />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                        <div className="row gap-3 justify-content-between">
+                          <div className="col-lg-6 col-xl-6 col-md-6">
+                            <div className="d-flex flex-column ">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Company Reserve Vested for 60 months, released
+                                monthly
+                              </span>
+                              <span className="dypcontract-addr">
+                                155,967,000 iDYP
+                              </span>
+                            </div>
+                            <div className="d-flex flex-column ">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Marketing
+                              </span>
+                              <span className="dypcontract-addr">
+                                15,000,000 iDYP
+                              </span>
+                            </div>
+                          </div>
+                          <div className="col-lg-5 col-xl-5 col-md-5">
+                            <div className="d-flex flex-column">
+                              <span
+                                className="dypcontract-title"
+                                style={{ fontSize: 12 }}
+                              >
+                                Ecosystem Vested for 60 months, released monthly
+                              </span>
+                              <span className="dypcontract-addr">
+                                66,843,000 iDYP
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="row justify-content-between">
+                        <div className="col-lg-6 col-xl-6 col-md-6">
+                          <span>Team</span>
+                          <br />
+                          <svg
+                            width="353"
+                            height="1"
+                            viewBox="0 0 653 1"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              width="353"
+                              height="1"
+                              fill="url(#paint0_linear_95_5424)"
+                            />
+                            <defs>
+                              <linearGradient
+                                id="paint0_linear_95_5424"
+                                x1="0"
+                                y1="0"
+                                x2="653"
+                                y2="1"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop stopColor="#7770E0" />
+                                <stop
+                                  offset="1"
+                                  stopColor="#7770E0"
+                                  stopOpacity="0"
+                                />
+                              </linearGradient>
+                            </defs>
+                          </svg>
+                          <div className="row gap-3 justify-content-between">
+                            <div className="">
+                              <div className="d-flex flex-column ">
+                                <span
+                                  className="dypcontract-title"
+                                  style={{ fontSize: 12 }}
+                                >
+                                  Vested for 10 years, released monthly
+                                </span>
+                                <span className="dypcontract-addr">
+                                  30,000,000 iDYP
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-lg-5 col-xl-5 col-md-5">
+                          <span>Burned</span>
+                          <br />
+                          <svg
+                            width="353"
+                            height="1"
+                            viewBox="0 0 653 1"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              width="353"
+                              height="1"
+                              fill="url(#paint0_linear_95_5424)"
+                            />
+                            <defs>
+                              <linearGradient
+                                id="paint0_linear_95_5424"
+                                x1="0"
+                                y1="0"
+                                x2="653"
+                                y2="1"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop stopColor="#7770E0" />
+                                <stop
+                                  offset="1"
+                                  stopColor="#7770E0"
+                                  stopOpacity="0"
+                                />
+                              </linearGradient>
+                            </defs>
+                          </svg>
+                          <div className="row gap-3 justify-content-between">
+                            <div className="">
+                              <div className="d-flex flex-column ">
+                                <span
+                                  className="dypcontract-title"
+                                  style={{ fontSize: 12 }}
+                                >
+                                  Burned and removed from the total supply
+                                </span>
+                                <span className="dypcontract-addr">
+                                  1,325,392 iDYP
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-xl-4 col-md-4 flex-column justify-content-between">
+                    <div className="circulating-wrapper w-100 mb-3">
+                      <div className="d-flex flex-column gap-3">
+                        <span className="circulating-title">
+                          Circulating supply
+                        </span>
+                        <span className="circulating-amount">
+                          {getFormattedNumber(idypSupply, 6)} iDYP
+                        </span>
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        id="crypto-widget-CoinList"
+                        data-design="modern"
+                        data-coin-ids="9517"
+                      ></div>
+                      <img src={idypGraph} alt="" className="w-100" />
+                    </div>
+                    <div className="">
+                      <div className="circulating-wrapper w-100 mb-3">
+                        <div className="d-flex flex-column gap-3">
+                          <span
+                            className="circulating-title"
+                            style={{ fontSize: 12 }}
+                          >
+                            No additional tokens can be minted
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
       {/* {tokenomicData === "dyp" && toggledyp === true && <AvaxTokenomics />} */}
