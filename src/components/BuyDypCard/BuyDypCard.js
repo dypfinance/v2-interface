@@ -4,7 +4,7 @@ import vidthumbnail from "../../assets/vidthumbnail.png";
 import trustwallet from "../../assets/trustwallet.svg";
 import filledArrow from "../../assets/filledArrow.svg";
 
-const BuyDypCard = ({ title, logo, link, totalvids, videos, id, active }) => {
+const BuyDypCard = ({ title, logo, link, totalvids, videos, id, active, version }) => {
   return (
     <div className="col-12 col-lg-3 my-3">
       <div className="buydypcard-wrapper ">
@@ -15,9 +15,9 @@ const BuyDypCard = ({ title, logo, link, totalvids, videos, id, active }) => {
               <span className="buydypcard-title">{title}</span>
               <div
                 className="videodesc-wrapper"
-                style={{ display: totalvids === "0" ? "none" : "" }}
+                // style={{ display: totalvids === "0" ? "none" : "" }}
               >
-                <span className="videodesc">{totalvids}</span>
+                <span className="videodesc">{version}</span>
               </div>
             </div>
           </div>
