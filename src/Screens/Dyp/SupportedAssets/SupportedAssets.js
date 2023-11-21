@@ -144,7 +144,7 @@ const SupportedAssets = () => {
 
         const dypData = eth_result2.data.stakingInfoDYPEth;
         const object2 = dypData.map((item) => {
-          return {...item, tvl_usd: item.tvl_usd/1e18}
+          return {...item, tvl_usd: item.tvl_usd}
         })
 
         const activeEth2 = object2.filter((item) => {
@@ -188,7 +188,7 @@ const SupportedAssets = () => {
         const dypBnb = bnb_result2.data.stakingInfoDYPBnb 
 
         const object2 = dypBnb.map((item) => {
-          return {...item, tvl_usd: item.tvl_usd/1e18}
+          return {...item, tvl_usd: item.tvl_usd}
         })
 
         const activeBnb2 = object2.filter((item) => {
@@ -233,7 +233,7 @@ const SupportedAssets = () => {
 
         const dypAvax = avax_result2.data.stakingInfoDYPAvax;
         const object2 = dypAvax.map((item) => {
-          return {...item, tvl_usd: item.tvl_usd/1e18}
+          return {...item, tvl_usd: item.tvl_usd}
         })
 
         const activeAvax2 = object2.filter((item) => {
