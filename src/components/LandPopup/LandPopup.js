@@ -32,16 +32,19 @@ const LandPopup = () => {
         id="popup"
         className={`popup-wrapper ${
           active && "popup-active"
-        } p-3 d-flex flex-column gap-3 justify-content-center align-items-center`}
+        } p-3`}
       >
-        <div className="d-flex p-3 align-items-center justify-content-end w-100">
+        <div className="d-flex pt-3 pe-3 align-items-center justify-content-end w-100">
           <img
             src={closePopup}
             onClick={() => setActive(false)}
+            width={20}
+            height={20}
             alt="close"
             style={{ cursor: "pointer" }}
           />
         </div>
+        <div className="d-flex flex-column gap-3 justify-content-center align-items-center">
         <div className="d-flex flex-column align-items-center justify-content-center">
           <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
           <h6 className="popup-title d-flex align-items-center gap-2 mb-0">DYP Token migration is now</h6>
@@ -62,6 +65,7 @@ const LandPopup = () => {
         >
           <button className="btn filled-btn m-3">Migrate</button>
         </a>
+        </div>
       </div>
     </OutsideClickHandler>
   );
