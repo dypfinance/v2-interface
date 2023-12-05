@@ -246,6 +246,8 @@ const Footer = () => {
                     style={{ gap: "5px" }}
                   >
                     <img
+                    width={25}
+                    height={25}
                       src={require(`../../assets/${social.name.toLowerCase()}.svg`)}
                       alt=""
                     />
