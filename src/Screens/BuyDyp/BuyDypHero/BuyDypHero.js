@@ -13,14 +13,15 @@ const BuyDypHero = () => {
       videos: "",
       active: true,
       id: "collapsetwo",
+      dypVersion: "DYP v2",
     },
-
     {
       title: "Uniswap V2",
       logo: "uniswap.png",
       link: "https://app.uniswap.org/swap?use=V2&inputCurrency=0x39b46B212bDF15b42B166779b9d1787A68b9D0c3",
       totalvids: "8 videos",
       active: true,
+      dypVersion: "DYP v2",
       videos: [
         {
           link: "https://www.youtube.com/watch?v=yBzIPecqKY8",
@@ -93,6 +94,7 @@ const BuyDypHero = () => {
 
       link: "https://pancakeswap.finance/swap?inputCurrencty=BNB&outputCurrency=0x1a3264f2e7b1cfc6220ec9348d33ccf02af7aaa4",
       totalvids: "4 videos",
+      dypVersion: "DYP v2",
       videos: [
         {
           link: "https://www.youtube.com/watch?v=yBzIPecqKY8",
@@ -133,7 +135,7 @@ const BuyDypHero = () => {
       link: "https://traderjoexyz.com/avalanche/trade?outputCurrency=0x1a3264f2e7b1cfc6220ec9348d33ccf02af7aaa4",
       totalvids: "0",
       active: true,
-
+      dypVersion: "DYP v2",
       videos: "",
       //  [
       //   {
@@ -181,14 +183,16 @@ const BuyDypHero = () => {
       totalvids: "0",
       videos: "",
       id: "collapsefive",
-      active: true
+      active: true,
+      dypVersion: "DYP v2",
     },
     {
       title: "Coinbase",
       logo: "coinbase.png",
       link: "https://pro.coinbase.com/trade/DYP-USD",
       totalvids: "1 video",
-      active: false,
+      active: true,
+      dypVersion: "DYP v1",
       videos: [
         {
           link: "https://youtu.be/mjUUqNy-zW8",
@@ -200,12 +204,13 @@ const BuyDypHero = () => {
       ],
       id: "collapseone",
     },
-
     {
       title: "KuCoin",
       logo: "kucoin.png",
       link: "https://www.kucoin.com/trade/DYP-USDT",
       totalvids: "1 video",
+      dypVersion: "DYP v1",
+      active: true,
       videos: [
         {
           link: "https://www.youtube.com/watch?v=BIuy1A-_-dU",
@@ -222,6 +227,8 @@ const BuyDypHero = () => {
       logo: "gateio.png",
       link: "https://www.gate.io/zh/trade/DYP_USDT",
       totalvids: "1 video",
+      dypVersion: "DYP v1",
+      active: true,
       videos: [
         {
           link: "https://www.youtube.com/watch?v=arVFXf5hESE",
@@ -239,16 +246,17 @@ const BuyDypHero = () => {
       link: "https://poloniex.com/spot/BTC_USDT",
       totalvids: "0",
       videos: "",
+      dypVersion: "DYP v1",
       id: "collapsetwelve",
+      active: true,
     },
-
-
     {
       title: "Coin98",
       logo: "coin98.png",
       link: "https://exchange.coin98.com/binancesmart/bnb/0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17",
       totalvids: "3 videos",
-      active: false,
+      active: true,
+      dypVersion: "DYP v1",
       videos: [
         {
           link: "https://www.youtube.com/watch?v=SvUaexmtgnU",
@@ -282,8 +290,8 @@ const BuyDypHero = () => {
       logo: "1Inch.png",
       link: "https://app.1inch.io/#/1/swap/DYP/ETH",
       totalvids: "6 videos",
-      active: false,
-
+      active: true,
+      dypVersion: "DYP v1",
       videos: [
         {
           link: "https://www.youtube.com/watch?v=yBzIPecqKY8",
@@ -336,8 +344,8 @@ const BuyDypHero = () => {
       logo: "kyber1.png",
       link: "https://kyberswap.com/swap/bnb/bnb-to-dyp",
       totalvids: "1 video",
-      active: false,
-
+      active: true,
+      dypVersion: "DYP v1",
       videos: [
         {
           link: "https://www.youtube.com/watch?v=olhIziGMs0Y",
@@ -390,6 +398,7 @@ const BuyDypHero = () => {
                   totalvids={item.totalvids}
                   videos={item.videos}
                   active={item.active}
+                  version={item.dypVersion}
                 />
               );
             })}

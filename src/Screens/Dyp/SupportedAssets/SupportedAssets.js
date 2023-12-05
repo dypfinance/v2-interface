@@ -126,12 +126,12 @@ const SupportedAssets = () => {
  
   const fetchEthStaking = async () => {
     const eth_result = await axios
-      .get(`https://api2.dyp.finance/api/get_staking_info_eth`).catch((err) => {
+      .get(`https://api.dyp.finance/api/get_staking_info_eth`).catch((err) => {
         console.log(err);
       });
 
       const eth_result2 = await axios
-      .get(`https://api2.dyp.finance/api/get_staking_info_eth_new`)
+      .get(`https://api.dyp.finance/api/get_staking_info_eth_new`)
       .catch((err) => {
         console.log(err);
       });
@@ -144,7 +144,7 @@ const SupportedAssets = () => {
 
         const dypData = eth_result2.data.stakingInfoDYPEth;
         const object2 = dypData.map((item) => {
-          return {...item, tvl_usd: item.tvl_usd/1e18}
+          return {...item, tvl_usd: item.tvl_usd}
         })
 
         const activeEth2 = object2.filter((item) => {
@@ -168,12 +168,12 @@ const SupportedAssets = () => {
 
   const fetchBnbStaking = async () => {
   const bnb_result =  await axios
-      .get(`https://api2.dyp.finance/api/get_staking_info_bnb`).catch((err) => {
+      .get(`https://api.dyp.finance/api/get_staking_info_bnb`).catch((err) => {
         console.log(err);
       });
 
       const bnb_result2 = await axios
-      .get(`https://api2.dyp.finance/api/get_staking_info_bnb_new`)
+      .get(`https://api.dyp.finance/api/get_staking_info_bnb_new`)
       .catch((err) => {
         console.log(err);
       });
@@ -188,7 +188,7 @@ const SupportedAssets = () => {
         const dypBnb = bnb_result2.data.stakingInfoDYPBnb 
 
         const object2 = dypBnb.map((item) => {
-          return {...item, tvl_usd: item.tvl_usd/1e18}
+          return {...item, tvl_usd: item.tvl_usd}
         })
 
         const activeBnb2 = object2.filter((item) => {
@@ -215,12 +215,12 @@ const SupportedAssets = () => {
   };
   const fetchAvaxStaking = async () => {
   const avax_result =  await axios
-      .get(`https://api2.dyp.finance/api/get_staking_info_avax`).catch((err) => {
+      .get(`https://api.dyp.finance/api/get_staking_info_avax`).catch((err) => {
         console.log(err);
       });
 
       const avax_result2 = await axios
-      .get(`https://api2.dyp.finance/api/get_staking_info_avax_new`)
+      .get(`https://api.dyp.finance/api/get_staking_info_avax_new`)
       .catch((err) => {
         console.log(err);
       });
@@ -233,7 +233,7 @@ const SupportedAssets = () => {
 
         const dypAvax = avax_result2.data.stakingInfoDYPAvax;
         const object2 = dypAvax.map((item) => {
-          return {...item, tvl_usd: item.tvl_usd/1e18}
+          return {...item, tvl_usd: item.tvl_usd}
         })
 
         const activeAvax2 = object2.filter((item) => {

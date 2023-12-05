@@ -149,7 +149,16 @@ const DypPartners = () => {
       text: "Earn Network",
       href: "https://earn.network/",
     },
-   
+    {
+      image: "mycointainer.png",
+      text: "MyCointainer",
+      href: "https://www.mycointainer.com/",
+    },
+    {
+      image: "hexn.svg",
+      text: "HEXN",
+      href: "https://hexn.io/",
+    },
   ];
 
   const partnerSize = () => {
