@@ -21,8 +21,13 @@ const DypPartners = () => {
     },
     {
       image: "huobi.png",
-      text: "Huobi",
-      href: "https://www.huobi.com/",
+      text: "HTX",
+      href: "https://www.htx.com/en-us/",
+    },
+    {
+      image: "spaceId.svg",
+      text: "Space ID",
+      href: "https://space.id/",
     },
     {
       image: "kuCoin.png",
