@@ -187,6 +187,24 @@ const BuyDypHero = () => {
       dypVersion: "DYP v2",
     },
     {
+      title: "Gate.io",
+      logo: "gateio.png",
+      link: "https://www.gate.io/zh/trade/DYP_USDT",
+      totalvids: "1 video",
+      dypVersion: "DYP v2",
+      active: true,
+      videos: [
+        {
+          link: "https://www.youtube.com/watch?v=arVFXf5hESE",
+          image: "gate.png",
+          title: "How to buy DeFi Yield Protocol (DYP) on Gate.io",
+          walletName: "Gate.io",
+          thumbnail: "gate.png",
+        },
+      ],
+      id: "collapsefour",
+    },
+    {
       title: "Coinbase",
       logo: "coinbase.png",
       link: "https://pro.coinbase.com/trade/DYP-USD",
@@ -222,24 +240,7 @@ const BuyDypHero = () => {
       ],
       id: "collapsethree",
     },
-    {
-      title: "Gate.io",
-      logo: "gateio.png",
-      link: "https://www.gate.io/zh/trade/DYP_USDT",
-      totalvids: "1 video",
-      dypVersion: "DYP v1",
-      active: true,
-      videos: [
-        {
-          link: "https://www.youtube.com/watch?v=arVFXf5hESE",
-          image: "gate.png",
-          title: "How to buy DeFi Yield Protocol (DYP) on Gate.io",
-          walletName: "Gate.io",
-          thumbnail: "gate.png",
-        },
-      ],
-      id: "collapsefour",
-    },
+    
     {
       title: "Poloniex",
       logo: "poloniex.png",
