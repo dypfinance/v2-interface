@@ -30,6 +30,11 @@ const DypPartners = () => {
       href: "https://space.id/",
     },
     {
+      image: "coinmarketcap.svg",
+      text: "CoinMarketCap",
+      href: "https://coinmarketcap.com/",
+    },
+    {
       image: "kuCoin.png",
       text: "KuCoin",
       href: "https://www.kucoin.com/trade/DYP-USDT",
