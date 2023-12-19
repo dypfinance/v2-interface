@@ -205,6 +205,25 @@ const BuyDypHero = () => {
       id: "collapsefour",
     },
     {
+      title: "KuCoin",
+      logo: "kucoin.png",
+      link: "https://www.kucoin.com/trade/DYP-USDT",
+      totalvids: "1 video",
+      dypVersion: "DYP v2",
+      active: true,
+      videos: [
+        {
+          link: "https://www.youtube.com/watch?v=BIuy1A-_-dU",
+          image: "kucoin.png",
+          title: "How to buy DeFi Yield Protocol (DYP) on KuCoin",
+          walletName: "KuCoin",
+          thumbnail: "kucoin.png",
+        },
+      ],
+      id: "collapsethree",
+    },
+
+    {
       title: "Coinbase",
       logo: "coinbase.png",
       link: "https://pro.coinbase.com/trade/DYP-USD",
@@ -222,24 +241,7 @@ const BuyDypHero = () => {
       ],
       id: "collapseone",
     },
-    {
-      title: "KuCoin",
-      logo: "kucoin.png",
-      link: "https://www.kucoin.com/trade/DYP-USDT",
-      totalvids: "1 video",
-      dypVersion: "DYP v1",
-      active: true,
-      videos: [
-        {
-          link: "https://www.youtube.com/watch?v=BIuy1A-_-dU",
-          image: "kucoin.png",
-          title: "How to buy DeFi Yield Protocol (DYP) on KuCoin",
-          walletName: "KuCoin",
-          thumbnail: "kucoin.png",
-        },
-      ],
-      id: "collapsethree",
-    },
+
     
     {
       title: "Poloniex",
