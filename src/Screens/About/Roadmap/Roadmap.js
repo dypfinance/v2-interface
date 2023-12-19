@@ -292,19 +292,39 @@ const Roadmap = () => {
 
   const quarterFour2023 = [
     {
-      title: "Launch Mobile App (iOS and Android)",
+      title: "DYP v2 Migration",
+      content:
+        "Facilitating the migration process for the DYP token to boost its performance, security, and utility within the ecosystem.",
+        completed: true,
+    },
+   
+    {
+      title: "Bridge Upgrade",
+      content:
+        "Upgrading the DYP token Bridge to ensure compatibility with the new DYP smart contract and reinforce security measures.",
+        completed: true,
+    },
+    {
+      title: "Premium Membership Upgrade",
+      content:
+        "Elevating our premium subscription by introducing additional benefits for Metaverse and dApps.",
+        completed: true,
+    },
+    {
+      title: "Expanding our Products to other Chains",
+      content:
+        "Broadening the reach of our products to other chains, enhancing solutions, and increasing accessibility for users.",
+        completed: true,
+    },
+    {
+      title: "Cross-Chain Interoperability Protocol (CCIP) Integration",
+      content:
+        "Integrating Chainlink's CCIP solution into our primary NFT collections, enabling users to seamlessly bridge NFTs across multiple networks.",
+    },
+    {
+      title: "Launch Mobile App DEMO",
       content:
         "The mobile app will provide each user with an interesting and engaging experience, thanks to its user-friendly UI and seamless integration with the WoD platform.",
-    },
-    {
-      title: "Referral Program v2",
-      content:
-        "The updated version of the referral program features a new platform and an improved user journey, making it easier for users to refer friends and earn rewards.",
-    },
-    {
-      title: "Weapons and armor customization",
-      content:
-        "Users can customize unique in-game assets such as weapons, armor, skins, and much more. These NFTs can be bought, sold, and traded on the open market. In addition, these tailor-made NFTs can be equipped and used by players in game.",
     },
     {
       title: "Multiplayer PVE",
@@ -316,6 +336,7 @@ const Roadmap = () => {
       content:
         "Engage in huge battle events against other players in real-time. Players can compete and interact against each other in 1v1 or group battle to complete objectives.",
     },
+    
   ];
 
   const [oldSlide, setOldSlide] = useState(0);
