@@ -186,21 +186,18 @@ const Roadmap = () => {
       content:
         "World of Dypians Genesis edition is limited to 1,000 NFTs, each of which represents a piece of land located in a prime area within the game that will provide players with a wide range of benefits.",
       completed: true,
-
     },
     {
       title: "Dedicated Genesis staking pool",
       content:
         "A dedicated staking pool for Genesis Land NFTs that allows users to stake their NFTs into a 25% APR pool and earn rewards in Ethereum",
       completed: true,
-
     },
     {
       title: "Metaverse Multichain Integration",
       content:
         "By incorporating a multichain system into World of Dypians (WoD), the game and the native token, DYP will be able to interact with multiple blockchain networks, allowing for greater interoperability, more utility, and accessibility for players.",
       completed: true,
-
     },
     {
       title: "Introducing new staking pools",
@@ -212,9 +209,8 @@ const Roadmap = () => {
       title: "Introducing the CAWS Timepiece NFT collection",
       content:
         "The CAWS Timepiece NFT collection will provide users additional utility and perks in the World of Dypians Metaverse. CAWS owners will have the ability to mint CAWS Timepiece for free.",
-        completed: true,
-   
-      },
+      completed: true,
+    },
   ];
 
   const quarterTwo2023 = [
@@ -223,71 +219,66 @@ const Roadmap = () => {
       content:
         "The introduction of DYP Tools Premium users to the metaverse opens up a world of opportunities for those who are looking for additional benefits and a more enhanced experience within the ecosystem.",
       completed: true,
-      
     },
 
     {
       title: "Introduction of NFT Marketplace",
       content:
         "Users can access WoD marketplace to purchase assets used to customize and enhance their experience.",
-        completed: true,
-
+      completed: true,
     },
-   
+
     {
       title: "DYP Locker enhancement",
       content: "Improving DYP Locker functionalities on the BNB Chain",
       completed: true,
     },
-   
+
     {
       title: "Introducing new users to Metaverse",
       content:
         "Introducing new users to crypto space and providing them with the tools and resources necessary to participate in the metaverse ecosystem.",
       completed: true,
-
     },
   ];
 
   const quarterThree2023 = [
-  
     {
       title: "Marketplace enhancement",
       content:
         "Enhanced World of Dypians Marketplace with new features to provide users with a more comprehensive experience.",
-        completed: true
+      completed: true,
     },
     {
       title: "WoD 0.2.0 launch",
       content:
         "WoD 0.2.0 introduces a transformed cityscape, ushering in a futuristic era for Dypian enthusiasts.",
-        completed: true
+      completed: true,
     },
     {
       title: "New Earn Pools",
       content:
         "Introducing dedicated staking, farming, and vault pools, enabling users to maximize their earnings effortlessly.",
-        completed: true
+      completed: true,
     },
     {
       title: "Multiplayer PVE DEMO",
       content:
         "Experience cooperative gameplay with the multiplayer PVE demo, offering exciting challenges and teamwork opportunities.",
-        completed: true
+      completed: true,
     },
     {
       title: "Multiplayer PVP DEMO",
       content:
         "Engage in thrilling player-versus-player action with the multiplayer PVP demo, where you'll battle against other skilled players.",
-        completed: true
+      completed: true,
     },
     {
       title: "News v2",
       content:
         "Enhanced News section with new features to provide users with a more comprehensive and user-friendly experience.",
-        completed: true
+      completed: true,
     },
-
   ];
 
   const quarterFour2023 = [
@@ -295,48 +286,51 @@ const Roadmap = () => {
       title: "DYP v2 Migration",
       content:
         "Facilitating the migration process for the DYP token to boost its performance, security, and utility within the ecosystem.",
-        completed: true,
+      completed: true,
     },
-   
+
     {
       title: "Bridge Upgrade",
       content:
         "Upgrading the DYP token Bridge to ensure compatibility with the new DYP smart contract and reinforce security measures.",
-        completed: true,
+      completed: true,
     },
     {
       title: "Premium Membership Upgrade",
       content:
         "Elevating our premium subscription by introducing additional benefits for Metaverse and dApps.",
-        completed: true,
+      completed: true,
     },
     {
       title: "Expanding our Products to other Chains",
       content:
         "Broadening the reach of our products to other chains, enhancing solutions, and increasing accessibility for users.",
-        completed: true,
+      completed: true,
     },
     {
       title: "Cross-Chain Interoperability Protocol (CCIP) Integration",
       content:
         "Integrating Chainlink's CCIP solution into our primary NFT collections, enabling users to seamlessly bridge NFTs across multiple networks.",
+      completed: true,
     },
     {
       title: "Launch Mobile App DEMO",
       content:
         "The mobile app will provide each user with an interesting and engaging experience, thanks to its user-friendly UI and seamless integration with the WoD platform.",
+      completed: true,
     },
     {
       title: "Multiplayer PVE",
       content:
         "Adventure with other players to complete quests, fight bosses, survive against waves of enemies, earn rewards and much more.",
+      completed: true,
     },
     {
       title: "Multiplayer PVP",
       content:
         "Engage in huge battle events against other players in real-time. Players can compete and interact against each other in 1v1 or group battle to complete objectives.",
+      completed: true,
     },
-    
   ];
 
   const [oldSlide, setOldSlide] = useState(0);
@@ -411,7 +405,7 @@ const Roadmap = () => {
   const slider = useRef();
 
   const next = () => {
-    if(windowSize.width > 786){
+    if (windowSize.width > 786) {
       slider.current.slickNext();
       if (activeYear.roadmap2023 === true) {
         setActiveYear({
@@ -424,7 +418,7 @@ const Roadmap = () => {
         slider.current.innerSlider.slickGoTo(0);
         setActiveSlide2(0);
       }
-  
+
       if (activeSlide2 === 0) {
         setActiveYear({
           roadmap2020: false,
@@ -433,10 +427,10 @@ const Roadmap = () => {
           roadmap2023: false,
         });
         setShowText(false);
-  
+
         slider.current.innerSlider.slickGoTo(4);
       }
-  
+
       if (activeSlide2 === 4) {
         setActiveYear({
           roadmap2020: false,
@@ -445,7 +439,7 @@ const Roadmap = () => {
           roadmap2023: false,
         });
         setShowText(false);
-  
+
         slider.current.innerSlider.slickGoTo(8);
       }
       if (activeSlide2 === 8) {
@@ -456,33 +450,33 @@ const Roadmap = () => {
           roadmap2023: true,
         });
         setShowText(true);
-  
+
         slider.current.innerSlider.slickGoTo(12);
       }
-    }else{
-    slider.current.innerSlider.slickNext();
-      if(activeSlide2 < 1){
+    } else {
+      slider.current.innerSlider.slickNext();
+      if (activeSlide2 < 1) {
         setActiveYear({
           roadmap2020: true,
           roadmap2021: false,
           roadmap2022: false,
           roadmap2023: false,
         });
-      }else if(activeSlide2 < 5){
+      } else if (activeSlide2 < 5) {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: true,
           roadmap2022: false,
           roadmap2023: false,
         });
-      }else if(activeSlide2 < 9){
+      } else if (activeSlide2 < 9) {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: false,
           roadmap2022: true,
           roadmap2023: false,
         });
-      }else{
+      } else {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: false,
@@ -494,97 +488,95 @@ const Roadmap = () => {
   };
 
   const previous = () => {
-   if(windowSize.width > 786){
-    slider.current.slickPrev();
-    if (activeYear.roadmap2023 === true) {
-      if (activeSlide2 < 5) {
+    if (windowSize.width > 786) {
+      slider.current.slickPrev();
+      if (activeYear.roadmap2023 === true) {
+        if (activeSlide2 < 5) {
+          setActiveYear({
+            roadmap2020: false,
+            roadmap2021: true,
+            roadmap2022: false,
+            roadmap2023: false,
+          });
+        }
+      }
+      if (activeSlide2 === 12) {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: true,
+          roadmap2023: false,
+        });
+        setShowText(false);
+
+        slider.current.innerSlider.slickGoTo(8);
+      }
+      if (activeSlide2 === 8) {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: true,
           roadmap2022: false,
           roadmap2023: false,
         });
+        setShowText(false);
+
+        slider.current.innerSlider.slickGoTo(4);
+      }
+
+      if (activeSlide2 === 4) {
+        setActiveYear({
+          roadmap2020: true,
+          roadmap2021: false,
+          roadmap2022: false,
+          roadmap2023: false,
+        });
+        setShowText(false);
+
+        slider.current.innerSlider.slickGoTo(0);
+      }
+      if (activeSlide2 === 0) {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: false,
+          roadmap2023: true,
+        });
+        setShowText(true);
+        slider.current.innerSlider.slickGoTo(12);
+      }
+    } else {
+      slider.current.innerSlider.slickPrev();
+      if (activeSlide2 < 3) {
+        setActiveYear({
+          roadmap2020: true,
+          roadmap2021: false,
+          roadmap2022: false,
+          roadmap2023: false,
+        });
+      } else if (activeSlide2 < 7) {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: true,
+          roadmap2022: false,
+          roadmap2023: false,
+        });
+      } else if (activeSlide2 < 11) {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: true,
+          roadmap2023: false,
+        });
+      } else {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: false,
+          roadmap2023: true,
+        });
       }
     }
-    if (activeSlide2 === 12) {
-      setActiveYear({
-        roadmap2020: false,
-        roadmap2021: false,
-        roadmap2022: true,
-        roadmap2023: false,
-      });
-      setShowText(false);
-
-      slider.current.innerSlider.slickGoTo(8);
-    }
-    if (activeSlide2 === 8) {
-      setActiveYear({
-        roadmap2020: false,
-        roadmap2021: true,
-        roadmap2022: false,
-        roadmap2023: false,
-      });
-      setShowText(false);
-
-      slider.current.innerSlider.slickGoTo(4);
-    }
-
-    if (activeSlide2 === 4) {
-      setActiveYear({
-        roadmap2020: true,
-        roadmap2021: false,
-        roadmap2022: false,
-        roadmap2023: false,
-      });
-      setShowText(false);
-
-      slider.current.innerSlider.slickGoTo(0);
-    }
-    if (activeSlide2 === 0) {
-      setActiveYear({
-        roadmap2020: false,
-        roadmap2021: false,
-        roadmap2022: false,
-        roadmap2023: true,
-      });
-      setShowText(true);
-      slider.current.innerSlider.slickGoTo(12);
-    }
-   }else{
-    slider.current.innerSlider.slickPrev();
-    if(activeSlide2 < 3){
-      setActiveYear({
-        roadmap2020: true,
-        roadmap2021: false,
-        roadmap2022: false,
-        roadmap2023: false,
-      });
-    }else if(activeSlide2 < 7){
-      setActiveYear({
-        roadmap2020: false,
-        roadmap2021: true,
-        roadmap2022: false,
-        roadmap2023: false,
-      });
-    }else if(activeSlide2 < 11){
-      setActiveYear({
-        roadmap2020: false,
-        roadmap2021: false,
-        roadmap2022: true,
-        roadmap2023: false,
-      });
-    }else{
-      setActiveYear({
-        roadmap2020: false,
-        roadmap2021: false,
-        roadmap2022: false,
-        roadmap2023: true,
-      });
-    }
-   }
   };
-
- 
 
   const goto2020 = () => {
     slider.current.innerSlider.slickGoTo(0);
@@ -638,13 +630,13 @@ const Roadmap = () => {
     });
     setShowText(true);
   };
-  
+
   useEffect(() => {
     if (windowSize.width < 786) {
       goto2023();
     }
   }, [windowSize.width]);
-  
+
   useEffect(() => {
     if (windowSize.width < 786) {
       if (activeSlide2 < 10) {
@@ -737,18 +729,18 @@ const Roadmap = () => {
       </div>
       <div className="row justify-content-evenly position-relative carousel-wrapper">
         <hr />
-            <div
-              className={`left-button d-flex justify-content-center align-items-center enabled`}
-              onClick={previous}
-            >
-              <img src={filledLeft} alt="left arrow" className="p-4" />
-            </div>
-            <div
-              className={`right-button d-flex justify-content-center align-items-center enabled`}
-              onClick={next}
-            >
-              <img src={emptyRight} alt="rightArrow" className="p-4" />
-            </div>      
+        <div
+          className={`left-button d-flex justify-content-center align-items-center enabled`}
+          onClick={previous}
+        >
+          <img src={filledLeft} alt="left arrow" className="p-4" />
+        </div>
+        <div
+          className={`right-button d-flex justify-content-center align-items-center enabled`}
+          onClick={next}
+        >
+          <img src={emptyRight} alt="rightArrow" className="p-4" />
+        </div>
         <Slider ref={(c) => (slider.current = c)} {...settings}>
           {windowSize.width > 786 && (
             <div className="col-12 d-flex flex-column gap-4 selected-roadmap hidden-roadmap">
@@ -1042,7 +1034,7 @@ const Roadmap = () => {
                     aria-expanded="false"
                     aroa-aria-controls={`collapseTwo${index}`}
                   >
-                     {item?.completed === true ? (
+                    {item?.completed === true ? (
                       <img src={completedOrangeIcon} alt="" />
                     ) : (
                       <img src={uncompletedIcon} alt="" />
@@ -1117,7 +1109,7 @@ const Roadmap = () => {
           </div>
 
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card d-flex flex-column align-items-center">
+            <div className="date-card selected d-flex flex-column align-items-center">
               <img
                 src={selectedRoadmap}
                 style={{ visibility: "hidden" }}
