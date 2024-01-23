@@ -17,7 +17,7 @@ const LatestUpdates = ({type}) => {
 
     const [newsType, setNewsType] = useState(type)
     const [news, setNews] = useState([])
-    const [year, setYear] = useState('2023')
+    const [year, setYear] = useState('2024')
     var options = {  year: 'numeric', month: 'short', day: '2-digit' };
 
     const fetchNews =  async() => {
@@ -103,6 +103,13 @@ const LatestUpdates = ({type}) => {
                   onClick={() => setYear('2023')}
                 >
                    2023
+                </li>
+                <li
+                  className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
+                  style={{ cursor: 'pointer', color: "#566FCE"}}
+                  onClick={() => setYear('2024')}
+                >
+                   2024
                 </li>
               </ul>
                 <div className="years-wrapper d-flex flex-row px-2 gap-1 justify-content-center align-items-center">
