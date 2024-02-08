@@ -23,12 +23,19 @@ const PressRelease = () => {
             <tr>
               <td className="radius1 presscell"></td>
               <td className="presscell radius2">
-                <a
+                {/* <a
                   href="https://coinmarketcap.com/headlines/news/dyp-finance-a-unique-yield-farming-platform/"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
                   <img src={require("./news/coinmarketcap.png")} alt="" />
+                </a> */}
+                <a
+                  href="https://cryptoadventure.com/caws-the-cats-and-watches-society-nft-collection-by-dypius/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/cryptoadventure.png")} alt="" />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
@@ -53,12 +60,19 @@ const PressRelease = () => {
               <td className="radius4 presscell"></td>
 
               <td className="radius2 presscell">
-                <a
+                {/* <a
                   href="https://medium.com/the-capital/defi-yield-protocol-dyp-staking-and-governance-is-now-live-e18c0f14a442"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
                   <img src={require("./news/medium.png")} alt="" />
+                </a> */}
+                <a
+                  href="https://finance.yahoo.com/news/world-dypians-announces-whitelisting-genesis-180000531.html"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/yahoo.png")} alt="" />
                 </a>
               </td>
 
@@ -98,12 +112,19 @@ const PressRelease = () => {
               </td>
               <td className="radius1 presscell"></td>
               <td className="presscell radius2">
-                <a
+                {/* <a
                   href="https://coinmarketcap.com/headlines/news/dyp-finance-a-unique-yield-farming-platform/"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
                   <img src={require("./news/coinmarketcap.png")} alt="" />
+                </a> */}
+                <a
+                  href="https://www.benzinga.com/pressreleases/23/02/g30736707/world-of-dypians-announces-whitelisting-for-genesis-land-nfts-at-knockdown-price"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/benzinga.png")} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
@@ -120,12 +141,19 @@ const PressRelease = () => {
               <td className="radius4 presscell"></td>
 
               <td className="radius2 presscell">
-                <a
+                {/* <a
                   href="https://medium.com/the-capital/defi-yield-protocol-dyp-staking-and-governance-is-now-live-e18c0f14a442"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
                   <img src={require("./news/medium.png")} alt="" />
+                </a> */}
+                <a
+                  href="https://finance.yahoo.com/news/dypius-partners-conflux-network-unveils-150000764.html"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/yahoo.png")} alt="" />
                 </a>
               </td>
 
@@ -168,12 +196,19 @@ const PressRelease = () => {
               </td>
               <td className="presscell radius10"></td>
               <td className="presscell radius2">
-                <a
+                {/* <a
                   href="https://www.marketwatch.com/press-release/dyp-protocol-launches-on-avalanche-and-introduces-new-nft-competition-2021-07-19?tesla=y"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
                   <img src={require("./news/marketwatch.png")} alt="" />
+                </a> */}
+                <a
+                  href="https://www.benzinga.com/pressreleases/23/07/g33217661/dypius-partners-with-conflux-network-unveils-nft-marketplace-and-new-game-update"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/benzinga.png")} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
               <td className="radius4 presscell"></td>
@@ -188,12 +223,19 @@ const PressRelease = () => {
               </td>
               <td className="presscell radius1"></td>
               <td className="presscell radius7">
-                <a
+                {/* <a
                   href="https://www.cryptofolds.com/defi-yield-protocol-dyp-staking-and-governance-is-now-live"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
                   <img src={require("./news/cryptofold.png")} alt="" />
+                </a> */}
+                <a
+                  href="https://www.globenewswire.com/news-release/2023/07/13/2704540/0/en/Dypius-Partners-with-Conflux-Network-Unveils-NFT-Marketplace-and-New-Game-Update.html"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/globalNewsWire.jpg")} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
               <td className="presscell radius10">
@@ -207,7 +249,15 @@ const PressRelease = () => {
               </td>
               <td className="presscell radius1"></td>
               <td className="presscell radius8"></td>
-              <td className="presscell radius1"></td>
+              <td className="presscell radius4">
+              <a
+                  href="https://finance.yahoo.com/news/dypius-enables-secure-cross-chain-114700063.html"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/yahoo.png")} alt="" />
+                </a>
+              </td>
 
               <td className="presscell radius7">
                 <a
@@ -231,15 +281,30 @@ const PressRelease = () => {
               </td>
               <td className="presscell radius10"></td>
               <td className="presscell radius2">
-                <a
+                {/* <a
                   href="https://www.marketwatch.com/press-release/dyp-protocol-launches-on-avalanche-and-introduces-new-nft-competition-2021-07-19?tesla=y"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
                   <img src={require("./news/marketwatch.png")} alt="" />
+                </a> */}
+                <a
+                  href="https://markets.businessinsider.com/news/stocks/coingecko-and-dypius-partner-to-build-and-pioneer-innovation-on-the-world-of-dypians-1032652807"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/businessinsider.png")} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
-              <td className="radius4 presscell"></td>
+              <td className="radius4 presscell">
+              <a
+                  href="https://www.tradingview.com/news/reuters.com,2024-02-07:newsml_GNX58spfW:0-dypius-enables-secure-cross-chain-nft-transfers-for-caws-and-world-of-dypians-with-chainlink-ccip/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/tradingView.png")} style={{borderRadius: "50%"}} alt="" />
+                </a>
+              </td>
               <td className="presscell radius10">
                 <a
                   href="https://apnews.com/press-release/accesswire/business-prices-deflation-economy-54076ee83d21025c63d8347c8accc1e2"
@@ -251,12 +316,19 @@ const PressRelease = () => {
               </td>
               <td className="presscell radius1"></td>
               <td className="presscell radius7">
-                <a
+                {/* <a
                   href="https://www.cryptofolds.com/defi-yield-protocol-dyp-staking-and-governance-is-now-live"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
                   <img src={require("./news/cryptofold.png")} alt="" />
+                </a> */}
+                <a
+                  href="https://finance.yahoo.com/news/coingecko-dypius-partner-build-pioneer-123000370.html"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/yahoo.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius10">
@@ -319,12 +391,19 @@ const PressRelease = () => {
               <td className="presscell radius7"></td>
 
               <td className="presscell radius1">
-                <a
+                {/* <a
                   href="https://cryptopress.news/defi-yield-protocol-dyp-staking-and-governance-is-now-live/"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
                   <img src={require("./news/cryptopress.png")} alt="" />
+                </a> */}
+                <a
+                  href="https://www.binance.com/en/feed/post/1207307"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/binance.png")} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
               <td className="radius7 presscell"></td>
@@ -333,12 +412,19 @@ const PressRelease = () => {
                 <img src={require("./news/coinspeaker.png")} alt="" />
               </td>
               <td className="presscell radius1">
-                <a
+                {/* <a
                   href="https://www.cryptocompare.com/coins/guides/dypfinance-a-unique-yield-farming-platform/"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
                   <img src={require("./news/cryptocompare.png")} alt="" />
+                </a> */}
+                <a
+                  href="https://hackernoon.com/world-of-dypians-welcomes-coinmarketcap-to-its-dynamic-metaverse-now-available-on-epic-games-store"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/hackernoon.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius7">
@@ -391,12 +477,19 @@ const PressRelease = () => {
               <td className="presscell radius7"></td>
 
               <td className="presscell radius1">
-                <a
+                {/* <a
                   href="https://cryptopress.news/defi-yield-protocol-dyp-staking-and-governance-is-now-live/"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
                   <img src={require("./news/cryptopress.png")} alt="" />
+                </a> */}
+                <a
+                  href="https://coinmarketcap.com/community/articles/65858dc0b044ba691e692e54/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/coinmarketcap.png")} alt="" />
                 </a>
               </td>
               <td className="radius7 presscell"></td>
@@ -405,12 +498,19 @@ const PressRelease = () => {
                 <img src={require("./news/coinspeaker.png")} alt="" />
               </td>
               <td className="presscell radius1">
-                <a
+                {/* <a
                   href="https://www.cryptocompare.com/coins/guides/dypfinance-a-unique-yield-farming-platform/"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
                   <img src={require("./news/cryptocompare.png")} alt="" />
+                </a> */}
+                <a
+                  href="https://www.tradingview.com/news/reuters.com,2023-12-22:newsml_GNX2k4ltG:0-world-of-dypians-welcomes-coinmarketcap-to-its-dynamic-metaverse-now-available-on-epic-games-store/"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/tradingView.png")} alt="" />
                 </a>
               </td>
               <td className="presscell radius7">
@@ -432,7 +532,15 @@ const PressRelease = () => {
               <td className="presscell radius7">
                 <img src={require("./news/uptrennd.png")} alt="" />
               </td>
-              <td className="radius1 presscell"></td>
+              <td className="radius1 presscell">
+              <a
+                  href="https://www.binance.com/en-IN/feed/post/3805101087698"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/binance.png")} style={{borderRadius: "50%"}} alt="" />
+                </a>
+              </td>
 
               <td className="presscell radius6">
                 <a
@@ -446,12 +554,19 @@ const PressRelease = () => {
 
               <td className="presscell radius1"></td>
               <td className="presscell radius9">
-                <a
+                {/* <a
                   href="https://coindoo.com/dyp-maximizing-the-benefits-of-yield-farming-protocols/"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
                   <img src={require("./news/coindoo.png")} alt="" />
+                </a> */}
+                <a
+                  href="https://finance.yahoo.com/now/world-dypians-welcomes-coinmarketcap-dynamic-161500412.html"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/yahoo.png")} alt="" />
                 </a>
               </td>
 
@@ -480,7 +595,15 @@ const PressRelease = () => {
                 </a>
               </td>
               <td className="presscell radius5"></td>
-              <td className="presscell radius8"></td>
+              <td className="presscell radius8">
+              <a
+                  href="https://markets.businessinsider.com/news/stocks/dypius-enables-secure-cross-chain-nft-transfers-for-caws-and-world-of-dypians-with-chainlink-ccip-1033039993"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/businessinsider.png")} style={{borderRadius: "50%"}} alt="" />
+                </a>
+              </td>
               <td className="presscell radius1">
                 <img src={require("./news/coingape.png")} alt="" />
               </td>
@@ -503,12 +626,19 @@ const PressRelease = () => {
 
               <td className="presscell radius1"></td>
               <td className="presscell radius9">
-                <a
+                {/* <a
                   href="https://coindoo.com/dyp-maximizing-the-benefits-of-yield-farming-protocols/"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
                   <img src={require("./news/coindoo.png")} alt="" />
+                </a> */}
+                <a
+                  href="https://www.binance.com/en-IN/feed/post/1731781535186"
+                  target="_blank"
+                  rel="noreferrer nofollow"
+                >
+                  <img src={require("./news/binance.png")} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
 
