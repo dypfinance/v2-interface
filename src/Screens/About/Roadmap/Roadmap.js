@@ -338,6 +338,7 @@ const Roadmap = () => {
       title: "Cross-Chain Interoperability Protocol (CCIP) Integration",
       content:
         "Integrating Chainlink's CCIP solution into our primary NFT collections, enabling users to seamlessly bridge NFTs across diverse networks.",
+        completed: true,
     },
     {
       title: "Launch of DeFi Aggregator",
