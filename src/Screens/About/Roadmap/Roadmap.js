@@ -307,12 +307,12 @@ const Roadmap = () => {
         "Broadening the reach of our products to other chains, enhancing solutions, and increasing accessibility for users.",
       completed: true,
     },
-    {
-      title: "Cross-Chain Interoperability Protocol (CCIP) Integration",
-      content:
-        "Integrating Chainlink's CCIP solution into our primary NFT collections, enabling users to seamlessly bridge NFTs across multiple networks.",
-      completed: true,
-    },
+    // {
+    //   title: "Cross-Chain Interoperability Protocol (CCIP) Integration",
+    //   content:
+    //     "Integrating Chainlink's CCIP solution into our primary NFT collections, enabling users to seamlessly bridge NFTs across multiple networks.",
+    //   completed: true,
+    // },
     {
       title: "Launch Mobile App DEMO",
       content:
@@ -333,6 +333,164 @@ const Roadmap = () => {
     },
   ];
 
+  const quarterOne2024 = [
+    {
+      title: "Cross-Chain Interoperability Protocol (CCIP) Integration",
+      content:
+        "Integrating Chainlink's CCIP solution into our primary NFT collections, enabling users to seamlessly bridge NFTs across diverse networks.",
+        completed: true,
+    },
+    {
+      title: "Launch of DeFi Aggregator",
+      content:
+        "Introduce a decentralized finance aggregator to provide users with access to various DeFi products from various projects.",
+    },
+    {
+      title: "New Earn Pool",
+      content:
+        "Introduce new ways for users to earn rewards through different DeFi mechanisms.",
+    },
+    {
+      title: "Upgrading Benefits of Premium Subscribers",
+      content:
+        "Enhance the benefits for premium subscribers to provide more value and incentives for their subscription.",
+    },
+    {
+      title: "Launch Mobile App",
+      content:
+        "Release a mobile application for Dypius to provide users with a more convenient way to access the platform and its features.",
+    },
+    {
+      title: "New Chain Expansion",
+      content:
+        "Integrate additional blockchains into the game to broaden the reach and appeal.",
+    },
+  ];
+
+  const quarterTwo2024 = [
+    {
+      title: "CAWS Mobile Game",
+      content:
+        "Launch a mobile game featuring CAWS NFTs that provides a new gaming experience for players.",
+    },
+    {
+      title: "Marketplace Improvements",
+      content:
+        "Enhance the marketplace features to improve user experience and facilitate smoother transactions.",
+    },
+    {
+      title: "Expanding our Products to other Blockchains",
+      content:
+        "Extend Dypius products and services to other blockchains, increasing accessibility and user base.",
+    },
+    {
+      title: "UI/UX Improvement",
+      content:
+        "Improve the user interface and experience across all platforms and products for a more seamless and enjoyable user experience.",
+    },
+    {
+      title: "App Referral Program",
+      content:
+        "Introduce a referral program for the mobile app to incentivize users to invite others to join the platform.",
+    },
+    {
+      title: "CCIP USDC Integration",
+      content:
+        "Integrate USDC (USD Coin) into the CCIP for seamless cross-chain transactions and interactions.",
+    },
+    {
+      title: "Addition of Game Currency",
+      content:
+        "Introduce a new in-game currency to enhance the game's economy and provide more options for players.",
+    },
+    {
+      title: "In-game Shop",
+      content:
+        "Launch the first version of the in-game shop where players can buy items, loot, weapons, and equipment.",
+    },
+    {
+      title: "Omnichannel Login",
+      content:
+        "Implement a unified login system across all platforms (game, mobile app, and website) for a seamless user experience.",
+    },
+  ];
+
+  const quarterThree2024 = [
+    {
+      title: "New NFT Staking Pools",
+      content:
+        "Introduce new staking pools for NFTs, allowing users to earn rewards by staking their NFT assets.",
+    },
+    {
+      title: "WoD 0.3.0 Launch",
+      content:
+        "Release a major update for World of Dypians, bringing new features, content, and improvements to the game.",
+    },
+    {
+      title: "DYP Tools v3",
+      content:
+        "Launch a new and improved version of DYP Tools with enhanced features and functionalities.",
+    },
+    {
+      title: "Decentralized Launchpad Launch",
+      content:
+        "Introduce a decentralized launchpad for new projects, providing a platform for fair and transparent token launches.",
+    },
+    {
+      title: "Introduction of Character NFT Generation",
+      content:
+        "Generate the main character in the game as an NFT item, adding value and uniqueness to the player's experience.",
+    },
+    {
+      title: "Full Release of the Multiplayer PvE",
+      content:
+        "Launch the full version of the multiplayer player-versus-environment mode for all players to enjoy.",
+    },
+  ];
+
+  const quarterFour2024 = [
+    {
+      title: "Governance v2",
+      content:
+        "Launch new features for the governance system, enhancing the platform's decentralization and community involvement.",
+    },
+    {
+      title: "Full Release of the Multiplayer PvP",
+      content:
+        "Launch the full version of the multiplayer player-versus-player mode for competitive gameplay.",
+    },
+    {
+      title: "NFT Customization",
+      content:
+        "Enable players to customize their NFTs, such as weapons and equipment, by adding elements or items to them.",
+    },
+    {
+      title: "Mobile App Improvements",
+      content:
+        "Continue to improve the mobile app with new features, optimizations, and enhancements based on user feedback.",
+    },
+    {
+      title: "Risk Assessment Algorithms",
+      content:
+        "Integrate risk assessment tools that evaluate the safety, liquidity, and volatility of yield farming pools across chains.",
+    },
+    {
+      title: "Automated Yield Optimization",
+      content:
+        "Utilize smart contracts to automatically optimize users' asset yields across pools from one chain.",
+    },
+    {
+      title: "Portfolio Management Dashboard",
+      content:
+        "Provide users with a comprehensive dashboard displaying real-time information about their investments, current yields, asset distribution across blockchains, and the platform's overall performance in optimizing returns.",
+    },
+    {
+      title: "Cross-Chain Yield Optimization",
+      content:
+        "Maximize users' investment returns by automatically moving their assets across different blockchains to take advantage of the highest yielding opportunities.",
+    },
+  ];
+
   const [oldSlide, setOldSlide] = useState(0);
   const [activeSlide, setActiveSlide] = useState(6);
   const [activeSlide2, setActiveSlide2] = useState(
@@ -344,7 +502,8 @@ const Roadmap = () => {
     roadmap2020: false,
     roadmap2021: false,
     roadmap2022: false,
-    roadmap2023: true,
+    roadmap2023: false,
+    roadmap2024: true,
   });
 
   const settings = {
@@ -354,7 +513,7 @@ const Roadmap = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    initialSlide: window.innerWidth < 786 ? 10 : 12,
+    initialSlide: window.innerWidth < 786 ? 14 : 16,
 
     beforeChange: (current, next) => {
       setOldSlide(current);
@@ -413,6 +572,7 @@ const Roadmap = () => {
           roadmap2021: false,
           roadmap2022: false,
           roadmap2023: false,
+          roadmap2024: false,
         });
         setShowText(false);
         slider.current.innerSlider.slickGoTo(0);
@@ -425,6 +585,7 @@ const Roadmap = () => {
           roadmap2021: true,
           roadmap2022: false,
           roadmap2023: false,
+          roadmap2024: false,
         });
         setShowText(false);
 
@@ -437,6 +598,7 @@ const Roadmap = () => {
           roadmap2021: false,
           roadmap2022: true,
           roadmap2023: false,
+          roadmap2024: false,
         });
         setShowText(false);
 
@@ -448,10 +610,22 @@ const Roadmap = () => {
           roadmap2021: false,
           roadmap2022: false,
           roadmap2023: true,
+          roadmap2024: false,
         });
-        setShowText(true);
+        setShowText(false);
 
         slider.current.innerSlider.slickGoTo(12);
+      }
+      if (activeSlide2 === 12) {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: false,
+          roadmap2023: false,
+          roadmap2024: true,
+        });
+        setShowText(true);
+        slider.current.innerSlider.slickGoTo(16);
       }
     } else {
       slider.current.innerSlider.slickNext();
@@ -461,6 +635,7 @@ const Roadmap = () => {
           roadmap2021: false,
           roadmap2022: false,
           roadmap2023: false,
+          roadmap2024: false,
         });
       } else if (activeSlide2 < 5) {
         setActiveYear({
@@ -468,6 +643,7 @@ const Roadmap = () => {
           roadmap2021: true,
           roadmap2022: false,
           roadmap2023: false,
+          roadmap2024: false,
         });
       } else if (activeSlide2 < 9) {
         setActiveYear({
@@ -475,13 +651,23 @@ const Roadmap = () => {
           roadmap2021: false,
           roadmap2022: true,
           roadmap2023: false,
+          roadmap2024: false,
+        });
+      } else if (activeSlide2 < 13) {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: false,
+          roadmap2023: true,
+          roadmap2024: false,
         });
       } else {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: false,
           roadmap2022: false,
-          roadmap2023: true,
+          roadmap2023: false,
+          roadmap2024: true,
         });
       }
     }
@@ -497,6 +683,7 @@ const Roadmap = () => {
             roadmap2021: true,
             roadmap2022: false,
             roadmap2023: false,
+            roadmap2024: false,
           });
         }
       }
@@ -506,6 +693,7 @@ const Roadmap = () => {
           roadmap2021: false,
           roadmap2022: true,
           roadmap2023: false,
+          roadmap2024: false,
         });
         setShowText(false);
 
@@ -517,6 +705,7 @@ const Roadmap = () => {
           roadmap2021: true,
           roadmap2022: false,
           roadmap2023: false,
+          roadmap2024: false,
         });
         setShowText(false);
 
@@ -529,6 +718,7 @@ const Roadmap = () => {
           roadmap2021: false,
           roadmap2022: false,
           roadmap2023: false,
+          roadmap2024: false,
         });
         setShowText(false);
 
@@ -539,7 +729,19 @@ const Roadmap = () => {
           roadmap2020: false,
           roadmap2021: false,
           roadmap2022: false,
+          roadmap2023: false,
+          roadmap2024: true,
+        });
+        setShowText(false);
+        slider.current.innerSlider.slickGoTo(16);
+      }
+      if (activeSlide2 === 16) {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: false,
           roadmap2023: true,
+          roadmap2024: false,
         });
         setShowText(true);
         slider.current.innerSlider.slickGoTo(12);
@@ -552,6 +754,7 @@ const Roadmap = () => {
           roadmap2021: false,
           roadmap2022: false,
           roadmap2023: false,
+          roadmap2024: false,
         });
       } else if (activeSlide2 < 7) {
         setActiveYear({
@@ -559,6 +762,7 @@ const Roadmap = () => {
           roadmap2021: true,
           roadmap2022: false,
           roadmap2023: false,
+          roadmap2024: false,
         });
       } else if (activeSlide2 < 11) {
         setActiveYear({
@@ -566,13 +770,23 @@ const Roadmap = () => {
           roadmap2021: false,
           roadmap2022: true,
           roadmap2023: false,
+          roadmap2024: false,
+        });
+      } else if (activeSlide2 < 15) {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: false,
+          roadmap2023: true,
+          roadmap2024: false,
         });
       } else {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: false,
           roadmap2022: false,
-          roadmap2023: true,
+          roadmap2023: false,
+          roadmap2024: true,
         });
       }
     }
@@ -627,19 +841,35 @@ const Roadmap = () => {
       roadmap2021: false,
       roadmap2022: false,
       roadmap2023: true,
+      roadmap2024: false
+    });
+    setShowText(false);
+  };
+  const goto2024 = () => {
+    if (windowSize.width < 786) {
+      slider.current.innerSlider.slickGoTo(14);
+    } else {
+      slider.current.innerSlider.slickGoTo(16);
+    }
+    setActiveYear({
+      roadmap2020: false,
+      roadmap2021: false,
+      roadmap2022: false,
+      roadmap2023: false,
+      roadmap2024: true,
     });
     setShowText(true);
   };
 
   useEffect(() => {
     if (windowSize.width < 786) {
-      goto2023();
+      goto2024();
     }
   }, [windowSize.width]);
 
   useEffect(() => {
     if (windowSize.width < 786) {
-      if (activeSlide2 < 10) {
+      if (activeSlide2 < 14) {
         setShowText(false);
       } else {
         setShowText(true);
@@ -708,6 +938,12 @@ const Roadmap = () => {
                 onClick={goto2023}
               >
                 2023
+              </p>
+              <p
+                className={`${activeYear.roadmap2024 && "selected-year"}`}
+                onClick={goto2024}
+              >
+                2024
               </p>
             </div>
             {/* <div className="d-flex flex-column gap-1">
@@ -973,20 +1209,20 @@ const Roadmap = () => {
               </div>
             </div>
             <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
               id="roadmapAccordion"
             >
               {quarterOne2023.map((item, index) => (
                 <div className="accordion-item">
                   <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapseOne${index}`}
                     aria-expanded="false"
                     aroa-aria-controls={`collapseOne${index}`}
                   >
                     {item?.completed === true ? (
-                      <img src={completedOrangeIcon} alt="" />
+                      <img src={completedIcon} alt="" />
                     ) : (
                       <img src={uncompletedIcon} alt="" />
                     )}
@@ -999,7 +1235,7 @@ const Roadmap = () => {
                     data-bs-parent="#roadmapAccordion"
                   >
                     <ul
-                      className="mb-0 py-2 ps-2"
+                      className="mb-0 py-2 ps-2 roadmap-list"
                       style={{ listStyle: "none" }}
                     >
                       <li className="accordion-list-item">{item.content}</li>
@@ -1022,20 +1258,20 @@ const Roadmap = () => {
               </div>
             </div>
             <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
               id="roadmapAccordion"
             >
               {quarterTwo2023.map((item, index) => (
                 <div className="accordion-item">
                   <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapseTwo${index}`}
                     aria-expanded="false"
                     aroa-aria-controls={`collapseTwo${index}`}
                   >
                     {item?.completed === true ? (
-                      <img src={completedOrangeIcon} alt="" />
+                      <img src={completedIcon} alt="" />
                     ) : (
                       <img src={uncompletedIcon} alt="" />
                     )}
@@ -1048,7 +1284,7 @@ const Roadmap = () => {
                     data-bs-parent="#roadmapAccordion"
                   >
                     <ul
-                      className="mb-0 py-2 ps-2"
+                      className="mb-0 py-2 ps-2 roadmap-list"
                       style={{ listStyle: "none" }}
                     >
                       <li className="accordion-list-item">{item.content}</li>
@@ -1071,20 +1307,20 @@ const Roadmap = () => {
               </div>
             </div>
             <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
               id="roadmapAccordion"
             >
               {quarterThree2023.map((item, index) => (
                 <div className="accordion-item">
                   <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapseThree${index}`}
                     aria-expanded="false"
                     aroa-aria-controls={`collapseThree${index}`}
                   >
                     {item?.completed === true ? (
-                      <img src={completedOrangeIcon} alt="" />
+                      <img src={completedIcon} alt="" />
                     ) : (
                       <img src={uncompletedIcon} alt="" />
                     )}
@@ -1097,7 +1333,7 @@ const Roadmap = () => {
                     data-bs-parent="#roadmapAccordion"
                   >
                     <ul
-                      className="mb-0 py-2 ps-2"
+                      className="mb-0 py-2 ps-2 roadmap-list"
                       style={{ listStyle: "none" }}
                     >
                       <li className="accordion-list-item">{item.content}</li>
@@ -1121,20 +1357,20 @@ const Roadmap = () => {
               </div>
             </div>
             <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
               id="roadmapAccordion"
             >
               {quarterFour2023.map((item, index) => (
                 <div className="accordion-item">
                   <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapseFour${index}`}
                     aria-expanded="false"
                     aroa-aria-controls={`collapseFour${index}`}
                   >
                     {item?.completed === true ? (
-                      <img src={completedOrangeIcon} alt="" />
+                      <img src={completedIcon} alt="" />
                     ) : (
                       <img src={uncompletedIcon} alt="" />
                     )}
@@ -1144,6 +1380,202 @@ const Roadmap = () => {
                     id={`collapseFour${index}`}
                     className="accordion-collapse collapse"
                     aria-aria-labelledby={`headingFour${index}`}
+                    data-bs-parent="#roadmapAccordion"
+                  >
+                    <ul
+                      className="mb-0 py-2 ps-2 roadmap-list"
+                      style={{ listStyle: "none" }}
+                    >
+                      <li className="accordion-list-item">{item.content}</li>
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
+            <div className="date-card selected d-flex flex-column align-items-center">
+              <img
+                src={selectedRoadmap}
+                style={{ visibility: "hidden" }}
+                alt=""
+              />
+              <h2 style={{ color: "#EFF0F6" }}>2024 Q1</h2>
+              <div className="outer-circle d-flex justify-content-center align-items-center">
+                <div className="inner-circle"></div>
+              </div>
+            </div>
+            <div
+              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              id="roadmapAccordion"
+            >
+              {quarterOne2024.map((item, index) => (
+                <div className="accordion-item">
+                  <div
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseQuarterOne2024${index}`}
+                    aria-expanded="false"
+                    aroa-aria-controls={`collapseQuarterOne2024${index}`}
+                  >
+                    {item?.completed === true ? (
+                      <img src={completedOrangeIcon} alt="" />
+                    ) : (
+                      <img src={uncompletedIcon} alt="" />
+                    )}
+                    <p>{item.title}</p>
+                  </div>
+                  <div
+                    id={`collapseQuarterOne2024${index}`}
+                    className="accordion-collapse collapse"
+                    aria-aria-labelledby={`headingQuarterOne2024${index}`}
+                    data-bs-parent="#roadmapAccordion"
+                  >
+                    <ul
+                      className="mb-0 py-2 ps-2"
+                      style={{ listStyle: "none" }}
+                    >
+                      <li className="accordion-list-item">{item.content}</li>
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
+            <div className="date-card  d-flex flex-column align-items-center">
+              <img
+                src={selectedRoadmap}
+                style={{ visibility: "hidden" }}
+                alt=""
+              />
+              <h2 style={{ color: "#EFF0F6" }}>2024 Q2</h2>
+              <div className="outer-circle d-flex justify-content-center align-items-center">
+                <div className="inner-circle"></div>
+              </div>
+            </div>
+            <div
+              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              id="roadmapAccordion"
+            >
+              {quarterTwo2024.map((item, index) => (
+                <div className="accordion-item">
+                  <div
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseQuarterTwo2024${index}`}
+                    aria-expanded="false"
+                    aroa-aria-controls={`collapseQuarterTwo2024${index}`}
+                  >
+                    {item?.completed === true ? (
+                      <img src={completedOrangeIcon} alt="" />
+                    ) : (
+                      <img src={uncompletedIcon} alt="" />
+                    )}
+                    <p>{item.title}</p>
+                  </div>
+                  <div
+                    id={`collapseQuarterTwo2024${index}`}
+                    className="accordion-collapse collapse"
+                    aria-aria-labelledby={`headingQuarterTwo2024${index}`}
+                    data-bs-parent="#roadmapAccordion"
+                  >
+                    <ul
+                      className="mb-0 py-2 ps-2"
+                      style={{ listStyle: "none" }}
+                    >
+                      <li className="accordion-list-item">{item.content}</li>
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
+            <div className="date-card  d-flex flex-column align-items-center">
+              <img
+                src={selectedRoadmap}
+                style={{ visibility: "hidden" }}
+                alt=""
+              />
+              <h2 style={{ color: "#EFF0F6" }}>2024 Q3</h2>
+              <div className="outer-circle d-flex justify-content-center align-items-center">
+                <div className="inner-circle"></div>
+              </div>
+            </div>
+            <div
+              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              id="roadmapAccordion"
+            >
+              {quarterThree2024.map((item, index) => (
+                <div className="accordion-item">
+                  <div
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseQuarterThree2024${index}`}
+                    aria-expanded="false"
+                    aroa-aria-controls={`collapseQuarterThree2024${index}`}
+                  >
+                    {item?.completed === true ? (
+                      <img src={completedOrangeIcon} alt="" />
+                    ) : (
+                      <img src={uncompletedIcon} alt="" />
+                    )}
+                    <p>{item.title}</p>
+                  </div>
+                  <div
+                    id={`collapseQuarterThree2024${index}`}
+                    className="accordion-collapse collapse"
+                    aria-aria-labelledby={`headingQuarterThree2024${index}`}
+                    data-bs-parent="#roadmapAccordion"
+                  >
+                    <ul
+                      className="mb-0 py-2 ps-2"
+                      style={{ listStyle: "none" }}
+                    >
+                      <li className="accordion-list-item">{item.content}</li>
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
+            <div className="date-card  d-flex flex-column align-items-center">
+              <img
+                src={selectedRoadmap}
+                style={{ visibility: "hidden" }}
+                alt=""
+              />
+              <h2 style={{ color: "#EFF0F6" }}>2024 Q4</h2>
+              <div className="outer-circle d-flex justify-content-center align-items-center">
+                <div className="inner-circle"></div>
+              </div>
+            </div>
+            <div
+              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              id="roadmapAccordion"
+            >
+              {quarterFour2024.map((item, index) => (
+                <div className="accordion-item">
+                  <div
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseQuarterFour2024${index}`}
+                    aria-expanded="false"
+                    aroa-aria-controls={`collapseQuarterFour2024${index}`}
+                  >
+                    {item?.completed === true ? (
+                      <img src={completedOrangeIcon} alt="" />
+                    ) : (
+                      <img src={uncompletedIcon} alt="" />
+                    )}
+                    <p>{item.title}</p>
+                  </div>
+                  <div
+                    id={`collapseQuarterFour2024${index}`}
+                    className="accordion-collapse collapse"
+                    aria-aria-labelledby={`headingQuarterFour2024${index}`}
                     data-bs-parent="#roadmapAccordion"
                   >
                     <ul
