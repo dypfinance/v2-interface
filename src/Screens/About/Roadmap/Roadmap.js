@@ -307,12 +307,12 @@ const Roadmap = () => {
         "Broadening the reach of our products to other chains, enhancing solutions, and increasing accessibility for users.",
       completed: true,
     },
-    {
-      title: "Cross-Chain Interoperability Protocol (CCIP) Integration",
-      content:
-        "Integrating Chainlink's CCIP solution into our primary NFT collections, enabling users to seamlessly bridge NFTs across multiple networks.",
-      completed: true,
-    },
+    // {
+    //   title: "Cross-Chain Interoperability Protocol (CCIP) Integration",
+    //   content:
+    //     "Integrating Chainlink's CCIP solution into our primary NFT collections, enabling users to seamlessly bridge NFTs across multiple networks.",
+    //   completed: true,
+    // },
     {
       title: "Launch Mobile App DEMO",
       content:
@@ -1394,7 +1394,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card  d-flex flex-column align-items-center">
+            <div className="date-card selected d-flex flex-column align-items-center">
               <img
                 src={selectedRoadmap}
                 style={{ visibility: "hidden" }}
