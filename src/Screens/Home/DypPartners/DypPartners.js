@@ -169,6 +169,11 @@ const DypPartners = () => {
       text: "HEXN",
       href: "https://hexn.io/",
     },
+    {
+      image: "skaleIcon.svg",
+      text: "Skale Network",
+      href: "https://skale.space/",
+    },
   ];
 
   const partnerSize = () => {
