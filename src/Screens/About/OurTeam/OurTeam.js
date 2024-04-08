@@ -19,9 +19,6 @@ import soni from "../../../assets/team/soni.jpeg";
 import samuel from "../../../assets/team/samuel.jpeg";
 import arben from "../../../assets/team/arben.jpg";
 
-
-
-
 import useWindowSize from "../../../hooks/useWindowSize";
 import { useState } from "react";
 
@@ -50,7 +47,7 @@ const OurTeam = () => {
     {
       id: "teki",
       name: "Teki Kolaneci",
-      position: "Global Strategy Director",
+      position: "Chief Operating Officer",
       photo: teki,
       link: "https://www.linkedin.com/in/teki-kolaneci",
       content:
@@ -65,15 +62,6 @@ const OurTeam = () => {
       content: `Experienced, ambitious and enthusiastic project manager with excellent leadership skills and a performance driven individual who can create immeasurable success on a team and turn complex problems into solutions. Over the last few years, I have been defining vision and launching solutions in telecommunication industry related to fixed and cloud connectivity, IoT, cyber security and so on. It is crucial to plan and design the vision today in order to create a future tomorrow. Key thing in great management is to up to date with new developments, understand and represent user needs, monitor the market and develop competitive analysis in order to gain momentum. I am a person who loves arts, sports and nature and on my free time I like to research new information, travel and making new friends.
   
                 “When the wind blows, some people build walls, others build windmills” - Gazmend.`,
-    },
-   {
-      id: "fatjon",
-      name: "Fatjon Shaba",
-      position: "Lead UI/UX Designer",
-      photo: fatjon,
-      link: "https://www.linkedin.com/in/fatjon-shaba-9a751313a",
-      content:
-        "Over the last few years, I've worked with a wide range of products to create an insight led, human-centred digital experiences. My approach to UI/UX combines design thinking, user research and with a focus on the humans who use the designs I create. In my free time, I enjoy exploring design by seeing what can be done next in the future, trying to push my knowledge and abilities even further. I enjoy playing with designs and exploring new pathways I haven’t tried before… but most importantly I love what I do.",
     },
     {
       id: "toni",
@@ -130,8 +118,7 @@ const OurTeam = () => {
       position: "Senior 3D/VFX Artist",
       photo: arben,
       link: "https://www.linkedin.com/in/arbenmeta/",
-      content:
-        `I am a 3D/VFX Artist specialized in 3D Modeling Digital Sculpting and PBR Texturing. I am also involved in Rigging and Dynamic Simulations.
+      content: `I am a 3D/VFX Artist specialized in 3D Modeling Digital Sculpting and PBR Texturing. I am also involved in Rigging and Dynamic Simulations.
         My Pipeline is based on Procedural Creation
         Techniques that applies on various fields like:
         Games, Movies, VR and Real-Time Visualizations.
@@ -169,7 +156,8 @@ const OurTeam = () => {
       link: "https://www.linkedin.com/in/gerlie-cabalse-yael07/",
       content:
         "I discovered Cryptocurrency back in 2017 when bounty campaign from Bitcointalk.org is the crypto marketing trend. I saw that there is a future on digital assets and I believe that it is the future so I decided to learn more and did some trading. I started to work as bounty campaign manager and community manager for several projects since 2019. I offered a bounty campaign to Sir Mihai for DeFi Yield Protocol during the ICO and managed it then He assigned me as a telegram and discord moderator after the campaign ended. My aim as a moderator is to assist the community with every query they bring and ensure to convey the right answer. I believe that a better communication is crucial for building a solid community. I am grateful to be a part and looking forward for DeFi Yield Protocol to achieve a successfully complete DeFi ecosystem.",
-    },    {
+    },
+    {
       id: "bogdan",
       name: "Constantin Bogdan",
       position: "Marketing Manager",

@@ -171,7 +171,7 @@ const DypPartners = () => {
     },
     {
       image: "skaleIcon.svg",
-      text: "Skale Network",
+      text: "SKALE",
       href: "https://skale.space/",
     },
   ];
