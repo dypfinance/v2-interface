@@ -338,32 +338,38 @@ const Roadmap = () => {
       title: "Cross-Chain Interoperability Protocol (CCIP) Integration",
       content:
         "Integrating Chainlink's CCIP solution into our primary NFT collections, enabling users to seamlessly bridge NFTs across diverse networks.",
-        completed: true,
+      completed: true,
     },
     {
       title: "Launch of DeFi Aggregator",
       content:
         "Introduce a decentralized finance aggregator to provide users with access to various DeFi products from various projects.",
+      completed: true,
     },
     {
       title: "New Earn Pool",
       content:
         "Introduce new ways for users to earn rewards through different DeFi mechanisms.",
+      completed: true,
     },
     {
       title: "Upgrading Benefits of Premium Subscribers",
       content:
         "Enhance the benefits for premium subscribers to provide more value and incentives for their subscription.",
+      completed: true,
     },
-    {
-      title: "Launch Mobile App",
-      content:
-        "Release a mobile application for Dypius to provide users with a more convenient way to access the platform and its features.",
-    },
+
     {
       title: "New Chain Expansion",
       content:
         "Integrate additional blockchains into the game to broaden the reach and appeal.",
+      completed: true,
+    },
+
+    {
+      title: "Launch Mobile App",
+      content:
+        "Release a mobile application for Dypius to provide users with a more convenient way to access the platform and its features.",
     },
   ];
 
@@ -841,7 +847,7 @@ const Roadmap = () => {
       roadmap2021: false,
       roadmap2022: false,
       roadmap2023: true,
-      roadmap2024: false
+      roadmap2024: false,
     });
     setShowText(false);
   };
