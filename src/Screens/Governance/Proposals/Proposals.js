@@ -26,7 +26,7 @@ const Proposals = () => {
 
   const fetchActiveProposals = async () => {
     await axios
-      .get("https://api.dyp.finance/api/get_proposals_info")
+      .get("https://api.dyp.finance/api/get_proposals_info_new")
       .then((res) => {
         if (res.data) {
           console.log(res.data);
