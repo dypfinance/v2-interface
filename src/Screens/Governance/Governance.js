@@ -24,9 +24,9 @@ const Governance = () => {
       delay: 250
     },
     {
-      title: "Create proposal",
+      title: "Create Proposal",
       description:
-        "The proposal can be related to disbursing/burning tokens, or other suggestions.",
+        "Propose new pools, allocate DYP for grants, partnerships, initiatives, and more.",
       number: "2",
       step: 'two',
       icon: 'createProposal',
