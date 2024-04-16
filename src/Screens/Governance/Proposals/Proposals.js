@@ -25,14 +25,32 @@ const Proposals = () => {
   };
 
   const fetchActiveProposals = async () => {
-    await axios
+  const oldGovs =   await axios
+      .get("https://api.dyp.finance/api/get_proposals_info")
+      
+      .catch((err) => {
+        console.error(err);
+      });
+
+
+      const newGovs =   await axios
       .get("https://api.dyp.finance/api/get_proposals_info_new")
-      .then((res) => {
-        if (res.data) {
-          console.log(res.data);
-          const ethProposals = res.data.ProposalsInfoETH;
-          const bnbProposals = res.data.ProposalsInfoBSC;
-          const avaxProposals = res.data.ProposalsInfoAVAX;
+      
+      .catch((err) => {
+        console.error(err);
+      });
+
+      if(oldGovs && oldGovs.status === 200 && newGovs && newGovs.status === 200) {
+        
+        
+          const ethProposals = oldGovs.data.ProposalsInfoETH;
+          const bnbProposals = oldGovs.data.ProposalsInfoBSC;
+          const avaxProposals = oldGovs.data.ProposalsInfoAVAX;
+
+            
+          const ethProposalsV2 = newGovs.data.ProposalsInfoETH;
+          const bnbProposalsV2 = newGovs.data.ProposalsInfoBSC;
+          const avaxProposalsV2 = newGovs.data.ProposalsInfoAVAX;
 
           const ethProposals_active = ethProposals.filter((item) => {
             return item.status === "Active";
@@ -44,17 +62,29 @@ const Proposals = () => {
           const avaxProposals_active = avaxProposals.filter((item) => {
             return item.status === "Active";
           });
+
+          const ethProposals_activeV2 = ethProposalsV2.filter((item) => {
+            return item.status === "Active";
+          });
+
+          const bnbProposals_activeV2 = bnbProposalsV2.filter((item) => {
+            return item.status === "Active";
+          });
+          const avaxProposals_activeV2 = avaxProposalsV2.filter((item) => {
+            return item.status === "Active";
+          });
+
           const allProposals = [
             ...ethProposals_active,
+            ...ethProposals_activeV2,
             ...bnbProposals_active,
+            ...bnbProposals_activeV2,
             ...avaxProposals_active,
+            ...avaxProposals_activeV2
           ];
           setactiveProposals(allProposals);
-        }
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+        
+      }
   };
 
   useEffect(() => {
