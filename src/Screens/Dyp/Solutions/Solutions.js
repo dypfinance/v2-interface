@@ -102,7 +102,7 @@ const Solutions = () => {
       title: "OpenFlux",
       image: "openflux",
       link: 'https://www.openflux.com/',
-      arrow: false
+      arrow: true
     },
   ];
 
