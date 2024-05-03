@@ -99,9 +99,9 @@ const Solutions = () => {
       arrow: true
     },
     {
-      title: "Referral",
-      image: "referral",
-      link: '#',
+      title: "OpenFlux",
+      image: "openflux",
+      link: 'https://www.openflux.com/',
       arrow: false
     },
   ];
