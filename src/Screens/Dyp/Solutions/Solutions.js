@@ -99,10 +99,10 @@ const Solutions = () => {
       arrow: true
     },
     {
-      title: "Referral",
-      image: "referral",
-      link: '#',
-      arrow: false
+      title: "OpenFlux",
+      image: "openflux",
+      link: 'https://www.openflux.com/',
+      arrow: true
     },
   ];
 

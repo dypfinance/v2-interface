@@ -17,7 +17,7 @@ const Governance = () => {
     {
       title: "Connect wallet",
       description:
-        "Dypius Governance runs on Ethereum, BNB Chain, and Avalanche. Connect your wallet to get started.",
+        "Dypius Governance is available on Ethereum, BNB Chain and Avalanche. Connect your wallet to get started.",
       number: "1",
       step: 'one',
       icon: 'connectWallet',
@@ -36,7 +36,7 @@ const Governance = () => {
     {
       title: "Submit",
       description:
-        "Submitting a proposal requires a minimum of 5000 DYP Governance token balance.",
+        "Submitting a Governance proposal requires a minimum of 250,000 DYP token balance.",
       number: "3",
       step: 'three',
       icon: 'submitProposal',
