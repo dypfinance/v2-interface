@@ -174,6 +174,21 @@ const DypPartners = () => {
       text: "SKALE",
       href: "https://skale.space/",
     },
+    {
+      image: "core.svg",
+      text: "CORE DAO",
+      href: "https://coredao.org/",
+    },
+    {
+      image: "multiversx.svg",
+      text: "MultiversX",
+      href: "https://multiversx.com/",
+    },
+    {
+      image: "viction.svg",
+      text: "Viction",
+      href: "https://www.viction.xyz/",
+    },
   ];
 
   const partnerSize = () => {
