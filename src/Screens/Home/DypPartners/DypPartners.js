@@ -189,6 +189,11 @@ const DypPartners = () => {
       text: "Viction",
       href: "https://www.viction.xyz/",
     },
+    {
+      image: "midle.svg",
+      text: "Midle",
+      href: "https://midle.io/",
+    },
   ];
 
   const partnerSize = () => {
