@@ -193,6 +193,10 @@ const DypPartners = () => {
       image: "midle.svg",
       text: "Midle",
       href: "https://midle.io/",
+    },  {
+      image: "seiLogo.svg",
+      text: "SEI",
+      href: "https://www.sei.io/",
     },
   ];
 
