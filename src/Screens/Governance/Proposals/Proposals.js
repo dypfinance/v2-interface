@@ -25,66 +25,36 @@ const Proposals = () => {
   };
 
   const fetchActiveProposals = async () => {
-  const oldGovs =   await axios
+    const oldGovs = await axios
       .get("https://api.dyp.finance/api/get_proposals_info")
-      
+
       .catch((err) => {
         console.error(err);
       });
 
+    if (oldGovs && oldGovs.status === 200) {
+      const ethProposals = oldGovs.data.ProposalsInfoETH;
+      const bnbProposals = oldGovs.data.ProposalsInfoBSC;
+      const avaxProposals = oldGovs.data.ProposalsInfoAVAX;
 
-      const newGovs =   await axios
-      .get("https://api.dyp.finance/api/get_proposals_info_new")
-      
-      .catch((err) => {
-        console.error(err);
+      const ethProposals_active = ethProposals.filter((item) => {
+        return item.status === "Active";
       });
 
-      if(oldGovs && oldGovs.status === 200 && newGovs && newGovs.status === 200) {
-        
-        
-          const ethProposals = oldGovs.data.ProposalsInfoETH;
-          const bnbProposals = oldGovs.data.ProposalsInfoBSC;
-          const avaxProposals = oldGovs.data.ProposalsInfoAVAX;
+      const bnbProposals_active = bnbProposals.filter((item) => {
+        return item.status === "Active";
+      });
+      const avaxProposals_active = avaxProposals.filter((item) => {
+        return item.status === "Active";
+      });
 
-            
-          const ethProposalsV2 = newGovs.data.ProposalsInfoETH;
-          const bnbProposalsV2 = newGovs.data.ProposalsInfoBSC;
-          const avaxProposalsV2 = newGovs.data.ProposalsInfoAVAX;
-
-          const ethProposals_active = ethProposals.filter((item) => {
-            return item.status === "Active";
-          });
-
-          const bnbProposals_active = bnbProposals.filter((item) => {
-            return item.status === "Active";
-          });
-          const avaxProposals_active = avaxProposals.filter((item) => {
-            return item.status === "Active";
-          });
-
-          const ethProposals_activeV2 = ethProposalsV2.filter((item) => {
-            return item.status === "Active";
-          });
-
-          const bnbProposals_activeV2 = bnbProposalsV2.filter((item) => {
-            return item.status === "Active";
-          });
-          const avaxProposals_activeV2 = avaxProposalsV2.filter((item) => {
-            return item.status === "Active";
-          });
-
-          const allProposals = [
-            ...ethProposals_active,
-            ...ethProposals_activeV2,
-            ...bnbProposals_active,
-            ...bnbProposals_activeV2,
-            ...avaxProposals_active,
-            ...avaxProposals_activeV2
-          ];
-          setactiveProposals(allProposals);
-        
-      }
+      const allProposals = [
+        ...ethProposals_active,
+        ...bnbProposals_active,
+        ...avaxProposals_active,
+      ];
+      setactiveProposals(allProposals);
+    }
   };
 
   useEffect(() => {
@@ -243,17 +213,46 @@ const Proposals = () => {
               <div className="recents-container w-100">
                 <Slider {...settings}>
                   <div className="d-flex flex-column gap-3 w-100">
-                    {activeProposals.slice(0, 3).map((item, index) => (
-                      <div key={index}>
-                        <ProposalCard
-                          title={item.title}
-                          key={index}
-                          type={item.type}
-                          date={item.date}
-                          icon={proposalICons[index].icon}
-                        />
-                      </div>
-                    ))}
+                    {activeProposals && activeProposals.length >= 3 ? (
+                      activeProposals.slice(0, 3).map((item, index) => (
+                        <div key={index}>
+                          <ProposalCard
+                            title={item.title}
+                            key={index}
+                            type={item.type}
+                            date={item.date}
+                            icon={proposalICons[index].icon}
+                          />
+                        </div>
+                      ))
+                    ) : (
+                      <>
+                        {activeProposals.map((item, index) => (
+                          <div key={index}>
+                            <ProposalCard
+                              title={item.title}
+                              key={index}
+                              type={item.type}
+                              date={item.date}
+                              icon={proposalICons[index].icon}
+                            />
+                          </div>
+                        ))}
+                        {recentProposalGroups
+                          .slice(0, 3 - activeProposals.length)
+                          .map((proposal, index) => (
+                            <div key={index}>
+                              {proposal.content.slice(0, 2 - activeProposals.length).map((item, index) => (
+                                <EmptyProposalCard
+                                  title={item.title}
+                                  icon={item.icon}
+                                  key={index}
+                                />
+                              ))}
+                            </div>
+                          ))}
+                      </>
+                    )}
                   </div>
                 </Slider>
               </div>
