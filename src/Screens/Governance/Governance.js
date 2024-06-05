@@ -24,7 +24,7 @@ const Governance = () => {
       delay: 250
     },
     {
-      title: "Create proposal",
+      title: "Create Proposal",
       description:
         "Propose new pools, allocate DYP for grants, partnerships, initiatives, and more.",
       number: "2",

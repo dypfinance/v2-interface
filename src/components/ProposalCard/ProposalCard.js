@@ -22,9 +22,9 @@ const ProposalCard = ({ title, type, date, icon }) => {
               <p className="expiry-text text-secondary mb-0">Expires in</p>
               <p className="expiry-date mb-0">
                 {moment
-                  .duration(1697551549 * 1e3 + 259200 * 1e3 - Date.now())
+                  .duration(1717847824 * 1e3 - Date.now())
                   .humanize(true).slice(3,moment
-                    .duration(1697551549 * 1e3 + 259200 * 1e3 - Date.now())
+                    .duration(1717847824 * 1e3  - Date.now())
                     .humanize(true).length)}
               </p>
             </div>
