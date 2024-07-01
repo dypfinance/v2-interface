@@ -370,6 +370,8 @@ const Roadmap = () => {
       title: "Launch Mobile App",
       content:
         "Release a mobile application for Dypius to provide users with a more convenient way to access the platform and its features.",
+      completed: true,
+
     },
   ];
 

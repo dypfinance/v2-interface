@@ -24,7 +24,12 @@
     z-index: -1;
 }
 
+.mobile-popup-wrapper {
+    background:  linear-gradient(0deg, #eff0f6 0%, rgba(239, 240, 246, 0) 73.43%);
+    border-radius: 10px;
+}
 
+ 
 .solutions-card-container{
     grid-template-columns: auto auto auto auto;
     gap: 40px;
