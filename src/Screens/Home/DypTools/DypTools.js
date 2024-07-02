@@ -10,7 +10,7 @@ import useWindowSize from "../../../hooks/useWindowSize";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const DypTools = () => {
+const DypTools = ({onDownloadClick}) => {
   const windowSize = useWindowSize();
 
   useEffect(() => {
@@ -54,17 +54,15 @@ const DypTools = () => {
             >
               Go to DYP Tools <img src={filledArrow} alt="" className="ml-2" />
             </a>
-            <a
-              href={"https://app.dypius.com/"}
-              target={"_blank"}
-              rel="noreferrer"
+            <button
+            onClick={onDownloadClick}
               className="btn filled-btn w-100 d-flex align-items-center justify-content-center m-md-auto m-sm-auto m-lg-0"
               data-aos="fade-up"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
                Download Mobile App 
-            </a></div>
+            </button></div>
           </div>
         </div>
         <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center position-relative">
