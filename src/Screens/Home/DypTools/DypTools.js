@@ -10,7 +10,7 @@ import useWindowSize from "../../../hooks/useWindowSize";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const DypTools = () => {
+const DypTools = ({onDownloadClick}) => {
   const windowSize = useWindowSize();
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const DypTools = () => {
     ">
       <div className="row dyp-tools">
         <div className={`col-12 col-lg-5 `}>
-          <div className="gap-5 d-grid align-items-start justify-content-center pl-5 pt-5 pb-5 p-md-5 leftcol">
+          <div className="gap-5 d-grid align-items-start justify-content-center pl-5 pt-5 pb-5 p-md-4 leftcol">
             <div className="gap-3 d-grid m-md-auto m-sm-auto m-lg-0">
               <Title
                 top="DYP Tools"
@@ -42,18 +42,27 @@ const DypTools = () => {
                 image={"token.svg"}
               />
             </div>
+            <div className="d-flex flex-lg-row flex-column gap-2 align-items-center">
             <a
               href={"https://app.dypius.com/"}
               target={"_blank"}
               rel="noreferrer"
-              className="btn d-flex align-items-center justify-content-center outline-btn m-md-auto m-sm-auto m-lg-0"
+              className="btn d-flex w-100 align-items-center justify-content-center outline-btn m-md-auto m-sm-auto m-lg-0"
               data-aos="fade-up"
               data-aos-delay="500"
-              data-aos-duration="1000"
-              style={{width: 'fit-content'}}
+              data-aos-duration="1000" 
             >
               Go to DYP Tools <img src={filledArrow} alt="" className="ml-2" />
             </a>
+            <button
+            onClick={onDownloadClick}
+              className="btn filled-btn w-100 d-flex align-items-center justify-content-center m-md-auto m-sm-auto m-lg-0"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            >
+               Download Mobile App 
+            </button></div>
           </div>
         </div>
         <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center position-relative">

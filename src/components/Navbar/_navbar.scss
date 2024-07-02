@@ -22,6 +22,34 @@ transition: all .25s;
 
 }
 
+
+.metaverse-modal-wrapper2{
+  position: fixed;
+  background: #FFFFFF;
+border: 6px solid #AAA5EB;
+box-shadow: 0px 60px 120px rgba(20, 20, 42, 0.12);
+border-radius: 56px 0px;
+left: 0;
+right: 0;
+top: -5000px;
+bottom: 0;
+margin: auto;
+width: 100%;
+max-width: 540px;
+height: fit-content;
+z-index: 17;
+transition: all .25s;
+.x-mark{
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  cursor: pointer;
+  scale: 0.8;
+}
+
+}
+
+
 .metaverse-active{
   top: 0;
   box-shadow:0 0 0 1000px rgba(0,0,0,.50);
