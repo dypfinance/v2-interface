@@ -47,11 +47,10 @@ const DypTools = () => {
               href={"https://app.dypius.com/"}
               target={"_blank"}
               rel="noreferrer"
-              className="btn d-flex align-items-center justify-content-center outline-btn m-md-auto m-sm-auto m-lg-0"
+              className="btn d-flex w-100 align-items-center justify-content-center outline-btn m-md-auto m-sm-auto m-lg-0"
               data-aos="fade-up"
               data-aos-delay="500"
-              data-aos-duration="1000"
-              style={{width: 'fit-content'}}
+              data-aos-duration="1000" 
             >
               Go to DYP Tools <img src={filledArrow} alt="" className="ml-2" />
             </a>
@@ -59,11 +58,10 @@ const DypTools = () => {
               href={"https://app.dypius.com/"}
               target={"_blank"}
               rel="noreferrer"
-              className="btn filled-btn d-flex align-items-center justify-content-center m-md-auto m-sm-auto m-lg-0"
+              className="btn filled-btn w-100 d-flex align-items-center justify-content-center m-md-auto m-sm-auto m-lg-0"
               data-aos="fade-up"
               data-aos-delay="500"
               data-aos-duration="1000"
-              style={{width: 'fit-content'}}
             >
                Download Mobile App 
             </a></div>
