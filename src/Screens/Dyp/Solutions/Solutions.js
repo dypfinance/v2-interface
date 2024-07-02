@@ -229,7 +229,7 @@ const Solutions = () => {
           <div className="separator2 w-100"></div>
           <div className="d-flex justify-content-center">
             <MobileView>
-              <a href="https://drive.google.com/file/d/1EvPyW0YWYcMc_x6sWViGYJxMStbg13D5/view" target="_blank" rel="noreferrer" className={`filled-btn btn `}>Download on mobile</a>
+              <a href="https://drive.google.com/file/d/1EvPyW0YWYcMc_x6sWViGYJxMStbg13D5/view" target="_blank" rel="noreferrer" className={` d-flex align-items-center filled-btn btn `}>Download on mobile</a>
             </MobileView>
             <BrowserView>
               <button className={`btn-secondary btn `} disabled={!isMobile}>
