@@ -8,6 +8,7 @@ import commingSoon from "../../../components/Navbar/assets/commingSoon.png";
 import xMark from "../../../components/Navbar/assets/xMark.svg";
 import "./_solutions.scss";
 import OutsideClickHandler from "react-outside-click-handler";
+import { isMobile, MobileView, BrowserView } from "react-device-detect";
 
 const Solutions = () => {
   const windowSize = useWindowSize();
@@ -202,33 +203,39 @@ const Solutions = () => {
           />
           <h4 className="mobile-app-title">Dypius Mobile App</h4>
           <div className="mobile-popup-wrapper p-3">
-            <div className="d-flex flex-column gap-2">
-              <p className="text-secondary">
-                We're happy to introduce the Dypius mobile app! Please note that
-                the app is currently available exclusively in APK format,
-                meaning it can only be installed on Android devices. At this
-                time, there is no desktop version available; the app is
-                specifically designed for mobile use to provide the best
-                on-the-go experience.
-              </p>
-              <p className="text-secondary">
-                In this early release, you'll find that some features are fully
-                functional, allowing you to engage with various aspects of the
-                Dypius ecosystem. However, please note that other features are
-                in a view-only mode as we diligently work on further updates to
-                enhance your experience.
-              </p>
-              <p className="text-secondary">
-                Your feedback is incredibly valuable to us as we continue to
-                develop and improve the app. We appreciate your understanding
-                and patience as we work to bring you the best possible mobile
-                experience.
-              </p>
-            </div>
+            <ul className="mobile-content-list">
+              <li className="text-secondary">
+                Available exclusively in APK format for Android devices.
+              </li>
+              <li className="text-secondary">
+                Early release with some fully functional features.
+              </li>
+              <li className="text-secondary">
+                Other features are in view-only mode, relying on the MetaMask
+                Unity SDK.
+              </li>
+              <li className="text-secondary">
+                MetaMask-related issues are beyond our control; we're seeking
+                support to resolve them.
+              </li>
+              <li className="text-secondary">
+                Your feedback is valuable as we continue to improve the app.
+              </li>
+              <li className="text-secondary">
+                Thank you for your understanding and patience.
+              </li>
+            </ul>
           </div>
           <div className="separator2 w-100"></div>
           <div className="d-flex justify-content-center">
-            <button className="filled-btn btn">Download</button>
+            <MobileView>
+              <button className={`filled-btn btn `}>Download on mobile</button>
+            </MobileView>
+            <BrowserView>
+              <button className={`btn-secondary btn `} disabled={!isMobile}>
+                Download on mobile
+              </button>
+            </BrowserView>
           </div>
         </div>
       </OutsideClickHandler>
