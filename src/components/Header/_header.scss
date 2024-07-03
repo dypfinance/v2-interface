@@ -176,6 +176,12 @@ border-radius: 0px 0px 14px 0px;
   box-shadow:0 0 0 1000px rgba(0,0,0,.50);
 }
 
+.openMenu-withFlyout {
+  transform: translateY(105px);
+  -webkit-transform: translateY(105px);
+  box-shadow:0 0 0 1000px rgba(0,0,0,.50);
+}
+
 
 .mobile-navbar{
   background: linear-gradient(304.92deg, #554FD8 24.56%, #7770E0 79.94%);

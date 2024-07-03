@@ -29,7 +29,7 @@ const About = () => {
   const windowSize = useWindowSize();
 
   return (
-    <div className="container-fluid px-0" style={{overflowX: 'hidden'}}>
+    <div className="container-fluid px-0 mt-5 mt-lg-0" style={{overflowX: 'hidden'}}>
         <AboutMainHero />
         <OurTeam />
         <Roadmap />

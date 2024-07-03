@@ -205,7 +205,7 @@ const Solutions = () => {
           <div className="mobile-popup-wrapper p-3">
             <ul className="mobile-content-list">
               <li className="text-secondary">
-                Available exclusively in APK format for Android devices.
+                Available exclusively in APK format for <b>Android</b> devices.
               </li>
               <li className="text-secondary">
                 Early release with some fully functional features.

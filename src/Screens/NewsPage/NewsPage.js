@@ -13,7 +13,7 @@ const NewsPage = () => {
 
   return (
     <div
-      className="container-fluid px-0 d-flex flex-column overflow-hidden"
+      className="container-fluid px-0 d-flex flex-column overflow-hidden mt-5 mt-lg-0"
       style={{ paddingTop: "130px", gap: "30px" }}
     >
       <div className="container-fluid dyp-news">

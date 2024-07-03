@@ -7,7 +7,7 @@ const Disclaimer = () => {
     },[])
 
   return (
-    <div className="container-fluid px-0 position-relative">
+    <div className="container-fluid px-0 position-relative mt-5 mt-lg-0">
       <DisclaimerHero/>
     </div>
   );

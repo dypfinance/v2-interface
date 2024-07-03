@@ -12,7 +12,7 @@ const Support = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="container-fluid px-0" style={{paddingBottom: '5rem', overflowX: 'hidden'}}>
+    <div className="container-fluid px-0 mt-5 mt-lg-0" style={{paddingBottom: '5rem', overflowX: 'hidden'}}>
       <SupportMainHero />
       <FAQ />
       <VideoTutorials />
