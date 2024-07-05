@@ -380,46 +380,48 @@ const Roadmap = () => {
       title: "CAWS Mobile Game",
       content:
         "Launch a mobile game featuring CAWS NFTs that provides a new gaming experience for players.",
+      completed: true,
+
     },
     {
       title: "Marketplace Improvements",
       content:
         "Enhance the marketplace features to improve user experience and facilitate smoother transactions.",
+      completed: true,
+
     },
     {
       title: "Expanding our Products to other Blockchains",
       content:
         "Extend Dypius products and services to other blockchains, increasing accessibility and user base.",
+      completed: true,
+
     },
     {
       title: "UI/UX Improvement",
       content:
         "Improve the user interface and experience across all platforms and products for a more seamless and enjoyable user experience.",
+      completed: true,
+
     },
-    {
-      title: "App Referral Program",
-      content:
-        "Introduce a referral program for the mobile app to incentivize users to invite others to join the platform.",
-    },
-    {
-      title: "CCIP USDC Integration",
-      content:
-        "Integrate USDC (USD Coin) into the CCIP for seamless cross-chain transactions and interactions.",
-    },
-    {
-      title: "Addition of Game Currency",
-      content:
-        "Introduce a new in-game currency to enhance the game's economy and provide more options for players.",
-    },
-    {
-      title: "In-game Shop",
-      content:
-        "Launch the first version of the in-game shop where players can buy items, loot, weapons, and equipment.",
-    },
+    // {
+    //   title: "App Referral Program",
+    //   content:
+    //     "Introduce a referral program for the mobile app to incentivize users to invite others to join the platform.",
+    // },
+    // {
+    //   title: "CCIP USDC Integration",
+    //   content:
+    //     "Integrate USDC (USD Coin) into the CCIP for seamless cross-chain transactions and interactions.",
+    // },
+  
+
     {
       title: "Omnichannel Login",
       content:
         "Implement a unified login system across all platforms (game, mobile app, and website) for a seamless user experience.",
+      completed: true,
+
     },
   ];
 
@@ -440,9 +442,19 @@ const Roadmap = () => {
         "Launch a new and improved version of DYP Tools with enhanced features and functionalities.",
     },
     {
+      title: "Addition of Game Currency",
+      content:
+        "Introduce a new in-game currency to enhance the game's economy and provide more options for players.",
+    },
+    {
       title: "Decentralized Launchpad Launch",
       content:
         "Introduce a decentralized launchpad for new projects, providing a platform for fair and transparent token launches.",
+    },
+    {
+      title: "In-game Shop",
+      content:
+        "Launch the first version of the in-game shop where players can buy items, loot, weapons, and equipment.",
     },
     {
       title: "Introduction of Character NFT Generation",
@@ -1451,7 +1463,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card  d-flex flex-column align-items-center">
+            <div className="date-card selected  d-flex flex-column align-items-center">
               <img
                 src={selectedRoadmap}
                 style={{ visibility: "hidden" }}
