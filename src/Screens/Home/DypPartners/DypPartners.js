@@ -199,6 +199,11 @@ const DypPartners = () => {
       text: "MultiversX",
       href: "https://multiversx.com/",
     },
+    {
+      image: "plena.svg",
+      text: "Plena Finance",
+      href: "https://www.plena.finance/",
+    },
   ];
 
   const partnerSize = () => {
