@@ -204,6 +204,11 @@ const DypPartners = () => {
       text: "Plena Finance",
       href: "https://www.plena.finance/",
     },
+    {
+      image: "bitEvm.svg",
+      text: "BitEVM",
+      href: "https://bitevm.net/",
+    },
   ];
 
   const partnerSize = () => {
