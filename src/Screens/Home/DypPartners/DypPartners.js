@@ -198,6 +198,11 @@ const DypPartners = () => {
       text: "SEI",
       href: "https://www.sei.io/",
     },
+    {
+      image: "plena.svg",
+      text: "Plena Finance",
+      href: "https://www.plena.finance/",
+    },
   ];
 
   const partnerSize = () => {
