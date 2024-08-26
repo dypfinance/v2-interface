@@ -30,9 +30,7 @@ const LandPopup = () => {
     <OutsideClickHandler onOutsideClick={() => setActive(false)}>
       <div
         id="popup"
-        className={`popup-wrapper ${
-          active && "popup-active"
-        } p-3`}
+        className={`popup-wrapper ${active && "popup-active"} p-3`}
       >
         <div className="d-flex pt-3 pe-3 align-items-center justify-content-end w-100">
           <img
@@ -45,26 +43,31 @@ const LandPopup = () => {
           />
         </div>
         <div className="d-flex flex-column gap-3 justify-content-center align-items-center">
-        <div className="d-flex flex-column align-items-center justify-content-center">
-          <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
-          <h6 className="popup-title d-flex align-items-center gap-2 mb-0">DYP Token migration is now</h6>
-          <h6 className="popup-title metaverse mb-0">Live</h6>
+          <div className="d-flex flex-column align-items-center justify-content-center">
+            <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
+              <h6 className="popup-title d-flex align-items-center gap-2 mb-0">
+                WOD Token
+              </h6>
+              <h6 className="popup-title metaverse mb-0">Whitelist</h6>
+            </div>
+            <span className="popup-span mb-0">
+              As part of the Dypius ecosystem, we’re enhancing our user
+              utilities with the upcoming WOD Token launch. Secure your spot now
+              as we are offering early access to the exclusive WOD token sale
+              through a Whitelist for our members.
+            </span>
           </div>
-          <span className="popup-span mb-0">
-          Easily migrate your old DYP tokens from Ethereum, BNB Chain, and Avalanche to the new DYP v2 token on Ethereum. 
-          </span>
-        </div>
-        <img src={migrationPopup} className="land-nft-image" alt="land nft" />
-        {/* <span className="popup-content">
+          <img src={migrationPopup} className="land-nft-image" alt="land nft" />
+          {/* <span className="popup-content">
           Total Genesis land supply limited to 1,000 plots
         </span> */}
-        <a
-          href="https://app.dypius.com/migration"
-          target={"_blank"}
-          onClick={() => setActive(false)}
-        >
-          <button className="btn filled-btn m-3">Migrate</button>
-        </a>
+          <a
+            href="https://app.dypius.com/wod-whitelist"
+            target={"_blank"}
+            onClick={() => setActive(false)}
+          >
+            <button className="btn filled-btn m-3">Join the whitelist</button>
+          </a>
         </div>
       </div>
     </OutsideClickHandler>
