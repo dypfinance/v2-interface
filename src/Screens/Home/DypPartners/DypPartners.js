@@ -40,6 +40,11 @@ const DypPartners = () => {
       href: "https://www.kucoin.com/trade/DYP-USDT",
     },
     {
+      image: "base.svg",
+      text: "Base",
+      href: "https://www.base.org/",
+    },
+    {
       image: "avax.png",
       text: "Avalanche",
       href: "https://www.avalabs.org/",
