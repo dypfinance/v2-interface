@@ -62,7 +62,6 @@ const BuyDypHero = () => {
       id: "collapsetwo",
       dypVersion: "DYP v2",
     },
-
     {
       title: "Uniswap V2",
       logo: "uniswap.png",
@@ -138,7 +137,7 @@ const BuyDypHero = () => {
     {
       title: "Coinbase",
       logo: "coinbase.png",
-      link: "https://pro.coinbase.com/trade/DYP-USD",
+      link: "https://www.coinbase.com/advanced-trade/spot/DYP-USD",
       totalvids: "1 video",
       active: true,
       dypVersion: "DYP v1",

@@ -19,12 +19,15 @@ import bnbIcon from "./assets/bnbIcon.svg";
 import avaxIcon from "./assets/avaxIcon.svg";
 import Web3 from "web3";
 import { TOKEN_ABI } from "./tokenAbi";
+import OutsideClickHandler from "react-outside-click-handler";
+import arrowup from "./assets/arrow-up.svg";
 
 const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   const [tokenomicData, setTokenomicData] = useState("dyp");
   const [toggledyp, setToggleDyp] = useState(showBtn === false ? true : false);
   const [toggleIdyp, setToggleIDyp] = useState(false);
   const [dypiusSupply, setdypiusSupply] = useState(0);
+  const [tokenToolTip, setTokenTooltip] = useState(false);
 
   // useEffect(() => {
   //   if (toggleIdyp === false && toggledyp === false) {
@@ -123,7 +126,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
     getCirculatingSupplyiDYP();
     getCirculatingSupplyDYP();
     getTotalSupply();
-    getCirculatingSupplyDYPv1()
+    getCirculatingSupplyDYPv1();
   }, []);
 
   return (
@@ -238,29 +241,34 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                         <span className="dypcontract-title">
                           DYP v2 Contract Address:
                         </span>
-                        <span className="dypcontract-addr">
+                        <span
+                          className="dypcontract-addr position-relative"
+                          style={{ width: "fit-content" }}
+                        >
                           {windowSize.width < 526 ? (
-                            <a
-                              href="https://etherscan.io/token/0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
-                              target={"_blank"}
-                              rel="noreferrer"
-                              style={{ color: "inherit" }}
+                            <div
+                              className="dyp-sc-address"
+                              onClick={() => {
+                                setTokenTooltip(true);
+                              }}
                             >
-                              <u>
+                              <span>
                                 {shortAddress(
                                   "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
                                 )}
-                              </u>
-                            </a>
+                              </span>
+                            </div>
                           ) : (
-                            <a
-                              href="https://etherscan.io/token/0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
-                              target={"_blank"}
-                              rel="noreferrer"
-                              style={{ color: "inherit" }}
+                            <div
+                              className="dyp-sc-address"
+                              onClick={() => {
+                                setTokenTooltip(true);
+                              }}
                             >
-                              <u>0x39b46b212bdf15b42b166779b9d1787a68b9d0c3</u>
-                            </a>
+                              <span>
+                                0x39b46b212bdf15b42b166779b9d1787a68b9d0c3
+                              </span>
+                            </div>
                           )}
                           <img
                             src={Clipboard}
@@ -275,6 +283,77 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                               display: copied === true ? "none" : "",
                             }}
                           />
+                          {tokenToolTip === true && (
+                            <div className="position-absolute tooltip-tokenomics">
+                              <OutsideClickHandler
+                                onOutsideClick={() => {
+                                  setTokenTooltip(false);
+                                }}
+                              >
+                                <div
+                                  className="tooltip d-flex justify-content-center p-2"
+                                  style={{ opacity: 1, width: 145 }}
+                                >
+                                  <div className="d-flex flex-column gap-2 align-items-start">
+                                    <a
+                                      href="https://etherscan.io/token/0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      onClick={() => {
+                                        setTokenTooltip(false);
+                                      }}
+                                    >
+                                      <h6 className="bottomitems m-0">
+                                        <img src={arrowup} alt="" />
+                                        DYP Ethereum
+                                      </h6>
+                                    </a>
+                                    <a
+                                      href="https://basescan.org/token/0x5b2124d427fac9c80c902cbdd74b03dd85d7d3fe"
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      onClick={() => {
+                                        setTokenTooltip(false);
+                                      }}
+                                    >
+                                      <h6 className="bottomitems m-0">
+                                        <img src={arrowup} alt="" />
+                                        DYP Base
+                                      </h6>
+                                    </a>
+
+                                    <a
+                                      href="https://bscscan.com/token/0x1a3264f2e7b1cfc6220ec9348d33ccf02af7aaa4"
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      onClick={() => {
+                                        setTokenTooltip(false);
+                                      }}
+                                    >
+                                      <h6 className="bottomitems m-0">
+                                        <img src={arrowup} alt="" />
+                                        DYP BNB Chain
+                                      </h6>
+                                    </a>
+
+                                    <a
+                                      href="https://snowtrace.io/token/0x1a3264f2e7b1cfc6220ec9348d33ccf02af7aaa4"
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      onClick={() => {
+                                        setTokenTooltip(false);
+                                      }}
+                                    >
+                                      <h6 className="bottomitems m-0">
+                                        <img src={arrowup} alt="" />
+                                        DYP Avalanche
+                                      </h6>
+                                    </a>
+                                  </div>
+                                </div>
+                              </OutsideClickHandler>
+                            </div>
+                          )}
                           {copied === true && (
                             <span
                               className="d-inline-block"
@@ -309,7 +388,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                           for DYP token holders. The migration process for DYP
                           has been active since November 8, 2023, allowing the
                           transition of DYP v1 tokens to DYP v2 through the
-                         &nbsp;
+                          &nbsp;
                           <a
                             href="https://app.dypius.com/migration"
                             rel="noreferrer"
@@ -772,54 +851,54 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                         DYP v1 Contract Address:
                       </span>
                       <span className="dypcontract-addr">
-                          {windowSize.width < 526 ? (
-                            <a
-                              href="https://etherscan.io/token/0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
-                              target={"_blank"}
-                              rel="noreferrer"
-                              style={{ color: "inherit" }}
-                            >
-                              <u>
-                                {shortAddress(
-                                  "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
-                                )}
-                              </u>
-                            </a>
-                          ) : (
-                            <a
-                              href="https://etherscan.io/token/0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
-                              target={"_blank"}
-                              rel="noreferrer"
-                              style={{ color: "inherit" }}
-                            >
-                              <u>0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17</u>
-                            </a>
-                          )}
-                          <img
-                            src={Clipboard}
-                            alt=""
-                            onClick={() => {
-                              handleCopy(
+                        {windowSize.width < 526 ? (
+                          <a
+                            href="https://etherscan.io/token/0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
+                            target={"_blank"}
+                            rel="noreferrer"
+                            style={{ color: "inherit" }}
+                          >
+                            <u>
+                              {shortAddress(
                                 "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
-                              );
-                            }}
-                            style={{
-                              cursor: "pointer",
-                              display: copied === true ? "none" : "",
-                            }}
-                          />
-                          {copied === true && (
-                            <span
-                              className="d-inline-block"
-                              tabindex="0"
-                              data-toggle="tooltip"
-                              title="Copied"
-                              data-placement="top"
-                            >
-                              <Success bgColor={"#544ED5"} svgColor={"#FFF"} />
-                            </span>
-                          )}
-                        </span>
+                              )}
+                            </u>
+                          </a>
+                        ) : (
+                          <a
+                            href="https://etherscan.io/token/0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
+                            target={"_blank"}
+                            rel="noreferrer"
+                            style={{ color: "inherit" }}
+                          >
+                            <u>0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17</u>
+                          </a>
+                        )}
+                        <img
+                          src={Clipboard}
+                          alt=""
+                          onClick={() => {
+                            handleCopy(
+                              "0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17"
+                            );
+                          }}
+                          style={{
+                            cursor: "pointer",
+                            display: copied === true ? "none" : "",
+                          }}
+                        />
+                        {copied === true && (
+                          <span
+                            className="d-inline-block"
+                            tabindex="0"
+                            data-toggle="tooltip"
+                            title="Copied"
+                            data-placement="top"
+                          >
+                            <Success bgColor={"#544ED5"} svgColor={"#FFF"} />
+                          </span>
+                        )}
+                      </span>
                     </div>
                     <div className="mininginfo-wrapper ">
                       <p className="m-0">

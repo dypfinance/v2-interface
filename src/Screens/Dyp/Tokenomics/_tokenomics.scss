@@ -16,6 +16,43 @@
   }
 }
 
+.dyp-sc-address {
+  cursor: pointer;
+}
+
+.bottomitems {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.018em;
+  color: #554fd8;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bottomitems:hover {
+  text-decoration: underline;
+}
+
+.tooltip {
+  background: #EEEDFB !important;
+border: 1px solid rgba(85, 79, 216, 0.1);
+box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.2);
+border-radius: 8px;
+position: absolute;
+left: 0;
+top: -70px;
+width: 200px;
+}
+.tooltip-tokenomics {
+  right: 35px;
+  top: -25px;
+}
+
 .dypborder {
   border: 2px solid #756EDF;
   border-radius: 18px 0px;
