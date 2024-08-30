@@ -78,7 +78,7 @@ const LandPopup = () => {
           Total Genesis land supply limited to 1,000 plots
         </span> */}
           <a
-            href="https://app.dypius.com/wod-whitelist"
+            href="https://app.dypius.com/launchpad"
             target={"_blank"}
             onClick={() => setActive(false)}
           >
