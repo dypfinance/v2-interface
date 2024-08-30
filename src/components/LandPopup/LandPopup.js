@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./_landpopup.scss";
 import landPopup from "./landPopup.webp";
 import closePopup from "./closePopup.svg";
 import migrationPopup from "./migrationPopup.webp";
+import dypBaseBg from "./dypBaseBg.webp";
+import Slider from "react-slick";
 import OutsideClickHandler from "react-outside-click-handler";
 
 const LandPopup = () => {
@@ -17,6 +19,19 @@ const LandPopup = () => {
 
   const popup = document.querySelector("#popup");
   const html = document.querySelector("html");
+  const slider = useRef();
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 4000,
+  };
 
   useEffect(() => {
     if (active === true) {
@@ -42,7 +57,8 @@ const LandPopup = () => {
             style={{ cursor: "pointer" }}
           />
         </div>
-        <div className="d-flex flex-column gap-3 justify-content-center align-items-center">
+        <Slider {...settings} ref={slider} >
+        <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-3">
           <div className="d-flex flex-column align-items-center justify-content-center">
             <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
               <h6 className="popup-title d-flex align-items-center gap-2 mb-0">
@@ -57,7 +73,7 @@ const LandPopup = () => {
               through a Whitelist for our members.
             </span>
           </div>
-          <img src={migrationPopup} className="land-nft-image" alt="land nft" />
+          <img src={migrationPopup} className="land-nft-image w-100" alt="land nft" />
           {/* <span className="popup-content">
           Total Genesis land supply limited to 1,000 plots
         </span> */}
@@ -69,6 +85,31 @@ const LandPopup = () => {
             <button className="btn filled-btn m-3">Join the whitelist</button>
           </a>
         </div>
+        <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-3">
+          <div className="d-flex flex-column align-items-center justify-content-center">
+            <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
+              <h6 className="popup-title d-flex align-items-center gap-2 mb-0">
+              Dypius Expands to 
+              </h6>
+              <h6 className="popup-title metaverse mb-0">Base</h6>
+            </div>
+            <span className="popup-span mb-0">
+            Seamlessly swap DYP to Base via the official Base Super Bridge
+            </span>
+          </div>
+          <img src={dypBaseBg} className="land-nft-image" alt="land nft" />
+          {/* <span className="popup-content">
+          Total Genesis land supply limited to 1,000 plots
+        </span> */}
+          <a
+            href="https://superbridge.app/base"
+            target={"_blank"}
+            onClick={() => setActive(false)}
+          >
+            <button className="btn filled-btn m-3">Bridge DYP on Base</button>
+          </a>
+        </div>
+        </Slider>
       </div>
     </OutsideClickHandler>
   );
