@@ -93,7 +93,7 @@ const getDypPrice = async () => {
             classname={"bridge"}
             title={"Bridge"}
             desc={
-              "Bridge tokens between Ethereum to BNB Chain, Avalanche and many more to come. Instant and secure transactions."
+              "Bridge tokens between Ethereum to BNB Chain, Base, Avalanche and many more to come. Instant and secure transactions."
             }
             link={'https://app.dypius.com/bridge'}
           />
