@@ -12,7 +12,7 @@
   border-radius: 24px;
   pointer-events: auto !important;
   transition: all 0.25s ease-in-out;
-
+  overflow-x: hidden;
   width: 30%;
 
   @media screen and (max-width: 1590px) {
@@ -52,10 +52,9 @@
 
 .popup-span {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: -0.018em;
-  width: 75%;
   text-align: center;
 }
 

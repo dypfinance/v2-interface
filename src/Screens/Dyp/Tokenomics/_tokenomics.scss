@@ -2,7 +2,7 @@
   bottom: 55px !important;
 
   @media screen and (max-width: 786px) {
-    // bottom: 200px !important;
+     bottom: 35px !important;
   }
 }
 .iDypTokenomics {
@@ -153,6 +153,10 @@ gap: 10px;
   gap: 10px;
   img {
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 786px) {
+    font-size: 15px;
   }
 }
 
