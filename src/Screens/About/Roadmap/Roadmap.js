@@ -471,6 +471,13 @@ const Roadmap = () => {
 
     },
     {
+      title: "New Staking Pools on Base",
+      content:
+        "Introduce new staking pools on Base for DYPv2, offering users enhanced earning opportunities and increased utility for their tokens. These pools will encourage long-term participation and deeper engagement within the Base network.",
+        completed: true,
+    
+      },
+    {
       title: "Loyalty Program Introduction",
       content:
         "Introduce a loyalty program exclusive to Base users, offering gas incentives and other rewards, aimed at improving user onboarding and transaction efficiency.",
@@ -480,11 +487,7 @@ const Roadmap = () => {
       content:
         "Launch the Stone Crack game, an interactive and engaging mini-game where players break stones to earn valuable rewards. The game will be available on Base, adding an extra layer of entertainment for users.",
     },
-    {
-      title: "New Staking Pools on Base",
-      content:
-        "Introduce new staking pools on Base for DYPv2, offering users enhanced earning opportunities and increased utility for their tokens. These pools will encourage long-term participation and deeper engagement within the Base network.",
-    },
+    
   ];
 
   const quarterFour2024 = [
