@@ -15,11 +15,11 @@
   overflow-x: hidden;
   width: 30%;
 
-  @media screen and (max-width: 1590px) {
-      width: 55%;
-  }
+  // @media screen and (max-width: 1590px) {
+  //     width: 55%;
+  // }
   @media screen and (max-width: 1300px) {
-      width: 70% !important;
+      width: 50% !important;
   }
   @media screen and (max-width: 786px) {
       width: 90% !important;
@@ -60,6 +60,7 @@
 
 .land-nft-image{
   width: 427px;
+  height: 220px;
 
 }
 
@@ -70,9 +71,9 @@
         font-size: 13px;
     }
 
-    .land-nft-image{
-      width: 75% !important;
-  }
+  //   .land-nft-image{
+  //     width: 75% !important;
+  // }
 }
 
 .popup-title-wrapper{
