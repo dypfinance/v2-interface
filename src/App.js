@@ -53,7 +53,7 @@ function App() {
           <Route exact path="/dyp" element={<Dyp />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/support" element={<Support />} />
-          <Route exact path="/disclaimer" element={<Disclaimer />} />
+          <Route exact path="/terms-of-service" element={<Disclaimer />} />
           <Route exact path="/governance" element={<Governance />} />
           <Route exact path="/buydyp" element={<BuyDypScreen />} />
           <Route exact path="/news" element={<NewsPage />} />
