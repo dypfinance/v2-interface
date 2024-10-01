@@ -12,14 +12,14 @@
   border-radius: 24px;
   pointer-events: auto !important;
   transition: all 0.25s ease-in-out;
-
+  overflow-x: hidden;
   width: 30%;
 
-  @media screen and (max-width: 1590px) {
-      width: 55%;
-  }
+  // @media screen and (max-width: 1590px) {
+  //     width: 55%;
+  // }
   @media screen and (max-width: 1300px) {
-      width: 70% !important;
+      width: 50% !important;
   }
   @media screen and (max-width: 786px) {
       width: 90% !important;
@@ -52,15 +52,15 @@
 
 .popup-span {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: -0.018em;
-  width: 75%;
   text-align: center;
 }
 
 .land-nft-image{
-  width: 450px;
+  width: 427px;
+  height: 220px;
 
 }
 
@@ -71,9 +71,9 @@
         font-size: 13px;
     }
 
-    .land-nft-image{
-      width: 75% !important;
-  }
+  //   .land-nft-image{
+  //     width: 75% !important;
+  // }
 }
 
 .popup-title-wrapper{

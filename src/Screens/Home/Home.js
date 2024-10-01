@@ -1,29 +1,36 @@
-import React, {Suspense, useEffect} from "react";
-import MainHero from './MainHero/MainHero'
+import React, { Suspense, useEffect, useState } from "react";
+import MainHero from "./MainHero/MainHero";
 import DypMetaverse from "./DypMetaverse/DypMetaverse";
-import DypTools from './DypTools/DypTools'
+import DypTools from "./DypTools/DypTools";
 import DypToken from "./DypToken/DypToken";
 import DypNews from "./DypNews/DypNews";
 import DypPartners from "./DypPartners/DypPartners";
-import './DypNews/_dypnews.scss'
+import "./DypNews/_dypnews.scss";
 import LandPopup from "../../components/LandPopup/LandPopup";
 
-const Home = () => {
-  useEffect(()=>{
-    window.scrollTo(0,0)
-},[])
+
+const Home = ({onDownloadClick}) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   return (
-    <div className="homepage main-wrapper container-fluid pl-0 pr-0 d-flex flex-column align-items-center" >
-      <MainHero/>
-     <DypMetaverse/>
-       <DypTools/>
-      <DypToken/>
+    <div className="homepage main-wrapper container-fluid pl-0 pr-0 d-flex flex-column align-items-center mt-5 mt-lg-0">
+      <MainHero />
+      <DypMetaverse />
+      <DypTools
+        onDownloadClick={() => {
+         onDownloadClick()
+        }}
+      />
+      <DypToken />
       <Suspense fallback={<div>Loading</div>}>
-      <DypPartners />
+        <DypPartners />
       </Suspense>
-      <DypNews topTitle='Announcements' bottomTitle='Stay tuned'/>
+      <DypNews topTitle="Announcements" bottomTitle="Stay tuned" />
       <LandPopup />
+
     </div>
   );
 };

@@ -11,7 +11,7 @@ const IDyp = () => {
 
   return (
     <div
-      className="dyp-page main-wrapper container-fluid pl-0 pr-0 d-flex flex-column align-items-center pb-0"
+      className="dyp-page main-wrapper container-fluid pl-0 pr-0 d-flex flex-column align-items-center pb-0 mt-5 mt-lg-0"
       style={{overflowX: 'hidden'}}
     >
       <IDypHero />

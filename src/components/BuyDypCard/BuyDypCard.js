@@ -3,8 +3,19 @@ import rightArrow from "../../assets/right-arrow.svg";
 import vidthumbnail from "../../assets/vidthumbnail.png";
 import trustwallet from "../../assets/trustwallet.svg";
 import filledArrow from "../../assets/filledArrow.svg";
+import ethereumLogo from "../../assets/eth.svg";
+import baseLogo from "../../assets/base.svg";
 
-const BuyDypCard = ({ title, logo, link, totalvids, videos, id, active, version }) => {
+const BuyDypCard = ({
+  title,
+  logo,
+  link,
+  totalvids,
+  videos,
+  id,
+  active,
+  version,
+}) => {
   return (
     <div className="col-12 col-lg-3 my-3">
       <div className="buydypcard-wrapper ">
@@ -13,12 +24,16 @@ const BuyDypCard = ({ title, logo, link, totalvids, videos, id, active, version 
             <img src={logo} alt="" className="buydypcard-logo" />
             <div className="d-flex flex-column gap-1">
               <span className="buydypcard-title">{title}</span>
-              <div
-                className="videodesc-wrapper"
-                // style={{ display: totalvids === "0" ? "none" : "" }}
-              >
+              <div className="d-flex align-items-center gap-1">
+              <div className="videodesc-wrapper">
                 <span className="videodesc">{version}</span>
               </div>
+              {title === "Uniswap V2" && (
+                <div className="d-flex gap-1 align-items-center">
+                  <img src={ethereumLogo} alt="" />
+                  <img src={baseLogo} alt="" />
+                </div>
+              )}</div>
             </div>
           </div>
           {active ? (

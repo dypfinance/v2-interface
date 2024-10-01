@@ -10,7 +10,7 @@ const BuyDypScreen = () => {
   const windowSize = useWindowSize();
 
   return (
-    <div className="container-fluid px-0 buydypscreen">
+    <div className="container-fluid px-0 buydypscreen mt-5 mt-lg-0">
       <div style={{ paddingTop: windowSize.width < 786 ? "6rem" : "10rem" }}>
         <BuyDypHero />
       </div>

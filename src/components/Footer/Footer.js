@@ -250,8 +250,8 @@ const Footer = () => {
                     style={{ gap: "5px" }}
                   >
                     <img
-                    width={25}
-                    height={25}
+                      width={25}
+                      height={25}
                       src={require(`../../assets/${social.name.toLowerCase()}.svg`)}
                       alt=""
                     />
@@ -387,8 +387,8 @@ const Footer = () => {
                             <a
                               className="text-white text-decoration-none footer-type-link"
                               href={item.link}
-                              target='_blank'
-                      rel='noreferrer'
+                              target="_blank"
+                              rel="noreferrer"
                             >
                               <h5>{item.title}</h5>
                             </a>
@@ -491,25 +491,33 @@ const Footer = () => {
                   </div>
                 </div>
                 <hr />
-                <div className="d-flex flex-row gap-3 position-relative mt-3">
-                  <a
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://coinmarketcap.com/currencies/defi-yield-protocol-v2/"
+                <div className="d-flex flex-column gap-1 mt-3">
+                  <Link
+                    to={"/terms-of-service"}
+                    className="text-white text-decoration-none footer-type-link"
                   >
-                    <img src={coinmarketcap} alt="" />
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://www.coingecko.com/en/coins/dypius"
-                  >
-                    <img src={coinGecko} alt="" />
-                  </a>
-
-                  <Link to="/disclaimer">
-                    <img src={disclaimer} alt="" />
+                    <h5>Terms of Service</h5>
                   </Link>
+                  <div className="d-flex flex-row gap-3 position-relative mt-3">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://coinmarketcap.com/currencies/defi-yield-protocol-v2/"
+                    >
+                      <img src={coinmarketcap} alt="" />
+                    </a>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.coingecko.com/en/coins/dypius"
+                    >
+                      <img src={coinGecko} alt="" />
+                    </a>
+
+                    <Link to="/terms-of-service">
+                      <img src={disclaimer} alt="" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             ) : (
@@ -582,8 +590,8 @@ const Footer = () => {
                     <a
                       className="text-white text-decoration-none footer-type-link"
                       href={item.link}
-                      target='_blank'
-                      rel='noreferrer'
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       <h5>{item.title}</h5>
                     </a>
@@ -617,33 +625,41 @@ const Footer = () => {
                       </Link>
                     ))}
                   </div>
-                  <div
-                    className="d-flex flex-row gap-3 position-relative"
-                    style={{ bottom: "-90px" }}
-                  >
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://coinmarketcap.com/currencies/defi-yield-protocol-v2/"
-                    >
-                      <img src={coinmarketcap} alt="" />
-                    </a>
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://www.coingecko.com/en/coins/dypius"
-                    >
-                      <img src={coinGecko} alt="" />
-                    </a>
-
+                  <div className="d-flex flex-column gap-3 position-relative"style={{ bottom: "-60px" }}>
                     <Link
-                      to="/disclaimer"
-                      onClick={() => {
-                        window.scrollTo(0, 0);
-                      }}
+                      to={"/terms-of-service"}
+                      className="text-white text-decoration-none footer-type-link"
                     >
-                      <img src={disclaimer} alt="" />
+                      <h5>Terms of Service</h5>
                     </Link>
+                    <div
+                      className="d-flex flex-row gap-3 position-relative"
+                      
+                    >
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://coinmarketcap.com/currencies/defi-yield-protocol-v2/"
+                      >
+                        <img src={coinmarketcap} alt="" />
+                      </a>
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://www.coingecko.com/en/coins/dypius"
+                      >
+                        <img src={coinGecko} alt="" />
+                      </a>
+
+                      <Link
+                        to="/terms-of-service"
+                        onClick={() => {
+                          window.scrollTo(0, 0);
+                        }}
+                      >
+                        <img src={disclaimer} alt="" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </>

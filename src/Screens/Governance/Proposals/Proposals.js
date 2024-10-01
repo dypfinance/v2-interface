@@ -25,36 +25,36 @@ const Proposals = () => {
   };
 
   const fetchActiveProposals = async () => {
-    await axios
+    const oldGovs = await axios
       .get("https://api.dyp.finance/api/get_proposals_info")
-      .then((res) => {
-        if (res.data) {
-          console.log(res.data);
-          const ethProposals = res.data.ProposalsInfoETH;
-          const bnbProposals = res.data.ProposalsInfoBSC;
-          const avaxProposals = res.data.ProposalsInfoAVAX;
 
-          const ethProposals_active = ethProposals.filter((item) => {
-            return item.status === "Active";
-          });
-
-          const bnbProposals_active = bnbProposals.filter((item) => {
-            return item.status === "Active";
-          });
-          const avaxProposals_active = avaxProposals.filter((item) => {
-            return item.status === "Active";
-          });
-          const allProposals = [
-            ...ethProposals_active,
-            ...bnbProposals_active,
-            ...avaxProposals_active,
-          ];
-          setactiveProposals(allProposals);
-        }
-      })
       .catch((err) => {
         console.error(err);
       });
+
+    if (oldGovs && oldGovs.status === 200) {
+      const ethProposals = oldGovs.data.ProposalsInfoETH;
+      const bnbProposals = oldGovs.data.ProposalsInfoBSC;
+      const avaxProposals = oldGovs.data.ProposalsInfoAVAX;
+
+      const ethProposals_active = ethProposals.filter((item) => {
+        return item.status === "Active";
+      });
+
+      const bnbProposals_active = bnbProposals.filter((item) => {
+        return item.status === "Active";
+      });
+      const avaxProposals_active = avaxProposals.filter((item) => {
+        return item.status === "Active";
+      });
+
+      const allProposals = [
+        ...ethProposals_active,
+        ...bnbProposals_active,
+        ...avaxProposals_active,
+      ];
+      setactiveProposals(allProposals);
+    }
   };
 
   useEffect(() => {
@@ -213,17 +213,46 @@ const Proposals = () => {
               <div className="recents-container w-100">
                 <Slider {...settings}>
                   <div className="d-flex flex-column gap-3 w-100">
-                    {activeProposals.slice(0, 3).map((item, index) => (
-                      <div key={index}>
-                        <ProposalCard
-                          title={item.title}
-                          key={index}
-                          type={item.type}
-                          date={item.date}
-                          icon={proposalICons[index].icon}
-                        />
-                      </div>
-                    ))}
+                    {activeProposals && activeProposals.length >= 3 ? (
+                      activeProposals.slice(0, 3).map((item, index) => (
+                        <div key={index}>
+                          <ProposalCard
+                            title={item.title}
+                            key={index}
+                            type={item.type}
+                            date={item.date}
+                            icon={proposalICons[index].icon}
+                          />
+                        </div>
+                      ))
+                    ) : (
+                      <>
+                        {activeProposals.map((item, index) => (
+                          <div key={index}>
+                            <ProposalCard
+                              title={item.title}
+                              key={index}
+                              type={item.type}
+                              date={item.date}
+                              icon={proposalICons[index].icon}
+                            />
+                          </div>
+                        ))}
+                        {recentProposalGroups
+                          .slice(0, 3 - activeProposals.length)
+                          .map((proposal, index) => (
+                            <div key={index}>
+                              {proposal.content.slice(0, 2 - activeProposals.length).map((item, index) => (
+                                <EmptyProposalCard
+                                  title={item.title}
+                                  icon={item.icon}
+                                  key={index}
+                                />
+                              ))}
+                            </div>
+                          ))}
+                      </>
+                    )}
                   </div>
                 </Slider>
               </div>

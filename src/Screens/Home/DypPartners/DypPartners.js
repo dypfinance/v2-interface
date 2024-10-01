@@ -40,6 +40,11 @@ const DypPartners = () => {
       href: "https://www.kucoin.com/trade/DYP-USDT",
     },
     {
+      image: "base.svg",
+      text: "Base",
+      href: "https://www.base.org/",
+    },
+    {
       image: "avax.png",
       text: "Avalanche",
       href: "https://www.avalabs.org/",
@@ -175,19 +180,14 @@ const DypPartners = () => {
       href: "https://skale.space/",
     },
     {
-      image: "babyDogeIcon.svg",
-      text: "BabyDoge",
-      href: "https://babydoge.com/",
-    },
-    {
       image: "core.svg",
-      text: "CORE",
+      text: "CORE DAO",
       href: "https://coredao.org/",
     },
     {
-      image: "sei.svg",
-      text: "Sei",
-      href: "https://www.sei.io/",
+      image: "multiversx.svg",
+      text: "MultiversX",
+      href: "https://multiversx.com/",
     },
     {
       image: "viction.svg",
@@ -195,9 +195,13 @@ const DypPartners = () => {
       href: "https://www.viction.xyz/",
     },
     {
-      image: "multiversx.svg",
-      text: "MultiversX",
-      href: "https://multiversx.com/",
+      image: "midle.svg",
+      text: "Midle",
+      href: "https://midle.io/",
+    },  {
+      image: "seiLogo.svg",
+      text: "SEI",
+      href: "https://www.sei.io/",
     },
     {
       image: "plena.svg",

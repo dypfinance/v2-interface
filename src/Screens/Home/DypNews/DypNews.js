@@ -136,10 +136,11 @@ const DypNews = ({ topTitle, bottomTitle, titleAlign, page }) => {
               <img src={rainbowHero} alt="" className="rainbow-hero-2"  />
             </>
           ) : (
-            <img
-              className="sphere"
-              src={require(`../../../assets/newsSphere.png`)}
-            />
+            // <img
+            //   className="sphere"
+            //   src={require(`../../../assets/newsSphere.png`)}
+            // />
+            <></>
           )}
           <Title top={topTitle} bottom={bottomTitle} align={titleAlign} />
           <div className="button-group">

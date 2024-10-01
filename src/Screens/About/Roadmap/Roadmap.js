@@ -370,6 +370,8 @@ const Roadmap = () => {
       title: "Launch Mobile App",
       content:
         "Release a mobile application for Dypius to provide users with a more convenient way to access the platform and its features.",
+      completed: true,
+
     },
   ];
 
@@ -378,46 +380,48 @@ const Roadmap = () => {
       title: "CAWS Mobile Game",
       content:
         "Launch a mobile game featuring CAWS NFTs that provides a new gaming experience for players.",
+      completed: true,
+
     },
     {
       title: "Marketplace Improvements",
       content:
         "Enhance the marketplace features to improve user experience and facilitate smoother transactions.",
+      completed: true,
+
     },
     {
       title: "Expanding our Products to other Blockchains",
       content:
         "Extend Dypius products and services to other blockchains, increasing accessibility and user base.",
+      completed: true,
+
     },
     {
       title: "UI/UX Improvement",
       content:
         "Improve the user interface and experience across all platforms and products for a more seamless and enjoyable user experience.",
+      completed: true,
+
     },
-    {
-      title: "App Referral Program",
-      content:
-        "Introduce a referral program for the mobile app to incentivize users to invite others to join the platform.",
-    },
-    {
-      title: "CCIP USDC Integration",
-      content:
-        "Integrate USDC (USD Coin) into the CCIP for seamless cross-chain transactions and interactions.",
-    },
-    {
-      title: "Addition of Game Currency",
-      content:
-        "Introduce a new in-game currency to enhance the game's economy and provide more options for players.",
-    },
-    {
-      title: "In-game Shop",
-      content:
-        "Launch the first version of the in-game shop where players can buy items, loot, weapons, and equipment.",
-    },
+    // {
+    //   title: "App Referral Program",
+    //   content:
+    //     "Introduce a referral program for the mobile app to incentivize users to invite others to join the platform.",
+    // },
+    // {
+    //   title: "CCIP USDC Integration",
+    //   content:
+    //     "Integrate USDC (USD Coin) into the CCIP for seamless cross-chain transactions and interactions.",
+    // },
+  
+
     {
       title: "Omnichannel Login",
       content:
         "Implement a unified login system across all platforms (game, mobile app, and website) for a seamless user experience.",
+      completed: true,
+
     },
   ];
 
@@ -426,32 +430,64 @@ const Roadmap = () => {
       title: "New NFT Staking Pools",
       content:
         "Introduce new staking pools for NFTs, allowing users to earn rewards by staking their NFT assets.",
+      completed: true,
+
     },
     {
       title: "WoD 0.3.0 Launch",
       content:
         "Release a major update for World of Dypians, bringing new features, content, and improvements to the game.",
+      completed: true,
+
     },
     {
       title: "DYP Tools v3",
       content:
         "Launch a new and improved version of DYP Tools with enhanced features and functionalities.",
+      completed: true,
+
     },
+
     {
       title: "Decentralized Launchpad Launch",
       content:
         "Introduce a decentralized launchpad for new projects, providing a platform for fair and transparent token launches.",
+      completed: true,
+
+    },
+
+    {
+      title: "Expansion to Base Network",
+      content:
+        "Introduce the integration of DYP Token on the Base network, unlocking new opportunities and increasing liquidity for users through the Base ecosystem.",
+      completed: true,
+
     },
     {
-      title: "Introduction of Character NFT Generation",
+      title: "DYP on Base Superbridge",
       content:
-        "Generate the main character in the game as an NFT item, adding value and uniqueness to the player's experience.",
+        "Enable users holding DYP v2 on Ethereum to bridge their tokens to Base using the Superbridge app, providing a smooth and hassle-free way to move assets between networks.",
+      completed: true,
+
     },
     {
-      title: "Full Release of the Multiplayer PvE",
+      title: "New Staking Pools on Base",
       content:
-        "Launch the full version of the multiplayer player-versus-environment mode for all players to enjoy.",
+        "Introduce new staking pools on Base for DYPv2, offering users enhanced earning opportunities and increased utility for their tokens. These pools will encourage long-term participation and deeper engagement within the Base network.",
+        completed: true,
+    
+      },
+    {
+      title: "Loyalty Program Introduction",
+      content:
+        "Introduce a loyalty program exclusive to Base users, offering gas incentives and other rewards, aimed at improving user onboarding and transaction efficiency.",
     },
+    {
+      title: "Introduction of the Stone Crack Game",
+      content:
+        "Launch the Stone Crack game, an interactive and engaging mini-game where players break stones to earn valuable rewards. The game will be available on Base, adding an extra layer of entertainment for users.",
+    },
+    
   ];
 
   const quarterFour2024 = [
@@ -459,6 +495,11 @@ const Roadmap = () => {
       title: "Governance v2",
       content:
         "Launch new features for the governance system, enhancing the platform's decentralization and community involvement.",
+    },
+    {
+      title: "Addition of Game Currency",
+      content:
+        "Introduce a new in-game currency to enhance the game's economy and provide more options for players.",
     },
     {
       title: "Full Release of the Multiplayer PvP",
@@ -475,25 +516,40 @@ const Roadmap = () => {
       content:
         "Continue to improve the mobile app with new features, optimizations, and enhancements based on user feedback.",
     },
+    // {
+    //   title: "Risk Assessment Algorithms",
+    //   content:
+    //     "Integrate risk assessment tools that evaluate the safety, liquidity, and volatility of yield farming pools across chains.",
+    // },
+    // {
+    //   title: "Automated Yield Optimization",
+    //   content:
+    //     "Utilize smart contracts to automatically optimize users' asset yields across pools from one chain.",
+    // },
+    // {
+    //   title: "Portfolio Management Dashboard",
+    //   content:
+    //     "Provide users with a comprehensive dashboard displaying real-time information about their investments, current yields, asset distribution across blockchains, and the platform's overall performance in optimizing returns.",
+    // },
+    // {
+    //   title: "Cross-Chain Yield Optimization",
+    //   content:
+    //     "Maximize users' investment returns by automatically moving their assets across different blockchains to take advantage of the highest yielding opportunities.",
+    // },
     {
-      title: "Risk Assessment Algorithms",
+      title: "In-game Shop",
       content:
-        "Integrate risk assessment tools that evaluate the safety, liquidity, and volatility of yield farming pools across chains.",
+        "Launch the first version of the in-game shop where players can buy items, loot, weapons, and equipment.",
     },
     {
-      title: "Automated Yield Optimization",
+      title: "Introduction of Character NFT Generation",
       content:
-        "Utilize smart contracts to automatically optimize users' asset yields across pools from one chain.",
+        "Generate the main character in the game as an NFT item, adding value and uniqueness to the player's experience.",
     },
     {
-      title: "Portfolio Management Dashboard",
+      title: "Full Release of the Multiplayer PvE",
       content:
-        "Provide users with a comprehensive dashboard displaying real-time information about their investments, current yields, asset distribution across blockchains, and the platform's overall performance in optimizing returns.",
-    },
-    {
-      title: "Cross-Chain Yield Optimization",
-      content:
-        "Maximize users' investment returns by automatically moving their assets across different blockchains to take advantage of the highest yielding opportunities.",
+        "Launch the full version of the multiplayer player-versus-environment mode for all players to enjoy.",
     },
   ];
 
@@ -1449,7 +1505,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card  d-flex flex-column align-items-center">
+            <div className="date-card selected  d-flex flex-column align-items-center">
               <img
                 src={selectedRoadmap}
                 style={{ visibility: "hidden" }}
