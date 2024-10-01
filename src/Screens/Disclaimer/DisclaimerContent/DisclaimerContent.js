@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../../../components/Title/Title";
-import sphere from '../../../assets/newsSphere.png';
+import sphere from "../../../assets/newsSphere.png";
 
 const DisclaimerContent = () => {
   return (
@@ -8,7 +8,7 @@ const DisclaimerContent = () => {
       {/* <img className='sphere-2' src={sphere} alt="" style={{position: 'absolute', right: '8%', top: '-9%'}}/> */}
 
       <div className="container pt-5 pb-5">
-        <Title top={"Dypius"} bottom={"Terms of Service"} /> <br/>
+        <Title top={"Dypius"} bottom={"Terms of Service"} /> <br />
         <p>
           Dypius is a decentralized platform that people can use for yield
           farming, staking, and enabling users to leverage the advanced trading
@@ -44,6 +44,41 @@ const DisclaimerContent = () => {
           significant losses, so you should consult with your financial advisor
           before making any decisions. Nothing on our Site should be considered
           an invitation or offer to take any action.
+        </p>
+        <p>
+          COMPLIANCE WITH SANCTIONS, DISCLAIMERS, LIMITATIONS OF LIABILITY,
+          INDEMNIFICATION
+        </p>
+        <p>
+          By using our Services, you represent and warrant that: (a) neither
+          you, as an individual or entity, nor any entity or individual you
+          represent or are affiliated with, are subject to any sanctions imposed
+          by the U.S. Government (including the Office of Foreign Assets Control
+          of the U.S. Department of the Treasury ("OFAC")), the United Nations
+          Security Council, the European Union, Her Majesty’s Treasury, or any
+          other relevant sanctions authority; (b) neither you nor any entity or
+          individual you represent or are affiliated with, are located,
+          organized, or resident in a country or territory that is the subject
+          or target of sanctions imposed by any of the aforementioned
+          authorities; and (c) neither you, as an individual or entity, nor your
+          wallet address, appear on the Specially Designated Nationals and
+          Blocked Persons List, Consolidated Sanctions List, or any other
+          sanctions lists administered by OFAC or the other listed authorities
+          (d) you are not using the Services for money laundering or any illegal
+          activity; (e) you have not engaged in fraudulent activity; (f) you
+          have not acquired cryptoassets using inappropriate methods, including
+          the use of stolen funds to purchase such assets.<br/><br/> You further agree not
+          to use our Services for any activities that would result in a
+          violation of such sanctions, including but not limited to engaging
+          with any person or entity subject to sanctions, or conducting business
+          in any country or territory that is the subject of sanctions,
+          including Crimea, Russia, Cuba, Iran, North Korea, Côte d’Ivoire,
+          Belarus, Iraq, Liberia, Sudan and Syria. We reserve the right to take
+          whatever action we deem appropriate, including to terminate or
+          restrict access to our Services, if we reasonably suspect any
+          violation of applicable sanctions laws or regulations. You agree to
+          indemnify and hold harmless the Company from any liability arising
+          from your breach of this clause.
         </p>
         <p>
           <b>
