@@ -381,6 +381,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                           <li>DYP Locker</li>
                           <li>DYP News</li>
                           <li>DYP Launchpad</li>
+                          <li>Mini-games</li>
                           <li>World of Dypians Events</li>
                         </ul>
                         <p className="mb-0">
