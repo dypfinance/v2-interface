@@ -52,10 +52,14 @@
 
 .popup-span {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.018em;
   text-align: center;
+}
+
+.basepopup {
+  object-fit: contain;
 }
 
 .land-nft-image{
