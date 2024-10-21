@@ -2,8 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import "./_landpopup.scss";
 import landPopup from "./landPopup.webp";
 import closePopup from "./closePopup.svg";
-import migrationPopup from "./migrationPopup.webp";
-import loyaltyBg from "./loyaltyBg.png";
+import migrationPopup from "./migrationPopup2.webp";
+import baseBg from "./baseBg.png";
 import Slider from "react-slick";
 import OutsideClickHandler from "react-outside-click-handler";
 import Countdown from "react-countdown";
@@ -78,63 +78,60 @@ const LandPopup = () => {
           />
         </div>
         <Slider {...settings} ref={slider}>
-          {expired === false && (
+           
             <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-4">
               <div className="d-flex flex-column align-items-center justify-content-center">
                 <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
                   <h6 className="popup-title d-flex align-items-center gap-2 mb-0">
-                    Loyalty
-                  </h6>
-                  <h6 className="popup-title metaverse mb-0">Program</h6>
+                  Games on</h6>
+                  <h6 className="popup-title metaverse mb-0">Base</h6>
                 </div>
                 <span className="popup-span mb-0">
-                  This program rewards your interactions within Dypius ecosystem
-                  by offering gas fee rebates on Base. Join us in exploring the
-                  ecosystem with lower costs and great benefits for loyal
-                  participants!
+                Enjoy the ultimate gaming experience on Base and earn tailored rewards!
                 </span>
               </div>
               <img
-                src={loyaltyBg}
-                className="land-nft-image w-100"
+                src={baseBg}
+                className="land-nft-image basepopup"
                 alt="land nft"
               />
               <a
-                href="https://app.dypius.com/loyalty-program"
+                href="https://app.dypius.com/games"
                 target={"_blank"}
                 onClick={() => setActive(false)}
               >
-                <button className="btn filled-btn m-3">Apply</button>
+                <button className="btn filled-btn m-3">Play</button>
               </a>
             </div>
-          )}
+       
 
-          <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-3">
+          <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-4">
             <div className="d-flex flex-column align-items-center justify-content-center">
               <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
                 <h6 className="popup-title d-flex align-items-center gap-2 mb-0">
-                  WOD Token
+                  DYP Token migration is now
                 </h6>
-                <h6 className="popup-title metaverse mb-0">Whitelist</h6>
+                <h6 className="popup-title metaverse mb-0">Live</h6>
               </div>
               <span className="popup-span mb-0">
-                As part of the Dypius ecosystem, we're enhancing our user
-                utilities with the upcoming WOD Token launch. Secure your spot
-                now as we are offering early access to the exclusive WOD token
-                sale through a Whitelist for our members.
+                Easily migrate your old DYP tokens from Ethereum, BNB Chain, and
+                Avalanche to the new DYP v2 token on Ethereum.
               </span>
             </div>
             <img
               src={migrationPopup}
-              className="land-nft-image"
+              className="land-nft-image basepopup"
               alt="land nft"
             />
+            {/* <span className="popup-content">
+          Total Genesis land supply limited to 1,000 plots
+        </span> */}
             <a
-              href="https://app.dypius.com/launchpad"
+              href="https://app.dypius.com/migration"
               target={"_blank"}
               onClick={() => setActive(false)}
             >
-              <button className="btn filled-btn m-3">Join the whitelist</button>
+              <button className="btn filled-btn m-3">Migrate</button>
             </a>
           </div>
           {/* <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-3">
