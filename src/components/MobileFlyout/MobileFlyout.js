@@ -40,7 +40,7 @@ const MobileFlyout = ({ onClose, onDownloadClick }) => {
   }, [lastScrollY]);
 
   return (
-    <div className={`mobile-flyout-wrapper p-2 w-100 d-block d-lg-none d-md-none  `}>
+    <div className={`mobile-flyout-wrapper p-2 w-100 d-block d-lg-none`}>
       <div className="d-flex align-items-center gap-2">
         <img src={newTag} alt="" />
         <span className="mobile-flyout-text w-100">Dypius Mobile App</span>
