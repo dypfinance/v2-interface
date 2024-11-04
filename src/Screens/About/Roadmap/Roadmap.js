@@ -481,12 +481,14 @@ const Roadmap = () => {
       title: "Loyalty Program Introduction",
       content:
         "Introduce a loyalty program exclusive to Base users, offering gas incentives and other rewards, aimed at improving user onboarding and transaction efficiency.",
-    },
+        completed: true,
+      },
     {
       title: "Introduction of the Stone Crack Game",
       content:
         "Launch the Stone Crack game, an interactive and engaging mini-game where players break stones to earn valuable rewards. The game will be available on Base, adding an extra layer of entertainment for users.",
-    },
+        completed: true,
+      },
     
   ];
 
