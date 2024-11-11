@@ -1,6 +1,5 @@
 .popup-wrapper {
   position: fixed;
-  width: fit-content;
   height: fit-content;
   top: -10000px;
   left: 0%;
@@ -15,9 +14,9 @@
   overflow-x: hidden;
   width: 30%;
 
-  // @media screen and (max-width: 1590px) {
-  //     width: 55%;
-  // }
+  @media screen and (max-width: 1440px) {
+      width: 40%;
+  }
   @media screen and (max-width: 1300px) {
       width: 50% !important;
   }
@@ -34,11 +33,17 @@
 .popup-title {
   font-weight: 700;
   font-size: 24px;
-  line-height: 48px;
+  // line-height: 48px;
 
   @media screen and (max-width: 786px) {
     font-size: 15px;
   }
+}
+
+.close-wrapper {
+  position: relative;
+  top: -15px;
+  right: -10px;
 }
 
 .popup-content {

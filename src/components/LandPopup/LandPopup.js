@@ -67,7 +67,7 @@ const LandPopup = () => {
           }}
         />
 
-        <div className="d-flex pt-3 pe-3 align-items-center justify-content-end w-100">
+        <div className="d-flex pt-3 pe-3 align-items-center justify-content-end w-100 close-wrapper">
           <img
             src={closePopup}
             onClick={() => setActive(false)}

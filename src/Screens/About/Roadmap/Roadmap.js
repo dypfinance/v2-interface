@@ -481,12 +481,14 @@ const Roadmap = () => {
       title: "Loyalty Program Introduction",
       content:
         "Introduce a loyalty program exclusive to Base users, offering gas incentives and other rewards, aimed at improving user onboarding and transaction efficiency.",
-    },
+        completed: true,
+      },
     {
       title: "Introduction of the Stone Crack Game",
       content:
         "Launch the Stone Crack game, an interactive and engaging mini-game where players break stones to earn valuable rewards. The game will be available on Base, adding an extra layer of entertainment for users.",
-    },
+        completed: true,
+      },
     
   ];
 
@@ -501,16 +503,16 @@ const Roadmap = () => {
       content:
         "Introduce a new in-game currency to enhance the game's economy and provide more options for players.",
     },
-    {
-      title: "Full Release of the Multiplayer PvP",
-      content:
-        "Launch the full version of the multiplayer player-versus-player mode for competitive gameplay.",
-    },
-    {
-      title: "NFT Customization",
-      content:
-        "Enable players to customize their NFTs, such as weapons and equipment, by adding elements or items to them.",
-    },
+    // {
+    //   title: "Full Release of the Multiplayer PvP",
+    //   content:
+    //     "Launch the full version of the multiplayer player-versus-player mode for competitive gameplay.",
+    // },
+    // {
+    //   title: "NFT Customization",
+    //   content:
+    //     "Enable players to customize their NFTs, such as weapons and equipment, by adding elements or items to them.",
+    // },
     {
       title: "Mobile App Improvements",
       content:
@@ -542,15 +544,22 @@ const Roadmap = () => {
         "Launch the first version of the in-game shop where players can buy items, loot, weapons, and equipment.",
     },
     {
-      title: "Introduction of Character NFT Generation",
+      title: "dApps UI/UX Improvement",
       content:
-        "Generate the main character in the game as an NFT item, adding value and uniqueness to the player's experience.",
+        "Improve the user interface and experience across all platforms and products for a more seamless and enjoyable user experience.",
+      completed: false,
+
     },
-    {
-      title: "Full Release of the Multiplayer PvE",
-      content:
-        "Launch the full version of the multiplayer player-versus-environment mode for all players to enjoy.",
-    },
+    // {
+    //   title: "Introduction of Character NFT Generation",
+    //   content:
+    //     "Generate the main character in the game as an NFT item, adding value and uniqueness to the player's experience.",
+    // },
+    // {
+    //   title: "Full Release of the Multiplayer PvE",
+    //   content:
+    //     "Launch the full version of the multiplayer player-versus-environment mode for all players to enjoy.",
+    // },
   ];
 
   const [oldSlide, setOldSlide] = useState(0);
