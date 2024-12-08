@@ -10,9 +10,24 @@ import Countdown from "react-countdown";
 
 const renderer = ({ days, hours, minutes }) => {
   return (
-    <h6 className="d-none">
-      {days}d : {hours}h : {minutes}m
-    </h6>
+    <div className="d-flex align-items-center gap-2">
+      <div className="d-flex flex-column align-items-center justify-content-center unit">
+        <h6 className="time-big-number">{days < 10 ? "0" + days : days}</h6>
+        <h6 className="time-small-number">Days</h6>
+      </div>
+      <h6 className="timer-separator">:</h6>
+      <div className="d-flex flex-column align-items-center justify-content-center unit">
+        <h6 className="time-big-number">{hours < 10 ? "0" + hours : hours}</h6>
+        <h6 className="time-small-number">Hours</h6>
+      </div>
+      <h6 className="timer-separator">:</h6>
+      <div className="d-flex flex-column align-items-center justify-content-center unit">
+        <h6 className="time-big-number">
+          {minutes < 10 ? "0" + minutes : minutes}
+        </h6>
+        <h6 className="time-small-number">Minutes</h6>
+      </div>
+    </div>
   );
 };
 
@@ -31,7 +46,7 @@ const LandPopup = () => {
   const popup = document.querySelector("#popup");
   const html = document.querySelector("html");
   const slider = useRef();
-  let loyaltyCd = new Date("2024-09-16T12:59:59.000+02:00");
+  let loyaltyCd = new Date("2025-01-08T12:59:59.000+02:00");
 
   const settings = {
     dots: false,
@@ -59,14 +74,6 @@ const LandPopup = () => {
         id="popup"
         className={`popup-wrapper ${active && "popup-active"} p-3`}
       >
-        <Countdown
-          renderer={renderer}
-          date={loyaltyCd}
-          onComplete={() => {
-            setisExpired(true);
-          }}
-        />
-
         <div className="d-flex pt-3 pe-3 align-items-center justify-content-end w-100 close-wrapper">
           <img
             src={closePopup}
@@ -78,44 +85,20 @@ const LandPopup = () => {
           />
         </div>
         <Slider {...settings} ref={slider}>
-           
-            <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-4">
-              <div className="d-flex flex-column align-items-center justify-content-center">
-                <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
-                  <h6 className="popup-title d-flex align-items-center gap-2 mb-0">
-                  Games on</h6>
-                  <h6 className="popup-title metaverse mb-0">Base</h6>
-                </div>
-                <span className="popup-span mb-0">
-                Enjoy the ultimate gaming experience on Base and earn tailored rewards!
-                </span>
-              </div>
-              <img
-                src={baseBg}
-                className="land-nft-image basepopup"
-                alt="land nft"
-              />
-              <a
-                href="https://app.dypius.com/games"
-                target={"_blank"}
-                onClick={() => setActive(false)}
-              >
-                <button className="btn filled-btn m-3">Play</button>
-              </a>
-            </div>
-       
-
           <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-4">
             <div className="d-flex flex-column align-items-center justify-content-center">
               <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
                 <h6 className="popup-title d-flex align-items-center gap-2 mb-0">
-                  DYP Token migration is now
+                  Final Call:
                 </h6>
-                <h6 className="popup-title metaverse mb-0">Live</h6>
+                <h6 className="popup-title metaverse mb-0">
+                  Migrate to DYP v2
+                </h6>
               </div>
               <span className="popup-span mb-0">
-                Easily migrate your old DYP tokens from Ethereum, BNB Chain, and
-                Avalanche to the new DYP v2 token on Ethereum.
+                The deadline to migrate is January 8, 2025. After this,
+                migration will close permanently. Migrate your tokens today to
+                secure continued access and utility!
               </span>
             </div>
             <img
@@ -123,9 +106,13 @@ const LandPopup = () => {
               className="land-nft-image basepopup"
               alt="land nft"
             />
-            {/* <span className="popup-content">
-          Total Genesis land supply limited to 1,000 plots
-        </span> */}
+            <Countdown
+              renderer={renderer}
+              date={loyaltyCd}
+              onComplete={() => {
+                setisExpired(true);
+              }}
+            />
             <a
               href="https://app.dypius.com/migration"
               target={"_blank"}
@@ -134,6 +121,33 @@ const LandPopup = () => {
               <button className="btn filled-btn m-3">Migrate</button>
             </a>
           </div>
+          <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-4">
+            <div className="d-flex flex-column align-items-center justify-content-center">
+              <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
+                <h6 className="popup-title d-flex align-items-center gap-2 mb-0">
+                  Games on
+                </h6>
+                <h6 className="popup-title metaverse mb-0">Base</h6>
+              </div>
+              <span className="popup-span mb-0">
+                Enjoy the ultimate gaming experience on Base and earn tailored
+                rewards!
+              </span>
+            </div>
+            <img
+              src={baseBg}
+              className="gameonbase basepopup"
+              alt="land nft"
+            />
+            <a
+              href="https://app.dypius.com/games"
+              target={"_blank"}
+              onClick={() => setActive(false)}
+            >
+              <button className="btn filled-btn m-3">Play</button>
+            </a>
+          </div>
+
           {/* <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-3">
           <div className="d-flex flex-column align-items-center justify-content-center">
             <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">

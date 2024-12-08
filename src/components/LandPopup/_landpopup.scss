@@ -73,6 +73,42 @@
 
 }
 
+.gameonbase{
+  width: 427px;
+  height: 320px;
+
+}
+
+.unit {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border-radius: 8px;
+  padding: 10px 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(106, 17, 203, 0.5);
+  width: 80px;
+}
+
+.time-big-number {
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+  margin: 0;
+color: white;
+}
+
+.time-small-number {
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.timer-separator {
+  font-size: 24px;
+  color: #6a11cb;
+}
 
 @media screen and (max-width: 786px) {
     .popup-span{
