@@ -67,7 +67,7 @@ Button: Explore
                   <a href={item.link} target="_blank" rel="noreferrer">
                     <div className="p-3 bg-white">
                       <img
-                        src={require(`../../../assets/DypAssets/${item.image}`)}
+                        src={`https://cdn.worldofdypians.com/dypius/${item.image}`}
                         alt=""
                         className="eduImg"
                       />

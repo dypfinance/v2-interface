@@ -7,9 +7,9 @@ import coinGecko from "../../assets/coinGecko.svg";
 import contactUs from "../../assets/contactUs.svg";
 import disclaimer from "../../assets/disclaimer.svg";
 import { HashLink as Link } from "react-router-hash-link";
-import metaverseModal from "../Navbar/assets/metaverseModal.svg";
-import commingSoon from "../Navbar/assets/commingSoon.png";
-import xMark from "../Navbar/assets/xMark.svg";
+
+
+
 import Title from "../Title/Title";
 import OutsideClickHandler from "react-outside-click-handler";
 
@@ -282,10 +282,7 @@ const Footer = () => {
                         className={
                           indicators.about ? `indicator turn` : "indicator"
                         }
-                        src={
-                          require(`../../assets/accordionIndicator2.svg`)
-                            .default
-                        }
+                        src={`https://cdn.worldofdypians.com/dypius/accordionIndicator2.svg`}
                         alt=""
                       />
                     </div>
@@ -327,10 +324,7 @@ const Footer = () => {
                         className={
                           indicators.products ? `indicator turn` : "indicator"
                         }
-                        src={
-                          require(`../../assets/accordionIndicator2.svg`)
-                            .default
-                        }
+                        src={`https://cdn.worldofdypians.com/dypius/accordionIndicator2.svg`}
                         alt=""
                       />
                     </div>
@@ -414,10 +408,7 @@ const Footer = () => {
                         className={
                           indicators.learn ? `indicator turn` : "indicator"
                         }
-                        src={
-                          require(`../../assets/accordionIndicator2.svg`)
-                            .default
-                        }
+                        src={`https://cdn.worldofdypians.com/dypius/accordionIndicator2.svg`}
                         alt=""
                       />
                     </div>
@@ -462,10 +453,7 @@ const Footer = () => {
                             ? `indicator turn`
                             : "indicator "
                         }
-                        src={
-                          require(`../../assets/accordionIndicator2.svg`)
-                            .default
-                        }
+                        src={`https://cdn.worldofdypians.com/dypius/accordionIndicator2.svg`}
                         alt=""
                       />
                     </div>
@@ -625,17 +613,17 @@ const Footer = () => {
                       </Link>
                     ))}
                   </div>
-                  <div className="d-flex flex-column gap-3 position-relative"style={{ bottom: "-60px" }}>
+                  <div
+                    className="d-flex flex-column gap-3 position-relative"
+                    style={{ bottom: "-60px" }}
+                  >
                     <Link
                       to={"/terms-of-service"}
                       className="text-white text-decoration-none footer-type-link"
                     >
                       <h5>Terms of Service</h5>
                     </Link>
-                    <div
-                      className="d-flex flex-row gap-3 position-relative"
-                      
-                    >
+                    <div className="d-flex flex-row gap-3 position-relative">
                       <a
                         target="_blank"
                         rel="noreferrer"
@@ -689,13 +677,13 @@ const Footer = () => {
           } flex-column p-5 d-flex gap-3 align-items-center justify-content-center`}
         >
           <img
-            src={xMark}
+            src={"https://cdn.worldofdypians.com/dypius/xMark.svg"}
             alt=""
             className="x-mark"
             onClick={() => setMetaverse(false)}
           />
-          <img src={metaverseModal} alt="" />
-          <img src={commingSoon} alt="" width={400} />
+          <img src={"https://cdn.worldofdypians.com/dypius/metaverseModal.svg"} alt="" />
+          <img src={"https://cdn.worldofdypians.com/dypius/comingSoon.png"} alt="" width={400} />
           <Title
             top="Stay"
             bottom="tuned"

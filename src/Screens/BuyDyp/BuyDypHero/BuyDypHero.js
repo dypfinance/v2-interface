@@ -284,7 +284,7 @@ const BuyDypHero = () => {
                   title={item.title}
                   id={item.id}
                   key={index}
-                  logo={require(`../../../assets/coins/${item.logo}`)}
+                  logo={`https://cdn.worldofdypians.com/dypius/${item.logo}`}
                   link={item.link}
                   totalvids={item.totalvids}
                   videos={item.videos}

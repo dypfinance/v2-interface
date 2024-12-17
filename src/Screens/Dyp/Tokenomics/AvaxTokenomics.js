@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Graph from "../../../assets/DypAssets/dyp-chart2.svg";
+
 import idypGraph from "../assets/avaxGraph.png";
 import Success from "../../../components/Success/Success";
 import getFormattedNumber from "../../../hooks/getFormattedNumber";

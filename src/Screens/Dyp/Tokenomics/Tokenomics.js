@@ -3,10 +3,8 @@ import axios from "axios";
 import NoteIcon from "../../../components/NoteIcon/NoteIcon";
 import Title from "../../../components/Title/Title";
 import Clipboard from "../assets/filledClipboard.svg";
-import Graph from "../../../assets/DypAssets/dyp-chart2.svg";
-import idypGraph from "../../../assets/DypAssets/idyp-chart2.svg";
-import PurpleArrowDown from "../../../assets/DypAssets/purpleArrow-down.svg";
-import WhiteArrowUp from "../../../assets/DypAssets/whiteArrow-up.svg";
+
+
 import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
 import tokenomicsIcon from "../../../assets/tokenomicsIcon.svg";
@@ -129,7 +127,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
             >
               DYP Tokenomics
               <img
-                src={toggledyp === true ? minus : PurpleArrowDown}
+                src={toggledyp === true ? minus : "https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg"}
                 alt=""
                 className="ml-2" 
               />
@@ -156,7 +154,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
             >
               iDYP Tokenomics
               <img
-                src={toggleIdyp === true ?  PurpleArrowDown : WhiteArrowUp}
+                src={toggleIdyp === true ?  "https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg" : "https://cdn.worldofdypians.com/dypius/whiteArrow-up.svg"}
                 alt=""
               />
             </button>
@@ -461,7 +459,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                   data-design="modern"
                   data-coin-ids="2669"
                 ></div>
-                <img src={Graph} alt="" className="w-100" />
+                <img src={"https://cdn.worldofdypians.com/dypius/dyp-chart2.svg"} alt="" className="w-100" />
                 <div className="">
                   <div className="circulating-wrapper w-100">
                     <div className="d-flex flex-column gap-3">
@@ -802,7 +800,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                     data-design="modern"
                     data-coin-ids="9517"
                   ></div>
-                  <img src={idypGraph} alt="" className="w-100" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/idyp-chart2.svg"} alt="" className="w-100" />
                 </div>
                 <div className="">
                   <div className="circulating-wrapper w-100 mb-3">

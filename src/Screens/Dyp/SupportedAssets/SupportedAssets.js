@@ -5,7 +5,6 @@ import ethDropdown from "../assets/ethereumDropdown.svg";
 import bnbDropdown from "../assets/bnbDropdown.svg";
 import avaDropdown from "../assets/avaDropdown.svg";
 import dropdownIndicator from "../assets/dropdownIndicator.svg";
-import Spiral from "../../../assets/DypAssets/spiral.png";
 import rightArrow from "../../../assets/filledArrow.svg";
 import axios from "axios";
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
@@ -447,7 +446,7 @@ const SupportedAssets = () => {
               /> */}
              
             </>
-            {/* <img className="spiral2" src={Spiral} alt="" /> */}
+       
             <a
               href="https://app.dypius.com/earn/dypius"
               target={"_blank"}

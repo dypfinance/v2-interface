@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "../../../components/Title/Title";
 import pasteimg from "../assets/paste-icon.svg";
-import DotFrame from "../../../assets/DypAssets/dotFrame.svg";
+
 import ring from "../../../assets/tokenCircle.png";
 import mediaKit from "../assets/mediaKit.svg";
 import pitchDeck from "../assets/pitchDeck.svg";
@@ -22,12 +22,6 @@ const Brand = () => {
         <div className="row m-0 justify-content-between gap-3">
           <div className="col-lg-5 col-xl-5 branditem">
             <div className="row m-0 justify-content-between gap-3 align-items-center">
-              {/* <img
-                className="dotframe position-absolute"
-                src={DotFrame}
-                style={{ zIndex: "-1", bottom: "-100px" }}
-              /> */}
-
               <div className="brand-icon mb-3">
                 <img src={mediaKit} alt="" />
               </div>

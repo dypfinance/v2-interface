@@ -57,7 +57,7 @@ const VideoTutorials = () => {
                   <a href={item.link} target="_blank" rel="noreferrer">
                     <div className="p-3 bg-white">
                       <img
-                        src={require(`../../../assets/DypAssets/${item.image}`)}
+                        src={`https://cdn.worldofdypians.com/dypius/commet1.svg/${item.image}`}
                         alt=""
                         className="eduImg"
                          

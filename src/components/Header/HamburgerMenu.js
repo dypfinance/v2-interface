@@ -7,12 +7,8 @@ import dypiusLogo from "../../assets/dypiusLogo.svg";
 import dypiusLogoPurple from "../../assets/dypius-purple.svg";
 import mobileNavArrow from "../../assets/mobileNavArrow.svg";
 import toolsBorder from "../../assets/toolsBorder.svg";
-import metaverseModal from "../Navbar/assets/metaverseModal.svg";
-import commingSoon from "../Navbar/assets/commingSoon.png";
-import xMark from "../Navbar/assets/xMark.svg";
 import Title from "../Title/Title";
-import toolsBtn from "../../components/Navbar/assets/toolsBtn.svg";
-import toolsOutline from "../../components/Navbar/assets/toolsOutline.svg";
+
 
 const HamburgerMenu = ({showFlyout}) => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -210,14 +206,9 @@ const HamburgerMenu = ({showFlyout}) => {
               <img src={toolsLogo} className="pe-2" alt=""  />
               DYP Tools
             </button> */}
-                <img src={toolsBtn} className="tools-btn" alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/toolsBtn.svg"} className="tools-btn" alt="" />
               </a>
-              {/* <img
-            src={toolsOutline}
-            className="position-absolute tools-outline"
-            
-            alt=""
-          /> */}
+          
             </div>
           </div>
         </>
@@ -229,13 +220,13 @@ const HamburgerMenu = ({showFlyout}) => {
           } flex-column p-5 d-flex gap-3 align-items-center justify-content-center`}
         >
           <img
-            src={xMark}
+            src={"https://cdn.worldofdypians.com/dypius/xMark.svg"}
             alt=""
             className="x-mark"
             onClick={() => setMetaverse(false)}
           />
-          <img src={metaverseModal} alt="" className="metaverse-title" />
-          <img src={commingSoon} alt="" width={400} className="comming-soon" />
+          <img src={"https://cdn.worldofdypians.com/dypius/metaverseModal.svg"} alt="" className="metaverse-title" />
+          <img src={"https://cdn.worldofdypians.com/dypius/comingSoon.png"} alt="" width={400} className="comming-soon" />
           <Title
             top="Stay"
             bottom="tuned"

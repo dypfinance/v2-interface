@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DypPool from "../../assets/DypAssets/dypPool.svg";
+
 import rightArrow from "../../assets/right-arrow.svg";
 import caws from "./assets/CAWS.svg";
 import dyp from "./assets/DYP.svg";

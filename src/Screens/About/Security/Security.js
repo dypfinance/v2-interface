@@ -103,7 +103,7 @@ const Security = () => {
                         <div className="row m-0 gap-3 justify-content-between align-items-center">
                           <div className="d-flex m-0 p-0 align-items-center gap-3">
                             <img
-                              src={require(`../../../assets/AuditedBy/${item.img}`)}
+                              src={`https://cdn.worldofdypians.com/dypius/${item.img}`}
                               alt=""
                               style={{ width: 40, height: 40 }}
                             />

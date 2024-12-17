@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "../../../components/ProductCards/ProductCards";
 import TokenCards from "../../../components/TokenCards/TokenCards";
-import TokenGraph from "../../../assets/DypAssets/ourtokens-graph.svg";
-import DotFrame from "../../../assets/DypAssets/dotFrame.svg";
 import axios from "axios";
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
 
@@ -61,7 +59,7 @@ const getDypPrice = async () => {
   
   return (
     <div className="container-fluid px-0 mt-0 position-relative" id="ourTokens">
-      {/* <img className="dotframe position-absolute" src={DotFrame} /> */}
+
       <div className="ourtokens-wrapper container-lg position-relative justify-content-start gap-0 gap-lg-5">
         {/* <img
           className="ourtoken-sphere"
@@ -69,7 +67,7 @@ const getDypPrice = async () => {
         /> */}
         <div>
           <div className="row justify-content-between m-0 gap-2 position-relative mb-4">
-            {/* <img src={TokenGraph} alt="" className="tokengraph" /> */}
+       
             <div className="col-lg-5 col-xl-5 pt-4">
               <h2 className="ourtoken-title">
                 DYP Token

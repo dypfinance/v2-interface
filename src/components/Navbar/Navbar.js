@@ -6,13 +6,10 @@ import toolsBorder from "../../assets/toolsBorder.svg";
 import { NavLink } from "react-router-dom";
 import "./_navbar.scss";
 import { useEffect } from "react";
-import metaverseModal from './assets/metaverseModal.svg'
-import commingSoon from './assets/commingSoon.png'
-import xMark from './assets/xMark.svg'
 import Title from '../Title/Title'
 import OutsideClickHandler from "react-outside-click-handler";
-import toolsBtn from './assets/toolsBtn.svg'
-import toolsOutline from './assets/toolsOutline.png'
+
+
 
 const Navbar = () => {
 
@@ -180,10 +177,10 @@ const Navbar = () => {
               <img src={toolsLogo} className="pe-2" alt=""  />
               DYP Tools
             </button> */}
-            <img src={toolsBtn} className="tools-btn" alt="" />
+            <img src={"https://cdn.worldofdypians.com/dypius/toolsBtn.svg"} className="tools-btn" alt="" />
           </a>
           <img
-            src={toolsOutline}
+            src={"https://cdn.worldofdypians.com/dypius/toolsOutline.png"}
             className="position-absolute tools-outline"
             
             alt=""
@@ -193,9 +190,9 @@ const Navbar = () => {
     </div>
    <OutsideClickHandler onOutsideClick={() => setMetaverse(false)}>
    <div className={`metaverse-modal-wrapper ${metaverse && 'metaverse-active'} flex-column p-5 d-flex gap-3 align-items-center justify-content-center`}>
-        <img src={xMark} alt="" className="x-mark" onClick={() => setMetaverse(false)} />
-        <img src={metaverseModal} alt="" />
-        <img src={commingSoon} alt="" width={400} />
+        <img src={"https://cdn.worldofdypians.com/dypius/xMark.svg"} alt="" className="x-mark" onClick={() => setMetaverse(false)} />
+        <img src={"https://cdn.worldofdypians.com/dypius/metaverseModal.svg"} alt="" />
+        <img src={"https://cdn.worldofdypians.com/dypius/comingSoon.png"} alt="" width={400} />
         <Title top="Stay" bottom="tuned" align="d-flex flex-row align-items-center gap-2" />
       </div>
    </OutsideClickHandler>

@@ -5,7 +5,7 @@ import useWindowSize from "../../../hooks/useWindowSize";
 import purpleBg from "../assets/purpleBackground.svg";
 import "./_whydypius.scss";
 import sphere from "../../../assets/newsSphere.png";
-import PurpleArrowDown from "../../../assets/DypAssets/purpleArrow-down.svg";
+
 
 const WhyDypius = () => {
   const windowSize = useWindowSize();
@@ -185,7 +185,7 @@ const WhyDypius = () => {
                     className={`btn outline-btn d-lg-none d-xl-none justify-content-center align-items-center`}
                   >
                     Load More
-                    <img src={PurpleArrowDown} alt="" className="ml-2" />
+                    <img src={"https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg"} alt="" className="ml-2" />
                   </button>
                 </div>
               </>

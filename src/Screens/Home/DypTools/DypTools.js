@@ -31,15 +31,15 @@ const DypTools = ({onDownloadClick}) => {
               />
               <ListCard
                 content="A wide range of interactive, decentralized applications"
-                image={"layers.svg"}
+                image={"layersCard.svg"}
               />
               <ListCard
                 content="Access to real-time data analytics"
-                image={"graph.svg"}
+                image={"graphCard.svg"}
               />
               <ListCard
                 content="Review and support tokens from various promising projects"
-                image={"token.svg"}
+                image={"tokenCard.svg"}
               />
             </div>
             <div className="d-flex flex-lg-row flex-column gap-2 align-items-center">

@@ -65,7 +65,7 @@ const DypMainHero = () => {
         >
           Solutions
           <img
-            src={require(`../../../assets/accordionIndicator.svg`).default}
+            src={`https://cdn.worldofdypians.com/dypius/accordionIndicator.svg`}
             alt="indicator"
             className="submenu-indicator"
           />
@@ -76,7 +76,7 @@ const DypMainHero = () => {
         >
           Token
           <img
-            src={require(`../../../assets/accordionIndicator.svg`).default}
+            src={`https://cdn.worldofdypians.com/dypius/accordionIndicator.svg`}
             alt="indicator"
             className="submenu-indicator"
           />
@@ -87,7 +87,7 @@ const DypMainHero = () => {
         >
           Vault
           <img
-            src={require(`../../../assets/accordionIndicator.svg`).default}
+            src={`https://cdn.worldofdypians.com/dypius/accordionIndicator.svg`}
             alt="indicator"
             className="submenu-indicator"
           />
@@ -98,7 +98,7 @@ const DypMainHero = () => {
         >
           Learn
           <img
-            src={require(`../../../assets/accordionIndicator.svg`).default}
+            src={`https://cdn.worldofdypians.com/dypius/accordionIndicator.svg`}
             alt="indicator"
             className="submenu-indicator"
           />

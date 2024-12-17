@@ -22,7 +22,7 @@ import Caws from "./Screens/Caws/Caws";
 import MobileFlyout from "./components/MobileFlyout/MobileFlyout";
 import OutsideClickHandler from "react-outside-click-handler";
 import { isMobile, MobileView, BrowserView } from "react-device-detect";
-import xMark from "./components/Navbar/assets/xMark.svg";
+
 
 
 function App() {
@@ -69,7 +69,7 @@ function App() {
           } flex-column p-4 d-flex gap-3 align-items-center justify-content-center`}
         >
           <img
-            src={xMark}
+            src={"https://cdn.worldofdypians.com/dypius/xMark.svg"}
             alt=""
             className="x-mark"
             onClick={() => setshowPopup(false)}

@@ -9,7 +9,7 @@ const ListCard = ({ content, image }) => {
        data-aos-duration="1000"
     >
       <img
-        src={require(`./assets/${image}`)}
+        src={`https://cdn.worldofdypians.com/dypius/${image}`}
         alt=""
         style={{ width: 45, height: 45 }}
       />
