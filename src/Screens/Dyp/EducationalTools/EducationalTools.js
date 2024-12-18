@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 import Title from "../../../components/Title/Title";
-import filledArrow from "../../../assets/filledArrow.svg";
-import playButtonActive from "../assets/playbtn-passive.svg";
-import playButton from "../assets/playButton.svg";
+
+
 
 
 const EducationalTools = () => {
@@ -72,7 +71,7 @@ Button: Explore
                         className="eduImg"
                       />
                     </div>
-                    <img src={playButton} alt="" className="ml-2 purpleArrow"  />{" "}
+                    <img src={"https://cdn.worldofdypians.com/dypius/playButton.svg"} alt="" className="ml-2 purpleArrow"  />{" "}
                   </a>
                 </div>
               );

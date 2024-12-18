@@ -2,7 +2,7 @@ import React from 'react'
 import Title from '../../../components/Title/Title'
 import './_videotutorials.scss'
 import rightArrow from '../../../assets/right-arrow.svg'
-import playButton from '../../Dyp/assets/playButton.svg'
+
 import sphere from '../../../assets/newsSphere.png'
 
 const VideoTutorials = () => {
@@ -63,7 +63,7 @@ const VideoTutorials = () => {
                          
                       />
                     </div>
-                    <img src={playButton} alt="" className="ml-2 purpleArrow"  />
+                    <img src={"https://cdn.worldofdypians.com/dypius/playButton.svg"} alt="" className="ml-2 purpleArrow"  />
                   </a>
                 </div>
               );

@@ -129,7 +129,7 @@ const Solutions = () => {
       <div className="container-fluid position-relative">
         <img
           className="rings"
-          src={require(`../assets/solutionRings.svg`).default}
+          src={`https://cdn.worldofdypians.com/dypius/solutionRings.svg`}
           alt=""
         />
 

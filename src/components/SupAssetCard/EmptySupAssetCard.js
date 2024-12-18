@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import rightArrow from "../../assets/right-arrow.svg";
-import caws from './assets/CAWS.svg'
-import dyp from './assets/DYP.svg'
-import idyp from './assets/iDYP.svg'
-import wod from './assets/wod.png'
-
 const EmptySupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, chainType, logo, commingSoon }) => {
 
   const ethCoins = ["ethereum", "wbtc", "usdc", "usdt"];

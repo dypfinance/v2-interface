@@ -2,9 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NoteIcon from "../../../components/NoteIcon/NoteIcon";
 import Title from "../../../components/Title/Title";
-import Clipboard from "../assets/filledClipboard.svg";
-
-
 import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
 import tokenomicsIcon from "../../../assets/tokenomicsIcon.svg";
@@ -180,7 +177,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                         )
                       : "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"}
                     <img
-                      src={Clipboard}
+                      src={"https://cdn.worldofdypians.com/dypius/filledClipboard.svg"}
                       alt=""
                       onClick={() => {
                         handleCopy(
@@ -489,7 +486,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                       : "0xbd100d061e120b2c67a24453cf6368e63f1be056"}
 
                     <img
-                      src={Clipboard}
+                      src={"https://cdn.worldofdypians.com/dypius/filledClipboard.svg"}
                       alt=""
                       onClick={() => {
                         handleCopy(

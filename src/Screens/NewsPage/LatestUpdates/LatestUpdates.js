@@ -7,7 +7,7 @@ import eventsActive from '../assets/eventsActive.svg'
 import eventsInactive from '../assets/eventsInactive.svg'
 import UpdateCard from '../../../components/UpdateCard/UpdateCard'
 import { RingLoader } from 'react-spinners'
-import dropdownIndicator from '../../Dyp/assets/dropdownIndicator.svg'
+
 import rainbowHero from '../../../assets/rainbowHero.png'
 import blueHero from '../../../assets/metaverse-blueHero.svg'
 import ring from '../../../assets/tokenCircle.png'
@@ -80,7 +80,7 @@ const LatestUpdates = ({type}) => {
                     {year}
                   </div>
               
-                <img src={dropdownIndicator} alt=""  />
+                <img src={"https://cdn.worldofdypians.com/dypius/dropdownIndicator.svg"} alt=""  />
               </div>
               <ul className="dropdown-menu coin-menu p-1" style={{width: '200px'}}>
                 <li
