@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DypRect from "../../assets/dypRect.svg";
+
 import planetImg from '../../assets/planetImg.svg'
 import planetShadow from '../../assets/planetShadow.svg'
 

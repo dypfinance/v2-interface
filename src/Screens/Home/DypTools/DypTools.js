@@ -4,7 +4,7 @@ import ListCard from "../../../components/ListCard/ListCard";
 import Title from "../../../components/Title/Title";
 
 import Laptop from "../../../assets/laptop2.png";
-import dots from "../../../assets/dots.png";
+
 import Triangle from "../../../assets/purple-triangle.png";
 import useWindowSize from "../../../hooks/useWindowSize";
 import AOS from "aos";

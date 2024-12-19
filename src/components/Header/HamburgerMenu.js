@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 import OutsideClickHandler from "react-outside-click-handler";
-import toolsLogo from "../../assets/dypToolsLogo.svg";
+
 import { NavLink } from "react-router-dom";
-import dypiusLogo from "../../assets/dypiusLogo.svg";
-import dypiusLogoPurple from "../../assets/dypius-purple.svg";
+
 import mobileNavArrow from "../../assets/mobileNavArrow.svg";
 import toolsBorder from "../../assets/toolsBorder.svg";
 import Title from "../Title/Title";
@@ -107,7 +106,7 @@ const HamburgerMenu = ({showFlyout}) => {
             style={{top: showFlyout ? '40px' : 0}}
           >
             <NavLink to="/">
-              <img src={logo ? dypiusLogoPurple : dypiusLogo} alt="" />
+              <img src={logo ? "https://cdn.worldofdypians.com/dypius/dypius-purple.svg" : "https://cdn.worldofdypians.com/dypius/dypiusLogo.svg"} alt="" />
             </NavLink>
             <div
               id="hamburgermenu"

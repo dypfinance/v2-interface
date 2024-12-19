@@ -7,7 +7,7 @@ import metaverse1 from "../../../assets/metaverse-1.png";
 import metaverse2 from "../../../assets/metaverse-2.png";
 import metaverse3 from "../../../assets/metaverse-3.png";
 import BlueHero from "../../../assets/metaverse-blueHero.svg";
-import Cube from "../../../assets/cube.png";
+
 import metaverseWaves from "../../../assets/metaverseWaves.svg";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -101,7 +101,7 @@ const DypMetaverse = () => {
                   <img src={metaverse2} alt="" className="img2" />
                 </PulseDiv>
                 <PulseDiv>
-                  <img src={Cube} alt="cube" className="cube" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/cube.png"} alt="cube" className="cube" />
                 </PulseDiv>
               </div>
               <div className="image-3">

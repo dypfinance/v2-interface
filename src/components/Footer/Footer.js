@@ -1,15 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useWindowSize from "../../hooks/useWindowSize";
 import "./_footer.scss";
-import logo from "../../assets/dypiusLogo.svg";
-import coinmarketcap from "../../assets/coinMarketCap.svg";
-import coinGecko from "../../assets/coinGecko.svg";
-import contactUs from "../../assets/contactUs.svg";
-import disclaimer from "../../assets/disclaimer.svg";
 import { HashLink as Link } from "react-router-hash-link";
-
-
-
 import Title from "../Title/Title";
 import OutsideClickHandler from "react-outside-click-handler";
 
@@ -492,18 +484,18 @@ const Footer = () => {
                       rel="noreferrer"
                       href="https://coinmarketcap.com/currencies/defi-yield-protocol-v2/"
                     >
-                      <img src={coinmarketcap} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/coinMarketCap.svg"} alt="" />
                     </a>
                     <a
                       target="_blank"
                       rel="noreferrer"
                       href="https://www.coingecko.com/en/coins/dypius"
                     >
-                      <img src={coinGecko} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/coinGecko.svg"} alt="" />
                     </a>
 
                     <Link to="/terms-of-service">
-                      <img src={disclaimer} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/disclaimer.svg"} alt="" />
                     </Link>
                   </div>
                 </div>
@@ -511,7 +503,7 @@ const Footer = () => {
             ) : (
               <>
                 <Link to="/">
-                  <img src={logo} alt="" width={160} height={90} />
+                  <img src={"https://cdn.worldofdypians.com/dypius/dypiusLogo.svg"} alt="" width={160} height={90} />
                 </Link>
                 <div className="col-2 text-white d-flex flex-column gap-3">
                   <h4 className="fw-normal">About Us</h4>
@@ -629,14 +621,14 @@ const Footer = () => {
                         rel="noreferrer"
                         href="https://coinmarketcap.com/currencies/defi-yield-protocol-v2/"
                       >
-                        <img src={coinmarketcap} alt="" />
+                        <img src={"https://cdn.worldofdypians.com/dypius/coinMarketCap.svg"} alt="" />
                       </a>
                       <a
                         target="_blank"
                         rel="noreferrer"
                         href="https://www.coingecko.com/en/coins/dypius"
                       >
-                        <img src={coinGecko} alt="" />
+                        <img src={"https://cdn.worldofdypians.com/dypius/coinGecko.svg"} alt="" />
                       </a>
 
                       <Link
@@ -645,7 +637,7 @@ const Footer = () => {
                           window.scrollTo(0, 0);
                         }}
                       >
-                        <img src={disclaimer} alt="" />
+                        <img src={"https://cdn.worldofdypians.com/dypius/disclaimer.svg"} alt="" />
                       </Link>
                     </div>
                   </div>
