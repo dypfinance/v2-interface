@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import EmptyProposalCard from "../../../components/ProposalCard/EmptyProposalCard";
 import ProposalCard from "../../../components/ProposalCard/ProposalCard";
-import totalProposalsIcon from "../assets/totalProposalsIcon.svg";
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
 import "./_proposals.scss";
 
@@ -163,7 +162,7 @@ const Proposals = () => {
           <div className="total-proposals position-relative p-3 d-flex align-items-center justify-content-between">
             <span className="proposal-span" />
             <div className="d-flex align-items-center gap-2">
-              <img src={totalProposalsIcon} alt="propsals icon" />
+              <img src={"https://cdn.worldofdypians.com/dypius/totalProposalsIcon.svg"} alt="propsals icon" />
               <span className="total-votes-text">Total Governance votes</span>
             </div>
             <h6 className="total-votes-amount mb-0">

@@ -45,11 +45,6 @@ const FAQ = () => {
       title: "Farm",
       icon: "farm"
     },
-    // {
-    //   id: "63488547062d4b709c4a250b",
-    //   title: "Buyback",
-    //   icon: "buyback"
-    // },
     {
       id: "634885c5062d4b709c4a250f",
       title: "Vault",
@@ -236,7 +231,7 @@ const FAQ = () => {
                 } align-items-center flex-column gap-2 mx-auto`}
               >
                 <img
-                  src={faqTitle === category.title ? require(`../assets/${category.icon}IconSelected.png`) : require(`../assets/${category.icon}Icon.png`)}
+                  src={faqTitle === category.title ? `https://cdn.worldofdypians.com/dypius/${category.icon}IconSelected.png` : `https://cdn.worldofdypians.com/dypius/${category.icon}Icon.png`}
                   alt=""
                   width={64}
                   height={64}

@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import ListCard from "../../../components/ListCard/ListCard";
 import Title from "../../../components/Title/Title";
-import filledArrow from "../../../assets/filledArrow.svg";
+
 import Laptop from "../../../assets/laptop2.png";
 import dots from "../../../assets/dots.png";
 import Triangle from "../../../assets/purple-triangle.png";
@@ -52,7 +52,7 @@ const DypTools = ({onDownloadClick}) => {
               data-aos-delay="500"
               data-aos-duration="1000" 
             >
-              Go to DYP Tools <img src={filledArrow} alt="" className="ml-2" />
+              Go to DYP Tools <img src={"https://cdn.worldofdypians.com/dypius/filledArrow.svg"} alt="" className="ml-2" />
             </a>
             <button
             onClick={onDownloadClick}

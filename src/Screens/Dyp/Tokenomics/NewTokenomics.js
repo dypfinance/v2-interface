@@ -5,16 +5,12 @@ import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
 import tokenomicsIcon from "../../../assets/tokenomicsIcon.svg";
 import Success from "../../../components/Success/Success";
-import minus from "../../../assets/minus.svg";
+
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
-import AvaxTokenomics from "./AvaxTokenomics";
-import ethIcon from "./assets/ethIcon.svg";
-import bnbIcon from "./assets/bnbIcon.svg";
-import avaxIcon from "./assets/avaxIcon.svg";
 import Web3 from "web3";
 import { TOKEN_ABI } from "./tokenAbi";
 import OutsideClickHandler from "react-outside-click-handler";
-import arrowup from "./assets/arrow-up.svg";
+
 
 const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   const [tokenomicData, setTokenomicData] = useState("dyp");
@@ -169,7 +165,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
               >
                 DYP Tokenomics
                 <img
-                  src={toggledyp === true ? minus : "https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg"}
+                  src={toggledyp === true ? "https://cdn.worldofdypians.com/dypius/minus.svg" : "https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg"}
                   alt=""
                   className="ml-2"
                 />
@@ -298,7 +294,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                                       }}
                                     >
                                       <h6 className="bottomitems m-0">
-                                        <img src={arrowup} alt="" />
+                                        <img src={"https://cdn.worldofdypians.com/dypius/arrow-up.svg"} alt="" />
                                         DYP Ethereum
                                       </h6>
                                     </a>
@@ -311,7 +307,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                                       }}
                                     >
                                       <h6 className="bottomitems m-0">
-                                        <img src={arrowup} alt="" />
+                                        <img src={"https://cdn.worldofdypians.com/dypius/arrow-up.svg"} alt="" />
                                         DYP Base
                                       </h6>
                                     </a>
@@ -325,7 +321,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                                       }}
                                     >
                                       <h6 className="bottomitems m-0">
-                                        <img src={arrowup} alt="" />
+                                        <img src={"https://cdn.worldofdypians.com/dypius/arrow-up.svg"} alt="" />
                                         DYP BNB Chain
                                       </h6>
                                     </a>
@@ -339,7 +335,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                                       }}
                                     >
                                       <h6 className="bottomitems m-0">
-                                        <img src={arrowup} alt="" />
+                                        <img src={"https://cdn.worldofdypians.com/dypius/arrow-up.svg"} alt="" />
                                         DYP Avalanche
                                       </h6>
                                     </a>
@@ -435,19 +431,19 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                           respective blockchain.
                         </p>
                         <div className="d-flex align-items-center gap-2">
-                          <img src={ethIcon} alt="" />
+                          <img src={"https://cdn.worldofdypians.com/dypius/ethIcon.svg"} alt="" />
                           <p className="mb-0" style={{ fontSize: "14px" }}>
                             1 DYP ERC20 - 6 DYP ERC20 V2
                           </p>
                         </div>
                         <div className="d-flex align-items-center gap-2">
-                          <img src={bnbIcon} alt="" />
+                          <img src={"https://cdn.worldofdypians.com/dypius/bnbIcon.svg"} alt="" />
                           <p className="mb-0" style={{ fontSize: "14px" }}>
                             1 DYP BEP20 - 1 DYP ERC20 V2
                           </p>
                         </div>
                         <div className="d-flex align-items-center gap-2">
-                          <img src={avaxIcon} alt="" />
+                          <img src={"https://cdn.worldofdypians.com/dypius/avaxIcon.svg"} alt="" />
                           <p className="mb-0" style={{ fontSize: "14px" }}>
                             1 DYP ARC20 - 1 DYP ERC20 V2
                           </p>

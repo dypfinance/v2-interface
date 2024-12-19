@@ -4,7 +4,7 @@ import ReCaptchaV2 from "react-google-recaptcha";
 import Title from "../../../components/Title/Title";
 import $alert from "../../../hooks/$alert";
 import "./_contactus.scss";
-import contactHeader from "../assets/contactHeader.png";
+
 import Box from "@mui/material/Box";
 import {
   TextField,
@@ -14,16 +14,13 @@ import {
   InputLabel,
   FormHelperText,
 } from "@mui/material";
-import envelope from "../assets/envelope.svg";
 import styled from "styled-components";
 import validate from "./validateinfo";
-import filebg1 from "../assets/filebg.svg";
-import filebg2 from "../assets/fileuploaded.svg";
+
 import useWindowSize from "../../../hooks/useWindowSize";
 import Modal from "../../../components/Modal/Modal";
 import { useEffect } from "react";
-import removebtn from '../assets/remove-btn.svg'
-import selectBtn from '../../Support/assets/selectBtn.svg'
+
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 
@@ -251,7 +248,7 @@ const ContactUs = () => {
           <div className="outer-form p-lg-4 p-xl-4 p-md-4 p-1 position-relative mx-2">
             <div className="d-lg-flex d-xl-flex align-items-center mx-2 mt-4 titlewrapper">
               <img
-                src={contactHeader}
+                src={"https://cdn.worldofdypians.com/dypius/contactHeader.png"}
                 alt=""
                  
                 className="col-lg-3 col-xl-3 px-0 px-lg-2 contactimg"
@@ -276,7 +273,7 @@ const ContactUs = () => {
                         className="circulating-title d-flex align-items-center gap-1 align-items-center"
                         style={{ fontWeight: 500, color: "#7670E0" }}
                       >
-                        <img src={envelope} alt=""  /> <p className="mb-0 email">business@dypius.com</p>
+                        <img src={"https://cdn.worldofdypians.com/dypius/envelopeAbout.svg"} alt=""  /> <p className="mb-0 email">business@dypius.com</p>
                       </span>
                     </div>
                   </a>
@@ -353,7 +350,7 @@ const ContactUs = () => {
                       onChange={handleChange}
                     />
                     <img
-                      src={selectBtn}
+                      src={"https://cdn.worldofdypians.com/dypius/selectBtn.svg"}
                       alt=""
                        
                       style={{
@@ -436,7 +433,7 @@ const ContactUs = () => {
                      helperText={errors.subject}
                    />
                    <img
-                     src={selectBtn}
+                     src={"https://cdn.worldofdypians.com/dypius/selectBtn.svg"}
                      alt=""
                       
                      style={{
@@ -480,8 +477,8 @@ const ContactUs = () => {
                    
                     style={{
                       backgroundImage: selectedFile
-                        ? `url(${filebg2})`
-                        : `url(${filebg1})`,
+                        ? `url(${"https://cdn.worldofdypians.com/dypius/fileuploaded.svg"})`
+                        : `url(${"https://cdn.worldofdypians.com/dypius/filebg.svg"})`,
                       backgroundRepeat: "no-repeat",
                       backgroundPosition: "center",
                       border: '2px solid #D6D8E7',
@@ -489,7 +486,7 @@ const ContactUs = () => {
                       fontSize: 0
                     }}
                   />
-                  <img src={removebtn} alt=''    style={{display: selectedFile ? 'block' : 'none', cursor: 'pointer'}} onClick={(e) => {
+                  <img src={"https://cdn.worldofdypians.com/dypius/remove-btn.svg"} alt=''    style={{display: selectedFile ? 'block' : 'none', cursor: 'pointer'}} onClick={(e) => {
                       handleChangeBg(e);
                     }}/>
                   </span>

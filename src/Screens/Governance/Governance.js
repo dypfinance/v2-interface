@@ -2,9 +2,6 @@ import React, { useEffect } from "react";
 import Title from "../../components/Title/Title";
 import rightArrow from "../../assets/right-arrow.svg";
 import GovCards from "../../components/GovCards/GovCards";
-import purplelink from "./assets/purplelink.svg";
-import purplelinkmd from "./assets/purplelink-md.svg";
-
 import useWindowSize from "../../hooks/useWindowSize";
 import Proposals from "./Proposals/Proposals";
 
@@ -73,7 +70,7 @@ const Governance = () => {
           </div>
           <div className="row m-0 justify-content-between gap-4 mt-4 position-relative">
             <img
-              src={purplelink}
+              src={"https://cdn.worldofdypians.com/dypius/purplelink.svg"}
               className="purplelink"
               alt=""
                
@@ -82,7 +79,7 @@ const Governance = () => {
             />
 
             <img
-              src={purplelinkmd}
+              src={"https://cdn.worldofdypians.com/dypius/purplelinkmd.svg"}
               className="purplelinkmd"
               alt=""
                

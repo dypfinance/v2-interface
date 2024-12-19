@@ -1,12 +1,9 @@
 import React from 'react'
 import Title from '../../../components/Title/Title'
 import './_supportmainhero.scss'
-import supportBrain from '../assets/supportBrain.png'
-import supportPhone from '../assets/supportPhone.png'
-import supportShape from '../assets/supportShape.png'
-import supportBanner from '../assets/supportBanner.png'
+
 import bluehero from '../../../assets/metaverse-blueHero.svg'
-import indicator from '../../About/assets/aboutIndicator.svg'
+
 import  sphere from '../../../assets/newsSphere.png'
 
 
@@ -27,7 +24,7 @@ const SupportMainHero = () => {
           <img src={supportPhone} alt="" className="phone"  />
           <img src={supportBrain} alt="" className="brain"  /> */}
           {/* <img src={bluehero} alt="" className="bluehero"  /> */}
-          <img src={supportBanner} className="support-banner" alt="" />
+          <img src={"https://cdn.worldofdypians.com/dypius/supportBanner.png"} className="support-banner" alt="" />
         </div> 
         </div>
         </div>
@@ -37,15 +34,15 @@ const SupportMainHero = () => {
       >
         <a href="#faq" className="text-decoration-none submenu-link">
           FAQs
-          <img src={indicator} className="submenu-indicator" alt=""  />
+          <img src={"https://cdn.worldofdypians.com/dypius/aboutIndicator.svg"} className="submenu-indicator" alt=""  />
         </a>
         <a href="#tutorials" className="text-decoration-none submenu-link">
           Tutorials
-          <img src={indicator} className="submenu-indicator" alt=""  />
+          <img src={"https://cdn.worldofdypians.com/dypius/aboutIndicator.svg"} className="submenu-indicator" alt=""  />
         </a>
         <a href="#helpcenter" className="text-decoration-none submenu-link">
           Contact us
-          <img src={indicator} className="submenu-indicator" alt=""  />
+          <img src={"https://cdn.worldofdypians.com/dypius/aboutIndicator.svg"} className="submenu-indicator" alt=""  />
         </a>
       </div>
     </div>

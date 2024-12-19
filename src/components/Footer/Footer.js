@@ -252,7 +252,7 @@ const Footer = () => {
                     <img
                       width={25}
                       height={25}
-                      src={require(`../../assets/${social.name.toLowerCase()}.svg`)}
+                      src={`https://cdn.worldofdypians.com/dypius/${social.name.toLowerCase()}Footer.svg`}
                       alt=""
                     />
                     <p className="mb-0">{social.name}</p>

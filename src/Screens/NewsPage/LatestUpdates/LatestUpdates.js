@@ -1,10 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import Title from '../../../components/Title/Title'
 import './_latestupdates.scss'
-import announcementsActive from '../assets/announcementsActive.svg'
-import announcementsInactive from '../assets/announcementsInactive.svg'
-import eventsActive from '../assets/eventsActive.svg'
-import eventsInactive from '../assets/eventsInactive.svg'
+
 import UpdateCard from '../../../components/UpdateCard/UpdateCard'
 import { RingLoader } from 'react-spinners'
 
@@ -113,8 +110,8 @@ const LatestUpdates = ({type}) => {
                 </li>
               </ul>
                 <div className="years-wrapper d-flex flex-row px-2 gap-1 justify-content-center align-items-center">
-              <p className={`${newsType === 'announcements' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={fetchAnnouncements}><img src={newsType === 'announcements' ? announcementsActive : announcementsInactive} alt=""   />Announcements</p>
-              <p className={` ${newsType === 'events' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={fetchEvents}><img src={newsType === 'events' ? eventsActive : eventsInactive} alt=""  />Events</p>
+              <p className={`${newsType === 'announcements' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={fetchAnnouncements}><img src={newsType === 'announcements' ? "https://cdn.worldofdypians.com/dypius/announcementsActive.svg" : "https://cdn.worldofdypians.com/dypius/announcementsInactive.svg"} alt=""   />Announcements</p>
+              <p className={` ${newsType === 'events' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={fetchEvents}><img src={newsType === 'events' ? "https://cdn.worldofdypians.com/dypius/eventsActive.svg" : "https://cdn.worldofdypians.com/dypius/eventsInactive.svg"} alt=""  />Events</p>
             </div>
             </div>
                 {news.length !== 0 ? 

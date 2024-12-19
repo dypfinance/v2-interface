@@ -1,8 +1,7 @@
 import React from "react";
 import Title from "../../../components/Title/Title";
-import filledArrow from "../../../assets/filledArrow.svg";
-import link from "./assets/link.svg";
-import github from './assets/github.svg'
+
+
 
 const Security = () => {
 
@@ -112,7 +111,7 @@ const Security = () => {
                             </p>
                           </div>
                           <span className="viewsite">
-                            View site <img src={filledArrow} className="ms-1" alt=""  />
+                            View site <img src={"https://cdn.worldofdypians.com/dypius/filledArrow.svg"} className="ms-1" alt=""  />
                           </span>
                         </div></a>
                     </div>
@@ -130,7 +129,7 @@ const Security = () => {
                   find our audit results stored in our
                   repository!
                 </p>
-                <img src={github} alt='' className="github-logo"  />
+                <img src={"https://cdn.worldofdypians.com/dypius/github.svg"} alt='' className="github-logo"  />
               </a>
             </div>
 
@@ -146,7 +145,7 @@ const Security = () => {
                       <div className="d-flex m-0 justify-content-between gap-2 align-items-center">
                         <span>{item.title}</span>
                         <div className="github-btn">
-                          <span>Github <img src={link} alt="" style={{ height: 25 }}   /></span>
+                          <span>Github <img src={"https://cdn.worldofdypians.com/dypius/github.svg"} alt="" style={{ height: 25 }}   /></span>
                         </div>
 
                       </div>
@@ -165,7 +164,7 @@ const Security = () => {
                           dangerouslySetInnerHTML={{ __html: item.title }}
                         ></span>
                         <div className="github-btn">
-                          <span>Github <img src={link} alt="" style={{ height: 25 }}  /></span>
+                          <span>Github <img src={"https://cdn.worldofdypians.com/dypius/github.svg"} alt="" style={{ height: 25 }}  /></span>
                         </div>
                       </div>
                     </a>
@@ -185,7 +184,7 @@ const Security = () => {
                           dangerouslySetInnerHTML={{ __html: item.title }}
                         ></span>
                       <div className="github-btn">
-                          <span>Github <img src={link} alt="" style={{ height: 25 }}  /></span>
+                          <span>Github <img src={"https://cdn.worldofdypians.com/dypius/github.svg"} alt="" style={{ height: 25 }}  /></span>
                         </div>
                       </div>
                     </a>
@@ -205,7 +204,7 @@ const Security = () => {
                           dangerouslySetInnerHTML={{ __html: item.title }}
                         ></span>
                         <div className="github-btn">
-                          <span>Github <img src={link} alt="" style={{ height: 25 }}  /></span>
+                          <span>Github <img src={"https://cdn.worldofdypians.com/dypius/github.svg"} alt="" style={{ height: 25 }}  /></span>
                         </div>
                       </div>
                     </a>
@@ -222,7 +221,7 @@ const Security = () => {
                           dangerouslySetInnerHTML={{ __html: item.title }}
                         ></span>
                          <div className="github-btn">
-                          <span>Github <img src={link} alt="" style={{ height: 25 }}  /></span>
+                          <span>Github <img src={"https://cdn.worldofdypians.com/dypius/github.svg"} alt="" style={{ height: 25 }}  /></span>
                         </div>
                       </div>
                     </a>

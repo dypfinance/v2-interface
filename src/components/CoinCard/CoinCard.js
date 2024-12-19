@@ -1,5 +1,5 @@
 import React from "react";
-import coinCardIcon from "../../assets/coinCardIcon.svg";
+
 
 const CoinCard = ({ title, stakeAmount, description }) => {
   return (

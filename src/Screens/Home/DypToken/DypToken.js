@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CoinCard from "../../../components/CoinCard/CoinCard";
 import Title from "../../../components/Title/Title";
-import coin from "../../../assets/coin.png";
-import coinBg from "../../../assets/coinbg2.png";
+
 import rightArrow from "../../../assets/right-arrow.svg";
 import "./_dyptoken.scss";
 import { NavLink } from "react-router-dom";
@@ -61,8 +60,8 @@ const DypToken = () => {
     <div className="container-lg d-flex justify-content-center mb-4 mb-lg-0">
       <div className="row dyp-token justify-content-between">
         <div className="col-6 col-lg-3 blue-half order-2 order-lg-1">
-          <img src={coin} className="coin" alt="" />
-          <img src={coinBg} className="coin" alt="" />
+          <img src={"https://cdn.worldofdypians.com/dypius/coin.png"} className="coin" alt="" />
+          <img src={"https://cdn.worldofdypians.com/dypius/coinbg.png"} className="coin" alt="" />
           <img
             className="ring-1"
             src={require(`../../../assets/tokenCircle.png`)}

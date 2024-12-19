@@ -44,7 +44,7 @@ const DypMainHero = () => {
         <div className="col-12 col-sm-6 col-lg-3 position-relative dyp-coin-wrapper">
           <img
             className="coin"
-            src={require(`../../../assets/coin.png`)}
+            src={`https://cdn.worldofdypians.com/dypius/coin.png`}
             alt=""
           />
           <img

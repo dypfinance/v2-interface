@@ -6,7 +6,7 @@ import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
 import tokenomicsIcon from "../../../assets/tokenomicsIcon.svg";
 import Success from "../../../components/Success/Success";
-import minus from "../../../assets/minus.svg";
+
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
 import AvaxTokenomics from "./AvaxTokenomics";
 
@@ -124,7 +124,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
             >
               DYP Tokenomics
               <img
-                src={toggledyp === true ? minus : "https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg"}
+                src={toggledyp === true ? "https://cdn.worldofdypians.com/dypius/minus.svg" : "https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg"}
                 alt=""
                 className="ml-2" 
               />

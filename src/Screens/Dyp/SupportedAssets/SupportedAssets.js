@@ -4,7 +4,7 @@ import Title from "../../../components/Title/Title";
 
 
 
-import rightArrow from "../../../assets/filledArrow.svg";
+
 import axios from "axios";
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
 import EmptySupAssetCard from "../../../components/SupAssetCard/EmptySupAssetCard";
@@ -453,7 +453,7 @@ const SupportedAssets = () => {
               className="outline-btn position-absolute d-flex align-items-center viewmorebtn"
               style={{ bottom: "-19px", width: "fit-content" }}
             >
-              View more <img src={rightArrow} alt="" className="ml-3" />
+              View more <img src={"https://cdn.worldofdypians.com/dypius/filledArrow.svg"} alt="" className="ml-3" />
             </a>
           </div>
         </div>

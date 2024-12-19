@@ -1,17 +1,11 @@
 import React from 'react'
-import supportPhone from '../../Screens/Support/assets/supportPhone.png'
-import plus from '../../Screens/Support/assets/plus.svg'
-import minus from '../../Screens/Support/assets/minus.svg'
-import formEmail from '../../assets/formEmail.svg'
-import supportInquiry from '../../Screens/Support/assets/supportInquiry.png'
-import supportBusiness from '../../Screens/Support/assets/supportBusiness.png'
 
 const FormContainer = ({onClick, accordionState, children, title, desc, collapse, email, emailLink, image}) => {
   return (
     <div className="col-12 col-xl-6">
           <div className="help-card position-relative p-4 d-flex flex-column justify-content-between">
             <img
-              src={image === "business" ? supportBusiness: supportInquiry}
+              src={image === "business" ? "https://cdn.worldofdypians.com/dypius/supportBusiness.png": "https://cdn.worldofdypians.com/dypius/supportInquiry.png"}
               alt=""
               className={`${image} position-absolute phone-image `}
             />
@@ -24,7 +18,7 @@ const FormContainer = ({onClick, accordionState, children, title, desc, collapse
                 aria-expanded="true"
                 aria-controls={collapse}
               >
-                Fill out form <img src={accordionState ? minus : plus} alt=""  />
+                Fill out form <img src={accordionState ? "https://cdn.worldofdypians.com/dypius/minus.svg" : "https://cdn.worldofdypians.com/dypius/plus.svg"} alt=""  />
               </button>
             </div>
             <div className="row w-100 position-relative justify-content-between align-items-center">

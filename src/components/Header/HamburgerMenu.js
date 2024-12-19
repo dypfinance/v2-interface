@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import dypiusIcon from "../../assets/dyptoolsIcon.svg";
+
 import OutsideClickHandler from "react-outside-click-handler";
 import toolsLogo from "../../assets/dypToolsLogo.svg";
 import { NavLink } from "react-router-dom";

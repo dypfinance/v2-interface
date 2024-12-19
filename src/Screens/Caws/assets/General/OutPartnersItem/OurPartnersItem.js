@@ -6,7 +6,7 @@ const OurPartnersItem = ({ image, text, href }) => {
     return (
         <div className="partners-item-wrapper">
             <a href={href} target='_blank'>
-            {image && <img src={require("../PartnerIcons/" + image)} alt={text} />}
+            {image && <img src={`https://cdn.worldofdypians.com/dypius/PartnerIcons/${image}`} alt={text} />}
             </a>
             <p>{text}</p>
         </div>

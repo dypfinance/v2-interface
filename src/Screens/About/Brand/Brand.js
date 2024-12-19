@@ -1,10 +1,10 @@
 import React from "react";
 import Title from "../../../components/Title/Title";
-import pasteimg from "../assets/paste-icon.svg";
+
 
 import ring from "../../../assets/tokenCircle.png";
-import mediaKit from "../assets/mediaKit.svg";
-import pitchDeck from "../assets/pitchDeck.svg";
+
+
 
 const Brand = () => {
   return (
@@ -23,7 +23,7 @@ const Brand = () => {
           <div className="col-lg-5 col-xl-5 branditem">
             <div className="row m-0 justify-content-between gap-3 align-items-center">
               <div className="brand-icon mb-3">
-                <img src={mediaKit} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/mediaKit.svg"} alt="" />
               </div>
               <a
                 href="https://drive.google.com/drive/folders/1Sh77agasJV4iYn3xU25JS3phIIVBGeZg"
@@ -61,7 +61,7 @@ const Brand = () => {
           <div className="col-lg-5 col-xl-5 branditem">
             <div className="row m-0 justify-content-between gap-3 align-items-center">
               <div className="brand-icon mb-3">
-                <img src={pitchDeck} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/pitchDeck.svg"} alt="" />
               </div>
               <a
                 href="https://drive.google.com/drive/folders/1PprliiDlNB6Cx-35eaEun-gmjk0-a1O4"
