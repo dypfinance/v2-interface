@@ -644,11 +644,7 @@ const Footer = () => {
                 </div>
               </>
             )}
-            {/* <img
-            className="sphere"
-            src={require(`../../assets/footerSphere.png`)}
-            alt=""
-          /> */}
+    
           </div>
           <hr className="d-none d-lg-block" />
 

@@ -1,8 +1,6 @@
 import React from "react";
 
 
-import rightArrow from "../../assets/right-arrow.svg";
-
 const ProductCard = ({ title, desc, link, classname }) => {
   return (
     <div className={classname + 'col-12 col-lg-5'}>
@@ -18,7 +16,7 @@ const ProductCard = ({ title, desc, link, classname }) => {
             rel={"noreferrer"}
             className="linkdesc"
           >
-            Go to {title} <img src={rightArrow} alt="" className="ml-2"  />
+            Go to {title} <img src={"https://cdn.worldofdypians.com/dypius/right-arrow.svg"} alt="" className="ml-2"  />
           </a>
         </div>
       </div>

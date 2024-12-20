@@ -180,11 +180,7 @@ const Solutions = () => {
             </button>
           </div>
         </div>
-        {/* <img
-        className="bluehero-solutions"
-        src={require(`../../../assets/metaverse-blueHero.svg`).default}
-        alt=""
-      /> */}
+    
       </div>
       <OutsideClickHandler onOutsideClick={() => setMetaverse(false)}>
         <div

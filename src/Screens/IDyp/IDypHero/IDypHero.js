@@ -1,5 +1,5 @@
 import React from "react";
-import sphere from "../../../assets/newsSphere.png";
+
 
 
 const IDypHero = () => {
@@ -7,7 +7,7 @@ const IDypHero = () => {
     <div className="container-fluid idypmainhero d-flex flex-column justify-content-center position-relative overflow-hidden">
       <img
         className="idypring d-none d-lg-block"
-        src={require(`../../../assets/tokenCircle.png`)}
+        src={`https://cdn.worldofdypians.com/dypius/tokenCircle.png`}
       />
             <img
         className="idypheroimg"
@@ -16,7 +16,7 @@ const IDypHero = () => {
       />
       <img
         className="sphere-2 d-none d-lg-block"
-        src={sphere}
+        src={"https://cdn.worldofdypians.com/dypius/newsSphere.png"}
         alt=""
         style={{ position: "absolute", left: "2%", top: "70%" }}
       />

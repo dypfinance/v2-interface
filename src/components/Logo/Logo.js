@@ -1,10 +1,14 @@
-import React from 'react'
-import Placeholder from '../../assets/placeholder.svg'
+import React from "react";
 
-const Logo = ()=>{
-    return(<div>
-        <img src={Placeholder} alt='logo'  />
-    </div>)
-}
+const Logo = () => {
+  return (
+    <div>
+      <img
+        src={"https://cdn.worldofdypians.com/dypius/placeholder.svg"}
+        alt="logo"
+      />
+    </div>
+  );
+};
 
-export default Logo
+export default Logo;

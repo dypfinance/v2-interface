@@ -60,7 +60,7 @@ const BuyDyp = () => {
             Explore
             <img
               className="ps-2"
-              src={require(`../../../assets/right-arrow.svg`).default}
+              src={`https://cdn.worldofdypians.com/dypius/right-arrow.svg`}
               alt=""
             />
           </NavLink>

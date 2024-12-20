@@ -3,7 +3,7 @@ import axios from "axios";
 import Title from "../../../components/Title/Title";
 import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
-import tokenomicsIcon from "../../../assets/tokenomicsIcon.svg";
+
 import Success from "../../../components/Success/Success";
 
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
@@ -136,7 +136,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
         <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
           <div className="row m-0 align-items-center justify-content-center gap-2 pl-0">
             <div className="tokenomics-icon d-flex justify-content-center align-items-center">
-              <img src={tokenomicsIcon} alt="" />
+              <img src={"https://cdn.worldofdypians.com/dypius/tokenomicsIcon.svg"} alt="" />
             </div>
             <Title top={"Tokenomics"} />
           </div>

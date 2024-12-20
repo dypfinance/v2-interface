@@ -1,7 +1,6 @@
 import React from "react";
-import rightArrow from "../../assets/right-arrow.svg";
-import vidthumbnail from "../../assets/vidthumbnail.png";
-import trustwallet from "../../assets/trustwallet.svg";
+
+
 
 
 
@@ -39,14 +38,14 @@ const BuyDypCard = ({
             <a href={link} target="_blank" rel="noreferrer" className="pr-0">
               <div className="pr-0">
                 <div className="rightarrow-wrapper">
-                  <img src={rightArrow} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/right-arrow.svg"} alt="" />
                 </div>
               </div>
             </a>
           ) : (
             <div className="pr-0" style={{ filter: "grayscale(1)" }}>
               <div className="rightarrow-wrapper">
-                <img src={rightArrow} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/right-arrow.svg"} alt="" />
               </div>
             </div>
           )}

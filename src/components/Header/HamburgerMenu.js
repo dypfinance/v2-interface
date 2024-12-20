@@ -3,9 +3,6 @@ import React, { useEffect, useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 
 import { NavLink } from "react-router-dom";
-
-import mobileNavArrow from "../../assets/mobileNavArrow.svg";
-import toolsBorder from "../../assets/toolsBorder.svg";
 import Title from "../Title/Title";
 
 
@@ -138,7 +135,7 @@ const HamburgerMenu = ({showFlyout}) => {
                   }}
                 >
                   DYP
-                  <img src={mobileNavArrow} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/mobileNavArrow.svg"} alt="" />
                 </NavLink>
               </li>
               <hr className="mobile-hr" />
@@ -150,7 +147,7 @@ const HamburgerMenu = ({showFlyout}) => {
                   rel="noreferrer"
                 >
                   Metaverse World
-                  <img src={mobileNavArrow} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/mobileNavArrow.svg"} alt="" />
                 </a>
               </li>
               <hr className="mobile-hr" />
@@ -163,7 +160,7 @@ const HamburgerMenu = ({showFlyout}) => {
                   }}
                 >
                   Governance
-                  <img src={mobileNavArrow} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/mobileNavArrow.svg"} alt="" />
                 </NavLink>
               </li>
               <hr className="mobile-hr" />
@@ -176,7 +173,7 @@ const HamburgerMenu = ({showFlyout}) => {
                   }}
                 >
                   Support
-                  <img src={mobileNavArrow} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/mobileNavArrow.svg"} alt="" />
                 </NavLink>
               </li>
               <hr className="mobile-hr" />
@@ -189,7 +186,7 @@ const HamburgerMenu = ({showFlyout}) => {
                   }}
                 >
                   About Us
-                  <img src={mobileNavArrow} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/mobileNavArrow.svg"} alt="" />
                 </NavLink>
               </li>
               <hr className="mobile-hr" />

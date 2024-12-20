@@ -4,10 +4,6 @@ import './_latestupdates.scss'
 
 import UpdateCard from '../../../components/UpdateCard/UpdateCard'
 import { RingLoader } from 'react-spinners'
-
-import rainbowHero from '../../../assets/rainbowHero.png'
-import blueHero from '../../../assets/metaverse-blueHero.svg'
-import ring from '../../../assets/tokenCircle.png'
 import axios from 'axios'
 
 const LatestUpdates = ({type}) => {
@@ -55,9 +51,9 @@ const LatestUpdates = ({type}) => {
   return (
     <div className="container-fluid updates-wrapper">
         <div className="container-lg updates-container p-5 position-relative">
-          <img src={blueHero} alt="" className="updates-bluehero"  />
-          <img src={rainbowHero} alt="" className="updates-rainbowHero"  />
-          <img src={ring} alt="" className="updates-ring d-none"  />
+          <img src={"https://cdn.worldofdypians.com/dypius/metaverse-blueHero.svg"} alt="" className="updates-bluehero"  />
+          <img src={"https://cdn.worldofdypians.com/dypius/rainbowHero.png"} alt="" className="updates-rainbowHero"  />
+          <img src={"https://cdn.worldofdypians.com/dypius/tokenCircle.png"} alt="" className="updates-ring d-none"  />
             <div className="row justify-content-center justify-content-lg-between gap-5">
                 <Title top='Latest' bottom='updates' align='d-flex flex-row gap-2' />
                 <div

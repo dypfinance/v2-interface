@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AuditedByItem from "../../../components/AuditedByItem/AuditedByItem";
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
-import Pin from "../../../assets/pin.png";
+
 
 const ChainlinkData = () => {
   const [totalpaid, setTotalPaid] = useState();
@@ -122,7 +122,7 @@ const ChainlinkData = () => {
             </div>
           </div>
         </div>
-        <img src={Pin} className="pin"   />{" "}
+        <img src={"https://cdn.worldofdypians.com/dypius/pin.png"} className="pin"   />{" "}
       </div>
     </div>
   );

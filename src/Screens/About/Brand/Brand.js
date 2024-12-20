@@ -1,22 +1,12 @@
 import React from "react";
 import Title from "../../../components/Title/Title";
 
-
-import ring from "../../../assets/tokenCircle.png";
-
-
-
 const Brand = () => {
   return (
     <div className="container-fluid mt-5 mb-5 position-relative px-0 px-lg-2" id="brand">
-      {/* <img
-        className="bluehero-solutions"
-        src={require(`../../../assets/metaverse-blueHero.svg`).default}
-        alt=""
-        style={{ bottom: "-50px", right: "18%" }}
-      /> */}
+
       <div className="container-lg position-relative">
-        {/* <img src={ring} alt="" className="brand-ring" /> */}
+    
 
         <Title top={"Brand"} align="d-flex flex-row gap-2 mb-3" />
         <div className="row m-0 justify-content-between gap-3">

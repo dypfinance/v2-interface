@@ -2,10 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import ListCard from "../../../components/ListCard/ListCard";
 import Title from "../../../components/Title/Title";
-
-import Laptop from "../../../assets/laptop2.png";
-
-import Triangle from "../../../assets/purple-triangle.png";
 import useWindowSize from "../../../hooks/useWindowSize";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -71,10 +67,10 @@ const DypTools = ({onDownloadClick}) => {
               windowSize.width < 786 ? "pulse" : `rotate-scale-up`
             }`}
           >
-            {/* <img className="iphoneBackground" src={iphoneBg} alt="" /> */}
+           
           </div>
-          <img src={Triangle} className="triangle" />
-          <img className="iphone" src={Laptop} alt="" />
+          <img src={"https://cdn.worldofdypians.com/dypius/purple-triangle.png"} className="triangle" />
+          <img className="iphone" src={"https://cdn.worldofdypians.com/dypius/laptop.png"} alt="" />
           {/* <img className="dots2" src={dots} alt="" /> */}
         </div>
       </div>

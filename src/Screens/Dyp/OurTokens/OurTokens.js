@@ -61,10 +61,7 @@ const getDypPrice = async () => {
     <div className="container-fluid px-0 mt-0 position-relative" id="ourTokens">
 
       <div className="ourtokens-wrapper container-lg position-relative justify-content-start gap-0 gap-lg-5">
-        {/* <img
-          className="ourtoken-sphere"
-          src={require(`../../../assets/newsSphere.png`)}
-        /> */}
+
         <div>
           <div className="row justify-content-between m-0 gap-2 position-relative mb-4">
        

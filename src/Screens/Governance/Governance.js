@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Title from "../../components/Title/Title";
-import rightArrow from "../../assets/right-arrow.svg";
+
 import GovCards from "../../components/GovCards/GovCards";
 import useWindowSize from "../../hooks/useWindowSize";
 import Proposals from "./Proposals/Proposals";
@@ -65,7 +65,7 @@ const Governance = () => {
               governance initiatives, and other programs.
             </p>
             <a className="filled-btn btn d-flex align-items-center" style={{width: 'fit-content'}} href="https://app.dypius.com/governance" target={'_blank'} rel='noreferrer'>
-              View more <img src={rightArrow} alt="" className="ml-2"  />
+              View more <img src={"https://cdn.worldofdypians.com/dypius/right-arrow.svg"} alt="" className="ml-2"  />
             </a>
           </div>
           <div className="row m-0 justify-content-between gap-4 mt-4 position-relative">

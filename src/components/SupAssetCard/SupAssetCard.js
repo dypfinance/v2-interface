@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import rightArrow from "../../assets/right-arrow.svg";
 
 
 
@@ -137,7 +136,7 @@ const SupAssetCard = ({
           rel="noreferrer"
         >
           {commingSoon ? "Coming Soon" : "Deposit now"}
-          {!commingSoon && <img src={rightArrow} alt="" className="ml-3" />}
+          {!commingSoon && <img src={"https://cdn.worldofdypians.com/dypius/right-arrow.svg"} alt="" className="ml-3" />}
         </a>
       </div>
     </div>

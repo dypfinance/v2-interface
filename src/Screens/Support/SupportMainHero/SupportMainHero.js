@@ -2,9 +2,6 @@ import React from 'react'
 import Title from '../../../components/Title/Title'
 import './_supportmainhero.scss'
 
-import bluehero from '../../../assets/metaverse-blueHero.svg'
-
-import  sphere from '../../../assets/newsSphere.png'
 
 
 const SupportMainHero = () => {
@@ -20,10 +17,7 @@ const SupportMainHero = () => {
           </p>
         </div>
         <div className="col-12 col-lg-5 col-md-5 image-container position-relative">
-          {/* <img src={supportShape} alt="" className="shape"  />
-          <img src={supportPhone} alt="" className="phone"  />
-          <img src={supportBrain} alt="" className="brain"  /> */}
-          {/* <img src={bluehero} alt="" className="bluehero"  /> */}
+     
           <img src={"https://cdn.worldofdypians.com/dypius/supportBanner.png"} className="support-banner" alt="" />
         </div> 
         </div>

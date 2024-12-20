@@ -26,7 +26,7 @@ const DypMainHero = () => {
       />
       <img
         className="ring d-none d-lg-block"
-        src={require(`../../../assets/tokenCircle.png`)}
+        src={`https://cdn.worldofdypians.com/dypius/tokenCircle.png`}
          
 
       />

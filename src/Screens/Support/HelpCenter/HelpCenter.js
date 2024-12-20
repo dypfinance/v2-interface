@@ -21,7 +21,7 @@ import { useRef } from "react";
 
 
 import Modal from "../../../components/Modal/Modal";
-import ring from "../../../assets/tokenCircle.png";
+
 import useWindowSize from "../../../hooks/useWindowSize";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -367,7 +367,6 @@ const HelpCenter = () => {
         className="row contact-container position-relative"
        
       >
-        {/* <img src={ring} alt="" className="help-ring d-none d-lg-block"  /> */}
         <FormContainer
           title="General Inquiry"
           desc="Get immediate help and support for Dypius products and solutions."

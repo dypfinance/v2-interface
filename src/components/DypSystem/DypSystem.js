@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-import planetImg from '../../assets/planetImg.svg'
-import planetShadow from '../../assets/planetShadow.svg'
+
 
 import { NavLink } from "react-router-dom";
 
@@ -112,8 +111,8 @@ const DypSystem = ({
         </div>
 
         <div className="planet">
-          <img src={planetImg} className="planet-image" alt="dypPlanet" />
-          <img src={planetShadow} className="planet-shadow" alt="dypPlanet" />
+          <img src={"https://cdn.worldofdypians.com/dypius/planetImg.svg"} className="planet-image" alt="dypPlanet" />
+          <img src={"https://cdn.worldofdypians.com/dypius/planetShadow.svg"} className="planet-shadow" alt="dypPlanet" />
         </div>
       </div>
     </div>

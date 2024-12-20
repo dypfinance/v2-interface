@@ -1,5 +1,5 @@
 import React from "react";
-import rightArrow from "../../assets/right-arrow.svg";
+
 
 const VaultCards = ({ pool, apr, link, top_tick, icon }) => {
   return (
@@ -27,7 +27,7 @@ const VaultCards = ({ pool, apr, link, top_tick, icon }) => {
             target="_blank"
             rel="noreferrer"
           >
-            Supply <img src={rightArrow} alt="" className="ml-3"  />
+            Supply <img src={"https://cdn.worldofdypians.com/dypius/right-arrow.svg"} alt="" className="ml-3"  />
           </a>
         </div>
       </div>
