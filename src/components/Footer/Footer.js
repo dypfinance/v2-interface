@@ -43,10 +43,10 @@ const Footer = () => {
       name: "Medium",
       link: "https://medium.com/@dypius",
     },
-    {
-      name: "Youtube",
-      link: "https://www.youtube.com/@Dypius",
-    },
+    // {
+    //   name: "Youtube",
+    //   link: "https://www.youtube.com/@Dypius",
+    // },
     {
       name: "Linkedin",
       link: "https://www.linkedin.com/company/dypius-ecosystem",

@@ -17,11 +17,11 @@ const GetInTouch = () => {
             title: 'Medium',
             icon: 'touchMedium'
         },
-        {
-            link: "https://www.youtube.com/@Dypius",
-            title: 'Youtube',
-            icon: 'touchYoutube'
-        },
+        // {
+        //     link: "https://www.youtube.com/@Dypius",
+        //     title: 'Youtube',
+        //     icon: 'touchYoutube'
+        // },
         {
             link: "https://www.instagram.com/dyp.eth",
             title: 'Instagram',
