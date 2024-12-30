@@ -1,10 +1,8 @@
 import React from "react";
-import rightArrow from "../../assets/right-arrow.svg";
-import vidthumbnail from "../../assets/vidthumbnail.png";
-import trustwallet from "../../assets/trustwallet.svg";
-import filledArrow from "../../assets/filledArrow.svg";
-import ethereumLogo from "../../assets/eth.svg";
-import baseLogo from "../../assets/base.svg";
+
+
+
+
 
 const BuyDypCard = ({
   title,
@@ -30,8 +28,8 @@ const BuyDypCard = ({
               </div>
               {title === "Uniswap V2" && (
                 <div className="d-flex gap-1 align-items-center">
-                  <img src={ethereumLogo} alt="" />
-                  <img src={baseLogo} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/eth.svg"} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/base.svg"} alt="" />
                 </div>
               )}</div>
             </div>
@@ -40,14 +38,14 @@ const BuyDypCard = ({
             <a href={link} target="_blank" rel="noreferrer" className="pr-0">
               <div className="pr-0">
                 <div className="rightarrow-wrapper">
-                  <img src={rightArrow} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/right-arrow.svg"} alt="" />
                 </div>
               </div>
             </a>
           ) : (
             <div className="pr-0" style={{ filter: "grayscale(1)" }}>
               <div className="rightarrow-wrapper">
-                <img src={rightArrow} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/right-arrow.svg"} alt="" />
               </div>
             </div>
           )}
@@ -87,7 +85,7 @@ const BuyDypCard = ({
                     key={index}
                   >
                     <img
-                      src={require(`../../Screens/BuyDyp/assets/vids/${item.thumbnail}`)}
+                      src={`https://cdn.worldofdypians.com/dypius/${item.thumbnail}`}
                       alt=""
                       className="vidthumbnail col-5 p-0"
                     />
@@ -95,14 +93,14 @@ const BuyDypCard = ({
                       <div className="d-flex align-items-center justify-content-between">
                         <span>
                           <img
-                            src={require(`../../Screens/BuyDyp/assets/buydypItems/${item.image}`)}
+                            src={`https://cdn.worldofdypians.com/dypius/${item.image}`}
                             alt=""
                             className="walletimg"
                           />
                           <span className="walletname">{item.walletName}</span>
                         </span>
                         <img
-                          src={filledArrow}
+                          src={"https://cdn.worldofdypians.com/dypius/filledArrow.svg"}
                           alt=""
                           className="p-0 buyitem-arrow"
                         />

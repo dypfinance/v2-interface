@@ -1,5 +1,5 @@
 import React from "react";
-import coinCardIcon from "../../assets/coinCardIcon.svg";
+
 
 const CoinCard = ({ title, stakeAmount, description }) => {
   return (
@@ -20,13 +20,13 @@ const CoinCard = ({ title, stakeAmount, description }) => {
             </div>
           </div>
           <img
-            src={require(`./assets/${
+            src={`https://cdn.worldofdypians.com/dypius/${
               stakeAmount.includes("20%")
-                ? "vault.png"
+                ? "vaultCoin.png"
                 : stakeAmount.includes("80%")
-                ? "farm.png"
-                : "stake.png"
-            }`)}
+                ? "farmCoin.png"
+                : "stakeCoin.png"
+            }`}
             alt=""
             style={{width: 57, height: 57}}
           />

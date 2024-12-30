@@ -2,18 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { pulse, fadeInLeft } from "react-animations";
 import Title from "../../../components/Title/Title";
-import rightArrow from "../../../assets/right-arrow.svg";
-import metaverse1 from "../../../assets/metaverse-1.png";
-import metaverse2 from "../../../assets/metaverse-2.png";
-import metaverse3 from "../../../assets/metaverse-3.png";
-import BlueHero from "../../../assets/metaverse-blueHero.svg";
-import Cube from "../../../assets/cube.png";
-import metaverseWaves from "../../../assets/metaverseWaves.svg";
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import metaverseModal from '../../../components/Navbar/assets/metaverseModal.svg'
-import commingSoon from '../../../components/Navbar/assets/commingSoon.png'
-import xMark from '../../../components/Navbar/assets/xMark.svg'
 import OutsideClickHandler from "react-outside-click-handler";
 
 
@@ -82,34 +73,34 @@ const DypMetaverse = () => {
                  data-aos-duration="1000"
               >
                 <a className="btn filled-btn d-flex gap-2 align-items-center justify-content-center" href='https://www.worldofdypians.com/' target='_blank' rel="noreferrer">
-                  View now <img src={rightArrow} alt="" className="ml-2" />
+                  View now <img src={"https://cdn.worldofdypians.com/dypius/right-arrow.svg"} alt="" className="ml-2" />
                 </a>
               </div>
             </div>
           </div>
           <div className="col-12 col-lg-6 col-md-5 col-sm-6 position-relative">
             <img
-              src={metaverseWaves}
+              src={"https://cdn.worldofdypians.com/dypius/metaverseWaves.svg"}
               alt=""
               className="metaverse-waves position-absolute"
             />
             <div className="image-grid">
               <div className="image-1">
                 <PulseDiv>
-                  <img src={metaverse1} alt="" className="img1" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/metaverse-1.png"} alt="" className="img1" />
                 </PulseDiv>
               </div>
               <div className="image-2 position-relative">
                 <PulseDiv>
-                  <img src={metaverse2} alt="" className="img2" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/metaverse-2.png"} alt="" className="img2" />
                 </PulseDiv>
                 <PulseDiv>
-                  <img src={Cube} alt="cube" className="cube" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/cube.png"} alt="cube" className="cube" />
                 </PulseDiv>
               </div>
               <div className="image-3">
                 <PulseDiv>
-                  <img src={metaverse3} alt="" className="img3" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/metaverse-3.png"} alt="" className="img3" />
                 </PulseDiv>
               </div>
             </div>
@@ -118,18 +109,18 @@ const DypMetaverse = () => {
       </div>
       <OutsideClickHandler onOutsideClick={() => setMetaverse(false)}>
    <div className={`metaverse-modal-wrapper ${metaverse && 'metaverse-active'} flex-column p-5 d-flex gap-3 align-items-center justify-content-center`}>
-        <img src={xMark} alt="" className="x-mark" onClick={() => setMetaverse(false)} />
-        <img src={metaverseModal} alt="" />
-        <img src={commingSoon} alt="" width={400} />
+        <img src={"https://cdn.worldofdypians.com/dypius/xMark.svg"} alt="" className="x-mark" onClick={() => setMetaverse(false)} />
+        <img src={"https://cdn.worldofdypians.com/dypius/metaverseModal.svg"} alt="" />
+        <img src={"https://cdn.worldofdypians.com/dypius/comingSoon.png"} alt="" width={400} />
         <Title top="Stay" bottom="tuned" align="d-flex flex-row align-items-center gap-2" />
       </div>
    </OutsideClickHandler>
     </div>
     <OutsideClickHandler onOutsideClick={() => setMetaverse(false)}>
    <div className={`metaverse-modal-wrapper ${metaverse && 'metaverse-active'} flex-column p-5 d-flex gap-3 align-items-center justify-content-center`}>
-        <img src={xMark} alt="" className="x-mark" onClick={() => setMetaverse(false)} />
-        <img src={metaverseModal} alt="" className="metaverse-title" />
-        <img src={commingSoon} alt="" width={400} className="comming-soon" />
+        <img src={"https://cdn.worldofdypians.com/dypius/xMark.svg"} alt="" className="x-mark" onClick={() => setMetaverse(false)} />
+        <img src={"https://cdn.worldofdypians.com/dypius/metaverseModal.svg"} alt="" className="metaverse-title" />
+        <img src={"https://cdn.worldofdypians.com/dypius/comingSoon.png"} alt="" width={400} className="comming-soon" />
         <Title top="Stay" bottom="tuned" align="d-flex flex-row align-items-center gap-2" />
       </div>
    </OutsideClickHandler>

@@ -262,7 +262,7 @@ const DypPartners = () => {
           {partnersArray.slice(0, partnersLength).map((partner, index) => (
             <a href={partner.href} target="_blank" rel="noreferrer" key={index}>
               <div className="partner_wrapper d-flex flex-column align-items-center justify-content-center">
-                <img src={`/PartnerIcons/${partner.image}`} alt="" />
+                <img src={`https://cdn.worldofdypians.com/dypius/PartnerIcons/${partner.image}`} alt="" />
                 <p className="mb-0 text-dark">{partner.text}</p>
               </div>
             </a>

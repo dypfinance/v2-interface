@@ -6,23 +6,23 @@ import Success from "../../../components/Success/Success";
 const SupportedWallets = () => {
   const wallets = [
     {
-      logo: "coinbase.svg",
+      logo: "coinbaseBuy.svg",
       title: "Coinbase",
     },
     {
-      logo: "metamask.svg",
+      logo: "metamaskBuy.svg",
       title: "Metamask",
     },
     {
-      logo: "trustwallet.svg",
+      logo: "trustwalletBuy.svg",
       title: "Trust wallet",
     },
     {
-      logo: "coin98.svg",
+      logo: "coin98Buy.svg",
       title: "Coin98",
     },
     {
-      logo: "safepal.svg",
+      logo: "safepalBuy.svg",
       title: "SafePal",
     },
   ];
@@ -78,7 +78,7 @@ const SupportedWallets = () => {
                     </a>
                   )}
                   <img
-                    src={require("../assets/copy.svg").default}
+                    src={"https://cdn.worldofdypians.com/dypius/copy.svg"}
                     alt=""
                     className="ml-2"
                     style={{
@@ -111,7 +111,7 @@ const SupportedWallets = () => {
               return (
                 <div className="walletitem" key={index}>
                   <img
-                    src={require(`../assets/buydypItems/${item.logo}`)}
+                    src={`https://cdn.worldofdypians.com/dypius/${item.logo}`}
                     alt=""
                     className="walletimg"
                   />

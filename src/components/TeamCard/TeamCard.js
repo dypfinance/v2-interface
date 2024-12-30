@@ -1,5 +1,5 @@
 import React from "react";
-import dropdownIcon from "../../Screens/About/assets/profileDropdown.svg";
+
 
 const TeamCard = ({ name, position, id, content, photo, link }) => {
 
@@ -32,7 +32,7 @@ const TeamCard = ({ name, position, id, content, photo, link }) => {
           <img
             onClick={() => rotate(`accordion-${id}`)}
             className={`accordion-${id} accordion-toggler`}
-            src={dropdownIcon}
+            src={"https://cdn.worldofdypians.com/dypius/profileDropdown.svg"}
             style={{
               cursor: "pointer",
               

@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
-import DypPool from "../../assets/DypAssets/dypPool.svg";
-import rightArrow from "../../assets/right-arrow.svg";
-import caws from "./assets/CAWS.svg";
-import dyp from "./assets/DYP.svg";
-import idyp from "./assets/iDYP.svg";
-import wod from "./assets/wod.png";
-import avax from './assets/avax.svg'
-import bsc from './assets/bnb.svg'
+
+
 
 
 const SupAssetCard = ({
@@ -38,7 +32,7 @@ const SupAssetCard = ({
     "usdc",
     "dai",
     "idypius",
-    "pangolin",
+    "pangolinSupport",
     "benqi",
     "xava",
     "link",
@@ -67,7 +61,7 @@ const SupAssetCard = ({
             <div className="coins-container px-0">
               {coins.slice(0, 5).map((coin) => (
                 <img
-                  src={require(`./assets/${coin}.svg`)}
+                  src={`https://cdn.worldofdypians.com/dypius/${coin}.svg`}
                   className="list-coin"
                   alt=""
                 />
@@ -82,13 +76,13 @@ const SupAssetCard = ({
               {pool === "WoD + CAWS" ? (
                 <>
                   <img
-                    src={wod}
+                    src={"https://cdn.worldofdypians.com/dypius/wod.png"}
                     className="pool-coins p-0"
                     width={40}
                     height={40}
                   />
                   <img
-                    src={caws}
+                    src={"https://cdn.worldofdypians.com/dypius/caws.svg"}
                     className="pool-coins p-0"
                     width={40}
                     height={40}
@@ -98,16 +92,16 @@ const SupAssetCard = ({
                 <img
                   src={
                     pool === "CAWS"
-                      ? caws
+                      ? "https://cdn.worldofdypians.com/dypius/caws.svg"
                       : pool === "iDYP"
-                      ? idyp
+                      ? "https://cdn.worldofdypians.com/dypius/iDYP.svg"
                       : pool === "WoD"
-                      ? wod
+                      ? "https://cdn.worldofdypians.com/dypius/wod.png"
                       : pool === 'AVAX'
-                      ? avax
+                      ? "https://cdn.worldofdypians.com/dypius/avax.svg"
                       : pool === 'BNB'
-                      ? bsc
-                      : dyp
+                      ? "https://cdn.worldofdypians.com/dypius/bsc.svg"
+                      : "https://cdn.worldofdypians.com/dypius/DYP.svg"
                   }
                   alt="eth_pool"
                   width={40}
@@ -142,7 +136,7 @@ const SupAssetCard = ({
           rel="noreferrer"
         >
           {commingSoon ? "Coming Soon" : "Deposit now"}
-          {!commingSoon && <img src={rightArrow} alt="" className="ml-3" />}
+          {!commingSoon && <img src={"https://cdn.worldofdypians.com/dypius/right-arrow.svg"} alt="" className="ml-3" />}
         </a>
       </div>
     </div>

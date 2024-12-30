@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const AuditedByItem = ({ imgName, text }) => {
     return (
         <div className="audited-by-section-item">
-            <img src={require(`../../assets/AuditedBy/${imgName}`)} alt=""  />
+            <img src={`https://cdn.worldofdypians.com/dypius/${imgName}`} alt=""  />
             <p className="audited-by-section-item-text">{text}</p>
 
         </div>

@@ -1,9 +1,9 @@
 import React from 'react'
 import Title from '../../../components/Title/Title'
 import './_videotutorials.scss'
-import rightArrow from '../../../assets/right-arrow.svg'
-import playButton from '../../Dyp/assets/playButton.svg'
-import sphere from '../../../assets/newsSphere.png'
+
+
+
 
 const VideoTutorials = () => {
 
@@ -43,13 +43,13 @@ const VideoTutorials = () => {
                     Watch the latest Dypius tutorials and become an expert in no time.
                     </p>
                     <a href='https://www.youtube.com/@DeFiYieldProtocol' target={'_blank'} rel='noreferrer' className="btn filled-btn d-flex justify-content-center align-items-center gap-2" style={{width: 'fit-content'}}>
-                        View More <img src={rightArrow} alt=""  />
+                        View More <img src={"https://cdn.worldofdypians.com/dypius/right-arrow.svg"} alt=""  />
                     </a>
                 </div>
                 <div className="col-12 col-xl-9 d-grid video-wrapper justify-content-center p-4 position-relative">
-                  <img src={sphere} className='sphere position-absolute d-none d-lg-block' alt=""  />
-                  <img src={sphere} className='sphere position-absolute d-none d-lg-block' alt=""  />
-                  <img src={sphere} className='sphere position-absolute d-none d-lg-block' alt=""  />
+                  <img src={"https://cdn.worldofdypians.com/dypius/newsSphere.png"} className='sphere position-absolute d-none d-lg-block' alt=""  />
+                  <img src={"https://cdn.worldofdypians.com/dypius/newsSphere.png"} className='sphere position-absolute d-none d-lg-block' alt=""  />
+                  <img src={"https://cdn.worldofdypians.com/dypius/newsSphere.png"} className='sphere position-absolute d-none d-lg-block' alt=""  />
                 {vidsArray.length > 0 &&
             vidsArray.map((item, index) => {
               return (
@@ -57,13 +57,13 @@ const VideoTutorials = () => {
                   <a href={item.link} target="_blank" rel="noreferrer">
                     <div className="p-3 bg-white">
                       <img
-                        src={require(`../../../assets/DypAssets/${item.image}`)}
+                        src={`https://cdn.worldofdypians.com/dypius/${item.image}`}
                         alt=""
                         className="eduImg"
                          
                       />
                     </div>
-                    <img src={playButton} alt="" className="ml-2 purpleArrow"  />
+                    <img src={"https://cdn.worldofdypians.com/dypius/playButton.svg"} alt="" className="ml-2 purpleArrow"  />
                   </a>
                 </div>
               );

@@ -1,8 +1,5 @@
 import React from "react";
-import uniswap from "../assets/uniswap.png";
-import pancakeswap from "../assets/pancakeswap.png";
-import pangolin from "../assets/pangolin2.png";
-import mexc from '../assets/mexc2.png'
+
 
 const BuyIDyp = () => {
   return (
@@ -31,7 +28,7 @@ const BuyIDyp = () => {
             target={"_blank"}
             rel="noreferrer"
           >
-            <img src={mexc} alt="" className="mexc-card"  />
+            <img src={"https://cdn.worldofdypians.com/dypius/mexcCard.png"} alt="" className="mexc-card"  />
           </a>
           <a style={{height: '100px'}}
             href={
@@ -40,7 +37,7 @@ const BuyIDyp = () => {
             target={"_blank"}
             rel="noreferrer"
           >
-            <img src={uniswap} alt="" className="uni-card"  />
+            <img src={"https://cdn.worldofdypians.com/dypius/uniswapCard.png"} alt="" className="uni-card"  />
           </a>
           <a style={{height: '100px'}}
             href={
@@ -49,7 +46,7 @@ const BuyIDyp = () => {
             target={"_blank"}
             rel="noreferrer"
           >
-            <img src={pancakeswap} alt="" className="pancake-card"  />
+            <img src={"https://cdn.worldofdypians.com/dypius/pancakeswapCard.png"} alt="" className="pancake-card"  />
           </a>
           <a style={{height: '100px'}}
             href={
@@ -58,7 +55,7 @@ const BuyIDyp = () => {
             target={"_blank"}
             rel="noreferrer"
           >
-            <img src={pangolin} alt="" className="pangolin-card"  />
+            <img src={"https://cdn.worldofdypians.com/dypius/pangolinCard.png"} alt="" className="pangolin-card"  />
           </a>
           
         </div>

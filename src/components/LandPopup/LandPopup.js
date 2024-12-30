@@ -1,9 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./_landpopup.scss";
-import landPopup from "./landPopup.webp";
-import closePopup from "./closePopup.svg";
-import migrationPopup from "./migrationPopup2.webp";
-import baseBg from "./baseBg.png";
 import Slider from "react-slick";
 import OutsideClickHandler from "react-outside-click-handler";
 import Countdown from "react-countdown";
@@ -69,7 +65,7 @@ const LandPopup = () => {
 
         <div className="d-flex pt-3 pe-3 align-items-center justify-content-end w-100">
           <img
-            src={closePopup}
+            src={"https://cdn.worldofdypians.com/dypius/closePopup.svg"}
             onClick={() => setActive(false)}
             width={20}
             height={20}
@@ -91,7 +87,7 @@ const LandPopup = () => {
                 </span>
               </div>
               <img
-                src={baseBg}
+                src={"https://cdn.worldofdypians.com/dypius/baseBg.png"}
                 className="land-nft-image basepopup"
                 alt="land nft"
               />
@@ -119,7 +115,7 @@ const LandPopup = () => {
               </span>
             </div>
             <img
-              src={migrationPopup}
+              src={"https://cdn.worldofdypians.com/dypius/migrationPopup2.webp"}
               className="land-nft-image basepopup"
               alt="land nft"
             />

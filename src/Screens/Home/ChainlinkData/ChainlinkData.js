@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import EthereumLogo from "../../../assets/ethereum.svg";
-import BnbLogo from "../../../assets/bnb.svg";
-import AvaxLogo from "../../../assets/avax.svg";
-import CountUp from "react-countup";
 import AuditedByItem from "../../../components/AuditedByItem/AuditedByItem";
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
-import Pin from "../../../assets/pin.png";
+
 
 const ChainlinkData = () => {
   const [totalpaid, setTotalPaid] = useState();
@@ -51,7 +47,7 @@ const ChainlinkData = () => {
             </a>
             <div className="row chainlink-row m-0">
               <div className="chainlink-cell">
-                <img src={EthereumLogo} alt="eth"   />{" "}
+                <img src={"https://cdn.worldofdypians.com/dypius/ethereumChainlink.svg"} alt="eth"   />{" "}
                 <div className="d-flex align-items-baseline gap-2">
                   <span className="totalpaid-amount">
                     {getFormattedNumber(
@@ -63,7 +59,7 @@ const ChainlinkData = () => {
                 </div>
               </div>
               <div className="chainlink-cell">
-                <img src={BnbLogo} alt="bnb"   />
+                <img src={"https://cdn.worldofdypians.com/dypius/bnbChainlink.svg"} alt="bnb"   />
                 <div className="d-flex align-items-baseline gap-2">
                   <span className="totalpaid-amount">
                     {getFormattedNumber(
@@ -75,7 +71,7 @@ const ChainlinkData = () => {
                 </div>
               </div>
               <div className="chainlink-cell">
-                <img src={AvaxLogo} alt="avax"   />
+                <img src={"https://cdn.worldofdypians.com/dypius/avaxChainlink.svg"} alt="avax"   />
                 <div className="d-flex align-items-baseline gap-2">
                   <span className="totalpaid-amount">
                     {getFormattedNumber(
@@ -126,7 +122,7 @@ const ChainlinkData = () => {
             </div>
           </div>
         </div>
-        <img src={Pin} className="pin"   />{" "}
+        <img src={"https://cdn.worldofdypians.com/dypius/pin.png"} className="pin"   />{" "}
       </div>
     </div>
   );

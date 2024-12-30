@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import CoinCard from "../../../components/CoinCard/CoinCard";
 import Title from "../../../components/Title/Title";
-import coin from "../../../assets/coin.png";
-import coinBg from "../../../assets/coinbg2.png";
-import rightArrow from "../../../assets/right-arrow.svg";
 import "./_dyptoken.scss";
 import { NavLink } from "react-router-dom";
-import InfiniteCards from "../../../components/InfiniteCards/InfiniteCards";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -61,22 +58,19 @@ const DypToken = () => {
     <div className="container-lg d-flex justify-content-center mb-4 mb-lg-0">
       <div className="row dyp-token justify-content-between">
         <div className="col-6 col-lg-3 blue-half order-2 order-lg-1">
-          <img src={coin} className="coin" alt="" />
-          <img src={coinBg} className="coin" alt="" />
+          <img src={"https://cdn.worldofdypians.com/dypius/coin.png"} className="coin" alt="" />
+          <img src={"https://cdn.worldofdypians.com/dypius/coinbg.png"} className="coin" alt="" />
           <img
             className="ring-1"
-            src={require(`../../../assets/tokenCircle.png`)}
+            src={`https://cdn.worldofdypians.com/dypius/tokenCircle.png`}
           />
           <img
             className="ring-2"
-            src={require(`../../../assets/tokenCircle.png`)}
+            src={`https://cdn.worldofdypians.com/dypius/tokenCircle.png`}
           />
         </div>
         <div className="token-info col-12 col-lg-6 d-flex justify-content-center align-items-end flex-column pr-3 pr-lg-5 order-1 order-lg-2">
-          {/* <img
-            className="ring"
-            src={require(`../../../assets/tokenCircle.png`)}
-          /> */}
+      
           <Title
             top="DYP Token"
             bottom="Empowering the future"
