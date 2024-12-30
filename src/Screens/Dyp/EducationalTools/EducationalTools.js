@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 import Title from "../../../components/Title/Title";
-import filledArrow from "../../../assets/filledArrow.svg";
-import playButtonActive from "../assets/playbtn-passive.svg";
-import playButton from "../assets/playButton.svg";
+
+
 
 
 const EducationalTools = () => {
@@ -50,15 +49,7 @@ Button: Explore
 
 
         <div className="col-12 col-lg-8 educational-wrapper gap-4 gap-lg-5 justify-content-center p-4 position-relative">
-          {/* <img
-
-            className="edu-sphere"
-            src={require(`../../../assets/newsSphere.png`)}
-          />
-          <img
-            className="edu-sphere2"
-            src={require(`../../../assets/newsSphere.png`)}
-          /> */}
+      
 
           {vidsArray.length > 0 &&
             vidsArray.map((item, index) => {
@@ -67,12 +58,12 @@ Button: Explore
                   <a href={item.link} target="_blank" rel="noreferrer">
                     <div className="p-3 bg-white">
                       <img
-                        src={require(`../../../assets/DypAssets/${item.image}`)}
+                        src={`https://cdn.worldofdypians.com/dypius/${item.image}`}
                         alt=""
                         className="eduImg"
                       />
                     </div>
-                    <img src={playButton} alt="" className="ml-2 purpleArrow"  />{" "}
+                    <img src={"https://cdn.worldofdypians.com/dypius/playButton.svg"} alt="" className="ml-2 purpleArrow"  />{" "}
                   </a>
                 </div>
               );

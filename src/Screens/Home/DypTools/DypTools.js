@@ -2,10 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import ListCard from "../../../components/ListCard/ListCard";
 import Title from "../../../components/Title/Title";
-import filledArrow from "../../../assets/filledArrow.svg";
-import Laptop from "../../../assets/laptop2.png";
-import dots from "../../../assets/dots.png";
-import Triangle from "../../../assets/purple-triangle.png";
 import useWindowSize from "../../../hooks/useWindowSize";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -31,15 +27,15 @@ const DypTools = ({onDownloadClick}) => {
               />
               <ListCard
                 content="A wide range of interactive, decentralized applications"
-                image={"layers.svg"}
+                image={"layersCard.svg"}
               />
               <ListCard
                 content="Access to real-time data analytics"
-                image={"graph.svg"}
+                image={"graphCard.svg"}
               />
               <ListCard
                 content="Review and support tokens from various promising projects"
-                image={"token.svg"}
+                image={"tokenCard.svg"}
               />
             </div>
             <div className="d-flex flex-lg-row flex-column gap-2 align-items-center">
@@ -52,7 +48,7 @@ const DypTools = ({onDownloadClick}) => {
               data-aos-delay="500"
               data-aos-duration="1000" 
             >
-              Go to DYP Tools <img src={filledArrow} alt="" className="ml-2" />
+              Go to DYP Tools <img src={"https://cdn.worldofdypians.com/dypius/filledArrow.svg"} alt="" className="ml-2" />
             </a>
             <button
             onClick={onDownloadClick}
@@ -71,10 +67,10 @@ const DypTools = ({onDownloadClick}) => {
               windowSize.width < 786 ? "pulse" : `rotate-scale-up`
             }`}
           >
-            {/* <img className="iphoneBackground" src={iphoneBg} alt="" /> */}
+           
           </div>
-          <img src={Triangle} className="triangle" />
-          <img className="iphone" src={Laptop} alt="" />
+          <img src={"https://cdn.worldofdypians.com/dypius/purple-triangle.png"} className="triangle" />
+          <img className="iphone" src={"https://cdn.worldofdypians.com/dypius/laptop.png"} alt="" />
           {/* <img className="dots2" src={dots} alt="" /> */}
         </div>
       </div>

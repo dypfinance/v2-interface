@@ -1,16 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import Title from '../../../components/Title/Title'
 import './_latestupdates.scss'
-import announcementsActive from '../assets/announcementsActive.svg'
-import announcementsInactive from '../assets/announcementsInactive.svg'
-import eventsActive from '../assets/eventsActive.svg'
-import eventsInactive from '../assets/eventsInactive.svg'
+
 import UpdateCard from '../../../components/UpdateCard/UpdateCard'
 import { RingLoader } from 'react-spinners'
-import dropdownIndicator from '../../Dyp/assets/dropdownIndicator.svg'
-import rainbowHero from '../../../assets/rainbowHero.png'
-import blueHero from '../../../assets/metaverse-blueHero.svg'
-import ring from '../../../assets/tokenCircle.png'
 import axios from 'axios'
 
 const LatestUpdates = ({type}) => {
@@ -58,9 +51,9 @@ const LatestUpdates = ({type}) => {
   return (
     <div className="container-fluid updates-wrapper">
         <div className="container-lg updates-container p-5 position-relative">
-          <img src={blueHero} alt="" className="updates-bluehero"  />
-          <img src={rainbowHero} alt="" className="updates-rainbowHero"  />
-          <img src={ring} alt="" className="updates-ring d-none"  />
+          <img src={"https://cdn.worldofdypians.com/dypius/metaverse-blueHero.svg"} alt="" className="updates-bluehero"  />
+          <img src={"https://cdn.worldofdypians.com/dypius/rainbowHero.png"} alt="" className="updates-rainbowHero"  />
+          <img src={"https://cdn.worldofdypians.com/dypius/tokenCircle.png"} alt="" className="updates-ring d-none"  />
             <div className="row justify-content-center justify-content-lg-between gap-5">
                 <Title top='Latest' bottom='updates' align='d-flex flex-row gap-2' />
                 <div
@@ -80,7 +73,7 @@ const LatestUpdates = ({type}) => {
                     {year}
                   </div>
               
-                <img src={dropdownIndicator} alt=""  />
+                <img src={"https://cdn.worldofdypians.com/dypius/dropdownIndicator.svg"} alt=""  />
               </div>
               <ul className="dropdown-menu coin-menu p-1" style={{width: '200px'}}>
                 <li
@@ -113,8 +106,8 @@ const LatestUpdates = ({type}) => {
                 </li>
               </ul>
                 <div className="years-wrapper d-flex flex-row px-2 gap-1 justify-content-center align-items-center">
-              <p className={`${newsType === 'announcements' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={fetchAnnouncements}><img src={newsType === 'announcements' ? announcementsActive : announcementsInactive} alt=""   />Announcements</p>
-              <p className={` ${newsType === 'events' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={fetchEvents}><img src={newsType === 'events' ? eventsActive : eventsInactive} alt=""  />Events</p>
+              <p className={`${newsType === 'announcements' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={fetchAnnouncements}><img src={newsType === 'announcements' ? "https://cdn.worldofdypians.com/dypius/announcementsActive.svg" : "https://cdn.worldofdypians.com/dypius/announcementsInactive.svg"} alt=""   />Announcements</p>
+              <p className={` ${newsType === 'events' && 'selected-year'} d-flex flex-row gap-2 align-items-center`} onClick={fetchEvents}><img src={newsType === 'events' ? "https://cdn.worldofdypians.com/dypius/eventsActive.svg" : "https://cdn.worldofdypians.com/dypius/eventsInactive.svg"} alt=""  />Events</p>
             </div>
             </div>
                 {news.length !== 0 ? 

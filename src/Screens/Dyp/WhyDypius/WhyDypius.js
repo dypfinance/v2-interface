@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import WhyDypCard from "../../../components/DypPage/WhyDypCard";
 import Title from "../../../components/Title/Title";
 import useWindowSize from "../../../hooks/useWindowSize";
-import purpleBg from "../assets/purpleBackground.svg";
 import "./_whydypius.scss";
-import sphere from "../../../assets/newsSphere.png";
-import PurpleArrowDown from "../../../assets/DypAssets/purpleArrow-down.svg";
+
+
 
 const WhyDypius = () => {
   const windowSize = useWindowSize();
@@ -78,13 +77,13 @@ const WhyDypius = () => {
                 <div className="position-relative">
                   <img
                     className="orange-border"
-                    src={require(`../assets/orangeBorder.svg`).default}
+                    src={`https://cdn.worldofdypians.com/dypius/orangeBorder.svg`}
                     alt=""
                   />
                   <div className="orange-card text-white p-3 position-relative">
                     <img
                       className="divider"
-                      src={require(`../assets/orangeDivider.svg`).default}
+                      src={`https://cdn.worldofdypians.com/dypius/orangeDivider.svg`}
                       alt=""
                     />
                     <div className="child-1 d-flex flex-column justify-content-start justify-content-center mx-auto ">
@@ -123,7 +122,7 @@ const WhyDypius = () => {
                 </div>
                 <div className="position-relative">
                   {/* <img src={sphere} alt="" className="why-sphere"  /> */}
-                  <img src={purpleBg} alt="" className="purple-background"  />
+                  <img src={"https://cdn.worldofdypians.com/dypius/purpleBackground.svg"} alt="" className="purple-background"  />
                   <div className="purple-card position text-white position-relative p-3">
                     <div className="d-flex flex-column justify-content-start justify-content-center mx-auto ">
                       <h5 style={{ fontWeight: "275", fontSize: "32px" }}>
@@ -164,11 +163,6 @@ const WhyDypius = () => {
             </div>
           </div>
           <div className="col-12 col-lg-8 card-wrapper d-grid" style={{zIndex: 15}}>
-            {/* <img
-              className="ring"
-               
-              src={require(`../../../assets/tokenCircle.png`)}
-            /> */}
             {windowSize.width <= 786 ? (
               <>
                 {cards.slice(0, whyCardSlice).map((card, index) => (
@@ -185,7 +179,7 @@ const WhyDypius = () => {
                     className={`btn outline-btn d-lg-none d-xl-none justify-content-center align-items-center`}
                   >
                     Load More
-                    <img src={PurpleArrowDown} alt="" className="ml-2" />
+                    <img src={"https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg"} alt="" className="ml-2" />
                   </button>
                 </div>
               </>

@@ -1,14 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./_roadmap.scss";
-import filledLeft from "../assets/filledLeft.svg";
-import emptyRight from "../assets/emptyRight.svg";
-import selectedRoadmap from "../assets/selectedRoadmap.svg";
-import uncompletedIcon from "../assets/uncompletedIcon.svg";
-import completedOrangeIcon from "../assets/completedOrangeIcon.svg";
-import completedIcon from "../../About/assets/completedIcon.svg";
-import rightArrow from "./assets/rightArrow.svg";
-import wodIcon from "./assets/wodIcon.svg";
-import roadmapIcon from "./assets/roadmapIcon.svg";
 import RoadmapCard from "../../../components/RoadmapCard/RoadmapCard";
 import Slider from "react-slick";
 import { useRef } from "react";
@@ -1017,20 +1008,7 @@ const Roadmap = () => {
                 2024
               </p>
             </div>
-            {/* <div className="d-flex flex-column gap-1">
-            <span className="to-roadmap">World of Dypians roadmap</span>
-            <a
-              href="https://www.worldofdypians.com/roadmap"
-              target={"_blank"}
-              className="d-flex align-items-center p-3 gap-5 to-roadmap-wrapper position-relative"
-            >
-              <div className="d-flex align-items-center gap-2">
-                <img src={roadmapIcon} alt="roadmap icon" />
-                <img src={wodIcon} alt="world of dypians" />
-              </div>
-              <img src={rightArrow} alt="right arrow" />
-            </a>
-          </div> */}
+          
           </div>
         </div>
       </div>
@@ -1040,20 +1018,20 @@ const Roadmap = () => {
           className={`left-button d-flex justify-content-center align-items-center enabled`}
           onClick={previous}
         >
-          <img src={filledLeft} alt="left arrow" className="p-4" />
+          <img src={"https://cdn.worldofdypians.com/dypius/filledLeft.svg"} alt="left arrow" className="p-4" />
         </div>
         <div
           className={`right-button d-flex justify-content-center align-items-center enabled`}
           onClick={next}
         >
-          <img src={emptyRight} alt="rightArrow" className="p-4" />
+          <img src={"https://cdn.worldofdypians.com/dypius/emptyRight.svg"} alt="rightArrow" className="p-4" />
         </div>
         <Slider ref={(c) => (slider.current = c)} {...settings}>
           {windowSize.width > 786 && (
             <div className="col-12 d-flex flex-column gap-4 selected-roadmap hidden-roadmap">
               <div className="date-card selected d-flex flex-column align-items-center">
                 <img
-                  src={selectedRoadmap}
+                  src={"https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"}
                   style={{ visibility: "hidden" }}
                   alt=""
                 />
@@ -1075,7 +1053,7 @@ const Roadmap = () => {
                       aria-expanded="false"
                       aroa-aria-controls={`collapseQuarterFour${index}`}
                     >
-                      <img src={completedIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/completedIcon.svg"} alt="" />
                       <p>{item.title}</p>
                     </div>
                     <div
@@ -1110,7 +1088,7 @@ const Roadmap = () => {
             <div className="col-12 d-flex flex-column gap-4 selected-roadmap hidden-roadmap">
               <div className="date-card selected d-flex flex-column align-items-center">
                 <img
-                  src={selectedRoadmap}
+                  src={"https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"}
                   style={{ visibility: "hidden" }}
                   alt=""
                 />
@@ -1132,7 +1110,7 @@ const Roadmap = () => {
                       aria-expanded="false"
                       aroa-aria-controls={`collapseQuarterFour${index}`}
                     >
-                      <img src={completedIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/completedIcon.svg"} alt="" />
                       <p>{item.title}</p>
                     </div>
                     <div
@@ -1170,7 +1148,7 @@ const Roadmap = () => {
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card selected d-flex flex-column align-items-center">
               <img
-                src={selectedRoadmap}
+                src={"https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"}
                 style={{ visibility: "hidden" }}
                 alt=""
               />
@@ -1192,7 +1170,7 @@ const Roadmap = () => {
                     aria-expanded="false"
                     aroa-aria-controls={`collapse${index}`}
                   >
-                    <img src={completedIcon} alt="" />
+                    <img src={"https://cdn.worldofdypians.com/dypius/completedIcon.svg"} alt="" />
                     <p>{item.title}</p>
                   </div>
                   <div
@@ -1225,7 +1203,7 @@ const Roadmap = () => {
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card selected d-flex flex-column align-items-center">
               <img
-                src={selectedRoadmap}
+                src={"https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"}
                 style={{ visibility: "hidden" }}
                 alt=""
               />
@@ -1247,7 +1225,7 @@ const Roadmap = () => {
                     aria-expanded="false"
                     aroa-aria-controls={`collapseQuarterFour${index}`}
                   >
-                    <img src={completedIcon} alt="" />
+                    <img src={"https://cdn.worldofdypians.com/dypius/completedIcon.svg"} alt="" />
                     <p>{item.title}</p>
                   </div>
                   <div
@@ -1270,7 +1248,7 @@ const Roadmap = () => {
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card selected d-flex flex-column align-items-center">
               <img
-                src={selectedRoadmap}
+                src={"https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"}
                 style={{ visibility: "hidden" }}
                 alt=""
               />
@@ -1293,9 +1271,9 @@ const Roadmap = () => {
                     aroa-aria-controls={`collapseOne${index}`}
                   >
                     {item?.completed === true ? (
-                      <img src={completedIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/completedIcon.svg"} alt="" />
                     ) : (
-                      <img src={uncompletedIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"} alt="" />
                     )}
                     <p>{item.title}</p>
                   </div>
@@ -1319,7 +1297,7 @@ const Roadmap = () => {
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card selected d-flex flex-column align-items-center">
               <img
-                src={selectedRoadmap}
+                src={"https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"}
                 style={{ visibility: "hidden" }}
                 alt=""
               />
@@ -1342,9 +1320,9 @@ const Roadmap = () => {
                     aroa-aria-controls={`collapseTwo${index}`}
                   >
                     {item?.completed === true ? (
-                      <img src={completedIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/completedIcon.svg"} alt="" />
                     ) : (
-                      <img src={uncompletedIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"} alt="" />
                     )}
                     <p>{item.title}</p>
                   </div>
@@ -1368,7 +1346,7 @@ const Roadmap = () => {
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card selected  d-flex flex-column align-items-center">
               <img
-                src={selectedRoadmap}
+                src={"https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"}
                 style={{ visibility: "hidden" }}
                 alt=""
               />
@@ -1391,9 +1369,9 @@ const Roadmap = () => {
                     aroa-aria-controls={`collapseThree${index}`}
                   >
                     {item?.completed === true ? (
-                      <img src={completedIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/completedIcon.svg"} alt="" />
                     ) : (
-                      <img src={uncompletedIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"} alt="" />
                     )}
                     <p>{item.title}</p>
                   </div>
@@ -1418,7 +1396,7 @@ const Roadmap = () => {
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card selected d-flex flex-column align-items-center">
               <img
-                src={selectedRoadmap}
+                src={"https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"}
                 style={{ visibility: "hidden" }}
                 alt=""
               />
@@ -1441,9 +1419,9 @@ const Roadmap = () => {
                     aroa-aria-controls={`collapseFour${index}`}
                   >
                     {item?.completed === true ? (
-                      <img src={completedIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/completedIcon.svg"} alt="" />
                     ) : (
-                      <img src={uncompletedIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"} alt="" />
                     )}
                     <p>{item.title}</p>
                   </div>
@@ -1467,7 +1445,7 @@ const Roadmap = () => {
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card selected d-flex flex-column align-items-center">
               <img
-                src={selectedRoadmap}
+                src={"https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"}
                 style={{ visibility: "hidden" }}
                 alt=""
               />
@@ -1490,9 +1468,9 @@ const Roadmap = () => {
                     aroa-aria-controls={`collapseQuarterOne2024${index}`}
                   >
                     {item?.completed === true ? (
-                      <img src={completedOrangeIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"} alt="" />
                     ) : (
-                      <img src={uncompletedIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"} alt="" />
                     )}
                     <p>{item.title}</p>
                   </div>
@@ -1516,7 +1494,7 @@ const Roadmap = () => {
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card selected  d-flex flex-column align-items-center">
               <img
-                src={selectedRoadmap}
+                src={"https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"}
                 style={{ visibility: "hidden" }}
                 alt=""
               />
@@ -1539,9 +1517,9 @@ const Roadmap = () => {
                     aroa-aria-controls={`collapseQuarterTwo2024${index}`}
                   >
                     {item?.completed === true ? (
-                      <img src={completedOrangeIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"} alt="" />
                     ) : (
-                      <img src={uncompletedIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"} alt="" />
                     )}
                     <p>{item.title}</p>
                   </div>
@@ -1565,7 +1543,7 @@ const Roadmap = () => {
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card  d-flex flex-column align-items-center">
               <img
-                src={selectedRoadmap}
+                src={"https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"}
                 style={{ visibility: "hidden" }}
                 alt=""
               />
@@ -1588,9 +1566,9 @@ const Roadmap = () => {
                     aroa-aria-controls={`collapseQuarterThree2024${index}`}
                   >
                     {item?.completed === true ? (
-                      <img src={completedOrangeIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"} alt="" />
                     ) : (
-                      <img src={uncompletedIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"} alt="" />
                     )}
                     <p>{item.title}</p>
                   </div>
@@ -1614,7 +1592,7 @@ const Roadmap = () => {
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
             <div className="date-card  d-flex flex-column align-items-center">
               <img
-                src={selectedRoadmap}
+                src={"https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"}
                 style={{ visibility: "hidden" }}
                 alt=""
               />
@@ -1637,9 +1615,9 @@ const Roadmap = () => {
                     aroa-aria-controls={`collapseQuarterFour2024${index}`}
                   >
                     {item?.completed === true ? (
-                      <img src={completedOrangeIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"} alt="" />
                     ) : (
-                      <img src={uncompletedIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"} alt="" />
                     )}
                     <p>{item.title}</p>
                   </div>

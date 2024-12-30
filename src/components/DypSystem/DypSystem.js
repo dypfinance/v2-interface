@@ -1,15 +1,7 @@
 import React, { useState } from "react";
-import DypRect from "../../assets/dypRect.svg";
-import planetImg from '../../assets/planetImg.svg'
-import planetShadow from '../../assets/planetShadow.svg'
-import DypPlanet from "../../assets/planetItem.png";
-import Launchpad from "../../assets/satellites/launchpad.png";
-import Dyptools from "../../assets/satellites/dyptool3.png";
-import Bridge from "../../assets/satellites/bridge.png";
-import Earn from "../../assets/satellites/earn.png";
-import Governance from "../../assets/satellites/governance.png";
-import Caw from "../../assets/satellites/caws.png";
-import Metaverse from "../../assets/satellites/metaverse.png";
+
+
+
 import { NavLink } from "react-router-dom";
 
 const DypSystem = ({
@@ -119,8 +111,8 @@ const DypSystem = ({
         </div>
 
         <div className="planet">
-          <img src={planetImg} className="planet-image" alt="dypPlanet" />
-          <img src={planetShadow} className="planet-shadow" alt="dypPlanet" />
+          <img src={"https://cdn.worldofdypians.com/dypius/planetImg.svg"} className="planet-image" alt="dypPlanet" />
+          <img src={"https://cdn.worldofdypians.com/dypius/planetShadow.svg"} className="planet-shadow" alt="dypPlanet" />
         </div>
       </div>
     </div>

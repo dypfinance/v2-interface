@@ -4,7 +4,7 @@ import Title from "../../../components/Title/Title";
 const Vault = () => {
   const vaultArray = [
     {
-      icons: ["weth.svg"],
+      icons: ["wethVault.svg"],
       title: "WETH",
       percentage: "1.9 - 3.7",
       total_value_locked: ``,
@@ -14,7 +14,7 @@ const Vault = () => {
       link: "https://vault.dyp.finance/vault-weth",
     },
     {
-      icons: ["bitcoin.svg"],
+      icons: ["bitcoinVault.svg"],
       title: "WBTC",
       percentage:"1.6 - 3.4",
       total_value_locked: ``,
@@ -22,7 +22,7 @@ const Vault = () => {
       link: "https://vault.dyp.finance/vault-wbtc",
     },
     {
-      icons: ["usdc.svg"],
+      icons: ["usdcVault.svg"],
       title: "USDC",
       percentage: "2.1 - 4.2",
       total_value_locked: ``,
@@ -32,7 +32,7 @@ const Vault = () => {
       link: "https://vault.dyp.finance/vault-usdc",
     },
     {
-      icons: ["usdt.svg"],
+      icons: ["usdtVault.svg"],
       title: "USDT",
       percentage: "2.2 - 4.9",
       total_value_locked: ``,
@@ -42,7 +42,7 @@ const Vault = () => {
       link: "https://vault.dyp.finance/vault-usdt",
     },
     {
-      icons: ["dai.svg"],
+      icons: ["daiVault.svg"],
       title: "DAI",
       percentage: "2.3 - 5.3",
       total_value_locked: ``,
@@ -55,7 +55,7 @@ const Vault = () => {
 
   return (
     <div className="container-fluid" id="vault">
-       {/* <img className='bluehero-solutions' src={require(`../../../assets/metaverse-blueHero.svg`).default} alt="" style={{bottom: 0}}/> */}
+    
       <div className="vaultwrapper container-lg">
         <div className="p-4">
           <div className="row gap-5 m-auto">

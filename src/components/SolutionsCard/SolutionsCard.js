@@ -22,7 +22,7 @@ const SolutionsCard = ({ title, image, link, arrow, onMetaverseOpen }) => {
           <div className="d-flex flex-row align-items-center gap-2">
             <div className="clipboard d-flex justify-content-center align-items-center">
               <img
-                src={require(`../../Screens/Support/assets/${image}Icon.png`)}
+                src={`https://cdn.worldofdypians.com/dypius/${image}Icon.png`}
                 style={{ width: 40, height: 40 }}
                 alt=""
               />
@@ -30,7 +30,7 @@ const SolutionsCard = ({ title, image, link, arrow, onMetaverseOpen }) => {
             <h4>{title}</h4>
           </div>
           {arrow && (
-            <img src={require(`../../assets/filledArrow.svg`).default} alt="" />
+            <img src={`https://cdn.worldofdypians.com/dypius/filledArrow.svg`} alt="" />
           )}
         </a>
       ) : (
@@ -41,7 +41,7 @@ const SolutionsCard = ({ title, image, link, arrow, onMetaverseOpen }) => {
           <div className="d-flex flex-row align-items-center gap-2">
             <div className="clipboard d-flex justify-content-center align-items-center">
               <img
-                src={require(`../../Screens/Support/assets/${image}Icon.png`)}
+                src={`https://cdn.worldofdypians.com/dypius/${image}Icon.png`}
                 style={{ width: 40, height: 40 }}
                 alt=""
               />
@@ -49,7 +49,7 @@ const SolutionsCard = ({ title, image, link, arrow, onMetaverseOpen }) => {
             <h4>{title}</h4>
           </div>
           {arrow && (
-            <img src={require(`../../assets/filledArrow.svg`).default} alt="" />
+            <img src={`https://cdn.worldofdypians.com/dypius/filledArrow.svg`} alt="" />
           )}
         </div>
       )}

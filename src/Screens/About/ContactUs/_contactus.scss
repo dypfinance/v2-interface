@@ -2,7 +2,7 @@
   position: relative;
   min-height: 800px;
   padding-bottom: 3rem;
-  background-image: url('../assets/contactUsBg.png');
+  background-image: url('https://cdn.worldofdypians.com/dypius/contactUsBg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -115,7 +115,7 @@
 .contact-wrapper::before {
   content: "";
   position: absolute;
-  // background-image: url("../assets/contactBackground.svg");
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

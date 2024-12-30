@@ -44,7 +44,7 @@
     content: "";
     background: #eff0f6;
     background-image:
-     url("../../../assets/dyptools-bg.png"),
+     url("https://cdn.worldofdypians.com/dypius/dyptools-bg.png"),
       linear-gradient(#caccd9, #fff);
     background-size: cover;
     position: absolute;
@@ -209,7 +209,7 @@
   .rotate-scale-up {
     // -webkit-animation: rotate-scale-up 25s linear infinite both;
             // animation: rotate-scale-up 25s linear infinite both;
-    background: url(../../../assets/coinbackground.png);
+    background: url(https://cdn.worldofdypians.com/dypius/coinbackground.png);
     background-repeat: no-repeat;
     max-width: 400px;
     width: 100%;
@@ -221,7 +221,7 @@
   .pulse{
     -webkit-animation: pulse 5s linear infinite both;
     animation: pulse 5s linear infinite both;
-background: url(../../../assets/coinbackground.png);
+background: url(https://cdn.worldofdypians.com/dypius/coinbackground.png);
 background-repeat: no-repeat;
 max-width: 400px;
 width: 100%;

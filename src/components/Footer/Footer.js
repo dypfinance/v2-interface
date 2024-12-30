@@ -1,15 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useWindowSize from "../../hooks/useWindowSize";
 import "./_footer.scss";
-import logo from "../../assets/dypiusLogo.svg";
-import coinmarketcap from "../../assets/coinMarketCap.svg";
-import coinGecko from "../../assets/coinGecko.svg";
-import contactUs from "../../assets/contactUs.svg";
-import disclaimer from "../../assets/disclaimer.svg";
 import { HashLink as Link } from "react-router-hash-link";
-import metaverseModal from "../Navbar/assets/metaverseModal.svg";
-import commingSoon from "../Navbar/assets/commingSoon.png";
-import xMark from "../Navbar/assets/xMark.svg";
 import Title from "../Title/Title";
 import OutsideClickHandler from "react-outside-click-handler";
 
@@ -252,7 +244,7 @@ const Footer = () => {
                     <img
                       width={25}
                       height={25}
-                      src={require(`../../assets/${social.name.toLowerCase()}.svg`)}
+                      src={`https://cdn.worldofdypians.com/dypius/${social.name.toLowerCase()}Footer.svg`}
                       alt=""
                     />
                     <p className="mb-0">{social.name}</p>
@@ -282,10 +274,7 @@ const Footer = () => {
                         className={
                           indicators.about ? `indicator turn` : "indicator"
                         }
-                        src={
-                          require(`../../assets/accordionIndicator2.svg`)
-                            .default
-                        }
+                        src={`https://cdn.worldofdypians.com/dypius/accordionIndicator2.svg`}
                         alt=""
                       />
                     </div>
@@ -327,10 +316,7 @@ const Footer = () => {
                         className={
                           indicators.products ? `indicator turn` : "indicator"
                         }
-                        src={
-                          require(`../../assets/accordionIndicator2.svg`)
-                            .default
-                        }
+                        src={`https://cdn.worldofdypians.com/dypius/accordionIndicator2.svg`}
                         alt=""
                       />
                     </div>
@@ -414,10 +400,7 @@ const Footer = () => {
                         className={
                           indicators.learn ? `indicator turn` : "indicator"
                         }
-                        src={
-                          require(`../../assets/accordionIndicator2.svg`)
-                            .default
-                        }
+                        src={`https://cdn.worldofdypians.com/dypius/accordionIndicator2.svg`}
                         alt=""
                       />
                     </div>
@@ -462,10 +445,7 @@ const Footer = () => {
                             ? `indicator turn`
                             : "indicator "
                         }
-                        src={
-                          require(`../../assets/accordionIndicator2.svg`)
-                            .default
-                        }
+                        src={`https://cdn.worldofdypians.com/dypius/accordionIndicator2.svg`}
                         alt=""
                       />
                     </div>
@@ -504,18 +484,18 @@ const Footer = () => {
                       rel="noreferrer"
                       href="https://coinmarketcap.com/currencies/defi-yield-protocol-v2/"
                     >
-                      <img src={coinmarketcap} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/coinMarketCap.svg"} alt="" />
                     </a>
                     <a
                       target="_blank"
                       rel="noreferrer"
                       href="https://www.coingecko.com/en/coins/dypius"
                     >
-                      <img src={coinGecko} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/coinGecko.svg"} alt="" />
                     </a>
 
                     <Link to="/terms-of-service">
-                      <img src={disclaimer} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/disclaimer.svg"} alt="" />
                     </Link>
                   </div>
                 </div>
@@ -523,7 +503,7 @@ const Footer = () => {
             ) : (
               <>
                 <Link to="/">
-                  <img src={logo} alt="" width={160} height={90} />
+                  <img src={"https://cdn.worldofdypians.com/dypius/dypiusLogo.svg"} alt="" width={160} height={90} />
                 </Link>
                 <div className="col-2 text-white d-flex flex-column gap-3">
                   <h4 className="fw-normal">About Us</h4>
@@ -625,30 +605,30 @@ const Footer = () => {
                       </Link>
                     ))}
                   </div>
-                  <div className="d-flex flex-column gap-3 position-relative"style={{ bottom: "-60px" }}>
+                  <div
+                    className="d-flex flex-column gap-3 position-relative"
+                    style={{ bottom: "-60px" }}
+                  >
                     <Link
                       to={"/terms-of-service"}
                       className="text-white text-decoration-none footer-type-link"
                     >
                       <h5>Terms of Service</h5>
                     </Link>
-                    <div
-                      className="d-flex flex-row gap-3 position-relative"
-                      
-                    >
+                    <div className="d-flex flex-row gap-3 position-relative">
                       <a
                         target="_blank"
                         rel="noreferrer"
                         href="https://coinmarketcap.com/currencies/defi-yield-protocol-v2/"
                       >
-                        <img src={coinmarketcap} alt="" />
+                        <img src={"https://cdn.worldofdypians.com/dypius/coinMarketCap.svg"} alt="" />
                       </a>
                       <a
                         target="_blank"
                         rel="noreferrer"
                         href="https://www.coingecko.com/en/coins/dypius"
                       >
-                        <img src={coinGecko} alt="" />
+                        <img src={"https://cdn.worldofdypians.com/dypius/coinGecko.svg"} alt="" />
                       </a>
 
                       <Link
@@ -657,18 +637,14 @@ const Footer = () => {
                           window.scrollTo(0, 0);
                         }}
                       >
-                        <img src={disclaimer} alt="" />
+                        <img src={"https://cdn.worldofdypians.com/dypius/disclaimer.svg"} alt="" />
                       </Link>
                     </div>
                   </div>
                 </div>
               </>
             )}
-            {/* <img
-            className="sphere"
-            src={require(`../../assets/footerSphere.png`)}
-            alt=""
-          /> */}
+    
           </div>
           <hr className="d-none d-lg-block" />
 
@@ -689,13 +665,13 @@ const Footer = () => {
           } flex-column p-5 d-flex gap-3 align-items-center justify-content-center`}
         >
           <img
-            src={xMark}
+            src={"https://cdn.worldofdypians.com/dypius/xMark.svg"}
             alt=""
             className="x-mark"
             onClick={() => setMetaverse(false)}
           />
-          <img src={metaverseModal} alt="" />
-          <img src={commingSoon} alt="" width={400} />
+          <img src={"https://cdn.worldofdypians.com/dypius/metaverseModal.svg"} alt="" />
+          <img src={"https://cdn.worldofdypians.com/dypius/comingSoon.png"} alt="" width={400} />
           <Title
             top="Stay"
             bottom="tuned"

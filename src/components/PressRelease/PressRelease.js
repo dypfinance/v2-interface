@@ -28,14 +28,14 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coinmarketcap.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/coinmarketcap.png"} alt="" />
                 </a> */}
                 <a
                   href="https://cryptoadventure.com/caws-the-cats-and-watches-society-nft-collection-by-dypius/"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptoadventure.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/cryptoadventure.png"} alt="" />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
@@ -45,7 +45,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitinsider.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/bitinsider.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius4">
@@ -54,7 +54,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptoadventure.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/cryptoadventure.png"} alt="" />
                 </a>
               </td>
               <td className="radius4 presscell"></td>
@@ -65,14 +65,14 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/medium.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/medium.png"} alt="" />
                 </a> */}
                 <a
                   href="https://finance.yahoo.com/news/world-dypians-announces-whitelisting-genesis-180000531.html"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/yahoo.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/yahoo.png"} alt="" />
                 </a>
               </td>
 
@@ -83,7 +83,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitcoincom.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/bitcoincom.png"} alt="" />
                 </a>
               </td>
               <td className="radius6 presscell">
@@ -93,11 +93,11 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/hackernoon.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/hackernoon.png"} alt="" />
                 </a>
               </td>
               <td className="radius5 presscell">
-                <img src={require("./news/gateio.png")} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/gateioNews.png"} alt="" />
               </td>
               <td className="presscell radius2"></td>
               <td className="radius1 presscell"></td>
@@ -107,7 +107,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitcoinist.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/bitcoinist.png"} alt="" />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
@@ -117,14 +117,14 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coinmarketcap.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/coinmarketcap.png"} alt="" />
                 </a> */}
                 <a
                   href="https://www.benzinga.com/pressreleases/23/02/g30736707/world-of-dypians-announces-whitelisting-for-genesis-land-nfts-at-knockdown-price"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/benzinga.png")} style={{borderRadius: "50%"}} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/benzinga.png"} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
@@ -134,7 +134,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitinsider.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/bitinsider.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius4"></td>
@@ -146,14 +146,14 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/medium.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/medium.png"} alt="" />
                 </a> */}
                 <a
                   href="https://finance.yahoo.com/news/dypius-partners-conflux-network-unveils-150000764.html"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/yahoo.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/yahoo.png"} alt="" />
                 </a>
               </td>
 
@@ -164,12 +164,12 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitcoincom.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/bitcoincom.png"} alt="" />
                 </a>
               </td>
               <td className="radius6 presscell"></td>
               <td className="radius5 presscell">
-                <img src={require("./news/gateio.png")} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/gateioNews.png"} alt="" />
               </td>
               <td className="presscell radius2"></td>
               <td className="radius1 presscell"></td>
@@ -179,7 +179,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/bitcoinist.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/bitcoinist.png"} alt="" />
                 </a>
               </td>
             </tr>
@@ -191,7 +191,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/yahoo.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/yahoo.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius10"></td>
@@ -201,14 +201,14 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/marketwatch.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/marketwatch.png"} alt="" />
                 </a> */}
                 <a
                   href="https://www.benzinga.com/pressreleases/23/07/g33217661/dypius-partners-with-conflux-network-unveils-nft-marketplace-and-new-game-update"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/benzinga.png")} style={{borderRadius: "50%"}} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/benzinga.png"} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
               <td className="radius4 presscell"></td>
@@ -218,7 +218,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/apnews.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/apnews.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -228,14 +228,14 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptofold.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/cryptofold.png"} alt="" />
                 </a> */}
                 <a
                   href="https://www.globenewswire.com/news-release/2023/07/13/2704540/0/en/Dypius-Partners-with-Conflux-Network-Unveils-NFT-Marketplace-and-New-Game-Update.html"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/globalNewsWire.jpg")} style={{borderRadius: "50%"}} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/globalNewsWire.jpg"} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
               <td className="presscell radius10">
@@ -244,7 +244,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/newsbtc.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/newsbtc.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -255,7 +255,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/yahoo.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/yahoo.png"} alt="" />
                 </a>
               </td>
 
@@ -265,7 +265,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/hackernoon.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/hackernoon.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -276,7 +276,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/yahoo.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/yahoo.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius10"></td>
@@ -286,14 +286,14 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/marketwatch.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/marketwatch.png"} alt="" />
                 </a> */}
                 <a
                   href="https://markets.businessinsider.com/news/stocks/coingecko-and-dypius-partner-to-build-and-pioneer-innovation-on-the-world-of-dypians-1032652807"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/businessinsider.png")} style={{borderRadius: "50%"}} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/businessinsider.png"} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
               <td className="radius4 presscell">
@@ -302,7 +302,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/tradingView.png")} style={{borderRadius: "50%"}} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/tradingView.png"} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
               <td className="presscell radius10">
@@ -311,7 +311,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/apnews.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/apnews.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -321,14 +321,14 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptofold.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/cryptofold.png"} alt="" />
                 </a> */}
                 <a
                   href="https://finance.yahoo.com/news/coingecko-dypius-partner-build-pioneer-123000370.html"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/yahoo.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/yahoo.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius10">
@@ -337,7 +337,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/newsbtc.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/newsbtc.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -350,7 +350,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/hackernoon.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/hackernoon.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
@@ -362,7 +362,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/blokonomi.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/blokonomi.png"} alt="" />
                 </a>
               </td>
               <td className="radius10 presscell"></td>
@@ -372,7 +372,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/techbullion.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/techbullion.png"} alt="" />
                 </a>
               </td>
 
@@ -384,7 +384,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/utoday.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/utoday.png"} alt="" />
                 </a>
               </td>
 
@@ -396,20 +396,20 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptopress.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/cryptopress.png"} alt="" />
                 </a> */}
                 <a
                   href="https://www.binance.com/en/feed/post/1207307"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/binance.png")} style={{borderRadius: "50%"}} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/binance.png"} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
               <td className="radius7 presscell"></td>
 
               <td className="presscell radius10">
-                <img src={require("./news/coinspeaker.png")} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/coinspeaker.png"} alt="" />
               </td>
               <td className="presscell radius1">
                 {/* <a
@@ -417,14 +417,14 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptocompare.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/cryptocompare.png"} alt="" />
                 </a> */}
                 <a
                   href="https://hackernoon.com/world-of-dypians-welcomes-coinmarketcap-to-its-dynamic-metaverse-now-available-on-epic-games-store"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/hackernoon.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/hackernoon.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius7">
@@ -433,13 +433,13 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cointelegraph.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/cointelegraph.png"} alt="" />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
 
               <td className="presscell radius7">
-                <img src={require("./news/mycointainer.png")} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/mycointainer.png"} alt="" />
               </td>
 
               <td className="presscell radius1">
@@ -448,7 +448,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/blokonomi.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/blokonomi.png"} alt="" />
                 </a>
               </td>
               <td className="radius10 presscell"></td>
@@ -458,7 +458,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/techbullion.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/techbullion.png"} alt="" />
                 </a>
               </td>
 
@@ -470,7 +470,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/utoday.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/utoday.png"} alt="" />
                 </a>
               </td>
 
@@ -482,20 +482,20 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptopress.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/cryptopress.png"} alt="" />
                 </a> */}
                 <a
                   href="https://coinmarketcap.com/community/articles/65858dc0b044ba691e692e54/"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coinmarketcap.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/coinmarketcap.png"} alt="" />
                 </a>
               </td>
               <td className="radius7 presscell"></td>
 
               <td className="presscell radius10">
-                <img src={require("./news/coinspeaker.png")} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/coinspeaker.png"} alt="" />
               </td>
               <td className="presscell radius1">
                 {/* <a
@@ -503,14 +503,14 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptocompare.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/cryptocompare.png"} alt="" />
                 </a> */}
                 <a
                   href="https://www.tradingview.com/news/reuters.com,2023-12-22:newsml_GNX2k4ltG:0-world-of-dypians-welcomes-coinmarketcap-to-its-dynamic-metaverse-now-available-on-epic-games-store/"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/tradingView.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/tradingView.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius7">
@@ -519,18 +519,18 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cointelegraph.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/cointelegraph.png"} alt="" />
                 </a>
               </td>
               <td className="radius1 presscell"></td>
 
               <td className="presscell radius7">
-                <img src={require("./news/mycointainer.png")} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/mycointainer.png"} alt="" />
               </td>
             </tr>
             <tr>
               <td className="presscell radius7">
-                <img src={require("./news/uptrennd.png")} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/uptrennd.png"} alt="" />
               </td>
               <td className="radius1 presscell">
               <a
@@ -538,7 +538,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/binance.png")} style={{borderRadius: "50%"}} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/binance.png"} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
 
@@ -548,7 +548,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coindex.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/coindex.png"} alt="" />
                 </a>
               </td>
 
@@ -559,14 +559,14 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coindoo.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/coindoo.png"} alt="" />
                 </a> */}
                 <a
                   href="https://finance.yahoo.com/now/world-dypians-welcomes-coinmarketcap-dynamic-161500412.html"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/yahoo.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/yahoo.png"} alt="" />
                 </a>
               </td>
 
@@ -577,13 +577,13 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coinmanager.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/coinmanager.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
 
               <td className="presscell radius2">
-                <img src={require("./news/bithumb.png")} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/bithumb.png"} alt="" />
               </td>
               <td className="presscell radius1">
                 <a
@@ -591,7 +591,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptopotato.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/cryptopotato.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius5"></td>
@@ -601,16 +601,16 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/businessinsider.png")} style={{borderRadius: "50%"}} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/businessinsider.png"} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
               <td className="presscell radius1">
-                <img src={require("./news/coingape.png")} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/coingape.png"} alt="" />
               </td>
 
               <td className="presscell radius2"></td>
               <td className="presscell radius7">
-                <img src={require("./news/uptrennd.png")} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/uptrennd.png"} alt="" />
               </td>
               <td className="radius1 presscell"></td>
 
@@ -620,7 +620,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coindex.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/coindex.png"} alt="" />
                 </a>
               </td>
 
@@ -631,14 +631,14 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coindoo.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/coindoo.png"} alt="" />
                 </a> */}
                 <a
                   href="https://www.binance.com/en-IN/feed/post/1731781535186"
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/binance.png")} style={{borderRadius: "50%"}} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/binance.png"} style={{borderRadius: "50%"}} alt="" />
                 </a>
               </td>
 
@@ -649,13 +649,13 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coinmanager.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/coinmanager.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius1"></td>
 
               <td className="presscell radius2">
-                <img src={require("./news/bithumb.png")} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/bithumb.png"} alt="" />
               </td>
               <td className="presscell radius1">
                 <a
@@ -663,7 +663,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/cryptopotato.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/cryptopotato.png"} alt="" />
                 </a>
               </td>
               <td className="presscell radius5"></td>
@@ -674,7 +674,7 @@ const PressRelease = () => {
                   target="_blank"
                   rel="noreferrer nofollow"
                 >
-                  <img src={require("./news/coingape.png")} alt="" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/coingape.png"} alt="" />
                 </a>
               </td>
 

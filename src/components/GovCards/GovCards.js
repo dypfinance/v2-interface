@@ -13,7 +13,7 @@ const GovCards = ({ title, description, number, step, icon, delay }) => {
           <div className="green-tag"></div>
           <div className="tag d-flex justify-content-center align-items-center">
             <img
-              src={require(`../../Screens/Governance/assets/${icon}.svg`)}
+              src={`https://cdn.worldofdypians.com/dypius/${icon}.svg`}
               alt=""
             />
           </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import completedIcon from '../../Screens/About/assets/completedIcon.svg'
+
 
 const RoadmapCard = ({data}) => {
 
@@ -18,7 +18,7 @@ const RoadmapCard = ({data}) => {
     <div className="roadmap-items d-flex flex-column gap-3 p-4">
       {data.name.map((item, index) => (
         <div key={index} className="d-flex flex-row align-items-center gap-2">
-        <img src={completedIcon} alt=""  />
+        <img src={"https://cdn.worldofdypians.com/dypius/completedIcon.svg"} alt=""  />
         <p>{item}</p>
       </div>
       ))}

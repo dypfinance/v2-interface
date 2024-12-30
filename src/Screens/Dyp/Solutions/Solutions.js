@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react";
 import SolutionsCard from "../../../components/SolutionsCard/SolutionsCard";
 import Title from "../../../components/Title/Title";
 import useWindowSize from "../../../hooks/useWindowSize";
-import PurpleArrowDown from "../../../assets/DypAssets/purpleArrow-down.svg";
-import metaverseModal from "../../../components/Navbar/assets/metaverseModal.svg";
-import commingSoon from "../../../components/Navbar/assets/commingSoon.png";
-import xMark from "../../../components/Navbar/assets/xMark.svg";
+
 import "./_solutions.scss";
 import OutsideClickHandler from "react-outside-click-handler";
 import { isMobile, MobileView, BrowserView } from "react-device-detect";
@@ -132,7 +129,7 @@ const Solutions = () => {
       <div className="container-fluid position-relative">
         <img
           className="rings"
-          src={require(`../assets/solutionRings.svg`).default}
+          src={`https://cdn.worldofdypians.com/dypius/solutionRings.svg`}
           alt=""
         />
 
@@ -179,15 +176,11 @@ const Solutions = () => {
               onClick={loadMore}
               className={`btn outline-btn   justify-content-center align-items-center`}
             >
-              Load More <img src={PurpleArrowDown} alt="" className="ml-2" />
+              Load More <img src={"https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg"} alt="" className="ml-2" />
             </button>
           </div>
         </div>
-        {/* <img
-        className="bluehero-solutions"
-        src={require(`../../../assets/metaverse-blueHero.svg`).default}
-        alt=""
-      /> */}
+    
       </div>
       <OutsideClickHandler onOutsideClick={() => setMetaverse(false)}>
         <div
@@ -196,7 +189,7 @@ const Solutions = () => {
           } flex-column p-4 d-flex gap-3 align-items-center justify-content-center`}
         >
           <img
-            src={xMark}
+            src={"https://cdn.worldofdypians.com/dypius/xMark.svg"}
             alt=""
             className="x-mark"
             onClick={() => setMetaverse(false)}
