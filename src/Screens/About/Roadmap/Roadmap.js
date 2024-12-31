@@ -696,6 +696,16 @@ const Roadmap = () => {
         "Continuously add new features and partners, advertising opportunities, user rewards, airdrops, and more, to enhance the user experience",
       completed: false,
     },
+    // {
+    //   title: "Introduction of Character NFT Generation",
+    //   content:
+    //     "Generate the main character in the game as an NFT item, adding value and uniqueness to the player's experience.",
+    // },
+    // {
+    //   title: "Full Release of the Multiplayer PvE",
+    //   content:
+    //     "Launch the full version of the multiplayer player-versus-environment mode for all players to enjoy.",
+    // },
   ];
 
   const [oldSlide, setOldSlide] = useState(0);
