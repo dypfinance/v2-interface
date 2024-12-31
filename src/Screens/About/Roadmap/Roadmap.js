@@ -458,75 +458,65 @@ const Roadmap = () => {
       title: "Loyalty Program Introduction",
       content:
         "Introduce a loyalty program exclusive to Base users, offering gas incentives and other rewards, aimed at improving user onboarding and transaction efficiency.",
-    },
+        completed: true,
+      },
     {
       title: "Introduction of the Stone Crack Game",
       content:
         "Launch the Stone Crack game, an interactive and engaging mini-game where players break stones to earn valuable rewards. The game will be available on Base, adding an extra layer of entertainment for users.",
-    },
+        completed: true,
+      },
   ];
 
   const quarterFour2024 = [
     {
-      title: "Governance v2",
+      title: "Stone Crack Enhancement",
       content:
-        "Launch new features for the governance system, enhancing the platform's decentralization and community involvement.",
-    },
-    {
-      title: "Addition of Game Currency",
-      content:
-        "Introduce a new in-game currency to enhance the game's economy and provide more options for players.",
-    },
-    {
-      title: "Full Release of the Multiplayer PvP",
-      content:
-        "Launch the full version of the multiplayer player-versus-player mode for competitive gameplay.",
-    },
-    {
-      title: "NFT Customization",
-      content:
-        "Enable players to customize their NFTs, such as weapons and equipment, by adding elements or items to them.",
-    },
-    {
-      title: "Mobile App Improvements",
-      content:
-        "Continue to improve the mobile app with new features, optimizations, and enhancements based on user feedback.",
-    },
+        "Enhance the Stone Crack  mini-game on opBNB, offering an immersive and competitive experience with unique challenges and exclusive rewards.",
+        completed: true,
+      },
     // {
-    //   title: "Risk Assessment Algorithms",
+    //   title: "Mini-Games Expansion to Base",
     //   content:
-    //     "Integrate risk assessment tools that evaluate the safety, liquidity, and volatility of yield farming pools across chains.",
-    // },
-    // {
-    //   title: "Automated Yield Optimization",
-    //   content:
-    //     "Utilize smart contracts to automatically optimize users' asset yields across pools from one chain.",
-    // },
-    // {
-    //   title: "Portfolio Management Dashboard",
-    //   content:
-    //     "Provide users with a comprehensive dashboard displaying real-time information about their investments, current yields, asset distribution across blockchains, and the platform's overall performance in optimizing returns.",
-    // },
-    // {
-    //   title: "Cross-Chain Yield Optimization",
-    //   content:
-    //     "Maximize users' investment returns by automatically moving their assets across different blockchains to take advantage of the highest yielding opportunities.",
-    // },
+    //     "Launch the popular mini-games on the Base network, enabling players to enjoy engaging activities and earn rewards on this innovative blockchain.",
+    //     completed: true,
+    //   },
     {
-      title: "In-game Shop",
+      title: "New Bridges Deployment",
       content:
-        "Launch the first version of the in-game shop where players can buy items, loot, weapons, and equipment.",
-    },
+        "Introduce the DYP Bridges on Base and opBNB to enable seamless and secure cross-chain asset transfers, enhancing interoperability for all users.",
+        completed: true,
+      },
+    // {
+    //   title: "Loyalty Program Introduction",
+    //   content:
+    //     "Roll out the Loyalty Program, offering tiered rewards and exclusive benefits to active participants across the DYP ecosystem.",
+    //     completed: true,
+    //   },
     {
-      title: "Introduction of Character NFT Generation",
+      title: "Launchpad’s First Project Release",
       content:
-        "Generate the main character in the game as an NFT item, adding value and uniqueness to the player's experience.",
-    },
+        "Celebrate the release of the first project on the Launchpad, empowering innovative ventures and showcasing the platform’s potential.",
+        completed: true,
+      },
     {
-      title: "Full Release of the Multiplayer PvE",
+      title: "CAWS Adventure Enhancements",
       content:
-        "Launch the full version of the multiplayer player-versus-environment mode for all players to enjoy.",
-    },
+        "Upgrade the CAWS Adventure with improved journey and richer rewards to elevate the player experience.",
+        completed: true,
+      },
+    {
+      title: "Mini-Games Leaderboards Enhancement",
+      content:
+        "Enhance leaderboards for mini-games to track player achievements, foster competition, and reward top performers with exclusive incentives.",
+        completed: true,
+      },
+    {
+      title: "dApps UI/UX Improvement",
+      content:
+        "Improve the user interface and experience across all platforms and products for a more seamless and enjoyable user experience.",
+        completed: true,
+      },
   ];
   const quarterOne2025 = [
     {
@@ -1801,13 +1791,13 @@ const Roadmap = () => {
               </div>
             </div>
             <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
               id="roadmapAccordion"
             >
-              {quarterOne2024.map((item, index) => (
+           {quarterOne2024.map((item, index) => (
                 <div className="accordion-item">
                   <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapseQuarterOne2024${index}`}
                     aria-expanded="false"
@@ -1816,7 +1806,7 @@ const Roadmap = () => {
                     {item?.completed === true ? (
                       <img
                         src={
-                          "https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"
+                          "https://cdn.worldofdypians.com/dypius/completedIcon.svg"
                         }
                         alt=""
                       />
@@ -1837,7 +1827,7 @@ const Roadmap = () => {
                     data-bs-parent="#roadmapAccordion"
                   >
                     <ul
-                      className="mb-0 py-2 ps-2"
+                      className="mb-0 py-2 ps-2 roadmap-list"
                       style={{ listStyle: "none" }}
                     >
                       <li className="accordion-list-item">{item.content}</li>
@@ -1862,13 +1852,13 @@ const Roadmap = () => {
               </div>
             </div>
             <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
               id="roadmapAccordion"
             >
               {quarterTwo2024.map((item, index) => (
                 <div className="accordion-item">
                   <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapseQuarterTwo2024${index}`}
                     aria-expanded="false"
@@ -1877,7 +1867,7 @@ const Roadmap = () => {
                     {item?.completed === true ? (
                       <img
                         src={
-                          "https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"
+                          "https://cdn.worldofdypians.com/dypius/completedIcon.svg"
                         }
                         alt=""
                       />
@@ -1898,7 +1888,7 @@ const Roadmap = () => {
                     data-bs-parent="#roadmapAccordion"
                   >
                     <ul
-                      className="mb-0 py-2 ps-2"
+                      className="mb-0 py-2 ps-2 roadmap-list"
                       style={{ listStyle: "none" }}
                     >
                       <li className="accordion-list-item">{item.content}</li>
@@ -1909,7 +1899,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card  d-flex flex-column align-items-center">
+            <div className="date-card selected d-flex flex-column align-items-center">
               <img
                 src={
                   "https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"
@@ -1923,13 +1913,13 @@ const Roadmap = () => {
               </div>
             </div>
             <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
               id="roadmapAccordion"
             >
               {quarterThree2024.map((item, index) => (
                 <div className="accordion-item">
                   <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapseQuarterThree2024${index}`}
                     aria-expanded="false"
@@ -1938,7 +1928,7 @@ const Roadmap = () => {
                     {item?.completed === true ? (
                       <img
                         src={
-                          "https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"
+                          "https://cdn.worldofdypians.com/dypius/completedIcon.svg"
                         }
                         alt=""
                       />
@@ -1959,7 +1949,7 @@ const Roadmap = () => {
                     data-bs-parent="#roadmapAccordion"
                   >
                     <ul
-                      className="mb-0 py-2 ps-2"
+                      className="mb-0 py-2 ps-2 roadmap-list"
                       style={{ listStyle: "none" }}
                     >
                       <li className="accordion-list-item">{item.content}</li>
@@ -1970,7 +1960,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card  d-flex flex-column align-items-center">
+            <div className="date-card selected d-flex flex-column align-items-center">
               <img
                 src={
                   "https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"
@@ -1984,13 +1974,13 @@ const Roadmap = () => {
               </div>
             </div>
             <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
               id="roadmapAccordion"
             >
               {quarterFour2024.map((item, index) => (
                 <div className="accordion-item">
                   <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapseQuarterFour2024${index}`}
                     aria-expanded="false"
@@ -1999,7 +1989,7 @@ const Roadmap = () => {
                     {item?.completed === true ? (
                       <img
                         src={
-                          "https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"
+                          "https://cdn.worldofdypians.com/dypius/completedIcon.svg"
                         }
                         alt=""
                       />
@@ -2020,7 +2010,7 @@ const Roadmap = () => {
                     data-bs-parent="#roadmapAccordion"
                   >
                     <ul
-                      className="mb-0 py-2 ps-2"
+                      className="mb-0 py-2 ps-2 roadmap-list"
                       style={{ listStyle: "none" }}
                     >
                       <li className="accordion-list-item">{item.content}</li>
