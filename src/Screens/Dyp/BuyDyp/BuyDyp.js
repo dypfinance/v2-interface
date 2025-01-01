@@ -1,9 +1,5 @@
 import React, { useEffect } from "react";
 import Title from "../../../components/Title/Title";
-import coin from "../../../assets/coin.png";
-import coinBg from "../../../assets/coinbackground.png";
-import ring from "../../../assets/tokenCircle.png";
-import sphere from "../../../assets/newsSphere.png";
 import useWindowSize from "../../../hooks/useWindowSize";
 import "./_buydyp.scss";
 import { NavLink } from "react-router-dom";
@@ -51,8 +47,8 @@ const BuyDyp = () => {
           ) : null}
         </div>
         <div className="col-12 col-sm-6 col-lg-6 position-relative">
-          <img className="coin" src={coin} alt="" />
-          <img className="coinBackground" src={coinBg} alt="" />
+          <img className="coin" src={"https://cdn.worldofdypians.com/dypius/coin.png"} alt="" />
+          <img className="coinBackground" src={"https://cdn.worldofdypians.com/dypius/coinbackground.png"} alt="" />
         </div>
       </div>
       {windowSize.width < 576 ? (
@@ -64,7 +60,7 @@ const BuyDyp = () => {
             Explore
             <img
               className="ps-2"
-              src={require(`../../../assets/right-arrow.svg`).default}
+              src={`https://cdn.worldofdypians.com/dypius/right-arrow.svg`}
               alt=""
             />
           </NavLink>

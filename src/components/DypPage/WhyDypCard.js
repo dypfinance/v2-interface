@@ -10,7 +10,7 @@ const WhyDypCard = ({ title, description, icon }) => {
       <div className="green-tag"></div>
       <div className="tag d-flex justify-content-center align-items-center">
         <img
-          src={require(`../../Screens/Dyp/assets/${icon}.svg`)}
+          src={`https://cdn.worldofdypians.com/dypius/${icon}.svg`}
           alt=""
         />
       </div>

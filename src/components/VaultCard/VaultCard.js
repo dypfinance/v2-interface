@@ -1,5 +1,5 @@
 import React from "react";
-import rightArrow from "../../assets/right-arrow.svg";
+
 
 const VaultCards = ({ pool, apr, link, top_tick, icon }) => {
   return (
@@ -8,7 +8,7 @@ const VaultCards = ({ pool, apr, link, top_tick, icon }) => {
       <div className="d-flex flex-column gap-3">
         <div className="row justify-content-between gap-2 m-0 align-items-center">
           <div className="row gap-1 align-items-center">
-            <img src={require(`./Tokens/${icon}`) } alt="pool" className="pl-0"/>
+            <img src={`https://cdn.worldofdypians.com/dypius/${icon}`} alt="pool" className="pl-0"/>
             <span className="poolTitle p-0">{pool}</span>
           </div>
           <span className="aprTitle p-0">
@@ -27,7 +27,7 @@ const VaultCards = ({ pool, apr, link, top_tick, icon }) => {
             target="_blank"
             rel="noreferrer"
           >
-            Supply <img src={rightArrow} alt="" className="ml-3"  />
+            Supply <img src={"https://cdn.worldofdypians.com/dypius/right-arrow.svg"} alt="" className="ml-3"  />
           </a>
         </div>
       </div>

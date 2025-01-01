@@ -1,8 +1,4 @@
 import React, { useEffect } from "react";
-import calendar from '../../assets/calendar.svg'
-import filledArrow from '../../assets/filledArrow.svg'
-
-
 const NewsCard = ({title, description, date, image, link}) => {
 
   
@@ -23,10 +19,10 @@ const NewsCard = ({title, description, date, image, link}) => {
       </div>
       <div className="d-flex flex-row justify-content-between">
         <div className="d-flex flex-row align-items-center">
-          <img src={calendar} alt="" className="pr-2"  />
+          <img src={"https://cdn.worldofdypians.com/dypius/calendar.svg"} alt="" className="pr-2"  />
           <p className="mb-0" style={{color: '#7770E0'}}>{date}</p>
         </div>
-        <img src={filledArrow} alt=""  />
+        <img src={"https://cdn.worldofdypians.com/dypius/filledArrow.svg"} alt=""  />
       </div>
     </div>
     </a>

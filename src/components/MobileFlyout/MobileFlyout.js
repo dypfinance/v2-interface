@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./_mobileflyout.scss";
-import newTag from "./assets/newTag.svg";
-import close from "./assets/close.svg";
+
 const MobileFlyout = ({ onClose, onDownloadClick }) => {
   const [show, setShow] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -42,7 +41,7 @@ const MobileFlyout = ({ onClose, onDownloadClick }) => {
   return (
     <div className={`mobile-flyout-wrapper p-2 w-100 d-block d-lg-none`}>
       <div className="d-flex align-items-center gap-2">
-        <img src={newTag} alt="" />
+        <img src={"https://cdn.worldofdypians.com/dypius/newTag.svg"} alt="" />
         <span className="mobile-flyout-text w-100">Dypius Mobile App</span>
         <div className="d-flex w-100 justify-content-end">
           <button
@@ -54,7 +53,7 @@ const MobileFlyout = ({ onClose, onDownloadClick }) => {
         </div>
         <div className="d-flex justify-content-end">
           <img
-            src={close}
+            src={"https://cdn.worldofdypians.com/dypius/closeMobile.svg"}
             alt=""
             onClick={onClose}
             style={{ width: 22, height: 22 }}

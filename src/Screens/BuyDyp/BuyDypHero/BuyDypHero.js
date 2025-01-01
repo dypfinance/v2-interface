@@ -15,10 +15,10 @@ const BuyDypHero = () => {
       videos: [
         {
           link: "https://www.youtube.com/watch?v=BIuy1A-_-dU",
-          image: "kucoin.png",
+          image: "kucoinBuy.png",
           title: "How to buy DeFi Yield Protocol (DYP) on KuCoin",
           walletName: "KuCoin",
-          thumbnail: "kucoin.png",
+          thumbnail: "kucoinVid.png",
         },
       ],
       id: "collapsethree",
@@ -34,10 +34,10 @@ const BuyDypHero = () => {
       videos: [
         {
           link: "https://www.youtube.com/watch?v=arVFXf5hESE",
-          image: "gate.png",
+          image: "gateBuy.png",
           title: "How to buy DeFi Yield Protocol (DYP) on Gate.io",
           walletName: "Gate.io",
-          thumbnail: "gate.png",
+          thumbnail: "gateVid.png",
         },
       ],
       id: "collapsefour",
@@ -72,64 +72,64 @@ const BuyDypHero = () => {
       videos: [
         {
           link: "https://www.youtube.com/watch?v=yBzIPecqKY8",
-          image: "metamask.png",
+          image: "metamaskBuy.png",
           title: "How to set up MetaMask for DeFi Yield Protocol (DYP)",
           walletName: "Metamask",
-          thumbnail: "uni1.png",
+          thumbnail: "uni1Vid.png",
         },
         {
           link: "https://www.youtube.com/watch?v=XsmZ9xW_nps",
-          image: "metamask.png",
+          image: "metamaskBuy.png",
           title:
             "How to buy DeFi Yield Protocol (DYP) on Uniswap V2 using MetaMask",
           walletName: "Metamask",
-          thumbnail: "uni2.png",
+          thumbnail: "uni2Vid.png",
         },
         {
           link: "https://www.youtube.com/watch?v=amM9wOGNVpg",
-          image: "trustwallet.png",
+          image: "trustwalletBuy.png",
           walletName: "Trust wallet",
           title: "How to set up Trust Wallet for DeFi Yield Protocol (DYP)",
-          thumbnail: "trust1.png",
+          thumbnail: "trust1Vid.png",
         },
         {
           link: "https://www.youtube.com/watch?v=AxWb2TxiQHw",
           walletName: "Trust wallet",
-          image: "trustwallet.png",
+          image: "trustwalletBuy.png",
           title:
             "How to buy DeFi Yield Protocol (DYP) on Uniswap V2 using Trust Wallet",
-          thumbnail: "trust2.png",
+          thumbnail: "trust2Vid.png",
         },
         {
           link: "https://www.youtube.com/watch?v=-kE6mM6d9ek",
-          image: "coin98.png",
+          image: "coin98Buy.png",
           walletName: "Coin98",
           title:
             "How to set up Coin98 Wallet (Desktop) for DeFi Yield Protocol (DYP)",
-          thumbnail: "coin1.png",
+          thumbnail: "coin1Vid.png",
         },
         {
           link: "https://www.youtube.com/watch?v=Dkt7JCbKHv4",
-          image: "coin98.png",
+          image: "coin98Buy.png",
           walletName: "Coin98",
           title:
             "How to buy DeFi Yield Protocol (DYP) on Ethereum Network using the Coin98 Wallet",
-          thumbnail: "coin2.png",
+          thumbnail: "coin2Vid.png",
         },
         {
           link: "https://www.youtube.com/watch?v=lTD8DAsxmtY",
-          image: "safepal.png",
+          image: "safepalBuy.png",
           walletName: "SafePal",
           title: "How to set up SafePal for DeFi Yield Protocol",
-          thumbnail: "safe1.png",
+          thumbnail: "safe1Vid.png",
         },
         {
           link: "https://www.youtube.com/watch?v=h-oLMDhVvbg",
-          image: "safepal.png",
+          image: "safepalBuy.png",
           walletName: "SafePal",
           title:
             "How to buy DeFi Yield Protocol (DYP) on Uniswap V2 using SafePal",
-          thumbnail: "safe2.png",
+          thumbnail: "safe2Vid.png",
         },
       ],
       id: "collapsesix",
@@ -144,10 +144,10 @@ const BuyDypHero = () => {
       videos: [
         {
           link: "https://youtu.be/mjUUqNy-zW8",
-          image: "coinbase.png",
+          image: "coinbaseBuy.png",
           title: "How to buy DeFi Yield Protocol (DYP) on Coinbase",
           walletName: "Coinbase",
-          thumbnail: "coinbase.png",
+          thumbnail: "coinbaseVid.png",
         },
       ],
       id: "collapseone",
@@ -163,33 +163,33 @@ const BuyDypHero = () => {
       videos: [
         {
           link: "https://www.youtube.com/watch?v=yBzIPecqKY8",
-          image: "metamask.png",
+          image: "metamaskBuy.png",
           title: "How to set up MetaMask for DeFi Yield Protocol",
           walletName: "Metamask",
-          thumbnail: "uni1.png",
+          thumbnail: "uni1Vid.png",
         },
         {
           link: "https://www.youtube.com/watch?v=sLHWYgNEbq8",
-          image: "metamask.png",
+          image: "metamaskBuy.png",
           walletName: "Metamask",
           title:
             "How to buy DeFi Yield Protocol (DYP) on Pancakeswap V2 using MetaMask",
-          thumbnail: "panc1.png",
+          thumbnail: "panc1Vid.png",
         },
         {
           link: "https://www.youtube.com/watch?v=amM9wOGNVpg",
-          image: "trustwallet.png",
+          image: "trustwalletBuy.png",
           walletName: "Trust wallet",
           title: "How to set up Trust Wallet for DeFi Yield Protocol (DYP)",
-          thumbnail: "trust1.png",
+          thumbnail: "trust1Vid.png",
         },
         {
           link: "https://www.youtube.com/watch?v=Z8X3ythoZbg",
-          image: "trustwallet.png",
+          image: "trustwalletBuy.png",
           walletName: "Trust wallet",
           title:
             "How to buy DeFi Yield Protocol (DYP) on Pancakeswap V2 using Trust Wallet",
-          thumbnail: "panc2.png",
+          thumbnail: "panc2Vid.png",
         },
       ],
       id: "collapseseven",
@@ -265,13 +265,13 @@ const BuyDypHero = () => {
           <div className="col-9 col-lg-3 position-relative d-xl-block d-lg-block d-none">
             <img
               className="buydypcoin"
-              src={require(`../../../assets/coin.png`)}
+              src={`https://cdn.worldofdypians.com/dypius/coin.png`}
               alt=""
             />
 
             <img
               className="backgroundbuydyp"
-              src={require(`../assets/purplebg.png`)}
+              src={`https://cdn.worldofdypians.com/dypius/purplebg.png`}
               alt=""
             />
           </div>
@@ -284,7 +284,7 @@ const BuyDypHero = () => {
                   title={item.title}
                   id={item.id}
                   key={index}
-                  logo={require(`../../../assets/coins/${item.logo}`)}
+                  logo={`https://cdn.worldofdypians.com/dypius/${item.logo}`}
                   link={item.link}
                   totalvids={item.totalvids}
                   videos={item.videos}

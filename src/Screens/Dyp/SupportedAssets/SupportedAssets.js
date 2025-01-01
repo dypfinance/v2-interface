@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import SupAssetCard from "../../../components/SupAssetCard/SupAssetCard";
 import Title from "../../../components/Title/Title";
-import ethDropdown from "../assets/ethereumDropdown.svg";
-import bnbDropdown from "../assets/bnbDropdown.svg";
-import avaDropdown from "../assets/avaDropdown.svg";
-import dropdownIndicator from "../assets/dropdownIndicator.svg";
-import Spiral from "../../../assets/DypAssets/spiral.png";
-import rightArrow from "../../../assets/filledArrow.svg";
+
+
+
+
 import axios from "axios";
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
 import EmptySupAssetCard from "../../../components/SupAssetCard/EmptySupAssetCard";
@@ -335,7 +333,7 @@ const SupportedAssets = () => {
                       fontSize: 12,
                     }}
                   >
-                    <img src={ethDropdown} alt="" />
+                    <img src={"https://cdn.worldofdypians.com/dypius/ethereumDropdown.svg"} alt="" />
                     Ethereum
                   </div>
                 ) : bnbState === true ? (
@@ -347,7 +345,7 @@ const SupportedAssets = () => {
                       fontSize: 12,
                     }}
                   >
-                    <img src={bnbDropdown} alt="" />
+                    <img src={"https://cdn.worldofdypians.com/dypius/bnbDropdown.svg"} alt="" />
                     BNB Chain
                   </div>
                 ) : (
@@ -359,11 +357,11 @@ const SupportedAssets = () => {
                       fontSize: 12,
                     }}
                   >
-                    <img src={avaDropdown} alt="" />
+                    <img src={"https://cdn.worldofdypians.com/dypius/avaDropdown.svg"} alt="" />
                     Avalanche
                   </div>
                 )}
-                <img src={dropdownIndicator} alt="" />
+                <img src={"https://cdn.worldofdypians.com/dypius/dropdownIndicator.svg"} alt="" />
               </div>
               <ul className="dropdown-menu coin-menu p-1">
                 <li
@@ -371,21 +369,21 @@ const SupportedAssets = () => {
                   onClick={() => handleEthPool()}
                   style={{ color: "#566FCE" }}
                 >
-                  <img src={ethDropdown} alt="" /> Ethereum
+                  <img src={"https://cdn.worldofdypians.com/dypius/ethereumDropdown.svg"} alt="" /> Ethereum
                 </li>
                 <li
                   className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
                   onClick={() => handleBnbPool()}
                   style={{ color: "#D5A404" }}
                 >
-                  <img src={bnbDropdown} alt="" /> BNB Chain
+                  <img src={"https://cdn.worldofdypians.com/dypius/bnbDropdown.svg"} alt="" /> BNB Chain
                 </li>
                 <li
                   className="d-flex flex-row align-items-center justify-content-start gap-3 py-3 mx-2 coin"
                   onClick={() => handleAvaxPool()}
                   style={{ color: "#E84142" }}
                 >
-                  <img src={avaDropdown} alt="" /> Avalanche
+                  <img src={"https://cdn.worldofdypians.com/dypius/avaDropdown.svg"} alt="" /> Avalanche
                 </li>
               </ul>
             </div>
@@ -447,7 +445,7 @@ const SupportedAssets = () => {
               /> */}
              
             </>
-            {/* <img className="spiral2" src={Spiral} alt="" /> */}
+       
             <a
               href="https://app.dypius.com/earn/dypius"
               target={"_blank"}
@@ -455,7 +453,7 @@ const SupportedAssets = () => {
               className="outline-btn position-absolute d-flex align-items-center viewmorebtn"
               style={{ bottom: "-19px", width: "fit-content" }}
             >
-              View more <img src={rightArrow} alt="" className="ml-3" />
+              View more <img src={"https://cdn.worldofdypians.com/dypius/filledArrow.svg"} alt="" className="ml-3" />
             </a>
           </div>
         </div>

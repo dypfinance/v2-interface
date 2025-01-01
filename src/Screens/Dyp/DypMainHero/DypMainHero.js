@@ -1,32 +1,32 @@
 import React from "react";
 import './_dypmainhero.scss'
-import coinBg from "../assets/dypcoinbackground.png";
+
 
 const DypMainHero = () => {
   return (
     <div className="container-fluid dyp-main-hero d-flex flex-column justify-content-end position-relative overflow-hidden" style={{zIndex: 1}}>
       <img
         className="waves"
-        src={require(`../assets/wavesTop.svg`).default}
+        src={`https://cdn.worldofdypians.com/dypius/wavesTop.svg`}
         alt=""
          
 
       />
       <img
         className="waves d-none d-lg-block"
-        src={require(`../assets/wavesBottom.svg`).default}
+        src={`https://cdn.worldofdypians.com/dypius/wavesBottom.svg`}
         alt=""
          
       />
       <img
         className="mobile-waves d-block d-lg-none"
-        src={require(`../assets/mobileWaves.svg`).default}
+        src={`https://cdn.worldofdypians.com/dypius/mobileWaves.svg`}
          
 
       />
       <img
         className="ring d-none d-lg-block"
-        src={require(`../../../assets/tokenCircle.png`)}
+        src={`https://cdn.worldofdypians.com/dypius/tokenCircle.png`}
          
 
       />
@@ -44,12 +44,12 @@ const DypMainHero = () => {
         <div className="col-12 col-sm-6 col-lg-3 position-relative dyp-coin-wrapper">
           <img
             className="coin"
-            src={require(`../../../assets/coin.png`)}
+            src={`https://cdn.worldofdypians.com/dypius/coin.png`}
             alt=""
           />
           <img
             className="coin"
-            src={coinBg}
+            src={"https://cdn.worldofdypians.com/dypius/dypcoinbackground.png"}
             alt=""
           />
         </div>
@@ -65,7 +65,7 @@ const DypMainHero = () => {
         >
           Solutions
           <img
-            src={require(`../../../assets/accordionIndicator.svg`).default}
+            src={`https://cdn.worldofdypians.com/dypius/accordionIndicator.svg`}
             alt="indicator"
             className="submenu-indicator"
           />
@@ -76,7 +76,7 @@ const DypMainHero = () => {
         >
           Token
           <img
-            src={require(`../../../assets/accordionIndicator.svg`).default}
+            src={`https://cdn.worldofdypians.com/dypius/accordionIndicator.svg`}
             alt="indicator"
             className="submenu-indicator"
           />
@@ -87,7 +87,7 @@ const DypMainHero = () => {
         >
           Vault
           <img
-            src={require(`../../../assets/accordionIndicator.svg`).default}
+            src={`https://cdn.worldofdypians.com/dypius/accordionIndicator.svg`}
             alt="indicator"
             className="submenu-indicator"
           />
@@ -98,7 +98,7 @@ const DypMainHero = () => {
         >
           Learn
           <img
-            src={require(`../../../assets/accordionIndicator.svg`).default}
+            src={`https://cdn.worldofdypians.com/dypius/accordionIndicator.svg`}
             alt="indicator"
             className="submenu-indicator"
           />

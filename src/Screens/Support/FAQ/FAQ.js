@@ -5,10 +5,10 @@ import { IconButton, InputAdornment, TextField } from "@mui/material";
 import "./_faq.scss";
 import FAQAccordion from "../../../components/FaqAccordionItem/FAQAccordion";
 import axios from "axios";
-import sphere from '../../../assets/newsSphere.png'
+
 import useWindowSize from "../../../hooks/useWindowSize";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import searchIcon from '../../../assets/searchIcon.svg'
+
 
 const theme = createTheme({
   palette: {
@@ -45,11 +45,6 @@ const FAQ = () => {
       title: "Farm",
       icon: "farm"
     },
-    // {
-    //   id: "63488547062d4b709c4a250b",
-    //   title: "Buyback",
-    //   icon: "buyback"
-    // },
     {
       id: "634885c5062d4b709c4a250f",
       title: "Vault",
@@ -186,7 +181,7 @@ const FAQ = () => {
           </p>
         </div>
         <div className="categories-container  p-4 w-100 position-relative">
-          {/* <img src={sphere} alt="" className="faq-sphere d-none d-lg-flex"   /> */}
+   
           <div className="row align-items-center justify-content-center flex-column position-relative">
 
             <div className=" search-container d-flex justify-content-center align-items-center px-4 w-50">
@@ -195,7 +190,7 @@ const FAQ = () => {
                   startAdornment: (
                     <InputAdornment>
                       <IconButton>
-                      <img src={searchIcon} alt="" />
+                      <img src={"https://cdn.worldofdypians.com/dypius/searchIcon.svg"} alt="" />
                       </IconButton>
                     </InputAdornment>
                   )
@@ -236,7 +231,7 @@ const FAQ = () => {
                 } align-items-center flex-column gap-2 mx-auto`}
               >
                 <img
-                  src={faqTitle === category.title ? require(`../assets/${category.icon}IconSelected.png`) : require(`../assets/${category.icon}Icon.png`)}
+                  src={faqTitle === category.title ? `https://cdn.worldofdypians.com/dypius/${category.icon}IconSelected.png` : `https://cdn.worldofdypians.com/dypius/${category.icon}Icon.png`}
                   alt=""
                   width={64}
                   height={64}

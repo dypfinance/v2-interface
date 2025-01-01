@@ -28,7 +28,14 @@
       border-radius: 8px;
       color: white !important;
     }
+  
+  @media screen and (max-width: 786px) {
+    flex-wrap: wrap;
   }
+  }
+
+
+
 
   .roadmap-title {
     p {
@@ -189,7 +196,7 @@
 
 .roadmap-wrapper::before {
   content: "";
-  background-image: url("../assets/roadmapBackground.png");
+  background-image: url("https://cdn.worldofdypians.com/dypius/roadmapBackground.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

@@ -1,22 +1,22 @@
 import React from "react";
-import sphere from "../../../assets/newsSphere.png";
-import iDyp from '../assets/idypCoin.png'
+
+
 
 const IDypHero = () => {
   return (
     <div className="container-fluid idypmainhero d-flex flex-column justify-content-center position-relative overflow-hidden">
       <img
         className="idypring d-none d-lg-block"
-        src={require(`../../../assets/tokenCircle.png`)}
+        src={`https://cdn.worldofdypians.com/dypius/tokenCircle.png`}
       />
             <img
         className="idypheroimg"
-        src={require('../assets/idypmainhero.png')}
+        src={'https://cdn.worldofdypians.com/dypius/idypmainhero.png'}
         alt=""
       />
       <img
         className="sphere-2 d-none d-lg-block"
-        src={sphere}
+        src={"https://cdn.worldofdypians.com/dypius/newsSphere.png"}
         alt=""
         style={{ position: "absolute", left: "2%", top: "70%" }}
       />
@@ -32,12 +32,12 @@ const IDypHero = () => {
         <div className="col-12 col-lg-3 position-relative d-lg-block d-xl-block idyp-hero-images">
           <img
             className="idypcoin"
-            src={iDyp}
+            src={"https://cdn.worldofdypians.com/dypius/idypCoin.png"}
             alt=""
           />
           <img
             className="backgroundbuydyp"
-            src={require(`../assets/idyp_purplebg.png`)}
+            src={`https://cdn.worldofdypians.com/dypius/idyp_purplebg.png`}
             alt=""
           />
         </div>

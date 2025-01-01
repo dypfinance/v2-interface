@@ -9,8 +9,7 @@ import {
   InputLabel,
   FormHelperText,
 } from "@mui/material";
-import filebg1 from "../../About/assets/filebg.svg";
-import filebg2 from "../../About/assets/fileuploaded.svg";
+
 import { useState } from "react";
 import styled from "styled-components";
 import FormContainer from "../../../components/FormContainer/FormContainer";
@@ -19,10 +18,10 @@ import validateBusiness from "../../About/ContactUs/validateinfo";
 import axios from "axios";
 import ReCaptchaV2 from "react-google-recaptcha";
 import { useRef } from "react";
-import removebtn from "../../About/assets/remove-btn.svg";
-import selectBtn from "../assets/selectBtn.svg";
+
+
 import Modal from "../../../components/Modal/Modal";
-import ring from "../../../assets/tokenCircle.png";
+
 import useWindowSize from "../../../hooks/useWindowSize";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -368,7 +367,6 @@ const HelpCenter = () => {
         className="row contact-container position-relative"
        
       >
-        {/* <img src={ring} alt="" className="help-ring d-none d-lg-block"  /> */}
         <FormContainer
           title="General Inquiry"
           desc="Get immediate help and support for Dypius products and solutions."
@@ -432,7 +430,7 @@ const HelpCenter = () => {
                       
                     />
                     <img
-                      src={selectBtn}
+                      src={"https://cdn.worldofdypians.com/dypius/selectBtn.svg"}
                       alt=""
                       style={{
                         width: "40px",
@@ -523,7 +521,7 @@ const HelpCenter = () => {
                       onChange={handleChange}
                     />
                     <img
-                      src={selectBtn}
+                      src={"https://cdn.worldofdypians.com/dypius/selectBtn.svg"}
                       alt=""
                       style={{
                         width: "40px",
@@ -567,8 +565,8 @@ const HelpCenter = () => {
                       className="custom-file-input outline-btn"
                       style={{
                         backgroundImage: selectedFile
-                          ? `url(${filebg2})`
-                          : `url(${filebg1})`,
+                          ? `url(${"https://cdn.worldofdypians.com/dypius/fileuploaded.svg"})`
+                          : `url(${"https://cdn.worldofdypians.com/dypius/filebg.svg"})`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
                         width: windowSize.width < 999 ? '100%' : '75%',
@@ -577,7 +575,7 @@ const HelpCenter = () => {
                       }}
                     />
                     <img
-                      src={removebtn}
+                      src={"https://cdn.worldofdypians.com/dypius/remove-btn.svg"}
                       alt=""
                       style={{
                         display: selectedFile ? "block" : "none",
@@ -689,7 +687,7 @@ const HelpCenter = () => {
                       onChange={handleBusinessChange}
                     />
                     <img
-                      src={selectBtn}
+                      src={"https://cdn.worldofdypians.com/dypius/selectBtn.svg"}
                       alt=""
                       style={{
                         width: "40px",
@@ -779,7 +777,7 @@ const HelpCenter = () => {
                     
                   />
                   <img
-                    src={selectBtn}
+                    src={"https://cdn.worldofdypians.com/dypius/selectBtn.svg"}
                     alt=""
                     style={{ width: "40px", height: "40px", cursor: "pointer" }}
                     onClick={() =>
@@ -815,8 +813,8 @@ const HelpCenter = () => {
                       className="custom-file-input outline-btn"
                       style={{
                         backgroundImage: businessFile
-                          ? `url(${filebg2})`
-                          : `url(${filebg1})`,
+                          ? `url(${"https://cdn.worldofdypians.com/dypius/fileuploaded.svg"})`
+                          : `url(${"https://cdn.worldofdypians.com/dypius/filebg.svg"})`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
                         width: windowSize.width < 999 ? '100%' : '75%',
@@ -824,7 +822,7 @@ const HelpCenter = () => {
                       }}
                     />
                     <img
-                      src={removebtn}
+                      src={"https://cdn.worldofdypians.com/dypius/remove-btn.svg"}
                       alt=""
                       style={{
                         display: businessFile ? "block" : "none",

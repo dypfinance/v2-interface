@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Graph from "../../../assets/DypAssets/dyp-chart2.svg";
-import idypGraph from "../assets/avaxGraph.png";
-import Success from "../../../components/Success/Success";
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
 
 const AvaxTokenomics = () => {
@@ -188,7 +185,7 @@ const AvaxTokenomics = () => {
               </div>
             </div>
             <div>
-              <img src={idypGraph} alt="" style={{ height: 260, width: '100%', objectFit: 'contain' }} />
+              <img src={"https://cdn.worldofdypians.com/dypius/avaxGraph.png"} alt="" style={{ height: 260, width: '100%', objectFit: 'contain' }} />
             </div></div>
           </div>
         </div>

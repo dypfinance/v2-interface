@@ -2,16 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NoteIcon from "../../../components/NoteIcon/NoteIcon";
 import Title from "../../../components/Title/Title";
-import Clipboard from "../assets/filledClipboard.svg";
-import Graph from "../../../assets/DypAssets/dyp-chart2.svg";
-import idypGraph from "../../../assets/DypAssets/idyp-chart2.svg";
-import PurpleArrowDown from "../../../assets/DypAssets/purpleArrow-down.svg";
-import WhiteArrowUp from "../../../assets/DypAssets/whiteArrow-up.svg";
 import { shortAddress } from "../../../hooks/shortAddress";
 import useWindowSize from "../../../hooks/useWindowSize";
-import tokenomicsIcon from "../../../assets/tokenomicsIcon.svg";
 import Success from "../../../components/Success/Success";
-import minus from "../../../assets/minus.svg";
+
 import getFormattedNumber from "../../../hooks/getFormattedNumber";
 import AvaxTokenomics from "./AvaxTokenomics";
 
@@ -100,7 +94,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
       <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
         <div className="row m-0 align-items-center justify-content-center gap-2 pl-0">
           <div className="tokenomics-icon d-flex justify-content-center align-items-center">
-            <img src={tokenomicsIcon} alt="" />
+            <img src={"https://cdn.worldofdypians.com/dypius/tokenomicsIcon.svg"} alt="" />
           </div>
           <Title top={isDyp === true ? "Tokenomics" : "iDYP Tokenomics"} />
         </div>
@@ -129,7 +123,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
             >
               DYP Tokenomics
               <img
-                src={toggledyp === true ? minus : PurpleArrowDown}
+                src={toggledyp === true ? "https://cdn.worldofdypians.com/dypius/minus.svg" : "https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg"}
                 alt=""
                 className="ml-2" 
               />
@@ -156,7 +150,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
             >
               iDYP Tokenomics
               <img
-                src={toggleIdyp === true ?  PurpleArrowDown : WhiteArrowUp}
+                src={toggleIdyp === true ?  "https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg" : "https://cdn.worldofdypians.com/dypius/whiteArrow-up.svg"}
                 alt=""
               />
             </button>
@@ -182,7 +176,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                         )
                       : "0x39b46b212bdf15b42b166779b9d1787a68b9d0c3"}
                     <img
-                      src={Clipboard}
+                      src={"https://cdn.worldofdypians.com/dypius/filledClipboard.svg"}
                       alt=""
                       onClick={() => {
                         handleCopy(
@@ -461,7 +455,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                   data-design="modern"
                   data-coin-ids="2669"
                 ></div>
-                <img src={Graph} alt="" className="w-100" />
+                <img src={"https://cdn.worldofdypians.com/dypius/dyp-chart2.svg"} alt="" className="w-100" />
                 <div className="">
                   <div className="circulating-wrapper w-100">
                     <div className="d-flex flex-column gap-3">
@@ -491,7 +485,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                       : "0xbd100d061e120b2c67a24453cf6368e63f1be056"}
 
                     <img
-                      src={Clipboard}
+                      src={"https://cdn.worldofdypians.com/dypius/filledClipboard.svg"}
                       alt=""
                       onClick={() => {
                         handleCopy(
@@ -802,7 +796,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                     data-design="modern"
                     data-coin-ids="9517"
                   ></div>
-                  <img src={idypGraph} alt="" className="w-100" />
+                  <img src={"https://cdn.worldofdypians.com/dypius/idyp-chart2.svg"} alt="" className="w-100" />
                 </div>
                 <div className="">
                   <div className="circulating-wrapper w-100 mb-3">
