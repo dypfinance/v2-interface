@@ -11,7 +11,6 @@ import Web3 from "web3";
 import { TOKEN_ABI } from "./tokenAbi";
 import OutsideClickHandler from "react-outside-click-handler";
 
-
 const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
   const [tokenomicData, setTokenomicData] = useState("dyp");
   const [toggledyp, setToggleDyp] = useState(showBtn === false ? true : false);
@@ -136,7 +135,10 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
         <div className="row bg-white p-4 m-0 tokenomics-wrapper justify-content-between">
           <div className="row m-0 align-items-center justify-content-center gap-2 pl-0">
             <div className="tokenomics-icon d-flex justify-content-center align-items-center">
-              <img src={"https://cdn.worldofdypians.com/dypius/tokenomicsIcon.svg"} alt="" />
+              <img
+                src={"https://cdn.worldofdypians.com/dypius/tokenomicsIcon.svg"}
+                alt=""
+              />
             </div>
             <Title top={"Tokenomics"} />
           </div>
@@ -165,7 +167,11 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
               >
                 DYP Tokenomics
                 <img
-                  src={toggledyp === true ? "https://cdn.worldofdypians.com/dypius/minus.svg" : "https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg"}
+                  src={
+                    toggledyp === true
+                      ? "https://cdn.worldofdypians.com/dypius/minus.svg"
+                      : "https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg"
+                  }
                   alt=""
                   className="ml-2"
                 />
@@ -192,7 +198,11 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
               >
                 iDYP Tokenomics
                 <img
-                  src={toggleIdyp === true ? "https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg" : "https://cdn.worldofdypians.com/dypius/whiteArrow-up.svg"}
+                  src={
+                    toggleIdyp === true
+                      ? "https://cdn.worldofdypians.com/dypius/purpleArrow-down.svg"
+                      : "https://cdn.worldofdypians.com/dypius/whiteArrow-up.svg"
+                  }
                   alt=""
                 />
               </button>
@@ -207,9 +217,9 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
             <div className="card card-body pb-4">
               {tokenomicData === "dyp" ? (
                 <>
-                  <div className="row m-0 justify-content-between align-items-center align-items-lg-end gap-2">
+                  <div className="row m-0 justify-content-between align-items-center align-items-lg-start gap-2">
                     <div className="col-xl-7 col-lg-7 px-2">
-                      <div className="d-flex align-items-center gap-2 mb-3">
+                      {/* <div className="d-flex align-items-center gap-2 mb-3">
                         <button
                           className={`btn ${
                             dypVersion === "v2" ? "filled-btn" : "outline-btn"
@@ -226,10 +236,10 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                         >
                           DYP v1
                         </button>
-                      </div>
+                      </div> */}
                       <div className="d-flex flex-column mt-0">
                         <span className="dypcontract-title">
-                          DYP v2 Contract Address:
+                          DYP Contract Address:
                         </span>
                         <span
                           className="dypcontract-addr position-relative"
@@ -261,7 +271,9 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                             </div>
                           )}
                           <img
-                            src={"https://cdn.worldofdypians.com/dypius/filledClipboard.svg"}
+                            src={
+                              "https://cdn.worldofdypians.com/dypius/filledClipboard.svg"
+                            }
                             alt=""
                             onClick={() => {
                               handleCopy(
@@ -294,7 +306,12 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                                       }}
                                     >
                                       <h6 className="bottomitems m-0">
-                                        <img src={"https://cdn.worldofdypians.com/dypius/arrow-up.svg"} alt="" />
+                                        <img
+                                          src={
+                                            "https://cdn.worldofdypians.com/dypius/arrow-up.svg"
+                                          }
+                                          alt=""
+                                        />
                                         DYP Ethereum
                                       </h6>
                                     </a>
@@ -307,7 +324,12 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                                       }}
                                     >
                                       <h6 className="bottomitems m-0">
-                                        <img src={"https://cdn.worldofdypians.com/dypius/arrow-up.svg"} alt="" />
+                                        <img
+                                          src={
+                                            "https://cdn.worldofdypians.com/dypius/arrow-up.svg"
+                                          }
+                                          alt=""
+                                        />
                                         DYP Base
                                       </h6>
                                     </a>
@@ -321,7 +343,12 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                                       }}
                                     >
                                       <h6 className="bottomitems m-0">
-                                        <img src={"https://cdn.worldofdypians.com/dypius/arrow-up.svg"} alt="" />
+                                        <img
+                                          src={
+                                            "https://cdn.worldofdypians.com/dypius/arrow-up.svg"
+                                          }
+                                          alt=""
+                                        />
                                         DYP BNB Chain
                                       </h6>
                                     </a>
@@ -335,7 +362,12 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                                       }}
                                     >
                                       <h6 className="bottomitems m-0">
-                                        <img src={"https://cdn.worldofdypians.com/dypius/arrow-up.svg"} alt="" />
+                                        <img
+                                          src={
+                                            "https://cdn.worldofdypians.com/dypius/arrow-up.svg"
+                                          }
+                                          alt=""
+                                        />
                                         DYP Avalanche
                                       </h6>
                                     </a>
@@ -372,26 +404,11 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                           <li>DYP News</li>
                           <li>DYP Launchpad</li>
                           <li>Mini-games</li>
-                          <li>World of Dypians Events</li>
+                          {/* <li>World of Dypians Events</li> */}
                         </ul>
                         <p className="mb-0">
                           All the mentioned use cases are accessible exclusively
-                          for DYP token holders. The migration process for DYP
-                          has been active since November 8, 2023, allowing the
-                          transition of DYP v1 tokens to DYP v2 through the
-                          &nbsp;
-                          <a
-                            href="https://app.dypius.com/migration"
-                            rel="noreferrer"
-                            target="_blank"
-                            style={{
-                              color: "inherit",
-                            }}
-                          >
-                            <u>
-                              <b>Dypius Migration.</b>
-                            </u>
-                          </a>
+                          for DYP token holders.
                         </p>
                         <p className="mb-0">
                           DYP is a fair launch, community-governed project.
@@ -422,7 +439,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                           </span>
                         </div>
                       </div>
-                      <div className="mininginfo-wrapper d-flex flex-column gap-2">
+                      {/* <div className="mininginfo-wrapper d-flex flex-column gap-2">
                         <p className="mb-0">
                           <b>DYP Migration - Swap Ratio</b>
                         </p>
@@ -448,7 +465,7 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                             1 DYP ARC20 - 1 DYP ERC20 V2
                           </p>
                         </div>
-                      </div>
+                      </div> */}
                       {/* <div
                  id="crypto-widget-CoinList"
                  data-design="modern"
@@ -485,7 +502,9 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                           : "0xbd100d061e120b2c67a24453cf6368e63f1be056"}
 
                         <img
-                          src={"https://cdn.worldofdypians.com/dypius/filledClipboard.svg"}
+                          src={
+                            "https://cdn.worldofdypians.com/dypius/filledClipboard.svg"
+                          }
                           alt=""
                           onClick={() => {
                             handleCopy(
@@ -796,7 +815,13 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                         data-design="modern"
                         data-coin-ids="9517"
                       ></div>
-                      <img src={"https://cdn.worldofdypians.com/dypius/idyp-chart2.svg"} alt="" className="w-100" />
+                      <img
+                        src={
+                          "https://cdn.worldofdypians.com/dypius/idyp-chart2.svg"
+                        }
+                        alt=""
+                        className="w-100"
+                      />
                     </div>
                     <div className="">
                       <div className="circulating-wrapper w-100 mb-3">
@@ -866,7 +891,9 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                           </a>
                         )}
                         <img
-                          src={"https://cdn.worldofdypians.com/dypius/filledClipboard.svg"}
+                          src={
+                            "https://cdn.worldofdypians.com/dypius/filledClipboard.svg"
+                          }
                           alt=""
                           onClick={() => {
                             handleCopy(
@@ -1146,7 +1173,13 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                       data-design="modern"
                       data-coin-ids="2669"
                     ></div>
-                    <img src={"https://cdn.worldofdypians.com/dypius/dyp-chart2.svg"} alt="" className="w-100" />
+                    <img
+                      src={
+                        "https://cdn.worldofdypians.com/dypius/dyp-chart2.svg"
+                      }
+                      alt=""
+                      className="w-100"
+                    />
                     <div className="">
                       <div className="circulating-wrapper w-100">
                         <div className="d-flex flex-column gap-3">
@@ -1176,7 +1209,9 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                           : "0xbd100d061e120b2c67a24453cf6368e63f1be056"}
 
                         <img
-                          src={"https://cdn.worldofdypians.com/dypius/filledClipboard.svg"}
+                          src={
+                            "https://cdn.worldofdypians.com/dypius/filledClipboard.svg"
+                          }
                           alt=""
                           onClick={() => {
                             handleCopy(
@@ -1487,7 +1522,13 @@ const NewTokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
                         data-design="modern"
                         data-coin-ids="9517"
                       ></div>
-                      <img src={"https://cdn.worldofdypians.com/dypius/idyp-chart2.svg"} alt="" className="w-100" />
+                      <img
+                        src={
+                          "https://cdn.worldofdypians.com/dypius/idyp-chart2.svg"
+                        }
+                        alt=""
+                        className="w-100"
+                      />
                     </div>
                     <div className="">
                       <div className="circulating-wrapper w-100 mb-3">
