@@ -76,74 +76,22 @@ const MainHero = () => {
             <div className="col-12 col-lg-5 d-flex justify-content-lg-center gap-5 justify-content-xl-center justify-content-inherit flex-column text-white ml-lg-4 pt-5 px-0 px-lg-2">
               <div className="d-grid gap-4 mt-0 mt-lg-5">
                 <div>
-                  <h1>Dypius Migration</h1>
+                  <h1>Welcome 
+                  to the future</h1>
                 </div>
                 <p className="text-white">
-                  We are committed to providing our users with the best possible
-                  experience. As part of this commitment, we are enhancing the
-                  DYP token's performance, security, and utility. The migration
-                  will allow us to implement improvements and ensure the
-                  long-term sustainability of DYP token.
+                Dypius is a powerful decentralized ecosystem that faces the future. A new era with special focus on scalability, security, and global adoption. Powered by a next-gen infrastructure through our strong foundation, and much more! 
                 </p>
-                <div className="migrated-tokens-wrapper d-flex align-items-center justify-content-between py-2 px-4">
-                 
-                    <>
-                      <span className="migrated-tokens mb-0">
-                        Migrated DYP Tokens
-                      </span>
-                      <h6 className="migrated-tokens-amount mb-0">
-                        {getFormattedNumber(migrationAmount, 0)}
-                      </h6>
-                    </>
-                 
-                </div>
-                <div className="d-flex flex-column">
-                  <div className="migration-outer-progress d-flex align-items-center justify-content-start">
-                    <div className="progress-dots d-flex align-items-center justify-content-between">
-                      <span className="migration-dot"></span>
-                      <span className="migration-dot"></span>
-                      <span className="migration-dot"></span>
-                      <span className="migration-dot"></span>
-                      <span className="migration-dot"></span>
-                      <span className="migration-dot"></span>
-                      <span className="migration-dot"></span>
-                      <span className="migration-dot"></span>
-                      <span className="migration-dot"></span>
-                      <span className="migration-dot"></span>
-                    </div>
-                    <div
-                      className="migration-inner-progress d-flex align-items-center justify-content-end px-3"
-                      style={{
-                        width: `${
-                          migrationPercentage >= 35 ? migrationPercentage : ""
-                        }%`,
-                      }}
-                    >
-                      <div className="d-flex align-items-center gap-2">
-                    
-                          <>
-                            <h6 className="migration-percentage mb-0">
-                              {migrationPercentage}%
-                            </h6>
-                            <span className="migration-dash"></span>
-                          </>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <span className="migration-progress-info mb-0">
-                    *Total supply to be migrated: 79.9M DYP
-                  </span>
-                </div>
+             
 
-                <a
-                  href="https://app.dypius.com/migration"
-                  target="_blank"
+                <NavLink
+                  to="/dyp"
+                 
                   className="btn filled-orange-btn d-flex align-items-center justify-content-center"
                   style={{width: 'fit-content'}}
                 >
-                  Migrate DYP
-                </a>
+                  Explore
+                </NavLink>
               </div>
               <div className="sliderwrapper  d-flex flex-column mt-3 pl-0">
                 <Slider {...settings} ref={slickref}>

@@ -80,87 +80,34 @@ const LandPopup = () => {
             style={{ cursor: "pointer" }}
           />
         </div>
-        <Slider {...settings} ref={slider}>
-          <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-4">
-            <div className="d-flex flex-column align-items-center justify-content-center">
-              <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
-                <h6 className="popup-title metaverse mb-0">Final Call:</h6>
-                <h6 className="popup-title d-flex align-items-center gap-2 mb-0">
-                  Migrate to DYP v2
-                </h6>
-              </div>
-              <span className="popup-span mb-0">
-                The deadline to migrate is January 8, 2025. After this,
-                migration will close permanently. Migrate your tokens today to
-                secure continued access and utility!
-              </span>
-            </div>
-            <img
-              src={"https://cdn.worldofdypians.com/dypius/migrationPopup2.webp"}
-              className="land-nft-image basepopup"
-              alt="land nft"
-            />
-            <Countdown
-              renderer={renderer}
-              date={loyaltyCd}
-              onComplete={() => {
-                setisExpired(true);
-              }}
-            />
-            <a
-              href="https://app.dypius.com/migration"
-              target={"_blank"}
-              onClick={() => setActive(false)}
-            >
-              <button className="btn filled-btn m-3">Migrate</button>
-            </a>
-          </div>
-          {/* <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-4">
-            <div className="d-flex flex-column align-items-center justify-content-center">
-              <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
-                <h6 className="popup-title d-flex align-items-center gap-2 mb-0">
-                  Games on
-                </h6>
-                <h6 className="popup-title metaverse mb-0">Base</h6>
-              </div>
-              <span className="popup-span mb-0">
-                Enjoy the ultimate gaming experience on Base and earn tailored
-                rewards!
-              </span>
-            </div>
-            <img src={baseBg} className="gameonbase basepopup" alt="land nft" />
-            <a
-              href="https://app.dypius.com/games"
-              target={"_blank"}
-              onClick={() => setActive(false)}
-            >
-              <button className="btn filled-btn m-3">Play</button>
-            </a>
-          </div> */}
 
-          {/* <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-3">
+        <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-4">
           <div className="d-flex flex-column align-items-center justify-content-center">
             <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
               <h6 className="popup-title d-flex align-items-center gap-2 mb-0">
-              Dypius Expands to 
+                DYP is available on
+                <h6 className="popup-title metaverse mb-0">SynFutures</h6>
               </h6>
-              <h6 className="popup-title metaverse mb-0">Base</h6>
             </div>
             <span className="popup-span mb-0">
-            Seamlessly bridge DYP to Base via the official Base SuperBridge
+              You can now trade DYP/ETH with 10x leverage or provide liquidity
+              to earn fees
             </span>
           </div>
-          <img src={dypBaseBg} className="land-nft-image" alt="land nft" />
-    
+          <img
+            src={"https://cdn.worldofdypians.com/dypius/migrationPopup2.webp"}
+            className="land-nft-image basepopup"
+            alt="land nft"
+          />
+
           <a
-            href="https://superbridge.app/base"
+            href="https://oyster.synfutures.com/#/trade/base/ETH-DYP-EMG-Perpetual"
             target={"_blank"}
             onClick={() => setActive(false)}
           >
-            <button className="btn filled-btn m-3">Bridge DYP on Base</button>
+            <button className="btn filled-btn m-3">Explore</button>
           </a>
-        </div> */}
-        </Slider>
+        </div>
       </div>
     </OutsideClickHandler>
   );

@@ -120,6 +120,11 @@ const DypPartners = () => {
       href: "https://www.gate.io/trade/dyp_usdt",
     },
     {
+      image: "synfutures.svg",
+      text: "SynFutures",
+      href: "https://oyster.synfutures.com/#/market",
+    },
+    {
       image: "poloniex.png",
       text: "Poloniex",
       href: "https://poloniex.com/exchange/USDT_DYP",
