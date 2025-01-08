@@ -28,24 +28,6 @@ const EmptySupAssetCard = ({ pool, apr, link, tvl, lockTime, chain, listType, ch
       <div className="purplediv"></div>
       <div className="d-flex flex-column gap-3">
         <div className="row justify-content-between gap-2 m-0 align-items-center">
-          {/* {listType !== "Stake" ?
-          <div className="coins-container px-0">
-            {coins.slice(0,5).map((coin) => (
-            <img src={require(`./assets/${coin}.svg`)} className="list-coin" alt="" />
-          ))}
-          </div>
-          :
-          <div className={`row ${pool !== "WoD + CAWS" && "gap-2"} align-items-center`}>
-          {pool === "WoD + CAWS" ?
-          <>
-          <img src={wod} className="pool-coins p-0" width={40} height={40}  />
-          <img src={caws} className="pool-coins p-0" width={40} height={40}  />
-          </>
-          :
-          <img src={pool === "CAWS" ? caws : pool === "iDYP" ? idyp : pool === "WoD" ? wod : dyp} alt="eth_pool" width={40} height={40} className="p-0"  />  
-        }
-        </div>  
-        } */}
         <span className="poolTitle p-0">Coming Soon</span>
           {/* <span className="aprTitle p-0">
             {apr}
