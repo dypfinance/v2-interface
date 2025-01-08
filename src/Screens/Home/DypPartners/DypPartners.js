@@ -122,7 +122,7 @@ const DypPartners = () => {
     {
       image: "synfutures.svg",
       text: "SynFutures",
-      href: "https://oyster.synfutures.com/#/launchpad/base/0x53173006bbd75b8fbe1e3c8b1bafd0a93d4f707e",
+      href: "https://oyster.synfutures.com/#/market",
     },
     {
       image: "poloniex.png",
