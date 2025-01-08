@@ -84,9 +84,9 @@ const LandPopup = () => {
         <div className="d-flex flex-column gap-3 justify-content-center align-items-center px-4">
           <div className="d-flex flex-column align-items-center justify-content-center">
             <div className="d-flex align-items-center justify-content-center mb-2 popup-title-wrapper gap-2 p-2 px-4">
-              <h6 className="popup-title d-flex align-items-center gap-2 mb-0">
+              <h6 className="popup-title mb-0 text-center">
                 DYP is available on
-                <h6 className="popup-title metaverse mb-0">SynFutures</h6>
+                <mark className="metaverse">SynFutures</mark>
               </h6>
             </div>
             <span className="popup-span mb-0">
