@@ -16,7 +16,10 @@ const BuyDypCard = ({
 }) => {
   return (
     <div className="col-12 col-lg-3 my-3">
-      <div className="buydypcard-wrapper ">
+      <a 
+      href={link}
+      target="_blank"
+      className="buydypcard-wrapper">
         <div className="row m-0 gap-2 justify-content-between align-items-center">
           <div className="d-flex gap-2 p-0 align-items-center">
             <img src={logo} alt="" className="buydypcard-logo" />
@@ -24,7 +27,7 @@ const BuyDypCard = ({
               <span className="buydypcard-title">{title}</span>
               <div className="d-flex align-items-center gap-1">
               <div className="videodesc-wrapper">
-                <span className="videodesc">{version}</span>
+                <span className="videodesc">DYP</span>
               </div>
               {title === "Uniswap V2" && (
                 <div className="d-flex gap-1 align-items-center">
@@ -50,7 +53,7 @@ const BuyDypCard = ({
             </div>
           )}
         </div>
-        <hr style={{ marginBottom: 0, marginTop: 10 }} />
+        {/* <hr style={{ marginBottom: 0, marginTop: 10 }} />
         <div className="accordion-item border-0">
           <h2 className="accordion-header" id={title}>
             <button
@@ -115,8 +118,8 @@ const BuyDypCard = ({
                 );
               })}
           </div>
-        </div>
-      </div>
+        </div> */}
+      </a>
     </div>
   );
 };
