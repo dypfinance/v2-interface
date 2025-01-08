@@ -532,6 +532,12 @@ const Roadmap = () => {
       completed: false,
     },
     {
+      title: "Introducing the Buyback Program",
+      content:
+        "Launch of a strategic buyback initiative powered by AI, aimed at reducing $DYP supply, curbing inflation, and boosting rewards for staking pools and mini-games.",
+      completed: false,
+    },
+    {
       title: "New Burn Mechanism",
       content:
         "Deploy a revamped token burn mechanism to enhance token value and maintain economic sustainability within the ecosystem.",
