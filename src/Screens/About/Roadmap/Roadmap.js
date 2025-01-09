@@ -523,12 +523,18 @@ const Roadmap = () => {
       title: "Launch New Staking Pools",
       content:
         "Introduce new staking pools to provide diverse earning opportunities, offering competitive rewards and increased flexibility for users.",
-      completed: false,
+      completed: true,
     },
     {
       title: "Complete DYP Migration",
       content:
         "Close the migration bridge to ensure a smooth transition for all users on the DYP v2 utilities.",
+      completed: true,
+    },
+    {
+      title: "Introducing the Buyback Program",
+      content:
+        "Launch of a strategic buyback initiative powered by AI, aimed at reducing $DYP supply, curbing inflation, and boosting rewards for staking pools and mini-games.",
       completed: false,
     },
     {
