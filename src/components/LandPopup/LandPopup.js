@@ -94,7 +94,7 @@ const LandPopup = () => {
             </span>
           </div>
           <img
-            src={"https://cdn.worldofdypians.com/tools/midlePopup.png"}
+            src={"https://cdn.worldofdypians.com/tools/midlePopupHero.png"}
             className="land-nft-image basepopup"
             alt="land nft"
           />
