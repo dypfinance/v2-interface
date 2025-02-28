@@ -21,7 +21,7 @@ const BuyIDyp = () => {
           </div>
         </div>
         <div className="col-12 col-lg-6 row m-0 pb-5 justify-content-center align-items-center position-relative marketplace-container">
-          <a style={{height: '100px'}}
+          {/* <a style={{height: '100px'}}
             href={
               "https://www.mexc.com/exchange/IDYP_USDT"
             }
@@ -29,7 +29,7 @@ const BuyIDyp = () => {
             rel="noreferrer"
           >
             <img src={"https://cdn.worldofdypians.com/dypius/mexcCard.png"} alt="" className="mexc-card"  />
-          </a>
+          </a> */}
           <a style={{height: '100px'}}
             href={
               "https://app.uniswap.org/#/swap?use=V2&inputCurrency=0xbd100d061e120b2c67a24453cf6368e63f1be056"
