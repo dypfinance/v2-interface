@@ -1205,7 +1205,7 @@ const Roadmap = () => {
               always up-to-date with the latest advancements in technology and
               have access to the most advanced features and tools available.
               <a
-                href="https://www.worldofdypians.com/roadmap"
+                href="https://www.worldofdypians.com/about#roadmap"
                 target="_blank"
                 style={{ fontWeight: "800", color: "#F0603A" }}
               >
