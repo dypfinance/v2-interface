@@ -573,47 +573,48 @@ const Roadmap = () => {
 
   const quarterTwo2025 = [
     {
+      title: "New Wallet Expansion",
+      content:
+        "Integrate more wallet options into the ecosystem, allowing users to connect using their preferred wallets for smoother onboarding, increased compatibility, and improved accessibility across networks.",
+      completed: true,
+    },
+    {
       title: "DYP Tools v4",
       content:
         "Launch the next generation of DYP Tools with enhanced analytics, improved interface, and advanced features designed to provide users with more robust DeFi insights.",
-      completed: false,
+      completed: true,
     },
-    {
-      title: "Expand to New Blockchains",
-      content:
-        "Integrate the ecosystem with additional blockchains to enhance cross-chain functionality, increase user accessibility, and diversify the platform’s reach.",
-      completed: false,
-    },
+    
     {
       title: "UI/UX Improvements",
       content:
         "Introduce significant updates to the interface and navigation, ensuring a more seamless and intuitive user experience across all devices.",
-      completed: false,
+      completed: true,
     },
     {
       title: "User Account Revamp",
       content:
         "Redesign account systems to improve user profiles, enhance account security, and provide a centralized dashboard for easier management of activities.",
-      completed: false,
+      completed: true,
     },
     {
       title: "Leaderboard Enhancements",
       content:
         "Upgrade leaderboards to include more dynamic tracking, seasonal rewards, and deeper player insights to drive engagement and competition.",
-      completed: false,
+      completed: true,
     },
     {
       title: "Mini-Games Improvement",
       content:
         "Improve mini-games with richer gameplay mechanics, more engaging challenges, and better integration of rewards to enhance player satisfaction.",
-      completed: false,
+      completed: true,
     },
 
     {
       title: "Partnership Development",
       content:
         "Continuously add new features and partners, advertising opportunities, user rewards, airdrops, and more, to enhance the user experience.",
-      completed: false,
+      completed: true,
     },
   ];
 
@@ -641,6 +642,12 @@ const Roadmap = () => {
       title: "News Revamp",
       content:
         "Redesign the news section with a modern layout, real-time updates, and curated content to keep users informed about the latest developments in the ecosystem.",
+      completed: false,
+    },
+    {
+      title: "Expand to New Blockchains",
+      content:
+        "Integrate the ecosystem with additional blockchains to enhance cross-chain functionality, increase user accessibility, and diversify the platform’s reach.",
       completed: false,
     },
 
