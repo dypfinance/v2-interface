@@ -458,14 +458,14 @@ const Roadmap = () => {
       title: "Loyalty Program Introduction",
       content:
         "Introduce a loyalty program exclusive to Base users, offering gas incentives and other rewards, aimed at improving user onboarding and transaction efficiency.",
-        completed: true,
-      },
+      completed: true,
+    },
     {
       title: "Introduction of the Stone Crack Game",
       content:
         "Launch the Stone Crack game, an interactive and engaging mini-game where players break stones to earn valuable rewards. The game will be available on Base, adding an extra layer of entertainment for users.",
-        completed: true,
-      },
+      completed: true,
+    },
   ];
 
   const quarterFour2024 = [
@@ -473,8 +473,8 @@ const Roadmap = () => {
       title: "Stone Crack Enhancement",
       content:
         "Enhance the Stone Crack  mini-game on opBNB, offering an immersive and competitive experience with unique challenges and exclusive rewards.",
-        completed: true,
-      },
+      completed: true,
+    },
     // {
     //   title: "Mini-Games Expansion to Base",
     //   content:
@@ -485,8 +485,8 @@ const Roadmap = () => {
       title: "New Bridges Deployment",
       content:
         "Introduce the DYP Bridges on Base and opBNB to enable seamless and secure cross-chain asset transfers, enhancing interoperability for all users.",
-        completed: true,
-      },
+      completed: true,
+    },
     // {
     //   title: "Loyalty Program Introduction",
     //   content:
@@ -497,26 +497,26 @@ const Roadmap = () => {
       title: "Launchpad’s First Project Release",
       content:
         "Celebrate the release of the first project on the Launchpad, empowering innovative ventures and showcasing the platform’s potential.",
-        completed: true,
-      },
+      completed: true,
+    },
     {
       title: "CAWS Adventure Enhancements",
       content:
         "Upgrade the CAWS Adventure with improved journey and richer rewards to elevate the player experience.",
-        completed: true,
-      },
+      completed: true,
+    },
     {
       title: "Mini-Games Leaderboards Enhancement",
       content:
         "Enhance leaderboards for mini-games to track player achievements, foster competition, and reward top performers with exclusive incentives.",
-        completed: true,
-      },
+      completed: true,
+    },
     {
       title: "dApps UI/UX Improvement",
       content:
         "Improve the user interface and experience across all platforms and products for a more seamless and enjoyable user experience.",
-        completed: true,
-      },
+      completed: true,
+    },
   ];
   const quarterOne2025 = [
     {
@@ -535,39 +535,39 @@ const Roadmap = () => {
       title: "Introducing the Buyback Program",
       content:
         "Launch of a strategic buyback initiative powered by AI, aimed at reducing $DYP supply, curbing inflation, and boosting rewards for staking pools and mini-games.",
-      completed: false,
+      completed: true,
     },
     {
       title: "New Burn Mechanism",
       content:
         "Deploy a revamped token burn mechanism to enhance token value and maintain economic sustainability within the ecosystem.",
-      completed: false,
+      completed: true,
     },
     {
       title: "Increase Premium Benefits",
       content:
         "Enhance the premium subscription model with exclusive perks such as higher rewards, early access to features, and premium-only events.",
-      completed: false,
+      completed: true,
     },
 
     {
       title: "Introduce Growth Plans",
       content:
         "Roll out tailored plans to support emerging projects, including optimized tools, marketing assistance, and ecosystem integration services.",
-      completed: false,
+      completed: true,
     },
 
     {
       title: "Increase DYP Token Utilities",
       content:
         "Expand the use cases for DYP tokens by integrating them into additional products and services, further embedding them into the ecosystem.",
-      completed: false,
+      completed: true,
     },
     {
       title: "Partnership Development",
       content:
         "Continuously add new features and partners, advertising opportunities, user rewards, airdrops, and more, to enhance the user experience",
-      completed: false,
+      completed: true,
     },
   ];
 
@@ -798,7 +798,6 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
-
         });
         setShowText(false);
         slider.current.innerSlider.slickGoTo(0);
@@ -813,7 +812,6 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
-
         });
         setShowText(false);
 
@@ -828,7 +826,6 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
-
         });
         setShowText(false);
 
@@ -842,7 +839,6 @@ const Roadmap = () => {
           roadmap2023: true,
           roadmap2024: false,
           roadmap2025: false,
-
         });
         setShowText(false);
 
@@ -856,7 +852,6 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: true,
           roadmap2025: false,
-
         });
         setShowText(false);
         slider.current.innerSlider.slickGoTo(16);
@@ -919,10 +914,8 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: true,
           roadmap2025: false,
-
         });
-      }
-      else {
+      } else {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: false,
@@ -934,7 +927,6 @@ const Roadmap = () => {
       }
     }
   };
-
 
   const previous = () => {
     if (windowSize.width > 786) {
@@ -970,7 +962,6 @@ const Roadmap = () => {
           roadmap2023: true,
           roadmap2024: false,
           roadmap2025: false,
-
         });
         setShowText(false);
         slider.current.innerSlider.slickGoTo(12);
@@ -983,7 +974,6 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
-
         });
         setShowText(false);
 
@@ -1011,7 +1001,6 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
-
         });
         setShowText(false);
 
@@ -1025,12 +1014,10 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: true,
-
         });
         setShowText(false);
         slider.current.innerSlider.slickGoTo(20);
       }
-     
     } else {
       slider.current.innerSlider.slickPrev();
       if (activeSlide2 < 3) {
@@ -1041,7 +1028,6 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
-
         });
       } else if (activeSlide2 < 7) {
         setActiveYear({
@@ -1051,7 +1037,6 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
-
         });
       } else if (activeSlide2 < 11) {
         setActiveYear({
@@ -1061,7 +1046,6 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
-
         });
       } else if (activeSlide2 < 15) {
         setActiveYear({
@@ -1071,11 +1055,8 @@ const Roadmap = () => {
           roadmap2023: true,
           roadmap2024: false,
           roadmap2025: false,
-
         });
-      }
-      
-      else if (activeSlide2 < 19) {
+      } else if (activeSlide2 < 19) {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: false,
@@ -1083,10 +1064,8 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: true,
           roadmap2025: false,
-          
         });
-      }
-      else {
+      } else {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: false,
@@ -1094,7 +1073,6 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: true,
-
         });
       }
     }
@@ -1227,7 +1205,7 @@ const Roadmap = () => {
               always up-to-date with the latest advancements in technology and
               have access to the most advanced features and tools available.
               <a
-                href="https://www.worldofdypians.com/roadmap"
+                href="https://www.worldofdypians.com/about#roadmap"
                 target="_blank"
                 style={{ fontWeight: "800", color: "#F0603A" }}
               >
@@ -1810,7 +1788,7 @@ const Roadmap = () => {
               className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
               id="roadmapAccordion"
             >
-           {quarterOne2024.map((item, index) => (
+              {quarterOne2024.map((item, index) => (
                 <div className="accordion-item">
                   <div
                     className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
