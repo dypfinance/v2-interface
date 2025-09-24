@@ -619,19 +619,85 @@ const Roadmap = () => {
   ];
 
   const quarterThree2025 = [
-    {
-      title: "Launch Launchpad V2",
+    // {
+    //   title: "Launch Launchpad V2",
+    //   content:
+    //     "Introduce a revamped launchpad with improved features, offering innovative fundraising mechanisms and a more streamlined experience for both projects and participants.",
+    //   completed: false,
+    // },
+    
+   
+    // {
+    //   title: "Expand to New Blockchains",
+    //   content:
+    //     "Integrate the ecosystem with additional blockchains to enhance cross-chain functionality, increase user accessibility, and diversify the platform’s reach.",
+    //   completed: false,
+    // },
+
+    // {
+    //   title: "DYP Locker Improvements",
+    //   content:
+    //     "Enhance the DYP Locker with additional functionalities, improved security, and a more user-friendly interface to better serve token holders and project teams.",
+    //   completed: false,
+    // },
+    // {
+    //   title: "Partnership Development",
+    //   content:
+    //     "Continuously add new features and partners, advertising opportunities, user rewards, airdrops, and more, to enhance the user experience",
+    //   completed: false,
+    // },
+     {
+      title: "Integration with Binance Wallet",
       content:
-        "Introduce a revamped launchpad with improved features, offering innovative fundraising mechanisms and a more streamlined experience for both projects and participants.",
-      completed: false,
+        "Expanded Dypius accessibility by integrating directly into Binance Wallet, simplifying user access across the ecosystem.",
+      completed: true,
     },
+     {
+      title: "Listing on DappBay",
+      content:
+        "Strengthened ecosystem visibility by being featured on BNB Chain’s DappBay, connecting to a wider community of DeFi users.",
+      completed: true,
+    },
+     {
+      title: "Mini-Game Enhancements",
+      content:
+        "Delivered targeted adjustments to mini-games, balancing rewards and optimizing performance for a smoother experience.",
+      completed: true,
+    },
+    {
+      title: "Yield Optimization on DYP Tools",
+      content:
+        "Updated yield calculations and reporting, ensuring more accurate data and transparency for farming and staking insights.",
+      completed: true,
+    },
+    {
+      title: "Small UI/UX Refinements",
+      content:
+        "Implemented front-end and flow improvements across Dypius products, providing a more intuitive and seamless user journey.",
+      completed: true,
+    },
+     {
+      title: "Security & Infrastructure Updates",
+      content:
+        "Rolled out backend upgrades and monitoring features to reinforce platform reliability and safeguard ecosystem interactions.",
+      completed: true,
+    },
+  ];
+
+  const quarterFour2025 = [
     {
       title: "Introduce Loyalty Program V2",
       content:
         "Roll out an enhanced version of the loyalty program with tier-based rewards, increased benefits for long-term users, and broader accessibility across ecosystems.",
       completed: false,
     },
-    {
+    // {
+    //   title: "Launch Web3 DeFi Powered by AI Tools",
+    //   content:
+    //     "Introduce Advanced AI Assistants: Introduce AI-driven DeFi tools designed to provide users with personalized portfolio management, yield optimization strategies, and automated market insights.",
+    //   completed: false,
+    // },
+     {
       title: "Expand Mini-Games Portfolio",
       content:
         "Add new mini-games with unique themes and gameplay styles, providing players with more variety and opportunities for rewards.",
@@ -644,52 +710,24 @@ const Roadmap = () => {
         "Redesign the news section with a modern layout, real-time updates, and curated content to keep users informed about the latest developments in the ecosystem.",
       completed: false,
     },
-    {
-      title: "Expand to New Blockchains",
-      content:
-        "Integrate the ecosystem with additional blockchains to enhance cross-chain functionality, increase user accessibility, and diversify the platform’s reach.",
-      completed: false,
-    },
-
-    {
-      title: "DYP Locker Improvements",
-      content:
-        "Enhance the DYP Locker with additional functionalities, improved security, and a more user-friendly interface to better serve token holders and project teams.",
-      completed: false,
-    },
-    {
-      title: "Partnership Development",
-      content:
-        "Continuously add new features and partners, advertising opportunities, user rewards, airdrops, and more, to enhance the user experience",
-      completed: false,
-    },
-  ];
-
-  const quarterFour2025 = [
-    {
-      title: "Launch Web3 DeFi Powered by AI Tools",
-      content:
-        "Introduce Advanced AI Assistants: Introduce AI-driven DeFi tools designed to provide users with personalized portfolio management, yield optimization strategies, and automated market insights.",
-      completed: false,
-    },
-    {
-      title: "Referral Program v2",
-      content:
-        "Introduce a revamped referral program for the to incentivize users to invite others to join the platform.",
-      completed: false,
-    },
+    // {
+    //   title: "Referral Program v2",
+    //   content:
+    //     "Introduce a revamped referral program for the to incentivize users to invite others to join the platform.",
+    //   completed: false,
+    // },
     {
       title: "New NFT Staking Pools",
       content:
         "Introduce new staking pools for NFTs, allowing users to earn rewards by staking their NFT assets.",
       completed: false,
     },
-    {
-      title: "Governance v2",
-      content:
-        "Launch new features for the governance system, enhancing the platform's decentralization and community involvement.",
-      completed: false,
-    },
+    // {
+    //   title: "Governance v2",
+    //   content:
+    //     "Launch new features for the governance system, enhancing the platform's decentralization and community involvement.",
+    //   completed: false,
+    // },
     {
       title: "Portfolio Management Dashboard",
       content:
@@ -697,12 +735,12 @@ const Roadmap = () => {
       completed: false,
     },
 
-    {
-      title: "Enhanced Security Features",
-      content:
-        "Roll out advanced security protocols across all platforms, ensuring user safety and protection against potential threats.",
-      completed: false,
-    },
+    // {
+    //   title: "Enhanced Security Features",
+    //   content:
+    //     "Roll out advanced security protocols across all platforms, ensuring user safety and protection against potential threats.",
+    //   completed: false,
+    // },
     {
       title: "Partnership Development",
       content:
