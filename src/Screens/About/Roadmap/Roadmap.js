@@ -584,7 +584,7 @@ const Roadmap = () => {
         "Launch the next generation of DYP Tools with enhanced analytics, improved interface, and advanced features designed to provide users with more robust DeFi insights.",
       completed: true,
     },
-    
+
     {
       title: "UI/UX Improvements",
       content:
@@ -625,8 +625,7 @@ const Roadmap = () => {
     //     "Introduce a revamped launchpad with improved features, offering innovative fundraising mechanisms and a more streamlined experience for both projects and participants.",
     //   completed: false,
     // },
-    
-   
+
     // {
     //   title: "Expand to New Blockchains",
     //   content:
@@ -646,19 +645,19 @@ const Roadmap = () => {
     //     "Continuously add new features and partners, advertising opportunities, user rewards, airdrops, and more, to enhance the user experience",
     //   completed: false,
     // },
-     {
+    {
       title: "Integration with Binance Wallet",
       content:
         "Expanded Dypius accessibility by integrating directly into Binance Wallet, simplifying user access across the ecosystem.",
       completed: true,
     },
-     {
+    {
       title: "Listing on DappBay",
       content:
         "Strengthened ecosystem visibility by being featured on BNB Chain’s DappBay, connecting to a wider community of DeFi users.",
       completed: true,
     },
-     {
+    {
       title: "Mini-Game Enhancements",
       content:
         "Delivered targeted adjustments to mini-games, balancing rewards and optimizing performance for a smoother experience.",
@@ -676,7 +675,7 @@ const Roadmap = () => {
         "Implemented front-end and flow improvements across Dypius products, providing a more intuitive and seamless user journey.",
       completed: true,
     },
-     {
+    {
       title: "Security & Infrastructure Updates",
       content:
         "Rolled out backend upgrades and monitoring features to reinforce platform reliability and safeguard ecosystem interactions.",
@@ -686,10 +685,10 @@ const Roadmap = () => {
 
   const quarterFour2025 = [
     {
-      title: "Introduce Loyalty Program V2",
+      title: "UI and UX Refinement",
       content:
-        "Roll out an enhanced version of the loyalty program with tier-based rewards, increased benefits for long-term users, and broader accessibility across ecosystems.",
-      completed: false,
+        "Delivered a cleaner interface and smoother navigation across the platform.",
+      completed: true,
     },
     // {
     //   title: "Launch Web3 DeFi Powered by AI Tools",
@@ -697,18 +696,16 @@ const Roadmap = () => {
     //     "Introduce Advanced AI Assistants: Introduce AI-driven DeFi tools designed to provide users with personalized portfolio management, yield optimization strategies, and automated market insights.",
     //   completed: false,
     // },
-     {
-      title: "Expand Mini-Games Portfolio",
-      content:
-        "Add new mini-games with unique themes and gameplay styles, providing players with more variety and opportunities for rewards.",
-      completed: false,
+    {
+      title: "Mini Game Enhancements",
+      content: "Updated mini games with smoother flows and improved stability.",
+      completed: true,
     },
 
     {
-      title: "News Revamp",
-      content:
-        "Redesign the news section with a modern layout, real-time updates, and curated content to keep users informed about the latest developments in the ecosystem.",
-      completed: false,
+      title: "Leaderboard System Update",
+      content: "Improved leaderboard performance and ranking clarity.",
+      completed: true,
     },
     // {
     //   title: "Referral Program v2",
@@ -717,10 +714,10 @@ const Roadmap = () => {
     //   completed: false,
     // },
     {
-      title: "New NFT Staking Pools",
+      title: "News Section Update",
       content:
-        "Introduce new staking pools for NFTs, allowing users to earn rewards by staking their NFT assets.",
-      completed: false,
+        "Updated the news section with an improved voting system for better community interaction.",
+      completed: true,
     },
     // {
     //   title: "Governance v2",
@@ -729,10 +726,9 @@ const Roadmap = () => {
     //   completed: false,
     // },
     {
-      title: "Portfolio Management Dashboard",
-      content:
-        "Provide users with a comprehensive dashboard displaying real-time information about their investments, current yields, asset distribution across blockchains, and the platform's overall performance in optimizing returns.",
-      completed: false,
+      title: "New Yield Page Mechanism",
+      content: "Introduced a new interaction mechanism on the Yield page.",
+      completed: true,
     },
 
     // {
@@ -745,6 +741,209 @@ const Roadmap = () => {
       title: "Partnership Development",
       content:
         "Continuously add new features and partners, advertising opportunities, user rewards, airdrops, and more, to enhance the user experience",
+      completed: true,
+    },
+    // {
+    //   title: "Introduction of Character NFT Generation",
+    //   content:
+    //     "Generate the main character in the game as an NFT item, adding value and uniqueness to the player's experience.",
+    // },
+    // {
+    //   title: "Full Release of the Multiplayer PvE",
+    //   content:
+    //     "Launch the full version of the multiplayer player-versus-environment mode for all players to enjoy.",
+    // },
+  ];
+
+  const quarterOne2026 = [
+    {
+      title: "Wallet Integration",
+      content:
+        "Integrate additional wallet providers to improve accessibility and onboarding for new users.",
+      completed: false,
+    },
+    {
+      title: "New Staking Pools",
+      content:
+        "Launch new staking pools to provide more options and flexibility for DYP holders.",
+      completed: false,
+    },
+    {
+      title: "Mini Games Expansion",
+      content:
+        "Add new mini games to increase engagement and utility across the platform.",
+      completed: false,
+    },
+    {
+      title: "Platform Improvements",
+      content:
+        "Improve overall platform performance, stability, and responsiveness.",
+      completed: false,
+    },
+    {
+      title: "Reward System Enhancements",
+      content:
+        "Improve how rewards are calculated and distributed to ensure a smoother user experience.",
+      completed: false,
+    },
+
+    {
+      title: "Partnership Development",
+      content:
+        "Collaborate with partners to introduce new features and integrations.",
+      completed: false,
+    },
+  ];
+
+  const quarterTwo2026 = [
+    {
+      title: "DYP Tools Expansion",
+      content:
+        "Add new analytics modules, real-time data streams, and actionable insights to the DYP Tools suite.",
+      completed: false,
+    },
+    {
+      title: "New NFT Staking Pools",
+      content:
+        "Introduce dedicated NFT staking pools to expand utility for NFT holders within the ecosystem.",
+      completed: false,
+    },
+
+    {
+      title: "Staking Experience Improvements",
+      content:
+        "Improve staking flows, dashboards, and reward visibility to simplify user interactions.",
+      completed: false,
+    },
+    {
+      title: "New Chain Integrations",
+      content:
+        "Integrate additional blockchains to expand ecosystem reach and support multi network usage.",
+      completed: false,
+    },
+    {
+      title: "Account Improvements",
+      content:
+        "Enhance user accounts with clearer activity history, rewards overview, and interaction tracking.",
+      completed: false,
+    },
+
+    {
+      title: "Partnership Development",
+      content:
+        "Collaborate with partners to introduce new features and integrations.",
+      completed: false,
+    },
+  ];
+
+  const quarterThree2026 = [
+    // {
+    //   title: "Launch Launchpad V2",
+    //   content:
+    //     "Introduce a revamped launchpad with improved features, offering innovative fundraising mechanisms and a more streamlined experience for both projects and participants.",
+    //   completed: false,
+    // },
+
+    // {
+    //   title: "Expand to New Blockchains",
+    //   content:
+    //     "Integrate the ecosystem with additional blockchains to enhance cross-chain functionality, increase user accessibility, and diversify the platform’s reach.",
+    //   completed: false,
+    // },
+
+    // {
+    //   title: "DYP Locker Improvements",
+    //   content:
+    //     "Enhance the DYP Locker with additional functionalities, improved security, and a more user-friendly interface to better serve token holders and project teams.",
+    //   completed: false,
+    // },
+    // {
+    //   title: "Partnership Development",
+    //   content:
+    //     "Continuously add new features and partners, advertising opportunities, user rewards, airdrops, and more, to enhance the user experience",
+    //   completed: false,
+    // },
+    {
+      title: "New Utility Products",
+      content:
+        "Launch new utility focused products that strengthen the Dypius ecosystem and DYP usage.",
+      completed: false,
+    },
+    {
+      title: "Expand DYP Markets",
+      content:
+        "Expand DYP market presence through new listings and broader ecosystem exposure.",
+      completed: false,
+    },
+    {
+      title: "Bridge UI Improvements",
+      content:
+        "Redesign the bridge interface to make cross chain transfers simpler, faster, and more user friendly.",
+      completed: false,
+    },
+    {
+      title: "New Tutorials",
+      content:
+        "Launch new tutorials to help users better understand Dypius products and features.",
+      completed: false,
+    },
+    {
+      title: "Enhance Accelerator Program",
+      content:
+        "Enhance the accelerator program to support early stage projects building within or alongside the Dypius ecosystem.",
+      completed: false,
+    },
+    {
+      title: "Partnership Development",
+      content:
+        "Collaborate with partners to introduce new features and integrations.",
+      completed: false,
+    },
+  ];
+
+  const quarterFour2026 = [
+    {
+      title: "Governance Improvements",
+      content:
+        "Enhance governance with advanced voting options, improved proposal visibility, and smoother participation flows.",
+      completed: false,
+    },
+    {
+      title: "News Revamp",
+      content:
+        "Revamp the Dypius news section with improved layout, clearer updates, and better access to ecosystem announcements.",
+      completed: false,
+    },
+
+    {
+      title: "Upgrade Premium Benefits",
+      content:
+        "Expand premium benefits with added value, exclusive features, and enhanced user privileges.",
+      completed: false,
+    },
+    // {
+    //   title: "Referral Program v2",
+    //   content:
+    //     "Introduce a revamped referral program for the to incentivize users to invite others to join the platform.",
+    //   completed: false,
+    // },
+    {
+      title: "DYP Locker Expansion",
+      content:
+        "Enhance the DYP Locker with improved locking options and clearer visibility of locked assets and benefits.",
+      completed: false,
+    },
+    {
+      title: "Platform Improvements",
+      content:
+        "Finalize performance, scalability, and reliability upgrades across all Dypius products.",
+      completed: false,
+    },
+
+    {
+      title: "Partnership Development",
+      content:
+        "Collaborate with partners to introduce new features and integrations.",
       completed: false,
     },
     // {
@@ -760,9 +959,9 @@ const Roadmap = () => {
   ];
 
   const [oldSlide, setOldSlide] = useState(0);
-  const [activeSlide, setActiveSlide] = useState(6);
+  const [activeSlide, setActiveSlide] = useState(7);
   const [activeSlide2, setActiveSlide2] = useState(
-    window.innerWidth < 786 ? 10 : 12
+    window.innerWidth < 786 ? 12 : 14
   );
   const [showText, setShowText] = useState(true);
 
@@ -772,7 +971,8 @@ const Roadmap = () => {
     roadmap2022: false,
     roadmap2023: false,
     roadmap2024: false,
-    roadmap2025: true,
+    roadmap2025: false,
+    roadmap2026: true,
   });
 
   const settings = {
@@ -782,7 +982,7 @@ const Roadmap = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    initialSlide: window.innerWidth < 786 ? 18 : 20,
+    initialSlide: window.innerWidth < 786 ? 20 : 24,
 
     beforeChange: (current, next) => {
       setOldSlide(current);
@@ -857,6 +1057,7 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
+          roadmap2026: false,
         });
         setShowText(false);
 
@@ -871,6 +1072,7 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
+          roadmap2026: false,
         });
         setShowText(false);
 
@@ -884,6 +1086,7 @@ const Roadmap = () => {
           roadmap2023: true,
           roadmap2024: false,
           roadmap2025: false,
+          roadmap2026: false,
         });
         setShowText(false);
 
@@ -897,6 +1100,7 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: true,
           roadmap2025: false,
+          roadmap2026: false,
         });
         setShowText(false);
         slider.current.innerSlider.slickGoTo(16);
@@ -909,9 +1113,23 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: true,
+          roadmap2026: false,
         });
         setShowText(true);
         slider.current.innerSlider.slickGoTo(20);
+      }
+      if (activeSlide2 === 20) {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: false,
+          roadmap2023: false,
+          roadmap2024: false,
+          roadmap2025: false,
+          roadmap2026: true,
+        });
+        setShowText(true);
+        slider.current.innerSlider.slickGoTo(24);
       }
     } else {
       slider.current.innerSlider.slickNext();
@@ -923,6 +1141,7 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
+          roadmap2026: false,
         });
       } else if (activeSlide2 < 5) {
         setActiveYear({
@@ -932,6 +1151,7 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
+          roadmap2026: false,
         });
       } else if (activeSlide2 < 9) {
         setActiveYear({
@@ -941,6 +1161,7 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
+          roadmap2026: false,
         });
       } else if (activeSlide2 < 13) {
         setActiveYear({
@@ -959,8 +1180,9 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: true,
           roadmap2025: false,
+          roadmap2026: false,
         });
-      } else {
+      } else if (activeSlide2 < 21) {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: false,
@@ -968,6 +1190,17 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: true,
+          roadmap2026: false,
+        });
+      } else if (activeSlide2 < 25) {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: false,
+          roadmap2023: false,
+          roadmap2024: false,
+          roadmap2025: false,
+          roadmap2026: true,
         });
       }
     }
@@ -984,10 +1217,12 @@ const Roadmap = () => {
             roadmap2022: false,
             roadmap2023: false,
             roadmap2024: false,
+            roadmap2025: false,
+            roadmap2026: false,
           });
         }
       }
-      if (activeSlide2 === 20) {
+      if (activeSlide2 === 24) {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: false,
@@ -995,11 +1230,12 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: true,
           roadmap2025: false,
+          roadmap2026: false,
         });
         setShowText(true);
-        slider.current.innerSlider.slickGoTo(16);
+        slider.current.innerSlider.slickGoTo(20);
       }
-      if (activeSlide2 === 16) {
+      if (activeSlide2 === 20) {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: false,
@@ -1007,11 +1243,12 @@ const Roadmap = () => {
           roadmap2023: true,
           roadmap2024: false,
           roadmap2025: false,
+          roadmap2026: false,
         });
         setShowText(false);
-        slider.current.innerSlider.slickGoTo(12);
+        slider.current.innerSlider.slickGoTo(16);
       }
-      if (activeSlide2 === 12) {
+      if (activeSlide2 === 16) {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: false,
@@ -1019,12 +1256,13 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
+          roadmap2026: false,
         });
         setShowText(false);
 
-        slider.current.innerSlider.slickGoTo(8);
+        slider.current.innerSlider.slickGoTo(12);
       }
-      if (activeSlide2 === 8) {
+      if (activeSlide2 === 12) {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: true,
@@ -1032,13 +1270,14 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
+          roadmap2026: false,
         });
         setShowText(false);
 
-        slider.current.innerSlider.slickGoTo(4);
+        slider.current.innerSlider.slickGoTo(8);
       }
 
-      if (activeSlide2 === 4) {
+      if (activeSlide2 === 8) {
         setActiveYear({
           roadmap2020: true,
           roadmap2021: false,
@@ -1046,9 +1285,23 @@ const Roadmap = () => {
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
+          roadmap2026: false,
         });
         setShowText(false);
 
+        slider.current.innerSlider.slickGoTo(4);
+      }
+      if (activeSlide2 === 4) {
+        setActiveYear({
+          roadmap2020: false,
+          roadmap2021: false,
+          roadmap2022: false,
+          roadmap2023: false,
+          roadmap2024: false,
+          roadmap2025: true,
+          roadmap2026: false,
+        });
+        setShowText(false);
         slider.current.innerSlider.slickGoTo(0);
       }
       if (activeSlide2 === 0) {
@@ -1058,10 +1311,11 @@ const Roadmap = () => {
           roadmap2022: false,
           roadmap2023: false,
           roadmap2024: false,
-          roadmap2025: true,
+          roadmap2025: false,
+          roadmap2026: true,
         });
         setShowText(false);
-        slider.current.innerSlider.slickGoTo(20);
+        slider.current.innerSlider.slickGoTo(24);
       }
     } else {
       slider.current.innerSlider.slickPrev();
@@ -1158,6 +1412,9 @@ const Roadmap = () => {
       roadmap2021: false,
       roadmap2022: true,
       roadmap2023: false,
+      roadmap2026: false,
+      roadmap2025: false,
+      roadmap2024: false,
     });
     setShowText(false);
   };
@@ -1188,6 +1445,7 @@ const Roadmap = () => {
       roadmap2022: false,
       roadmap2023: false,
       roadmap2024: true,
+      roadmap2026: false,
     });
     setShowText(false);
   };
@@ -1204,13 +1462,32 @@ const Roadmap = () => {
       roadmap2023: false,
       roadmap2024: false,
       roadmap2025: true,
+      roadmap2026: false,
+    });
+    setShowText(true);
+  };
+
+  const goto2026 = () => {
+    if (windowSize.width < 786) {
+      slider.current.innerSlider.slickGoTo(22);
+    } else {
+      slider.current.innerSlider.slickGoTo(24);
+    }
+    setActiveYear({
+      roadmap2020: false,
+      roadmap2021: false,
+      roadmap2022: false,
+      roadmap2023: false,
+      roadmap2024: false,
+      roadmap2025: false,
+      roadmap2026: true,
     });
     setShowText(true);
   };
 
   useEffect(() => {
     if (windowSize.width < 786) {
-      goto2025();
+      goto2026();
     }
   }, [windowSize.width]);
 
@@ -1261,7 +1538,7 @@ const Roadmap = () => {
           </div>
 
           <div className="d-flex flex-row gap-lg-4 gap-xl-4 gap-md-4 gap-3">
-            <div className="years-wrapper d-flex flex-row p-2 gap-1 justify-content-center align-items-center">
+            <div className="years-wrapper p-2 gap-1 justify-content-center align-items-center">
               <p
                 className={`${activeYear.roadmap2020 && "selected-year"}`}
                 onClick={goto2020}
@@ -1297,6 +1574,12 @@ const Roadmap = () => {
                 onClick={goto2025}
               >
                 2025
+              </p>
+              <p
+                className={`${activeYear.roadmap2026 && "selected-year"}`}
+                onClick={goto2026}
+              >
+                2026
               </p>
             </div>
           </div>
@@ -2060,7 +2343,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card d-flex flex-column align-items-center">
+            <div className="date-card selected d-flex flex-column align-items-center">
               <img
                 src={
                   "https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"
@@ -2074,13 +2357,13 @@ const Roadmap = () => {
               </div>
             </div>
             <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
               id="roadmapAccordion"
             >
               {quarterOne2025.map((item, index) => (
                 <div className="accordion-item">
                   <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapseQuarterOne2025${index}`}
                     aria-expanded="false"
@@ -2121,7 +2404,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card  d-flex flex-column align-items-center">
+            <div className="date-card selected d-flex flex-column align-items-center">
               <img
                 src={
                   "https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"
@@ -2135,13 +2418,13 @@ const Roadmap = () => {
               </div>
             </div>
             <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
               id="roadmapAccordion"
             >
               {quarterTwo2025.map((item, index) => (
                 <div className="accordion-item">
                   <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapseQuarterTwo2025${index}`}
                     aria-expanded="false"
@@ -2182,7 +2465,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card  d-flex flex-column align-items-center">
+            <div className="date-card selected d-flex flex-column align-items-center">
               <img
                 src={
                   "https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"
@@ -2196,13 +2479,13 @@ const Roadmap = () => {
               </div>
             </div>
             <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
               id="roadmapAccordion"
             >
               {quarterThree2025.map((item, index) => (
                 <div className="accordion-item">
                   <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapseQuarterThree2025${index}`}
                     aria-expanded="false"
@@ -2243,7 +2526,7 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card  d-flex flex-column align-items-center">
+            <div className="date-card selected d-flex flex-column align-items-center">
               <img
                 src={
                   "https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"
@@ -2257,13 +2540,13 @@ const Roadmap = () => {
               </div>
             </div>
             <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              className="accordion accordion-flush roadmap-items d-flex flex-column p-4"
               id="roadmapAccordion"
             >
               {quarterFour2025.map((item, index) => (
                 <div className="accordion-item">
                   <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion collapsed"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapseQuarterFour2025${index}`}
                     aria-expanded="false"
@@ -2290,6 +2573,251 @@ const Roadmap = () => {
                     id={`collapseQuarterFour2025${index}`}
                     className="accordion-collapse collapse"
                     aria-aria-labelledby={`headingQuarterFour2025${index}`}
+                    data-bs-parent="#roadmapAccordion"
+                  >
+                    <ul
+                      className="mb-0 py-2 ps-2"
+                      style={{ listStyle: "none" }}
+                    >
+                      <li className="accordion-list-item">{item.content}</li>
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
+            <div className="date-card d-flex flex-column align-items-center">
+              <img
+                src={
+                  "https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"
+                }
+                style={{ visibility: "hidden" }}
+                alt=""
+              />
+              <h2 style={{ color: "#EFF0F6" }}>2026 Q1</h2>
+              <div className="outer-circle d-flex justify-content-center align-items-center">
+                <div className="inner-circle"></div>
+              </div>
+            </div>
+            <div
+              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              id="roadmapAccordion"
+            >
+              {quarterOne2026.map((item, index) => (
+                <div className="accordion-item">
+                  <div
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseQuarterOne2026${index}`}
+                    aria-expanded="false"
+                    aroa-aria-controls={`collapseQuarterOne2026${index}`}
+                  >
+                    {item?.completed === true ? (
+                      <img
+                        src={
+                          "https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"
+                        }
+                        alt=""
+                      />
+                    ) : (
+                      <img
+                        src={
+                          "https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"
+                        }
+                        alt=""
+                      />
+                    )}
+                    <p>{item.title}</p>
+                  </div>
+                  <div
+                    id={`collapseQuarterOne2026${index}`}
+                    className="accordion-collapse collapse"
+                    aria-aria-labelledby={`headingQuarterOne2026${index}`}
+                    data-bs-parent="#roadmapAccordion"
+                  >
+                    <ul
+                      className="mb-0 py-2 ps-2"
+                      style={{ listStyle: "none" }}
+                    >
+                      <li className="accordion-list-item">{item.content}</li>
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
+            <div className="date-card  d-flex flex-column align-items-center">
+              <img
+                src={
+                  "https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"
+                }
+                style={{ visibility: "hidden" }}
+                alt=""
+              />
+              <h2 style={{ color: "#EFF0F6" }}>2026 Q2</h2>
+              <div className="outer-circle d-flex justify-content-center align-items-center">
+                <div className="inner-circle"></div>
+              </div>
+            </div>
+            <div
+              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              id="roadmapAccordion"
+            >
+              {quarterTwo2026.map((item, index) => (
+                <div className="accordion-item">
+                  <div
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseQuarterTwo2026${index}`}
+                    aria-expanded="false"
+                    aroa-aria-controls={`collapseQuarterTwo2026${index}`}
+                  >
+                    {item?.completed === true ? (
+                      <img
+                        src={
+                          "https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"
+                        }
+                        alt=""
+                      />
+                    ) : (
+                      <img
+                        src={
+                          "https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"
+                        }
+                        alt=""
+                      />
+                    )}
+                    <p>{item.title}</p>
+                  </div>
+                  <div
+                    id={`collapseQuarterTwo2026${index}`}
+                    className="accordion-collapse collapse"
+                    aria-aria-labelledby={`headingQuarterTwo2026${index}`}
+                    data-bs-parent="#roadmapAccordion"
+                  >
+                    <ul
+                      className="mb-0 py-2 ps-2"
+                      style={{ listStyle: "none" }}
+                    >
+                      <li className="accordion-list-item">{item.content}</li>
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
+            <div className="date-card  d-flex flex-column align-items-center">
+              <img
+                src={
+                  "https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"
+                }
+                style={{ visibility: "hidden" }}
+                alt=""
+              />
+              <h2 style={{ color: "#EFF0F6" }}>2026 Q3</h2>
+              <div className="outer-circle d-flex justify-content-center align-items-center">
+                <div className="inner-circle"></div>
+              </div>
+            </div>
+            <div
+              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              id="roadmapAccordion"
+            >
+              {quarterThree2026.map((item, index) => (
+                <div className="accordion-item">
+                  <div
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseQuarterThree2026${index}`}
+                    aria-expanded="false"
+                    aroa-aria-controls={`collapseQuarterThree2026${index}`}
+                  >
+                    {item?.completed === true ? (
+                      <img
+                        src={
+                          "https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"
+                        }
+                        alt=""
+                      />
+                    ) : (
+                      <img
+                        src={
+                          "https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"
+                        }
+                        alt=""
+                      />
+                    )}
+                    <p>{item.title}</p>
+                  </div>
+                  <div
+                    id={`collapseQuarterThree2026${index}`}
+                    className="accordion-collapse collapse"
+                    aria-aria-labelledby={`headingQuarterThree2026${index}`}
+                    data-bs-parent="#roadmapAccordion"
+                  >
+                    <ul
+                      className="mb-0 py-2 ps-2"
+                      style={{ listStyle: "none" }}
+                    >
+                      <li className="accordion-list-item">{item.content}</li>
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
+            <div className="date-card  d-flex flex-column align-items-center">
+              <img
+                src={
+                  "https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"
+                }
+                style={{ visibility: "hidden" }}
+                alt=""
+              />
+              <h2 style={{ color: "#EFF0F6" }}>2026 Q4</h2>
+              <div className="outer-circle d-flex justify-content-center align-items-center">
+                <div className="inner-circle"></div>
+              </div>
+            </div>
+            <div
+              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
+              id="roadmapAccordion"
+            >
+              {quarterFour2026.map((item, index) => (
+                <div className="accordion-item">
+                  <div
+                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseQuarterFour2026${index}`}
+                    aria-expanded="false"
+                    aroa-aria-controls={`collapseQuarterFour2026${index}`}
+                  >
+                    {item?.completed === true ? (
+                      <img
+                        src={
+                          "https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"
+                        }
+                        alt=""
+                      />
+                    ) : (
+                      <img
+                        src={
+                          "https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"
+                        }
+                        alt=""
+                      />
+                    )}
+                    <p>{item.title}</p>
+                  </div>
+                  <div
+                    id={`collapseQuarterFour2026${index}`}
+                    className="accordion-collapse collapse"
+                    aria-aria-labelledby={`headingQuarterFour2026${index}`}
                     data-bs-parent="#roadmapAccordion"
                   >
                     <ul
