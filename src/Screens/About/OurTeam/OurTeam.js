@@ -16,7 +16,7 @@ const OurTeam = () => {
       photo: "https://cdn.worldofdypians.com/dypius/mihai.jpg",
       link: "https://www.linkedin.com/in/mihai-nicusor/",
       content:
-        "I am a self-professed crypto-capitalist. I got involved in crypto in early 2017 when I purchased my first Ethereum mining rigs and in 2018 I've created a company that is offering different services (like hosting and maintenance) for people that own mining rigs. I learned all about cryptocurrency and blockchain technology during this time. In July 2020, I discovered Uniswap and yield farming. Thus, I started to explore different protocols and learn more about Decentralized finance. Shortly afterward, I had the idea to create DeFi Yield Protocol, a platform that would allow anyone to provide their liquidity, receive rewards in Ethereum for the first time since DeFi started, and use an anti-manipulation feature to convert the rewards into ETH without overly affecting the price. In other words, any person can provide liquidity and earn ETH with minimum risks. DeFi Yield Protocol is my vision, so I am working on the business development and operations background.",
+        "Mihai is a visionary Web3 entrepreneur and blockchain pioneer with a deep passion for innovation and decentralization. Since entering the crypto space in 2017, he has built a track record of success, generating and distributing over $34M to users and scaling blockchain ventures to $46M in annual revenue. Today, Mihai leads World of Dypians, merging immersive gaming with real blockchain utility to define the future of the metaverse.",
     },
     {
       id: "razvan",
