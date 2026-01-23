@@ -105,7 +105,7 @@ const MigrationPopup = () => {
             <h6 className="second-popup-desc mb-0">Premium migration rates until February 23, 2026</h6>
           </div>
           <a
-            href="https://app.dypius.com/migrate-portal"
+            href="https://app.dypius.com/migration-portal"
             target={"_blank"}
             onClick={() => setActive(false)}
           >
