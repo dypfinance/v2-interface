@@ -68,7 +68,7 @@ const GetInTouch = () => {
                 alt=""
               />
             </a>
-            <a
+            {/* <a
               target="_blank"
               rel="noreferrer"
               href="https://discord.gg/worldofdypians"
@@ -79,7 +79,7 @@ const GetInTouch = () => {
                 src={"https://cdn.worldofdypians.com/dypius/touchDiscord.png"}
                 alt=""
               />
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="col-12 col-lg-5 d-flex justify-content-center align-items-center">

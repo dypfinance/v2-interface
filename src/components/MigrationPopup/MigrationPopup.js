@@ -91,9 +91,7 @@ const MigrationPopup = () => {
               </h6>
             </div>
             <span className="popup-span mb-0">
-              Easily migrate your DYP and iDYP tokens from Ethereum, BNB Chain,
-              and Avalanche with premium rates available until the snapshot
-              date.
+              Easily migrate your DYP and iDYP tokens with premium rates available until the snapshot date.
             </span>
           </div>
           <img

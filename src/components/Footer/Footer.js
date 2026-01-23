@@ -23,10 +23,10 @@ const Footer = () => {
       name: "Announcements",
       link: "https://t.me/dypannouncements",
     },
-    {
-      name: "Discord",
-      link: "https://discord.gg/worldofdypians",
-    },
+    // {
+    //   name: "Discord",
+    //   link: "https://discord.gg/worldofdypians",
+    // },
     {
       name: "Instagram",
       link: "https://www.instagram.com/dyp.eth",
