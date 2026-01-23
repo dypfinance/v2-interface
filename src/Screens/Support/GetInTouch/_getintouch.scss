@@ -24,8 +24,11 @@
 
     .telegram {
       position: absolute;
-      bottom: 15px;
-      left: 15px;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      margin: auto;
       transition: all .5s;
       -webkit-transition: all .5s;
       border-radius: 0 0 12px 0px;
