@@ -36,7 +36,7 @@ const IDypToken = () => {
   }, []);
 
   return (
-    <div className="container-fluid px-0 mt-0 position-relative" id="ourTokens" style={{top: '-90px'}}>
+    <div className="container-fluid px-0 mt-0 position-relative" id="ourTokens">
       
       <div className="ourtokens-wrapper container-lg position-relative justify-content-start gap-0 gap-lg-5">
       <img src={"https://cdn.worldofdypians.com/dypius/metaverse-blueHero.svg"} className="blueheroidyp" alt=""  />

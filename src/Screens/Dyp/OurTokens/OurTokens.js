@@ -76,7 +76,7 @@ const getDypPrice = async () => {
             <div className="col-lg-6 col-xl-6 row justify-content-xl-end justify-content-lg-end justify-content-between gap-3 m-0 position-relative">
               <TokenCards
                 title={"DYP Token"}
-                price={getFormattedNumber(dyptokenData,4)}
+                price={getFormattedNumber(dyptokenData,2)}
                 percentage={`${dypPercentage} %`}
               /> 
               

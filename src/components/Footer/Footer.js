@@ -102,10 +102,10 @@ const Footer = () => {
       title: "Bridge",
       link: "https://app.dypius.com/bridge",
     },
-    {
-      title: "Buy DYP",
-      link: "/buydyp",
-    },
+    // {
+    //   title: "Buy DYP",
+    //   link: "/buydyp",
+    // },
     {
       title: "iDYP Token",
       link: "/idyp",
@@ -135,10 +135,10 @@ const Footer = () => {
   ];
 
   const learn = [
-    {
-      title: "How to buy DYP",
-      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPmcjxnKg6SgP2B1rCtBMld",
-    },
+    // {
+    //   title: "How to buy DYP",
+    //   link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPmcjxnKg6SgP2B1rCtBMld",
+    // },
     {
       title: "How to Stake",
       link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPAbzuedp9ii6OszPT1STy8",

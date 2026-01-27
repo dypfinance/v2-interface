@@ -33,7 +33,7 @@ const BuyDyp = () => {
             You can purchase it using a variety of centralized and decentralized
             exchanges.
           </p>
-          {windowSize.width > 576 ? (
+          {/* {windowSize.width > 576 ? (
             <NavLink
               className="btn filled-btn d-flex justify-content-center align-items-center "
               style={{ width: "24%" }}
@@ -44,14 +44,14 @@ const BuyDyp = () => {
             >
               Buy now
             </NavLink>
-          ) : null}
+          ) : null} */}
         </div>
         <div className="col-12 col-sm-6 col-lg-6 position-relative">
           <img className="coin" src={"https://cdn.worldofdypians.com/dypius/coin.png"} alt="" />
           <img className="coinBackground" src={"https://cdn.worldofdypians.com/dypius/coinbackground.png"} alt="" />
         </div>
       </div>
-      {windowSize.width < 576 ? (
+      {/* {windowSize.width < 576 ? (
         <div className="row justify-content-center" style={{ zIndex: 5 }}>
           <NavLink
             to="/buydyp"
@@ -65,7 +65,7 @@ const BuyDyp = () => {
             />
           </NavLink>
         </div>
-      ) : null}
+      ) : null} */}
     </div>
   );
 };

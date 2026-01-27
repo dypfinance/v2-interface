@@ -55,7 +55,7 @@ function App() {
           <Route exact path="/support" element={<Support />} />
           <Route exact path="/terms-of-service" element={<Disclaimer />} />
           <Route exact path="/governance" element={<Governance />} />
-          <Route exact path="/buydyp" element={<BuyDypScreen />} />
+          {/* <Route exact path="/buydyp" element={<BuyDypScreen />} /> */}
           <Route exact path="/news" element={<NewsPage />} />
           <Route exact path="/idyp" element={<IDyp />} />
         </Routes>{" "}

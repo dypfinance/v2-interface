@@ -15,7 +15,7 @@ const IDyp = () => {
       style={{overflowX: 'hidden'}}
     >
       <IDypHero />
-      <BuyIDyp />
+      {/* <BuyIDyp /> */}
       <IDypToken/>
         <Tokenomics bottom={55} showBtn={false} isDyp={false} />
     </div>
