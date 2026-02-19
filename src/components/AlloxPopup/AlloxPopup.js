@@ -72,7 +72,7 @@ const AlloxPopup = () => {
           </div>
           <img
             src={`https://cdn.allox.ai/allox/alloxPopup.svg`}
-            className="allox-popup-image basepopup"
+            className="allox-popup-image basepopup my-3"
             alt="Allox Banner"
           />
           <div className="allox-popup-second-wrapper d-flex align-items-center justify-content-center p-2">
