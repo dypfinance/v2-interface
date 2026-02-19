@@ -8,6 +8,7 @@ import DypPartners from "./DypPartners/DypPartners";
 import "./DypNews/_dypnews.scss";
 import LandPopup from "../../components/LandPopup/LandPopup";
 import MigrationPopup from "../../components/MigrationPopup/MigrationPopup";
+import AlloxPopup from "../../components/AlloxPopup/AlloxPopup";
 
 
 const Home = ({onDownloadClick}) => {
@@ -30,7 +31,7 @@ const Home = ({onDownloadClick}) => {
         <DypPartners />
       </Suspense>
       <DypNews topTitle="Announcements" bottomTitle="Stay tuned" />
-      <MigrationPopup />
+      <AlloxPopup />
 
     </div>
   );
