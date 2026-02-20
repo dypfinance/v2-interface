@@ -35,10 +35,7 @@ const AboutMainHero = () => {
           Security
           <img src={"https://cdn.worldofdypians.com/dypius/aboutIndicator.svg"}  className='submenu-indicator' alt=""  />
         </a>
-        <a href="#tokenomics" className="text-decoration-none submenu-link">
-          Tokenomics
-          <img src={"https://cdn.worldofdypians.com/dypius/aboutIndicator.svg"} className='submenu-indicator'  alt=""  />
-        </a>
+      
         <a href="#contactus" className="text-decoration-none submenu-link">
           Contact us
           <img src={"https://cdn.worldofdypians.com/dypius/aboutIndicator.svg"} className='submenu-indicator'  alt=""  />

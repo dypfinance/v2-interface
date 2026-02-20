@@ -23,55 +23,7 @@ const Security = () => {
     },
   ];
 
-  const auditItems = [
 
-
-    {
-      subtitle: "Security",
-      title: "New Contracts for Farm, Stake, Buyback and Governance",
-      link: "https://github.com/dypfinance/Buyback-Farm-Stake-Governance-V2/tree/main/Audit",
-    },
-    {
-      subtitle: "Security",
-      title: "Token Lock Vesting",
-      link: "https://github.com/dypfinance/token-lock-vesting-contracts/",
-    },
-    {
-      subtitle: "Security",
-      title: "Dypius Earn Vault",
-      link: "https://github.com/dypfinance/dyp-earn-vault",
-    },
-
-    {
-      subtitle: "Security",
-      title: "Token Smart Contract",
-      link: "https://github.com/dypfinance/contract-security-audit",
-    },
-    {
-      subtitle: "Security",
-      title: "Certik Security Oracle",
-      link: "https://www.certik.com/projects/dypius",
-    },
-    {
-      subtitle: "Security",
-      title: "Farming, Staking and  Governance on Ethereum Network",
-      link: "https://github.com/dypfinance/staking-governance-security-audits",
-    },
-
-    {
-      subtitle: "Security",
-      title: "Farming, Bridge and Governance  on BNB Chain",
-      link: "https://github.com/dypfinance/DYP-Bridge-and-Staking-on-Binance-Smart-Chain",
-    },
-    {
-      subtitle: "Security",
-      title: "DYP V2 and Bridge",
-      link: "https://github.com/dypfinance/Dypius-token-bridge-bsc",
-    },
-
-
-
-  ];
 
   return (
     <div className="container-fluid mb-5 px-0 px-lg-2" id="security" style={{ marginTop: '7rem' }}>
@@ -135,101 +87,7 @@ const Security = () => {
 
           </div>
         </div>
-        <div className="mt-5">
-          <div className="row justify-content-between m-0 gap-3">
-            {auditItems.length > 0 &&
-              auditItems.slice(0, 1).map((item, index) => {
-                return (
-                  <div key={index} className="security-item mb-lg-4 mb-xl-4 mt-5" style={{ width: '66%' }}>
-                    <a href={item.link} target={'_blank'} rel='noreferrer'>
-                      <div className="d-flex m-0 justify-content-between gap-2 align-items-center">
-                        <span>{item.title}</span>
-                        <div className="github-btn">
-                          <span>Github <img src={"https://cdn.worldofdypians.com/dypius/github.svg"} alt="" style={{ height: 25 }}   /></span>
-                        </div>
-
-                      </div>
-                    </a>
-                  </div>
-
-                );
-              })}
-            {auditItems.length > 0 &&
-              auditItems.slice(1, 2).map((item, index) => {
-                return (
-                  <div key={index} className="security-item mt-lg-5 mt-xl-5 mb-4">
-                    <a href={item.link} target={'_blank'} rel='noreferrer'>
-                      <div className="d-flex m-0 justify-content-between gap-2 align-items-center">
-                        <span
-                          dangerouslySetInnerHTML={{ __html: item.title }}
-                        ></span>
-                        <div className="github-btn">
-                          <span>Github <img src={"https://cdn.worldofdypians.com/dypius/github.svg"} alt="" style={{ height: 25 }}  /></span>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-
-                );
-              })}
-          </div>
-          <div className="row gap-3 m-0 justify-content-between">
-            {auditItems.length > 0 &&
-              auditItems.slice(2, auditItems.length - 3).map((item, index) => {
-                return (
-                  <div key={index} className="security-item">
-                    <a href={item.link} target={'_blank'} rel='noreferrer'>
-                      <div className="d-flex m-0 justify-content-between gap-2 align-items-center">
-                        <span
-                          dangerouslySetInnerHTML={{ __html: item.title }}
-                        ></span>
-                      <div className="github-btn">
-                          <span>Github <img src={"https://cdn.worldofdypians.com/dypius/github.svg"} alt="" style={{ height: 25 }}  /></span>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                );
-              })}
-          </div>
-
-          <div className="row gap-3 ml-0 mr-0 mt-4 justify-content-between">
-            {/* {auditItems.length > 0 &&
-              auditItems.slice(auditItems.length - 2, auditItems.length - 1).map((item, index) => {
-                return (
-                  <div key={index} className="security-item " style={{ width: '48%' }}>
-                    <a href={item.link} target={'_blank'} rel='noreferrer'>
-                      <div className="d-flex m-0 justify-content-between gap-2 align-items-center">
-                        <span
-                          dangerouslySetInnerHTML={{ __html: item.title }}
-                        ></span>
-                        <div className="github-btn">
-                          <span>Github <img src={"https://cdn.worldofdypians.com/dypius/github.svg"} alt="" style={{ height: 25 }}  /></span>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                );
-              })} */}
-            {auditItems.length > 0 &&
-              auditItems.slice(auditItems.length - 3, auditItems.length).map((item, index) => {
-                return (
-                  <div key={index} className="security-item">
-                    <a href={item.link} target={'_blank'} rel='noreferrer'>
-                      <div className="d-flex m-0 justify-content-between gap-2 align-items-center">
-                        <span
-                          dangerouslySetInnerHTML={{ __html: item.title }}
-                        ></span>
-                         <div className="github-btn">
-                          <span>Github <img src={"https://cdn.worldofdypians.com/dypius/github.svg"} alt="" style={{ height: 25 }}  /></span>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                );
-              })}
-          </div>
-        </div>
+       
      
 
       </div>
