@@ -84,7 +84,7 @@ const Tokenomics = ({ bottom, showBtn, isDyp, isAbout }) => {
         isDyp === true
           ? "dypTokenomics"
           : isDyp === false
-          ? "iDypTokenomics"
+          ? "iDypTokenomics mb-5 bottom-0"
           : isAbout === true
           ? null
           : null

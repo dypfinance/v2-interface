@@ -1,14 +1,10 @@
 import React, { useEffect } from "react";
 import EducationalTools from "./EducationalTools/EducationalTools";
-import SupportedAssets from "./SupportedAssets/SupportedAssets";
-import OurTokens from "./OurTokens/OurTokens";
 import Vault from "./Vault/Vault";
 import DypMainHero from "./DypMainHero/DypMainHero";
 import Solutions from "./Solutions/Solutions";
 import WhyDypius from "./WhyDypius/WhyDypius";
-import BuyDyp from "./BuyDyp/BuyDyp";
-import Tokenomics from "./Tokenomics/Tokenomics";
-import NewTokenomics from "./Tokenomics/NewTokenomics";
+
 
 const Dyp = () => {
   useEffect(() => {
@@ -24,14 +20,6 @@ const Dyp = () => {
       <DypMainHero />
       <WhyDypius />
       <Solutions />
-      <div className="container-fluid" style={{ gap: 100 }}>
-        <OurTokens />
-        {/* <div className="container-lg pl-xl-5 pl-lg-5 pl-md-5 pl-0 pr-xl-5 pr-lg-5 pr-md-5 px-0 "> */}
-          <NewTokenomics bottom={55} showBtn={true} isDyp={true} />
-        {/* </div> */}
-        <BuyDyp />
-        <SupportedAssets />
-      </div>
       <Vault />
       <EducationalTools />
     </div>

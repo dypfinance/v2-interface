@@ -55,10 +55,6 @@ const Footer = () => {
 
   const about = [
     {
-      title: "Our team",
-      link: "/about#ourteam",
-    },
-    {
       title: "Our partners",
       link: "/about#our-partners",
     },
@@ -74,10 +70,7 @@ const Footer = () => {
       title: "Security",
       link: "/about#security",
     },
-    {
-      title: "Tokenomics",
-      link: "/about#tokenomics",
-    },
+   
 
     {
       title: "Contact us",
@@ -102,14 +95,11 @@ const Footer = () => {
       title: "Bridge",
       link: "https://app.dypius.com/bridge",
     },
-    {
-      title: "Buy DYP",
-      link: "/buydyp",
-    },
-    {
-      title: "iDYP Token",
-      link: "/idyp",
-    },
+    // {
+    //   title: "Buy DYP",
+    //   link: "/buydyp",
+    // },
+  
     {
       title: "Metaverse",
       link: "https://www.worldofdypians.com/",
@@ -131,37 +121,6 @@ const Footer = () => {
     {
       title: "Press",
       link: "/news#press",
-    },
-  ];
-
-  const learn = [
-    {
-      title: "How to buy DYP",
-      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPmcjxnKg6SgP2B1rCtBMld",
-    },
-    {
-      title: "How to Stake",
-      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPAbzuedp9ii6OszPT1STy8",
-    },
-    {
-      title: "How to Farm",
-      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPKtu_gWiu7vm73k_TnZOs4",
-    },
-    {
-      title: "How to use Buyback",
-      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPJ7CX0lKPaXS_ELKCk7FnW",
-    },
-    {
-      title: "How to use the Vault",
-      link: "https://www.youtube.com/watch?v=t8Yr3ZIxHJA",
-    },
-    {
-      title: "How to use DYP Tools",
-      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVNMvlnKe8ouT9Ma_UE_WBx2",
-    },
-    {
-      title: "How to Bridge",
-      link: "https://www.youtube.com/playlist?list=PL8K0d30DJYVPmVy8aBOZratFGWKIBbthl",
     },
   ];
 
@@ -228,7 +187,7 @@ const Footer = () => {
     <>
       <div className="container-fluid p-0 footer">
         <div className="socials container-fluid">
-          <div className="container-lg socials-container d-grid align-items-center">
+          {/* <div className="container-lg socials-container d-grid align-items-center">
             {socials.map((social, index) => (
               <div key={index} className="col-4 col-lg">
                 <a
@@ -252,7 +211,7 @@ const Footer = () => {
                 </a>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
         <div className="container-fluid px-3 px-lg-5 py-0 footer-links justify-content-center">
           <div className="container-lg d-flex mt-0 mt-lg-4 footer-blocks w-100 position-relative align-items-baseline justify-content-between py-4 py-lg-1">
@@ -384,48 +343,7 @@ const Footer = () => {
                   </div>
                 </div>
                 <hr />
-                <div className="col-12 col-lg-3 text-white d-flex flex-column gap-3 px-0 py-3">
-                  <div
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour"
-                    aria-expanded="true"
-                    aria-controls="collapseFour"
-                  >
-                    <div
-                      className="d-flex align-items-center justify-content-between"
-                      onClick={() => openAccordion(4)}
-                    >
-                      <h4 className="fw-normal">Learn</h4>
-                      <img
-                        className={
-                          indicators.learn ? `indicator turn` : "indicator"
-                        }
-                        src={`https://cdn.worldofdypians.com/dypius/accordionIndicator2.svg`}
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div
-                    id="collapseFour"
-                    className="collapse"
-                    aria-labelledby="headingFour"
-                    data-bs-parent="#accordionFooter"
-                  >
-                    <div className="d-flex flex-column gap-3">
-                      {learn.map((item, index) => (
-                        <a
-                          key={index}
-                          href={item.link}
-                          rel="noreferrer"
-                          target="_blank"
-                          className="text-white text-decoration-none footer-type-link"
-                        >
-                          <h5>{item.title}</h5>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+             
                 <hr />
                 <div className="col-12 col-lg-3 text-white d-flex flex-column gap-3 px-0 py-3">
                   <div
@@ -577,20 +495,7 @@ const Footer = () => {
                     </a>
                   ))}
                 </div>
-                <div className="col-2 text-white d-flex flex-column gap-3">
-                  <h4 className="fw-normal">Learn</h4>
-                  {learn.map((item, index) => (
-                    <a
-                      key={index}
-                      href={item.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-white text-decoration-none footer-type-link"
-                    >
-                      <h5>{item.title}</h5>
-                    </a>
-                  ))}
-                </div>
+             
                 <div className="col-2 text-white d-flex flex-column gap-3">
                   <h4 className="fw-normal">Announcements</h4>
                   <div className="d-flex flex-column gap-3">
@@ -615,31 +520,7 @@ const Footer = () => {
                     >
                       <h5>Terms of Service</h5>
                     </Link>
-                    <div className="d-flex flex-row gap-3 position-relative">
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://coinmarketcap.com/currencies/defi-yield-protocol-v2/"
-                      >
-                        <img src={"https://cdn.worldofdypians.com/dypius/coinMarketCap.svg"} alt="" />
-                      </a>
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://www.coingecko.com/en/coins/dypius"
-                      >
-                        <img src={"https://cdn.worldofdypians.com/dypius/coinGecko.svg"} alt="" />
-                      </a>
-
-                      <Link
-                        to="/terms-of-service"
-                        onClick={() => {
-                          window.scrollTo(0, 0);
-                        }}
-                      >
-                        <img src={"https://cdn.worldofdypians.com/dypius/disclaimer.svg"} alt="" />
-                      </Link>
-                    </div>
+                  
                   </div>
                 </div>
               </>

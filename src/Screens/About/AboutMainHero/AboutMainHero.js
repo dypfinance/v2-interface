@@ -22,10 +22,7 @@ const AboutMainHero = () => {
         className="row pt-5 p-4 justify-content-center gap-5 submenu-container"
         style={{ zIndex: 5 }}
       >
-        <a href="#ourteam" className="text-decoration-none submenu-link">
-          Our team
-          <img src={"https://cdn.worldofdypians.com/dypius/aboutIndicator.svg"} className='submenu-indicator'  alt=""  />
-        </a>
+      
         <a href="#roadmap" className="text-decoration-none submenu-link">
           Roadmap
           <img src={"https://cdn.worldofdypians.com/dypius/aboutIndicator.svg"} className='submenu-indicator'  alt=""  />

@@ -2,12 +2,12 @@ import React, { Suspense, useEffect, useState } from "react";
 import MainHero from "./MainHero/MainHero";
 import DypMetaverse from "./DypMetaverse/DypMetaverse";
 import DypTools from "./DypTools/DypTools";
-import DypToken from "./DypToken/DypToken";
 import DypNews from "./DypNews/DypNews";
 import DypPartners from "./DypPartners/DypPartners";
 import "./DypNews/_dypnews.scss";
 import LandPopup from "../../components/LandPopup/LandPopup";
 import MigrationPopup from "../../components/MigrationPopup/MigrationPopup";
+import AlloxPopup from "../../components/AlloxPopup/AlloxPopup";
 
 
 const Home = ({onDownloadClick}) => {
@@ -25,12 +25,11 @@ const Home = ({onDownloadClick}) => {
          onDownloadClick()
         }}
       />
-      <DypToken />
       <Suspense fallback={<div>Loading</div>}>
         <DypPartners />
       </Suspense>
       <DypNews topTitle="Announcements" bottomTitle="Stay tuned" />
-      <MigrationPopup />
+      {/* <AlloxPopup /> */}
 
     </div>
   );

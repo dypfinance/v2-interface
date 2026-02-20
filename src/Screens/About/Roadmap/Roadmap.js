@@ -1228,8 +1228,8 @@ const Roadmap = () => {
           roadmap2021: false,
           roadmap2022: false,
           roadmap2023: false,
-          roadmap2024: true,
-          roadmap2025: false,
+          roadmap2024: false,
+          roadmap2025: true,
           roadmap2026: false,
         });
         setShowText(true);
@@ -1240,8 +1240,8 @@ const Roadmap = () => {
           roadmap2020: false,
           roadmap2021: false,
           roadmap2022: false,
-          roadmap2023: true,
-          roadmap2024: false,
+          roadmap2023: false,
+          roadmap2024: true,
           roadmap2025: false,
           roadmap2026: false,
         });
@@ -1252,8 +1252,8 @@ const Roadmap = () => {
         setActiveYear({
           roadmap2020: false,
           roadmap2021: false,
-          roadmap2022: true,
-          roadmap2023: false,
+          roadmap2022: false,
+          roadmap2023: true,
           roadmap2024: false,
           roadmap2025: false,
           roadmap2026: false,
@@ -1265,8 +1265,8 @@ const Roadmap = () => {
       if (activeSlide2 === 12) {
         setActiveYear({
           roadmap2020: false,
-          roadmap2021: true,
-          roadmap2022: false,
+          roadmap2021: false,
+          roadmap2022: true,
           roadmap2023: false,
           roadmap2024: false,
           roadmap2025: false,
@@ -1279,8 +1279,8 @@ const Roadmap = () => {
 
       if (activeSlide2 === 8) {
         setActiveYear({
-          roadmap2020: true,
-          roadmap2021: false,
+          roadmap2020: false,
+          roadmap2021: true,
           roadmap2022: false,
           roadmap2023: false,
           roadmap2024: false,
@@ -1293,12 +1293,12 @@ const Roadmap = () => {
       }
       if (activeSlide2 === 4) {
         setActiveYear({
-          roadmap2020: false,
+          roadmap2020: true,
           roadmap2021: false,
           roadmap2022: false,
           roadmap2023: false,
           roadmap2024: false,
-          roadmap2025: true,
+          roadmap2025: false,
           roadmap2026: false,
         });
         setShowText(false);
@@ -1607,7 +1607,14 @@ const Roadmap = () => {
             className="p-4"
           />
         </div>
-        <Slider ref={(c) => (slider.current = c)} {...settings}>
+        {activeYear.roadmap2026 &&
+        <div className="px-5 w-100">
+           <div className="transition-container d-flex w-100 justify-content-center gap-3 align-items-center py-5 ">
+          <img src="https://cdn.worldofdypians.com/dypius/alloxTransition.svg" alt="transition" />
+        </div>
+        </div>
+        }
+        <Slider className={`${activeYear.roadmap2026 && 'd-none'}`} ref={(c) => (slider.current = c)} {...settings}>
           {windowSize.width > 786 && (
             <div className="col-12 d-flex flex-column gap-4 selected-roadmap hidden-roadmap">
               <div className="date-card selected d-flex flex-column align-items-center">
@@ -2587,250 +2594,7 @@ const Roadmap = () => {
             </div>
           </div>
 
-          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card d-flex flex-column align-items-center">
-              <img
-                src={
-                  "https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"
-                }
-                style={{ visibility: "hidden" }}
-                alt=""
-              />
-              <h2 style={{ color: "#EFF0F6" }}>2026 Q1</h2>
-              <div className="outer-circle d-flex justify-content-center align-items-center">
-                <div className="inner-circle"></div>
-              </div>
-            </div>
-            <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
-              id="roadmapAccordion"
-            >
-              {quarterOne2026.map((item, index) => (
-                <div className="accordion-item">
-                  <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
-                    data-bs-toggle="collapse"
-                    data-bs-target={`#collapseQuarterOne2026${index}`}
-                    aria-expanded="false"
-                    aroa-aria-controls={`collapseQuarterOne2026${index}`}
-                  >
-                    {item?.completed === true ? (
-                      <img
-                        src={
-                          "https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"
-                        }
-                        alt=""
-                      />
-                    ) : (
-                      <img
-                        src={
-                          "https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"
-                        }
-                        alt=""
-                      />
-                    )}
-                    <p>{item.title}</p>
-                  </div>
-                  <div
-                    id={`collapseQuarterOne2026${index}`}
-                    className="accordion-collapse collapse"
-                    aria-aria-labelledby={`headingQuarterOne2026${index}`}
-                    data-bs-parent="#roadmapAccordion"
-                  >
-                    <ul
-                      className="mb-0 py-2 ps-2"
-                      style={{ listStyle: "none" }}
-                    >
-                      <li className="accordion-list-item">{item.content}</li>
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card  d-flex flex-column align-items-center">
-              <img
-                src={
-                  "https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"
-                }
-                style={{ visibility: "hidden" }}
-                alt=""
-              />
-              <h2 style={{ color: "#EFF0F6" }}>2026 Q2</h2>
-              <div className="outer-circle d-flex justify-content-center align-items-center">
-                <div className="inner-circle"></div>
-              </div>
-            </div>
-            <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
-              id="roadmapAccordion"
-            >
-              {quarterTwo2026.map((item, index) => (
-                <div className="accordion-item">
-                  <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
-                    data-bs-toggle="collapse"
-                    data-bs-target={`#collapseQuarterTwo2026${index}`}
-                    aria-expanded="false"
-                    aroa-aria-controls={`collapseQuarterTwo2026${index}`}
-                  >
-                    {item?.completed === true ? (
-                      <img
-                        src={
-                          "https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"
-                        }
-                        alt=""
-                      />
-                    ) : (
-                      <img
-                        src={
-                          "https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"
-                        }
-                        alt=""
-                      />
-                    )}
-                    <p>{item.title}</p>
-                  </div>
-                  <div
-                    id={`collapseQuarterTwo2026${index}`}
-                    className="accordion-collapse collapse"
-                    aria-aria-labelledby={`headingQuarterTwo2026${index}`}
-                    data-bs-parent="#roadmapAccordion"
-                  >
-                    <ul
-                      className="mb-0 py-2 ps-2"
-                      style={{ listStyle: "none" }}
-                    >
-                      <li className="accordion-list-item">{item.content}</li>
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card  d-flex flex-column align-items-center">
-              <img
-                src={
-                  "https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"
-                }
-                style={{ visibility: "hidden" }}
-                alt=""
-              />
-              <h2 style={{ color: "#EFF0F6" }}>2026 Q3</h2>
-              <div className="outer-circle d-flex justify-content-center align-items-center">
-                <div className="inner-circle"></div>
-              </div>
-            </div>
-            <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
-              id="roadmapAccordion"
-            >
-              {quarterThree2026.map((item, index) => (
-                <div className="accordion-item">
-                  <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
-                    data-bs-toggle="collapse"
-                    data-bs-target={`#collapseQuarterThree2026${index}`}
-                    aria-expanded="false"
-                    aroa-aria-controls={`collapseQuarterThree2026${index}`}
-                  >
-                    {item?.completed === true ? (
-                      <img
-                        src={
-                          "https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"
-                        }
-                        alt=""
-                      />
-                    ) : (
-                      <img
-                        src={
-                          "https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"
-                        }
-                        alt=""
-                      />
-                    )}
-                    <p>{item.title}</p>
-                  </div>
-                  <div
-                    id={`collapseQuarterThree2026${index}`}
-                    className="accordion-collapse collapse"
-                    aria-aria-labelledby={`headingQuarterThree2026${index}`}
-                    data-bs-parent="#roadmapAccordion"
-                  >
-                    <ul
-                      className="mb-0 py-2 ps-2"
-                      style={{ listStyle: "none" }}
-                    >
-                      <li className="accordion-list-item">{item.content}</li>
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="col-12 d-flex flex-column gap-4 selected-roadmap">
-            <div className="date-card  d-flex flex-column align-items-center">
-              <img
-                src={
-                  "https://cdn.worldofdypians.com/dypius/selectedRoadmap.svg"
-                }
-                style={{ visibility: "hidden" }}
-                alt=""
-              />
-              <h2 style={{ color: "#EFF0F6" }}>2026 Q4</h2>
-              <div className="outer-circle d-flex justify-content-center align-items-center">
-                <div className="inner-circle"></div>
-              </div>
-            </div>
-            <div
-              className="accordion accordion-flush highlight roadmap-items d-flex flex-column p-4"
-              id="roadmapAccordion"
-            >
-              {quarterFour2026.map((item, index) => (
-                <div className="accordion-item">
-                  <div
-                    className="d-flex flex-row align-items-center gap-2 accordion-button roadmap-accordion-white collapsed"
-                    data-bs-toggle="collapse"
-                    data-bs-target={`#collapseQuarterFour2026${index}`}
-                    aria-expanded="false"
-                    aroa-aria-controls={`collapseQuarterFour2026${index}`}
-                  >
-                    {item?.completed === true ? (
-                      <img
-                        src={
-                          "https://cdn.worldofdypians.com/dypius/completedOrangeIcon.svg"
-                        }
-                        alt=""
-                      />
-                    ) : (
-                      <img
-                        src={
-                          "https://cdn.worldofdypians.com/dypius/uncompletedIcon.svg"
-                        }
-                        alt=""
-                      />
-                    )}
-                    <p>{item.title}</p>
-                  </div>
-                  <div
-                    id={`collapseQuarterFour2026${index}`}
-                    className="accordion-collapse collapse"
-                    aria-aria-labelledby={`headingQuarterFour2026${index}`}
-                    data-bs-parent="#roadmapAccordion"
-                  >
-                    <ul
-                      className="mb-0 py-2 ps-2"
-                      style={{ listStyle: "none" }}
-                    >
-                      <li className="accordion-list-item">{item.content}</li>
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+    
         </Slider>
       </div>
     </div>
