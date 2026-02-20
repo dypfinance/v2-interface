@@ -12,7 +12,7 @@
   pointer-events: auto !important;
   transition: all 0.25s ease-in-out;
   overflow-x: hidden;
-  width: 33%;
+  width: 30%;
 
   @media screen and (max-width: 1440px) {
     width: 40%;
@@ -65,7 +65,7 @@
 .allox-popup-span {
   color: #4a5565;
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 125% */
