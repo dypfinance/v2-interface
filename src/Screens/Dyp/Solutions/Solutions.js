@@ -75,12 +75,6 @@ const Solutions = () => {
       arrow: true,
     },
     {
-      title: "DYP Locker",
-      image: "dyplocker",
-      link: "https://app.dypius.com/locker",
-      arrow: true,
-    },
-    {
       title: "CAWS Adventure",
       image: "cawsadventure",
       link: "https://game.dypius.com",

@@ -30,10 +30,7 @@ const SupportMainHero = () => {
           FAQs
           <img src={"https://cdn.worldofdypians.com/dypius/aboutIndicator.svg"} className="submenu-indicator" alt=""  />
         </a>
-        <a href="#tutorials" className="text-decoration-none submenu-link">
-          Tutorials
-          <img src={"https://cdn.worldofdypians.com/dypius/aboutIndicator.svg"} className="submenu-indicator" alt=""  />
-        </a>
+       
         <a href="#helpcenter" className="text-decoration-none submenu-link">
           Contact us
           <img src={"https://cdn.worldofdypians.com/dypius/aboutIndicator.svg"} className="submenu-indicator" alt=""  />

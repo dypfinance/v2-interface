@@ -60,16 +60,7 @@ const FAQ = () => {
       title: "Governance",
       icon: "governance"
     },
-    {
-      id: "634888e0062d4b709c4a252a",
-      title: "iDYP",
-      icon: "idyp"
-    },
-    {
-      id: "63488953062d4b709c4a252e",
-      title: "Buy DYP",
-      icon: "buydyp"
-    },
+    
     {
       id: "63488995062d4b709c4a2535",
       title: "Bridge",
