@@ -29,7 +29,7 @@ const Home = ({onDownloadClick}) => {
         <DypPartners />
       </Suspense>
       <DypNews topTitle="Announcements" bottomTitle="Stay tuned" />
-      {/* <AlloxPopup /> */}
+      <AlloxPopup />
 
     </div>
   );
