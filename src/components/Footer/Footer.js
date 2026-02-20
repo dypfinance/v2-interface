@@ -396,26 +396,7 @@ const Footer = () => {
                   >
                     <h5>Terms of Service</h5>
                   </Link>
-                  <div className="d-flex flex-row gap-3 position-relative mt-3">
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://coinmarketcap.com/currencies/defi-yield-protocol-v2/"
-                    >
-                      <img src={"https://cdn.worldofdypians.com/dypius/coinMarketCap.svg"} alt="" />
-                    </a>
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://www.coingecko.com/en/coins/dypius"
-                    >
-                      <img src={"https://cdn.worldofdypians.com/dypius/coinGecko.svg"} alt="" />
-                    </a>
-
-                    <Link to="/terms-of-service">
-                      <img src={"https://cdn.worldofdypians.com/dypius/disclaimer.svg"} alt="" />
-                    </Link>
-                  </div>
+               
                 </div>
               </div>
             ) : (
