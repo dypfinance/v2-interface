@@ -317,7 +317,7 @@ const Footer = () => {
                           </a>
                         ))}
 
-                        {products.slice(4, 6).map((item, index) => (
+                        {products.slice(4, 5).map((item, index) => (
                           <Link
                             key={index}
                             to={item.link}
@@ -326,7 +326,7 @@ const Footer = () => {
                             <h5>{item.title}</h5>
                           </Link>
                         ))}
-                        {products
+                        {/* {products
                           .slice(products.length - 1, products.length)
                           .map((item, index) => (
                             <a
@@ -337,7 +337,7 @@ const Footer = () => {
                             >
                               <h5>{item.title}</h5>
                             </a>
-                          ))}
+                          ))} */}
                       </div>
                     </div>
                   </div>
